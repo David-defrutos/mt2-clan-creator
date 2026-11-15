@@ -245,3 +245,7 @@ Guía de distribución: DISTRIBUCION.md. Estado verificable de cierre y pendient
 ### Ejemplos confirmados: FullClan y Free Company
 
 El usuario confirmó FullClan como segundo ejemplo. La distribución normal incluye FullClan 0.3.0 (`source`, proyecto C# y licencia) y The Free Company 0.2.6 (`clan`, JSON/arte/fuentes/licencia). Biblioteca ofrece Copiar fuentes para FullClan y muestra su carpeta para abrir en un editor C#; Abrir copia añade Free Company a la biblioteca. Se conserva el mínimo de dos ejemplos y se valida cada uno según su tipo. Ya no queda pendiente identificar el segundo ejemplo. Los párrafos anteriores corresponden al estado histórico. Permanecen las comprobaciones externas recogidas en CIERRE-2026-10-08.md.
+
+## Ayudas para nuevos usuarios
+
+Los formularios y el inspector incluyen «?» con explicaciones, ejemplos y límites, en español e inglés. Detalle y configuración: [AYUDAS-DE-CAMPOS.md](AYUDAS-DE-CAMPOS.md).

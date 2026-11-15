@@ -1,0 +1,184 @@
+{
+  "fields": {
+    "Nombre": {
+      "help": "Nombre que verá el jugador. El identificador interno se edita por separado."
+    },
+    "Identificador del clan": {
+      "help": "Nombre sin espacios para identificar el clan y su carpeta. Ejemplo: MiClan. Usa 3–40 letras A–Z, números o guion bajo y empieza por una letra."
+    },
+    "ID técnico": {
+      "help": "Identificador que utilizan otras definiciones para enlazar este objeto. Ejemplo: MiCarta. Es distinto del nombre que ve el jugador; evita reutilizarlo para otro objeto."
+    },
+    "Autor o namespace de Thunderstore": {
+      "help": "Nombre del autor o equipo que publicará el mod en Thunderstore. Se usa en los archivos generados del proyecto."
+    },
+    "Carpeta donde crear el clan": {
+      "help": "Elige una carpeta existente. Dentro se creará otra carpeta con el identificador del clan; la ruta final aparece debajo."
+    },
+    "Carta inicial": {
+      "help": "Carta que aporta ese campeón al mazo inicial. No es la propia carta del campeón."
+    },
+    "Cartas de draft": {
+      "help": "Cantidad de cartas que se generarán para las recompensas del clan. No incluye los campeones ni las cartas iniciales."
+    },
+    "Campo": {
+      "help": "Elige qué propiedad quieres cambiar. Solo se guardará el cambio revisado, no todo el formulario."
+    },
+    "Nuevo valor": {
+      "help": "Valor que sustituirá al actual. Previsualiza el cambio para comprobar qué objetos y archivos se modificarán."
+    },
+    "Acumulaciones": {
+      "help": "Cantidad del estado que se aplica. Ejemplo: 2 aplica dos acumulaciones; el comportamiento depende del estado elegido."
+    },
+    "Estado": {
+      "help": "Estado de combate, como Escudo o Veneno. Elige una definición existente; su lógica no se crea al seleccionarla."
+    },
+    "Estado que se añade": {
+      "help": "Estado que añadirá este efecto, con las acumulaciones indicadas."
+    },
+    "Efecto": {
+      "help": "Operación que realiza la carta, unidad o recompensa. Un trigger indica cuándo se ejecuta; el efecto indica qué hace."
+    },
+    "Conexión": {
+      "help": "Relación entre definiciones. Por ejemplo, una carta apunta a sus efectos o una recompensa a su pool."
+    },
+    "Contenido": {
+      "help": "Elige qué clase de objetos quieres crear o explorar, como cartas, unidades o mejoras."
+    },
+    "Crear o duplicar definición": {
+      "help": "Crear parte de una plantilla. Duplicar conserva los datos del origen y pide un identificador nuevo."
+    },
+    "Definición": {
+      "help": "Objeto de configuración seleccionado. Puede compartirse entre varias cartas; revisa sus usos antes de cambiarlo."
+    },
+    "Definición local": {
+      "help": "Objeto definido en esta carpeta. Una referencia externa pertenece al juego o a otro mod."
+    },
+    "Equipo": {
+      "help": "Bando sobre el que actúa la selección: aliados, enemigos u otra opción soportada por el efecto."
+    },
+    "Plantilla": {
+      "help": "Base de configuración para el objeto nuevo. Determina sus campos iniciales; revisa el resultado antes de guardar."
+    },
+    "Tipo": {
+      "help": "Categoría del objeto. Puede cambiar qué campos y opciones corresponden a su definición."
+    },
+    "Tipo de recompensa": {
+      "help": "Determina qué recibe el jugador y cómo se elige: por ejemplo, selección de cartas o una carta concreta."
+    },
+    "Pool de cartas": {
+      "help": "Lista de cartas entre las que una recompensa puede elegir. Compartir un pool no copia las cartas."
+    },
+    "Buscar pool": {
+      "help": "Filtra las listas por nombre o identificador. Un pool agrupa candidatos; no representa una carta nueva."
+    },
+    "Cantidad de esta entrada": {
+      "help": "Número de copias que aporta esta entrada al pool. No es el número de unidades en combate ni una probabilidad en porcentaje."
+    },
+    "Entrada que se modifica": {
+      "help": "Selecciona una aparición concreta de la carta en el pool o del pool en la carta. Las entradas repetidas se conservan."
+    },
+    "Mejora inicial": {
+      "help": "Mejora aplicada al personaje antes de elegir los niveles de su senda. Puede aportar estadísticas o habilidades."
+    },
+    "Nivel nuevo": {
+      "help": "Número de nivel que se añadirá o configurará en la senda seleccionada."
+    },
+    "Nivel {level}": {
+      "help": "Mejora asignada a este nivel de la senda. Revisa la referencia compartida antes de editar su definición."
+    },
+    "Seleccionar nivel de {path}": {
+      "help": "Elige hasta qué nivel de esta senda se incluye en la comparación. No guarda cambios en el clan."
+    },
+    "Personaje": {
+      "help": "Unidad cuya definición o arte quieres revisar. La carta que la invoca y el personaje pueden ser objetos distintos."
+    },
+    "Unidad que se asigna": {
+      "help": "Personaje que invocará la carta o utilizará esta conexión. Se enlaza su definición existente."
+    },
+    "Usar referencia externa o del juego": {
+      "help": "Permite enlazar un objeto que no está definido en este clan. Debe existir en el juego o en un mod instalado."
+    },
+    "mod_reference (vacío para juego base)": {
+      "help": "Namespace del mod que aporta la referencia. Déjalo vacío si el objeto pertenece al juego base; no es una ruta de archivo."
+    },
+    "Proyecto C#": {
+      "help": "Archivo .csproj que define cómo compilar la DLL. Los proyectos con lógica propia necesitan sus dependencias y pasos de compilación."
+    },
+    "Mensaje de commit": {
+      "help": "Descripción breve de los cambios que se incluirán en Git. Publicar también puede enviar ese commit al repositorio elegido."
+    },
+    "Carpeta de plugins de otro perfil (opcional)": {
+      "help": "Carpeta BepInEx/plugins de otro perfil de mods. Se buscarán sus carpetas sin activar ni modificar los mods originales."
+    },
+    "Mostrar también complementos y formatos no compatibles": {
+      "help": "Incluye mods sin clase de clan y formatos que el editor no puede abrir como clan. Sirve para identificar qué se ha encontrado."
+    },
+    "Idioma": {
+      "help": "Cambia el idioma del editor. Los nombres, descripciones y archivos del mod no se traducen automáticamente."
+    },
+    "Ajuste": {
+      "help": "Elige la propiedad que cambiarás en los objetos seleccionados. Revisa el lote antes de guardar."
+    },
+    "ID / nombre del recurso": {
+      "help": "Nombre o identificador del recurso. Una referencia externa debe coincidir con el objeto del juego u otro mod; no es la ruta de su imagen."
+    },
+    "ID del nuevo recurso": {
+      "help": "Identificador independiente para la copia del recurso. Permite editarla sin cambiar el recurso compartido original."
+    },
+    "Tipo de recurso": {
+      "help": "Distingue los usos de imagen: arte de carta, personaje, icono u otro recurso. No todos usan las mismas dimensiones."
+    },
+    "Buscar arte": {
+      "help": "Filtra las imágenes disponibles por nombre, identificador o uso."
+    },
+    "Buscar definición": {
+      "help": "Filtra las definiciones disponibles. Seleccionar una crea un enlace; no duplica su contenido."
+    },
+    "Buscar nombre, ID, rareza o tipo": {
+      "help": "Reduce el listado usando esos datos. Los filtros no cambian el contenido del clan."
+    },
+    "Buscar unidad": {
+      "help": "Filtra los personajes disponibles para esta conexión."
+    },
+    "Filtrar catálogo de mejoras": {
+      "help": "Busca mejoras existentes para asignarlas a una senda o copiarlas."
+    },
+    "Compensar escala de personajes estáticos que usan esta imagen": {
+      "help": "Ajusta la escala de los personajes estáticos afectados para compensar el cambio de dimensiones de la imagen. Revisa la vista previa; no recompone animaciones."
+    },
+    "Opacidad de la segunda imagen": {
+      "help": "Transparencia de la imagen superpuesta para comparar encuadre. No cambia el PNG ni las estadísticas."
+    },
+    "Fondo": {
+      "help": "Fondo de referencia del visor. Cambiarlo no modifica el arte ni los archivos del clan."
+    },
+    "Cuadrícula": {
+      "help": "Líneas de referencia para comparar tamaño y posición. No aparecen en el juego ni se guardan en el clan."
+    },
+    "Zoom de vista": {
+      "help": "Acerca o aleja la vista previa. No cambia el tamaño real del personaje ni se guarda en el clan."
+    },
+    "Mantener proporciones": {
+      "help": "Relaciona ancho y alto al cambiar el tamaño para evitar deformar la imagen."
+    },
+    "Buscar unidad oficial": {
+      "help": "Filtra los sprites extraídos del juego para usarlos como referencia visual."
+    },
+    "Sprite oficial": {
+      "help": "Imagen local del juego usada para comparar. No se copia al clan ni reproduce las animaciones del personaje."
+    },
+    "Escala de comparación (no se guarda)": {
+      "help": "Tamaño visual de la unidad oficial de referencia. Es un ajuste de comparación, no la escala exacta de su prefab en el juego."
+    },
+    "Campeón": {
+      "help": "Campeón cuyas sendas quieres editar. Cambiar esta selección no altera las unidades normales del clan."
+    },
+    "Senda": {
+      "help": "Rama de mejoras del campeón. Elige la senda 1, 2 o 3 y después el nivel que quieres configurar."
+    },
+    "Nivel": {
+      "help": "Mejora de ese nivel de la senda. El nivel II sustituye al I: sus bonificaciones no se suman automáticamente."
+    }
+  }
+}

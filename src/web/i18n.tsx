@@ -1,3 +1,4 @@
+import {FieldCaption} from './field-caption';
 import React, {createContext, useContext, useEffect, useState} from 'react';
 import {api} from './api';
 import {languagePreference, saveLanguagePreference, resolveLanguage, translate, type LanguageConfig} from './i18n-core';
@@ -14,4 +15,4 @@ export function LanguageProvider({children}:{children:React.ReactNode}) {
   return <context.Provider value={{config,language:language.id,locale:language.locale,change,t:(source,values)=>translate(language,source,values),error}}>{children}</context.Provider>;
 }
 export function useLanguage(){return useContext(context);}
-export function LanguageSelector(){const {config,language,change,t,error}=useLanguage();return <div className="language-selector"><label>{t('Idioma')}<select aria-label={t('Idioma de la interfaz')} value={language} onChange={e=>change(e.target.value)}>{config.languages.map(item=><option key={item.id} value={item.id}>{item.label}</option>)}</select></label>{error&&<small role="alert">{t('No se pudieron cargar los idiomas.')} {error}</small>}</div>;}
+export function LanguageSelector(){const {config,language,change,t,error}=useLanguage();return <div className="language-selector"><label><FieldCaption name="Idioma" label={t('Idioma')} /><select aria-label={t('Idioma de la interfaz')} value={language} onChange={e=>change(e.target.value)}>{config.languages.map(item=><option key={item.id} value={item.id}>{item.label}</option>)}</select></label>{error&&<small role="alert">{t('No se pudieron cargar los idiomas.')} {error}</small>}</div>;}

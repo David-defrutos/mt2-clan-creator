@@ -37,6 +37,7 @@ export interface AssetInfo { id: string; section: string; file: string; image: s
 export interface NavItem { id: string; label: string; icon: string }
 export interface FieldRule { path: string; label: string; type: string; optional?: boolean; options?: string[]; names?: string[]; modReferences?: string[]; requires?: {names?:string[];selector?:string;modReferences?:string[]}[]; selector?: string; help?: string; min?: number; max?: number; special?: boolean; statusPresets?: {label:string;status:unknown;help:string}[] }
 export interface Config {
+  uiHelp: {fields:Record<string,{help:string}>};
   poolReferences: {itemField:string;countField:string;minimumCount:number;maximumEditableCount:number};
   creation: { minimumDraftCards: number; defaultDraftCards: number; maximumDraftCards: number };
   navigation: { global: NavItem[]; clan: NavItem[] };

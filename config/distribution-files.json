@@ -21,7 +21,9 @@
     "REVISION-ACTUALIZACIONES-2026-10-08.md",
     "scripts/extract-official-art.py",
     "scripts/requirements-official-art.txt",
-    "REVISION-WIKI-TRAINWORKS.md"
+    "REVISION-WIKI-TRAINWORKS.md",
+    "AYUDAS-DE-CAMPOS.md",
+    "EDITOR-DE-SENDAS.md"
   ],
   "excludedNames": [
     ".git",

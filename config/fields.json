@@ -3,23 +3,27 @@
     {
       "path": "names.english",
       "label": "Nombre",
-      "type": "text"
+      "type": "text",
+      "help": "Nombre mostrado al jugador en el texto inglés del mod. Traducir el editor no cambia este texto."
     },
     {
       "path": "card_art",
       "label": "Referencia de arte de carta",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Referencia de arte de carta». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "descriptions.english",
       "label": "Descripción",
-      "type": "textarea"
+      "type": "textarea",
+      "help": "Texto inglés que verá el jugador. Describir un efecto aquí no crea su comportamiento: la lógica se configura por separado."
     },
     {
       "path": "cost",
       "label": "Ember",
-      "type": "number"
+      "type": "number",
+      "help": "Ember que cuesta jugar la carta. Por ejemplo, 2 requiere dos Ember; los efectos especiales pueden modificarlo durante la partida."
     },
     {
       "path": "rarity",
@@ -30,7 +34,8 @@
         "uncommon",
         "rare",
         "champion"
-      ]
+      ],
+      "help": "Rareza de la carta: common (común), uncommon (infrecuente), rare (rara) o champion (campeón). También revisa su pool de recompensas."
     },
     {
       "path": "card_type",
@@ -43,74 +48,86 @@
         "equipment",
         "blight",
         "junk"
-      ]
+      ],
+      "help": "Categoría de carta, como monster (unidad) o spell (hechizo). Cambiarla no crea automáticamente los efectos necesarios."
     },
     {
       "path": "unlock_level",
       "label": "Nivel de desbloqueo",
       "type": "number",
-      "optional": true
+      "optional": true,
+      "help": "Nivel del clan a partir del que se desbloquea este objeto. Dejar el campo sin definir conserva el valor por defecto del juego."
     },
     {
       "path": "pools",
       "label": "Pools",
-      "type": "string-list"
+      "type": "string-list",
+      "help": "Listas de candidatos a las que pertenece esta carta. Una carta puede aparecer en varios pools; no son copias de su definición."
     },
     {
       "path": "effects",
       "label": "Efectos de la carta",
       "type": "reference-list",
       "reference": true,
-      "special": true
+      "special": true,
+      "help": "Efectos que ejecuta esta definición. Se enlazan objetos existentes; revisa el orden y sus objetivos antes de guardar."
     },
     {
       "path": "triggers",
       "label": "Triggers de carta",
       "type": "reference-list",
       "reference": true,
-      "special": true
+      "special": true,
+      "help": "Condiciones que activan efectos, como al invocar o al jugar. Un trigger define cuándo ocurren; sus efectos definen qué sucede."
     }
   ],
   "characters": [
     {
       "path": "names.english",
       "label": "Nombre",
-      "type": "text"
+      "type": "text",
+      "help": "Nombre mostrado al jugador en el texto inglés del mod. Traducir el editor no cambia este texto."
     },
     {
       "path": "character_art",
       "label": "Referencia de arte de personaje",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Referencia de arte de personaje». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "attack_damage",
       "label": "Ataque",
-      "type": "number"
+      "type": "number",
+      "help": "Daño de ataque base de la unidad. Las mejoras y los estados pueden cambiarlo durante la partida."
     },
     {
       "path": "health",
       "label": "Salud",
-      "type": "number"
+      "type": "number",
+      "help": "Salud base de la unidad. Al llegar a cero muere, salvo que alguna mecánica indique otra cosa."
     },
     {
       "path": "size",
       "label": "Tamaño",
-      "type": "number"
+      "type": "number",
+      "help": "Capacidad que ocupa la unidad en el piso del tren. No cambia el tamaño de la imagen; eso se ajusta en Vista de personaje."
     },
     {
       "path": "triggers",
       "label": "Triggers de unidad",
       "type": "reference-list",
       "reference": true,
-      "special": true
+      "special": true,
+      "help": "Condiciones que activan efectos, como al invocar o al jugar. Un trigger define cuándo ocurren; sus efectos definen qué sucede."
     },
     {
       "path": "ability",
       "label": "Habilidad de unidad",
       "type": "text",
       "reference": true,
-      "special": true
+      "special": true,
+      "help": "Carta de habilidad asociada a la unidad. Se enlaza una definición existente; no es su ataque normal."
     },
     {
       "path": "starting_status_effects",
@@ -219,74 +236,86 @@
     {
       "path": "titles.english",
       "label": "Nombre de mejora",
-      "type": "text"
+      "type": "text",
+      "help": "Título inglés que verá el jugador. Es distinto del identificador usado por las referencias."
     },
     {
       "path": "descriptions.english",
       "label": "Descripción",
-      "type": "textarea"
+      "type": "textarea",
+      "help": "Texto inglés que verá el jugador. Describir un efecto aquí no crea su comportamiento: la lógica se configura por separado."
     },
     {
       "path": "bonus_damage",
       "label": "Bonificación de ataque",
       "type": "number",
-      "optional": true
+      "optional": true,
+      "help": "Cambio de ataque que aporta la mejora. Por ejemplo, 5 añade cinco puntos al ataque base."
     },
     {
       "path": "bonus_hp",
       "label": "Bonificación de salud",
       "type": "number",
-      "optional": true
+      "optional": true,
+      "help": "Cambio de salud que aporta la mejora. Por ejemplo, 10 añade diez puntos de salud."
     },
     {
       "path": "bonus_size",
       "label": "Bonificación de tamaño",
       "type": "number",
-      "optional": true
+      "optional": true,
+      "help": "Cambio de capacidad que ocupa la unidad, no del tamaño de su imagen. Un valor positivo hace que ocupe más espacio en el piso."
     },
     {
       "path": "icon",
       "label": "Icono de mejora, equipo o sala",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Icono de mejora, equipo o sala». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "room_modifier_upgrades",
       "label": "Modificadores de sala",
       "type": "reference-list",
       "reference": true,
-      "special": true
+      "special": true,
+      "help": "Mejoras de modificadores de sala enlazadas a esta definición. Revisa sus efectos y usos compartidos."
     }
   ],
   "relics": [
     {
       "path": "names.english",
       "label": "Nombre",
-      "type": "text"
+      "type": "text",
+      "help": "Nombre mostrado al jugador en el texto inglés del mod. Traducir el editor no cambia este texto."
     },
     {
       "path": "icon",
       "label": "Icono principal de reliquia",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Icono principal de reliquia». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "icon_small",
       "label": "Icono HUD de reliquia",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Icono HUD de reliquia». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "relic_effects",
       "label": "Efectos de reliquia",
       "type": "reference-list",
       "reference": true,
-      "special": true
+      "special": true,
+      "help": "Efectos que aporta la reliquia. Cambiar la descripción no altera estos efectos."
     },
     {
       "path": "descriptions.english",
       "label": "Descripción",
-      "type": "textarea"
+      "type": "textarea",
+      "help": "Texto inglés que verá el jugador. Describir un efecto aquí no crea su comportamiento: la lógica se configura por separado."
     },
     {
       "path": "unlock_level",
@@ -294,93 +323,108 @@
       "type": "number",
       "integer": true,
       "min": 0,
-      "optional": true
+      "optional": true,
+      "help": "Nivel del clan a partir del que se desbloquea este objeto. Dejar el campo sin definir conserva el valor por defecto del juego."
     }
   ],
   "classes": [
     {
       "path": "descriptions.english",
       "label": "Descripción del clan",
-      "type": "textarea"
+      "type": "textarea",
+      "help": "Texto inglés que verá el jugador. Describir un efecto aquí no crea su comportamiento: la lógica se configura por separado."
     },
     {
       "path": "titles.english",
       "label": "Nombre del clan",
-      "type": "text"
+      "type": "text",
+      "help": "Título inglés que verá el jugador. Es distinto del identificador usado por las referencias."
     },
     {
       "path": "icons.small",
       "label": "Logo pequeño",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Logo pequeño». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "icons.medium",
       "label": "Logo mediano",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Logo mediano». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "icons.large",
       "label": "Logo grande",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Logo grande». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "icons.silhouette",
       "label": "Silueta del logo",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Silueta del logo». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "card_draft_icon",
       "label": "Icono de recompensa de cartas",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Icono de recompensa de cartas». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "champions[].icon",
       "label": "Icono de campeón",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Icono de campeón». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "champions[].locked_icon",
       "label": "Icono bloqueado de campeón",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Icono bloqueado de campeón». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "champions[].portrait",
       "label": "Retrato de campeón",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Retrato de campeón». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "class_select_character_displays[]",
       "label": "Personaje de selección",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Arte utilizado al elegir el clan o campeón. Puede compartir imagen con combate y tener una transformación distinta."
     },
     {
       "path": "card_style",
       "label": "Estilo de cartas",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Estilo visual que aporta los marcos de las cartas del clan. No cambia sus efectos ni estadísticas."
     },
     {
       "path": "champions[].card_data",
       "label": "Carta de campeón",
       "type": "text",
       "reference": true,
-      "special": true
+      "special": true,
+      "help": "Carta que representa al campeón. No es la carta que aporta al mazo inicial."
     },
     {
       "path": "champions[].starter_card",
       "label": "Carta inicial",
       "type": "text",
       "reference": true,
-      "special": true
+      "special": true,
+      "help": "Carta que aporta ese campeón al mazo inicial. No es la propia carta del campeón."
     },
     {
       "path": "ui_color.r",
@@ -442,25 +486,29 @@
       "path": "unit_card_frame_sprite",
       "label": "Marco de unidad",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Marco que rodea este tipo de carta. Es distinto de la ilustración central de cada carta."
     },
     {
       "path": "spell_card_frame_sprite",
       "label": "Marco de hechizo",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Marco que rodea este tipo de carta. Es distinto de la ilustración central de cada carta."
     },
     {
       "path": "equipment_card_frame_sprite",
       "label": "Marco de equipo",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Marco que rodea este tipo de carta. Es distinto de la ilustración central de cada carta."
     },
     {
       "path": "room_card_frame_sprite",
       "label": "Marco de sala",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Marco que rodea este tipo de carta. Es distinto de la ilustración central de cada carta."
     }
   ],
   "game_objects": [
@@ -468,43 +516,50 @@
       "path": "extensions.map_node_icon.enabled_sprite",
       "label": "Estandarte disponible",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Imagen del nodo para este estado del mapa. Se puede usar un sprite distinto para disponible, desactivado, congelado o visitado."
     },
     {
       "path": "extensions.map_node_icon.disabled_sprite",
       "label": "Estandarte desactivado",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Imagen del nodo para este estado del mapa. Se puede usar un sprite distinto para disponible, desactivado, congelado o visitado."
     },
     {
       "path": "extensions.map_node_icon.frozen_sprite",
       "label": "Estandarte congelado",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Imagen del nodo para este estado del mapa. Se puede usar un sprite distinto para disponible, desactivado, congelado o visitado."
     },
     {
       "path": "extensions.map_node_icon.visited_sprite_disabled",
       "label": "Visitado desactivado",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Imagen del nodo para este estado del mapa. Se puede usar un sprite distinto para disponible, desactivado, congelado o visitado."
     },
     {
       "path": "extensions.map_node_icon.visited_sprite_enabled",
       "label": "Visitado activo",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Imagen del nodo para este estado del mapa. Se puede usar un sprite distinto para disponible, desactivado, congelado o visitado."
     },
     {
       "path": "extensions.character_art.sprite",
       "label": "Sprite de personaje",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Sprite de personaje». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "extensions.card_art.sprite",
       "label": "Sprite de carta",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Sprite de carta». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     }
   ],
   "map_nodes": [
@@ -512,37 +567,43 @@
       "path": "map_icon",
       "label": "Icono de mapa",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Icono de mapa». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "minimap_icon",
       "label": "Icono de minimapa",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Icono de minimapa». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     },
     {
       "path": "extensions[].reward.rewards",
       "label": "Recompensas del nodo",
       "type": "reference-list",
       "reference": true,
-      "special": true
+      "special": true,
+      "help": "Recompensas que ofrece este nodo del mapa. Cada referencia apunta a una definición de recompensa."
     },
     {
       "path": "prefab",
       "label": "Estandarte visual del nodo",
       "type": "text",
       "reference": true,
-      "special": true
+      "special": true,
+      "help": "Objeto visual que utiliza el nodo del mapa. Puede incluir un estandarte y sus estados; no es la lista de recompensas."
     },
     {
       "path": "titles.english",
       "label": "Título",
-      "type": "text"
+      "type": "text",
+      "help": "Título inglés que verá el jugador. Es distinto del identificador usado por las referencias."
     },
     {
       "path": "descriptions.english",
       "label": "Descripción",
-      "type": "textarea"
+      "type": "textarea",
+      "help": "Texto inglés que verá el jugador. Describir un efecto aquí no crea su comportamiento: la lógica se configura por separado."
     },
     {
       "path": "pools",
@@ -554,7 +615,8 @@
       "path": "is_banner_node",
       "label": "Es estandarte de clan",
       "type": "boolean",
-      "optional": true
+      "optional": true,
+      "help": "Indica si el juego debe tratar este nodo como un estandarte de clan. Revisa también sus recompensas y su enlace con la clase."
     },
     {
       "path": "type",
@@ -582,7 +644,8 @@
       "path": "icon",
       "label": "Icono de estado",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Icono de estado». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     }
   ],
   "character_trigger_types": [
@@ -590,7 +653,8 @@
       "path": "sprite",
       "label": "Icono de trigger de unidad",
       "type": "text",
-      "reference": true
+      "reference": true,
+      "help": "Recurso visual para «Icono de trigger de unidad». Enlaza una definición existente del clan, del juego o de otro mod; no cambia la lógica del objeto."
     }
   ],
   "character_triggers": [
@@ -599,7 +663,8 @@
       "label": "Efectos del trigger",
       "type": "reference-list",
       "reference": true,
-      "special": true
+      "special": true,
+      "help": "Efectos que ejecuta esta definición. Se enlazan objetos existentes; revisa el orden y sus objetivos antes de guardar."
     },
     {
       "path": "trigger",
@@ -746,7 +811,8 @@
       "label": "Efectos del trigger",
       "type": "reference-list",
       "reference": true,
-      "special": true
+      "special": true,
+      "help": "Efectos que ejecuta esta definición. Se enlazan objetos existentes; revisa el orden y sus objetivos antes de guardar."
     },
     {
       "path": "trigger",
@@ -777,7 +843,8 @@
       "path": "possible_rewards",
       "label": "Recompensas posibles",
       "type": "reference-list",
-      "special": true
+      "special": true,
+      "help": "Candidatos de recompensa del evento. Su selección depende de la configuración del evento."
     }
   ],
   "effects": [
@@ -3005,7 +3072,8 @@
       "special": true,
       "names": [
         "CardEffectAddCardUpgradeToUnits"
-      ]
+      ],
+      "help": "Mejora que utiliza este efecto. Se enlaza una definición de mejora; la clase del efecto determina cómo la aplica."
     },
     {
       "path": "param_upgrade",
@@ -3015,7 +3083,8 @@
       "special": true,
       "names": [
         "CardEffectSpawnMonster"
-      ]
+      ],
+      "help": "Mejora que utiliza este efecto. Se enlaza una definición de mejora; la clase del efecto determina cómo la aplica."
     },
     {
       "path": "anim_to_play",

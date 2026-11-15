@@ -1,3 +1,4 @@
+import {prepareUpgradeForm,saveUpgradeForm,type UpgradeFormRequest} from './upgrade-form.js';
 import {officialArtCatalog,officialArtImage} from './official-art.js';
 import {exampleCatalog,copyExample} from './examples.js';
 import {poolCountModel, preparePoolCount, savePoolCount, type PoolCountRequest} from './pool-count.js';
@@ -66,17 +67,18 @@ function required(value: unknown, name: string): string {
   return value;
 }
 
-async function pickFolder(): Promise<string> {
+async function pickFolder(purpose: string = 'open'): Promise<string> {
+  const prompt = purpose === 'create' ? 'Selecciona una carpeta donde crear tu clan' : 'Selecciona la carpeta del clan';
   if (process.platform === 'win32') {
-    const script = "Add-Type -AssemblyName System.Windows.Forms; $d = New-Object System.Windows.Forms.FolderBrowserDialog; $d.Description = 'Selecciona la carpeta del clan'; if ($d.ShowDialog() -eq 'OK') { [Console]::Write($d.SelectedPath) }";
+    const script = "Add-Type -AssemblyName System.Windows.Forms; $d = New-Object System.Windows.Forms.FolderBrowserDialog; $d.Description = 'Selecciona la carpeta del clan'; if ($d.ShowDialog() -eq 'OK') { [Console]::Write($d.SelectedPath) }".replace('Selecciona la carpeta del clan', prompt);
     const { stdout } = await execFileAsync('powershell.exe', ['-NoProfile', '-STA', '-Command', script], { timeout: 120_000, windowsHide: false });
     return stdout.trim();
   }
   if (process.platform === 'darwin') {
-    const { stdout } = await execFileAsync('osascript', ['-e', 'POSIX path of (choose folder with prompt "Selecciona la carpeta del clan")'], { timeout: 120_000 });
+    const { stdout } = await execFileAsync('osascript', ['-e', 'POSIX path of (choose folder with prompt "'+prompt+'")'], { timeout: 120_000 });
     return stdout.trim();
   }
-  const { stdout } = await execFileAsync('zenity', ['--file-selection', '--directory', '--title=Selecciona la carpeta del clan'], { timeout: 120_000 });
+  const { stdout } = await execFileAsync('zenity', ['--file-selection', '--directory', '--title='+prompt], { timeout: 120_000 });
   return stdout.trim();
 }
 
@@ -114,8 +116,8 @@ async function route(req: IncomingMessage, res: ServerResponse): Promise<void> {
     return;
   }
   if (req.method === 'GET' && pathname === '/api/config') {
-    const [navigation, fields, stats, assets, mechanics, creation, poolReferences] = await Promise.all(['navigation.json', 'fields.json', 'stats.json', 'assets.json', 'mechanics.json', 'templates/new-clan.json', 'pool-references.json'].map(file => fs.readFile(path.join(configRoot, file), 'utf8').then(JSON.parse)));
-    return send(res, 200, { navigation, fields, stats, assets, mechanics, poolReferences, creation: { minimumDraftCards: creation.banner.unitCount, defaultDraftCards: creation.defaultDraftCards, maximumDraftCards: creation.maxDraftCards } });
+    const [navigation, fields, stats, assets, mechanics, creation, poolReferences, uiHelp] = await Promise.all(['navigation.json', 'fields.json', 'stats.json', 'assets.json', 'mechanics.json', 'templates/new-clan.json', 'pool-references.json', 'ui-help.json'].map(file => fs.readFile(path.join(configRoot, file), 'utf8').then(JSON.parse)));
+    return send(res, 200, { navigation, fields, stats, assets, mechanics, poolReferences, uiHelp, creation: { minimumDraftCards: creation.banner.unitCount, defaultDraftCards: creation.defaultDraftCards, maximumDraftCards: creation.maxDraftCards } });
   }
   if (req.method === 'GET' && pathname === '/api/examples') return send(res,200,await exampleCatalog());
   if (req.method === 'POST' && pathname === '/api/examples/copy') { const input=await body(req);const id=required(input.id,'id');const root=await copyExample(id);const example=(await exampleCatalog()).find(e=>e.id===id)!;return send(res,200,example.kind==='source'?{root,kind:'source'}:{...await addLibraryPath(root),kind:'clan'}); }
@@ -144,7 +146,8 @@ async function route(req: IncomingMessage, res: ServerResponse): Promise<void> {
     return send(res, 200, item);
   }
   if (req.method === 'POST' && pathname === '/api/pick-folder') {
-    const selected = await pickFolder();
+    const input = await body(req);
+    const selected = await pickFolder(input.purpose === 'create' ? 'create' : 'open');
     return send(res, 200, { path: selected });
   }
   const libraryMatch = pathname.match(/^\/api\/library\/([a-f0-9]+)$/);
@@ -429,6 +432,12 @@ async function route(req: IncomingMessage, res: ServerResponse): Promise<void> {
     if (pathname.endsWith('/save')) return send(res, 200, await saveArt(request));
     const preview = await prepareArt(request);
     return send(res, 200, { changed: preview.changed, oldWidth: preview.oldWidth, oldHeight: preview.oldHeight, sourceWidth: preview.sourceWidth, sourceHeight: preview.sourceHeight, newWidth: preview.newWidth, newHeight: preview.newHeight, token:preview.token,compensations:preview.compensation.changes,warnings:preview.compensation.warnings,image: `data:image/png;base64,${preview.output.toString('base64')}` });
+  }
+  if(req.method==='POST'&&(pathname==='/api/upgrade-form/preview'||pathname==='/api/upgrade-form/save')) {
+    const input=await body(req);const item=await getLibraryItem(required(input.key,'key'));
+    const request:UpgradeFormRequest={root:item.root,id:required(input.id,'id'),file:required(input.file,'file'),expectedHash:required(input.expectedHash,'expectedHash'),changes:input.changes as UpgradeFormRequest['changes'],expectedToken:typeof input.expectedToken==='string'?input.expectedToken:undefined};
+    if(pathname.endsWith('/save'))return send(res,200,await saveUpgradeForm(request));
+    const review=await prepareUpgradeForm(request);return send(res,200,{changed:review.changed,changes:review.changes,token:review.token});
   }
   if (req.method === 'POST' && (pathname === '/api/edit/preview' || pathname === '/api/edit/save')) {
     const input = await body(req);

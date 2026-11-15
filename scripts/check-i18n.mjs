@@ -27,3 +27,9 @@ const params=s=>[...s.matchAll(/\{([A-Za-z][A-Za-z0-9_]*)\}/g)].map(m=>m[1]).sor
 if(Object.keys(es).sort().join('\n')!==Object.keys(en).sort().join('\n'))throw new Error('Catalogues have different keys.');
 for(const key of Object.keys(es))if(params(es[key])!==params(en[key]))throw new Error(`Different parameters: ${key}`);
 console.log(JSON.stringify({catalogueEntries:Object.keys(es).length,missing:missing.size}));
+
+const fieldRules=JSON.parse(await fs.readFile('config/fields.json','utf8'));
+for(const [section,rules] of Object.entries(fieldRules))for(const rule of rules){if(typeof rule.help!=='string'||!rule.help.trim())throw new Error(`Missing field help: ${section}.${rule.path}`);}
+const uiHelp=JSON.parse(await fs.readFile('config/ui-help.json','utf8')).fields;
+for(const file of await fs.readdir('src/web')){if(!file.endsWith('.tsx'))continue;const source=await fs.readFile(path.join('src/web',file),'utf8');function captions(node){if(!node||typeof node!=='object')return;if(node.type==='JSXOpeningElement'&&node.name.name==='FieldCaption'){const name=node.attributes.find(a=>a.name?.name==='name');if(name?.value?.type==='Literal'&&!uiHelp[name.value.value])throw new Error(`Missing form help: ${file}:${name.value.value}`);}for(const item of Object.values(node))if(Array.isArray(item))item.forEach(captions);else if(item&&typeof item==='object')captions(item);}captions(parseAst(source,{lang:'tsx'}));}
+console.log(JSON.stringify({fieldHelp:Object.values(fieldRules).flat().length,formHelp:Object.keys(uiHelp).length}));

@@ -1,0 +1,44 @@
+import React,{useEffect,useRef,useState} from 'react';
+import {api,post} from './api';
+import {useLanguage} from './i18n';
+import {FieldCaption} from './field-caption';
+import {VisualPicker} from './visual-picker';
+import {ReferenceEditor} from './reference-editor';
+import type {ChampionModel} from './champions-view';
+import type {ClanSnapshot,Entry,FieldRule} from './types';
+
+type Preview={changed:boolean;changes:{field:string;before:unknown;after:unknown}[];token:string};
+const at=(data:Record<string,unknown>,path:string)=>path.split('.').reduce<unknown>((v,k)=>v&&typeof v==='object'?(v as Record<string,unknown>)[k]:undefined,data);
+const display=(v:unknown)=>v===undefined?'':typeof v==='object'?JSON.stringify(v):String(v);
+export function ChampionPathEditor({clan,rules,model:provided,initialEntry,onSaved,advanced}:{clan:ClanSnapshot;rules:FieldRule[];model?:ChampionModel;initialEntry?:Entry;onSaved:()=>void;advanced?:(entry:Entry,close:()=>void)=>React.ReactNode}) {
+ const {t}=useLanguage();const [loaded,setLoaded]=useState<ChampionModel>();const [error,setError]=useState('');
+ const [championIndex,setChampionIndex]=useState(0);const [pathIndex,setPathIndex]=useState(0);const [levelIndex,setLevelIndex]=useState(0);const [dirty,setDirty]=useState(false);const [busy,setBusy]=useState(false);const [notice,setNotice]=useState(false);
+ const seeded=useRef('');const model=provided??loaded;
+ useEffect(()=>{if(provided)return;let active=true;setError('');api<ChampionModel>(`/clans/${clan.key}/champions`).then(v=>{if(active)setLoaded(v);}).catch(e=>{if(active)setError(e.message);});return()=>{active=false;};},[clan,provided]);
+ useEffect(()=>{if(!model)return;const seed=clan.key+':'+(initialEntry?.file??'')+':'+(initialEntry?.id??'');if(seeded.current===seed)return;seeded.current=seed;if(initialEntry)model.champions.some((c,ci)=>c.paths.some((p,pi)=>p.levels.some((l,li)=>{if(l.entry?.id===initialEntry.id&&l.entry.file===initialEntry.file){setChampionIndex(ci);setPathIndex(pi);setLevelIndex(li);return true;}return false;})));},[model,clan.key,initialEntry]);
+ const champion=model?.champions[championIndex]??model?.champions[0];const path=champion?.paths[pathIndex];const level=path?.levels[levelIndex];const entry=level?.entry;
+ const shared=entry?model?.champions.flatMap(c=>c.paths.flatMap((p,pi)=>p.levels.flatMap((l,li)=>l.entry?.id===entry.id&&l.entry.file===entry.file?[`${c.name} · ${t('Senda {index}',{index:pi+1})} · ${t('Nivel {level}',{level:li+1})}`]:[])))??[]:[];
+ return <section className="champion-path-editor"><div className="panel content-panel"><h2>{t('Editar campeón, senda y nivel')}</h2><p>{t('Elige una combinación. Debajo aparecen todos los campos de su mejora.')}</p><fieldset disabled={dirty||busy} className="path-selectors"><label><FieldCaption name="Campeón" label={t('Campeón')}/><select value={champion?model!.champions.indexOf(champion):''} onChange={e=>{setChampionIndex(Number(e.target.value));setPathIndex(0);setLevelIndex(0);}}>{model?.champions.map((c,i)=><option key={c.owner.file+':'+c.championIndex} value={i}>{c.name}</option>)}</select></label><label><FieldCaption name="Senda" label={t('Senda')}/><select value={path?pathIndex:''} onChange={e=>{setPathIndex(Number(e.target.value));setLevelIndex(0);}}>{Array.from({length:model?.structure.maxPaths??3},(_,i)=><option key={i} value={i} disabled={!champion?.paths[i]}>{t('Senda {index}',{index:i+1})}{!champion?.paths[i]?' · '+t('Sin definir'):''}</option>)}</select></label><label><FieldCaption name="Nivel" label={t('Nivel')}/><select value={level?levelIndex:''} onChange={e=>setLevelIndex(Number(e.target.value))}>{Array.from({length:model?.structure.maxLevels??3},(_,i)=><option key={i} value={i} disabled={!path?.levels[i]}>{t('Nivel {level}',{level:i+1})}{!path?.levels[i]?' · '+t('Sin definir'):''}</option>)}</select></label></fieldset>{dirty&&<p className="notice">{t('Guarda o descarta los cambios antes de elegir otro campeón, senda o nivel.')}</p>}{notice&&<p role="status" className="notice success">{t('Mejora guardada con copia de seguridad.')}</p>}{error&&<p role="alert">{t(error)}</p>}{!model&&!error&&<p>{t('Cargando campeones…')}</p>}</div>
+ {model&&!champion&&<p className="notice">{t('No hay campeones definidos en las clases del clan.')}</p>}
+ {champion&&!entry&&<div className="panel content-panel"><p>{t('Este nivel no tiene una mejora local editable. Revisa su referencia o define el árbol de sendas.')}</p><code>{JSON.stringify(level?.reference??null)}</code></div>}
+ {entry&&<UpgradeForm key={clan.key+':'+entry.file+':'+entry.id+':'+entry.hash} clan={clan} entry={entry} rules={rules} selectionLabel={`${champion!.name} · ${t('Senda {index}',{index:pathIndex+1})} · ${t('Nivel {level}',{level:levelIndex+1})}`} shared={shared} onSaved={()=>{setNotice(true);onSaved();}} onDirty={setDirty} onBusy={setBusy} advanced={advanced}/>}
+ </section>;
+}
+function UpgradeForm({clan,entry,rules,selectionLabel,shared,onSaved,onDirty,onBusy,advanced}:{clan:ClanSnapshot;entry:Entry;rules:FieldRule[];selectionLabel:string;shared:string[];onSaved:()=>void;onDirty:(v:boolean)=>void;onBusy:(v:boolean)=>void;advanced?:(entry:Entry,close:()=>void)=>React.ReactNode}){
+ const advancedDetails=useRef<HTMLDetailsElement>(null);
+ const {t}=useLanguage();const fields=rules.filter(r=>!r.special&&r.path!=='icon');const initial=Object.fromEntries(fields.map(r=>[r.path,display(at(entry.data,r.path))]));
+ const [values,setValues]=useState(initial);const [preview,setPreview]=useState<Preview>();const [error,setError]=useState('');const [busy,setBusy]=useState(false);
+ const dirty=fields.some(r=>values[r.path]!==initial[r.path]);
+ useEffect(()=>{onDirty(dirty);return()=>onDirty(false);},[dirty,onDirty]);
+ async function act(save:boolean){setError('');setBusy(true);onBusy(true);try{
+  const changes=fields.filter(r=>values[r.path]!==initial[r.path]).map(r=>{const text=values[r.path];let value:unknown=text;if(r.type==='number'){if(!text.trim()){if(!r.optional)throw Error('Se necesita un número válido.');value=null;}else{value=Number(text);if(!Number.isFinite(value))throw Error('Se necesita un número válido.');}}return {field:r.path,value};});
+  const payload={key:clan.key,id:entry.id,file:entry.file,expectedHash:entry.hash,changes,expectedToken:save?preview?.token:undefined};
+  if(save){await post('/upgrade-form/save',payload);setPreview(undefined);onSaved();}else setPreview(await post<Preview>('/upgrade-form/preview',payload));
+ }catch(e){setError((e as Error).message);}finally{setBusy(false);onBusy(false);}}
+ return <div className="panel content-panel path-level-form"><h2>{selectionLabel}</h2><small>{entry.id} · {entry.file}</small>{shared.length>1&&<div className="notice"><strong>{t('Esta mejora se comparte entre varios niveles.')}</strong><p>{t('Los cambios afectarán a todos sus usos. Duplica la mejora y cambia su asignación si necesitas una variante independiente.')}</p><ul>{shared.map((name,i)=><li key={i}>{name}</li>)}</ul></div>}
+ <fieldset disabled={busy}><div className="path-fields-grid">{fields.map(rule=><label key={rule.path} className={rule.type==='textarea'?'wide-field':''}><FieldCaption name={rule.label} label={t(rule.label)} helpText={rule.help}/>{rule.type==='textarea'?<textarea value={values[rule.path]} onChange={e=>{setValues(v=>({...v,[rule.path]:e.target.value}));setPreview(undefined);}}/>:<input type={rule.type==='number'?'number':'text'} min={rule.min} max={rule.max} step="any" value={values[rule.path]} placeholder={rule.optional?t('Sin campo explícito'):undefined} onChange={e=>{setValues(v=>({...v,[rule.path]:e.target.value}));setPreview(undefined);}}/>}</label>)}</div>
+ {error&&<p role="alert">{t(error)}</p>}<div className="head-actions"><button className="secondary" disabled={!dirty} onClick={()=>act(false)}>{t('Previsualizar todos los cambios')}</button><button className="ghost" disabled={!dirty} onClick={()=>{setValues(initial);setPreview(undefined);setError('');}}>{t('Descartar cambios')}</button></div>
+ {preview&&<div className="preview"><h3>{t('Cambios de este nivel')}</h3>{preview.changes.map(change=><p key={change.field}><strong>{t(fields.find(r=>r.path===change.field)?.label??change.field)}</strong>: {JSON.stringify(change.before)??t('Sin declarar')} → {JSON.stringify(change.after)??t('Sin declarar')}</p>)}<button className="primary" disabled={!preview.changed} onClick={()=>act(true)}>{t('Guardar todos los cambios con respaldo')}</button></div>}</fieldset>
+ <fieldset disabled={dirty||busy}><VisualPicker clan={clan} entry={entry} onSaved={onSaved}/><ReferenceEditor clan={clan} entry={entry} onSaved={onSaved}/></fieldset>{advanced&&<details ref={advancedDetails}><summary>{t('Edición avanzada de la mejora')}</summary>{advanced(entry,()=>{if(advancedDetails.current)advancedDetails.current.open=false;})}</details>}
+ </div>;
+}
