@@ -43,7 +43,7 @@ import { prepareChampionTree, saveChampionTree, type TreeRequest } from './champ
 import { characterBackground, characterModels, prepareCharacterTransform, saveCharacterTransform, type CharacterRequest } from './character-preview.js';
 
 const execFileAsync = promisify(execFile);
-const port = Number(process.env.CLAN_EDITOR_PORT ?? 4318);
+const port = Number(process.env.CLAN_EDITOR_PORT ?? 4320);
 
 function send(res: ServerResponse, status: number, value: unknown): void {
   res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' });
@@ -473,3 +473,4 @@ async function route(req: IncomingMessage, res: ServerResponse): Promise<void> {
 createServer((req, res) => {
   route(req, res).catch(error => send(res, error?.code === 'ENOENT' ? 404 : 400, { error: (error as Error).message }));
 }).listen(port, '127.0.0.1', () => console.log(`Editor de clanes: http://127.0.0.1:${port}`));
+// 2026-11-15-0828||codex-clan-editor||clan-creator/src/server/index.ts||Separar puerto por defecto del creador 4320 del editor original 4318

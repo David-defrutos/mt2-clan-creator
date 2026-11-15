@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://127.0.0.1:4319",
+  "baseUrl": "http://127.0.0.1:4320",
   "timeoutMs": 30000,
   "routes": [
     {"path": "", "requiredArrays": ["entries", "files", "issues"]},
