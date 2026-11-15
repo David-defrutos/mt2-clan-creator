@@ -1,6 +1,33 @@
+<!-- Documento generado el 2026-11-15-0818 -->
+
 # Aceptación del editor
 
-> Estado vigente al 08-10-2026: [cierre verificado y pendientes de entrega](CIERRE-2026-10-08.md). Los incrementos fechados de este documento describen la evolución del proyecto.
+## Aceptación adicional obligatoria · 15-11-2026
+
+Alcance: creación sencilla de clanes desde cero para personas sin conocimientos técnicos, con Trainworks Reloaded y Conductor como únicos proveedores de mecánicas.
+
+- [ ] Una persona principiante completa identidad, campeones, sendas, cartas, pools, desbloqueos y arte mediante formularios y selectores, sin escribir JSON, C# ni comandos.
+- [ ] El flujo genera identificadores y referencias; los conceptos necesarios se explican con ayudas y ejemplos.
+- [ ] Las mecánicas ofrecidas identifican proveedor y compatibilidad; no se ofrecen efectos C# propios ni librerías adicionales.
+- [ ] Un clan importado con mecánicas ajenas se identifica como parcialmente editable y conserva su contenido sin sustituciones automáticas.
+- [ ] Los ejemplos se pueden modificar mediante ese mismo flujo. FullClan como fuentes C# se retira del inicio o se sustituye; Free Company se revisa antes de presentarlo como ejemplo íntegramente compatible.
+- [ ] La compilación y la preparación del mod se hacen desde el editor. Las dependencias necesarias se detectan y explican; GitHub es opcional.
+- [ ] El clan generado aparece y funciona en el juego con sus campeones, sendas, cartas, arte y desbloqueos configurados.
+
+- [ ] Crear mi clan abre el asistente en el orden especificado en PLAN.md, con tres niveles dentro de cada una de las seis sendas.
+- [ ] Cada paso explica su propósito, muestra ejemplos y permite volver sin perder datos; campos y reglas salen de configuración.
+- [ ] Guardar y salir permite reanudar en el paso guardado tras cerrar y abrir el editor, incluso con un borrador incompleto.
+- [ ] Unidades, hechizos, salas y artefactos permiten añadir, editar y duplicar contenido; las secciones opcionales se pueden omitir y completar después.
+- [ ] Los problemas de revisión final llevan al paso y campo que hay que corregir; el resultado preparado se prueba dentro del juego.
+
+- [ ] Los pasos del asistente muestran ejemplos revisados de las versiones actuales de Free Company, W&W Inc. y SuccClan cuando existan candidatos compatibles.
+- [ ] Ningún ejemplo necesita efectos, estados, habilidades o parches C# propios del clan; se revisan todas las dependencias y se registran proveedor, versión y hashes.
+- [ ] Usar como base crea contenido independiente sin requerir la DLL del clan original. Cambios en las fuentes invalidan la revisión del candidato; no se utilizan paquetes antiguos como fuente automática.
+
+**Estado: pendiente.** Las comprobaciones históricas siguientes no certifican estos nuevos criterios.
+
+
+> Antecedente técnico al 08-10-2026: [cierre verificado y pendientes de entrega](CIERRE-2026-10-08.md). Los incrementos fechados de este documento describen la evolución del proyecto.
 
 ## Revisión del 07-10-2026
 
@@ -77,3 +104,9 @@ Pendientes de aceptación: recorrido visual (herramienta bloqueada por ACL), par
 ### Ejemplos confirmados: FullClan y Free Company
 
 El usuario confirmó FullClan como segundo ejemplo. La distribución normal incluye FullClan 0.3.0 (`source`, proyecto C# y licencia) y The Free Company 0.2.6 (`clan`, JSON/arte/fuentes/licencia). Biblioteca ofrece Copiar fuentes para FullClan y muestra su carpeta para abrir en un editor C#; Abrir copia añade Free Company a la biblioteca. Se conserva el mínimo de dos ejemplos y se valida cada uno según su tipo. Ya no queda pendiente identificar el segundo ejemplo. Los párrafos anteriores corresponden al estado histórico. Permanecen las comprobaciones externas recogidas en CIERRE-2026-10-08.md.
+
+<!-- 2026-11-15-0818||codex-clan-editor||clan-editor/ACEPTACION.md||Actualizar alcance: creación sin programación con Trainworks y Conductor; ejemplos compatibles y aceptación guiada pendientes -->
+
+<!-- 2026-11-15-0819||codex-clan-editor||clan-editor/ACEPTACION.md||Especificar asistente por pasos: clan, dos campeones y seis sendas, iniciales, unidades, hechizos, salas y artefactos; navegación y borrador reanudable -->
+
+<!-- 2026-11-15-0822||codex-clan-editor||clan-editor/ACEPTACION.md||Añadir ejemplos por paso desde versiones actuales de Free Company, W&W y SuccClan; exigir revisión de dependencias sin C# propio y registrar versiones locales y exclusiones -->

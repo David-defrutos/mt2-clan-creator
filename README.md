@@ -1,4 +1,19 @@
+<!-- Documento generado el 2026-11-15-0818 -->
+
 # Editor de clanes de Monster Train 2
+
+## Alcance vigente: crear clanes sin programar · 15-11-2026
+
+El editor está dirigido a personas sin conocimientos de programación. El recorrido principal debe permitir crear un clan desde cero, probarlo y preparar su distribución mediante formularios, selectores y ayudas comprensibles.
+
+- Las mecánicas admitidas para crear contenido son las del juego base expuestas por **Trainworks Reloaded** y las proporcionadas por **Conductor**. No se exige escribir JSON, C# ni comandos.
+- El editor genera y compila automáticamente el código mínimo de carga del mod. Esto no habilita la creación de efectos o plugins personalizados.
+- Los catálogos configurables identifican el proveedor, los parámetros y las versiones compatibles de cada mecánica. Solo se ofrecen opciones verificadas para las dependencias del proyecto.
+- Los clanes importados conservan sus campos y archivos. Las mecánicas C# propias o de otras dependencias se señalan como fuera de alcance; conservarlas no significa que el editor pueda crearlas o configurarlas.
+- Los ejemplos deben ser clanes editables con este recorrido. FullClan como ejemplo de fuentes C# no cumple este objetivo y queda pendiente de retirar del inicio o sustituir. The Free Company sirve de referencia solo en su contenido compatible; no se presupone que todas sus mecánicas sean compatibles.
+
+**Estado:** este es el alcance aprobado. La adaptación de la interfaz, los ejemplos y el catálogo está pendiente; las funciones descritas más abajo reflejan lo implementado hasta ahora. El cierre histórico de octubre no acredita este nuevo objetivo.
+
 
 Aplicación local en TypeScript para crear, abrir y editar proyectos de clanes basados en Trainworks Reloaded. El plan funcional está en [PLAN.md](PLAN.md), el plan ágil en [DESARROLLO-AGIL.md](DESARROLLO-AGIL.md) y los hallazgos de la wiki en [REVISION-WIKI-TRAINWORKS.md](REVISION-WIKI-TRAINWORKS.md).
 
@@ -249,3 +264,5 @@ El usuario confirmó FullClan como segundo ejemplo. La distribución normal incl
 ## Ayudas para nuevos usuarios
 
 Los formularios y el inspector incluyen «?» con explicaciones, ejemplos y límites, en español e inglés. Detalle y configuración: [AYUDAS-DE-CAMPOS.md](AYUDAS-DE-CAMPOS.md).
+
+<!-- 2026-11-15-0818||codex-clan-editor||clan-editor/README.md||Actualizar alcance: creación sin programación con Trainworks y Conductor; ejemplos compatibles y aceptación guiada pendientes -->

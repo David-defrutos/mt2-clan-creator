@@ -1,6 +1,25 @@
+<!-- Documento generado el 2026-11-15-0818 -->
+
 # Plan de desarrollo ágil — Editor de clanes MT2
 
-> Estado vigente al 08-10-2026: [cierre verificado y pendientes de entrega](CIERRE-2026-10-08.md). Los incrementos fechados de este documento describen la evolución del proyecto.
+## Prioridad de producto vigente · 15-11-2026
+
+Objetivo aprobado: crear clanes desde cero sin conocimientos de programación, usando únicamente las mecánicas disponibles mediante Trainworks Reloaded y Conductor. Este backlog prevalece sobre las prioridades históricas de ampliación técnica.
+
+| Orden | Incremento | Criterio de aceptación |
+|---|---|---|
+| 1 | Revisar biblioteca y ejemplos | La acción principal es Crear clan. Los ejemplos se modifican desde los formularios; FullClan como fuentes C# no cuenta como ejemplo para principiantes. Auditar el contenido compatible de Free Company. |
+| 2 | Completar el recorrido guiado | Asistente reanudable: nombre del clan → campeón 1 y sendas 1/2/3 → campeón 2 y sendas 1/2/3 → iniciales → unidades → hechizos → salas → artefactos → pools/desbloqueos → arte → revisión y prueba. Sin IDs manuales, JSON, C# ni terminal. Ver la definición del asistente en PLAN.md. |
+| 3 | Acotar el catálogo de mecánicas | Cada opción declara en configuración su proveedor, parámetros y compatibilidad de versión. Solo se crean mecánicas verificadas de Trainworks/Conductor; las propias de un importado se identifican y conservan sin ofrecer edición ficticia. |
+| 4 | Simplificar compilar y preparar el mod | El editor genera el arranque y ejecuta la compilación; detecta dependencias ausentes y ofrece instrucciones comprensibles. GitHub no es requisito para probar. |
+| 5 | Validar con una persona principiante | Crea y prueba un clan desde cero siguiendo las pantallas, sin ayuda de programación. Registrar obstáculos y corregirlos antes de declarar el objetivo completo. |
+
+Ejemplos del asistente: seleccionar contenido compatible de las versiones actuales de Free Company, W&W Inc. y SuccClan. Revisar sus dependencias funcionales completas, incluidos estados y parches C#; registrar origen, versión y hashes en configuración. Solo los ejemplos aprobados pueden ofrecerse para copiar como base. Revisión inicial de fuentes y exclusiones en PLAN.md.
+
+Estado: nuevos incrementos pendientes de ejecución. La existencia de funciones avanzadas y el cierre técnico anterior no acreditan esta aceptación. Se conserva la lectura sin pérdida de clanes importados; no se añade desarrollo de mecánicas C# propias.
+
+
+> Antecedente técnico al 08-10-2026: [cierre verificado y pendientes de entrega](CIERRE-2026-10-08.md). Los incrementos fechados de este documento describen la evolución del proyecto.
 
 Estado: roadmap vigente; el primer incremento ya está implementado y sus límites figuran en [README.md](README.md). La especificación funcional está en [PLAN.md](PLAN.md); [BORRADOR.md](BORRADOR.md) es histórico.
 
@@ -430,3 +449,9 @@ Pendientes de aceptación: recorrido visual (herramienta bloqueada por ACL), par
 ### Ejemplos confirmados: FullClan y Free Company
 
 El usuario confirmó FullClan como segundo ejemplo. La distribución normal incluye FullClan 0.3.0 (`source`, proyecto C# y licencia) y The Free Company 0.2.6 (`clan`, JSON/arte/fuentes/licencia). Biblioteca ofrece Copiar fuentes para FullClan y muestra su carpeta para abrir en un editor C#; Abrir copia añade Free Company a la biblioteca. Se conserva el mínimo de dos ejemplos y se valida cada uno según su tipo. Ya no queda pendiente identificar el segundo ejemplo. Los párrafos anteriores corresponden al estado histórico. Permanecen las comprobaciones externas recogidas en CIERRE-2026-10-08.md.
+
+<!-- 2026-11-15-0818||codex-clan-editor||clan-editor/DESARROLLO-AGIL.md||Actualizar alcance: creación sin programación con Trainworks y Conductor; ejemplos compatibles y aceptación guiada pendientes -->
+
+<!-- 2026-11-15-0819||codex-clan-editor||clan-editor/DESARROLLO-AGIL.md||Especificar asistente por pasos: clan, dos campeones y seis sendas, iniciales, unidades, hechizos, salas y artefactos; navegación y borrador reanudable -->
+
+<!-- 2026-11-15-0822||codex-clan-editor||clan-editor/DESARROLLO-AGIL.md||Añadir ejemplos por paso desde versiones actuales de Free Company, W&W y SuccClan; exigir revisión de dependencias sin C# propio y registrar versiones locales y exclusiones -->

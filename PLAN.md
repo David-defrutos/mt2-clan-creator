@@ -1,6 +1,106 @@
+<!-- Documento generado el 2026-11-15-0818 -->
+
 # Plan funcional detallado — Editor de clanes MT2
 
-> Estado vigente al 08-10-2026: [cierre verificado y pendientes de entrega](CIERRE-2026-10-08.md). Los incrementos fechados de este documento describen la evolución del proyecto.
+## Alcance prioritario aprobado · 15-11-2026
+
+Esta decisión prevalece sobre las ampliaciones anteriores de este documento. La persona destinataria no necesita conocimientos de programación: debe poder crear su clan desde cero mediante el editor.
+
+### Funciones incluidas
+
+1. Recorrido guiado: identidad del clan → dos campeones → tres sendas y sus niveles → cartas iniciales y de draft → pools y desbloqueos → arte → validación → compilación y paquete → instrucciones de prueba en el juego.
+2. Formularios con nombres comprensibles, valores iniciales seguros, explicaciones, ejemplos y mensajes de error que indiquen cómo corregirlos. Identificadores, referencias y archivos se generan y enlazan automáticamente en el flujo normal.
+3. Catálogo de efectos, triggers, habilidades y combinaciones existentes del juego base a través de Trainworks Reloaded, más las de Conductor. Cada entrada configurable declara proveedor, versión compatible y parámetros editables; no se ofrece una combinación cuya compatibilidad no esté verificada.
+4. Generación automática del código mínimo de arranque y compilación sin editar C# ni ejecutar comandos. Comprobar dependencias y explicar qué falta antes de compilar; GitHub es opcional para crear y probar el clan.
+5. Importación sin pérdida: conservar archivos y campos ajenos al alcance y advertir sobre contenido no editable. No sustituir una mecánica personalizada por otra parecida ni prometer que un clan con código propio se pueda recrear íntegramente.
+6. Ejemplos de clanes compatibles, preparados para aprender modificándolos desde los formularios. Revisar FullClan y The Free Company antes de considerarlos ejemplos válidos de este flujo.
+
+### Fuera de alcance
+
+Crear o editar efectos C# personalizados, programar plugins, integrar otras librerías como proveedores de mecánicas y utilizar la edición de JSON como requisito para terminar un clan. La conservación de código de un clan importado no amplía este alcance.
+
+### Criterio principal de entrega
+
+Una persona sin conocimientos técnicos completa el recorrido, crea un clan con mecánicas Trainworks/Conductor, lo compila y lo prueba en el juego sin escribir código, JSON ni comandos. Las pruebas automáticas no sustituyen esta comprobación. El soporte histórico de clanes complejos sigue siendo una referencia de lectura y conservación, no una promesa de reproducir su código propio.
+
+**Pendiente de implementación:** adaptar el recorrido principal, revisar las opciones de mecánicas y sustituir los ejemplos que no cumplan este criterio. El cierre de octubre se conserva como antecedente.
+
+
+## Asistente de creación paso a paso · 15-11-2026
+
+El punto de entrada principal es **Crear mi clan**. Abre un asistente guiado, no una tabla de objetos técnicos. No es necesario un chat ni un servicio de IA: la ayuda, los ejemplos y las opciones se resuelven con el catálogo y las reglas configuradas.
+
+### Orden del recorrido
+
+| Paso | Pantalla | Qué completa la persona |
+|---|---|---|
+| 1 | Tu clan | Nombre, descripción, autor, carpeta elegida con explorador y aspecto básico. Mostrar dónde se guardará; generar los identificadores internos. |
+| 2 | Campeón 1 | Nombre, descripción, ataque, salud, espacio ocupado y arte de carta, personaje, retrato e icono. Distinguir combate de selección y ofrecer imágenes provisionales. |
+| 3 | Campeón 1 · Senda 1 | Nombre e intención de la senda; completar niveles I, II y III con estadísticas, efectos o habilidades compatibles y vista de sus diferencias. |
+| 4 | Campeón 1 · Senda 2 | Mismo formulario, con opción de copiar una senda del proyecto como punto de partida independiente. |
+| 5 | Campeón 1 · Senda 3 | Mismo formulario y resumen de las tres sendas del primer campeón. |
+| 6 | Campeón 2 | Mismos campos que el primero. |
+| 7 | Campeón 2 · Senda 1 | Completar niveles I, II y III. |
+| 8 | Campeón 2 · Senda 2 | Completar niveles I, II y III. |
+| 9 | Campeón 2 · Senda 3 | Completar niveles I, II y III; comparar ambos campeones y sus sendas. |
+| 10 | Cartas iniciales | Crear las dos cartas iniciales y asociar cada una a su campeón con nombres visibles. Elegir su tipo y definir coste, efecto y arte; mostrar el mazo inicial resultante. |
+| 11 | Unidades | Añadir tantas como se necesiten, una a una: nombre, rareza, coste de ember, ataque, salud, espacio, efectos/habilidades, arte de carta y de personaje. Configurar estandarte con ayuda y selección visual. |
+| 12 | Hechizos | Añadir nombre, rareza, coste, objetivo, efectos y arte; mostrar una explicación legible del efecto configurado. |
+| 13 | Salas | Crear cartas de sala con sus parámetros, efectos y recursos visuales, usando solo opciones verificadas. Puede omitirse y completarse después. |
+| 14 | Artefactos | Crear reliquias: nombre, descripción, rareza, condiciones/efectos e imágenes de carta o iconos/HUD según corresponda. Puede omitirse y completarse después. |
+| 15 | Recompensas y desbloqueos | Revisar los dos pools previstos y qué cartas pertenecen a cada uno; ver recompensas de estandarte y niveles de desbloqueo. Proponer asignaciones automáticas según el tipo; permitir cambiarlas con selectores. |
+| 16 | Aspecto del clan | Completar iconos, marcos, estandartes y demás roles necesarios. Revisar el arte ya asignado en cada paso y ajustar personajes en el visor. |
+| 17 | Revisión final | Resumen de campeones, sendas, cantidades por tipo/rareza, pools, desbloqueos y arte. Cada problema lleva al paso y campo concretos; distinguir errores que impiden generar de recomendaciones. |
+| 18 | Probar tu clan | Comprobar dependencias, generar y compilar el arranque, preparar la carpeta del mod y explicar cómo probarla. Mostrar el resultado y la ubicación con acciones comprensibles. GitHub es opcional. |
+
+### Navegación y ayuda
+
+- Navegación lateral numerada con estados **Pendiente**, **En curso**, **Completo** y **Omitido**. Encabezado con nombre del clan, paso actual y progreso.
+- Botones **Anterior**, **Guardar y continuar**, **Guardar y salir** y **Continuar mi clan** desde la biblioteca. Las secciones opcionales ofrecen **Omitir por ahora**; se mantienen accesibles después.
+- Guardar un borrador incompleto no equivale a marcar el paso como completo. Permitir continuar preparando otras secciones y reservar el bloqueo estricto para la generación final cuando falten datos imprescindibles.
+- El borrador y el paso actual se conservan al cerrar y reabrir. Informar si hay cambios externos, sin sobrescribirlos. Crear copias de seguridad y conservar las comprobaciones de concurrencia del editor.
+- Cada pantalla explica qué se está creando, para qué sirve y un ejemplo sencillo. Mostrar solo los campos relevantes para la elección actual; ayudas junto al campo y valores iniciales seguros.
+- En los pasos de contenido: **Añadir**, **Editar**, **Duplicar** y **Eliminar**, con lista legible de lo creado. Si hay referencias, explicar qué depende del elemento antes de eliminarlo; nunca dejar enlaces rotos.
+- El catálogo de mecánicas ofrece cuándo ocurre, a quién afecta, qué hace y sus cantidades/duración según los parámetros admitidos. Ocultar clases C#, namespaces y referencias internas del flujo normal. Solo Trainworks/Conductor y versiones compatibles verificadas.
+- Revisar el arte en el mismo paso donde se necesita. Las imágenes provisionales permiten avanzar; la revisión final identifica cuáles siguen pendientes de reemplazar.
+- Poder volver a pasos completos; recalcular dependencias, resúmenes y validación si se cambia un campeón, una senda o una carta. No perder el resto del trabajo.
+- Textos, ayudas y ejemplos traducibles desde el principio. Orden de pasos, obligatoriedad, condiciones, campos, reglas, valores iniciales y catálogos se definen en configuración versionada; el código implementa el motor genérico del asistente.
+
+### Ejemplos por paso: Free Company, W&W Inc. y SuccClan · 15-11-2026
+
+Cada paso del asistente puede ofrecer ejemplos del tipo de contenido que se está creando, seleccionados de las versiones actuales de estos tres clanes. No es obligatorio usar los tres en cada pantalla ni inventar un ejemplo cuando no exista uno compatible.
+
+**Fuentes canónicas consultadas el 15-11-2026** (versiones del trabajo local; no son una certificación de la última release publicada):
+
+| Clan | Versión declarada | Fuente vigente | Commit consultado |
+|---|---|---|---|
+| The Free Company | 0.3.6 | `D:/Juegos/MT2_mod/repos/MT2/repos-propios/mt2-freecompany` | `3b2a1d494608e6a367ffc6914b64f2ef792f2bd0` |
+| W&W Inc. | 0.1.171 | `D:/Juegos/MT2_mod/salidas/build/ww-inc/content`; manifiesto en `thunderstore/manifest.json` | `43b9c410c87064c1a813c75058bb8630d05d5316` |
+| SuccClan | 0.2.1 | `D:/Juegos/MT2_mod/repos/MT2/variaciones-mias/mt2-succclan` | `ec5ddc4913641af0f0e0d554dc4b222ab512d0b3` |
+
+Antes de producir o actualizar el catálogo, volver a comprobar manifiestos, fuentes y cambios locales: estas versiones son una base fechada, no números fijos que deban quedarse obsoletos. No usar el paquete histórico Free Company 0.2.6 como fuente de estos nuevos ejemplos. No ejecutar actualizadores destructivos ni modificar los clanes al consultarlos.
+
+**Admisión de un ejemplo:** revisar la definición y todas sus dependencias funcionales: efectos, triggers, habilidades activadas y sus cartas auxiliares, mejoras, filtros, estados, selectores y entidades generadas. Comprobar también parches o inicialización C# del clan que alteren ese contenido. Admitir solo comportamientos resueltos por el juego base, Trainworks Reloaded o Conductor en las versiones compatibles del proyecto. Un ID local o una referencia `@` no demuestran por sí solos que la lógica sea propia: hay que resolver su proveedor. No copiar la DLL del clan de ejemplo ni exigirla como dependencia.
+
+**Exclusiones preliminares verificadas:** Dread Shot, de SuccClan 0.2.1, aplica `@frantic`, que declara `@StatusEffectFranticState` implementado por el clan; queda fuera como ejemplo completo aunque su daño sea `CardEffectDamage`. Interdepartmental Damage Memo (`WW_S01`), de W&W 0.1.171, utiliza `@CardEffectAcademicInterdepartmentalMemo` y tampoco se admite como ejemplo de librerías. El resto requiere revisión individual: no queda aprobado en bloque por pertenecer a uno de los tres clanes.
+
+**Presentación prevista:** una sección «Ver un ejemplo» explica qué hace el contenido, cuándo ocurre, sobre quién actúa y qué campos del formulario lo expresan. Mostrar nombre del clan, versión e imagen cuando esté disponible y se pueda incluir. «Usar como base» debe crear una copia independiente de las definiciones permitidas, generar IDs propios y resolver las referencias al nuevo clan; nunca modificar ni enlazar obligatoriamente el clan original. No presentar una adaptación parcial con el nombre y la descripción del original si cambia su comportamiento.
+
+**Configuración del catálogo:** declarar paso y tipo de contenido, clan, versión, ID y ruta de origen, proveedor y versiones de las librerías necesarias, explicación traducible, campos didácticos, dependencias revisadas y hashes del contenido usado. Registrar revisión y procedencia de los recursos. Un cambio en las fuentes invalida la revisión previa; los candidatos sin comprobar no aparecen como ejemplos utilizables. Conservar el snapshot revisado de cada entrega, en vez de actualizar silenciosamente ejemplos ya usados por un proyecto.
+
+**Estado:** requisito incorporado; selección completa del catálogo e integración en el asistente pendientes. Las comprobaciones anteriores solo acreditan las exclusiones indicadas.
+
+### Entrega por incrementos
+
+1. Motor del asistente, navegación, borrador reanudable y paso Tu clan.
+2. Campeones y sus seis sendas, con tres niveles por senda.
+3. Cartas iniciales, unidades y hechizos, con catálogo guiado compatible.
+4. Salas y artefactos, pools, desbloqueos y revisión de arte.
+5. Validación final, compilación/paquete y recorrido completo con una persona principiante.
+
+**Estado:** especificación aprobada por la petición del usuario; implementación pendiente. Las pantallas de edición existentes se reutilizarán donde cumplan este flujo, sin dar el asistente por terminado por disponer ya de formularios separados.
+
+> Antecedente técnico al 08-10-2026: [cierre verificado y pendientes de entrega](CIERRE-2026-10-08.md). Los incrementos fechados de este documento describen la evolución del proyecto.
 
 Estado: especificación funcional; el primer incremento está implementado y sus límites figuran en [README.md](README.md). Fecha: 28-09-2026. El [borrador anterior](BORRADOR.md) queda como antecedente; este documento define el alcance vigente.
 
@@ -506,3 +606,9 @@ Pendientes de aceptación: recorrido visual (herramienta bloqueada por ACL), par
 ### Ejemplos confirmados: FullClan y Free Company
 
 El usuario confirmó FullClan como segundo ejemplo. La distribución normal incluye FullClan 0.3.0 (`source`, proyecto C# y licencia) y The Free Company 0.2.6 (`clan`, JSON/arte/fuentes/licencia). Biblioteca ofrece Copiar fuentes para FullClan y muestra su carpeta para abrir en un editor C#; Abrir copia añade Free Company a la biblioteca. Se conserva el mínimo de dos ejemplos y se valida cada uno según su tipo. Ya no queda pendiente identificar el segundo ejemplo. Los párrafos anteriores corresponden al estado histórico. Permanecen las comprobaciones externas recogidas en CIERRE-2026-10-08.md.
+
+<!-- 2026-11-15-0818||codex-clan-editor||clan-editor/PLAN.md||Actualizar alcance: creación sin programación con Trainworks y Conductor; ejemplos compatibles y aceptación guiada pendientes -->
+
+<!-- 2026-11-15-0819||codex-clan-editor||clan-editor/PLAN.md||Especificar asistente por pasos: clan, dos campeones y seis sendas, iniciales, unidades, hechizos, salas y artefactos; navegación y borrador reanudable -->
+
+<!-- 2026-11-15-0822||codex-clan-editor||clan-editor/PLAN.md||Añadir ejemplos por paso desde versiones actuales de Free Company, W&W y SuccClan; exigir revisión de dependencias sin C# propio y registrar versiones locales y exclusiones -->
