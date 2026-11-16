@@ -1,0 +1,12 @@
+# Preserve audited resource bytes: hashes must survive checkout on Windows.
+catalog/** -text
+vendor/** -text
+
+# Keep executable source portable across operating systems.
+*.ts text eol=lf
+*.tsx text eol=lf
+*.mjs text eol=lf
+*.py text eol=lf
+*.command text eol=lf
+*.sh text eol=lf
+# 2026-11-16-2209||codex-clan-editor||clan-creator/.gitattributes||Conservar bytes auditados del catálogo frente a core.autocrlf de Windows
