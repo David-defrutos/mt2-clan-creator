@@ -24,6 +24,10 @@ To play, install BepInExPack, Trainworks Reloaded and Conductor through [Thunder
 
 Champion previews let you choose a path and level without changing the draft. Cards fit the available space and can be enlarged for reading. Effects group timing, action, target, amount and duration, with detailed help available on demand.
 
+Ready steps and steps reviewed by you are shown separately. Review messages open the affected card and field. Removed cards can be recovered immediately. Installation status compares the draft with the last installation recorded by this creator, and remembers the destination for that draft.
+
+Common effects are grouped by purpose; search or **More effects** shows the full set. Importing artwork opens a preview before applying it, with separate guidance for card illustrations, combat characters and clan icons. Originals are preserved.
+
 Optional technical details show the generated JSON in read-only mode. External changes do not update the wizard draft. The creator does not generate a CREADO-CON.md file or request an author field.
 
 Use **Backups and updates** to save a portable **.mt2draft** file containing a draft and uploaded images. Restore it in a new version or on another computer; restoration creates an independent draft and does not overwrite existing work.
@@ -43,3 +47,5 @@ The creator relies on community tools, including [Trainworks Reloaded](https://g
 <!-- 2026-11-16-2047||codex-clan-editor||clan-creator/README.md||Sustituir historial e informes internos por guía pública de uso y enlace de desarrollo -->
 
 <!-- 2026-11-16-2158||codex-clan-editor||clan-creator/README.md||Documentar ocho mejoras para uso público con inicio corto vista por senda copias y lanzador inglés -->
+
+<!-- 2026-11-16-2340||codex-clan-editor||clan-creator/README.md||Documentar revisión guiada recuperación estados registrados y encuadre de imágenes -->

@@ -1,0 +1,4 @@
+import {local,type Language} from './presentation';
+import {effectHelp} from './mechanic-help';
+export function effectOptions(rules:any,language:Language,unit:boolean){const groups=rules.effectGroups??[];return rules.recipes.map((recipe:any)=>{const index=groups.findIndex((g:any)=>g.recipes.includes(recipe.id)),group=index>=0?groups[index]:groups.find((g:any)=>g.id==='other');return {value:recipe.id,label:local(recipe.label,language),searchText:Object.values(recipe.label).join(' '),help:effectHelp(recipe,rules,language,recipe.amount,unit?undefined:'spell_target'),group:local(group?.label,language),common:index>=0&&group?.id!=='other',order:index>=0?index:groups.length};}).sort((a:any,b:any)=>a.order-b.order||a.label.localeCompare(b.label,language));}
+// 2026-11-16-2327||codex-clan-editor||clan-creator/src/web/creator/effect-options.ts||Agrupar recetas existentes por finalidad y destacar habituales sin ocultar efectos avanzados a la búsqueda

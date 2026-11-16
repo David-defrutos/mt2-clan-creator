@@ -1,3 +1,4 @@
+import {updateProjectState} from './project-state.js';
 import {inside} from '../paths.js';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -38,9 +39,10 @@ export async function importDraftBackup(input:any){
  if(seen.size!==expected.size)throw Error('Some images are missing from the backup.');
  const fresh=await newDraft();try{
   const folder=projectFolder(fresh.id);for(const file of files){await fs.mkdir(path.join(folder,'upload'),{recursive:true});await fs.writeFile(path.join(folder,file.name),file.bytes,{flag:'wx'});}
-  return await saveDraft({...draft,id:fresh.id,revision:fresh.revision,updatedAt:fresh.updatedAt});
+  const restored=await saveDraft({...draft,id:fresh.id,revision:fresh.revision,updatedAt:fresh.updatedAt});await updateProjectState(restored.id,{restoredAt:new Date().toISOString()});return restored;
  }catch(error){await fs.rm(projectFolder(fresh.id),{recursive:true,force:true});throw error;}
 }
 // 2026-11-16-2144||codex-clan-editor||clan-creator/src/server/creator/draft-backup.ts||Respaldar borrador e imágenes en archivo portátil con hashes y restauración independiente validada sin sobrescribir proyectos
 // 2026-11-16-2150||codex-clan-editor||clan-creator/src/server/creator/draft-backup.ts||Impedir lectura de imágenes de respaldo mediante enlaces o archivos fuera del proyecto y limitar tamaño antes de leer
 // 2026-11-16-2202||codex-clan-editor||clan-creator/src/server/creator/draft-backup.ts||Validar base64 sin expresión recursiva y admitir PNG normalizados grandes dentro del límite total de respaldo
+// 2026-11-16-2322||codex-clan-editor||clan-creator/src/server/creator/draft-backup.ts||Registrar que el borrador es una copia restaurada sin cambiar su nombre ni copiar rutas de instalación

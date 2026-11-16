@@ -32,7 +32,9 @@ export function description(card:CardDraft,template:any,language:Language,rules:
  if(template?.example?.championPath&&!template.example.championPath.localUpgradeId)parts.push(nativeUpgradeDescription(template.example.championPath.upgrade,language,rules));
  const result=parts.filter(Boolean).join('\n').replace(/\{(-?\d+(?:\.\d+)?)\}/g,'$1');if(!result&&card.removedTemplateEffects?.length)return '';return result||template?.example?.previewIncomplete?(result||(language==='es'?'El juego calcula el texto de esta carta.':'The game calculates this card text.')):result;
 }
-export async function request<T=any>(url:string,value?:unknown,method='POST'):Promise<T>{const r=await fetch('/api'+url,value===undefined?undefined:{method,headers:{'Content-Type':'application/json'},body:JSON.stringify(value)});const data=await r.json();if(!r.ok)throw Error(data.error??'No se pudo completar la acción.');return data;}
+export class CreatorRequestError extends Error{constructor(message:string,public code='UNKNOWN'){super(message);}}
+export async function request<T=any>(url:string,value?:unknown,method='POST'):Promise<T>{let response:Response;try{response=await fetch('/api'+url,value===undefined?undefined:{method,headers:{'Content-Type':'application/json'},body:JSON.stringify(value)});}catch(e){throw new CreatorRequestError(String((e as Error).message),'NETWORK');}let data:any;try{data=await response.json();}catch{throw new CreatorRequestError('Invalid response from the local creator.','NETWORK');}if(!response.ok)throw new CreatorRequestError(data.error??'Could not complete the action.',data.code);return data;}
+
 // 2026-11-15-0908||codex-clan-editor||clan-creator/src/web/creator/presentation.ts||Mostrar palabras clave, estados iniciales, triggers y habilidades además del arte y estadísticas de cada carta
 // 2026-11-15-0912||codex-clan-editor||clan-creator/src\web\creator\presentation.ts||Previsualizar la descripción real de las salas y artefactos creados desde cero
 // 2026-11-15-0913||codex-clan-editor||clan-creator/src\web\creator\presentation.ts||Mantener la vista previa de salas sincronizada con la cantidad elegida
@@ -69,3 +71,4 @@ export function nativeUpgradeDescription(upgrade:any,language:Language,rules:any
 // 2026-11-15-2107||codex-clan-editor||clan-creator/src/web/creator/presentation.ts||Omitir destinatario individual en hechizos conservando objetivos de piso y unidades
 // 2026-11-15-2117||codex-clan-editor||clan-creator/src/web/creator/presentation.ts||Mostrar Quick y otras capacidades fijas sin numero en unidades equipos mejoras y sendas
 // 2026-11-16-2152||codex-clan-editor||clan-creator/src/web/creator/presentation.ts||Eliminar llaves de formato alrededor de cantidades resueltas de sendas en vista previa
+// 2026-11-16-2323||codex-clan-editor||clan-creator/src/web/creator/presentation.ts||Conservar código y detalle de errores HTTP separando fallos de conexión

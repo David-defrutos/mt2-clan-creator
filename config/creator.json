@@ -7713,5 +7713,606 @@
       "es": "Cerrar",
       "en": "Close"
     }
+  },
+  "beginnerText": {
+    "fixHere": {
+      "es": "Completa este campo para continuar.",
+      "en": "Complete this field to continue."
+    },
+    "reviewed": {
+      "es": "Revisado por mí",
+      "en": "Reviewed by me"
+    },
+    "notReviewed": {
+      "es": "Sin revisar",
+      "en": "Not reviewed"
+    },
+    "prepared": {
+      "es": "Preparados",
+      "en": "Prepared"
+    },
+    "reviewHelp": {
+      "es": "Preparado significa que hay datos suficientes. Marca Revisado por mí cuando lo hayas comprobado. Puedes continuar sin marcarlo.",
+      "en": "Prepared means there is enough data. Mark Reviewed by me after checking it. You can continue without marking it."
+    },
+    "cardRemoved": {
+      "es": "Carta eliminada: {name}",
+      "en": "Card removed: {name}"
+    },
+    "undoRemoval": {
+      "es": "Deshacer eliminación",
+      "en": "Undo removal"
+    },
+    "restoredCopy": {
+      "es": "Copia restaurada",
+      "en": "Restored copy"
+    },
+    "restoredOn": {
+      "es": "Restaurada el {date}",
+      "en": "Restored on {date}"
+    },
+    "neverInstalled": {
+      "es": "No hay una instalación registrada de este borrador.",
+      "en": "No installation has been recorded for this draft."
+    },
+    "pendingInstall": {
+      "es": "Hay cambios guardados que todavía no están instalados en el juego.",
+      "en": "Saved changes have not been installed in the game yet."
+    },
+    "installedCurrent": {
+      "es": "Esta versión coincide con la última instalación realizada desde el creador.",
+      "en": "This version matches the last installation made from the creator."
+    },
+    "removedInstall": {
+      "es": "Se desinstaló del juego. El borrador sigue guardado.",
+      "en": "Uninstalled from the game. The draft is still saved."
+    },
+    "lastInstall": {
+      "es": "Última instalación: {date}",
+      "en": "Last installation: {date}"
+    },
+    "installRecordHelp": {
+      "es": "Este estado recuerda lo que instaló el creador. No comprueba cambios hechos fuera del programa.",
+      "en": "This status records what the creator installed. It does not check changes made outside the program."
+    },
+    "goInstall": {
+      "es": "Revisar e instalar cambios",
+      "en": "Review and install changes"
+    },
+    "rememberedFolder": {
+      "es": "Se ha recuperado el destino que elegiste para este clan.",
+      "en": "The destination you chose for this clan has been restored."
+    },
+    "errorDetails": {
+      "es": "Detalles técnicos",
+      "en": "Technical details"
+    },
+    "retry": {
+      "es": "Volver a intentar",
+      "en": "Try again"
+    },
+    "copyDetails": {
+      "es": "Copiar detalles",
+      "en": "Copy details"
+    },
+    "copied": {
+      "es": "Detalles copiados",
+      "en": "Details copied"
+    },
+    "moreEffects": {
+      "es": "Más efectos",
+      "en": "More effects"
+    },
+    "commonEffects": {
+      "es": "Efectos habituales",
+      "en": "Common effects"
+    },
+    "artTitle": {
+      "es": "Preparar imagen",
+      "en": "Prepare image"
+    },
+    "cardArtPurpose": {
+      "es": "Ilustración de la carta",
+      "en": "Card illustration"
+    },
+    "characterPurpose": {
+      "es": "Personaje en combate",
+      "en": "Character on the floor"
+    },
+    "iconPurpose": {
+      "es": "Icono del clan",
+      "en": "Clan icon"
+    },
+    "cardArtHelp": {
+      "es": "Es la ilustración que aparece dentro del marco de la carta. Ajusta qué parte quieres mostrar.",
+      "en": "This is the illustration inside the card frame. Adjust which part should be shown."
+    },
+    "characterHelp": {
+      "es": "Es la figura que aparece en el suelo del combate. No lleva el marco de la carta.",
+      "en": "This is the figure that stands on the combat floor. It does not include a card frame."
+    },
+    "iconHelp": {
+      "es": "Identifica tu clan en los menús del juego.",
+      "en": "Identifies your clan in the game menus."
+    },
+    "applyImage": {
+      "es": "Usar esta imagen",
+      "en": "Use this image"
+    },
+    "chooseAnother": {
+      "es": "Elegir otra imagen",
+      "en": "Choose another image"
+    },
+    "originalUntouched": {
+      "es": "Tu archivo original no se modifica.",
+      "en": "Your original file is not changed."
+    },
+    "fillFrame": {
+      "es": "Llenar el recuadro",
+      "en": "Fill the frame"
+    },
+    "wholeImage": {
+      "es": "Mostrar imagen completa",
+      "en": "Show the whole image"
+    },
+    "zoomImage": {
+      "es": "Acercamiento",
+      "en": "Zoom"
+    },
+    "horizontalImage": {
+      "es": "Encuadre horizontal",
+      "en": "Horizontal framing"
+    },
+    "verticalImage": {
+      "es": "Encuadre vertical",
+      "en": "Vertical framing"
+    },
+    "imageSize": {
+      "es": "Tamaño del personaje",
+      "en": "Character size"
+    },
+    "imageHeight": {
+      "es": "Altura sobre el suelo",
+      "en": "Height above the floor"
+    },
+    "transparentWarning": {
+      "es": "Esta imagen tiene fondo opaco. Ese fondo también aparecerá en combate. Para una silueta, usa un PNG con transparencia.",
+      "en": "This image has an opaque background. That background will also appear in combat. For a cutout, use a PNG with transparency."
+    },
+    "placementHelp": {
+      "es": "Vista orientativa de tamaño y altura. Comprueba el resultado en una partida.",
+      "en": "Approximate size and height preview. Check the result in a game."
+    },
+    "imageLoading": {
+      "es": "Cargando imagen…",
+      "en": "Loading image…"
+    },
+    "imageTooLarge": {
+      "es": "Elige una imagen de menos de 12 MB.",
+      "en": "Choose an image under 12 MB."
+    },
+    "imageUnreadable": {
+      "es": "No se pudo abrir esta imagen. Prueba con un archivo PNG, JPG o WEBP.",
+      "en": "Could not open this image. Try a PNG, JPG or WEBP file."
+    },
+    "preparingImage": {
+      "es": "Preparando imagen…",
+      "en": "Preparing image…"
+    },
+    "statusNever": {
+      "es": "Sin instalación registrada",
+      "en": "No install recorded"
+    },
+    "statusPending": {
+      "es": "Cambios por instalar",
+      "en": "Changes to install"
+    },
+    "statusCurrent": {
+      "es": "Última instalación al día",
+      "en": "Last install matches"
+    },
+    "statusRemoved": {
+      "es": "Desinstalado",
+      "en": "Uninstalled"
+    },
+    "reviewContinue": {
+      "es": "Revisado y continuar",
+      "en": "Reviewed and continue"
+    },
+    "installNotRecorded": {
+      "es": "El clan se ha instalado, pero el creador no ha podido recordar esta instalación. Puedes jugar con él.",
+      "en": "The clan was installed, but the creator could not remember this installation. You can still play it."
+    }
+  },
+  "errorGuidance": [
+    {
+      "code": "GAME_RUNNING",
+      "patterns": [
+        [
+          "cierra",
+          "monster train"
+        ],
+        [
+          "juego se ha abierto"
+        ],
+        [
+          "game",
+          "running"
+        ]
+      ],
+      "title": {
+        "es": "El juego está abierto.",
+        "en": "The game is running."
+      },
+      "action": {
+        "es": "Cierra Monster Train 2 y vuelve a instalar el clan.",
+        "en": "Close Monster Train 2, then install the clan again."
+      },
+      "retry": true
+    },
+    {
+      "code": "STALE",
+      "patterns": [
+        [
+          "otra ventana"
+        ],
+        [
+          "revision",
+          "obsoleta"
+        ],
+        [
+          "ha cambiado"
+        ],
+        [
+          "cambio",
+          "clan"
+        ],
+        [
+          "revision",
+          "caducado"
+        ]
+      ],
+      "title": {
+        "es": "Los datos han cambiado desde la última revisión.",
+        "en": "The data has changed since the last review."
+      },
+      "action": {
+        "es": "Vuelve a abrir el clan y revisa su versión actual antes de continuar.",
+        "en": "Reopen the clan and review its current version before continuing."
+      },
+      "retry": false
+    },
+    {
+      "code": "FOREIGN_TARGET",
+      "patterns": [
+        [
+          "pertenece a otro mod"
+        ],
+        [
+          "varias copias"
+        ],
+        [
+          "destino",
+          "otro"
+        ]
+      ],
+      "title": {
+        "es": "Esa carpeta contiene otra instalación.",
+        "en": "That folder contains another installation."
+      },
+      "action": {
+        "es": "Elige otro destino o cambia el nombre de tu clan. No se ha sustituido esa carpeta.",
+        "en": "Choose another destination or rename your clan. That folder has not been replaced."
+      },
+      "retry": false
+    },
+    {
+      "code": "FOLDER",
+      "patterns": [
+        [
+          "carpeta del perfil"
+        ],
+        [
+          "carpeta de mods"
+        ],
+        [
+          "destino debe"
+        ],
+        [
+          "destination"
+        ],
+        [
+          "outside the profile"
+        ]
+      ],
+      "title": {
+        "es": "Revisa la carpeta de destino.",
+        "en": "Check the destination folder."
+      },
+      "action": {
+        "es": "Copia la ruta del perfil desde tu gestor de mods y vuelve a introducirla.",
+        "en": "Copy your profile path from the mod manager and enter it again."
+      },
+      "retry": false
+    },
+    {
+      "code": "PERMISSION",
+      "patterns": [
+        [
+          "eacces"
+        ],
+        [
+          "eperm"
+        ],
+        [
+          "acceso denegado"
+        ],
+        [
+          "permission denied"
+        ]
+      ],
+      "title": {
+        "es": "No se pudo guardar en esa carpeta.",
+        "en": "Could not save to that folder."
+      },
+      "action": {
+        "es": "Elige una carpeta donde puedas guardar archivos y vuelve a intentarlo.",
+        "en": "Choose a folder where you can save files and try again."
+      },
+      "retry": true
+    },
+    {
+      "code": "MISSING_FILE",
+      "patterns": [
+        [
+          "enoent"
+        ],
+        [
+          "no se encuentra el archivo"
+        ],
+        [
+          "example",
+          "unavailable"
+        ]
+      ],
+      "title": {
+        "es": "No se encuentra un archivo necesario.",
+        "en": "A required file could not be found."
+      },
+      "action": {
+        "es": "Vuelve a abrir el clan. Si falta un ejemplo del creador, extrae de nuevo el programa conservando tu carpeta data.",
+        "en": "Reopen the clan. If a creator example is missing, extract the program again while keeping your data folder."
+      },
+      "retry": false
+    },
+    {
+      "code": "CATALOG",
+      "patterns": [
+        [
+          "auditoria"
+        ],
+        [
+          "catalogo"
+        ],
+        [
+          "catalog",
+          "damaged"
+        ]
+      ],
+      "title": {
+        "es": "Un ejemplo o su imagen no se puede utilizar.",
+        "en": "An example or its image cannot be used."
+      },
+      "action": {
+        "es": "Prueba otro ejemplo. Si ocurre con varios, extrae una copia nueva del creador y conserva tus borradores.",
+        "en": "Try another example. If several are affected, extract a fresh copy of the creator and keep your drafts."
+      },
+      "retry": false
+    },
+    {
+      "code": "BACKUP",
+      "patterns": [
+        [
+          "backup"
+        ],
+        [
+          "respaldo"
+        ],
+        [
+          "copia",
+          "danad"
+        ]
+      ],
+      "title": {
+        "es": "No se pudo restaurar esta copia.",
+        "en": "Could not restore this backup."
+      },
+      "action": {
+        "es": "Selecciona un archivo .mt2draft guardado desde este creador. Tus clanes actuales siguen intactos.",
+        "en": "Select a .mt2draft file saved by this creator. Your existing clans are unchanged."
+      },
+      "retry": false
+    },
+    {
+      "code": "IMAGE",
+      "patterns": [
+        [
+          "imagen"
+        ],
+        [
+          "image"
+        ],
+        [
+          "png"
+        ]
+      ],
+      "title": {
+        "es": "No se pudo preparar la imagen.",
+        "en": "Could not prepare the image."
+      },
+      "action": {
+        "es": "Prueba un PNG, JPG o WEBP de menos de 12 MB y vuelve a comprobar su encuadre.",
+        "en": "Try a PNG, JPG or WEBP under 12 MB and check its framing again."
+      },
+      "retry": false
+    },
+    {
+      "code": "COMPILE",
+      "patterns": [
+        [
+          "compilar"
+        ],
+        [
+          "compilacion"
+        ],
+        [
+          "sdk"
+        ],
+        [
+          "dotnet"
+        ]
+      ],
+      "title": {
+        "es": "No se pudo preparar el clan para jugar.",
+        "en": "Could not prepare the clan for playing."
+      },
+      "action": {
+        "es": "Revisa los requisitos de compilación de esta pantalla y compruébalos de nuevo.",
+        "en": "Review the compilation requirements on this page and check them again."
+      },
+      "retry": true
+    },
+    {
+      "code": "NETWORK",
+      "patterns": [
+        [
+          "failed to fetch"
+        ],
+        [
+          "network"
+        ],
+        [
+          "fetch failed"
+        ],
+        [
+          "ecconnrefused"
+        ]
+      ],
+      "title": {
+        "es": "Se ha perdido la conexión con el creador.",
+        "en": "The connection to the creator was lost."
+      },
+      "action": {
+        "es": "Abre el creador con su lanzador y vuelve a intentarlo.",
+        "en": "Open the creator with its launcher and try again."
+      },
+      "retry": true
+    },
+    {
+      "code": "UNKNOWN",
+      "patterns": [],
+      "title": {
+        "es": "No se pudo completar esta acción.",
+        "en": "This action could not be completed."
+      },
+      "action": {
+        "es": "Vuelve a intentarlo. Si continúa, copia los detalles y consulta el canal de mods de Discord.",
+        "en": "Try again. If it continues, copy the details and ask in the Discord modding channel."
+      },
+      "retry": true
+    }
+  ],
+  "effectGroups": [
+    {
+      "id": "damage",
+      "label": {
+        "es": "Hacer daño",
+        "en": "Deal damage"
+      },
+      "recipes": [
+        "damage"
+      ]
+    },
+    {
+      "id": "heal",
+      "label": {
+        "es": "Curar y recuperar salud",
+        "en": "Heal and restore health"
+      },
+      "recipes": [
+        "heal",
+        "status_regen"
+      ]
+    },
+    {
+      "id": "buff",
+      "label": {
+        "es": "Mejorar una unidad",
+        "en": "Strengthen a unit"
+      },
+      "recipes": [
+        "armor",
+        "rage",
+        "attack",
+        "max_health",
+        "status_ambush",
+        "status_trample",
+        "status_multistrike",
+        "status_spikes",
+        "status_lifesteal"
+      ]
+    },
+    {
+      "id": "draw",
+      "label": {
+        "es": "Robar cartas",
+        "en": "Draw cards"
+      },
+      "recipes": [
+        "draw"
+      ]
+    },
+    {
+      "id": "ember",
+      "label": {
+        "es": "Ganar ember",
+        "en": "Gain ember"
+      },
+      "recipes": [
+        "energy"
+      ]
+    },
+    {
+      "id": "summon",
+      "label": {
+        "es": "Invocar",
+        "en": "Summon"
+      },
+      "recipes": []
+    },
+    {
+      "id": "other",
+      "label": {
+        "es": "Otros efectos",
+        "en": "Other effects"
+      },
+      "recipes": []
+    }
+  ],
+  "artworkImport": {
+    "card": {
+      "width": 512,
+      "height": 512,
+      "mode": "contain"
+    },
+    "icon": {
+      "width": 256,
+      "height": 256,
+      "mode": "contain"
+    },
+    "character": {
+      "mode": "original"
+    },
+    "maxZoom": 3
   }
 }
