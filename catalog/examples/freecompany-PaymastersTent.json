@@ -1,0 +1,161 @@
+{
+  "id": "freecompany-PaymastersTent",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "PaymastersTent"
+  },
+  "kind": "room",
+  "names": {
+    "english": "Paymaster's Tent",
+    "french": "Tente du trésorier",
+    "german": "Zahlmeisterzelt",
+    "russian": "Палатка казначея",
+    "portuguese": "Tenda do Pagador",
+    "chinese": "军饷帐篷",
+    "spanish": "Tienda del pagador",
+    "chinese_traditional": "軍餉帳篷",
+    "korean": "급여관의 천막",
+    "japanese": "給金係の天幕"
+  },
+  "descriptions": {
+    "english": "Friendly units on this floor have <b>1</b> [avarice].",
+    "french": "Les unités alliées de cet étage ont <b>1</b> [avarice].",
+    "german": "Verbündete Einheiten auf diesem Stockwerk haben <b>1</b> [avarice].",
+    "russian": "Союзные боевые единицы на этом этаже имеют <b>1</b> [avarice].",
+    "portuguese": "As unidades aliadas neste andar têm <b>1</b> [avarice].",
+    "chinese": "本层友方单位拥有<b>1</b> [avarice]。",
+    "spanish": "Las unidades aliadas de este piso tienen <b>1</b> [avarice].",
+    "chinese_traditional": "本層友方單位擁有<b>1</b> [avarice]。",
+    "korean": "이 층의 아군 유닛은 <b>1</b> [avarice] 보유.",
+    "japanese": "この階の味方ユニットは<b>1</b> [avarice]を持つ。"
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/e8ea6a18f7b2386ae953431e283e55867aa347e76d140f7d7d0093ea829f935a.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/PaymastersTentArt.png": "assets/e8ea6a18f7b2386ae953431e283e55867aa347e76d140f7d7d0093ea829f935a.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "PaymastersTent",
+        "names": {
+          "english": "Paymaster's Tent",
+          "french": "Tente du trésorier",
+          "german": "Zahlmeisterzelt",
+          "russian": "Палатка казначея",
+          "portuguese": "Tenda do Pagador",
+          "chinese": "军饷帐篷",
+          "spanish": "Tienda del pagador",
+          "chinese_traditional": "軍餉帳篷",
+          "korean": "급여관의 천막",
+          "japanese": "給金係の天幕"
+        },
+        "descriptions": {
+          "english": "Friendly units on this floor have <b>1</b> [avarice].",
+          "french": "Les unités alliées de cet étage ont <b>1</b> [avarice].",
+          "german": "Verbündete Einheiten auf diesem Stockwerk haben <b>1</b> [avarice].",
+          "russian": "Союзные боевые единицы на этом этаже имеют <b>1</b> [avarice].",
+          "portuguese": "As unidades aliadas neste andar têm <b>1</b> [avarice].",
+          "chinese": "本层友方单位拥有<b>1</b> [avarice]。",
+          "spanish": "Las unidades aliadas de este piso tienen <b>1</b> [avarice].",
+          "chinese_traditional": "本層友方單位擁有<b>1</b> [avarice]。",
+          "korean": "이 층의 아군 유닛은 <b>1</b> [avarice] 보유.",
+          "japanese": "この階の味方ユニットは<b>1</b> [avarice]を持つ。"
+        },
+        "card_art": "@PaymastersTent",
+        "cost": 0,
+        "card_type": "room",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": true,
+        "effects": [
+          "@PaymastersTentRoomEffect"
+        ],
+        "hide_in_logbook": true,
+        "unlock_level": 99
+      }
+    ],
+    "effects": [
+      {
+        "id": "PaymastersTentRoomEffect",
+        "name": "CardEffectAttachTrainRoomAttachment",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_upgrade": "@PaymastersTentRoomUpgrade",
+        "param_bool": false,
+        "param_bool_2": false
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "PaymastersTentRoomUpgrade",
+        "titles": {
+          "english": "Paymaster's Tent",
+          "french": "Tente du trésorier",
+          "german": "Zahlmeisterzelt",
+          "russian": "Палатка казначея",
+          "portuguese": "Tenda do Pagador",
+          "chinese": "军饷帐篷",
+          "spanish": "Tienda del pagador",
+          "chinese_traditional": "軍餉帳篷",
+          "korean": "급여관의 천막",
+          "japanese": "給金係の天幕"
+        },
+        "descriptions": {
+          "english": "Friendly units on this floor have <b>1</b> [avarice].",
+          "french": "Les unités alliées de cet étage ont <b>1</b> [avarice].",
+          "german": "Verbündete Einheiten auf diesem Stockwerk haben <b>1</b> [avarice].",
+          "russian": "Союзные боевые единицы на этом этаже имеют <b>1</b> [avarice].",
+          "portuguese": "As unidades aliadas neste andar têm <b>1</b> [avarice].",
+          "chinese": "本层友方单位拥有<b>1</b> [avarice]。",
+          "spanish": "Las unidades aliadas de este piso tienen <b>1</b> [avarice].",
+          "chinese_traditional": "本層友方單位擁有<b>1</b> [avarice]。",
+          "korean": "이 층의 아군 유닛은 <b>1</b> [avarice] 보유.",
+          "japanese": "この階の味方ユニットは<b>1</b> [avarice]を持つ。"
+        },
+        "status_effect_upgrades": [
+          {
+            "status": "avarice",
+            "count": 1
+          }
+        ],
+        "hide_icon_on_card": true,
+        "icon": "@PaymastersTent"
+      }
+    ],
+    "sprites": [
+      {
+        "id": "PaymastersTent",
+        "path": "textures/PaymastersTentArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "PaymastersTent",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@PaymastersTent"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/rooms/room_paymasters_tent.json": "92baf99bf9821e936adb26e3f1ba7f4baa714de71f09bf8f460e8aa8dd55381f"
+  }
+}

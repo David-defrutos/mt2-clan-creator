@@ -1,0 +1,218 @@
+{
+  "id": "freecompany-SpawnCampBrawler",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnCampBrawler"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Camp Brawler",
+    "french": "Bagarreur du camp",
+    "german": "Lagerraufbold",
+    "russian": "Лагерный забияка",
+    "portuguese": "Brigão do Acampamento",
+    "chinese": "营地斗士",
+    "spanish": "Camorrista del campamento",
+    "chinese_traditional": "營地鬥士",
+    "korean": "야영지 싸움꾼",
+    "japanese": "野営地の喧嘩屋"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": 6,
+  "attack": 7,
+  "size": 1,
+  "picture": "assets/a9b7117887cec5b3a3dd9712ed582c1b3de13772e007962efcc090fa29d0b7f3.png",
+  "characterPicture": "assets/1d2916f9b57d4766667a2c60ba8c34ddb22bd2ae19e3ea9534635aec6c4c10f1.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/CampBrawlerCharacterArt.png": "assets/1d2916f9b57d4766667a2c60ba8c34ddb22bd2ae19e3ea9534635aec6c4c10f1.png",
+    "textures/CampBrawlerCardArt.png": "assets/a9b7117887cec5b3a3dd9712ed582c1b3de13772e007962efcc090fa29d0b7f3.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnCampBrawler",
+        "names": {
+          "english": "Camp Brawler",
+          "french": "Bagarreur du camp",
+          "german": "Lagerraufbold",
+          "russian": "Лагерный забияка",
+          "portuguese": "Brigão do Acampamento",
+          "chinese": "营地斗士",
+          "spanish": "Camorrista del campamento",
+          "chinese_traditional": "營地鬥士",
+          "korean": "야영지 싸움꾼",
+          "japanese": "野営地の喧嘩屋"
+        },
+        "card_art": "@CampBrawler",
+        "cost": 1,
+        "card_type": "monster",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnCampBrawlerEffect"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnCampBrawlerEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@CampBrawler"
+      },
+      {
+        "id": "CampBrawlerAbility",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "buff",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "CampBrawler",
+        "names": {
+          "english": "Camp Brawler",
+          "french": "Bagarreur du camp",
+          "german": "Lagerraufbold",
+          "russian": "Лагерный забияка",
+          "portuguese": "Brigão do Acampamento",
+          "chinese": "营地斗士",
+          "spanish": "Camorrista del campamento",
+          "chinese_traditional": "營地鬥士",
+          "korean": "야영지 싸움꾼",
+          "japanese": "野営地の喧嘩屋"
+        },
+        "character_art": "@CampBrawlerCharacterArt",
+        "size": 1,
+        "attack_damage": 7,
+        "health": 6,
+        "subtypes": [
+          "@Sub_Barbarian",
+          "@Sub_Goblin"
+        ],
+        "triggers": [
+          {
+            "id": "@CampBrawlerTrigger"
+          }
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "CampBrawlerTrigger",
+        "trigger": "on_kill",
+        "descriptions": {
+          "english": "Gain [effect0.status0.power] [rage].",
+          "french": "Gagnez [effect0.status0.power] [rage].",
+          "german": "Erhalte [effect0.status0.power] [rage].",
+          "russian": "Получите [effect0.status0.power] [rage].",
+          "portuguese": "Ganhe [effect0.status0.power] [rage].",
+          "chinese": "获得[effect0.status0.power] [rage]。",
+          "spanish": "Gana [effect0.status0.power] [rage].",
+          "chinese_traditional": "獲得[effect0.status0.power] [rage]。",
+          "korean": "[effect0.status0.power] [rage] 획득.",
+          "japanese": "[effect0.status0.power] [rage]を得る。"
+        },
+        "effects": [
+          "@CampBrawlerAbility"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Barbarian",
+        "names": {
+          "english": "Barbarian",
+          "french": "Barbare",
+          "german": "Barbar",
+          "russian": "Варвар",
+          "portuguese": "Bárbaro",
+          "chinese": "野蛮人",
+          "spanish": "Bárbaro",
+          "chinese_traditional": "野蠻人",
+          "korean": "야만전사",
+          "japanese": "バーバリアン"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "CampBrawlerCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@CampBrawlerCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.541,
+                "z": 0
+              },
+              "scale": {
+                "x": 0.633,
+                "y": 0.633,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "CampBrawler",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@CampBrawler"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "CampBrawlerCharacterArt",
+        "path": "textures/CampBrawlerCharacterArt.png"
+      },
+      {
+        "id": "CampBrawler",
+        "path": "textures/CampBrawlerCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_camp_brawler.json": "b4b9b943be879c2767b89614af6a366596b2749baa8996cf4873a989de0aba54",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

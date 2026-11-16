@@ -1,0 +1,292 @@
+{
+  "id": "freecompany-SappersCharges",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "relics",
+    "id": "SappersCharges"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Sapper's Charges",
+    "french": "Charges du sapeur",
+    "german": "Pioniersprengladungen",
+    "russian": "Заряды сапёра",
+    "portuguese": "Cargas do Sapador",
+    "chinese": "工兵炸药",
+    "spanish": "Cargas del zapador",
+    "chinese_traditional": "工兵炸藥",
+    "korean": "공병의 폭약",
+    "japanese": "工兵の爆薬"
+  },
+  "descriptions": {
+    "english": "At the start of each turn, add a <b>Bomb</b> to your hand.",
+    "french": "Au début de chaque tour, ajoutez une <b>Bombe</b> à votre main.",
+    "german": "Füge deiner Hand zu Beginn jedes Zuges eine <b>Bombe</b> hinzu.",
+    "russian": "В начале каждого хода добавляет в руку <b>Бомбу</b>.",
+    "portuguese": "No início de cada turno, adicione uma <b>Bomba</b> à sua mão.",
+    "chinese": "每回合开始时，将一张<b>炸弹</b>加入手牌。",
+    "spanish": "Al inicio de cada turno, añade una <b>Bomba</b> a tu mano.",
+    "chinese_traditional": "每回合開始時，將一張<b>炸彈</b>加入手牌。",
+    "korean": "매 턴 시작 시 손에 <b>폭탄</b>을 추가합니다.",
+    "japanese": "毎ターン開始時、手札に<b>爆弾</b>を1枚追加する。"
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 1,
+  "attack": 0,
+  "size": 1,
+  "picture": "assets/a7f1df22cfe768bb816d2b523c2f237525833a428f86fb135680bdc00538c7de.png",
+  "characterPicture": "assets/506e2b80856c9d85de3c40377ae8b0e360f508287b2baa4695d71e91488f0863.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/SappersChargesIconSmall.png": "assets/4f1a1061b60e45fc9423af76fbf6d2717977afb43ec196100220c847248beec4.png",
+    "textures/SappersChargesIcon.png": "assets/a7f1df22cfe768bb816d2b523c2f237525833a428f86fb135680bdc00538c7de.png",
+    "textures/SappersBombCharacterArt.png": "assets/506e2b80856c9d85de3c40377ae8b0e360f508287b2baa4695d71e91488f0863.png",
+    "textures/SappersBombCardArt.png": "assets/6cd937ead59d2c4419e283d43466eec3c84ff2f7fb57604cb7e4cdf762f24be3.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "SappersCharges",
+        "type": "collectable",
+        "names": {
+          "english": "Sapper's Charges",
+          "french": "Charges du sapeur",
+          "german": "Pioniersprengladungen",
+          "russian": "Заряды сапёра",
+          "portuguese": "Cargas do Sapador",
+          "chinese": "工兵炸药",
+          "spanish": "Cargas del zapador",
+          "chinese_traditional": "工兵炸藥",
+          "korean": "공병의 폭약",
+          "japanese": "工兵の爆薬"
+        },
+        "descriptions": {
+          "english": "At the start of each turn, add a <b>Bomb</b> to your hand.",
+          "french": "Au début de chaque tour, ajoutez une <b>Bombe</b> à votre main.",
+          "german": "Füge deiner Hand zu Beginn jedes Zuges eine <b>Bombe</b> hinzu.",
+          "russian": "В начале каждого хода добавляет в руку <b>Бомбу</b>.",
+          "portuguese": "No início de cada turno, adicione uma <b>Bomba</b> à sua mão.",
+          "chinese": "每回合开始时，将一张<b>炸弹</b>加入手牌。",
+          "spanish": "Al inicio de cada turno, añade una <b>Bomba</b> a tu mano.",
+          "chinese_traditional": "每回合開始時，將一張<b>炸彈</b>加入手牌。",
+          "korean": "매 턴 시작 시 손에 <b>폭탄</b>을 추가합니다.",
+          "japanese": "毎ターン開始時、手札に<b>爆弾</b>を1枚追加する。"
+        },
+        "relic_activated_texts": {
+          "english": "Fire in the hole.",
+          "french": "Un feu dans le trou.",
+          "german": "Feuer im Loch.",
+          "russian": "Огонь в дыре.",
+          "portuguese": "Fogo no buraco.",
+          "chinese": "坑里有火.",
+          "spanish": "¡Fuego en el agujero!",
+          "chinese_traditional": "這是一場火災.",
+          "korean": "덩어리에 불을 붙여",
+          "japanese": "穴に火!"
+        },
+        "relic_effects": [
+          "@SappersChargesEffect"
+        ],
+        "icon": "@SappersChargesIcon",
+        "icon_small": "@SappersChargesIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "class": "@ClassFreeCompany",
+              "pools": [
+                "MegaRelicPool"
+              ],
+              "rarity": "uncommon"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "SappersChargesIconSmall",
+        "path": "textures/SappersChargesIconSmall.png"
+      },
+      {
+        "id": "SappersChargesIcon",
+        "path": "textures/SappersChargesIcon.png"
+      },
+      {
+        "id": "SappersBombCharacterArt",
+        "path": "textures/SappersBombCharacterArt.png"
+      },
+      {
+        "id": "SappersBombCardArt",
+        "path": "textures/SappersBombCardArt.png"
+      }
+    ],
+    "relic_effects": [
+      {
+        "id": "SappersChargesEffect",
+        "name": "RelicEffectAddBattleCardToHand",
+        "param_card_pool": "@SappersBombPool"
+      }
+    ],
+    "card_pools": [
+      {
+        "id": "SappersBombPool",
+        "cards": [
+          "@SappersBombCard"
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "id": "SappersBombCard",
+        "names": {
+          "english": "Bomb",
+          "french": "Bombe",
+          "german": "Bombe",
+          "russian": "Бомба",
+          "portuguese": "Bomba",
+          "chinese": "炸弹",
+          "spanish": "Bomba",
+          "chinese_traditional": "炸彈",
+          "korean": "폭탄",
+          "japanese": "爆弾"
+        },
+        "card_art": "@SappersBombCardArt",
+        "cost": 0,
+        "card_type": "monster",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "initial_keyboard_target": "front_friendly",
+        "effects": [
+          "@SappersBombSpawn"
+        ],
+        "traits": [
+          "@SappersBombPurge"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "SappersBombPurge",
+        "name": "CardTraitSelfPurge"
+      }
+    ],
+    "effects": [
+      {
+        "id": "SappersBombSpawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@SappersBomb"
+      },
+      {
+        "id": "SappersBombExplosion",
+        "name": "CardEffectDamage",
+        "target_mode": "front_in_room",
+        "target_team": "heroes",
+        "param_int": 20,
+        "applied_vfx": "@SappersBombExplosionVFX"
+      }
+    ],
+    "characters": [
+      {
+        "id": "SappersBomb",
+        "names": {
+          "english": "Bomb",
+          "french": "Bombe",
+          "german": "Bombe",
+          "russian": "Бомба",
+          "portuguese": "Bomba",
+          "chinese": "炸弹",
+          "spanish": "Bomba",
+          "chinese_traditional": "炸彈",
+          "korean": "폭탄",
+          "japanese": "爆弾"
+        },
+        "character_art": "@SappersBombCharacterArt",
+        "size": 1,
+        "attack_damage": 0,
+        "health": 1,
+        "death_slides_backwards": false,
+        "triggers": [
+          {
+            "id": "@SappersBombLastBreath"
+          }
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "SappersBombLastBreath",
+        "descriptions": {
+          "english": "Deal [effect0.power] damage to the front enemy unit.",
+          "french": "Inflige <nobr>[effect0.power] DGT</nobr> à l'ennemi en 1re ligne.",
+          "german": "Füge der vordersten gegnerischen Einheit [effect0.power] Schaden zu.",
+          "russian": "Наносит переднему вражескому бойцу [effect0.power] урона.",
+          "portuguese": "Causa [effect0.power] de dano à unidade inimiga na frente.",
+          "chinese": "对前排敌方单位造成 [effect0.power] 点伤害。",
+          "spanish": "Inflige [effect0.power] de daño a la primera unidad enemiga.",
+          "chinese_traditional": "對前排敵方單位造成[effect0.power]點傷害。",
+          "korean": "전열 적 유닛에게 [effect0.power]의 피해를 입힙니다.",
+          "japanese": "前列の敵ユニットに[effect0.power]のダメージを与える。"
+        },
+        "trigger": "on_death",
+        "effects": [
+          "@SappersBombExplosion"
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SappersBombExplosionVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_WaxImpact_PS.prefab",
+          "asset_guid": "16baf7e5a46cc9748b8b32ab3aabec0f"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "SappersBombCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@SappersBombCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.29,
+                "z": 0
+              },
+              "scale": {
+                "x": 0.5,
+                "y": 0.5,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "SappersBombCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@SappersBombCardArt"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_sappers_charges.json": "090f54b3e10e32baf5e5abafd304674ddfc1776479b68d5050151b3955cd3e12"
+  }
+}

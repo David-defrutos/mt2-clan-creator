@@ -1,0 +1,187 @@
+{
+  "id": "freecompany-TwinAxes",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "TwinAxes"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Twin Axes",
+    "french": "Haches jumelles",
+    "german": "Zwillingsäxte",
+    "russian": "Парные топоры",
+    "portuguese": "Machados Gêmeos",
+    "chinese": "双斧",
+    "spanish": "Hachas gemelas",
+    "chinese_traditional": "雙斧",
+    "korean": "쌍도끼",
+    "japanese": "双斧"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/ecd7bfcce8feb626b312774150b2769413768521162752f8710c430a7a1ab731.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/TwinAxesArt.png": "assets/ecd7bfcce8feb626b312774150b2769413768521162752f8710c430a7a1ab731.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "TwinAxes",
+        "names": {
+          "english": "Twin Axes",
+          "french": "Haches jumelles",
+          "german": "Zwillingsäxte",
+          "russian": "Парные топоры",
+          "portuguese": "Machados Gêmeos",
+          "chinese": "双斧",
+          "spanish": "Hachas gemelas",
+          "chinese_traditional": "雙斧",
+          "korean": "쌍도끼",
+          "japanese": "双斧"
+        },
+        "card_art": "@TwinAxes",
+        "cost": 1,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipTwinAxes"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "EquipTwinAxes",
+        "applied_vfx": "@KitBarbarianBuffVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgTwinAxes"
+      },
+      {
+        "id": "TwinAxesTrigEffect",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "buff",
+            "count": 4
+          }
+        ]
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgTwinAxes",
+        "titles": {
+          "english": "Twin Axes",
+          "french": "Haches jumelles",
+          "german": "Zwillingsäxte",
+          "russian": "Парные топоры",
+          "portuguese": "Machados Gêmeos",
+          "chinese": "双斧",
+          "spanish": "Hachas gemelas",
+          "chinese_traditional": "雙斧",
+          "korean": "쌍도끼",
+          "japanese": "双斧"
+        },
+        "descriptions": {
+          "english": "<b>+10</b> [attack]. <b>Slay</b>: gain <b>4</b> [rage].",
+          "french": "<b>+10</b> [attack]. <b>Élimination</b> : gagnez <b>4</b> [rage].",
+          "german": "<b>+10</b> [attack]. <b>Töten</b>: Erhalte <b>4</b> [rage].",
+          "russian": "<b>+10</b> [attack]. <b>Убийство</b>: получите <b>4</b> [rage].",
+          "portuguese": "<b>+10</b> [attack]. <b>Abate</b>: ganhe <b>4</b> [rage].",
+          "chinese": "<b>+10</b> [attack]. <b>击杀</b>：获得<b>4</b> [rage]。",
+          "spanish": "<b>+10</b> [attack]. <b>Matanza</b>: gana <b>4</b> [rage].",
+          "chinese_traditional": "<b>+10</b> [attack]. <b>擊殺</b>：獲得<b>4</b> [rage]。",
+          "korean": "<b>+10</b> [attack]. <b>처치</b>: <b>4</b> [rage] 획득.",
+          "japanese": "<b>+10</b> [attack]. <b>撃破</b>：<b>4</b> [rage]を得る。"
+        },
+        "icon": "@TwinAxes",
+        "bonus_damage": 10,
+        "trigger_upgrades": [
+          "@TwinAxesTrigger"
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "TwinAxesTrigger",
+        "trigger": "on_kill",
+        "descriptions": {
+          "english": "Gain [effect0.status0.power] [rage].",
+          "french": "Gagnez [effect0.status0.power] [rage].",
+          "german": "Erhalte [effect0.status0.power] [rage].",
+          "russian": "Получите [effect0.status0.power] [rage].",
+          "portuguese": "Ganhe [effect0.status0.power] [rage].",
+          "chinese": "获得[effect0.status0.power] [rage]。",
+          "spanish": "Gana [effect0.status0.power] [rage].",
+          "chinese_traditional": "獲得[effect0.status0.power] [rage]。",
+          "korean": "[effect0.status0.power] [rage] 획득.",
+          "japanese": "[effect0.status0.power] [rage]を得る。"
+        },
+        "effects": [
+          "@TwinAxesTrigEffect"
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "TwinAxes",
+        "path": "textures/TwinAxesArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitBarbarianBuffVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "TwinAxes",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@TwinAxes"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/kits/kit_barbarian.json": "bb4e9b26871aec51edc5563f0903f9e8854ef2a4970cafef85430cca8a75ff07",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

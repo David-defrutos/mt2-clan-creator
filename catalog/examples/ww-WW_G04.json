@@ -1,0 +1,137 @@
+{
+  "id": "ww-WW_G04",
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_G04"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Amulet of Undying",
+    "spanish": "Amuleto de Reanimación",
+    "french": "Amulette de réanimation",
+    "german": "Amulett der Wiederbelebung",
+    "portuguese": "Amuleto da Reanimação",
+    "russian": "Амулет реанимации",
+    "chinese": "复苏护符",
+    "chinese_traditional": "復甦護符",
+    "korean": "소생의 부적",
+    "japanese": "蘇生のアミュレット"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/8a8ee3a3ecfb5dc1f13040061c50393222a93959c1df67bd39697a1bac5c5113.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/equipment/WW_G04Icon.png": "assets/5dec41d8809f1b6e15b1131c194f1bf2b608ea20423598b35d597bf5ef9e1e5a.png",
+    "textures/cards/WW_G04CardArt.png": "assets/8a8ee3a3ecfb5dc1f13040061c50393222a93959c1df67bd39697a1bac5c5113.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_G04",
+        "names": {
+          "english": "Amulet of Undying",
+          "spanish": "Amuleto de Reanimación",
+          "french": "Amulette de réanimation",
+          "german": "Amulett der Wiederbelebung",
+          "portuguese": "Amuleto da Reanimação",
+          "russian": "Амулет реанимации",
+          "chinese": "复苏护符",
+          "chinese_traditional": "復甦護符",
+          "korean": "소생의 부적",
+          "japanese": "蘇生のアミュレット"
+        },
+        "card_type": "equipment",
+        "cost": 0,
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "card_art": "@WW_G04CardArt",
+        "effects": [
+          "@WW_G04_Equip"
+        ],
+        "traits": [
+          "@WW_G04_Grafted"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_G04_Grafted",
+        "name": "CardTraitGraftedEquipment",
+        "trait_is_removable": false
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_G04_Equip",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@WW_G04_Upgrade"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WW_G04_Upgrade",
+        "titles": {
+          "english": "Amulet of Undying",
+          "spanish": "Amuleto de Reanimación",
+          "french": "Amulette de réanimation",
+          "german": "Amulett der Wiederbelebung",
+          "portuguese": "Amuleto da Reanimação",
+          "russian": "Амулет реанимации",
+          "chinese": "复苏护符",
+          "chinese_traditional": "復甦護符",
+          "korean": "소생의 부적",
+          "japanese": "蘇生のアミュレット"
+        },
+        "hide_icon_on_card": true,
+        "icon": "@WW_G04Icon",
+        "status_effect_upgrades": [
+          {
+            "status": "undying",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_G04Icon",
+        "path": "textures/equipment/WW_G04Icon.png"
+      },
+      {
+        "id": "WW_G04CardArt",
+        "path": "textures/cards/WW_G04CardArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_G04CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_G04CardArt"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/grafts/WW_G04.json": "f2f34faf24405aec2ba1effa00e0e6762cb3943b90293334488c5d2fd31979d6"
+  }
+}

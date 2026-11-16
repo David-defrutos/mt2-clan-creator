@@ -1,0 +1,180 @@
+{
+  "id": "freecompany-Longbow",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Longbow"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Longbow",
+    "french": "Arc long",
+    "german": "Langbogen",
+    "russian": "Длинный лук",
+    "portuguese": "Arco Longo",
+    "chinese": "长弓",
+    "spanish": "Arco largo",
+    "chinese_traditional": "長弓",
+    "korean": "장궁",
+    "japanese": "長弓"
+  },
+  "descriptions": {
+    "english": "<b>+10</b> [attack]. [piercing].",
+    "french": "<b>+10</b> [attack]. [piercing].",
+    "german": "<b>+10</b> [attack]. [piercing].",
+    "russian": "<b>+10</b> [attack]. [piercing].",
+    "portuguese": "<b>+10</b> [attack]. [piercing].",
+    "chinese": "<b>+10</b> [attack]. [piercing].",
+    "spanish": "<b>+10</b> [attack]. [piercing].",
+    "chinese_traditional": "<b>+10</b> [attack]. [piercing].",
+    "korean": "<b>+10</b> [attack]. [piercing].",
+    "japanese": "<b>+10</b> [attack]. [piercing]."
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/443a657f2c5c45c2a2812848bb6fec48a8768772e78889733ae9a32d20d07903.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/LongbowArt.png": "assets/443a657f2c5c45c2a2812848bb6fec48a8768772e78889733ae9a32d20d07903.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Longbow",
+        "names": {
+          "english": "Longbow",
+          "french": "Arc long",
+          "german": "Langbogen",
+          "russian": "Длинный лук",
+          "portuguese": "Arco Longo",
+          "chinese": "长弓",
+          "spanish": "Arco largo",
+          "chinese_traditional": "長弓",
+          "korean": "장궁",
+          "japanese": "長弓"
+        },
+        "descriptions": {
+          "english": "<b>+10</b> [attack]. [piercing].",
+          "french": "<b>+10</b> [attack]. [piercing].",
+          "german": "<b>+10</b> [attack]. [piercing].",
+          "russian": "<b>+10</b> [attack]. [piercing].",
+          "portuguese": "<b>+10</b> [attack]. [piercing].",
+          "chinese": "<b>+10</b> [attack]. [piercing].",
+          "spanish": "<b>+10</b> [attack]. [piercing].",
+          "chinese_traditional": "<b>+10</b> [attack]. [piercing].",
+          "korean": "<b>+10</b> [attack]. [piercing].",
+          "japanese": "<b>+10</b> [attack]. [piercing]."
+        },
+        "card_art": "@Longbow",
+        "cost": 1,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipLongbow"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "EquipLongbow",
+        "applied_vfx": "@KitRangerCraftVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgLongbow"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgLongbow",
+        "titles": {
+          "english": "Longbow",
+          "french": "Arc long",
+          "german": "Langbogen",
+          "russian": "Длинный лук",
+          "portuguese": "Arco Longo",
+          "chinese": "长弓",
+          "spanish": "Arco largo",
+          "chinese_traditional": "長弓",
+          "korean": "장궁",
+          "japanese": "長弓"
+        },
+        "descriptions": {
+          "english": "<b>+10</b> [attack]. [piercing].",
+          "french": "<b>+10</b> [attack]. [piercing].",
+          "german": "<b>+10</b> [attack]. [piercing].",
+          "russian": "<b>+10</b> [attack]. [piercing].",
+          "portuguese": "<b>+10</b> [attack]. [piercing].",
+          "chinese": "<b>+10</b> [attack]. [piercing].",
+          "spanish": "<b>+10</b> [attack]. [piercing].",
+          "chinese_traditional": "<b>+10</b> [attack]. [piercing].",
+          "korean": "<b>+10</b> [attack]. [piercing].",
+          "japanese": "<b>+10</b> [attack]. [piercing]."
+        },
+        "icon": "@Longbow",
+        "bonus_damage": 10,
+        "status_effect_upgrades": [
+          {
+            "status": "piercing",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Longbow",
+        "path": "textures/LongbowArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitRangerCraftVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Railforged/CraftedEquipment/FX_CraftedEquipment.prefab",
+          "asset_guid": "8b71ea7d8f6189148add8fe2945b0bc5"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Longbow",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Longbow"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/kits/kit_ranger.json": "9a2ce18dbaf287ba54b81290e7b5b5c80d39fa83935607d88fae2f23ac274011",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

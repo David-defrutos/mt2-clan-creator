@@ -1,0 +1,204 @@
+{
+  "id": "succclan-SpawnVrolikai",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "SpawnVrolikai"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Vrolikai",
+    "chinese": "四臂蛇魔",
+    "spanish": "Vrolikai",
+    "french": "Vrolikai",
+    "german": "Vrolikai",
+    "portuguese": "Vrolikai",
+    "russian": "Vrolikai",
+    "chinese_traditional": "Vrolikai",
+    "japanese": "Vrolikai",
+    "korean": "Vrolikai"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 12,
+  "attack": 6,
+  "size": 2,
+  "picture": "assets/276e4c0bb08ba204631c80b0fe5f4902119b53c36aa901fabd22538194b08fbb.png",
+  "characterPicture": "assets/df4d39681f27fcf5c43bdcc814f22ce3d3e5757ba459d98ebc30192265adb919.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/VrolikaiCharacterArt.png": "assets/df4d39681f27fcf5c43bdcc814f22ce3d3e5757ba459d98ebc30192265adb919.png",
+    "textures/VrolikaiCardArt.png": "assets/276e4c0bb08ba204631c80b0fe5f4902119b53c36aa901fabd22538194b08fbb.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnVrolikai",
+        "names": {
+          "english": "Vrolikai",
+          "chinese": "四臂蛇魔",
+          "spanish": "Vrolikai",
+          "french": "Vrolikai",
+          "german": "Vrolikai",
+          "portuguese": "Vrolikai",
+          "russian": "Vrolikai",
+          "chinese_traditional": "Vrolikai",
+          "japanese": "Vrolikai",
+          "korean": "Vrolikai"
+        },
+        "card_art": "@VrolikaiCardArt",
+        "cost": 1,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "effects": [
+          "@SpawnVrolikai"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnVrolikai",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@Vrolikai"
+      }
+    ],
+    "characters": [
+      {
+        "id": "Vrolikai",
+        "attack_vfx": "@SuccFXBladeAttack",
+        "impact_vfx": "@SuccFXShadowImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "names": {
+          "english": "Vrolikai",
+          "chinese": "四臂蛇魔",
+          "spanish": "Vrolikai",
+          "french": "Vrolikai",
+          "german": "Vrolikai",
+          "portuguese": "Vrolikai",
+          "russian": "Vrolikai",
+          "chinese_traditional": "Vrolikai",
+          "japanese": "Vrolikai",
+          "korean": "Vrolikai"
+        },
+        "character_art": "@VrolikaiCharacterArt",
+        "size": 2,
+        "attack_damage": 6,
+        "health": 12,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Naga"
+        ],
+        "starting_status_effects": [
+          {
+            "status": "multistrike",
+            "count": 3
+          },
+          {
+            "status": "heal immunity",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Naga",
+        "names": {
+          "english": "Naga",
+          "chinese": "娜迦",
+          "spanish": "Naga",
+          "french": "Naga",
+          "german": "Naga",
+          "portuguese": "Naga",
+          "russian": "Нага",
+          "chinese_traditional": "娜迦",
+          "japanese": "ナーガ",
+          "korean": "나가"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "VrolikaiCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@VrolikaiCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.0565,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 0.85,
+                "y": 0.85,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "VrolikaiCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@VrolikaiCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "VrolikaiCharacterArt",
+        "path": "textures/VrolikaiCharacterArt.png"
+      },
+      {
+        "id": "VrolikaiCardArt",
+        "path": "textures/VrolikaiCardArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXBladeAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/DeathsDancer/FX_DeathsDancerAttack.prefab",
+          "asset_guid": "7b4040ba5c134c84eaeb246a77b0a401"
+        },
+        "spawn_location": "character_center"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_Vrolikai.json": "0408c51fdaf86bd25efa785cbf2287effda8de0be3de5bf4190e94f816358666",
+    "json/class.json": "65c18f4c8b8c97b62edfa51f3d02d2cae856fe878c761586e950fc9993580bc3",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

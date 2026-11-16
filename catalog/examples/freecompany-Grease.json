@@ -1,0 +1,136 @@
+{
+  "id": "freecompany-Grease",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Grease"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Grease",
+    "french": "Graisse",
+    "german": "Schmiere",
+    "russian": "Смазка",
+    "portuguese": "Graxa",
+    "chinese": "油腻术",
+    "spanish": "Grasa",
+    "chinese_traditional": "油膩術",
+    "korean": "기름막",
+    "japanese": "グリース"
+  },
+  "descriptions": {
+    "english": "Apply [effect0.status0.power] [rooted] to all enemies on this floor.",
+    "french": "Appliquez [effect0.status0.power] [rooted] à tous les ennemis de cet étage.",
+    "german": "Verleihe allen Gegnern auf diesem Stockwerk [effect0.status0.power] [rooted].",
+    "russian": "Наложите [effect0.status0.power] [rooted] на всех врагов на этом этаже.",
+    "portuguese": "Aplique [effect0.status0.power] [rooted] a todos os inimigos neste andar.",
+    "chinese": "对本层所有敌人施加[effect0.status0.power] [rooted]。",
+    "spanish": "Añade [effect0.status0.power] [rooted] a todos los enemigos de este piso.",
+    "chinese_traditional": "對本層所有敵人施加[effect0.status0.power] [rooted]。",
+    "korean": "이 층의 모든 적에게 [effect0.status0.power] [rooted] 부여.",
+    "japanese": "この階の敵全体に[effect0.status0.power] [rooted]を付与。"
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/1c84f9e6e9ad96fbaa1ef0670345e50d709e480d45fc31d613b39625db511dda.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/GreaseArt.png": "assets/1c84f9e6e9ad96fbaa1ef0670345e50d709e480d45fc31d613b39625db511dda.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Grease",
+        "names": {
+          "english": "Grease",
+          "french": "Graisse",
+          "german": "Schmiere",
+          "russian": "Смазка",
+          "portuguese": "Graxa",
+          "chinese": "油腻术",
+          "spanish": "Grasa",
+          "chinese_traditional": "油膩術",
+          "korean": "기름막",
+          "japanese": "グリース"
+        },
+        "descriptions": {
+          "english": "Apply [effect0.status0.power] [rooted] to all enemies on this floor.",
+          "french": "Appliquez [effect0.status0.power] [rooted] à tous les ennemis de cet étage.",
+          "german": "Verleihe allen Gegnern auf diesem Stockwerk [effect0.status0.power] [rooted].",
+          "russian": "Наложите [effect0.status0.power] [rooted] на всех врагов на этом этаже.",
+          "portuguese": "Aplique [effect0.status0.power] [rooted] a todos os inimigos neste andar.",
+          "chinese": "对本层所有敌人施加[effect0.status0.power] [rooted]。",
+          "spanish": "Añade [effect0.status0.power] [rooted] a todos los enemigos de este piso.",
+          "chinese_traditional": "對本層所有敵人施加[effect0.status0.power] [rooted]。",
+          "korean": "이 층의 모든 적에게 [effect0.status0.power] [rooted] 부여.",
+          "japanese": "この階の敵全体に[effect0.status0.power] [rooted]を付与。"
+        },
+        "card_art": "@Grease",
+        "cost": 1,
+        "card_type": "spell",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": true,
+        "effects": [
+          "@GreaseRooted"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "GreaseRooted",
+        "applied_vfx": "@SpellGreaseRootVFX",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_status_effects": [
+          {
+            "status": "rooted",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellGreaseRootVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_EncaseVines_PS.prefab",
+          "asset_guid": "5c17914b9ad92cf4f88666384ae72cb4"
+        },
+        "spawn_location": "character_bottom"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Grease",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Grease"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Grease",
+        "path": "textures/GreaseArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_grease.json": "4626c2af8615fb573020109f35435c012772b4cb1ab484951a4f39521f92945e"
+  }
+}

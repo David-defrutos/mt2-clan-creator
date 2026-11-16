@@ -1,0 +1,121 @@
+{
+  "id": "ww-WW_S12",
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S12"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Examen de Triple Impacto",
+    "english": "Triple Impact Exam",
+    "french": "Examen à triple impact",
+    "german": "Dreifachtrefferprüfung",
+    "portuguese": "Exame de Impacto Triplo",
+    "russian": "Экзамен тройного удара",
+    "chinese": "三重冲击考试",
+    "chinese_traditional": "三重衝擊考試",
+    "korean": "삼중 충격 시험",
+    "japanese": "三連撃試験"
+  },
+  "descriptions": {
+    "spanish": "Inflige [effect0.power] de daño 3 veces.",
+    "french": "Infligez [effect0.power] dégâts 3 fois.",
+    "german": "Verursache 3-mal [effect0.power] Schaden.",
+    "portuguese": "Causa [effect0.power] de dano 3 vezes.",
+    "russian": "Нанесите [effect0.power] урона 3 раза.",
+    "chinese": "造成[effect0.power]点伤害，重复3次。",
+    "chinese_traditional": "造成[effect0.power]點傷害，重複3次。",
+    "korean": "[effect0.power] 피해를 3번 줍니다.",
+    "japanese": "[effect0.power]ダメージを3回与える。",
+    "english": "Deal [effect0.power] damage 3 times."
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/5777816ab1a5f0d5d6bb01b56ddff2f74f96021bf6514b931ca73e529cbf2805.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S12CardArt.png": "assets/5777816ab1a5f0d5d6bb01b56ddff2f74f96021bf6514b931ca73e529cbf2805.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S12",
+        "names": {
+          "spanish": "Examen de Triple Impacto",
+          "english": "Triple Impact Exam",
+          "french": "Examen à triple impact",
+          "german": "Dreifachtrefferprüfung",
+          "portuguese": "Exame de Impacto Triplo",
+          "russian": "Экзамен тройного удара",
+          "chinese": "三重冲击考试",
+          "chinese_traditional": "三重衝擊考試",
+          "korean": "삼중 충격 시험",
+          "japanese": "三連撃試験"
+        },
+        "descriptions": {
+          "spanish": "Inflige [effect0.power] de daño 3 veces.",
+          "french": "Infligez [effect0.power] dégâts 3 fois.",
+          "german": "Verursache 3-mal [effect0.power] Schaden.",
+          "portuguese": "Causa [effect0.power] de dano 3 vezes.",
+          "russian": "Нанесите [effect0.power] урона 3 раза.",
+          "chinese": "造成[effect0.power]点伤害，重复3次。",
+          "chinese_traditional": "造成[effect0.power]點傷害，重複3次。",
+          "korean": "[effect0.power] 피해를 3번 줍니다.",
+          "japanese": "[effect0.power]ダメージを3回与える。",
+          "english": "Deal [effect0.power] damage 3 times."
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "common",
+        "targets_room": true,
+        "effects": [
+          "@WW_S12_Damage",
+          "@WW_S12_Damage",
+          "@WW_S12_Damage"
+        ],
+        "card_art": "@WW_S12CardArt"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S12CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S12CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S12CardArt",
+        "path": "textures/cards/WW_S12CardArt.png"
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_S12_Damage",
+        "name": "CardEffectDamage",
+        "target_mode": "drop_target_character",
+        "target_team": "both",
+        "param_int": 4
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S12.json": "fd2927325bab657b5b93321f1bec0740a05be5cb35a9ab77ed8c9c049648dcf0"
+  }
+}

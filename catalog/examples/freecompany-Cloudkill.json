@@ -1,0 +1,149 @@
+{
+  "id": "freecompany-Cloudkill",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Cloudkill"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Cloudkill",
+    "french": "Nuage mortel",
+    "german": "Todeswolke",
+    "russian": "Смертельное облако",
+    "portuguese": "Nuvem Mortal",
+    "chinese": "死云术",
+    "spanish": "Nube mortal",
+    "chinese_traditional": "死雲術",
+    "korean": "죽음의 구름",
+    "japanese": "死の雲"
+  },
+  "descriptions": {
+    "english": "Apply [effect0.status0.power] [frostbite] and [effect1.status0.power] [witherbloom] to all enemies on this floor.",
+    "french": "Appliquez [effect0.status0.power] [frostbite] et [effect1.status0.power] [witherbloom] à tous les ennemis de cet étage.",
+    "german": "Verleihe allen Gegnern auf diesem Stockwerk [effect0.status0.power] [frostbite] und [effect1.status0.power] [witherbloom].",
+    "russian": "Наложите [effect0.status0.power] [frostbite] и [effect1.status0.power] [witherbloom] на всех врагов на этом этаже.",
+    "portuguese": "Aplique [effect0.status0.power] [frostbite] e [effect1.status0.power] [witherbloom] a todos os inimigos neste andar.",
+    "chinese": "对本层所有敌人施加[effect0.status0.power] [frostbite]和[effect1.status0.power] [witherbloom]。",
+    "spanish": "Añade [effect0.status0.power] [frostbite] y [effect1.status0.power] [witherbloom] a todos los enemigos de este piso.",
+    "chinese_traditional": "對本層所有敵人施加[effect0.status0.power] [frostbite]和[effect1.status0.power] [witherbloom]。",
+    "korean": "이 층의 모든 적에게 [effect0.status0.power] [frostbite] 및 [effect1.status0.power] [witherbloom] 부여.",
+    "japanese": "この階の敵全体に[effect0.status0.power] [frostbite]と[effect1.status0.power] [witherbloom]を付与。"
+  },
+  "cost": 3,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/ce4f26fc18bdd37c9be65b669bb907b3c9b69a3ca350b1ed284e4b711c1d2bdd.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/CloudkillArt.png": "assets/ce4f26fc18bdd37c9be65b669bb907b3c9b69a3ca350b1ed284e4b711c1d2bdd.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Cloudkill",
+        "names": {
+          "english": "Cloudkill",
+          "french": "Nuage mortel",
+          "german": "Todeswolke",
+          "russian": "Смертельное облако",
+          "portuguese": "Nuvem Mortal",
+          "chinese": "死云术",
+          "spanish": "Nube mortal",
+          "chinese_traditional": "死雲術",
+          "korean": "죽음의 구름",
+          "japanese": "死の雲"
+        },
+        "descriptions": {
+          "english": "Apply [effect0.status0.power] [frostbite] and [effect1.status0.power] [witherbloom] to all enemies on this floor.",
+          "french": "Appliquez [effect0.status0.power] [frostbite] et [effect1.status0.power] [witherbloom] à tous les ennemis de cet étage.",
+          "german": "Verleihe allen Gegnern auf diesem Stockwerk [effect0.status0.power] [frostbite] und [effect1.status0.power] [witherbloom].",
+          "russian": "Наложите [effect0.status0.power] [frostbite] и [effect1.status0.power] [witherbloom] на всех врагов на этом этаже.",
+          "portuguese": "Aplique [effect0.status0.power] [frostbite] e [effect1.status0.power] [witherbloom] a todos os inimigos neste andar.",
+          "chinese": "对本层所有敌人施加[effect0.status0.power] [frostbite]和[effect1.status0.power] [witherbloom]。",
+          "spanish": "Añade [effect0.status0.power] [frostbite] y [effect1.status0.power] [witherbloom] a todos los enemigos de este piso.",
+          "chinese_traditional": "對本層所有敵人施加[effect0.status0.power] [frostbite]和[effect1.status0.power] [witherbloom]。",
+          "korean": "이 층의 모든 적에게 [effect0.status0.power] [frostbite] 및 [effect1.status0.power] [witherbloom] 부여.",
+          "japanese": "この階の敵全体に[effect0.status0.power] [frostbite]と[effect1.status0.power] [witherbloom]を付与。"
+        },
+        "card_art": "@Cloudkill",
+        "cost": 3,
+        "card_type": "spell",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": true,
+        "effects": [
+          "@CloudkillPoison",
+          "@CloudkillWither"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "CloudkillWither",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_status_effects": [
+          {
+            "status": "witherbloom",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "id": "CloudkillPoison",
+        "applied_vfx": "@SpellCloudkillPoisonVFX",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_status_effects": [
+          {
+            "status": "poison",
+            "count": 6
+          }
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellCloudkillPoisonVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/UnderLegion/MushroomCloud/FX_MushroomCloud.prefab",
+          "asset_guid": "9e7a7f36278be71419ebc3bbae5ca044"
+        },
+        "spawn_location": "character_bottom"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Cloudkill",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Cloudkill"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Cloudkill",
+        "path": "textures/CloudkillArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_cloudkill.json": "43bc8746022bc9111f4814637d1b79cb0ac7b87b5651cf899976d8d248d6e87e"
+  }
+}

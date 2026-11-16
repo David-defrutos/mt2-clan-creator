@@ -1,0 +1,835 @@
+{
+  "id": "freecompany-KitBash",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "KitBash"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Kit Bash",
+    "french": "Équipement de fortune",
+    "german": "Ausrüstung zusammenbasteln",
+    "russian": "Сборка снаряжения",
+    "portuguese": "Equipamento Improvisado",
+    "chinese": "临时装备",
+    "spanish": "Equipo improvisado",
+    "chinese_traditional": "臨時裝備",
+    "korean": "급조 장비",
+    "japanese": "即席装備"
+  },
+  "descriptions": {
+    "english": "Add a random tier <b>I</b> piece of kit to your hand.",
+    "french": "Ajoutez une pièce d’équipement aléatoire de rang <b>I</b> à votre main.",
+    "german": "Füge deiner Hand einen zufälligen Ausrüstungsgegenstand der Stufe <b>I</b> hinzu.",
+    "russian": "Добавьте в руку случайное снаряжение уровня <b>I</b>.",
+    "portuguese": "Adicione uma peça aleatória de equipamento de nível <b>I</b> à sua mão.",
+    "chinese": "将一张随机<b>I</b>级装备加入手牌。",
+    "spanish": "Añade una pieza de equipo aleatoria de nivel <b>I</b> a tu mano.",
+    "chinese_traditional": "將一張隨機<b>I</b>級裝備加入手牌。",
+    "korean": "무작위 <b>I</b>단계 장비를 손에 추가.",
+    "japanese": "ランダムなランク<b>I</b>装備を手札に追加。"
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/83692c72bc50e48407036b5472b697462f55f58a8da96c919e8ee7b43282e60b.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ChalkCircleArt.png": "assets/c098ab803012e7cce6358be75cac093f7fbc831628a27c2e82bdfa267cb17642.png",
+    "textures/BucklerArt.png": "assets/d31547d68d287ff3fa183e8307bab3e17a67d1f08decb6f92662fa0be53a4fa9.png",
+    "textures/LockpicksArt.png": "assets/2e24deb7ab3d861e6afa8f96fa0602fc2e8bd6de7374b00becd85313c991e652.png",
+    "textures/ShortbowArt.png": "assets/ec3fb36f2cf1cac61573f36d6c8b73bc93bd22d66600ec08aa540e956084285c.png",
+    "textures/BandagesArt.png": "assets/7c5eb980e03feec372145cbbebec63657aefc8ff4d1d4634f7453a2c822b048b.png",
+    "textures/NotchedAxeArt.png": "assets/c2935108df9238768452ce830669c7db83aab10f25c46ce2ae5bbb59d5aab2cb.png",
+    "textures/KitBashArt.png": "assets/83692c72bc50e48407036b5472b697462f55f58a8da96c919e8ee7b43282e60b.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "KitBash",
+        "names": {
+          "english": "Kit Bash",
+          "french": "Équipement de fortune",
+          "german": "Ausrüstung zusammenbasteln",
+          "russian": "Сборка снаряжения",
+          "portuguese": "Equipamento Improvisado",
+          "chinese": "临时装备",
+          "spanish": "Equipo improvisado",
+          "chinese_traditional": "臨時裝備",
+          "korean": "급조 장비",
+          "japanese": "即席装備"
+        },
+        "descriptions": {
+          "english": "Add a random tier <b>I</b> piece of kit to your hand.",
+          "french": "Ajoutez une pièce d’équipement aléatoire de rang <b>I</b> à votre main.",
+          "german": "Füge deiner Hand einen zufälligen Ausrüstungsgegenstand der Stufe <b>I</b> hinzu.",
+          "russian": "Добавьте в руку случайное снаряжение уровня <b>I</b>.",
+          "portuguese": "Adicione uma peça aleatória de equipamento de nível <b>I</b> à sua mão.",
+          "chinese": "将一张随机<b>I</b>级装备加入手牌。",
+          "spanish": "Añade una pieza de equipo aleatoria de nivel <b>I</b> a tu mano.",
+          "chinese_traditional": "將一張隨機<b>I</b>級裝備加入手牌。",
+          "korean": "무작위 <b>I</b>단계 장비를 손에 추가.",
+          "japanese": "ランダムなランク<b>I</b>装備を手札に追加。"
+        },
+        "card_art": "@KitBash",
+        "cost": 1,
+        "card_type": "spell",
+        "rarity": "common",
+        "targets_room": false,
+        "targetless": true,
+        "effects": [
+          "@KitBashDraw"
+        ]
+      },
+      {
+        "id": "ChalkCircle",
+        "names": {
+          "english": "Chalk Circle",
+          "french": "Cercle de craie",
+          "german": "Kreidekreis",
+          "russian": "Меловой круг",
+          "portuguese": "Círculo de Giz",
+          "chinese": "粉笔法阵",
+          "spanish": "Círculo de tiza",
+          "chinese_traditional": "粉筆法陣",
+          "korean": "분필 마법진",
+          "japanese": "白墨の魔法陣"
+        },
+        "descriptions": {
+          "english": "Apply <b>2</b> [conduit].",
+          "french": "Applique <b>2</b> [conduit].",
+          "german": "Verleiht <b>2</b> [conduit].",
+          "russian": "Накладывает <b>2</b> [conduit].",
+          "portuguese": "Aplica <b>2</b> [conduit].",
+          "chinese": "施加<b>2</b> [conduit]。",
+          "spanish": "Añade <b>2</b> [conduit].",
+          "chinese_traditional": "施加<b>2</b> [conduit]。",
+          "korean": "<b>2</b> [conduit] 부여.",
+          "japanese": "<b>2</b> [conduit]を付与。"
+        },
+        "card_art": "@ChalkCircle",
+        "cost": 0,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipChalkCircle",
+          "@ChalkCircleApplyConduit"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      },
+      {
+        "id": "Buckler",
+        "names": {
+          "english": "Buckler",
+          "french": "Rondache",
+          "german": "Faustschild",
+          "russian": "Баклер",
+          "portuguese": "Broquel",
+          "chinese": "小圆盾",
+          "spanish": "Broquel",
+          "chinese_traditional": "小圓盾",
+          "korean": "소형 방패",
+          "japanese": "バックラー"
+        },
+        "descriptions": {
+          "english": "<b>+8</b> [health]. Apply <b>3</b> [armor].",
+          "french": "<b>+8</b> [health]. Appliquez <b>3</b> [armor].",
+          "german": "<b>+8</b> [health]. Erhalte <b>3</b> [armor].",
+          "russian": "<b>+8</b> [health]. Получите <b>3</b> [armor].",
+          "portuguese": "<b>+8</b> [health]. Aplique <b>3</b> [armor].",
+          "chinese": "<b>+8</b> [health]. 施加<b>3</b> [armor]。",
+          "spanish": "<b>+8</b> [health]. Añade <b>3</b> [armor].",
+          "chinese_traditional": "<b>+8</b> [health]. 施加<b>3</b> [armor]。",
+          "korean": "<b>+8</b> [health]. <b>3</b> [armor] 부여.",
+          "japanese": "<b>+8</b> [health]. <b>3</b> [armor]を付与。"
+        },
+        "card_art": "@Buckler",
+        "cost": 0,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipBuckler",
+          "@BucklerApplyArmor"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      },
+      {
+        "id": "Lockpicks",
+        "names": {
+          "english": "Lockpicks",
+          "french": "Crochets",
+          "german": "Dietriche",
+          "russian": "Отмычки",
+          "portuguese": "Gazuas",
+          "chinese": "开锁工具",
+          "spanish": "Ganzúas",
+          "chinese_traditional": "開鎖工具",
+          "korean": "자물쇠 따개",
+          "japanese": "ピッキング道具"
+        },
+        "descriptions": {
+          "english": "<b>+4</b> [attack]. Apply <b>1</b> [avarice] and <b>2</b> [stealth].",
+          "french": "<b>+4</b> [attack]. Appliquez <b>1</b> [avarice] et <b>2</b> [stealth].",
+          "german": "<b>+4</b> [attack]. Erhalte <b>1</b> [avarice] und <b>2</b> [stealth].",
+          "russian": "<b>+4</b> [attack]. Получите <b>1</b> [avarice] и <b>2</b> [stealth].",
+          "portuguese": "<b>+4</b> [attack]. Aplique <b>1</b> [avarice] e <b>2</b> [stealth].",
+          "chinese": "<b>+4</b> [attack]. 施加<b>1</b> [avarice]和<b>2</b> [stealth]。",
+          "spanish": "<b>+4</b> [attack]. Añade <b>1</b> [avarice] y <b>2</b> [stealth].",
+          "chinese_traditional": "<b>+4</b> [attack]. 施加<b>1</b> [avarice]和<b>2</b> [stealth]。",
+          "korean": "<b>+4</b> [attack]. <b>1</b> [avarice] 및 <b>2</b> [stealth] 부여.",
+          "japanese": "<b>+4</b> [attack]. <b>1</b> [avarice]と<b>2</b> [stealth]を付与。"
+        },
+        "card_art": "@Lockpicks",
+        "cost": 0,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipLockpicks"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      },
+      {
+        "id": "Shortbow",
+        "names": {
+          "english": "Shortbow",
+          "french": "Arc court",
+          "german": "Kurzbogen",
+          "russian": "Короткий лук",
+          "portuguese": "Arco Curto",
+          "chinese": "短弓",
+          "spanish": "Arco corto",
+          "chinese_traditional": "短弓",
+          "korean": "단궁",
+          "japanese": "短弓"
+        },
+        "descriptions": {
+          "english": "<b>+5</b> [attack].",
+          "french": "<b>+5</b> [attack].",
+          "german": "<b>+5</b> [attack].",
+          "russian": "<b>+5</b> [attack].",
+          "portuguese": "<b>+5</b> [attack].",
+          "chinese": "<b>+5</b> [attack].",
+          "spanish": "<b>+5</b> [attack].",
+          "chinese_traditional": "<b>+5</b> [attack].",
+          "korean": "<b>+5</b> [attack].",
+          "japanese": "<b>+5</b> [attack]."
+        },
+        "card_art": "@Shortbow",
+        "cost": 0,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipShortbow"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      },
+      {
+        "id": "Bandages",
+        "names": {
+          "english": "Bandages",
+          "french": "Bandages",
+          "german": "Verbände",
+          "russian": "Бинты",
+          "portuguese": "Bandagens",
+          "chinese": "绷带",
+          "spanish": "Vendas",
+          "chinese_traditional": "繃帶",
+          "korean": "붕대",
+          "japanese": "包帯"
+        },
+        "descriptions": {
+          "english": "<b>+10</b> [health]. Restore <b>3</b> [health]. Apply <b>3</b> [regen].",
+          "french": "<b>+10</b> [health]. Restaure <b>3</b> [health]. Applique <b>3</b> [regen].",
+          "german": "<b>+10</b> [health]. Stellt <b>3</b> [health] wieder her. Verleiht <b>3</b> [regen].",
+          "russian": "<b>+10</b> [health]. Восстанавливает <b>3</b> [health]. Накладывает <b>3</b> [regen].",
+          "portuguese": "<b>+10</b> [health]. Restaura <b>3</b> [health]. Aplica <b>3</b> [regen].",
+          "chinese": "<b>+10</b> [health]. 恢复<b>3</b> [health]。 施加<b>3</b> [regen]。",
+          "spanish": "<b>+10</b> [health]. Recupera <b>3</b> [health]. Añade <b>3</b> [regen].",
+          "chinese_traditional": "<b>+10</b> [health]. 恢復<b>3</b> [health]。 施加<b>3</b> [regen]。",
+          "korean": "<b>+10</b> [health]. <b>3</b> [health] 회복. <b>3</b> [regen] 부여.",
+          "japanese": "<b>+10</b> [health]. <b>3</b> [health]を回復。 <b>3</b> [regen]を付与。"
+        },
+        "card_art": "@Bandages",
+        "cost": 0,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipBandages",
+          "@BandagesHeal",
+          "@BandagesApplyRegen"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      },
+      {
+        "id": "NotchedAxe",
+        "names": {
+          "english": "Notched Axe",
+          "french": "Hache entaillée",
+          "german": "Schartige Axt",
+          "russian": "Зазубренный топор",
+          "portuguese": "Machado Entalhado",
+          "chinese": "缺口斧",
+          "spanish": "Hacha mellada",
+          "chinese_traditional": "缺口斧",
+          "korean": "이 빠진 도끼",
+          "japanese": "刃こぼれの斧"
+        },
+        "card_art": "@NotchedAxe",
+        "cost": 0,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipNotchedAxe"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "KitBashDraw",
+        "name": "CardEffectAddBattleCard",
+        "param_card_pool": "@FreeCompanyKitPoolI",
+        "param_int": 3,
+        "param_int_2": 1,
+        "param_bool": true
+      },
+      {
+        "id": "ChalkCircleApplyConduit",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "conduit",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "id": "EquipChalkCircle",
+        "applied_vfx": "@KitWizardArcaneVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgChalkCircle"
+      },
+      {
+        "id": "BucklerApplyArmor",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "armor",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "id": "EquipBuckler",
+        "applied_vfx": "@KitWarriorArmorVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgBuckler"
+      },
+      {
+        "id": "EquipLockpicks",
+        "applied_vfx": "@KitRogueShadowVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgLockpicks"
+      },
+      {
+        "id": "EquipShortbow",
+        "applied_vfx": "@KitRangerCraftVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgShortbow"
+      },
+      {
+        "id": "BandagesApplyRegen",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "regen",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "id": "BandagesHeal",
+        "name": "CardEffectHeal",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_int": 3
+      },
+      {
+        "id": "EquipBandages",
+        "applied_vfx": "@KitClericHealVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgBandages"
+      },
+      {
+        "id": "EquipNotchedAxe",
+        "applied_vfx": "@KitBarbarianBuffVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgNotchedAxe"
+      },
+      {
+        "id": "NotchedAxeTrigEffect",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "buff",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "card_pools": [
+      {
+        "id": "FreeCompanyKitPoolI",
+        "cards": [
+          "@NotchedAxe",
+          "@Bandages",
+          "@Shortbow",
+          "@Lockpicks",
+          "@Buckler",
+          "@ChalkCircle"
+        ]
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgChalkCircle",
+        "titles": {
+          "english": "Chalk Circle",
+          "french": "Cercle de craie",
+          "german": "Kreidekreis",
+          "russian": "Меловой круг",
+          "portuguese": "Círculo de Giz",
+          "chinese": "粉笔法阵",
+          "spanish": "Círculo de tiza",
+          "chinese_traditional": "粉筆法陣",
+          "korean": "분필 마법진",
+          "japanese": "白墨の魔法陣"
+        },
+        "descriptions": {
+          "english": "On equip: Apply <b>2</b> [conduit].",
+          "french": "À l’équipement : Applique <b>2</b> [conduit].",
+          "german": "Beim Ausrüsten: Verleiht <b>2</b> [conduit].",
+          "russian": "При экипировке: Накладывает <b>2</b> [conduit].",
+          "portuguese": "Ao equipar: Aplica <b>2</b> [conduit].",
+          "chinese": "装备时： 施加<b>2</b> [conduit]。",
+          "spanish": "Al equipar: Añade <b>2</b> [conduit].",
+          "chinese_traditional": "裝備時： 施加<b>2</b> [conduit]。",
+          "korean": "장착 시: <b>2</b> [conduit] 부여.",
+          "japanese": "装備時： <b>2</b> [conduit]を付与。"
+        },
+        "icon": "@ChalkCircle",
+        "status_effect_upgrades": []
+      },
+      {
+        "id": "UpgBuckler",
+        "titles": {
+          "english": "Buckler",
+          "french": "Rondache",
+          "german": "Faustschild",
+          "russian": "Баклер",
+          "portuguese": "Broquel",
+          "chinese": "小圆盾",
+          "spanish": "Broquel",
+          "chinese_traditional": "小圓盾",
+          "korean": "소형 방패",
+          "japanese": "バックラー"
+        },
+        "descriptions": {
+          "english": "<b>+8</b> [health].",
+          "french": "<b>+8</b> [health].",
+          "german": "<b>+8</b> [health].",
+          "russian": "<b>+8</b> [health].",
+          "portuguese": "<b>+8</b> [health].",
+          "chinese": "<b>+8</b> [health].",
+          "spanish": "<b>+8</b> [health].",
+          "chinese_traditional": "<b>+8</b> [health].",
+          "korean": "<b>+8</b> [health].",
+          "japanese": "<b>+8</b> [health]."
+        },
+        "icon": "@Buckler",
+        "bonus_hp": 8,
+        "status_effect_upgrades": []
+      },
+      {
+        "id": "UpgLockpicks",
+        "titles": {
+          "english": "Lockpicks",
+          "french": "Crochets",
+          "german": "Dietriche",
+          "russian": "Отмычки",
+          "portuguese": "Gazuas",
+          "chinese": "开锁工具",
+          "spanish": "Ganzúas",
+          "chinese_traditional": "開鎖工具",
+          "korean": "자물쇠 따개",
+          "japanese": "ピッキング道具"
+        },
+        "descriptions": {
+          "english": "<b>+4</b> [attack]. Apply <b>1</b> [avarice] and <b>2</b> [stealth].",
+          "french": "<b>+4</b> [attack]. Appliquez <b>1</b> [avarice] et <b>2</b> [stealth].",
+          "german": "<b>+4</b> [attack]. Erhalte <b>1</b> [avarice] und <b>2</b> [stealth].",
+          "russian": "<b>+4</b> [attack]. Получите <b>1</b> [avarice] и <b>2</b> [stealth].",
+          "portuguese": "<b>+4</b> [attack]. Aplique <b>1</b> [avarice] e <b>2</b> [stealth].",
+          "chinese": "<b>+4</b> [attack]. 施加<b>1</b> [avarice]和<b>2</b> [stealth]。",
+          "spanish": "<b>+4</b> [attack]. Añade <b>1</b> [avarice] y <b>2</b> [stealth].",
+          "chinese_traditional": "<b>+4</b> [attack]. 施加<b>1</b> [avarice]和<b>2</b> [stealth]。",
+          "korean": "<b>+4</b> [attack]. <b>1</b> [avarice] 및 <b>2</b> [stealth] 부여.",
+          "japanese": "<b>+4</b> [attack]. <b>1</b> [avarice]と<b>2</b> [stealth]を付与。"
+        },
+        "icon": "@Lockpicks",
+        "bonus_damage": 4,
+        "status_effect_upgrades": [
+          {
+            "status": "avarice",
+            "count": 1
+          },
+          {
+            "status": "stealth",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "id": "UpgShortbow",
+        "titles": {
+          "english": "Shortbow",
+          "french": "Arc court",
+          "german": "Kurzbogen",
+          "russian": "Короткий лук",
+          "portuguese": "Arco Curto",
+          "chinese": "短弓",
+          "spanish": "Arco corto",
+          "chinese_traditional": "短弓",
+          "korean": "단궁",
+          "japanese": "短弓"
+        },
+        "descriptions": {
+          "english": "<b>+5</b> [attack].",
+          "french": "<b>+5</b> [attack].",
+          "german": "<b>+5</b> [attack].",
+          "russian": "<b>+5</b> [attack].",
+          "portuguese": "<b>+5</b> [attack].",
+          "chinese": "<b>+5</b> [attack].",
+          "spanish": "<b>+5</b> [attack].",
+          "chinese_traditional": "<b>+5</b> [attack].",
+          "korean": "<b>+5</b> [attack].",
+          "japanese": "<b>+5</b> [attack]."
+        },
+        "icon": "@Shortbow",
+        "bonus_damage": 5,
+        "status_effect_upgrades": []
+      },
+      {
+        "id": "UpgBandages",
+        "titles": {
+          "english": "Bandages",
+          "french": "Bandages",
+          "german": "Verbände",
+          "russian": "Бинты",
+          "portuguese": "Bandagens",
+          "chinese": "绷带",
+          "spanish": "Vendas",
+          "chinese_traditional": "繃帶",
+          "korean": "붕대",
+          "japanese": "包帯"
+        },
+        "descriptions": {
+          "english": "<b>+10</b> [health]. On equip: Restore <b>3</b> [health]. Apply <b>3</b> [regen].",
+          "french": "<b>+10</b> [health]. À l’équipement : Restaure <b>3</b> [health]. Applique <b>3</b> [regen].",
+          "german": "<b>+10</b> [health]. Beim Ausrüsten: Stellt <b>3</b> [health] wieder her. Verleiht <b>3</b> [regen].",
+          "russian": "<b>+10</b> [health]. При экипировке: Восстанавливает <b>3</b> [health]. Накладывает <b>3</b> [regen].",
+          "portuguese": "<b>+10</b> [health]. Ao equipar: Restaura <b>3</b> [health]. Aplica <b>3</b> [regen].",
+          "chinese": "<b>+10</b> [health]. 装备时： 恢复<b>3</b> [health]。 施加<b>3</b> [regen]。",
+          "spanish": "<b>+10</b> [health]. Al equipar: Recupera <b>3</b> [health]. Añade <b>3</b> [regen].",
+          "chinese_traditional": "<b>+10</b> [health]. 裝備時： 恢復<b>3</b> [health]。 施加<b>3</b> [regen]。",
+          "korean": "<b>+10</b> [health]. 장착 시: <b>3</b> [health] 회복. <b>3</b> [regen] 부여.",
+          "japanese": "<b>+10</b> [health]. 装備時： <b>3</b> [health]を回復。 <b>3</b> [regen]を付与。"
+        },
+        "icon": "@Bandages",
+        "bonus_hp": 10,
+        "status_effect_upgrades": []
+      },
+      {
+        "id": "UpgNotchedAxe",
+        "titles": {
+          "english": "Notched Axe",
+          "french": "Hache entaillée",
+          "german": "Schartige Axt",
+          "russian": "Зазубренный топор",
+          "portuguese": "Machado Entalhado",
+          "chinese": "缺口斧",
+          "spanish": "Hacha mellada",
+          "chinese_traditional": "缺口斧",
+          "korean": "이 빠진 도끼",
+          "japanese": "刃こぼれの斧"
+        },
+        "descriptions": {
+          "english": "<b>+5</b> [attack]. <b>Slay</b>: gain <b>2</b> [rage].",
+          "french": "<b>+5</b> [attack]. <b>Élimination</b> : gagnez <b>2</b> [rage].",
+          "german": "<b>+5</b> [attack]. <b>Töten</b>: Erhalte <b>2</b> [rage].",
+          "russian": "<b>+5</b> [attack]. <b>Убийство</b>: получите <b>2</b> [rage].",
+          "portuguese": "<b>+5</b> [attack]. <b>Abate</b>: ganhe <b>2</b> [rage].",
+          "chinese": "<b>+5</b> [attack]. <b>击杀</b>：获得<b>2</b> [rage]。",
+          "spanish": "<b>+5</b> [attack]. <b>Matanza</b>: gana <b>2</b> [rage].",
+          "chinese_traditional": "<b>+5</b> [attack]. <b>擊殺</b>：獲得<b>2</b> [rage]。",
+          "korean": "<b>+5</b> [attack]. <b>처치</b>: <b>2</b> [rage] 획득.",
+          "japanese": "<b>+5</b> [attack]. <b>撃破</b>：<b>2</b> [rage]を得る。"
+        },
+        "icon": "@NotchedAxe",
+        "bonus_damage": 5,
+        "trigger_upgrades": [
+          "@NotchedAxeTrigger"
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ChalkCircle",
+        "path": "textures/ChalkCircleArt.png"
+      },
+      {
+        "id": "Buckler",
+        "path": "textures/BucklerArt.png"
+      },
+      {
+        "id": "Lockpicks",
+        "path": "textures/LockpicksArt.png"
+      },
+      {
+        "id": "Shortbow",
+        "path": "textures/ShortbowArt.png"
+      },
+      {
+        "id": "Bandages",
+        "path": "textures/BandagesArt.png"
+      },
+      {
+        "id": "NotchedAxe",
+        "path": "textures/NotchedAxeArt.png"
+      },
+      {
+        "id": "KitBash",
+        "path": "textures/KitBashArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitWizardArcaneVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "KitWarriorArmorVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Wurmkin/EchoInfusion/FX_WurmkinBuff.prefab",
+          "asset_guid": "24aff4cc201a62e41838f1d11b277562"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "KitRogueShadowVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "KitRangerCraftVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Railforged/CraftedEquipment/FX_CraftedEquipment.prefab",
+          "asset_guid": "8b71ea7d8f6189148add8fe2945b0bc5"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "KitClericHealVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_HealImpactNormal_PS.prefab",
+          "asset_guid": "a1b4834936900f44c97dcde93697e47b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "KitBarbarianBuffVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ChalkCircle",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ChalkCircle"
+          }
+        }
+      },
+      {
+        "id": "Buckler",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Buckler"
+          }
+        }
+      },
+      {
+        "id": "Lockpicks",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Lockpicks"
+          }
+        }
+      },
+      {
+        "id": "Shortbow",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Shortbow"
+          }
+        }
+      },
+      {
+        "id": "Bandages",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Bandages"
+          }
+        }
+      },
+      {
+        "id": "NotchedAxe",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@NotchedAxe"
+          }
+        }
+      },
+      {
+        "id": "KitBash",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@KitBash"
+          }
+        }
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "NotchedAxeTrigger",
+        "trigger": "on_kill",
+        "descriptions": {
+          "english": "Gain [effect0.status0.power] [rage].",
+          "french": "Gagnez [effect0.status0.power] [rage].",
+          "german": "Erhalte [effect0.status0.power] [rage].",
+          "russian": "Получите [effect0.status0.power] [rage].",
+          "portuguese": "Ganhe [effect0.status0.power] [rage].",
+          "chinese": "获得[effect0.status0.power] [rage]。",
+          "spanish": "Gana [effect0.status0.power] [rage].",
+          "chinese_traditional": "獲得[effect0.status0.power] [rage]。",
+          "korean": "[effect0.status0.power] [rage] 획득.",
+          "japanese": "[effect0.status0.power] [rage]を得る。"
+        },
+        "effects": [
+          "@NotchedAxeTrigEffect"
+        ]
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_kit_bash.json": "c2ea8568e67636755edde089b7f47af26c1bc7981580535b253be260ff03da9e",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323",
+    "json/kits/kit_wizard.json": "c217c1e5cfccbf41acb3ec54768f00da42fc90941e4eccff4742d3afaad37160",
+    "json/kits/kit_warrior.json": "f7701b9d189e8ea8b681f01a7139c1b026d9da6015eb1f8a168b91a1ca113a0d",
+    "json/kits/kit_rogue.json": "60ccad914ba5a1cedd187db67b9a14ad67efb65857357767805f708afc2ee44c",
+    "json/kits/kit_ranger.json": "9a2ce18dbaf287ba54b81290e7b5b5c80d39fa83935607d88fae2f23ac274011",
+    "json/kits/kit_cleric.json": "062732773161aca4543f3bcea740da218866734030b51f1ae6fcd0f01aad2ffb",
+    "json/kits/kit_barbarian.json": "bb4e9b26871aec51edc5563f0903f9e8854ef2a4970cafef85430cca8a75ff07"
+  }
+}

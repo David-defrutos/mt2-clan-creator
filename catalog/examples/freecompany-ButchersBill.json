@@ -1,0 +1,134 @@
+{
+  "id": "freecompany-ButchersBill",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "relics",
+    "id": "ButchersBill"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Butcher's Bill",
+    "french": "Bilan du boucher",
+    "german": "Metzgerrechnung",
+    "russian": "Счёт мясника",
+    "portuguese": "Conta do Açougueiro",
+    "chinese": "屠夫账单",
+    "spanish": "La cuenta del carnicero",
+    "chinese_traditional": "屠夫帳單",
+    "korean": "도살자의 청구서",
+    "japanese": "肉屋の請求書"
+  },
+  "descriptions": {
+    "english": "Whenever a friendly unit or your Pyre slays an enemy, gain <b>5</b> [coin].",
+    "spanish": "Cuando una unidad aliada o tu Pira mata a un enemigo, gana <b>5</b> [coin].",
+    "french": "Lorsqu’une unité alliée ou votre Brasier tue un ennemi, gagnez <b>5</b> [coin].",
+    "german": "Wenn eine verbündete Einheit oder deine Höllenglut einen Gegner tötet, erhalte <b>5</b> [coin].",
+    "russian": "Когда союзная боевая единица или ваше Пекло убивает врага, получите <b>5</b> [coin].",
+    "portuguese": "Quando uma unidade aliada ou sua Pira abate um inimigo, ganhe <b>5</b> [coin].",
+    "chinese": "友方单位或你的薪火击杀敌人时，获得<b>5</b>[coin]。",
+    "chinese_traditional": "友方單位或你的薪火擊殺敵人時，獲得<b>5</b>[coin]。",
+    "korean": "아군 유닛 또는 화로가 적을 처치할 때마다 <b>5</b> [coin] 획득.",
+    "japanese": "味方ユニットまたは炉が敵を倒すたびに<b>5</b>[coin]を得る。"
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/2a4e1b913dc5dd01d863a200a9c05228b74578b011ff96da4530cdb37e48d6f1.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ButchersBillIconSmall.png": "assets/05c59b9ba47393bbb85c8b4637f1316a6c466b1a82309007345b6eae0f589fc3.png",
+    "textures/ButchersBillIcon.png": "assets/2a4e1b913dc5dd01d863a200a9c05228b74578b011ff96da4530cdb37e48d6f1.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "ButchersBill",
+        "type": "collectable",
+        "names": {
+          "english": "Butcher's Bill",
+          "french": "Bilan du boucher",
+          "german": "Metzgerrechnung",
+          "russian": "Счёт мясника",
+          "portuguese": "Conta do Açougueiro",
+          "chinese": "屠夫账单",
+          "spanish": "La cuenta del carnicero",
+          "chinese_traditional": "屠夫帳單",
+          "korean": "도살자의 청구서",
+          "japanese": "肉屋の請求書"
+        },
+        "descriptions": {
+          "english": "Whenever a friendly unit or your Pyre slays an enemy, gain <b>5</b> [coin].",
+          "spanish": "Cuando una unidad aliada o tu Pira mata a un enemigo, gana <b>5</b> [coin].",
+          "french": "Lorsqu’une unité alliée ou votre Brasier tue un ennemi, gagnez <b>5</b> [coin].",
+          "german": "Wenn eine verbündete Einheit oder deine Höllenglut einen Gegner tötet, erhalte <b>5</b> [coin].",
+          "russian": "Когда союзная боевая единица или ваше Пекло убивает врага, получите <b>5</b> [coin].",
+          "portuguese": "Quando uma unidade aliada ou sua Pira abate um inimigo, ganhe <b>5</b> [coin].",
+          "chinese": "友方单位或你的薪火击杀敌人时，获得<b>5</b>[coin]。",
+          "chinese_traditional": "友方單位或你的薪火擊殺敵人時，獲得<b>5</b>[coin]。",
+          "korean": "아군 유닛 또는 화로가 적을 처치할 때마다 <b>5</b> [coin] 획득.",
+          "japanese": "味方ユニットまたは炉が敵を倒すたびに<b>5</b>[coin]を得る。"
+        },
+        "relic_activated_texts": {
+          "english": "Tally it.",
+          "french": "Fais le dénombrement.",
+          "german": "Zählen Sie es.",
+          "russian": "Подсчитай.",
+          "portuguese": "Conta-o.",
+          "chinese": "把它数起来.",
+          "spanish": "Apúntalo.",
+          "chinese_traditional": "這樣就算了.",
+          "korean": "계산해",
+          "japanese": "計算する"
+        },
+        "relic_effects": [
+          "@ButchersBillEffect"
+        ],
+        "icon": "@ButchersBillIcon",
+        "icon_small": "@ButchersBillIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "class": "@ClassFreeCompany",
+              "pools": [
+                "MegaRelicPool"
+              ],
+              "rarity": "uncommon"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ButchersBillIconSmall",
+        "path": "textures/ButchersBillIconSmall.png"
+      },
+      {
+        "id": "ButchersBillIcon",
+        "path": "textures/ButchersBillIcon.png"
+      }
+    ],
+    "relic_effects": [
+      {
+        "id": "ButchersBillEffect",
+        "name": "RelicEffectGoldOnTrigger",
+        "param_trigger": "on_kill",
+        "param_int": 5,
+        "source_team": "monsters"
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_butchers_bill.json": "0501c9e7975c615bfddf536218a539e5bb0ac4b906691758c2f4ef2c87cce6af"
+  }
+}

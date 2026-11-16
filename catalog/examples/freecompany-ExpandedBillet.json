@@ -1,0 +1,132 @@
+{
+  "id": "freecompany-ExpandedBillet",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "relics",
+    "id": "ExpandedBillet"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Expanded Billet",
+    "french": "Cantonnement agrandi",
+    "german": "Erweitertes Quartier",
+    "russian": "Расширенный постой",
+    "portuguese": "Alojamento Ampliado",
+    "chinese": "扩建营房",
+    "spanish": "Alojamiento ampliado",
+    "chinese_traditional": "擴建營房",
+    "korean": "확장 숙소",
+    "japanese": "増設宿舎"
+  },
+  "descriptions": {
+    "english": "+[effect0.power][capacity] on each floor.",
+    "french": "+[effect0.power][capacity] à chaque niveau.",
+    "german": "+[effect0.power][capacity] auf jeder Ebene.",
+    "russian": "+[effect0.power][capacity] на каждом этаже.",
+    "portuguese": "+[effect0.power][capacity] em cada andar.",
+    "chinese": "每层 +[effect0.power][capacity]。",
+    "spanish": "+[effect0.power][capacity] en cada piso.",
+    "chinese_traditional": "在每個樓層+[effect0.power][capacity]。",
+    "korean": "각 층이 +[effect0.power][capacity]을 갖습니다.",
+    "japanese": "各フロアに+[effect0.power][capacity]。"
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/9eed42bef16d2a964608f6f2da9d540c3d03c4bdd93754370bd8f0b6a5a3ffcd.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ExpandedBilletIconSmall.png": "assets/790c93cd010466e44523ebf5784d7109ede34920eaa257ef49663c1ec7ef2e6f.png",
+    "textures/ExpandedBilletIcon.png": "assets/9eed42bef16d2a964608f6f2da9d540c3d03c4bdd93754370bd8f0b6a5a3ffcd.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "ExpandedBillet",
+        "type": "collectable",
+        "names": {
+          "english": "Expanded Billet",
+          "french": "Cantonnement agrandi",
+          "german": "Erweitertes Quartier",
+          "russian": "Расширенный постой",
+          "portuguese": "Alojamento Ampliado",
+          "chinese": "扩建营房",
+          "spanish": "Alojamiento ampliado",
+          "chinese_traditional": "擴建營房",
+          "korean": "확장 숙소",
+          "japanese": "増設宿舎"
+        },
+        "descriptions": {
+          "english": "+[effect0.power][capacity] on each floor.",
+          "french": "+[effect0.power][capacity] à chaque niveau.",
+          "german": "+[effect0.power][capacity] auf jeder Ebene.",
+          "russian": "+[effect0.power][capacity] на каждом этаже.",
+          "portuguese": "+[effect0.power][capacity] em cada andar.",
+          "chinese": "每层 +[effect0.power][capacity]。",
+          "spanish": "+[effect0.power][capacity] en cada piso.",
+          "chinese_traditional": "在每個樓層+[effect0.power][capacity]。",
+          "korean": "각 층이 +[effect0.power][capacity]을 갖습니다.",
+          "japanese": "各フロアに+[effect0.power][capacity]。"
+        },
+        "relic_activated_texts": {
+          "english": "Make room.",
+          "french": "Faites de la place.",
+          "german": "Machen Sie Platz.",
+          "russian": "Сделайте место.",
+          "portuguese": "Façam espaço.",
+          "chinese": "给我一个空间.",
+          "spanish": "Haced sitio.",
+          "chinese_traditional": "讓我們有空間.",
+          "korean": "공간을 마련해",
+          "japanese": "部屋を作って"
+        },
+        "relic_effects": [
+          "@ExpandedBilletEffect"
+        ],
+        "icon": "@ExpandedBilletIcon",
+        "icon_small": "@ExpandedBilletIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "class": "@ClassFreeCompany",
+              "pools": [
+                "MegaRelicPool"
+              ],
+              "rarity": "rare"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ExpandedBilletIconSmall",
+        "path": "textures/ExpandedBilletIconSmall.png"
+      },
+      {
+        "id": "ExpandedBilletIcon",
+        "path": "textures/ExpandedBilletIcon.png"
+      }
+    ],
+    "relic_effects": [
+      {
+        "id": "ExpandedBilletEffect",
+        "name": "RelicEffectChangeFloorCapacity",
+        "param_int": 1
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_expanded_billet.json": "eb5abb7ddb7e4f5938c094518465dfd704b4ef0ef26738964f9772bed7cee80b"
+  }
+}

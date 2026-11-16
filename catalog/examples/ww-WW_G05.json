@@ -1,0 +1,137 @@
+{
+  "id": "ww-WW_G05",
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_G05"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Emergency Battery",
+    "spanish": "Batería de Emergencia",
+    "french": "Batterie de secours",
+    "german": "Notfallbatterie",
+    "portuguese": "Bateria de Emergência",
+    "russian": "Аварийная батарея",
+    "chinese": "应急电池",
+    "chinese_traditional": "應急電池",
+    "korean": "비상 배터리",
+    "japanese": "非常用バッテリー"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/45e0d4f14ca8d36a8dab984952d1f5eb17c1abbe654c81742ed65ed7da7cb3ff.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/equipment/WW_G05Icon.png": "assets/1fc51bd0ec77535dcf72369958a32f56894155bdd2618b854dba88d6c9e8cccf.png",
+    "textures/cards/WW_G05CardArt.png": "assets/45e0d4f14ca8d36a8dab984952d1f5eb17c1abbe654c81742ed65ed7da7cb3ff.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_G05",
+        "names": {
+          "english": "Emergency Battery",
+          "spanish": "Batería de Emergencia",
+          "french": "Batterie de secours",
+          "german": "Notfallbatterie",
+          "portuguese": "Bateria de Emergência",
+          "russian": "Аварийная батарея",
+          "chinese": "应急电池",
+          "chinese_traditional": "應急電池",
+          "korean": "비상 배터리",
+          "japanese": "非常用バッテリー"
+        },
+        "card_type": "equipment",
+        "cost": 0,
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "card_art": "@WW_G05CardArt",
+        "effects": [
+          "@WW_G05_Equip"
+        ],
+        "traits": [
+          "@WW_G05_Grafted"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_G05_Grafted",
+        "name": "CardTraitGraftedEquipment",
+        "trait_is_removable": false
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_G05_Equip",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@WW_G05_Upgrade"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WW_G05_Upgrade",
+        "titles": {
+          "english": "Emergency Battery",
+          "spanish": "Batería de Emergencia",
+          "french": "Batterie de secours",
+          "german": "Notfallbatterie",
+          "portuguese": "Bateria de Emergência",
+          "russian": "Аварийная батарея",
+          "chinese": "应急电池",
+          "chinese_traditional": "應急電池",
+          "korean": "비상 배터리",
+          "japanese": "非常用バッテリー"
+        },
+        "hide_icon_on_card": true,
+        "icon": "@WW_G05Icon",
+        "status_effect_upgrades": [
+          {
+            "status": "burst",
+            "count": 3
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_G05Icon",
+        "path": "textures/equipment/WW_G05Icon.png"
+      },
+      {
+        "id": "WW_G05CardArt",
+        "path": "textures/cards/WW_G05CardArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_G05CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_G05CardArt"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/grafts/WW_G05.json": "e0e2e079fd95791e007a4c4ccf290ce35ce0311aa05bebaf241e2bb8a8a5a657"
+  }
+}

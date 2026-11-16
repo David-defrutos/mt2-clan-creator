@@ -1,0 +1,244 @@
+{
+  "id": "freecompany-SpawnStoneTroll",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnStoneTroll"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Stone Troll",
+    "french": "Troll de pierre",
+    "german": "Steintroll",
+    "russian": "Каменный тролль",
+    "portuguese": "Troll de Pedra",
+    "chinese": "岩石巨魔",
+    "spanish": "Trol de piedra",
+    "chinese_traditional": "岩石巨魔",
+    "korean": "돌 트롤",
+    "japanese": "岩のトロール"
+  },
+  "descriptions": {},
+  "cost": 6,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": 50,
+  "attack": 40,
+  "size": 4,
+  "picture": "assets/eaf28448aedb1c32da31c139ddf31abe860e01d3e22dd6e844ca2ecb21a2e524.png",
+  "characterPicture": "assets/3cae2727a77517f4f0b0fd3f13e8a993ec7e99fd7dd74bfdc4437043ad08a7b1.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/StoneTrollArt.png": "assets/eaf28448aedb1c32da31c139ddf31abe860e01d3e22dd6e844ca2ecb21a2e524.png",
+    "textures/StoneTrollCharacterArt.png": "assets/3cae2727a77517f4f0b0fd3f13e8a993ec7e99fd7dd74bfdc4437043ad08a7b1.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnStoneTroll",
+        "names": {
+          "english": "Stone Troll",
+          "french": "Troll de pierre",
+          "german": "Steintroll",
+          "russian": "Каменный тролль",
+          "portuguese": "Troll de Pedra",
+          "chinese": "岩石巨魔",
+          "spanish": "Trol de piedra",
+          "chinese_traditional": "岩石巨魔",
+          "korean": "돌 트롤",
+          "japanese": "岩のトロール"
+        },
+        "card_art": "@StoneTroll",
+        "cost": 6,
+        "card_type": "monster",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnStoneTrollEffect"
+        ]
+      },
+      {
+        "id": "StoneTrollAbility",
+        "names": {
+          "english": "Boulder",
+          "french": "Rocher",
+          "german": "Felsbrocken",
+          "russian": "Валун",
+          "portuguese": "Pedregulho",
+          "chinese": "巨石",
+          "spanish": "Peñasco",
+          "chinese_traditional": "巨石",
+          "korean": "바위",
+          "japanese": "巨岩"
+        },
+        "descriptions": {
+          "english": "Attack the enemy unit with the lowest [health].",
+          "french": "Attaque l’unité ennemie ayant le moins de [health].",
+          "german": "Greift die gegnerische Einheit mit der niedrigsten [health] an.",
+          "russian": "Атакует вражескую боевую единицу с наименьшим [health].",
+          "portuguese": "Ataca a unidade inimiga com menos [health].",
+          "chinese": "攻击[health]最低的敌方单位。",
+          "spanish": "Ataca a la unidad enemiga con menos [health].",
+          "chinese_traditional": "攻擊[health]最低的敵方單位。",
+          "korean": "[health]이 가장 낮은 적 유닛을 공격.",
+          "japanese": "[health]が最も低い敵ユニットを攻撃。"
+        },
+        "card_art": "@StoneTroll",
+        "is_an_ability": true,
+        "cooldown": 3,
+        "targetless": true,
+        "targets_room": false,
+        "card_type": "spell",
+        "effects": [
+          "@StoneTrollBoulder"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnStoneTrollEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@StoneTroll"
+      },
+      {
+        "id": "StoneTrollBoulder",
+        "applied_vfx": "@UnitTrollHeavyVFX",
+        "name": "CardEffectAttackTargetsWithSelfUnit",
+        "target_mode": "weakest",
+        "target_team": "heroes"
+      }
+    ],
+    "characters": [
+      {
+        "id": "StoneTroll",
+        "names": {
+          "english": "Stone Troll",
+          "french": "Troll de pierre",
+          "german": "Steintroll",
+          "russian": "Каменный тролль",
+          "portuguese": "Troll de Pedra",
+          "chinese": "岩石巨魔",
+          "spanish": "Trol de piedra",
+          "chinese_traditional": "岩石巨魔",
+          "korean": "돌 트롤",
+          "japanese": "岩のトロール"
+        },
+        "character_art": "@StoneTrollCharacterArt",
+        "size": 4,
+        "attack_damage": 40,
+        "health": 50,
+        "subtypes": [
+          "@Sub_Barbarian",
+          "@Sub_Troll"
+        ],
+        "starting_status_effects": [
+          {
+            "status": "regen",
+            "count": 10
+          }
+        ],
+        "triggers": [],
+        "ability": "@StoneTrollAbility"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "UnitTrollHeavyVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_HeavyImpact_PS.prefab",
+          "asset_guid": "3b00d03f85e88874a92970fc9034cd1a"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "StoneTroll",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@StoneTroll"
+          }
+        }
+      },
+      {
+        "id": "StoneTrollCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@StoneTrollCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.8,
+                "z": 0
+              },
+              "scale": {
+                "x": 1.25,
+                "y": 1.25,
+                "z": 1
+              },
+              "offset": {
+                "y": -0.12
+              }
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "StoneTroll",
+        "path": "textures/StoneTrollArt.png"
+      },
+      {
+        "id": "StoneTrollCharacterArt",
+        "path": "textures/StoneTrollCharacterArt.png"
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Troll",
+        "names": {
+          "english": "Troll",
+          "french": "Troll",
+          "german": "Troll",
+          "russian": "Тролль",
+          "portuguese": "Troll",
+          "chinese": "巨魔",
+          "spanish": "Trol",
+          "chinese_traditional": "巨魔",
+          "korean": "트롤",
+          "japanese": "トロール"
+        }
+      },
+      {
+        "id": "Sub_Barbarian",
+        "names": {
+          "english": "Barbarian",
+          "french": "Barbare",
+          "german": "Barbar",
+          "russian": "Варвар",
+          "portuguese": "Bárbaro",
+          "chinese": "野蛮人",
+          "spanish": "Bárbaro",
+          "chinese_traditional": "野蠻人",
+          "korean": "야만전사",
+          "japanese": "バーバリアン"
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_troll.json": "0101a4aa26a122261bbaf962f12e215a785e10ae1f38def3dd9539cac8ec8d66",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "id": "ww-WW_E02",
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_E02"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Faculty Robe",
+    "spanish": "Toga del Profesorado",
+    "french": "Robe du corps enseignant",
+    "german": "Dozententalar",
+    "portuguese": "Beca do Corpo Docente",
+    "russian": "Мантия преподавателя",
+    "chinese": "教职长袍",
+    "chinese_traditional": "教職長袍",
+    "korean": "교수진 로브",
+    "japanese": "教授陣のローブ"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/fd7771de495da97efd164c6422280688590831b59037cb3646325bc4fb487a77.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ui/WW_E02Icon.png": "assets/2cd6b51e03884018779ea707e03d2f2d47ae96aaeb484ef35bd844dff2d215fc.png",
+    "textures/cards/WW_E02CardArt.png": "assets/fd7771de495da97efd164c6422280688590831b59037cb3646325bc4fb487a77.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_E02",
+        "names": {
+          "english": "Faculty Robe",
+          "spanish": "Toga del Profesorado",
+          "french": "Robe du corps enseignant",
+          "german": "Dozententalar",
+          "portuguese": "Beca do Corpo Docente",
+          "russian": "Мантия преподавателя",
+          "chinese": "教职长袍",
+          "chinese_traditional": "教職長袍",
+          "korean": "교수진 로브",
+          "japanese": "教授陣のローブ"
+        },
+        "card_type": "equipment",
+        "cost": 1,
+        "rarity": "common",
+        "targets_room": true,
+        "card_art": "@WW_E02CardArt",
+        "targetless": false,
+        "effects": [
+          "@WW_E02_Equip"
+        ],
+        "hide_in_logbook": true,
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_E02_Equip",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@WW_E02_Upgrade"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WW_E02_Upgrade",
+        "titles": {
+          "english": "Faculty Robe",
+          "spanish": "Toga del Profesorado",
+          "french": "Robe du corps enseignant",
+          "german": "Dozententalar",
+          "portuguese": "Beca do Corpo Docente",
+          "russian": "Мантия преподавателя",
+          "chinese": "教职长袍",
+          "chinese_traditional": "教職長袍",
+          "korean": "교수진 로브",
+          "japanese": "教授陣のローブ"
+        },
+        "hide_icon_on_card": true,
+        "icon": "@WW_E02Icon",
+        "status_effect_upgrades": [
+          {
+            "status": "conduit",
+            "count": 5
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_E02Icon",
+        "path": "textures/ui/WW_E02Icon.png"
+      },
+      {
+        "id": "WW_E02CardArt",
+        "path": "textures/cards/WW_E02CardArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_E02CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_E02CardArt"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_E02.json": "bc8f56321c4857476b18dc9e19dd480a7567012d883a7b340aa885fda5b95eaf",
+    "content/json/00_foundation.json": "ee911ff08273912e47de4989dae5fab50408fe20767ad886fb1b87dcdd81b5e4"
+  }
+}

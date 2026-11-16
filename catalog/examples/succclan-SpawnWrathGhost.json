@@ -1,0 +1,414 @@
+{
+  "id": "succclan-SpawnWrathGhost",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "SpawnWrathGhost"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Wrath Ghost",
+    "chinese": "愤怒幽魂",
+    "spanish": "Fantasma de la ira",
+    "french": "Fantôme de la colère",
+    "german": "Geist des Zorns",
+    "portuguese": "Fantasma da Ira",
+    "russian": "Призрак гнева",
+    "chinese_traditional": "憤怒幽靈",
+    "japanese": "憤怒の幽霊",
+    "korean": "분노의 유령"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 8,
+  "attack": 0,
+  "size": 1,
+  "picture": "assets/fe34bae6feb3c1128a37f2884778f850a41036df703e61be1a49b587c194ac0a.png",
+  "characterPicture": "assets/b063ebd84158399e194734d5c2ebe0ec9939725d79dcf9ac37d2eb25a1d4ad1c.png",
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "character_trigger_types",
+      "id": "Accursed",
+      "names": {
+        "english": "Accursed",
+        "chinese": "被咒"
+      },
+      "descriptions": {
+        "english": "Triggers when, during your turn, a <b>Blight</b> or [junk] is played or discarded on the floor.",
+        "chinese": "回合结束前在本层打出或舍弃[blight]牌或[junk]牌时触发。"
+      },
+      "file": "packages/Conductor-Conductor/json/triggers.json",
+      "sha256": "0a0e9419dfeeb57f0e0917c7d1eddf6483d0cb58e7b40188c57b4ab2ecae86b5"
+    }
+  ],
+  "assets": {
+    "textures/ObsessingShardArt.png": "assets/fc6bd964ecb26665a12e65a318a98fd020456df96f868ae0202ada3da2eadb51.png",
+    "textures/WrathGhostCharacterArt.png": "assets/b063ebd84158399e194734d5c2ebe0ec9939725d79dcf9ac37d2eb25a1d4ad1c.png",
+    "textures/WrathGhostCardArt.png": "assets/fe34bae6feb3c1128a37f2884778f850a41036df703e61be1a49b587c194ac0a.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnWrathGhost",
+        "names": {
+          "english": "Wrath Ghost",
+          "chinese": "愤怒幽魂",
+          "spanish": "Fantasma de la ira",
+          "french": "Fantôme de la colère",
+          "german": "Geist des Zorns",
+          "portuguese": "Fantasma da Ira",
+          "russian": "Призрак гнева",
+          "chinese_traditional": "憤怒幽靈",
+          "japanese": "憤怒の幽霊",
+          "korean": "분노의 유령"
+        },
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "card_art": "@WrathGhostCardArt",
+        "cost": 0,
+        "targets_room": true,
+        "effects": [
+          "@SpawnWrathGhost"
+        ]
+      },
+      {
+        "id": "GhostObsession",
+        "names": {
+          "english": "Obsession",
+          "spanish": "Obsesión",
+          "chinese": "执念",
+          "french": "Obsession",
+          "german": "Besessenheit",
+          "portuguese": "Obsessão",
+          "russian": "Одержимость",
+          "chinese_traditional": "執念",
+          "japanese": "執着",
+          "korean": "집착"
+        },
+        "descriptions": {
+          "english": "Add [effect0.secondarypower] <b>Obsessing Spark</b> to your hand.",
+          "spanish": "Añade [effect0.secondarypower] <b>Chispa obsesiva</b> a tu mano.",
+          "chinese": "将 [effect0.secondarypower] 张<b>欲望碎片</b>加入手牌。",
+          "french": "Ajoutez [effect0.secondarypower] <b>Étincelle obsédante</b> à votre main.",
+          "german": "Füge deiner Hand [effect0.secondarypower] <b>Besessenheitsfunke</b> hinzu.",
+          "portuguese": "Adicione [effect0.secondarypower] <b>Centelha Obsessiva</b> à sua mão.",
+          "russian": "Добавляет [effect0.secondarypower] <b>Искра одержимости</b> в руку.",
+          "chinese_traditional": "將 [effect0.secondarypower] 張<b>執念火花</b>加入手牌。",
+          "japanese": "手札に<b>執着の火花</b>を[effect0.secondarypower]枚加える。",
+          "korean": "손에 <b>집착의 불꽃</b> [effect0.secondarypower]장을 추가합니다."
+        },
+        "card_art": "@ObsessingShardArt",
+        "card_type": "spell",
+        "is_an_ability": true,
+        "cost": 0,
+        "cooldown": 2,
+        "initial_cooldown": 0,
+        "targetless": true,
+        "targets_room": false,
+        "effects": [
+          "@KnightMareAbyssAddSpark"
+        ]
+      },
+      {
+        "id": "ObsessingShard",
+        "names": {
+          "english": "Obsessing Spark",
+          "chinese": "欲望碎片",
+          "spanish": "Chispa obsesiva",
+          "french": "Étincelle obsédante",
+          "german": "Besessenheitsfunke",
+          "portuguese": "Centelha Obsessiva",
+          "russian": "Искра одержимости",
+          "chinese_traditional": "執念火花",
+          "japanese": "執着の火花",
+          "korean": "집착의 불꽃"
+        },
+        "card_type": "blight",
+        "rarity": "common",
+        "card_art": "@ObsessingShardArt",
+        "cost": 1,
+        "targets_room": false,
+        "targetless": true,
+        "traits": [
+          "@Consume"
+        ],
+        "triggers": [
+          "@ObsessingShardOnUnplayed"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnWrathGhost",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@WrathGhost"
+      },
+      {
+        "id": "KnightMareAbyssAddSpark",
+        "name": "CardEffectAddBattleCard",
+        "target_mode": "room",
+        "target_team": "none",
+        "param_int": 3,
+        "param_int_2": 1,
+        "param_card_pool": "@ObsessingShardPool"
+      },
+      {
+        "id": "ObsessingShardPyreDamage",
+        "applied_vfx": "@SuccFXShadowImpact",
+        "name": "CardEffectDamage",
+        "target_mode": "pyre",
+        "target_team": "both",
+        "param_int": 1,
+        "suppress_pyre_room_focus": true
+      },
+      {
+        "id": "WrathGhostBuff",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_int": 2,
+        "param_upgrade": "@BattleGrowthWrathGhostBuff",
+        "param_int_3": 0
+      }
+    ],
+    "characters": [
+      {
+        "id": "WrathGhost",
+        "attack_vfx": "@SuccFXSpectralAttack",
+        "impact_vfx": "@SuccFXSpectralImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "projectile_vfx": "@SuccFXSoulProjectile",
+        "names": {
+          "english": "Wrath Ghost",
+          "chinese": "愤怒幽魂",
+          "spanish": "Fantasma de la ira",
+          "french": "Fantôme de la colère",
+          "german": "Geist des Zorns",
+          "portuguese": "Fantasma da Ira",
+          "russian": "Призрак гнева",
+          "chinese_traditional": "憤怒幽靈",
+          "japanese": "憤怒の幽霊",
+          "korean": "분노의 유령"
+        },
+        "character_art": "@WrathGhostCharacterArt",
+        "size": 1,
+        "attack_damage": 0,
+        "health": 8,
+        "subtypes": [
+          "@Sub_Ghost"
+        ],
+        "triggers": [
+          "@WrathGhostAccursed"
+        ],
+        "ability": "@GhostObsession"
+      }
+    ],
+    "card_pools": [
+      {
+        "id": "ObsessingShardPool",
+        "cards": [
+          "@ObsessingShard"
+        ]
+      }
+    ],
+    "card_triggers": [
+      {
+        "id": "ObsessingShardOnUnplayed",
+        "trigger": "on_unplayed_negative",
+        "descriptions": {
+          "english": "Your Pyre takes [effect0.power] damage.",
+          "chinese": "对薪火造成 [effect0.power] 点伤害。",
+          "spanish": "Tu Pira recibe [effect0.power] de daño.",
+          "french": "Votre Brasier subit [effect0.power] dégâts.",
+          "german": "Deine Höllenglut erleidet [effect0.power] Schaden.",
+          "portuguese": "Sua Pira sofre [effect0.power] de dano.",
+          "russian": "Пекло получает [effect0.power] урона.",
+          "chinese_traditional": "你的薪火受到 [effect0.power] 點傷害。",
+          "japanese": "パイアが[effect0.power]ダメージを受ける。",
+          "korean": "화로가 [effect0.power]의 피해를 받습니다."
+        },
+        "effects": [
+          "@ObsessingShardPyreDamage"
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXAttackBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXSoulProjectile",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/PurifiedSoul/FX_PurifiedSoulAttack.prefab",
+          "asset_guid": "8eb4671567d56e145aa892824c0c8cb0"
+        },
+        "spawn_location": "character_top"
+      },
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXSpectralImpact",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/EtherealSeelie/FX_EtherealSeelieImpact.prefab",
+          "asset_guid": "b856194664a6e4b4da8f1c47c5a0e765"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXSpectralAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/EtherealSeelie/FX_EtherealSeelieAttack2.prefab",
+          "asset_guid": "50436e5870431eb4d89cda0584d38e59"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ObsessingShardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ObsessingShardArt"
+          }
+        }
+      },
+      {
+        "id": "WrathGhostCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WrathGhostCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.6715,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 0.65,
+                "y": 0.65,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WrathGhostCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WrathGhostCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ObsessingShardArt",
+        "path": "textures/ObsessingShardArt.png"
+      },
+      {
+        "id": "WrathGhostCharacterArt",
+        "path": "textures/WrathGhostCharacterArt.png"
+      },
+      {
+        "id": "WrathGhostCardArt",
+        "path": "textures/WrathGhostCardArt.png"
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "WrathGhostAccursed",
+        "trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "descriptions": {
+          "english": "Apply +[effect0.power][attack] to friendly units.",
+          "chinese": "所有友方单位获得 +[effect0.power][attack]。",
+          "spanish": "Otorga +[effect0.power][attack] a las unidades aliadas.",
+          "french": "Applique +[effect0.power][attack] aux unités alliées.",
+          "german": "Verleiht verbündeten Einheiten +[effect0.power][attack].",
+          "portuguese": "Concede +[effect0.power][attack] às unidades aliadas.",
+          "russian": "Даёт союзникам +[effect0.power][attack].",
+          "chinese_traditional": "友方單位獲得 +[effect0.power][attack]。",
+          "japanese": "味方全員に+[effect0.power][attack]を付与する。",
+          "korean": "아군에게 +[effect0.power][attack]을 부여합니다."
+        },
+        "effects": [
+          "@WrathGhostBuff"
+        ]
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "BattleGrowthWrathGhostBuff",
+        "bonus_damage": 2
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Ghost",
+        "names": {
+          "english": "Ghost",
+          "chinese": "幽魂",
+          "spanish": "Fantasma",
+          "french": "Fantôme",
+          "german": "Geist",
+          "portuguese": "Fantasma",
+          "russian": "Призрак",
+          "chinese_traditional": "幽靈",
+          "japanese": "幽霊",
+          "korean": "유령"
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_WrathGhost.json": "f5427ec456d76e6ccf3bce9c161567addcb13280ceb98a3bc7e8589e95738ed9",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d",
+    "json/champions/champion_KnightMare.json": "8018856c48678d50808eac0350ebcdfcf53d0209d3678ce919e689b9171c8ca4",
+    "json/spells/card_ObsessingShard.json": "aa2f8c8cb633cab56c128cd56a7092c7a79f7b33dbe670f259275d646211bd37",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2",
+    "json/class.json": "65c18f4c8b8c97b62edfa51f3d02d2cae856fe878c761586e950fc9993580bc3"
+  }
+}

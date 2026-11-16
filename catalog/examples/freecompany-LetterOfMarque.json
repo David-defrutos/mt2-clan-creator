@@ -1,0 +1,905 @@
+{
+  "id": "freecompany-LetterOfMarque",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "relics",
+    "id": "LetterOfMarque"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Letter of Marque",
+    "french": "Lettre de marque",
+    "german": "Kaperbrief",
+    "russian": "Каперская грамота",
+    "portuguese": "Carta de Corso",
+    "chinese": "私掠许可证",
+    "spanish": "Patente de corso",
+    "chinese_traditional": "私掠許可證",
+    "korean": "사략 허가장",
+    "japanese": "私掠免許状"
+  },
+  "descriptions": {
+    "english": "Start each battle with a random <b>III</b> piece of kit in your hand.",
+    "french": "Commencez chaque combat avec un équipement aléatoire de rang <b>III</b> en main.",
+    "german": "Beginne jeden Kampf mit einem zufälligen Ausrüstungsgegenstand der Stufe <b>III</b> auf der Hand.",
+    "russian": "Начинайте каждый бой со случайным снаряжением уровня <b>III</b> в руке.",
+    "portuguese": "Comece cada batalha com um equipamento aleatório de nível <b>III</b> na mão.",
+    "chinese": "每场战斗开始时，手牌中加入一张随机<b>III</b>级装备。",
+    "spanish": "Empieza cada combate con una pieza de equipo aleatoria de nivel <b>III</b> en la mano.",
+    "chinese_traditional": "每場戰鬥開始時，手牌中加入一張隨機<b>III</b>級裝備。",
+    "korean": "전투 시작 시 무작위 <b>III</b>단계 장비를 손에 보유.",
+    "japanese": "各戦闘をランダムなランク<b>III</b>装備が手札にある状態で開始。"
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/d65eb4372f94f9438cedc08519ccd32b2e1c8c0b163670c36a147a4beca504a9.png",
+  "characterPicture": null,
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "status_effects",
+      "id": "pierce",
+      "names": {
+        "english": "Skewer",
+        "chinese": ""
+      },
+      "descriptions": {},
+      "file": "packages/Conductor-Conductor/json/status_effects/skewer.json",
+      "sha256": "c1d2a4300e9e7f1d5ff3c4e235e822422048a06d989cc245ad8e4a4650b77617"
+    }
+  ],
+  "assets": {
+    "textures/LetterOfMarqueIconSmall.png": "assets/2fb187b0c4d013e44c6c1e5077d1d85bf062be01b17dd590910320a2f2c3247e.png",
+    "textures/LetterOfMarqueIcon.png": "assets/d65eb4372f94f9438cedc08519ccd32b2e1c8c0b163670c36a147a4beca504a9.png",
+    "textures/ArchmagesStaffArt.png": "assets/d6a3ccdd6128f7113d4f84fa54d805e718a90d208e2e5e7fd69b1a8e46baa871.png",
+    "textures/BulwarkPlateArt.png": "assets/1f76aa4f623b3ab94f7a0eec40254ab68662b13a9fea0b3a291941a4d146a83e.png",
+    "textures/ThiefsMantleArt.png": "assets/03d054e4a80c823584c04d26da232c84f739035b27ece145d7bd324136fecb30.png",
+    "textures/GreatBowArt.png": "assets/2af92ed56b86b89470d01770dd4d3cbdc479babae0147486b2e61d362a80d1b5.png",
+    "textures/ReliquaryArt.png": "assets/fb8d6ea53da0cd02380723ca0e621d2cf2554ea9ca4b586abd8d92d66ead2a29.png",
+    "textures/ReaversMaulArt.png": "assets/29936c1e575e5cf5f8b026821de94dee900bb9b25c58f5376c5460019ede7de6.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "LetterOfMarque",
+        "type": "collectable",
+        "names": {
+          "english": "Letter of Marque",
+          "french": "Lettre de marque",
+          "german": "Kaperbrief",
+          "russian": "Каперская грамота",
+          "portuguese": "Carta de Corso",
+          "chinese": "私掠许可证",
+          "spanish": "Patente de corso",
+          "chinese_traditional": "私掠許可證",
+          "korean": "사략 허가장",
+          "japanese": "私掠免許状"
+        },
+        "descriptions": {
+          "english": "Start each battle with a random <b>III</b> piece of kit in your hand.",
+          "french": "Commencez chaque combat avec un équipement aléatoire de rang <b>III</b> en main.",
+          "german": "Beginne jeden Kampf mit einem zufälligen Ausrüstungsgegenstand der Stufe <b>III</b> auf der Hand.",
+          "russian": "Начинайте каждый бой со случайным снаряжением уровня <b>III</b> в руке.",
+          "portuguese": "Comece cada batalha com um equipamento aleatório de nível <b>III</b> na mão.",
+          "chinese": "每场战斗开始时，手牌中加入一张随机<b>III</b>级装备。",
+          "spanish": "Empieza cada combate con una pieza de equipo aleatoria de nivel <b>III</b> en la mano.",
+          "chinese_traditional": "每場戰鬥開始時，手牌中加入一張隨機<b>III</b>級裝備。",
+          "korean": "전투 시작 시 무작위 <b>III</b>단계 장비를 손에 보유.",
+          "japanese": "各戦闘をランダムなランク<b>III</b>装備が手札にある状態で開始。"
+        },
+        "relic_activated_texts": {
+          "english": "By order of the company.",
+          "french": "D'après l'ordre de la compagnie.",
+          "german": "Auf Befehl der Firma.",
+          "russian": "По приказу компании.",
+          "portuguese": "Por ordem da companhia.",
+          "chinese": "根据公司的命令.",
+          "spanish": "Por orden de la compañía.",
+          "chinese_traditional": "該公司的命令.",
+          "korean": "회사 명령에 따라요",
+          "japanese": "会社の命令で"
+        },
+        "relic_effects": [
+          "@LetterOfMarqueEffect"
+        ],
+        "icon": "@LetterOfMarqueIcon",
+        "icon_small": "@LetterOfMarqueIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "class": "@ClassFreeCompany",
+              "pools": [
+                "MegaRelicPool"
+              ],
+              "rarity": "rare"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "LetterOfMarqueIconSmall",
+        "path": "textures/LetterOfMarqueIconSmall.png"
+      },
+      {
+        "id": "LetterOfMarqueIcon",
+        "path": "textures/LetterOfMarqueIcon.png"
+      },
+      {
+        "id": "ArchmagesStaff",
+        "path": "textures/ArchmagesStaffArt.png"
+      },
+      {
+        "id": "BulwarkPlate",
+        "path": "textures/BulwarkPlateArt.png"
+      },
+      {
+        "id": "ThiefsMantle",
+        "path": "textures/ThiefsMantleArt.png"
+      },
+      {
+        "id": "GreatBow",
+        "path": "textures/GreatBowArt.png"
+      },
+      {
+        "id": "Reliquary",
+        "path": "textures/ReliquaryArt.png"
+      },
+      {
+        "id": "ReaversMaul",
+        "path": "textures/ReaversMaulArt.png"
+      }
+    ],
+    "relic_effects": [
+      {
+        "id": "LetterOfMarqueEffect",
+        "name": "RelicEffectAddCardsStartOfBattle",
+        "param_card_pool": "@FreeCompanyKitPoolIII",
+        "param_bool": false,
+        "param_bool_2": false,
+        "param_bool_3": true
+      }
+    ],
+    "card_pools": [
+      {
+        "id": "FreeCompanyKitPoolIII",
+        "cards": [
+          "@ReaversMaul",
+          "@Reliquary",
+          "@GreatBow",
+          "@ThiefsMantle",
+          "@BulwarkPlate",
+          "@ArchmagesStaff"
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "id": "ArchmagesStaff",
+        "names": {
+          "english": "Archmage's Staff",
+          "french": "Bâton d'archimage",
+          "german": "Erzmagierstab",
+          "russian": "Посох архимага",
+          "portuguese": "Cajado do Arquimago",
+          "chinese": "大法师之杖",
+          "spanish": "Bastón del archimago",
+          "chinese_traditional": "大法師之杖",
+          "korean": "대마법사의 지팡이",
+          "japanese": "大魔術師の杖"
+        },
+        "descriptions": {
+          "english": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Apply <b>6</b> [conduit].",
+          "french": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Applique <b>6</b> [conduit].",
+          "german": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Verleiht <b>6</b> [conduit].",
+          "russian": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Накладывает <b>6</b> [conduit].",
+          "portuguese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Aplica <b>6</b> [conduit].",
+          "chinese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. 施加<b>6</b> [conduit]。",
+          "spanish": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Añade <b>6</b> [conduit].",
+          "chinese_traditional": "<b>+10</b> [attack]. <b>1</b> [mageblade]. 施加<b>6</b> [conduit]。",
+          "korean": "<b>+10</b> [attack]. <b>1</b> [mageblade]. <b>6</b> [conduit] 부여.",
+          "japanese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. <b>6</b> [conduit]を付与。"
+        },
+        "card_art": "@ArchmagesStaff",
+        "cost": 2,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipArchmagesStaff",
+          "@ArchmagesStaffApplyConduit"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      },
+      {
+        "id": "BulwarkPlate",
+        "names": {
+          "english": "Bulwark Plate",
+          "french": "Armure de rempart",
+          "german": "Bollwerkpanzer",
+          "russian": "Доспех-бастион",
+          "portuguese": "Armadura Baluarte",
+          "chinese": "壁垒板甲",
+          "spanish": "Coraza baluarte",
+          "chinese_traditional": "壁壘板甲",
+          "korean": "보루 판금 갑옷",
+          "japanese": "防壁の板金鎧"
+        },
+        "descriptions": {
+          "english": "<b>+25</b> [health]. Apply <b>10</b> [armor], [steelguard] and <b>1</b> [titanskin].",
+          "french": "<b>+25</b> [health]. Appliquez <b>10</b> [armor], [steelguard] et <b>1</b> [titanskin].",
+          "german": "<b>+25</b> [health]. Erhalte <b>10</b> [armor], [steelguard] und <b>1</b> [titanskin].",
+          "russian": "<b>+25</b> [health]. Получите <b>10</b> [armor], [steelguard] и <b>1</b> [titanskin].",
+          "portuguese": "<b>+25</b> [health]. Aplique <b>10</b> [armor], [steelguard] e <b>1</b> [titanskin].",
+          "chinese": "<b>+25</b> [health]. 施加<b>10</b> [armor], [steelguard]和<b>1</b> [titanskin]。",
+          "spanish": "<b>+25</b> [health]. Añade <b>10</b> [armor], [steelguard] y <b>1</b> [titanskin].",
+          "chinese_traditional": "<b>+25</b> [health]. 施加<b>10</b> [armor], [steelguard]和<b>1</b> [titanskin]。",
+          "korean": "<b>+25</b> [health]. <b>10</b> [armor], [steelguard] 및 <b>1</b> [titanskin] 부여.",
+          "japanese": "<b>+25</b> [health]. <b>10</b> [armor], [steelguard]と<b>1</b> [titanskin]を付与。"
+        },
+        "card_art": "@BulwarkPlate",
+        "cost": 2,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipBulwarkPlate",
+          "@BulwarkPlateApplyArmor"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      },
+      {
+        "id": "ThiefsMantle",
+        "names": {
+          "english": "Thief's Mantle",
+          "french": "Manteau du voleur",
+          "german": "Diebesmantel",
+          "russian": "Плащ вора",
+          "portuguese": "Manto do Ladrão",
+          "chinese": "盗贼披风",
+          "spanish": "Manto del ladrón",
+          "chinese_traditional": "盜賊披風",
+          "korean": "도둑의 망토",
+          "japanese": "盗賊の外套"
+        },
+        "descriptions": {
+          "english": "<b>+15</b> [attack]. Apply <b>4</b> [avarice] and <b>6</b> [stealth].",
+          "french": "<b>+15</b> [attack]. Appliquez <b>4</b> [avarice] et <b>6</b> [stealth].",
+          "german": "<b>+15</b> [attack]. Erhalte <b>4</b> [avarice] und <b>6</b> [stealth].",
+          "russian": "<b>+15</b> [attack]. Получите <b>4</b> [avarice] и <b>6</b> [stealth].",
+          "portuguese": "<b>+15</b> [attack]. Aplique <b>4</b> [avarice] e <b>6</b> [stealth].",
+          "chinese": "<b>+15</b> [attack]. 施加<b>4</b> [avarice]和<b>6</b> [stealth]。",
+          "spanish": "<b>+15</b> [attack]. Añade <b>4</b> [avarice] y <b>6</b> [stealth].",
+          "chinese_traditional": "<b>+15</b> [attack]. 施加<b>4</b> [avarice]和<b>6</b> [stealth]。",
+          "korean": "<b>+15</b> [attack]. <b>4</b> [avarice] 및 <b>6</b> [stealth] 부여.",
+          "japanese": "<b>+15</b> [attack]. <b>4</b> [avarice]と<b>6</b> [stealth]を付与。"
+        },
+        "card_art": "@ThiefsMantle",
+        "cost": 2,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipThiefsMantle"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      },
+      {
+        "id": "GreatBow",
+        "names": {
+          "english": "Great Bow",
+          "french": "Grand arc",
+          "german": "Großbogen",
+          "russian": "Большой лук",
+          "portuguese": "Arco Grande",
+          "chinese": "巨弓",
+          "spanish": "Gran arco",
+          "chinese_traditional": "巨弓",
+          "korean": "대궁",
+          "japanese": "大弓"
+        },
+        "descriptions": {
+          "english": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "french": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "german": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "russian": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "portuguese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "chinese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "spanish": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "chinese_traditional": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "korean": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "japanese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>."
+        },
+        "card_art": "@GreatBow",
+        "cost": 2,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipGreatBow"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      },
+      {
+        "id": "Reliquary",
+        "names": {
+          "english": "Reliquary",
+          "french": "Reliquaire",
+          "german": "Reliquiar",
+          "russian": "Реликварий",
+          "portuguese": "Relicário",
+          "chinese": "圣物匣",
+          "spanish": "Relicario",
+          "chinese_traditional": "聖物匣",
+          "korean": "성물함",
+          "japanese": "聖遺物箱"
+        },
+        "descriptions": {
+          "english": "<b>+30</b> [health]. <b>1</b> [undying]. Restore <b>9</b> [health]. Apply <b>9</b> [regen].",
+          "french": "<b>+30</b> [health]. <b>1</b> [undying]. Restaure <b>9</b> [health]. Applique <b>9</b> [regen].",
+          "german": "<b>+30</b> [health]. <b>1</b> [undying]. Stellt <b>9</b> [health] wieder her. Verleiht <b>9</b> [regen].",
+          "russian": "<b>+30</b> [health]. <b>1</b> [undying]. Восстанавливает <b>9</b> [health]. Накладывает <b>9</b> [regen].",
+          "portuguese": "<b>+30</b> [health]. <b>1</b> [undying]. Restaura <b>9</b> [health]. Aplica <b>9</b> [regen].",
+          "chinese": "<b>+30</b> [health]. <b>1</b> [undying]. 恢复<b>9</b> [health]。 施加<b>9</b> [regen]。",
+          "spanish": "<b>+30</b> [health]. <b>1</b> [undying]. Recupera <b>9</b> [health]. Añade <b>9</b> [regen].",
+          "chinese_traditional": "<b>+30</b> [health]. <b>1</b> [undying]. 恢復<b>9</b> [health]。 施加<b>9</b> [regen]。",
+          "korean": "<b>+30</b> [health]. <b>1</b> [undying]. <b>9</b> [health] 회복. <b>9</b> [regen] 부여.",
+          "japanese": "<b>+30</b> [health]. <b>1</b> [undying]. <b>9</b> [health]を回復。 <b>9</b> [regen]を付与。"
+        },
+        "card_art": "@Reliquary",
+        "cost": 2,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipReliquary",
+          "@ReliquaryHeal",
+          "@ReliquaryApplyRegen"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      },
+      {
+        "id": "ReaversMaul",
+        "names": {
+          "english": "Reaver's Maul",
+          "french": "Masse du ravageur",
+          "german": "Plündererhammer",
+          "russian": "Молот разорителя",
+          "portuguese": "Malho do Saqueador",
+          "chinese": "劫掠者巨锤",
+          "spanish": "Mazo del saqueador",
+          "chinese_traditional": "劫掠者巨錘",
+          "korean": "약탈자의 망치",
+          "japanese": "略奪者の大槌"
+        },
+        "card_art": "@ReaversMaul",
+        "cost": 2,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipReaversMaul"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "ArchmagesStaffApplyConduit",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "conduit",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "id": "EquipArchmagesStaff",
+        "applied_vfx": "@KitWizardArcaneVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgArchmagesStaff"
+      },
+      {
+        "id": "BulwarkPlateApplyArmor",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "armor",
+            "count": 10
+          }
+        ]
+      },
+      {
+        "id": "EquipBulwarkPlate",
+        "applied_vfx": "@KitWarriorArmorVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgBulwarkPlate"
+      },
+      {
+        "id": "EquipThiefsMantle",
+        "applied_vfx": "@KitRogueShadowVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgThiefsMantle"
+      },
+      {
+        "id": "EquipGreatBow",
+        "applied_vfx": "@KitRangerCraftVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgGreatBow"
+      },
+      {
+        "id": "ReliquaryApplyRegen",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "regen",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "id": "ReliquaryHeal",
+        "name": "CardEffectHeal",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_int": 9
+      },
+      {
+        "id": "EquipReliquary",
+        "applied_vfx": "@KitClericHealVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgReliquary"
+      },
+      {
+        "id": "EquipReaversMaul",
+        "applied_vfx": "@KitBarbarianBuffVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgReaversMaul"
+      },
+      {
+        "id": "ReaversMaulTrigEffect",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "buff",
+            "count": 6
+          },
+          {
+            "status": "burst",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgArchmagesStaff",
+        "titles": {
+          "english": "Archmage's Staff",
+          "french": "Bâton d'archimage",
+          "german": "Erzmagierstab",
+          "russian": "Посох архимага",
+          "portuguese": "Cajado do Arquimago",
+          "chinese": "大法师之杖",
+          "spanish": "Bastón del archimago",
+          "chinese_traditional": "大法師之杖",
+          "korean": "대마법사의 지팡이",
+          "japanese": "大魔術師の杖"
+        },
+        "descriptions": {
+          "english": "<b>+10</b> [attack]. <b>1</b> [mageblade]. On equip: Apply <b>6</b> [conduit].",
+          "french": "<b>+10</b> [attack]. <b>1</b> [mageblade]. À l’équipement : Applique <b>6</b> [conduit].",
+          "german": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Beim Ausrüsten: Verleiht <b>6</b> [conduit].",
+          "russian": "<b>+10</b> [attack]. <b>1</b> [mageblade]. При экипировке: Накладывает <b>6</b> [conduit].",
+          "portuguese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Ao equipar: Aplica <b>6</b> [conduit].",
+          "chinese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. 装备时： 施加<b>6</b> [conduit]。",
+          "spanish": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Al equipar: Añade <b>6</b> [conduit].",
+          "chinese_traditional": "<b>+10</b> [attack]. <b>1</b> [mageblade]. 裝備時： 施加<b>6</b> [conduit]。",
+          "korean": "<b>+10</b> [attack]. <b>1</b> [mageblade]. 장착 시: <b>6</b> [conduit] 부여.",
+          "japanese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. 装備時： <b>6</b> [conduit]を付与。"
+        },
+        "icon": "@ArchmagesStaff",
+        "bonus_damage": 10,
+        "status_effect_upgrades": [
+          {
+            "status": "mageblade",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "UpgBulwarkPlate",
+        "titles": {
+          "english": "Bulwark Plate",
+          "french": "Armure de rempart",
+          "german": "Bollwerkpanzer",
+          "russian": "Доспех-бастион",
+          "portuguese": "Armadura Baluarte",
+          "chinese": "壁垒板甲",
+          "spanish": "Coraza baluarte",
+          "chinese_traditional": "壁壘板甲",
+          "korean": "보루 판금 갑옷",
+          "japanese": "防壁の板金鎧"
+        },
+        "descriptions": {
+          "english": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "french": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "german": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "russian": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "portuguese": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "chinese": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "spanish": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "chinese_traditional": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "korean": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "japanese": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin]."
+        },
+        "icon": "@BulwarkPlate",
+        "bonus_hp": 25,
+        "status_effect_upgrades": [
+          {
+            "status": "steelguard",
+            "count": 1
+          },
+          {
+            "status": "titanskin",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "UpgThiefsMantle",
+        "titles": {
+          "english": "Thief's Mantle",
+          "french": "Manteau du voleur",
+          "german": "Diebesmantel",
+          "russian": "Плащ вора",
+          "portuguese": "Manto do Ladrão",
+          "chinese": "盗贼披风",
+          "spanish": "Manto del ladrón",
+          "chinese_traditional": "盜賊披風",
+          "korean": "도둑의 망토",
+          "japanese": "盗賊の外套"
+        },
+        "descriptions": {
+          "english": "<b>+15</b> [attack]. Apply <b>4</b> [avarice] and <b>6</b> [stealth].",
+          "french": "<b>+15</b> [attack]. Appliquez <b>4</b> [avarice] et <b>6</b> [stealth].",
+          "german": "<b>+15</b> [attack]. Erhalte <b>4</b> [avarice] und <b>6</b> [stealth].",
+          "russian": "<b>+15</b> [attack]. Получите <b>4</b> [avarice] и <b>6</b> [stealth].",
+          "portuguese": "<b>+15</b> [attack]. Aplique <b>4</b> [avarice] e <b>6</b> [stealth].",
+          "chinese": "<b>+15</b> [attack]. 施加<b>4</b> [avarice]和<b>6</b> [stealth]。",
+          "spanish": "<b>+15</b> [attack]. Añade <b>4</b> [avarice] y <b>6</b> [stealth].",
+          "chinese_traditional": "<b>+15</b> [attack]. 施加<b>4</b> [avarice]和<b>6</b> [stealth]。",
+          "korean": "<b>+15</b> [attack]. <b>4</b> [avarice] 및 <b>6</b> [stealth] 부여.",
+          "japanese": "<b>+15</b> [attack]. <b>4</b> [avarice]と<b>6</b> [stealth]を付与。"
+        },
+        "icon": "@ThiefsMantle",
+        "bonus_damage": 15,
+        "status_effect_upgrades": [
+          {
+            "status": "avarice",
+            "count": 4
+          },
+          {
+            "status": "stealth",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "id": "UpgGreatBow",
+        "titles": {
+          "english": "Great Bow",
+          "french": "Grand arc",
+          "german": "Großbogen",
+          "russian": "Большой лук",
+          "portuguese": "Arco Grande",
+          "chinese": "巨弓",
+          "spanish": "Gran arco",
+          "chinese_traditional": "巨弓",
+          "korean": "대궁",
+          "japanese": "大弓"
+        },
+        "descriptions": {
+          "english": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "french": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "german": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "russian": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "portuguese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "chinese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "spanish": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "chinese_traditional": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "korean": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "japanese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>."
+        },
+        "icon": "@GreatBow",
+        "bonus_damage": 15,
+        "status_effect_upgrades": [
+          {
+            "status": "piercing",
+            "count": 1
+          },
+          {
+            "status": {
+              "id": "@pierce",
+              "mod_reference": "Conductor"
+            },
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "UpgReliquary",
+        "titles": {
+          "english": "Reliquary",
+          "french": "Reliquaire",
+          "german": "Reliquiar",
+          "russian": "Реликварий",
+          "portuguese": "Relicário",
+          "chinese": "圣物匣",
+          "spanish": "Relicario",
+          "chinese_traditional": "聖物匣",
+          "korean": "성물함",
+          "japanese": "聖遺物箱"
+        },
+        "descriptions": {
+          "english": "<b>+30</b> [health]. <b>1</b> [undying]. On equip: Restore <b>9</b> [health]. Apply <b>9</b> [regen].",
+          "french": "<b>+30</b> [health]. <b>1</b> [undying]. À l’équipement : Restaure <b>9</b> [health]. Applique <b>9</b> [regen].",
+          "german": "<b>+30</b> [health]. <b>1</b> [undying]. Beim Ausrüsten: Stellt <b>9</b> [health] wieder her. Verleiht <b>9</b> [regen].",
+          "russian": "<b>+30</b> [health]. <b>1</b> [undying]. При экипировке: Восстанавливает <b>9</b> [health]. Накладывает <b>9</b> [regen].",
+          "portuguese": "<b>+30</b> [health]. <b>1</b> [undying]. Ao equipar: Restaura <b>9</b> [health]. Aplica <b>9</b> [regen].",
+          "chinese": "<b>+30</b> [health]. <b>1</b> [undying]. 装备时： 恢复<b>9</b> [health]。 施加<b>9</b> [regen]。",
+          "spanish": "<b>+30</b> [health]. <b>1</b> [undying]. Al equipar: Recupera <b>9</b> [health]. Añade <b>9</b> [regen].",
+          "chinese_traditional": "<b>+30</b> [health]. <b>1</b> [undying]. 裝備時： 恢復<b>9</b> [health]。 施加<b>9</b> [regen]。",
+          "korean": "<b>+30</b> [health]. <b>1</b> [undying]. 장착 시: <b>9</b> [health] 회복. <b>9</b> [regen] 부여.",
+          "japanese": "<b>+30</b> [health]. <b>1</b> [undying]. 装備時： <b>9</b> [health]を回復。 <b>9</b> [regen]を付与。"
+        },
+        "icon": "@Reliquary",
+        "bonus_hp": 30,
+        "status_effect_upgrades": [
+          {
+            "status": "undying",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "UpgReaversMaul",
+        "titles": {
+          "english": "Reaver's Maul",
+          "french": "Masse du ravageur",
+          "german": "Plündererhammer",
+          "russian": "Молот разорителя",
+          "portuguese": "Malho do Saqueador",
+          "chinese": "劫掠者巨锤",
+          "spanish": "Mazo del saqueador",
+          "chinese_traditional": "劫掠者巨錘",
+          "korean": "약탈자의 망치",
+          "japanese": "略奪者の大槌"
+        },
+        "descriptions": {
+          "english": "<b>+18</b> [attack]. <b>Slay</b>: gain <b>6</b> [rage] and <b>1</b> [burst].",
+          "french": "<b>+18</b> [attack]. <b>Élimination</b> : gagnez <b>6</b> [rage] et <b>1</b> [burst].",
+          "german": "<b>+18</b> [attack]. <b>Töten</b>: Erhalte <b>6</b> [rage] und <b>1</b> [burst].",
+          "russian": "<b>+18</b> [attack]. <b>Убийство</b>: получите <b>6</b> [rage] и <b>1</b> [burst].",
+          "portuguese": "<b>+18</b> [attack]. <b>Abate</b>: ganhe <b>6</b> [rage] e <b>1</b> [burst].",
+          "chinese": "<b>+18</b> [attack]. <b>击杀</b>：获得<b>6</b> [rage]和<b>1</b> [burst]。",
+          "spanish": "<b>+18</b> [attack]. <b>Matanza</b>: gana <b>6</b> [rage] y <b>1</b> [burst].",
+          "chinese_traditional": "<b>+18</b> [attack]. <b>擊殺</b>：獲得<b>6</b> [rage]和<b>1</b> [burst]。",
+          "korean": "<b>+18</b> [attack]. <b>처치</b>: <b>6</b> [rage] 및 <b>1</b> [burst] 획득.",
+          "japanese": "<b>+18</b> [attack]. <b>撃破</b>：<b>6</b> [rage]と<b>1</b> [burst]を得る。"
+        },
+        "icon": "@ReaversMaul",
+        "bonus_damage": 18,
+        "trigger_upgrades": [
+          "@ReaversMaulTrigger"
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitWizardArcaneVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "KitWarriorArmorVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Wurmkin/EchoInfusion/FX_WurmkinBuff.prefab",
+          "asset_guid": "24aff4cc201a62e41838f1d11b277562"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "KitRogueShadowVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "KitRangerCraftVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Railforged/CraftedEquipment/FX_CraftedEquipment.prefab",
+          "asset_guid": "8b71ea7d8f6189148add8fe2945b0bc5"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "KitClericHealVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_HealImpactNormal_PS.prefab",
+          "asset_guid": "a1b4834936900f44c97dcde93697e47b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "KitBarbarianBuffVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ArchmagesStaff",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ArchmagesStaff"
+          }
+        }
+      },
+      {
+        "id": "BulwarkPlate",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@BulwarkPlate"
+          }
+        }
+      },
+      {
+        "id": "ThiefsMantle",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ThiefsMantle"
+          }
+        }
+      },
+      {
+        "id": "GreatBow",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@GreatBow"
+          }
+        }
+      },
+      {
+        "id": "Reliquary",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Reliquary"
+          }
+        }
+      },
+      {
+        "id": "ReaversMaul",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ReaversMaul"
+          }
+        }
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "ReaversMaulTrigger",
+        "trigger": "on_kill",
+        "descriptions": {
+          "english": "Gain [effect0.status0.power] [rage] and [effect0.status1.power] [burst].",
+          "french": "Gagnez [effect0.status0.power] [rage] et [effect0.status1.power] [burst].",
+          "german": "Erhalte [effect0.status0.power] [rage] und [effect0.status1.power] [burst].",
+          "russian": "Получите [effect0.status0.power] [rage] и [effect0.status1.power] [burst].",
+          "portuguese": "Ganhe [effect0.status0.power] [rage] e [effect0.status1.power] [burst].",
+          "chinese": "获得[effect0.status0.power] [rage]和[effect0.status1.power] [burst]。",
+          "spanish": "Gana [effect0.status0.power] [rage] y [effect0.status1.power] [burst].",
+          "chinese_traditional": "獲得[effect0.status0.power] [rage]和[effect0.status1.power] [burst]。",
+          "korean": "[effect0.status0.power] [rage] 및 [effect0.status1.power] [burst] 획득.",
+          "japanese": "[effect0.status0.power] [rage]と[effect0.status1.power] [burst]を得る。"
+        },
+        "effects": [
+          "@ReaversMaulTrigEffect"
+        ]
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_letter_of_marque.json": "06e342267341b69cffb99080c66a03ca943d892c69a9470057c83b0a3b03b99f",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323",
+    "json/kits/kit_wizard.json": "c217c1e5cfccbf41acb3ec54768f00da42fc90941e4eccff4742d3afaad37160",
+    "json/kits/kit_warrior.json": "f7701b9d189e8ea8b681f01a7139c1b026d9da6015eb1f8a168b91a1ca113a0d",
+    "json/kits/kit_rogue.json": "60ccad914ba5a1cedd187db67b9a14ad67efb65857357767805f708afc2ee44c",
+    "json/kits/kit_ranger.json": "9a2ce18dbaf287ba54b81290e7b5b5c80d39fa83935607d88fae2f23ac274011",
+    "json/kits/kit_cleric.json": "062732773161aca4543f3bcea740da218866734030b51f1ae6fcd0f01aad2ffb",
+    "json/kits/kit_barbarian.json": "bb4e9b26871aec51edc5563f0903f9e8854ef2a4970cafef85430cca8a75ff07"
+  }
+}

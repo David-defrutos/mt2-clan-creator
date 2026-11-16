@@ -1,0 +1,141 @@
+{
+  "id": "succclan-ObsessingShard",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "ObsessingShard"
+  },
+  "kind": "blight",
+  "names": {
+    "english": "Obsessing Spark",
+    "chinese": "欲望碎片",
+    "spanish": "Chispa obsesiva",
+    "french": "Étincelle obsédante",
+    "german": "Besessenheitsfunke",
+    "portuguese": "Centelha Obsessiva",
+    "russian": "Искра одержимости",
+    "chinese_traditional": "執念火花",
+    "japanese": "執着の火花",
+    "korean": "집착의 불꽃"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/fc6bd964ecb26665a12e65a318a98fd020456df96f868ae0202ada3da2eadb51.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ObsessingShardArt.png": "assets/fc6bd964ecb26665a12e65a318a98fd020456df96f868ae0202ada3da2eadb51.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "ObsessingShard",
+        "names": {
+          "english": "Obsessing Spark",
+          "chinese": "欲望碎片",
+          "spanish": "Chispa obsesiva",
+          "french": "Étincelle obsédante",
+          "german": "Besessenheitsfunke",
+          "portuguese": "Centelha Obsessiva",
+          "russian": "Искра одержимости",
+          "chinese_traditional": "執念火花",
+          "japanese": "執着の火花",
+          "korean": "집착의 불꽃"
+        },
+        "card_type": "blight",
+        "rarity": "common",
+        "card_art": "@ObsessingShardArt",
+        "cost": 1,
+        "targets_room": false,
+        "targetless": true,
+        "traits": [
+          "@Consume"
+        ],
+        "triggers": [
+          "@ObsessingShardOnUnplayed"
+        ]
+      }
+    ],
+    "card_triggers": [
+      {
+        "id": "ObsessingShardOnUnplayed",
+        "trigger": "on_unplayed_negative",
+        "descriptions": {
+          "english": "Your Pyre takes [effect0.power] damage.",
+          "chinese": "对薪火造成 [effect0.power] 点伤害。",
+          "spanish": "Tu Pira recibe [effect0.power] de daño.",
+          "french": "Votre Brasier subit [effect0.power] dégâts.",
+          "german": "Deine Höllenglut erleidet [effect0.power] Schaden.",
+          "portuguese": "Sua Pira sofre [effect0.power] de dano.",
+          "russian": "Пекло получает [effect0.power] урона.",
+          "chinese_traditional": "你的薪火受到 [effect0.power] 點傷害。",
+          "japanese": "パイアが[effect0.power]ダメージを受ける。",
+          "korean": "화로가 [effect0.power]의 피해를 받습니다."
+        },
+        "effects": [
+          "@ObsessingShardPyreDamage"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "ObsessingShardPyreDamage",
+        "applied_vfx": "@SuccFXShadowImpact",
+        "name": "CardEffectDamage",
+        "target_mode": "pyre",
+        "target_team": "both",
+        "param_int": 1,
+        "suppress_pyre_room_focus": true
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ObsessingShardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ObsessingShardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ObsessingShardArt",
+        "path": "textures/ObsessingShardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_ObsessingShard.json": "aa2f8c8cb633cab56c128cd56a7092c7a79f7b33dbe670f259275d646211bd37",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d"
+  }
+}

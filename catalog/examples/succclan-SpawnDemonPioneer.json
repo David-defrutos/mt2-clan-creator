@@ -1,0 +1,291 @@
+{
+  "id": "succclan-SpawnDemonPioneer",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "SpawnDemonPioneer"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Demon Pioneer",
+    "chinese": "恶魔先锋",
+    "spanish": "Pionero demoníaco",
+    "french": "Pionnier démoniaque",
+    "german": "Dämonischer Pionier",
+    "portuguese": "Pioneiro Demoníaco",
+    "russian": "Демонический первопроходец",
+    "chinese_traditional": "惡魔先鋒",
+    "japanese": "悪魔の先駆者",
+    "korean": "악마 선구자"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 10,
+  "attack": 10,
+  "size": 3,
+  "picture": "assets/165a26c6b6b948a80d21cd82bead29a70c909b4ce09232378068b125b1cf9dd4.png",
+  "characterPicture": "assets/b79fec6094d84c88082469a42e863b79a88b690407735a516ee29b02458637db.png",
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "character_trigger_types",
+      "id": "Accursed",
+      "names": {
+        "english": "Accursed",
+        "chinese": "被咒"
+      },
+      "descriptions": {
+        "english": "Triggers when, during your turn, a <b>Blight</b> or [junk] is played or discarded on the floor.",
+        "chinese": "回合结束前在本层打出或舍弃[blight]牌或[junk]牌时触发。"
+      },
+      "file": "packages/Conductor-Conductor/json/triggers.json",
+      "sha256": "0a0e9419dfeeb57f0e0917c7d1eddf6483d0cb58e7b40188c57b4ab2ecae86b5"
+    }
+  ],
+  "assets": {
+    "textures/DemonPioneerCharacterArt.png": "assets/b79fec6094d84c88082469a42e863b79a88b690407735a516ee29b02458637db.png",
+    "textures/DemonPioneerCardArt.png": "assets/165a26c6b6b948a80d21cd82bead29a70c909b4ce09232378068b125b1cf9dd4.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnDemonPioneer",
+        "names": {
+          "english": "Demon Pioneer",
+          "chinese": "恶魔先锋",
+          "spanish": "Pionero demoníaco",
+          "french": "Pionnier démoniaque",
+          "german": "Dämonischer Pionier",
+          "portuguese": "Pioneiro Demoníaco",
+          "russian": "Демонический первопроходец",
+          "chinese_traditional": "惡魔先鋒",
+          "japanese": "悪魔の先駆者",
+          "korean": "악마 선구자"
+        },
+        "card_art": "@DemonPioneerCardArt",
+        "cost": 2,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "effects": [
+          "@SpawnDemonPioneer"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnDemonPioneer",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@DemonPioneer"
+      },
+      {
+        "id": "DemonPioneerPermanentBuff",
+        "applied_vfx": "@SuccFXPsionicPulse",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_upgrade": "@DemonPioneerPermanent",
+        "param_int_3": 2
+      },
+      {
+        "id": "DemonPioneerHealth",
+        "applied_vfx": "@SuccFXHealthBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 3,
+        "param_upgrade": "@BattleGrowthDemonPioneerHealth",
+        "param_int_3": 0
+      },
+      {
+        "id": "DemonPioneerAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 1,
+        "param_upgrade": "@BattleGrowthDemonPioneerAttack",
+        "param_int_3": 0
+      }
+    ],
+    "characters": [
+      {
+        "id": "DemonPioneer",
+        "attack_vfx": "@SuccFXBladeAttack",
+        "impact_vfx": "@SuccFXShadowImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "names": {
+          "english": "Demon Pioneer",
+          "chinese": "恶魔先锋",
+          "spanish": "Pionero demoníaco",
+          "french": "Pionnier démoniaque",
+          "german": "Dämonischer Pionier",
+          "portuguese": "Pioneiro Demoníaco",
+          "russian": "Демонический первопроходец",
+          "chinese_traditional": "惡魔先鋒",
+          "japanese": "悪魔の先駆者",
+          "korean": "악마 선구자"
+        },
+        "character_art": "@DemonPioneerCharacterArt",
+        "size": 3,
+        "attack_damage": 10,
+        "health": 10,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "SubtypesData_Demon_fcebd195-f262-4d7a-ac9f-01ffa2007a12"
+        ],
+        "triggers": [
+          "@DemonPioneerAccursed"
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "DemonPioneerAccursed",
+        "trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "descriptions": {
+          "english": "+[effect0.power][attack] and +[effect1.power][health]. Permanently +[effect2.upgrade.bonusdamage][attack] and +[effect2.upgrade.bonushp][health].",
+          "chinese": "+[effect0.power][attack]，+[effect1.power][health]。永久 +[effect2.upgrade.bonusdamage][attack]，+[effect2.upgrade.bonushp][health]。",
+          "spanish": "+[effect0.power][attack] y +[effect1.power][health]. +[effect2.upgrade.bonusdamage][attack] y +[effect2.upgrade.bonushp][health] permanentemente.",
+          "french": "+[effect0.power][attack] et +[effect1.power][health]. +[effect2.upgrade.bonusdamage][attack] et +[effect2.upgrade.bonushp][health] de façon permanente.",
+          "german": "+[effect0.power][attack] und +[effect1.power][health]. Dauerhaft +[effect2.upgrade.bonusdamage][attack] und +[effect2.upgrade.bonushp][health].",
+          "portuguese": "+[effect0.power][attack] e +[effect1.power][health]. +[effect2.upgrade.bonusdamage][attack] e +[effect2.upgrade.bonushp][health] permanentemente.",
+          "russian": "+[effect0.power][attack] и +[effect1.power][health]. Навсегда +[effect2.upgrade.bonusdamage][attack] и +[effect2.upgrade.bonushp][health].",
+          "chinese_traditional": "+[effect0.power][attack] 與 +[effect1.power][health]。永久 +[effect2.upgrade.bonusdamage][attack] 與 +[effect2.upgrade.bonushp][health]。",
+          "japanese": "+[effect0.power][attack]と+[effect1.power][health]。永続的に+[effect2.upgrade.bonusdamage][attack]と+[effect2.upgrade.bonushp][health]。",
+          "korean": "+[effect0.power][attack] 및 +[effect1.power][health]. 영구적으로 +[effect2.upgrade.bonusdamage][attack] 및 +[effect2.upgrade.bonushp][health]."
+        },
+        "effects": [
+          "@DemonPioneerAttack",
+          "@DemonPioneerHealth",
+          "@DemonPioneerPermanentBuff"
+        ]
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "DemonPioneerPermanent",
+        "bonus_damage": 1,
+        "bonus_hp": 1
+      },
+      {
+        "id": "BattleGrowthDemonPioneerHealth",
+        "bonus_hp": 3
+      },
+      {
+        "id": "BattleGrowthDemonPioneerAttack",
+        "bonus_damage": 1
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXPsionicPulse",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/LunaCoven/Fae'sBlessing/FX_FaeBlessing.prefab",
+          "asset_guid": "154b24d57e7cd4f4d9b1b927165c4ab4"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXHealthBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Health_PS.prefab",
+          "asset_guid": "163c171f05bdd644fbadfa6fc01064a0"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXAttackBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXBladeAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/DeathsDancer/FX_DeathsDancerAttack.prefab",
+          "asset_guid": "7b4040ba5c134c84eaeb246a77b0a401"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "DemonPioneerCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@DemonPioneerCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.35,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "DemonPioneerCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@DemonPioneerCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "DemonPioneerCharacterArt",
+        "path": "textures/DemonPioneerCharacterArt.png"
+      },
+      {
+        "id": "DemonPioneerCardArt",
+        "path": "textures/DemonPioneerCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_DemonPioneer.json": "5fea08947680cc7c31b74584a54cdf9fe58b92d1622d3737aff0d8a2ec019a0c",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

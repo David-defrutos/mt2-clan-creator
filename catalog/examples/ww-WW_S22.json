@@ -1,0 +1,138 @@
+{
+  "id": "ww-WW_S22",
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S22"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Tutoría de Emergencia",
+    "english": "Emergency Office Hours",
+    "french": "Permanence d'urgence",
+    "german": "Notfallsprechstunde",
+    "portuguese": "Atendimento de Emergência",
+    "russian": "Экстренная консультация",
+    "chinese": "紧急答疑",
+    "chinese_traditional": "緊急答疑",
+    "korean": "긴급 면담 시간",
+    "japanese": "緊急相談時間"
+  },
+  "descriptions": {
+    "spanish": "Reduce la [cooldown] de una unidad aliada en [effect0.status0.power]. Añade [dazed] [effect1.status0.power].",
+    "french": "Réduisez le [cooldown] d'un allié de [effect0.status0.power]. Appliquez [dazed] [effect1.status0.power].",
+    "german": "Verringere den [cooldown] eines Verbündeten um [effect0.status0.power]. Wende [dazed] [effect1.status0.power] an.",
+    "portuguese": "Reduz o [cooldown] de uma unidade aliada em [effect0.status0.power]. Aplica [dazed] [effect1.status0.power].",
+    "russian": "Уменьшите [cooldown] союзника на [effect0.status0.power]. Примените [dazed] [effect1.status0.power].",
+    "chinese": "使一个友军的[cooldown]减少[effect0.status0.power]。施加[dazed] [effect1.status0.power]。",
+    "chinese_traditional": "使一個友軍的[cooldown]減少[effect0.status0.power]。施加[dazed] [effect1.status0.power]。",
+    "korean": "아군 하나의 [cooldown]을 [effect0.status0.power] 줄입니다. [dazed] [effect1.status0.power]을 부여합니다.",
+    "japanese": "味方1体の[cooldown]を[effect0.status0.power]減らす。[dazed] [effect1.status0.power]を付与する。",
+    "english": "Reduce a friendly unit’s [cooldown] by [effect0.status0.power]. Apply [dazed] [effect1.status0.power]."
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/c15031882bb358f415802f11d2dd96c0417c28dc8103be5dbd6b133c88906c73.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S22CardArt.png": "assets/c15031882bb358f415802f11d2dd96c0417c28dc8103be5dbd6b133c88906c73.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S22",
+        "names": {
+          "spanish": "Tutoría de Emergencia",
+          "english": "Emergency Office Hours",
+          "french": "Permanence d'urgence",
+          "german": "Notfallsprechstunde",
+          "portuguese": "Atendimento de Emergência",
+          "russian": "Экстренная консультация",
+          "chinese": "紧急答疑",
+          "chinese_traditional": "緊急答疑",
+          "korean": "긴급 면담 시간",
+          "japanese": "緊急相談時間"
+        },
+        "descriptions": {
+          "spanish": "Reduce la [cooldown] de una unidad aliada en [effect0.status0.power]. Añade [dazed] [effect1.status0.power].",
+          "french": "Réduisez le [cooldown] d'un allié de [effect0.status0.power]. Appliquez [dazed] [effect1.status0.power].",
+          "german": "Verringere den [cooldown] eines Verbündeten um [effect0.status0.power]. Wende [dazed] [effect1.status0.power] an.",
+          "portuguese": "Reduz o [cooldown] de uma unidade aliada em [effect0.status0.power]. Aplica [dazed] [effect1.status0.power].",
+          "russian": "Уменьшите [cooldown] союзника на [effect0.status0.power]. Примените [dazed] [effect1.status0.power].",
+          "chinese": "使一个友军的[cooldown]减少[effect0.status0.power]。施加[dazed] [effect1.status0.power]。",
+          "chinese_traditional": "使一個友軍的[cooldown]減少[effect0.status0.power]。施加[dazed] [effect1.status0.power]。",
+          "korean": "아군 하나의 [cooldown]을 [effect0.status0.power] 줄입니다. [dazed] [effect1.status0.power]을 부여합니다.",
+          "japanese": "味方1体の[cooldown]を[effect0.status0.power]減らす。[dazed] [effect1.status0.power]を付与する。",
+          "english": "Reduce a friendly unit’s [cooldown] by [effect0.status0.power]. Apply [dazed] [effect1.status0.power]."
+        },
+        "card_type": "spell",
+        "cost": 0,
+        "rarity": "rare",
+        "targets_room": true,
+        "effects": [
+          "@WW_S22_Cooldown",
+          "@WW_S22_Dazed"
+        ],
+        "card_art": "@WW_S22CardArt"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S22CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S22CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S22CardArt",
+        "path": "textures/cards/WW_S22CardArt.png"
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_S22_Dazed",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "dazed",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "WW_S22_Cooldown",
+        "name": "CardEffectRemoveStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "cooldown",
+            "count": 1
+          }
+        ],
+        "disallow_status_effect_modifiers": true
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S22.json": "7e7310d12187ca34c81abd9280506400ef0b81eebd6aa535e958fe1fcddacbbf"
+  }
+}

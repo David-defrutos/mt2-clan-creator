@@ -1,0 +1,169 @@
+{
+  "id": "succclan-PlagueBoost",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "PlagueBoost"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Plague Boost",
+    "chinese": "瘟疫爆发",
+    "spanish": "Impulso de la plaga",
+    "french": "Renfort de peste",
+    "german": "Seuchenverstärkung",
+    "portuguese": "Impulso da Praga",
+    "russian": "Усиление чумы",
+    "chinese_traditional": "瘟疫增幅",
+    "japanese": "疫病の増幅",
+    "korean": "역병 증폭"
+  },
+  "descriptions": {
+    "english": "Gain [trait2.power][ember] for every <b>Blight</b> and [junk] in your deck.",
+    "spanish": "Gana [trait2.power][ember] por cada <b>Ruina</b> y [junk] en tu mazo.",
+    "chinese": "牌库中每有一张<b>祸害</b>或[junk]牌，获得 [trait2.power][ember]。",
+    "chinese_traditional": "牌庫中每有一張<b>禍害</b>或[junk]牌，獲得 [trait2.power][ember]。",
+    "french": "Gagnez [trait2.power][ember] pour chaque <b>Fléau</b> et [junk] dans votre deck.",
+    "german": "Erhalte [trait2.power][ember] für jeden <b>Fluch</b> und jede [junk] in deinem Deck.",
+    "portuguese": "Ganhe [trait2.power][ember] para cada <b>Praga</b> e [junk] no seu deck.",
+    "russian": "Даёт [trait2.power][ember] за каждую <b>Порчу</b> и [junk] в колоде.",
+    "japanese": "デッキの<b>荒廃</b>と[junk]1枚につき[trait2.power][ember]を得る。",
+    "korean": "덱의 <b>저주</b> 및 [junk] 카드 한 장당 [trait2.power][ember]을 얻습니다."
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/1102cc8b72646585aa9bac6f7a7041ea2f762e59e70e1a99c8e3751cdb34be61.png",
+  "characterPicture": null,
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "tracked_value_types",
+      "id": "BlightsAndScourgesInDeck",
+      "names": {},
+      "descriptions": {},
+      "file": "packages/Conductor-Conductor/json/tracked_values.json",
+      "sha256": "87be665b756e93c15be135c9a38fb9bb7b3fbf44ac2753e8cf7e5d3a1e1548f8"
+    }
+  ],
+  "assets": {
+    "textures/PlagueBoostArt.png": "assets/1102cc8b72646585aa9bac6f7a7041ea2f762e59e70e1a99c8e3751cdb34be61.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "PlagueBoost",
+        "names": {
+          "english": "Plague Boost",
+          "chinese": "瘟疫爆发",
+          "spanish": "Impulso de la plaga",
+          "french": "Renfort de peste",
+          "german": "Seuchenverstärkung",
+          "portuguese": "Impulso da Praga",
+          "russian": "Усиление чумы",
+          "chinese_traditional": "瘟疫增幅",
+          "japanese": "疫病の増幅",
+          "korean": "역병 증폭"
+        },
+        "descriptions": {
+          "english": "Gain [trait2.power][ember] for every <b>Blight</b> and [junk] in your deck.",
+          "spanish": "Gana [trait2.power][ember] por cada <b>Ruina</b> y [junk] en tu mazo.",
+          "chinese": "牌库中每有一张<b>祸害</b>或[junk]牌，获得 [trait2.power][ember]。",
+          "chinese_traditional": "牌庫中每有一張<b>禍害</b>或[junk]牌，獲得 [trait2.power][ember]。",
+          "french": "Gagnez [trait2.power][ember] pour chaque <b>Fléau</b> et [junk] dans votre deck.",
+          "german": "Erhalte [trait2.power][ember] für jeden <b>Fluch</b> und jede [junk] in deinem Deck.",
+          "portuguese": "Ganhe [trait2.power][ember] para cada <b>Praga</b> e [junk] no seu deck.",
+          "russian": "Даёт [trait2.power][ember] за каждую <b>Порчу</b> и [junk] в колоде.",
+          "japanese": "デッキの<b>荒廃</b>と[junk]1枚につき[trait2.power][ember]を得る。",
+          "korean": "덱의 <b>저주</b> 및 [junk] 카드 한 장당 [trait2.power][ember]을 얻습니다."
+        },
+        "card_type": "spell",
+        "rarity": "rare",
+        "card_art": "@PlagueBoostArt",
+        "cost": 0,
+        "targets_room": true,
+        "targetless": true,
+        "traits": [
+          "@Frozen",
+          "@Consume",
+          "@PlagueBoostScaling"
+        ],
+        "effects": [
+          "@PlagueBoostEmber"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "PlagueBoostEmber",
+        "applied_vfx": "@SuccFXHandPulse",
+        "name": "CardEffectGainEnergy",
+        "target_mode": "room",
+        "target_team": "none",
+        "param_int": 0
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXHandPulse",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Pyreborne/Alchemy/FX_Alchemy.prefab",
+          "asset_guid": "dece7354ce5d1f94e9121ea4e8375122"
+        },
+        "spawn_location": "room_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "PlagueBoostScaling",
+        "name": "CardTraitScalingAddEnergy",
+        "param_tracked_value": {
+          "id": "@BlightsAndScourgesInDeck",
+          "mod_reference": "Conductor"
+        },
+        "param_card_type": "any",
+        "param_int": 1
+      },
+      {
+        "id": "Consume",
+        "name": "CardTraitExhaustState"
+      },
+      {
+        "id": "Frozen",
+        "name": "CardTraitFreeze"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "PlagueBoostArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@PlagueBoostArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "PlagueBoostArt",
+        "path": "textures/PlagueBoostArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_PlagueBoost.json": "4dd8e1939f0d5abb4bce2bdca53381a4e2951e833305db4e5610bdebde8af90b",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d"
+  }
+}

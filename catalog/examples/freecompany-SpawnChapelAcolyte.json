@@ -1,0 +1,224 @@
+{
+  "id": "freecompany-SpawnChapelAcolyte",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnChapelAcolyte"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Chapel Acolyte",
+    "french": "Acolyte de la chapelle",
+    "german": "Kapellenakolyth",
+    "russian": "Послушник часовни",
+    "portuguese": "Acólito da Capela",
+    "chinese": "礼拜堂侍僧",
+    "spanish": "Acólito de la capilla",
+    "chinese_traditional": "禮拜堂侍僧",
+    "korean": "예배당 시종",
+    "japanese": "礼拝堂の侍祭"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": 14,
+  "attack": 2,
+  "size": 1,
+  "picture": "assets/d67c9c15c1fefbe6b6d7301e5d8d634db9e3e4af16ee88b8c4e41e1c3bc893b2.png",
+  "characterPicture": "assets/3e98bc90e5cbe7e66af7777fc84c61336f147dde7855ba3745044fe9b7708268.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ChapelAcolyteCharacterArt.png": "assets/3e98bc90e5cbe7e66af7777fc84c61336f147dde7855ba3745044fe9b7708268.png",
+    "textures/ChapelAcolyteCardArt.png": "assets/d67c9c15c1fefbe6b6d7301e5d8d634db9e3e4af16ee88b8c4e41e1c3bc893b2.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnChapelAcolyte",
+        "names": {
+          "english": "Chapel Acolyte",
+          "french": "Acolyte de la chapelle",
+          "german": "Kapellenakolyth",
+          "russian": "Послушник часовни",
+          "portuguese": "Acólito da Capela",
+          "chinese": "礼拜堂侍僧",
+          "spanish": "Acólito de la capilla",
+          "chinese_traditional": "禮拜堂侍僧",
+          "korean": "예배당 시종",
+          "japanese": "礼拝堂の侍祭"
+        },
+        "card_art": "@ChapelAcolyte",
+        "cost": 1,
+        "card_type": "monster",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnChapelAcolyteEffect"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnChapelAcolyteEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@ChapelAcolyte"
+      },
+      {
+        "id": "ChapelAcolyteAbility",
+        "applied_vfx": "@UnitChapelAcolyteHealSmallVFX",
+        "name": "CardEffectHeal",
+        "target_mode": "weakest",
+        "target_team": "monsters",
+        "param_int": 3
+      }
+    ],
+    "characters": [
+      {
+        "id": "ChapelAcolyte",
+        "names": {
+          "english": "Chapel Acolyte",
+          "french": "Acolyte de la chapelle",
+          "german": "Kapellenakolyth",
+          "russian": "Послушник часовни",
+          "portuguese": "Acólito da Capela",
+          "chinese": "礼拜堂侍僧",
+          "spanish": "Acólito de la capilla",
+          "chinese_traditional": "禮拜堂侍僧",
+          "korean": "예배당 시종",
+          "japanese": "礼拝堂の侍祭"
+        },
+        "character_art": "@ChapelAcolyteCharacterArt",
+        "size": 1,
+        "attack_damage": 2,
+        "health": 14,
+        "subtypes": [
+          "@Sub_Cleric",
+          "@Sub_Goblin"
+        ],
+        "triggers": [
+          {
+            "id": "@ChapelAcolyteTrigger"
+          }
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "ChapelAcolyteTrigger",
+        "trigger": "end_turn_pre_hand_discard",
+        "descriptions": {
+          "english": "Restore [effect0.power] health to the weakest friendly unit.",
+          "french": "Rendez [effect0.power] PV à l’unité alliée la plus affaiblie.",
+          "german": "Heile die verbündete Einheit mit dem wenigsten Leben um [effect0.power] Leben.",
+          "russian": "Восстановите [effect0.power] здоровья самой слабой союзной боевой единице.",
+          "portuguese": "Restaure [effect0.power] de vida da unidade aliada mais fraca.",
+          "chinese": "为最虚弱的友方单位恢复[effect0.power]点生命值。",
+          "spanish": "Restaura [effect0.power] de salud a la unidad aliada más débil.",
+          "chinese_traditional": "為最虛弱的友方單位恢復[effect0.power]點生命值。",
+          "korean": "가장 약한 아군 유닛의 체력을 [effect0.power] 회복.",
+          "japanese": "最も弱った味方ユニットの体力を[effect0.power]回復。"
+        },
+        "effects": [
+          "@ChapelAcolyteAbility"
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "UnitChapelAcolyteHealSmallVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_HealImpactSmall_PS.prefab",
+          "asset_guid": "43d81144eb85739409501ee485f55b0f"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Cleric",
+        "names": {
+          "english": "Cleric",
+          "french": "Clerc",
+          "german": "Kleriker",
+          "russian": "Жрец",
+          "portuguese": "Clérigo",
+          "chinese": "牧师",
+          "spanish": "Clérigo",
+          "chinese_traditional": "牧師",
+          "korean": "성직자",
+          "japanese": "クレリック"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ChapelAcolyteCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@ChapelAcolyteCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.64309,
+                "z": 0
+              },
+              "scale": {
+                "x": 0.7106,
+                "y": 0.7106,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "ChapelAcolyte",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ChapelAcolyte"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ChapelAcolyteCharacterArt",
+        "path": "textures/ChapelAcolyteCharacterArt.png"
+      },
+      {
+        "id": "ChapelAcolyte",
+        "path": "textures/ChapelAcolyteCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_chapel_acolyte.json": "e1095f8a38adf8a445389a23fef860ac5192d30e8f19e4bc797a1be567e6f147",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

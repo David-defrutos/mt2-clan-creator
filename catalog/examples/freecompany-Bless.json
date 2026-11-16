@@ -1,0 +1,136 @@
+{
+  "id": "freecompany-Bless",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Bless"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Bless",
+    "french": "Bénédiction",
+    "german": "Segen",
+    "russian": "Благословение",
+    "portuguese": "Bênção",
+    "chinese": "祝福",
+    "spanish": "Bendición",
+    "chinese_traditional": "祝福",
+    "korean": "축복",
+    "japanese": "祝福"
+  },
+  "descriptions": {
+    "english": "Apply [effect0.status0.power] [valor] to all friendly units on this floor.",
+    "french": "Appliquez [effect0.status0.power] [valor] à toutes les unités alliées de cet étage.",
+    "german": "Verleihe allen verbündeten Einheiten auf diesem Stockwerk [effect0.status0.power] [valor].",
+    "russian": "Наложите [effect0.status0.power] [valor] на все союзные боевые единицы на этом этаже.",
+    "portuguese": "Aplique [effect0.status0.power] [valor] a todas as unidades aliadas neste andar.",
+    "chinese": "对本层所有友方单位施加[effect0.status0.power] [valor]。",
+    "spanish": "Añade [effect0.status0.power] [valor] a todas las unidades aliadas de este piso.",
+    "chinese_traditional": "對本層所有友方單位施加[effect0.status0.power] [valor]。",
+    "korean": "이 층의 모든 아군 유닛에게 [effect0.status0.power] [valor] 부여.",
+    "japanese": "この階の味方ユニット全体に[effect0.status0.power] [valor]を付与。"
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/060389a7b02968451b1fb6e149f1edb18934f82bce345625946ccbcf16f29316.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/BlessArt.png": "assets/060389a7b02968451b1fb6e149f1edb18934f82bce345625946ccbcf16f29316.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Bless",
+        "names": {
+          "english": "Bless",
+          "french": "Bénédiction",
+          "german": "Segen",
+          "russian": "Благословение",
+          "portuguese": "Bênção",
+          "chinese": "祝福",
+          "spanish": "Bendición",
+          "chinese_traditional": "祝福",
+          "korean": "축복",
+          "japanese": "祝福"
+        },
+        "descriptions": {
+          "english": "Apply [effect0.status0.power] [valor] to all friendly units on this floor.",
+          "french": "Appliquez [effect0.status0.power] [valor] à toutes les unités alliées de cet étage.",
+          "german": "Verleihe allen verbündeten Einheiten auf diesem Stockwerk [effect0.status0.power] [valor].",
+          "russian": "Наложите [effect0.status0.power] [valor] на все союзные боевые единицы на этом этаже.",
+          "portuguese": "Aplique [effect0.status0.power] [valor] a todas as unidades aliadas neste andar.",
+          "chinese": "对本层所有友方单位施加[effect0.status0.power] [valor]。",
+          "spanish": "Añade [effect0.status0.power] [valor] a todas las unidades aliadas de este piso.",
+          "chinese_traditional": "對本層所有友方單位施加[effect0.status0.power] [valor]。",
+          "korean": "이 층의 모든 아군 유닛에게 [effect0.status0.power] [valor] 부여.",
+          "japanese": "この階の味方ユニット全体に[effect0.status0.power] [valor]を付与。"
+        },
+        "card_art": "@Bless",
+        "cost": 1,
+        "card_type": "spell",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": true,
+        "effects": [
+          "@BlessValor"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "BlessValor",
+        "applied_vfx": "@SpellBlessHolyRoomVFX",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "valor",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellBlessHolyRoomVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Banished/Benediction/FX_Benediction2.prefab",
+          "asset_guid": "3d548e3361144c5499df32be4489441f"
+        },
+        "spawn_location": "room_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Bless",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Bless"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Bless",
+        "path": "textures/BlessArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_bless.json": "db10f221857b74dc2a96aa937e452b684e94642f12e06803af10a27e727be843"
+  }
+}

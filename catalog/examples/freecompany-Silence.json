@@ -1,0 +1,136 @@
+{
+  "id": "freecompany-Silence",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Silence"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Silence",
+    "french": "Silence",
+    "german": "Stille",
+    "russian": "Безмолвие",
+    "portuguese": "Silêncio",
+    "chinese": "沉默术",
+    "spanish": "Silencio",
+    "chinese_traditional": "沉默術",
+    "korean": "침묵",
+    "japanese": "沈黙"
+  },
+  "descriptions": {
+    "english": "Apply [effect0.status0.power] [mute] to an enemy.",
+    "french": "Appliquez [effect0.status0.power] [mute] à un ennemi.",
+    "german": "Verleihe einem Gegner [effect0.status0.power] [mute].",
+    "russian": "Наложите на врага [effect0.status0.power] [mute].",
+    "portuguese": "Aplique [effect0.status0.power] [mute] a um inimigo.",
+    "chinese": "对一个敌人施加[effect0.status0.power] [mute]。",
+    "spanish": "Añade [effect0.status0.power] [mute] a un enemigo.",
+    "chinese_traditional": "對一個敵人施加[effect0.status0.power] [mute]。",
+    "korean": "적 하나에게 [effect0.status0.power] [mute] 부여.",
+    "japanese": "敵1体に[effect0.status0.power] [mute]を付与。"
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/09b16769914108ae75f48c709366d9467e5b08443005d995c8c3908df160b155.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/SilenceArt.png": "assets/09b16769914108ae75f48c709366d9467e5b08443005d995c8c3908df160b155.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Silence",
+        "names": {
+          "english": "Silence",
+          "french": "Silence",
+          "german": "Stille",
+          "russian": "Безмолвие",
+          "portuguese": "Silêncio",
+          "chinese": "沉默术",
+          "spanish": "Silencio",
+          "chinese_traditional": "沉默術",
+          "korean": "침묵",
+          "japanese": "沈黙"
+        },
+        "descriptions": {
+          "english": "Apply [effect0.status0.power] [mute] to an enemy.",
+          "french": "Appliquez [effect0.status0.power] [mute] à un ennemi.",
+          "german": "Verleihe einem Gegner [effect0.status0.power] [mute].",
+          "russian": "Наложите на врага [effect0.status0.power] [mute].",
+          "portuguese": "Aplique [effect0.status0.power] [mute] a um inimigo.",
+          "chinese": "对一个敌人施加[effect0.status0.power] [mute]。",
+          "spanish": "Añade [effect0.status0.power] [mute] a un enemigo.",
+          "chinese_traditional": "對一個敵人施加[effect0.status0.power] [mute]。",
+          "korean": "적 하나에게 [effect0.status0.power] [mute] 부여.",
+          "japanese": "敵1体に[effect0.status0.power] [mute]を付与。"
+        },
+        "card_art": "@Silence",
+        "cost": 1,
+        "card_type": "spell",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SilenceEnemy"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SilenceEnemy",
+        "applied_vfx": "@SpellSilenceShadowVFX",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "heroes",
+        "param_status_effects": [
+          {
+            "status": "muted",
+            "count": 3
+          }
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellSilenceShadowVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_bottom"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Silence",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Silence"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Silence",
+        "path": "textures/SilenceArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_silence.json": "0eb9defe5a8808782c927c85f5c6b44b29fe3a1601c482ea7c919209e4e895bf"
+  }
+}

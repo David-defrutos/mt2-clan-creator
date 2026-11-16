@@ -1,0 +1,146 @@
+{
+  "id": "succclan-ProfaneCrossbow",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "relics",
+    "id": "ProfaneCrossbow"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Profane Crossbow",
+    "chinese": "亵渎手弩",
+    "spanish": "Ballesta profana",
+    "french": "Arbalète profane",
+    "german": "Unheilige Armbrust",
+    "portuguese": "Besta Profana",
+    "russian": "Нечестивый арбалет",
+    "chinese_traditional": "褻瀆之弩",
+    "japanese": "冒涜の弩",
+    "korean": "불경한 석궁"
+  },
+  "descriptions": {
+    "english": "At the start of each turn, deal 30 damage to the front enemy unit on each floor.",
+    "chinese": "每回合开始时，对每层最前方的敌方单位造成 30 点伤害。",
+    "spanish": "Al comienzo de cada turno, inflige 30 de daño a la unidad enemiga delantera de cada piso.",
+    "french": "Au début de chaque tour, inflige 30 dégâts à l'unité ennemie en première ligne de chaque étage.",
+    "german": "Fügt zu Beginn jedes Zuges der vordersten feindlichen Einheit auf jeder Etage 30 Schaden zu.",
+    "portuguese": "No início de cada turno, causa 30 de dano à unidade inimiga da frente de cada andar.",
+    "russian": "В начале каждого хода наносит 30 урона переднему врагу на каждом этаже.",
+    "chinese_traditional": "每回合開始時，對每個樓層最前方的敵方單位造成 30 點傷害。",
+    "japanese": "各ターン開始時、各階の最前列の敵に30ダメージを与える。",
+    "korean": "매 턴 시작 시 각 층의 맨 앞 적에게 피해를 30 줍니다."
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/b2b277fc89c5b4b5fa09ef92a278d1a0c31ea452989c76ac5ecc887ce027a5b4.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/RelicIcons/ProfaneCrossbowIconSmall.png": "assets/c907ab3a8f8dc83e817da67bd28f29873388e23c075646ed0a23a40cb4a28e08.png",
+    "textures/RelicIcons/ProfaneCrossbowIcon.png": "assets/b2b277fc89c5b4b5fa09ef92a278d1a0c31ea452989c76ac5ecc887ce027a5b4.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "ProfaneCrossbow",
+        "type": "collectable",
+        "names": {
+          "english": "Profane Crossbow",
+          "chinese": "亵渎手弩",
+          "spanish": "Ballesta profana",
+          "french": "Arbalète profane",
+          "german": "Unheilige Armbrust",
+          "portuguese": "Besta Profana",
+          "russian": "Нечестивый арбалет",
+          "chinese_traditional": "褻瀆之弩",
+          "japanese": "冒涜の弩",
+          "korean": "불경한 석궁"
+        },
+        "descriptions": {
+          "english": "At the start of each turn, deal 30 damage to the front enemy unit on each floor.",
+          "chinese": "每回合开始时，对每层最前方的敌方单位造成 30 点伤害。",
+          "spanish": "Al comienzo de cada turno, inflige 30 de daño a la unidad enemiga delantera de cada piso.",
+          "french": "Au début de chaque tour, inflige 30 dégâts à l'unité ennemie en première ligne de chaque étage.",
+          "german": "Fügt zu Beginn jedes Zuges der vordersten feindlichen Einheit auf jeder Etage 30 Schaden zu.",
+          "portuguese": "No início de cada turno, causa 30 de dano à unidade inimiga da frente de cada andar.",
+          "russian": "В начале каждого хода наносит 30 урона переднему врагу на каждом этаже.",
+          "chinese_traditional": "每回合開始時，對每個樓層最前方的敵方單位造成 30 點傷害。",
+          "japanese": "各ターン開始時、各階の最前列の敵に30ダメージを与える。",
+          "korean": "매 턴 시작 시 각 층의 맨 앞 적에게 피해를 30 줍니다."
+        },
+        "disallow_in_deployment": false,
+        "relic_effects": [
+          "@ProfaneCrossbowEffect"
+        ],
+        "icon": "@ProfaneCrossbowIcon",
+        "icon_small": "@ProfaneCrossbowIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "class": "@ClassSuccubus",
+              "pools": [
+                "MegaRelicPool"
+              ],
+              "rarity": "uncommon",
+              "unlock_level": 0
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ProfaneCrossbowIconSmall",
+        "path": "textures/RelicIcons/ProfaneCrossbowIconSmall.png"
+      },
+      {
+        "id": "ProfaneCrossbowIcon",
+        "path": "textures/RelicIcons/ProfaneCrossbowIcon.png"
+      }
+    ],
+    "relic_effects": [
+      {
+        "id": "ProfaneCrossbowEffect",
+        "name": "RelicEffectAddEffectStartOfTurn",
+        "param_int": 1,
+        "param_effects": [
+          "@ProfaneCrossbowDamage"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "ProfaneCrossbowDamage",
+        "applied_vfx": "@SuccFXShadowImpact",
+        "name": "CardEffectDamage",
+        "target_mode": "front_in_room",
+        "target_team": "heroes",
+        "param_int": 30
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_ProfaneCrossbow.json": "ef38f64cb29310b23486fd68f69ad327056cbc21dc2bdc4798bc53302f20856e",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

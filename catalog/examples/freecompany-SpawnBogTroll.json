@@ -1,0 +1,227 @@
+{
+  "id": "freecompany-SpawnBogTroll",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnBogTroll"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Bog Troll",
+    "french": "Troll des marais",
+    "german": "Sumpftroll",
+    "russian": "Болотный тролль",
+    "portuguese": "Troll do Pântano",
+    "chinese": "沼泽巨魔",
+    "spanish": "Trol del pantano",
+    "chinese_traditional": "沼澤巨魔",
+    "korean": "늪 트롤",
+    "japanese": "沼地のトロール"
+  },
+  "descriptions": {},
+  "cost": 6,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": 50,
+  "attack": 40,
+  "size": 4,
+  "picture": "assets/96cbf01ba74fb9baa3b20791297fa107fbfa24d61d4d55d9413a737aace4156a.png",
+  "characterPicture": "assets/845266eac57c0a4b87e32bdc54269115f662aa125d7827933390f28df26c11d5.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/BogTrollCharacterArt.png": "assets/845266eac57c0a4b87e32bdc54269115f662aa125d7827933390f28df26c11d5.png",
+    "textures/BogTrollArt.png": "assets/96cbf01ba74fb9baa3b20791297fa107fbfa24d61d4d55d9413a737aace4156a.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnBogTroll",
+        "names": {
+          "english": "Bog Troll",
+          "french": "Troll des marais",
+          "german": "Sumpftroll",
+          "russian": "Болотный тролль",
+          "portuguese": "Troll do Pântano",
+          "chinese": "沼泽巨魔",
+          "spanish": "Trol del pantano",
+          "chinese_traditional": "沼澤巨魔",
+          "korean": "늪 트롤",
+          "japanese": "沼地のトロール"
+        },
+        "card_art": "@BogTroll",
+        "cost": 6,
+        "card_type": "monster",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnBogTrollEffect"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnBogTrollEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@BogTroll"
+      },
+      {
+        "id": "BogTrollRoot",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "last_attacked_character",
+        "target_team": "heroes",
+        "param_status_effects": [
+          {
+            "status": "rooted",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "BogTroll",
+        "names": {
+          "english": "Bog Troll",
+          "french": "Troll des marais",
+          "german": "Sumpftroll",
+          "russian": "Болотный тролль",
+          "portuguese": "Troll do Pântano",
+          "chinese": "沼泽巨魔",
+          "spanish": "Trol del pantano",
+          "chinese_traditional": "沼澤巨魔",
+          "korean": "늪 트롤",
+          "japanese": "沼地のトロール"
+        },
+        "character_art": "@BogTrollCharacterArt",
+        "size": 4,
+        "attack_damage": 40,
+        "health": 50,
+        "subtypes": [
+          "@Sub_Barbarian",
+          "@Sub_Troll"
+        ],
+        "starting_status_effects": [
+          {
+            "status": "regen",
+            "count": 10
+          }
+        ],
+        "triggers": [
+          {
+            "id": "@BogTrollStrike"
+          }
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "BogTrollStrike",
+        "trigger": "on_attacking",
+        "descriptions": {
+          "english": "Apply [effect0.status0.power] [rooted] to the unit it attacks.",
+          "french": "Applique [effect0.status0.power] [rooted] à l’unité qu’elle attaque.",
+          "german": "Verleiht der angegriffenen Einheit [effect0.status0.power] [rooted].",
+          "russian": "Накладывает [effect0.status0.power] [rooted] на атакуемую боевую единицу.",
+          "portuguese": "Aplica [effect0.status0.power] [rooted] à unidade que ataca.",
+          "chinese": "对其攻击的单位施加[effect0.status0.power] [rooted]。",
+          "spanish": "Añade [effect0.status0.power] [rooted] a la unidad a la que ataca.",
+          "chinese_traditional": "對其攻擊的單位施加[effect0.status0.power] [rooted]。",
+          "korean": "공격한 유닛에게 [effect0.status0.power] [rooted] 부여.",
+          "japanese": "攻撃対象のユニットに[effect0.status0.power] [rooted]を付与。"
+        },
+        "effects": [
+          "@BogTrollRoot"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Troll",
+        "names": {
+          "english": "Troll",
+          "french": "Troll",
+          "german": "Troll",
+          "russian": "Тролль",
+          "portuguese": "Troll",
+          "chinese": "巨魔",
+          "spanish": "Trol",
+          "chinese_traditional": "巨魔",
+          "korean": "트롤",
+          "japanese": "トロール"
+        }
+      },
+      {
+        "id": "Sub_Barbarian",
+        "names": {
+          "english": "Barbarian",
+          "french": "Barbare",
+          "german": "Barbar",
+          "russian": "Варвар",
+          "portuguese": "Bárbaro",
+          "chinese": "野蛮人",
+          "spanish": "Bárbaro",
+          "chinese_traditional": "野蠻人",
+          "korean": "야만전사",
+          "japanese": "バーバリアン"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "BogTrollCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@BogTrollCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.713,
+                "z": 0
+              },
+              "scale": {
+                "x": 1.25,
+                "y": 1.25,
+                "z": 1
+              },
+              "offset": {
+                "y": -0.61
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "BogTroll",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@BogTroll"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "BogTrollCharacterArt",
+        "path": "textures/BogTrollCharacterArt.png"
+      },
+      {
+        "id": "BogTroll",
+        "path": "textures/BogTrollArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_troll.json": "0101a4aa26a122261bbaf962f12e215a785e10ae1f38def3dd9539cac8ec8d66",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "id": "succclan-CurseguardSlab",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "relics",
+    "id": "CurseguardSlab"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Curseguard Slab",
+    "spanish": "Losa de guardia maldita",
+    "chinese": "咒卫石板",
+    "chinese_traditional": "咒衛石板",
+    "french": "Dalle de garde maudite",
+    "german": "Fluchwachtplatte",
+    "portuguese": "Placa da Guarda Maldita",
+    "russian": "Плита проклятого стража",
+    "japanese": "呪護の原石",
+    "korean": "저주 수호 서판"
+  },
+  "descriptions": {
+    "english": "<b>Accursed</b>: Gain [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power].",
+    "spanish": "<b>Maldito</b>: Añade [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power].",
+    "chinese": "<b>被咒</b>: 获得[armor] [effect0.upgrade.charactertrigger0.effect0.status0.power]。",
+    "chinese_traditional": "<b>詛咒</b>: 獲得[armor] [effect0.upgrade.charactertrigger0.effect0.status0.power]。",
+    "french": "<b>Maudit</b>: Gagne [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power].",
+    "german": "<b>Verflucht</b>: Erhält [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power].",
+    "portuguese": "<b>Amaldiçoado</b>: Ganha [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power].",
+    "russian": "<b>Проклятие</b>: Получает [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power].",
+    "japanese": "<b>呪い</b>: [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power]を得る。",
+    "korean": "<b>저주</b>: [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power] 획득."
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/7ef4daa52f13c8b596e8a9bb8d83a6cf2cc658dce38d5ce434cd2bf6b834e486.png",
+  "characterPicture": null,
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "character_trigger_types",
+      "id": "Accursed",
+      "names": {
+        "english": "Accursed",
+        "chinese": "被咒"
+      },
+      "descriptions": {
+        "english": "Triggers when, during your turn, a <b>Blight</b> or [junk] is played or discarded on the floor.",
+        "chinese": "回合结束前在本层打出或舍弃[blight]牌或[junk]牌时触发。"
+      },
+      "file": "packages/Conductor-Conductor/json/triggers.json",
+      "sha256": "0a0e9419dfeeb57f0e0917c7d1eddf6483d0cb58e7b40188c57b4ab2ecae86b5"
+    }
+  ],
+  "assets": {
+    "textures/RelicIcons/CurseguardSlabIconSmall.png": "assets/aa3d41a987b220f17ee0abd7f8036a80f98d6c36dd20e1e38c66e09d08938883.png",
+    "textures/RelicIcons/CurseguardSlabIcon.png": "assets/7ef4daa52f13c8b596e8a9bb8d83a6cf2cc658dce38d5ce434cd2bf6b834e486.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "CurseguardSlab",
+        "type": "enhancer",
+        "extensions": [
+          {
+            "enhancer": {
+              "rarity": "common",
+              "class": "@ClassSuccubus",
+              "num_cards_to_show_in_upgrade_screen": 0,
+              "pools": [
+                "SoulSavior_UnitUpgradePoolCommon"
+              ]
+            }
+          }
+        ],
+        "names": {
+          "english": "Curseguard Slab",
+          "spanish": "Losa de guardia maldita",
+          "chinese": "咒卫石板",
+          "chinese_traditional": "咒衛石板",
+          "french": "Dalle de garde maudite",
+          "german": "Fluchwachtplatte",
+          "portuguese": "Placa da Guarda Maldita",
+          "russian": "Плита проклятого стража",
+          "japanese": "呪護の原石",
+          "korean": "저주 수호 서판"
+        },
+        "descriptions": {
+          "english": "<b>Accursed</b>: Gain [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power].",
+          "spanish": "<b>Maldito</b>: Añade [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power].",
+          "chinese": "<b>被咒</b>: 获得[armor] [effect0.upgrade.charactertrigger0.effect0.status0.power]。",
+          "chinese_traditional": "<b>詛咒</b>: 獲得[armor] [effect0.upgrade.charactertrigger0.effect0.status0.power]。",
+          "french": "<b>Maudit</b>: Gagne [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power].",
+          "german": "<b>Verflucht</b>: Erhält [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power].",
+          "portuguese": "<b>Amaldiçoado</b>: Ganha [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power].",
+          "russian": "<b>Проклятие</b>: Получает [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power].",
+          "japanese": "<b>呪い</b>: [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power]を得る。",
+          "korean": "<b>저주</b>: [armor] [effect0.upgrade.charactertrigger0.effect0.status0.power] 획득."
+        },
+        "icon": "@CurseguardSlabIcon",
+        "icon_small": "@CurseguardSlabIconSmall",
+        "relic_effects": [
+          "@CurseguardSlabApply"
+        ]
+      }
+    ],
+    "relic_effects": [
+      {
+        "id": "CurseguardSlabApply",
+        "name": "RelicEffectCardUpgrade",
+        "param_card_type": "monster",
+        "param_upgrade": "@CurseguardSlabUpgrade"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "CurseguardSlabUpgrade",
+        "icon": "@CurseguardSlabIconSmall",
+        "hide_icon_on_card": false,
+        "titles": {
+          "english": "Curseguard Slab",
+          "spanish": "Losa de guardia maldita",
+          "chinese": "咒卫石板",
+          "chinese_traditional": "咒衛石板",
+          "french": "Dalle de garde maudite",
+          "german": "Fluchwachtplatte",
+          "portuguese": "Placa da Guarda Maldita",
+          "russian": "Плита проклятого стража",
+          "japanese": "呪護の原石",
+          "korean": "저주 수호 서판"
+        },
+        "trigger_upgrades": [
+          "@CurseguardSlabAccursed"
+        ],
+        "filters": [
+          "ExcludeEelGorgon"
+        ],
+        "descriptions": {
+          "english": "<b>Accursed</b>: Gain [armor] [charactertrigger0.effect0.status0.power].",
+          "spanish": "<b>Maldito</b>: Añade [armor] [charactertrigger0.effect0.status0.power].",
+          "chinese": "<b>被咒</b>: 获得[armor] [charactertrigger0.effect0.status0.power]。",
+          "chinese_traditional": "<b>詛咒</b>: 獲得[armor] [charactertrigger0.effect0.status0.power]。",
+          "french": "<b>Maudit</b>: Gagne [armor] [charactertrigger0.effect0.status0.power].",
+          "german": "<b>Verflucht</b>: Erhält [armor] [charactertrigger0.effect0.status0.power].",
+          "portuguese": "<b>Amaldiçoado</b>: Ganha [armor] [charactertrigger0.effect0.status0.power].",
+          "russian": "<b>Проклятие</b>: Получает [armor] [charactertrigger0.effect0.status0.power].",
+          "japanese": "<b>呪い</b>: [armor] [charactertrigger0.effect0.status0.power]を得る。",
+          "korean": "<b>저주</b>: [armor] [charactertrigger0.effect0.status0.power] 획득."
+        }
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "CurseguardSlabAccursed",
+        "trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "descriptions": {
+          "english": "Gain [armor] [effect0.status0.power].",
+          "spanish": "Añade [armor] [effect0.status0.power].",
+          "chinese": "获得[armor] [effect0.status0.power]。",
+          "chinese_traditional": "獲得[armor] [effect0.status0.power]。",
+          "french": "Gagne [armor] [effect0.status0.power].",
+          "german": "Erhält [armor] [effect0.status0.power].",
+          "portuguese": "Ganha [armor] [effect0.status0.power].",
+          "russian": "Получает [armor] [effect0.status0.power].",
+          "japanese": "[armor] [effect0.status0.power]を得る。",
+          "korean": "[armor] [effect0.status0.power] 획득."
+        },
+        "effects": [
+          "@CurseguardSlabArmor"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "CurseguardSlabArmor",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "armor",
+            "count": 10
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "CurseguardSlabIconSmall",
+        "path": "textures/RelicIcons/CurseguardSlabIconSmall.png"
+      },
+      {
+        "id": "CurseguardSlabIcon",
+        "path": "textures/RelicIcons/CurseguardSlabIcon.png"
+      }
+    ]
+  },
+  "files": {
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d"
+  }
+}

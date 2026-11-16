@@ -1,0 +1,152 @@
+{
+  "id": "freecompany-PaidInFull",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "PaidInFull"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Paid in Full",
+    "french": "Payé en totalité",
+    "german": "Vollständig bezahlt",
+    "russian": "Полный расчёт",
+    "portuguese": "Pago por Inteiro",
+    "chinese": "全额付清",
+    "spanish": "Pagado por completo",
+    "chinese_traditional": "全額付清",
+    "korean": "전액 지급",
+    "japanese": "全額支払い"
+  },
+  "descriptions": {
+    "english": "A friendly unit gains <b>1</b> [attack] for every [effect0.power] gold you have spent this run.",
+    "french": "Une unité alliée gagne <b>1</b> [attack] par tranche de [effect0.power] pièces d’or dépensée durant cette partie.",
+    "german": "Eine verbündete Einheit erhält <b>1</b> [attack] pro [effect0.power] Gold, die du in diesem Lauf ausgegeben hast.",
+    "russian": "Союзная боевая единица получает <b>1</b> [attack] за каждые [effect0.power] золота, потраченные вами за этот забег.",
+    "portuguese": "Uma unidade aliada ganha <b>1</b> [attack] por cada [effect0.power] de ouro que você gastou nesta partida.",
+    "chinese": "本次旅程每花费[effect0.power]金币，一个友方单位就获得<b>1</b> [attack]。",
+    "spanish": "Una unidad aliada gana <b>1</b> [attack] por cada [effect0.power] de oro que has gastado en esta partida.",
+    "chinese_traditional": "本次旅程每花費[effect0.power]金幣，一個友方單位就獲得<b>1</b> [attack]。",
+    "korean": "이번 여정에서 사용한 [effect0.power]골드마다 아군 유닛 하나가 <b>1</b> [attack] 획득.",
+    "japanese": "このプレイ中に消費した[effect0.power]ゴールドにつき、味方ユニット1体が<b>1</b> [attack]を得る。"
+  },
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/1a1307888f9cd313774becbdd65422351a6c0c07345928870bf6653afeaad167.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/PaidInFullArt.png": "assets/1a1307888f9cd313774becbdd65422351a6c0c07345928870bf6653afeaad167.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "PaidInFull",
+        "names": {
+          "english": "Paid in Full",
+          "french": "Payé en totalité",
+          "german": "Vollständig bezahlt",
+          "russian": "Полный расчёт",
+          "portuguese": "Pago por Inteiro",
+          "chinese": "全额付清",
+          "spanish": "Pagado por completo",
+          "chinese_traditional": "全額付清",
+          "korean": "전액 지급",
+          "japanese": "全額支払い"
+        },
+        "descriptions": {
+          "english": "A friendly unit gains <b>1</b> [attack] for every [effect0.power] gold you have spent this run.",
+          "french": "Une unité alliée gagne <b>1</b> [attack] par tranche de [effect0.power] pièces d’or dépensée durant cette partie.",
+          "german": "Eine verbündete Einheit erhält <b>1</b> [attack] pro [effect0.power] Gold, die du in diesem Lauf ausgegeben hast.",
+          "russian": "Союзная боевая единица получает <b>1</b> [attack] за каждые [effect0.power] золота, потраченные вами за этот забег.",
+          "portuguese": "Uma unidade aliada ganha <b>1</b> [attack] por cada [effect0.power] de ouro que você gastou nesta partida.",
+          "chinese": "本次旅程每花费[effect0.power]金币，一个友方单位就获得<b>1</b> [attack]。",
+          "spanish": "Una unidad aliada gana <b>1</b> [attack] por cada [effect0.power] de oro que has gastado en esta partida.",
+          "chinese_traditional": "本次旅程每花費[effect0.power]金幣，一個友方單位就獲得<b>1</b> [attack]。",
+          "korean": "이번 여정에서 사용한 [effect0.power]골드마다 아군 유닛 하나가 <b>1</b> [attack] 획득.",
+          "japanese": "このプレイ中に消費した[effect0.power]ゴールドにつき、味方ユニット1体が<b>1</b> [attack]を得る。"
+        },
+        "card_art": "@PaidInFull",
+        "cost": 2,
+        "card_type": "spell",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@PaidInFullUpgrade"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "PaidInFullUpgrade",
+        "applied_vfx": "@SpellPaidInFullBuffVFX",
+        "name": "CardEffectAddCardUpgradeToUnitPerGoldSpent",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_int": 50,
+        "param_upgrade": "@PaidInFullEdge"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "PaidInFullEdge",
+        "titles": {
+          "english": "Paid in Full",
+          "french": "Payé en totalité",
+          "german": "Vollständig bezahlt",
+          "russian": "Полный расчёт",
+          "portuguese": "Pago por Inteiro",
+          "chinese": "全额付清",
+          "spanish": "Pagado por completo",
+          "chinese_traditional": "全額付清",
+          "korean": "전액 지급",
+          "japanese": "全額支払い"
+        },
+        "bonus_damage": 1,
+        "hide_icon_on_card": true,
+        "icon": "@PaidInFull"
+      }
+    ],
+    "sprites": [
+      {
+        "id": "PaidInFull",
+        "path": "textures/PaidInFullArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellPaidInFullBuffVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "PaidInFull",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@PaidInFull"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_paid_in_full.json": "419846d65a782602411f509acef563178140f28e4836fc63acf848b1343f5e4e"
+  }
+}

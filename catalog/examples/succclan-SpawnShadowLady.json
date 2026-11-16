@@ -1,0 +1,176 @@
+{
+  "id": "succclan-SpawnShadowLady",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "SpawnShadowLady"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Shadow Lady",
+    "chinese": "匿影女士",
+    "spanish": "Dama de las sombras",
+    "french": "Dame des ombres",
+    "german": "Schattendame",
+    "portuguese": "Dama das Sombras",
+    "russian": "Владычица теней",
+    "chinese_traditional": "暗影女士",
+    "japanese": "影の貴婦人",
+    "korean": "그림자 여군주"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 30,
+  "attack": 10,
+  "size": 2,
+  "picture": "assets/1bcf94aadb2b46a54ce8ba4c480695de3b5c4a98cdd56dd87fbd1ba248b18a64.png",
+  "characterPicture": "assets/e1be8935f0112b5ad280f31c47cb34e628c9dd8aabfc20b79530315468ce00fa.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ShadowLadyCharacterArt.png": "assets/e1be8935f0112b5ad280f31c47cb34e628c9dd8aabfc20b79530315468ce00fa.png",
+    "textures/ShadowLadyCardArt.png": "assets/1bcf94aadb2b46a54ce8ba4c480695de3b5c4a98cdd56dd87fbd1ba248b18a64.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnShadowLady",
+        "names": {
+          "english": "Shadow Lady",
+          "chinese": "匿影女士",
+          "spanish": "Dama de las sombras",
+          "french": "Dame des ombres",
+          "german": "Schattendame",
+          "portuguese": "Dama das Sombras",
+          "russian": "Владычица теней",
+          "chinese_traditional": "暗影女士",
+          "japanese": "影の貴婦人",
+          "korean": "그림자 여군주"
+        },
+        "card_art": "@ShadowLadyCardArt",
+        "cost": 0,
+        "card_type": "monster",
+        "rarity": "champion",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnShadowLady"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnShadowLady",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@ShadowLady"
+      }
+    ],
+    "characters": [
+      {
+        "id": "ShadowLady",
+        "attack_vfx": "@SuccFXBladeAttack",
+        "impact_vfx": "@SuccFXShadowImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "names": {
+          "english": "Shadow Lady",
+          "chinese": "匿影女士",
+          "spanish": "Dama de las sombras",
+          "french": "Dame des ombres",
+          "german": "Schattendame",
+          "portuguese": "Dama das Sombras",
+          "russian": "Владычица теней",
+          "chinese_traditional": "暗影女士",
+          "japanese": "影の貴婦人",
+          "korean": "그림자 여군주"
+        },
+        "character_art": "@ShadowLadyCharacterArt",
+        "size": 2,
+        "attack_damage": 10,
+        "health": 30,
+        "subtypes": [
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+        ]
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ShadowLadyCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@ShadowLadyCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.39,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "ShadowLadyCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ShadowLadyCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ShadowLadyCharacterArt",
+        "path": "textures/ShadowLadyCharacterArt.png"
+      },
+      {
+        "id": "ShadowLadyCardArt",
+        "path": "textures/ShadowLadyCardArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXBladeAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/DeathsDancer/FX_DeathsDancerAttack.prefab",
+          "asset_guid": "7b4040ba5c134c84eaeb246a77b0a401"
+        },
+        "spawn_location": "character_center"
+      }
+    ]
+  },
+  "files": {
+    "json/champions/champion_ShadowLady.json": "48f05c11e190a258521c92fa9cd7b5635478748ce94ddadaee9dcb879e36dbda",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

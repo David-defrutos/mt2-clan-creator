@@ -1,0 +1,186 @@
+{
+  "id": "freecompany-SpawnSellswordScout",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnSellswordScout"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Sellsword Scout",
+    "french": "Éclaireur mercenaire",
+    "german": "Söldnerspäher",
+    "russian": "Наёмный разведчик",
+    "portuguese": "Batedor Mercenário",
+    "chinese": "佣兵斥候",
+    "spanish": "Explorador mercenario",
+    "chinese_traditional": "傭兵斥候",
+    "korean": "용병 정찰병",
+    "japanese": "傭兵斥候"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": 8,
+  "attack": 4,
+  "size": 1,
+  "picture": "assets/ba6bd5011af20854928efda7f81a867c71fb5e83e35e78ea13a8ccb9a6b8c5ba.png",
+  "characterPicture": "assets/facfbf052d9018d84e3b215395d36fd03f338d5b8d7772c598237c0b7319f603.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/SellswordScoutCharacterArt.png": "assets/facfbf052d9018d84e3b215395d36fd03f338d5b8d7772c598237c0b7319f603.png",
+    "textures/SellswordScoutCardArt.png": "assets/ba6bd5011af20854928efda7f81a867c71fb5e83e35e78ea13a8ccb9a6b8c5ba.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnSellswordScout",
+        "names": {
+          "english": "Sellsword Scout",
+          "french": "Éclaireur mercenaire",
+          "german": "Söldnerspäher",
+          "russian": "Наёмный разведчик",
+          "portuguese": "Batedor Mercenário",
+          "chinese": "佣兵斥候",
+          "spanish": "Explorador mercenario",
+          "chinese_traditional": "傭兵斥候",
+          "korean": "용병 정찰병",
+          "japanese": "傭兵斥候"
+        },
+        "card_art": "@SellswordScout",
+        "cost": 1,
+        "card_type": "monster",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnSellswordScoutEffect"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnSellswordScoutEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@SellswordScout"
+      }
+    ],
+    "characters": [
+      {
+        "id": "SellswordScout",
+        "names": {
+          "english": "Sellsword Scout",
+          "french": "Éclaireur mercenaire",
+          "german": "Söldnerspäher",
+          "russian": "Наёмный разведчик",
+          "portuguese": "Batedor Mercenário",
+          "chinese": "佣兵斥候",
+          "spanish": "Explorador mercenario",
+          "chinese_traditional": "傭兵斥候",
+          "korean": "용병 정찰병",
+          "japanese": "傭兵斥候"
+        },
+        "character_art": "@SellswordScoutCharacterArt",
+        "size": 1,
+        "attack_damage": 4,
+        "health": 8,
+        "subtypes": [
+          "@Sub_Rogue",
+          "@Sub_Goblin"
+        ],
+        "starting_status_effects": [
+          {
+            "status": "stealth",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Rogue",
+        "names": {
+          "english": "Rogue",
+          "french": "Voleur",
+          "german": "Schurke",
+          "russian": "Плут",
+          "portuguese": "Ladino",
+          "chinese": "盗贼",
+          "spanish": "Pícaro",
+          "chinese_traditional": "盜賊",
+          "korean": "도적",
+          "japanese": "ローグ"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "SellswordScoutCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@SellswordScoutCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.733,
+                "z": 0
+              },
+              "scale": {
+                "x": 0.72,
+                "y": 0.72,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "SellswordScout",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@SellswordScout"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "SellswordScoutCharacterArt",
+        "path": "textures/SellswordScoutCharacterArt.png"
+      },
+      {
+        "id": "SellswordScout",
+        "path": "textures/SellswordScoutCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_sellsword_scout.json": "7a2551a96f2ff1e3a81f81f44c91389b03beb73f3e0a1c9b9782feecfc096e36",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

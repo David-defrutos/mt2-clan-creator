@@ -1,0 +1,248 @@
+{
+  "id": "freecompany-SpawnWarTroll",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnWarTroll"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "War Troll",
+    "french": "Troll de guerre",
+    "german": "Kriegstroll",
+    "russian": "Боевой тролль",
+    "portuguese": "Troll de Guerra",
+    "chinese": "战争巨魔",
+    "spanish": "Trol de guerra",
+    "chinese_traditional": "戰爭巨魔",
+    "korean": "전쟁 트롤",
+    "japanese": "戦のトロール"
+  },
+  "descriptions": {
+    "english": "Enters with +<b>3</b> [attack] and +<b>3</b> [health] for each <b>Goblin</b> in your deck.",
+    "french": "Entre en jeu avec +<b>3</b> [attack] et +<b>3</b> [health] par <b>Gobelin</b> dans votre deck.",
+    "german": "Betritt das Spiel mit +<b>3</b> [attack] und +<b>3</b> [health] pro <b>Goblin</b> in deinem Deck.",
+    "russian": "Выходит с +<b>3</b> [attack] и +<b>3</b> [health] за каждого <b>Гоблин</b> в вашей колоде.",
+    "portuguese": "Entra com +<b>3</b> [attack] e +<b>3</b> [health] por cada <b>Goblin</b> no seu deck.",
+    "chinese": "你的牌组中每有一个<b>地精</b>，入场时获得+<b>3</b> [attack]和+<b>3</b> [health]。",
+    "spanish": "Entra con +<b>3</b> [attack] y +<b>3</b> [health] por cada <b>Goblin</b> en tu mazo.",
+    "chinese_traditional": "你的牌組中每有一個<b>哥布林</b>，入場時獲得+<b>3</b> [attack]和+<b>3</b> [health]。",
+    "korean": "덱의 <b>고블린</b> 하나마다 +<b>3</b> [attack] 및 +<b>3</b> [health]을 얻고 등장.",
+    "japanese": "デッキ内の<b>ゴブリン</b>1体につき+<b>3</b> [attack]と+<b>3</b> [health]を持って登場。"
+  },
+  "cost": 6,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": 50,
+  "attack": 40,
+  "size": 4,
+  "picture": "assets/a8995132bd069ca182dda4562af8a41acaff92400bb29f81d6e14c20fdf9b495.png",
+  "characterPicture": "assets/ee245b13494eb6565407699c0e115bf620733ded11ded1e8489bc92276142331.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/WarTrollCharacterArt.png": "assets/ee245b13494eb6565407699c0e115bf620733ded11ded1e8489bc92276142331.png",
+    "textures/WarTrollArt.png": "assets/a8995132bd069ca182dda4562af8a41acaff92400bb29f81d6e14c20fdf9b495.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnWarTroll",
+        "names": {
+          "english": "War Troll",
+          "french": "Troll de guerre",
+          "german": "Kriegstroll",
+          "russian": "Боевой тролль",
+          "portuguese": "Troll de Guerra",
+          "chinese": "战争巨魔",
+          "spanish": "Trol de guerra",
+          "chinese_traditional": "戰爭巨魔",
+          "korean": "전쟁 트롤",
+          "japanese": "戦のトロール"
+        },
+        "card_art": "@WarTroll",
+        "cost": 6,
+        "card_type": "monster",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnWarTrollEffect"
+        ],
+        "traits": [
+          "@WarTrollScaleAttack",
+          "@WarTrollScaleHealth"
+        ],
+        "descriptions": {
+          "english": "Enters with +<b>3</b> [attack] and +<b>3</b> [health] for each <b>Goblin</b> in your deck.",
+          "french": "Entre en jeu avec +<b>3</b> [attack] et +<b>3</b> [health] par <b>Gobelin</b> dans votre deck.",
+          "german": "Betritt das Spiel mit +<b>3</b> [attack] und +<b>3</b> [health] pro <b>Goblin</b> in deinem Deck.",
+          "russian": "Выходит с +<b>3</b> [attack] и +<b>3</b> [health] за каждого <b>Гоблин</b> в вашей колоде.",
+          "portuguese": "Entra com +<b>3</b> [attack] e +<b>3</b> [health] por cada <b>Goblin</b> no seu deck.",
+          "chinese": "你的牌组中每有一个<b>地精</b>，入场时获得+<b>3</b> [attack]和+<b>3</b> [health]。",
+          "spanish": "Entra con +<b>3</b> [attack] y +<b>3</b> [health] por cada <b>Goblin</b> en tu mazo.",
+          "chinese_traditional": "你的牌組中每有一個<b>哥布林</b>，入場時獲得+<b>3</b> [attack]和+<b>3</b> [health]。",
+          "korean": "덱의 <b>고블린</b> 하나마다 +<b>3</b> [attack] 및 +<b>3</b> [health]을 얻고 등장.",
+          "japanese": "デッキ内の<b>ゴブリン</b>1体につき+<b>3</b> [attack]と+<b>3</b> [health]を持って登場。"
+        }
+      }
+    ],
+    "traits": [
+      {
+        "id": "WarTrollScaleHealth",
+        "name": "CardTraitScalingUpgradeUnitHealth",
+        "param_tracked_value": "subtype_in_deck",
+        "param_subtype": "@Sub_Goblin",
+        "param_int": 3
+      },
+      {
+        "id": "WarTrollScaleAttack",
+        "name": "CardTraitScalingUpgradeUnitAttack",
+        "param_tracked_value": "subtype_in_deck",
+        "param_subtype": "@Sub_Goblin",
+        "param_int": 3
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Troll",
+        "names": {
+          "english": "Troll",
+          "french": "Troll",
+          "german": "Troll",
+          "russian": "Тролль",
+          "portuguese": "Troll",
+          "chinese": "巨魔",
+          "spanish": "Trol",
+          "chinese_traditional": "巨魔",
+          "korean": "트롤",
+          "japanese": "トロール"
+        }
+      },
+      {
+        "id": "Sub_Barbarian",
+        "names": {
+          "english": "Barbarian",
+          "french": "Barbare",
+          "german": "Barbar",
+          "russian": "Варвар",
+          "portuguese": "Bárbaro",
+          "chinese": "野蛮人",
+          "spanish": "Bárbaro",
+          "chinese_traditional": "野蠻人",
+          "korean": "야만전사",
+          "japanese": "バーバリアン"
+        }
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnWarTrollEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@WarTroll"
+      }
+    ],
+    "characters": [
+      {
+        "id": "WarTroll",
+        "names": {
+          "english": "War Troll",
+          "french": "Troll de guerre",
+          "german": "Kriegstroll",
+          "russian": "Боевой тролль",
+          "portuguese": "Troll de Guerra",
+          "chinese": "战争巨魔",
+          "spanish": "Trol de guerra",
+          "chinese_traditional": "戰爭巨魔",
+          "korean": "전쟁 트롤",
+          "japanese": "戦のトロール"
+        },
+        "character_art": "@WarTrollCharacterArt",
+        "size": 4,
+        "attack_damage": 40,
+        "health": 50,
+        "subtypes": [
+          "@Sub_Barbarian",
+          "@Sub_Troll"
+        ],
+        "starting_status_effects": [
+          {
+            "status": "regen",
+            "count": 10
+          }
+        ],
+        "triggers": []
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WarTrollCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WarTrollCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.713,
+                "z": 0
+              },
+              "scale": {
+                "x": 1.25,
+                "y": 1.25,
+                "z": 1
+              },
+              "offset": {
+                "y": -0.2
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WarTroll",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WarTroll"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WarTrollCharacterArt",
+        "path": "textures/WarTrollCharacterArt.png"
+      },
+      {
+        "id": "WarTroll",
+        "path": "textures/WarTrollArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_troll.json": "0101a4aa26a122261bbaf962f12e215a785e10ae1f38def3dd9539cac8ec8d66",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "id": "succclan-SpawnIncubusButcher",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "SpawnIncubusButcher"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Incubus Butcher",
+    "chinese": "魇魔刽子手",
+    "spanish": "Carnicero íncubo",
+    "french": "Boucher incube",
+    "german": "Inkubus-Schlächter",
+    "portuguese": "Açougueiro Íncubo",
+    "russian": "Мясник-инкуб",
+    "chinese_traditional": "夢魔屠夫",
+    "japanese": "インキュバスの屠殺者",
+    "korean": "인큐버스 도살자"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 20,
+  "attack": 5,
+  "size": 2,
+  "picture": "assets/b2e9e4e7aa105024cf9e6db76ce9aa9c6542d1dd5fb0b6f9e4a0d2b9216b8398.png",
+  "characterPicture": "assets/eb5faa905283394c6cebfc016bfc6542bdcc5ce20fb04e30e6d035787d89b388.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/IncubusButcherCharacterArt.png": "assets/eb5faa905283394c6cebfc016bfc6542bdcc5ce20fb04e30e6d035787d89b388.png",
+    "textures/IncubusButcherCardArt.png": "assets/b2e9e4e7aa105024cf9e6db76ce9aa9c6542d1dd5fb0b6f9e4a0d2b9216b8398.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnIncubusButcher",
+        "names": {
+          "english": "Incubus Butcher",
+          "chinese": "魇魔刽子手",
+          "spanish": "Carnicero íncubo",
+          "french": "Boucher incube",
+          "german": "Inkubus-Schlächter",
+          "portuguese": "Açougueiro Íncubo",
+          "russian": "Мясник-инкуб",
+          "chinese_traditional": "夢魔屠夫",
+          "japanese": "インキュバスの屠殺者",
+          "korean": "인큐버스 도살자"
+        },
+        "card_art": "@IncubusButcherCardArt",
+        "cost": 2,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "effects": [
+          "@SpawnIncubusButcher"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnIncubusButcher",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@IncubusButcher"
+      },
+      {
+        "id": "IncubusButcherHealth",
+        "applied_vfx": "@SuccFXHealthBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 1,
+        "param_upgrade": "@BattleGrowthIncubusButcherHealth",
+        "param_int_3": 0
+      },
+      {
+        "id": "IncubusButcherAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 2,
+        "param_upgrade": "@BattleGrowthIncubusButcherAttack",
+        "param_int_3": 0
+      }
+    ],
+    "characters": [
+      {
+        "id": "IncubusButcher",
+        "attack_vfx": "@SuccFXBladeAttack",
+        "impact_vfx": "@SuccFXShadowImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "names": {
+          "english": "Incubus Butcher",
+          "chinese": "魇魔刽子手",
+          "spanish": "Carnicero íncubo",
+          "french": "Boucher incube",
+          "german": "Inkubus-Schlächter",
+          "portuguese": "Açougueiro Íncubo",
+          "russian": "Мясник-инкуб",
+          "chinese_traditional": "夢魔屠夫",
+          "japanese": "インキュバスの屠殺者",
+          "korean": "인큐버스 도살자"
+        },
+        "character_art": "@IncubusButcherCharacterArt",
+        "size": 2,
+        "attack_damage": 5,
+        "health": 20,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Faun"
+        ],
+        "starting_status_effects": [
+          {
+            "status": "sweep",
+            "count": 1
+          }
+        ],
+        "triggers": [
+          "@IncubusButcherSlay"
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "IncubusButcherSlay",
+        "trigger": "on_kill",
+        "descriptions": {
+          "english": "+[effect0.power][attack] and +[effect1.power][health].",
+          "chinese": "+[effect0.power][attack]，+[effect1.power][health]。",
+          "spanish": "+[effect0.power][attack] y +[effect1.power][health].",
+          "french": "+[effect0.power][attack] et +[effect1.power][health].",
+          "german": "+[effect0.power][attack] und +[effect1.power][health].",
+          "portuguese": "+[effect0.power][attack] e +[effect1.power][health].",
+          "russian": "+[effect0.power][attack] и +[effect1.power][health].",
+          "chinese_traditional": "+[effect0.power][attack] 與 +[effect1.power][health]。",
+          "japanese": "+[effect0.power][attack]と+[effect1.power][health]。",
+          "korean": "+[effect0.power][attack] 및 +[effect1.power][health]."
+        },
+        "effects": [
+          "@IncubusButcherAttack",
+          "@IncubusButcherHealth"
+        ]
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "BattleGrowthIncubusButcherHealth",
+        "bonus_hp": 1
+      },
+      {
+        "id": "BattleGrowthIncubusButcherAttack",
+        "bonus_damage": 2
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXHealthBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Health_PS.prefab",
+          "asset_guid": "163c171f05bdd644fbadfa6fc01064a0"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXAttackBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXBladeAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/DeathsDancer/FX_DeathsDancerAttack.prefab",
+          "asset_guid": "7b4040ba5c134c84eaeb246a77b0a401"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Faun",
+        "names": {
+          "english": "Faun",
+          "chinese": "羊人",
+          "spanish": "Fauno",
+          "french": "Faune",
+          "german": "Faun",
+          "portuguese": "Fauno",
+          "russian": "Фавн",
+          "chinese_traditional": "羊人",
+          "japanese": "ファウヌス",
+          "korean": "파우누스"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "IncubusButcherCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@IncubusButcherCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.0765,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 0.85,
+                "y": 0.85,
+                "z": 1
+              }
+            },
+            "shader": {
+              "name": "Shiny Shoe/Character Shader"
+            }
+          }
+        }
+      },
+      {
+        "id": "IncubusButcherCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@IncubusButcherCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "IncubusButcherCharacterArt",
+        "path": "textures/IncubusButcherCharacterArt.png"
+      },
+      {
+        "id": "IncubusButcherCardArt",
+        "path": "textures/IncubusButcherCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_IncubusButcher.json": "b1015acc1d199aa40f783ec13bd52dac1dae0157b30433e7867ba9b01bf6bb1e",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2",
+    "json/class.json": "65c18f4c8b8c97b62edfa51f3d02d2cae856fe878c761586e950fc9993580bc3"
+  }
+}

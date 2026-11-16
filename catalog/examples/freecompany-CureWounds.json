@@ -1,0 +1,131 @@
+{
+  "id": "freecompany-CureWounds",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "CureWounds"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Cure Wounds",
+    "french": "Soins",
+    "german": "Wunden heilen",
+    "russian": "Лечение ран",
+    "portuguese": "Curar Ferimentos",
+    "chinese": "治疗伤口",
+    "spanish": "Curar heridas",
+    "chinese_traditional": "治療傷口",
+    "korean": "상처 치유",
+    "japanese": "傷の治癒"
+  },
+  "descriptions": {
+    "english": "Restore [effect0.power] health to a friendly unit.",
+    "french": "Rendez [effect0.power] PV à une unité alliée.",
+    "german": "Heile eine verbündete Einheit um [effect0.power] Leben.",
+    "russian": "Восстановите [effect0.power] здоровья союзной боевой единице.",
+    "portuguese": "Restaure [effect0.power] de vida de uma unidade aliada.",
+    "chinese": "为一个友方单位恢复[effect0.power]点生命值。",
+    "spanish": "Restaura [effect0.power] de salud a una unidad aliada.",
+    "chinese_traditional": "為一個友方單位恢復[effect0.power]點生命值。",
+    "korean": "아군 유닛 하나의 체력을 [effect0.power] 회복.",
+    "japanese": "味方ユニット1体の体力を[effect0.power]回復。"
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/f2ee72bd3ba1c5d983d3f5422a372f18451dd528bb07359410618ee6c737e871.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/CureWoundsArt.png": "assets/f2ee72bd3ba1c5d983d3f5422a372f18451dd528bb07359410618ee6c737e871.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "CureWounds",
+        "names": {
+          "english": "Cure Wounds",
+          "french": "Soins",
+          "german": "Wunden heilen",
+          "russian": "Лечение ран",
+          "portuguese": "Curar Ferimentos",
+          "chinese": "治疗伤口",
+          "spanish": "Curar heridas",
+          "chinese_traditional": "治療傷口",
+          "korean": "상처 치유",
+          "japanese": "傷の治癒"
+        },
+        "descriptions": {
+          "english": "Restore [effect0.power] health to a friendly unit.",
+          "french": "Rendez [effect0.power] PV à une unité alliée.",
+          "german": "Heile eine verbündete Einheit um [effect0.power] Leben.",
+          "russian": "Восстановите [effect0.power] здоровья союзной боевой единице.",
+          "portuguese": "Restaure [effect0.power] de vida de uma unidade aliada.",
+          "chinese": "为一个友方单位恢复[effect0.power]点生命值。",
+          "spanish": "Restaura [effect0.power] de salud a una unidad aliada.",
+          "chinese_traditional": "為一個友方單位恢復[effect0.power]點生命值。",
+          "korean": "아군 유닛 하나의 체력을 [effect0.power] 회복.",
+          "japanese": "味方ユニット1体の体力を[effect0.power]回復。"
+        },
+        "card_art": "@CureWounds",
+        "cost": 1,
+        "card_type": "spell",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@CureWoundsHeal"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "CureWoundsHeal",
+        "applied_vfx": "@SpellCureWoundsHealVFX",
+        "name": "CardEffectHeal",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_int": 8
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellCureWoundsHealVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_HealImpactNormal_PS.prefab",
+          "asset_guid": "a1b4834936900f44c97dcde93697e47b"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "CureWounds",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@CureWounds"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "CureWounds",
+        "path": "textures/CureWoundsArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_cure_wounds.json": "e90fb882690f3ee5e5e7a22217cdec073b4a3ae288452b1d77f50804457ffc67"
+  }
+}

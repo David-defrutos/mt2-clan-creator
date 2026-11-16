@@ -1,0 +1,196 @@
+{
+  "id": "freecompany-Bandages",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Bandages"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Bandages",
+    "french": "Bandages",
+    "german": "Verbände",
+    "russian": "Бинты",
+    "portuguese": "Bandagens",
+    "chinese": "绷带",
+    "spanish": "Vendas",
+    "chinese_traditional": "繃帶",
+    "korean": "붕대",
+    "japanese": "包帯"
+  },
+  "descriptions": {
+    "english": "<b>+10</b> [health]. Restore <b>3</b> [health]. Apply <b>3</b> [regen].",
+    "french": "<b>+10</b> [health]. Restaure <b>3</b> [health]. Applique <b>3</b> [regen].",
+    "german": "<b>+10</b> [health]. Stellt <b>3</b> [health] wieder her. Verleiht <b>3</b> [regen].",
+    "russian": "<b>+10</b> [health]. Восстанавливает <b>3</b> [health]. Накладывает <b>3</b> [regen].",
+    "portuguese": "<b>+10</b> [health]. Restaura <b>3</b> [health]. Aplica <b>3</b> [regen].",
+    "chinese": "<b>+10</b> [health]. 恢复<b>3</b> [health]。 施加<b>3</b> [regen]。",
+    "spanish": "<b>+10</b> [health]. Recupera <b>3</b> [health]. Añade <b>3</b> [regen].",
+    "chinese_traditional": "<b>+10</b> [health]. 恢復<b>3</b> [health]。 施加<b>3</b> [regen]。",
+    "korean": "<b>+10</b> [health]. <b>3</b> [health] 회복. <b>3</b> [regen] 부여.",
+    "japanese": "<b>+10</b> [health]. <b>3</b> [health]を回復。 <b>3</b> [regen]を付与。"
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/7c5eb980e03feec372145cbbebec63657aefc8ff4d1d4634f7453a2c822b048b.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/BandagesArt.png": "assets/7c5eb980e03feec372145cbbebec63657aefc8ff4d1d4634f7453a2c822b048b.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Bandages",
+        "names": {
+          "english": "Bandages",
+          "french": "Bandages",
+          "german": "Verbände",
+          "russian": "Бинты",
+          "portuguese": "Bandagens",
+          "chinese": "绷带",
+          "spanish": "Vendas",
+          "chinese_traditional": "繃帶",
+          "korean": "붕대",
+          "japanese": "包帯"
+        },
+        "descriptions": {
+          "english": "<b>+10</b> [health]. Restore <b>3</b> [health]. Apply <b>3</b> [regen].",
+          "french": "<b>+10</b> [health]. Restaure <b>3</b> [health]. Applique <b>3</b> [regen].",
+          "german": "<b>+10</b> [health]. Stellt <b>3</b> [health] wieder her. Verleiht <b>3</b> [regen].",
+          "russian": "<b>+10</b> [health]. Восстанавливает <b>3</b> [health]. Накладывает <b>3</b> [regen].",
+          "portuguese": "<b>+10</b> [health]. Restaura <b>3</b> [health]. Aplica <b>3</b> [regen].",
+          "chinese": "<b>+10</b> [health]. 恢复<b>3</b> [health]。 施加<b>3</b> [regen]。",
+          "spanish": "<b>+10</b> [health]. Recupera <b>3</b> [health]. Añade <b>3</b> [regen].",
+          "chinese_traditional": "<b>+10</b> [health]. 恢復<b>3</b> [health]。 施加<b>3</b> [regen]。",
+          "korean": "<b>+10</b> [health]. <b>3</b> [health] 회복. <b>3</b> [regen] 부여.",
+          "japanese": "<b>+10</b> [health]. <b>3</b> [health]を回復。 <b>3</b> [regen]を付与。"
+        },
+        "card_art": "@Bandages",
+        "cost": 0,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipBandages",
+          "@BandagesHeal",
+          "@BandagesApplyRegen"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "BandagesApplyRegen",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "regen",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "id": "BandagesHeal",
+        "name": "CardEffectHeal",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_int": 3
+      },
+      {
+        "id": "EquipBandages",
+        "applied_vfx": "@KitClericHealVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgBandages"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgBandages",
+        "titles": {
+          "english": "Bandages",
+          "french": "Bandages",
+          "german": "Verbände",
+          "russian": "Бинты",
+          "portuguese": "Bandagens",
+          "chinese": "绷带",
+          "spanish": "Vendas",
+          "chinese_traditional": "繃帶",
+          "korean": "붕대",
+          "japanese": "包帯"
+        },
+        "descriptions": {
+          "english": "<b>+10</b> [health]. On equip: Restore <b>3</b> [health]. Apply <b>3</b> [regen].",
+          "french": "<b>+10</b> [health]. À l’équipement : Restaure <b>3</b> [health]. Applique <b>3</b> [regen].",
+          "german": "<b>+10</b> [health]. Beim Ausrüsten: Stellt <b>3</b> [health] wieder her. Verleiht <b>3</b> [regen].",
+          "russian": "<b>+10</b> [health]. При экипировке: Восстанавливает <b>3</b> [health]. Накладывает <b>3</b> [regen].",
+          "portuguese": "<b>+10</b> [health]. Ao equipar: Restaura <b>3</b> [health]. Aplica <b>3</b> [regen].",
+          "chinese": "<b>+10</b> [health]. 装备时： 恢复<b>3</b> [health]。 施加<b>3</b> [regen]。",
+          "spanish": "<b>+10</b> [health]. Al equipar: Recupera <b>3</b> [health]. Añade <b>3</b> [regen].",
+          "chinese_traditional": "<b>+10</b> [health]. 裝備時： 恢復<b>3</b> [health]。 施加<b>3</b> [regen]。",
+          "korean": "<b>+10</b> [health]. 장착 시: <b>3</b> [health] 회복. <b>3</b> [regen] 부여.",
+          "japanese": "<b>+10</b> [health]. 装備時： <b>3</b> [health]を回復。 <b>3</b> [regen]を付与。"
+        },
+        "icon": "@Bandages",
+        "bonus_hp": 10,
+        "status_effect_upgrades": []
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Bandages",
+        "path": "textures/BandagesArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitClericHealVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_HealImpactNormal_PS.prefab",
+          "asset_guid": "a1b4834936900f44c97dcde93697e47b"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Bandages",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Bandages"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/kits/kit_cleric.json": "062732773161aca4543f3bcea740da218866734030b51f1ae6fcd0f01aad2ffb",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

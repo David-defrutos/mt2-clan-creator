@@ -1,0 +1,140 @@
+{
+  "id": "freecompany-DimensionDoor",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "DimensionDoor"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Dimension Door",
+    "french": "Porte dimensionnelle",
+    "german": "Dimensionstor",
+    "russian": "Дверь измерений",
+    "portuguese": "Porta Dimensional",
+    "chinese": "任意门",
+    "spanish": "Puerta dimensional",
+    "chinese_traditional": "任意門",
+    "korean": "차원문",
+    "japanese": "次元扉"
+  },
+  "descriptions": {
+    "english": "[ascend] a friendly unit or [descend] an enemy unit.",
+    "spanish": "[ascend] una unidad aliada o [descend] una unidad enemiga.",
+    "french": "[ascend] une unité alliée ou [descend] une unité ennemie.",
+    "german": "[ascend] eine verbündete Einheit oder [descend] eine gegnerische Einheit.",
+    "russian": "[ascend] союзного бойца или [descend] вражеского бойца.",
+    "portuguese": "[ascend] uma unidade aliada ou [descend] uma unidade inimiga.",
+    "chinese": "[ascend]一个友方单位，或[descend]一个敌方单位。",
+    "chinese_traditional": "[ascend]一個友方單位，或[descend]一個敵方單位。",
+    "korean": "아군 유닛 하나에게 [ascend] 또는 적 유닛 하나에게 [descend].",
+    "japanese": "味方ユニット1体を[ascend]、または敵ユニット1体を[descend]。"
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/fb7676e5403da90b3310a71d25f5aa0fc136fb4d95643d6dd819e45ba4fbde2a.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/DimensionDoorArt.png": "assets/fb7676e5403da90b3310a71d25f5aa0fc136fb4d95643d6dd819e45ba4fbde2a.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "DimensionDoor",
+        "names": {
+          "english": "Dimension Door",
+          "french": "Porte dimensionnelle",
+          "german": "Dimensionstor",
+          "russian": "Дверь измерений",
+          "portuguese": "Porta Dimensional",
+          "chinese": "任意门",
+          "spanish": "Puerta dimensional",
+          "chinese_traditional": "任意門",
+          "korean": "차원문",
+          "japanese": "次元扉"
+        },
+        "descriptions": {
+          "english": "[ascend] a friendly unit or [descend] an enemy unit.",
+          "spanish": "[ascend] una unidad aliada o [descend] una unidad enemiga.",
+          "french": "[ascend] une unité alliée ou [descend] une unité ennemie.",
+          "german": "[ascend] eine verbündete Einheit oder [descend] eine gegnerische Einheit.",
+          "russian": "[ascend] союзного бойца или [descend] вражеского бойца.",
+          "portuguese": "[ascend] uma unidade aliada ou [descend] uma unidade inimiga.",
+          "chinese": "[ascend]一个友方单位，或[descend]一个敌方单位。",
+          "chinese_traditional": "[ascend]一個友方單位，或[descend]一個敵方單位。",
+          "korean": "아군 유닛 하나에게 [ascend] 또는 적 유닛 하나에게 [descend].",
+          "japanese": "味方ユニット1体を[ascend]、または敵ユニット1体を[descend]。"
+        },
+        "card_art": "@DimensionDoor",
+        "cost": 1,
+        "card_type": "spell",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@DimensionDoorBumpAlly",
+          "@DimensionDoorBumpEnemy"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "DimensionDoorBumpEnemy",
+        "applied_vfx": "@SpellDimensionDoorGravityVFX",
+        "name": "CardEffectBump",
+        "target_mode": "drop_target_character",
+        "target_team": "heroes",
+        "param_int": -1
+      },
+      {
+        "id": "DimensionDoorBumpAlly",
+        "applied_vfx": "@SpellDimensionDoorGravityVFX",
+        "name": "CardEffectBump",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_int": 1
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellDimensionDoorGravityVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/LunaCoven/Gravity/FX_Gravity.prefab",
+          "asset_guid": "e6cd81e0f780c9a4a91d3baa28bb8c18"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "DimensionDoor",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@DimensionDoor"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "DimensionDoor",
+        "path": "textures/DimensionDoorArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_dimension_door.json": "b1cc9942979a434613631a15deda16dc7d34f43cc5d80d56d1dbb96075fb315b"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "id": "ww-WW_S14",
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S14"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Prácticas con Seguro Médico",
+    "english": "Practicum with Health Insurance",
+    "french": "Stage avec assurance maladie",
+    "german": "Praktikum mit Krankenversicherung",
+    "portuguese": "Estágio com Seguro de Saúde",
+    "russian": "Практикум с медицинской страховкой",
+    "chinese": "带医保实习",
+    "chinese_traditional": "帶醫保實習",
+    "korean": "건강 보험 실습",
+    "japanese": "医療保険付き実習"
+  },
+  "descriptions": {
+    "spanish": "Inflige [effect0.power] de daño. Restaura [effect1.power] de salud a los aliados.",
+    "french": "Infligez [effect0.power] dégâts. Restaurez [effect1.power] PV aux alliés.",
+    "german": "Verursache [effect0.power] Schaden. Stelle bei Verbündeten [effect1.power] Leben wieder her.",
+    "portuguese": "Causa [effect0.power] de dano. Restaura [effect1.power] de saúde aos aliados.",
+    "russian": "Нанесите [effect0.power] урона. Восстановите союзникам [effect1.power] здоровья.",
+    "chinese": "造成[effect0.power]点伤害。为友军恢复[effect1.power]点生命。",
+    "chinese_traditional": "造成[effect0.power]點傷害。為友軍恢復[effect1.power]點生命。",
+    "korean": "[effect0.power] 피해를 줍니다. 아군의 체력을 [effect1.power] 회복합니다.",
+    "japanese": "[effect0.power]ダメージを与える。味方の体力を[effect1.power]回復する。",
+    "english": "Deal [effect0.power] damage. Restore [effect1.power] health to friendly units."
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/0ba898fde1c3b6bab4b725e460e319da1c9deddfb21c6bcce02bd1a397361922.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S14CardArt.png": "assets/0ba898fde1c3b6bab4b725e460e319da1c9deddfb21c6bcce02bd1a397361922.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S14",
+        "names": {
+          "spanish": "Prácticas con Seguro Médico",
+          "english": "Practicum with Health Insurance",
+          "french": "Stage avec assurance maladie",
+          "german": "Praktikum mit Krankenversicherung",
+          "portuguese": "Estágio com Seguro de Saúde",
+          "russian": "Практикум с медицинской страховкой",
+          "chinese": "带医保实习",
+          "chinese_traditional": "帶醫保實習",
+          "korean": "건강 보험 실습",
+          "japanese": "医療保険付き実習"
+        },
+        "descriptions": {
+          "spanish": "Inflige [effect0.power] de daño. Restaura [effect1.power] de salud a los aliados.",
+          "french": "Infligez [effect0.power] dégâts. Restaurez [effect1.power] PV aux alliés.",
+          "german": "Verursache [effect0.power] Schaden. Stelle bei Verbündeten [effect1.power] Leben wieder her.",
+          "portuguese": "Causa [effect0.power] de dano. Restaura [effect1.power] de saúde aos aliados.",
+          "russian": "Нанесите [effect0.power] урона. Восстановите союзникам [effect1.power] здоровья.",
+          "chinese": "造成[effect0.power]点伤害。为友军恢复[effect1.power]点生命。",
+          "chinese_traditional": "造成[effect0.power]點傷害。為友軍恢復[effect1.power]點生命。",
+          "korean": "[effect0.power] 피해를 줍니다. 아군의 체력을 [effect1.power] 회복합니다.",
+          "japanese": "[effect0.power]ダメージを与える。味方の体力を[effect1.power]回復する。",
+          "english": "Deal [effect0.power] damage. Restore [effect1.power] health to friendly units."
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "common",
+        "targets_room": true,
+        "effects": [
+          "@WW_S14_Damage",
+          "@WW_S14_Heal"
+        ],
+        "card_art": "@WW_S14CardArt"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S14CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S14CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S14CardArt",
+        "path": "textures/cards/WW_S14CardArt.png"
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_S14_Heal",
+        "name": "CardEffectHeal",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_int": 4,
+        "should_test": false
+      },
+      {
+        "id": "WW_S14_Damage",
+        "name": "CardEffectDamage",
+        "target_mode": "drop_target_character",
+        "target_team": "both",
+        "param_int": 12
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S14.json": "915117b1286d011846b1a5f15ca75f85bd6c1daac8de11c3e42523d56bdddccd"
+  }
+}

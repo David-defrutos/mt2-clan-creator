@@ -1,0 +1,190 @@
+{
+  "id": "freecompany-SpawnCautiousTroll",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnCautiousTroll"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Cautious Troll",
+    "french": "Troll prudent",
+    "german": "Vorsichtiger Troll",
+    "russian": "Осторожный тролль",
+    "portuguese": "Troll Cauteloso",
+    "chinese": "谨慎巨魔",
+    "spanish": "Trol cauteloso",
+    "chinese_traditional": "謹慎巨魔",
+    "korean": "신중한 트롤",
+    "japanese": "慎重なトロール"
+  },
+  "descriptions": {},
+  "cost": 6,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": 50,
+  "attack": 40,
+  "size": 4,
+  "picture": "assets/e6c5d07777e039b5541f1fdacbb6c248fc945be0e67b0feeaa81af4394f3d9d1.png",
+  "characterPicture": "assets/2897cf2951d2c673fc7998be9895b26631c5a5c018634a51ffcdcd4bc8638543.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/CautiousTrollCharacterArt.png": "assets/2897cf2951d2c673fc7998be9895b26631c5a5c018634a51ffcdcd4bc8638543.png",
+    "textures/CautiousTrollArt.png": "assets/e6c5d07777e039b5541f1fdacbb6c248fc945be0e67b0feeaa81af4394f3d9d1.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnCautiousTroll",
+        "names": {
+          "english": "Cautious Troll",
+          "french": "Troll prudent",
+          "german": "Vorsichtiger Troll",
+          "russian": "Осторожный тролль",
+          "portuguese": "Troll Cauteloso",
+          "chinese": "谨慎巨魔",
+          "spanish": "Trol cauteloso",
+          "chinese_traditional": "謹慎巨魔",
+          "korean": "신중한 트롤",
+          "japanese": "慎重なトロール"
+        },
+        "card_art": "@CautiousTroll",
+        "cost": 6,
+        "card_type": "monster",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnCautiousTrollEffect"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnCautiousTrollEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@CautiousTroll"
+      }
+    ],
+    "characters": [
+      {
+        "id": "CautiousTroll",
+        "names": {
+          "english": "Cautious Troll",
+          "french": "Troll prudent",
+          "german": "Vorsichtiger Troll",
+          "russian": "Осторожный тролль",
+          "portuguese": "Troll Cauteloso",
+          "chinese": "谨慎巨魔",
+          "spanish": "Trol cauteloso",
+          "chinese_traditional": "謹慎巨魔",
+          "korean": "신중한 트롤",
+          "japanese": "慎重なトロール"
+        },
+        "character_art": "@CautiousTrollCharacterArt",
+        "size": 4,
+        "attack_damage": 40,
+        "health": 50,
+        "subtypes": [
+          "@Sub_Barbarian",
+          "@Sub_Troll"
+        ],
+        "starting_status_effects": [
+          {
+            "status": "regen",
+            "count": 20
+          }
+        ],
+        "triggers": []
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Troll",
+        "names": {
+          "english": "Troll",
+          "french": "Troll",
+          "german": "Troll",
+          "russian": "Тролль",
+          "portuguese": "Troll",
+          "chinese": "巨魔",
+          "spanish": "Trol",
+          "chinese_traditional": "巨魔",
+          "korean": "트롤",
+          "japanese": "トロール"
+        }
+      },
+      {
+        "id": "Sub_Barbarian",
+        "names": {
+          "english": "Barbarian",
+          "french": "Barbare",
+          "german": "Barbar",
+          "russian": "Варвар",
+          "portuguese": "Bárbaro",
+          "chinese": "野蛮人",
+          "spanish": "Bárbaro",
+          "chinese_traditional": "野蠻人",
+          "korean": "야만전사",
+          "japanese": "バーバリアン"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "CautiousTrollCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@CautiousTrollCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.512,
+                "z": 0
+              },
+              "scale": {
+                "x": 1.25,
+                "y": 1.25,
+                "z": 1
+              },
+              "offset": {
+                "y": -0.21
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "CautiousTroll",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@CautiousTroll"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "CautiousTrollCharacterArt",
+        "path": "textures/CautiousTrollCharacterArt.png"
+      },
+      {
+        "id": "CautiousTroll",
+        "path": "textures/CautiousTrollArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_troll.json": "0101a4aa26a122261bbaf962f12e215a785e10ae1f38def3dd9539cac8ec8d66",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

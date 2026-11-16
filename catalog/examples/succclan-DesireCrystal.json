@@ -1,0 +1,187 @@
+{
+  "id": "succclan-DesireCrystal",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "relics",
+    "id": "DesireCrystal"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Desire Crystal",
+    "chinese": "欲望水晶",
+    "spanish": "Cristal del deseo",
+    "french": "Cristal du désir",
+    "german": "Kristall der Begierde",
+    "portuguese": "Cristal do Desejo",
+    "russian": "Кристалл желания",
+    "chinese_traditional": "慾望水晶",
+    "japanese": "欲望の結晶",
+    "korean": "욕망의 수정"
+  },
+  "descriptions": {
+    "english": "The first <b>Ghost</b> you summon each turn draws you 1 card and gives 1[ember].",
+    "chinese": "每回合首次召唤幽魂单位时，抽 1 张牌并获得 1[ember]。",
+    "spanish": "El primer <b>Fantasma</b> que invocas cada turno te hace robar 1 carta y ganar 1[ember].",
+    "french": "Le premier <b>Fantôme</b> invoqué chaque tour vous fait piocher 1 carte et gagner 1[ember].",
+    "german": "Der erste <b>Geist</b>, den du in jedem Zug beschwörst, lässt dich 1 Karte ziehen und gibt dir 1[ember].",
+    "portuguese": "O primeiro <b>Fantasma</b> invocado a cada turno faz você comprar 1 carta e ganhar 1[ember].",
+    "russian": "Первый призванный за ход <b>Призрак</b> даёт 1 карту и 1[ember].",
+    "chinese_traditional": "每回合召喚的第一個<b>幽靈</b>使你抽 1 張牌並獲得 1[ember]。",
+    "japanese": "各ターン最初に召喚した<b>幽霊</b>で、カードを1枚引き1[ember]を得る。",
+    "korean": "매 턴 처음 소환한 <b>유령</b>이 카드 1장을 뽑고 1[ember]을 얻도록 합니다."
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/2b7023f9750e5bb31964a806f4189c00798944214e8532d9d322fa5f3b92bd60.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/RelicIcons/DesireCrystalIconSmall.png": "assets/39efc021c8d0fa65d73c9207ec4c5429ca794d8d95a9719286e585d8f8a031a2.png",
+    "textures/RelicIcons/DesireCrystalIcon.png": "assets/2b7023f9750e5bb31964a806f4189c00798944214e8532d9d322fa5f3b92bd60.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "DesireCrystal",
+        "type": "collectable",
+        "names": {
+          "english": "Desire Crystal",
+          "chinese": "欲望水晶",
+          "spanish": "Cristal del deseo",
+          "french": "Cristal du désir",
+          "german": "Kristall der Begierde",
+          "portuguese": "Cristal do Desejo",
+          "russian": "Кристалл желания",
+          "chinese_traditional": "慾望水晶",
+          "japanese": "欲望の結晶",
+          "korean": "욕망의 수정"
+        },
+        "descriptions": {
+          "english": "The first <b>Ghost</b> you summon each turn draws you 1 card and gives 1[ember].",
+          "chinese": "每回合首次召唤幽魂单位时，抽 1 张牌并获得 1[ember]。",
+          "spanish": "El primer <b>Fantasma</b> que invocas cada turno te hace robar 1 carta y ganar 1[ember].",
+          "french": "Le premier <b>Fantôme</b> invoqué chaque tour vous fait piocher 1 carte et gagner 1[ember].",
+          "german": "Der erste <b>Geist</b>, den du in jedem Zug beschwörst, lässt dich 1 Karte ziehen und gibt dir 1[ember].",
+          "portuguese": "O primeiro <b>Fantasma</b> invocado a cada turno faz você comprar 1 carta e ganhar 1[ember].",
+          "russian": "Первый призванный за ход <b>Призрак</b> даёт 1 карту и 1[ember].",
+          "chinese_traditional": "每回合召喚的第一個<b>幽靈</b>使你抽 1 張牌並獲得 1[ember]。",
+          "japanese": "各ターン最初に召喚した<b>幽霊</b>で、カードを1枚引き1[ember]を得る。",
+          "korean": "매 턴 처음 소환한 <b>유령</b>이 카드 1장을 뽑고 1[ember]을 얻도록 합니다."
+        },
+        "disallow_in_deployment": false,
+        "relic_effects": [
+          "@DesireCrystalEffect"
+        ],
+        "icon": "@DesireCrystalIcon",
+        "icon_small": "@DesireCrystalIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "class": "@ClassSuccubus",
+              "pools": [
+                "MegaRelicPool"
+              ],
+              "rarity": "uncommon",
+              "unlock_level": 0
+            }
+          }
+        ],
+        "relic_activated_texts": {
+          "english": "Draw 1 card. Gain 1 Ember.",
+          "chinese": "抽 1 张牌。获得 1 余烬。",
+          "spanish": "Roba 1 carta. Gana 1 ascua.",
+          "french": "Piochez 1 carte. Gagnez 1 braise.",
+          "german": "Ziehe 1 Karte. Erhalte 1 Glut.",
+          "portuguese": "Compre 1 carta. Ganhe 1 brasa.",
+          "russian": "Возьмите 1 карту. +1 уголь.",
+          "chinese_traditional": "抽 1 張牌。獲得 1 餘燼。",
+          "japanese": "カードを1枚引く。エンバー+1。",
+          "korean": "카드를 1장 뽑습니다. 잔불 +1."
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "DesireCrystalIconSmall",
+        "path": "textures/RelicIcons/DesireCrystalIconSmall.png"
+      },
+      {
+        "id": "DesireCrystalIcon",
+        "path": "textures/RelicIcons/DesireCrystalIcon.png"
+      }
+    ],
+    "relic_effects": [
+      {
+        "id": "DesireCrystalEffect",
+        "name": "RelicEffectAddEffectOnUnitSpawn",
+        "source_team": "monsters",
+        "param_subtype": "@Sub_Ghost",
+        "param_effects": [
+          "@DesireCrystalDraw",
+          "@DesireCrystalEmber"
+        ],
+        "conditions": [
+          {
+            "id": "@DesireCrystalOncePerTurn"
+          }
+        ]
+      }
+    ],
+    "relic_effect_conditions": [
+      {
+        "id": "DesireCrystalOncePerTurn",
+        "param_track_trigger_count": true,
+        "allow_multiple_triggers_per_duration": false,
+        "param_entry_duration": "this_turn",
+        "param_int": 1
+      }
+    ],
+    "effects": [
+      {
+        "id": "DesireCrystalEmber",
+        "name": "CardEffectGainEnergy",
+        "target_mode": "self",
+        "target_team": "none",
+        "param_int": 1
+      },
+      {
+        "id": "DesireCrystalDraw",
+        "name": "CardEffectDraw",
+        "target_mode": "self",
+        "target_team": "none",
+        "param_int": 1
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Ghost",
+        "names": {
+          "english": "Ghost",
+          "chinese": "幽魂",
+          "spanish": "Fantasma",
+          "french": "Fantôme",
+          "german": "Geist",
+          "portuguese": "Fantasma",
+          "russian": "Призрак",
+          "chinese_traditional": "幽靈",
+          "japanese": "幽霊",
+          "korean": "유령"
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_DesireCrystal.json": "76f3919862cb1113a8c27a4d8e6eeccf4b92a37748e9728173669c5464f4a441",
+    "json/class.json": "65c18f4c8b8c97b62edfa51f3d02d2cae856fe878c761586e950fc9993580bc3"
+  }
+}

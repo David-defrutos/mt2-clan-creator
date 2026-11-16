@@ -1,0 +1,161 @@
+{
+  "id": "freecompany-Caltrops",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Caltrops"
+  },
+  "kind": "room",
+  "names": {
+    "english": "Caltrops",
+    "french": "Chausse-trappes",
+    "german": "Krähenfüße",
+    "russian": "Колючки",
+    "portuguese": "Estrepes",
+    "chinese": "铁蒺藜",
+    "spanish": "Abrojos",
+    "chinese_traditional": "鐵蒺藜",
+    "korean": "마름쇠",
+    "japanese": "撒菱"
+  },
+  "descriptions": {
+    "english": "Enemies on this floor have <b>2</b> [decay].",
+    "french": "Les ennemis de cet étage ont <b>2</b> [decay].",
+    "german": "Gegner auf diesem Stockwerk haben <b>2</b> [decay].",
+    "russian": "Враги на этом этаже имеют <b>2</b> [decay].",
+    "portuguese": "Os inimigos neste andar têm <b>2</b> [decay].",
+    "chinese": "本层敌人拥有<b>2</b> [decay]。",
+    "spanish": "Los enemigos de este piso tienen <b>2</b> [decay].",
+    "chinese_traditional": "本層敵人擁有<b>2</b> [decay]。",
+    "korean": "이 층의 적은 <b>2</b> [decay] 보유.",
+    "japanese": "この階の敵は<b>2</b> [decay]を持つ。"
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/65dc6a5fe31c58f5aae7f3ad91b319525e00bfe301916cd335e39e1705bb7f1f.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/CaltropsArt.png": "assets/65dc6a5fe31c58f5aae7f3ad91b319525e00bfe301916cd335e39e1705bb7f1f.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Caltrops",
+        "names": {
+          "english": "Caltrops",
+          "french": "Chausse-trappes",
+          "german": "Krähenfüße",
+          "russian": "Колючки",
+          "portuguese": "Estrepes",
+          "chinese": "铁蒺藜",
+          "spanish": "Abrojos",
+          "chinese_traditional": "鐵蒺藜",
+          "korean": "마름쇠",
+          "japanese": "撒菱"
+        },
+        "descriptions": {
+          "english": "Enemies on this floor have <b>2</b> [decay].",
+          "french": "Les ennemis de cet étage ont <b>2</b> [decay].",
+          "german": "Gegner auf diesem Stockwerk haben <b>2</b> [decay].",
+          "russian": "Враги на этом этаже имеют <b>2</b> [decay].",
+          "portuguese": "Os inimigos neste andar têm <b>2</b> [decay].",
+          "chinese": "本层敌人拥有<b>2</b> [decay]。",
+          "spanish": "Los enemigos de este piso tienen <b>2</b> [decay].",
+          "chinese_traditional": "本層敵人擁有<b>2</b> [decay]。",
+          "korean": "이 층의 적은 <b>2</b> [decay] 보유.",
+          "japanese": "この階の敵は<b>2</b> [decay]を持つ。"
+        },
+        "card_art": "@Caltrops",
+        "cost": 1,
+        "card_type": "room",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": true,
+        "effects": [
+          "@CaltropsRoomEffect"
+        ],
+        "hide_in_logbook": true,
+        "unlock_level": 99
+      }
+    ],
+    "effects": [
+      {
+        "id": "CaltropsRoomEffect",
+        "name": "CardEffectAttachTrainRoomAttachment",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_upgrade": "@CaltropsRoomUpgrade",
+        "param_bool": false,
+        "param_bool_2": false
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "CaltropsRoomUpgrade",
+        "titles": {
+          "english": "Caltrops",
+          "french": "Chausse-trappes",
+          "german": "Krähenfüße",
+          "russian": "Колючки",
+          "portuguese": "Estrepes",
+          "chinese": "铁蒺藜",
+          "spanish": "Abrojos",
+          "chinese_traditional": "鐵蒺藜",
+          "korean": "마름쇠",
+          "japanese": "撒菱"
+        },
+        "descriptions": {
+          "english": "Enemies on this floor have <b>2</b> [decay].",
+          "french": "Les ennemis de cet étage ont <b>2</b> [decay].",
+          "german": "Gegner auf diesem Stockwerk haben <b>2</b> [decay].",
+          "russian": "Враги на этом этаже имеют <b>2</b> [decay].",
+          "portuguese": "Os inimigos neste andar têm <b>2</b> [decay].",
+          "chinese": "本层敌人拥有<b>2</b> [decay]。",
+          "spanish": "Los enemigos de este piso tienen <b>2</b> [decay].",
+          "chinese_traditional": "本層敵人擁有<b>2</b> [decay]。",
+          "korean": "이 층의 적은 <b>2</b> [decay] 보유.",
+          "japanese": "この階の敵は<b>2</b> [decay]を持つ。"
+        },
+        "status_effect_upgrades": [
+          {
+            "status": "decay",
+            "count": 2
+          }
+        ],
+        "hide_icon_on_card": true,
+        "icon": "@Caltrops"
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Caltrops",
+        "path": "textures/CaltropsArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Caltrops",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Caltrops"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/rooms/room_caltrops.json": "2508a245b76f0b8aa343feed4a6f8dd27ae8e6bcadf36d07c468bac7afc837b8"
+  }
+}

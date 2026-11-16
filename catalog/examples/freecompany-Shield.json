@@ -1,0 +1,136 @@
+{
+  "id": "freecompany-Shield",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Shield"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Shield",
+    "french": "Bouclier",
+    "german": "Schild",
+    "russian": "Щит",
+    "portuguese": "Escudo",
+    "chinese": "护盾术",
+    "spanish": "Escudo",
+    "chinese_traditional": "護盾術",
+    "korean": "방패",
+    "japanese": "シールド"
+  },
+  "descriptions": {
+    "english": "Apply [effect0.status0.power] [armor] to a friendly unit.",
+    "french": "Appliquez [effect0.status0.power] [armor] à une unité alliée.",
+    "german": "Verleihe einer verbündeten Einheit [effect0.status0.power] [armor].",
+    "russian": "Наложите на союзную боевую единицу [effect0.status0.power] [armor].",
+    "portuguese": "Aplique [effect0.status0.power] [armor] a uma unidade aliada.",
+    "chinese": "对一个友方单位施加[effect0.status0.power] [armor]。",
+    "spanish": "Añade [effect0.status0.power] [armor] a una unidad aliada.",
+    "chinese_traditional": "對一個友方單位施加[effect0.status0.power] [armor]。",
+    "korean": "아군 유닛 하나에게 [effect0.status0.power] [armor] 부여.",
+    "japanese": "味方ユニット1体に[effect0.status0.power] [armor]を付与。"
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/e85d82010fb33add5e3f2d027816e94c0a83a8588729bd8f5b132f96f7eec9c5.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ShieldArt.png": "assets/e85d82010fb33add5e3f2d027816e94c0a83a8588729bd8f5b132f96f7eec9c5.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Shield",
+        "names": {
+          "english": "Shield",
+          "french": "Bouclier",
+          "german": "Schild",
+          "russian": "Щит",
+          "portuguese": "Escudo",
+          "chinese": "护盾术",
+          "spanish": "Escudo",
+          "chinese_traditional": "護盾術",
+          "korean": "방패",
+          "japanese": "シールド"
+        },
+        "descriptions": {
+          "english": "Apply [effect0.status0.power] [armor] to a friendly unit.",
+          "french": "Appliquez [effect0.status0.power] [armor] à une unité alliée.",
+          "german": "Verleihe einer verbündeten Einheit [effect0.status0.power] [armor].",
+          "russian": "Наложите на союзную боевую единицу [effect0.status0.power] [armor].",
+          "portuguese": "Aplique [effect0.status0.power] [armor] a uma unidade aliada.",
+          "chinese": "对一个友方单位施加[effect0.status0.power] [armor]。",
+          "spanish": "Añade [effect0.status0.power] [armor] a una unidad aliada.",
+          "chinese_traditional": "對一個友方單位施加[effect0.status0.power] [armor]。",
+          "korean": "아군 유닛 하나에게 [effect0.status0.power] [armor] 부여.",
+          "japanese": "味方ユニット1体に[effect0.status0.power] [armor]を付与。"
+        },
+        "card_art": "@Shield",
+        "cost": 0,
+        "card_type": "spell",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@ShieldArmor"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "ShieldArmor",
+        "applied_vfx": "@SpellShieldArmorVFX",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "armor",
+            "count": 5
+          }
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellShieldArmorVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Wurmkin/EchoInfusion/FX_WurmkinBuff.prefab",
+          "asset_guid": "24aff4cc201a62e41838f1d11b277562"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Shield",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Shield"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Shield",
+        "path": "textures/ShieldArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_shield.json": "e7f52ab98ce7905a3472d65bc3ca535463fe28ebc21bf5071f40182e995b4299"
+  }
+}

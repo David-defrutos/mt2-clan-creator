@@ -1,0 +1,187 @@
+{
+  "id": "freecompany-ChalkCircle",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "ChalkCircle"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Chalk Circle",
+    "french": "Cercle de craie",
+    "german": "Kreidekreis",
+    "russian": "Меловой круг",
+    "portuguese": "Círculo de Giz",
+    "chinese": "粉笔法阵",
+    "spanish": "Círculo de tiza",
+    "chinese_traditional": "粉筆法陣",
+    "korean": "분필 마법진",
+    "japanese": "白墨の魔法陣"
+  },
+  "descriptions": {
+    "english": "Apply <b>2</b> [conduit].",
+    "french": "Applique <b>2</b> [conduit].",
+    "german": "Verleiht <b>2</b> [conduit].",
+    "russian": "Накладывает <b>2</b> [conduit].",
+    "portuguese": "Aplica <b>2</b> [conduit].",
+    "chinese": "施加<b>2</b> [conduit]。",
+    "spanish": "Añade <b>2</b> [conduit].",
+    "chinese_traditional": "施加<b>2</b> [conduit]。",
+    "korean": "<b>2</b> [conduit] 부여.",
+    "japanese": "<b>2</b> [conduit]を付与。"
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/c098ab803012e7cce6358be75cac093f7fbc831628a27c2e82bdfa267cb17642.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ChalkCircleArt.png": "assets/c098ab803012e7cce6358be75cac093f7fbc831628a27c2e82bdfa267cb17642.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "ChalkCircle",
+        "names": {
+          "english": "Chalk Circle",
+          "french": "Cercle de craie",
+          "german": "Kreidekreis",
+          "russian": "Меловой круг",
+          "portuguese": "Círculo de Giz",
+          "chinese": "粉笔法阵",
+          "spanish": "Círculo de tiza",
+          "chinese_traditional": "粉筆法陣",
+          "korean": "분필 마법진",
+          "japanese": "白墨の魔法陣"
+        },
+        "descriptions": {
+          "english": "Apply <b>2</b> [conduit].",
+          "french": "Applique <b>2</b> [conduit].",
+          "german": "Verleiht <b>2</b> [conduit].",
+          "russian": "Накладывает <b>2</b> [conduit].",
+          "portuguese": "Aplica <b>2</b> [conduit].",
+          "chinese": "施加<b>2</b> [conduit]。",
+          "spanish": "Añade <b>2</b> [conduit].",
+          "chinese_traditional": "施加<b>2</b> [conduit]。",
+          "korean": "<b>2</b> [conduit] 부여.",
+          "japanese": "<b>2</b> [conduit]を付与。"
+        },
+        "card_art": "@ChalkCircle",
+        "cost": 0,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipChalkCircle",
+          "@ChalkCircleApplyConduit"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "ChalkCircleApplyConduit",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "conduit",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "id": "EquipChalkCircle",
+        "applied_vfx": "@KitWizardArcaneVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgChalkCircle"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgChalkCircle",
+        "titles": {
+          "english": "Chalk Circle",
+          "french": "Cercle de craie",
+          "german": "Kreidekreis",
+          "russian": "Меловой круг",
+          "portuguese": "Círculo de Giz",
+          "chinese": "粉笔法阵",
+          "spanish": "Círculo de tiza",
+          "chinese_traditional": "粉筆法陣",
+          "korean": "분필 마법진",
+          "japanese": "白墨の魔法陣"
+        },
+        "descriptions": {
+          "english": "On equip: Apply <b>2</b> [conduit].",
+          "french": "À l’équipement : Applique <b>2</b> [conduit].",
+          "german": "Beim Ausrüsten: Verleiht <b>2</b> [conduit].",
+          "russian": "При экипировке: Накладывает <b>2</b> [conduit].",
+          "portuguese": "Ao equipar: Aplica <b>2</b> [conduit].",
+          "chinese": "装备时： 施加<b>2</b> [conduit]。",
+          "spanish": "Al equipar: Añade <b>2</b> [conduit].",
+          "chinese_traditional": "裝備時： 施加<b>2</b> [conduit]。",
+          "korean": "장착 시: <b>2</b> [conduit] 부여.",
+          "japanese": "装備時： <b>2</b> [conduit]を付与。"
+        },
+        "icon": "@ChalkCircle",
+        "status_effect_upgrades": []
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ChalkCircle",
+        "path": "textures/ChalkCircleArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitWizardArcaneVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ChalkCircle",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ChalkCircle"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/kits/kit_wizard.json": "c217c1e5cfccbf41acb3ec54768f00da42fc90941e4eccff4742d3afaad37160",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

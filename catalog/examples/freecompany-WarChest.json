@@ -1,0 +1,133 @@
+{
+  "id": "freecompany-WarChest",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "relics",
+    "id": "WarChest"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "War Chest",
+    "french": "Trésor de guerre",
+    "german": "Kriegskasse",
+    "russian": "Военная казна",
+    "portuguese": "Fundo de Guerra",
+    "chinese": "军费金库",
+    "spanish": "Fondo de guerra",
+    "chinese_traditional": "軍費金庫",
+    "korean": "군자금",
+    "japanese": "軍資金"
+  },
+  "descriptions": {
+    "english": "Gain <b>99</b> [coin] after each battle.",
+    "french": "Gagnez <b>99</b> [coin] après chaque combat.",
+    "german": "Erhalte nach jedem Kampf <b>99</b> [coin].",
+    "russian": "Получите <b>99</b> [coin] после каждого боя.",
+    "portuguese": "Ganhe <b>99</b> [coin] após cada batalha.",
+    "chinese": "每场战斗后获得<b>99</b> [coin]。",
+    "spanish": "Gana <b>99</b> [coin] después de cada combate.",
+    "chinese_traditional": "每場戰鬥後獲得<b>99</b> [coin]。",
+    "korean": "전투가 끝날 때마다 <b>99</b> [coin] 획득.",
+    "japanese": "各戦闘後に<b>99</b> [coin]を得る。"
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/982c874a47118b9ef6b0423248c94970b44c4a911805e0c37d659f1ff70eb50b.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/WarChestIconSmall.png": "assets/039cdbbd6f10f9acafc567d03eaa6c8c3c5119f881b5be56998cbb560b1c88a6.png",
+    "textures/WarChestIcon.png": "assets/982c874a47118b9ef6b0423248c94970b44c4a911805e0c37d659f1ff70eb50b.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "WarChest",
+        "type": "collectable",
+        "names": {
+          "english": "War Chest",
+          "french": "Trésor de guerre",
+          "german": "Kriegskasse",
+          "russian": "Военная казна",
+          "portuguese": "Fundo de Guerra",
+          "chinese": "军费金库",
+          "spanish": "Fondo de guerra",
+          "chinese_traditional": "軍費金庫",
+          "korean": "군자금",
+          "japanese": "軍資金"
+        },
+        "descriptions": {
+          "english": "Gain <b>99</b> [coin] after each battle.",
+          "french": "Gagnez <b>99</b> [coin] après chaque combat.",
+          "german": "Erhalte nach jedem Kampf <b>99</b> [coin].",
+          "russian": "Получите <b>99</b> [coin] после каждого боя.",
+          "portuguese": "Ganhe <b>99</b> [coin] após cada batalha.",
+          "chinese": "每场战斗后获得<b>99</b> [coin]。",
+          "spanish": "Gana <b>99</b> [coin] después de cada combate.",
+          "chinese_traditional": "每場戰鬥後獲得<b>99</b> [coin]。",
+          "korean": "전투가 끝날 때마다 <b>99</b> [coin] 획득.",
+          "japanese": "各戦闘後に<b>99</b> [coin]を得る。"
+        },
+        "relic_activated_texts": {
+          "english": "Paid on delivery.",
+          "french": "Payé à la livraison.",
+          "german": "Bei Lieferung bezahlt.",
+          "russian": "Заплатили за доставку.",
+          "portuguese": "Pagado com a entrega.",
+          "chinese": "在交货时支付.",
+          "spanish": "Se paga a la entrega.",
+          "chinese_traditional": "交付時付出.",
+          "korean": "배달에 지불합니다.",
+          "japanese": "配達で支払った"
+        },
+        "relic_effects": [
+          "@WarChestEffect"
+        ],
+        "icon": "@WarChestIcon",
+        "icon_small": "@WarChestIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "class": "@ClassFreeCompany",
+              "pools": [
+                "MegaRelicPool"
+              ],
+              "rarity": "common"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WarChestIconSmall",
+        "path": "textures/WarChestIconSmall.png"
+      },
+      {
+        "id": "WarChestIcon",
+        "path": "textures/WarChestIcon.png"
+      }
+    ],
+    "relic_effects": [
+      {
+        "id": "WarChestEffect",
+        "name": "RelicEffectModifyGoldEndOfBattle",
+        "param_int": 99,
+        "param_bool": false
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_war_chest.json": "9cc89b9d1e51c6d391adff56fbdbdec94087c646f4e09340e56d21a04228b13a"
+  }
+}

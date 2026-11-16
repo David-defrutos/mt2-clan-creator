@@ -1,0 +1,218 @@
+{
+  "id": "freecompany-SpawnFreeLance",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnFreeLance"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Free Lance",
+    "french": "Lance libre",
+    "german": "Freie Lanze",
+    "russian": "Вольное копьё",
+    "portuguese": "Lança Livre",
+    "chinese": "自由枪兵",
+    "spanish": "Lanza libre",
+    "chinese_traditional": "自由槍兵",
+    "korean": "자유 창병",
+    "japanese": "自由槍兵"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": 12,
+  "attack": 4,
+  "size": 1,
+  "picture": "assets/897663a905951146198ad48fecfa22a7a2947e06f0a2738fcf5bff4f6c36773f.png",
+  "characterPicture": "assets/9a1b15792dc89ec3dd1e1824a763b7e73adfc4e8b676152e2db25bec78d0a32c.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/FreeLanceCharacterArt.png": "assets/9a1b15792dc89ec3dd1e1824a763b7e73adfc4e8b676152e2db25bec78d0a32c.png",
+    "textures/FreeLanceCardArt.png": "assets/897663a905951146198ad48fecfa22a7a2947e06f0a2738fcf5bff4f6c36773f.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnFreeLance",
+        "names": {
+          "english": "Free Lance",
+          "french": "Lance libre",
+          "german": "Freie Lanze",
+          "russian": "Вольное копьё",
+          "portuguese": "Lança Livre",
+          "chinese": "自由枪兵",
+          "spanish": "Lanza libre",
+          "chinese_traditional": "自由槍兵",
+          "korean": "자유 창병",
+          "japanese": "自由槍兵"
+        },
+        "card_art": "@FreeLance",
+        "cost": 1,
+        "card_type": "monster",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnFreeLanceEffect"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnFreeLanceEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@FreeLance"
+      },
+      {
+        "id": "FreeLanceAbility",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "armor",
+            "count": 3
+          }
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "FreeLance",
+        "names": {
+          "english": "Free Lance",
+          "french": "Lance libre",
+          "german": "Freie Lanze",
+          "russian": "Вольное копьё",
+          "portuguese": "Lança Livre",
+          "chinese": "自由枪兵",
+          "spanish": "Lanza libre",
+          "chinese_traditional": "自由槍兵",
+          "korean": "자유 창병",
+          "japanese": "自由槍兵"
+        },
+        "character_art": "@FreeLanceCharacterArt",
+        "size": 1,
+        "attack_damage": 4,
+        "health": 12,
+        "subtypes": [
+          "@Sub_Warrior",
+          "@Sub_Goblin"
+        ],
+        "triggers": [
+          {
+            "id": "@FreeLanceTrigger"
+          }
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "FreeLanceTrigger",
+        "trigger": "on_spawn",
+        "descriptions": {
+          "english": "Gain [effect0.status0.power] [armor].",
+          "french": "Gagnez [effect0.status0.power] [armor].",
+          "german": "Erhalte [effect0.status0.power] [armor].",
+          "russian": "Получите [effect0.status0.power] [armor].",
+          "portuguese": "Ganhe [effect0.status0.power] [armor].",
+          "chinese": "获得[effect0.status0.power] [armor]。",
+          "spanish": "Gana [effect0.status0.power] [armor].",
+          "chinese_traditional": "獲得[effect0.status0.power] [armor]。",
+          "korean": "[effect0.status0.power] [armor] 획득.",
+          "japanese": "[effect0.status0.power] [armor]を得る。"
+        },
+        "effects": [
+          "@FreeLanceAbility"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Warrior",
+        "names": {
+          "english": "Warrior",
+          "french": "Guerrier",
+          "german": "Krieger",
+          "russian": "Воин",
+          "portuguese": "Guerreiro",
+          "chinese": "战士",
+          "spanish": "Guerrero",
+          "chinese_traditional": "戰士",
+          "korean": "전사",
+          "japanese": "戦士"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "FreeLanceCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@FreeLanceCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.924,
+                "z": 0
+              },
+              "scale": {
+                "x": 0.82,
+                "y": 0.82,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "FreeLance",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@FreeLance"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "FreeLanceCharacterArt",
+        "path": "textures/FreeLanceCharacterArt.png"
+      },
+      {
+        "id": "FreeLance",
+        "path": "textures/FreeLanceCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_free_lance.json": "57c05cc17c61842b57027c6fabf27cd375fd404b247b8afead0bf8778a3bcdce",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "id": "succclan-MourningVeil",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "MourningVeil"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Mourning Veil",
+    "spanish": "Velo de luto",
+    "chinese": "哀悼面纱",
+    "french": "Voile de deuil",
+    "german": "Trauerschleier",
+    "portuguese": "Véu de Luto",
+    "russian": "Траурная вуаль",
+    "chinese_traditional": "哀悼之紗",
+    "japanese": "喪のヴェール",
+    "korean": "애도의 면사포"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/fecaf6b47ee65c5c90c67b114754fe02833341dd0e45665ddb658c41c7aed42b.png",
+  "characterPicture": null,
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "character_trigger_types",
+      "id": "Accursed",
+      "names": {
+        "english": "Accursed",
+        "chinese": "被咒"
+      },
+      "descriptions": {
+        "english": "Triggers when, during your turn, a <b>Blight</b> or [junk] is played or discarded on the floor.",
+        "chinese": "回合结束前在本层打出或舍弃[blight]牌或[junk]牌时触发。"
+      },
+      "file": "packages/Conductor-Conductor/json/triggers.json",
+      "sha256": "0a0e9419dfeeb57f0e0917c7d1eddf6483d0cb58e7b40188c57b4ab2ecae86b5"
+    }
+  ],
+  "assets": {
+    "textures/EquipmentRoomIcons/MourningVeil.png": "assets/35e22ec4843b51c9db2ad4d227ff160ec6e60a259b92b2f7f6d03476bdbddf65.png",
+    "textures/MourningVeilArt.png": "assets/fecaf6b47ee65c5c90c67b114754fe02833341dd0e45665ddb658c41c7aed42b.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "MourningVeil",
+        "names": {
+          "english": "Mourning Veil",
+          "spanish": "Velo de luto",
+          "chinese": "哀悼面纱",
+          "french": "Voile de deuil",
+          "german": "Trauerschleier",
+          "portuguese": "Véu de Luto",
+          "russian": "Траурная вуаль",
+          "chinese_traditional": "哀悼之紗",
+          "japanese": "喪のヴェール",
+          "korean": "애도의 면사포"
+        },
+        "card_art": "@MourningVeilArt",
+        "cost": 1,
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@MourningVeilAttach"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "MourningVeilAttach",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@MourningVeilUpgrade"
+      },
+      {
+        "id": "MourningVeilEffect",
+        "applied_vfx": "@SuccFXHealSmall",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "name": "CardEffectHeal",
+        "param_int": 4
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "MourningVeilUpgrade",
+        "applied_vfx": "@SuccFXHealthBuff",
+        "titles": {
+          "english": "Mourning Veil",
+          "spanish": "Velo de luto",
+          "chinese": "哀悼面纱",
+          "french": "Voile de deuil",
+          "german": "Trauerschleier",
+          "portuguese": "Véu de Luto",
+          "russian": "Траурная вуаль",
+          "chinese_traditional": "哀悼之紗",
+          "japanese": "喪のヴェール",
+          "korean": "애도의 면사포"
+        },
+        "icon": "@MourningVeilIcon",
+        "trigger_upgrades": [
+          "@MourningVeilTrigger"
+        ],
+        "bonus_hp": 8
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "MourningVeilTrigger",
+        "trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "descriptions": {
+          "english": "Restore [effect0.power] health.",
+          "spanish": "Recupera [effect0.power] de vida.",
+          "chinese": "恢复 [effect0.power] 点生命。",
+          "french": "Restaure [effect0.power] points de santé.",
+          "german": "Stellt [effect0.power] Gesundheit wieder her.",
+          "portuguese": "Restaura [effect0.power] de vida.",
+          "russian": "Восстанавливает [effect0.power] здоровья.",
+          "chinese_traditional": "恢復 [effect0.power] 點生命值。",
+          "japanese": "体力を[effect0.power]回復する。",
+          "korean": "체력을 [effect0.power] 회복합니다."
+        },
+        "effects": [
+          "@MourningVeilEffect"
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXHealSmall",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_HealImpactSmall_PS.prefab",
+          "asset_guid": "43d81144eb85739409501ee485f55b0f"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXHealthBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Health_PS.prefab",
+          "asset_guid": "163c171f05bdd644fbadfa6fc01064a0"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "sprites": [
+      {
+        "id": "MourningVeilIcon",
+        "path": "textures/EquipmentRoomIcons/MourningVeil.png"
+      },
+      {
+        "id": "MourningVeilArt",
+        "path": "textures/MourningVeilArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "MourningVeilArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@MourningVeilArt"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/equipment/equip_MourningVeil.json": "aedd49ad6b6157d5e57a7e41e67e61381c97abd55a6a60dab0f6e039877878f7",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

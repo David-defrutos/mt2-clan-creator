@@ -1,0 +1,145 @@
+{
+  "id": "freecompany-GrimoireMagicMissile1",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "GrimoireMagicMissile1"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Magic Missile",
+    "french": "Projectile magique",
+    "german": "Magisches Geschoss",
+    "russian": "Волшебная стрела",
+    "portuguese": "Míssil Mágico",
+    "chinese": "魔法飞弹",
+    "spanish": "Proyectil mágico",
+    "chinese_traditional": "魔法飛彈",
+    "korean": "마법 화살",
+    "japanese": "マジックミサイル"
+  },
+  "descriptions": {
+    "korean": "무작위 적에게 [effect0.power] 피해를 3회 가함.",
+    "japanese": "ランダムな敵に[effect0.power]ダメージを3回与える。",
+    "chinese": "随机对一个敌人造成[effect0.power]点伤害，重复3次。",
+    "german": "Füge einem zufälligen Gegner 3-mal [effect0.power] Schaden zu.",
+    "portuguese": "Cause [effect0.power] de dano a um inimigo aleatório 3 vezes.",
+    "french": "Inflige [effect0.power] dégâts à un ennemi aléatoire, 3 fois.",
+    "russian": "Нанесите [effect0.power] урона случайному врагу 3 раза.",
+    "chinese_traditional": "隨機對一個敵人造成[effect0.power]點傷害，重複3次。",
+    "spanish": "Inflige [effect0.power] de daño a un enemigo aleatorio 3 veces.",
+    "english": "Deal [effect0.power] damage to a random enemy 3 times."
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/0b940663a0c87b3db5df80af07f67fbc6ab7b1e6068a19bf760b66a05c491d56.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/MagicMissileArt.png": "assets/0b940663a0c87b3db5df80af07f67fbc6ab7b1e6068a19bf760b66a05c491d56.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "GrimoireMagicMissile1",
+        "names": {
+          "english": "Magic Missile",
+          "french": "Projectile magique",
+          "german": "Magisches Geschoss",
+          "russian": "Волшебная стрела",
+          "portuguese": "Míssil Mágico",
+          "chinese": "魔法飞弹",
+          "spanish": "Proyectil mágico",
+          "chinese_traditional": "魔法飛彈",
+          "korean": "마법 화살",
+          "japanese": "マジックミサイル"
+        },
+        "descriptions": {
+          "korean": "무작위 적에게 [effect0.power] 피해를 3회 가함.",
+          "japanese": "ランダムな敵に[effect0.power]ダメージを3回与える。",
+          "chinese": "随机对一个敌人造成[effect0.power]点伤害，重复3次。",
+          "german": "Füge einem zufälligen Gegner 3-mal [effect0.power] Schaden zu.",
+          "portuguese": "Cause [effect0.power] de dano a um inimigo aleatório 3 vezes.",
+          "french": "Inflige [effect0.power] dégâts à un ennemi aléatoire, 3 fois.",
+          "russian": "Нанесите [effect0.power] урона случайному врагу 3 раза.",
+          "chinese_traditional": "隨機對一個敵人造成[effect0.power]點傷害，重複3次。",
+          "spanish": "Inflige [effect0.power] de daño a un enemigo aleatorio 3 veces.",
+          "english": "Deal [effect0.power] damage to a random enemy 3 times."
+        },
+        "card_art": "@MagicMissile",
+        "cost": 0,
+        "card_type": "spell",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@MagicMissileDart1",
+          "@MagicMissileDart1",
+          "@MagicMissileDart1"
+        ],
+        "traits": [
+          "@GrimoireEphemeralTrait"
+        ],
+        "hide_in_logbook": true,
+        "unlock_level": 99
+      }
+    ],
+    "traits": [
+      {
+        "id": "GrimoireEphemeralTrait",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "effects": [
+      {
+        "id": "MagicMissileDart1",
+        "applied_vfx": "@CardMagicMissileArcaneVFX",
+        "name": "CardEffectDamage",
+        "target_mode": "random_in_room",
+        "target_team": "heroes",
+        "param_int": 3
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "CardMagicMissileArcaneVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "MagicMissile",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@MagicMissile"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "MagicMissile",
+        "path": "textures/MagicMissileArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/cards/card_magic_missile.json": "009df893749283e11a068e96bbcbf45c603e38b07deac535201b080ecd3220f7",
+    "json/champions/champion_vesper_grimoire.json": "36bd076fb3e998cda3496d97d9f4420a7f8189a70123df44f56cc708cffa22fa"
+  }
+}

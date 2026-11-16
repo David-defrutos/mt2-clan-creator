@@ -1,0 +1,193 @@
+{
+  "id": "freecompany-KiteShield",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "KiteShield"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Kite Shield",
+    "french": "Écu",
+    "german": "Drachenschild",
+    "russian": "Каплевидный щит",
+    "portuguese": "Escudo de Pipa",
+    "chinese": "鸢盾",
+    "spanish": "Escudo de cometa",
+    "chinese_traditional": "鳶盾",
+    "korean": "연형 방패",
+    "japanese": "カイトシールド"
+  },
+  "descriptions": {
+    "english": "<b>+15</b> [health]. Apply <b>6</b> [armor] and [steelguard].",
+    "french": "<b>+15</b> [health]. Appliquez <b>6</b> [armor] et [steelguard].",
+    "german": "<b>+15</b> [health]. Erhalte <b>6</b> [armor] und [steelguard].",
+    "russian": "<b>+15</b> [health]. Получите <b>6</b> [armor] и [steelguard].",
+    "portuguese": "<b>+15</b> [health]. Aplique <b>6</b> [armor] e [steelguard].",
+    "chinese": "<b>+15</b> [health]. 施加<b>6</b> [armor]和[steelguard]。",
+    "spanish": "<b>+15</b> [health]. Añade <b>6</b> [armor] y [steelguard].",
+    "chinese_traditional": "<b>+15</b> [health]. 施加<b>6</b> [armor]和[steelguard]。",
+    "korean": "<b>+15</b> [health]. <b>6</b> [armor] 및 [steelguard] 부여.",
+    "japanese": "<b>+15</b> [health]. <b>6</b> [armor]と[steelguard]を付与。"
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/d808dc7ab1094c3ceee2f8455edc939e68c048425e519b5ab85de3dec24be2b8.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/KiteShieldArt.png": "assets/d808dc7ab1094c3ceee2f8455edc939e68c048425e519b5ab85de3dec24be2b8.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "KiteShield",
+        "names": {
+          "english": "Kite Shield",
+          "french": "Écu",
+          "german": "Drachenschild",
+          "russian": "Каплевидный щит",
+          "portuguese": "Escudo de Pipa",
+          "chinese": "鸢盾",
+          "spanish": "Escudo de cometa",
+          "chinese_traditional": "鳶盾",
+          "korean": "연형 방패",
+          "japanese": "カイトシールド"
+        },
+        "descriptions": {
+          "english": "<b>+15</b> [health]. Apply <b>6</b> [armor] and [steelguard].",
+          "french": "<b>+15</b> [health]. Appliquez <b>6</b> [armor] et [steelguard].",
+          "german": "<b>+15</b> [health]. Erhalte <b>6</b> [armor] und [steelguard].",
+          "russian": "<b>+15</b> [health]. Получите <b>6</b> [armor] и [steelguard].",
+          "portuguese": "<b>+15</b> [health]. Aplique <b>6</b> [armor] e [steelguard].",
+          "chinese": "<b>+15</b> [health]. 施加<b>6</b> [armor]和[steelguard]。",
+          "spanish": "<b>+15</b> [health]. Añade <b>6</b> [armor] y [steelguard].",
+          "chinese_traditional": "<b>+15</b> [health]. 施加<b>6</b> [armor]和[steelguard]。",
+          "korean": "<b>+15</b> [health]. <b>6</b> [armor] 및 [steelguard] 부여.",
+          "japanese": "<b>+15</b> [health]. <b>6</b> [armor]と[steelguard]を付与。"
+        },
+        "card_art": "@KiteShield",
+        "cost": 1,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipKiteShield",
+          "@KiteShieldApplyArmor"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "KiteShieldApplyArmor",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "armor",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "id": "EquipKiteShield",
+        "applied_vfx": "@KitWarriorArmorVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgKiteShield"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgKiteShield",
+        "titles": {
+          "english": "Kite Shield",
+          "french": "Écu",
+          "german": "Drachenschild",
+          "russian": "Каплевидный щит",
+          "portuguese": "Escudo de Pipa",
+          "chinese": "鸢盾",
+          "spanish": "Escudo de cometa",
+          "chinese_traditional": "鳶盾",
+          "korean": "연형 방패",
+          "japanese": "カイトシールド"
+        },
+        "descriptions": {
+          "english": "<b>+15</b> [health]. [steelguard].",
+          "french": "<b>+15</b> [health]. [steelguard].",
+          "german": "<b>+15</b> [health]. [steelguard].",
+          "russian": "<b>+15</b> [health]. [steelguard].",
+          "portuguese": "<b>+15</b> [health]. [steelguard].",
+          "chinese": "<b>+15</b> [health]. [steelguard].",
+          "spanish": "<b>+15</b> [health]. [steelguard].",
+          "chinese_traditional": "<b>+15</b> [health]. [steelguard].",
+          "korean": "<b>+15</b> [health]. [steelguard].",
+          "japanese": "<b>+15</b> [health]. [steelguard]."
+        },
+        "icon": "@KiteShield",
+        "bonus_hp": 15,
+        "status_effect_upgrades": [
+          {
+            "status": "steelguard",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "KiteShield",
+        "path": "textures/KiteShieldArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitWarriorArmorVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Wurmkin/EchoInfusion/FX_WurmkinBuff.prefab",
+          "asset_guid": "24aff4cc201a62e41838f1d11b277562"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "KiteShield",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@KiteShield"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/kits/kit_warrior.json": "f7701b9d189e8ea8b681f01a7139c1b026d9da6015eb1f8a168b91a1ca113a0d",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

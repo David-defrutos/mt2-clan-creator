@@ -1,0 +1,191 @@
+{
+  "id": "freecompany-ReaversMaul",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "ReaversMaul"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Reaver's Maul",
+    "french": "Masse du ravageur",
+    "german": "Plündererhammer",
+    "russian": "Молот разорителя",
+    "portuguese": "Malho do Saqueador",
+    "chinese": "劫掠者巨锤",
+    "spanish": "Mazo del saqueador",
+    "chinese_traditional": "劫掠者巨錘",
+    "korean": "약탈자의 망치",
+    "japanese": "略奪者の大槌"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/29936c1e575e5cf5f8b026821de94dee900bb9b25c58f5376c5460019ede7de6.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ReaversMaulArt.png": "assets/29936c1e575e5cf5f8b026821de94dee900bb9b25c58f5376c5460019ede7de6.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "ReaversMaul",
+        "names": {
+          "english": "Reaver's Maul",
+          "french": "Masse du ravageur",
+          "german": "Plündererhammer",
+          "russian": "Молот разорителя",
+          "portuguese": "Malho do Saqueador",
+          "chinese": "劫掠者巨锤",
+          "spanish": "Mazo del saqueador",
+          "chinese_traditional": "劫掠者巨錘",
+          "korean": "약탈자의 망치",
+          "japanese": "略奪者の大槌"
+        },
+        "card_art": "@ReaversMaul",
+        "cost": 2,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipReaversMaul"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "EquipReaversMaul",
+        "applied_vfx": "@KitBarbarianBuffVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgReaversMaul"
+      },
+      {
+        "id": "ReaversMaulTrigEffect",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "buff",
+            "count": 6
+          },
+          {
+            "status": "burst",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgReaversMaul",
+        "titles": {
+          "english": "Reaver's Maul",
+          "french": "Masse du ravageur",
+          "german": "Plündererhammer",
+          "russian": "Молот разорителя",
+          "portuguese": "Malho do Saqueador",
+          "chinese": "劫掠者巨锤",
+          "spanish": "Mazo del saqueador",
+          "chinese_traditional": "劫掠者巨錘",
+          "korean": "약탈자의 망치",
+          "japanese": "略奪者の大槌"
+        },
+        "descriptions": {
+          "english": "<b>+18</b> [attack]. <b>Slay</b>: gain <b>6</b> [rage] and <b>1</b> [burst].",
+          "french": "<b>+18</b> [attack]. <b>Élimination</b> : gagnez <b>6</b> [rage] et <b>1</b> [burst].",
+          "german": "<b>+18</b> [attack]. <b>Töten</b>: Erhalte <b>6</b> [rage] und <b>1</b> [burst].",
+          "russian": "<b>+18</b> [attack]. <b>Убийство</b>: получите <b>6</b> [rage] и <b>1</b> [burst].",
+          "portuguese": "<b>+18</b> [attack]. <b>Abate</b>: ganhe <b>6</b> [rage] e <b>1</b> [burst].",
+          "chinese": "<b>+18</b> [attack]. <b>击杀</b>：获得<b>6</b> [rage]和<b>1</b> [burst]。",
+          "spanish": "<b>+18</b> [attack]. <b>Matanza</b>: gana <b>6</b> [rage] y <b>1</b> [burst].",
+          "chinese_traditional": "<b>+18</b> [attack]. <b>擊殺</b>：獲得<b>6</b> [rage]和<b>1</b> [burst]。",
+          "korean": "<b>+18</b> [attack]. <b>처치</b>: <b>6</b> [rage] 및 <b>1</b> [burst] 획득.",
+          "japanese": "<b>+18</b> [attack]. <b>撃破</b>：<b>6</b> [rage]と<b>1</b> [burst]を得る。"
+        },
+        "icon": "@ReaversMaul",
+        "bonus_damage": 18,
+        "trigger_upgrades": [
+          "@ReaversMaulTrigger"
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "ReaversMaulTrigger",
+        "trigger": "on_kill",
+        "descriptions": {
+          "english": "Gain [effect0.status0.power] [rage] and [effect0.status1.power] [burst].",
+          "french": "Gagnez [effect0.status0.power] [rage] et [effect0.status1.power] [burst].",
+          "german": "Erhalte [effect0.status0.power] [rage] und [effect0.status1.power] [burst].",
+          "russian": "Получите [effect0.status0.power] [rage] и [effect0.status1.power] [burst].",
+          "portuguese": "Ganhe [effect0.status0.power] [rage] e [effect0.status1.power] [burst].",
+          "chinese": "获得[effect0.status0.power] [rage]和[effect0.status1.power] [burst]。",
+          "spanish": "Gana [effect0.status0.power] [rage] y [effect0.status1.power] [burst].",
+          "chinese_traditional": "獲得[effect0.status0.power] [rage]和[effect0.status1.power] [burst]。",
+          "korean": "[effect0.status0.power] [rage] 및 [effect0.status1.power] [burst] 획득.",
+          "japanese": "[effect0.status0.power] [rage]と[effect0.status1.power] [burst]を得る。"
+        },
+        "effects": [
+          "@ReaversMaulTrigEffect"
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ReaversMaul",
+        "path": "textures/ReaversMaulArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitBarbarianBuffVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ReaversMaul",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ReaversMaul"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/kits/kit_barbarian.json": "bb4e9b26871aec51edc5563f0903f9e8854ef2a4970cafef85430cca8a75ff07",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

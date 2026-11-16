@@ -1,0 +1,233 @@
+{
+  "id": "freecompany-SpawnTwoHeadedTroll",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnTwoHeadedTroll"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Two-Headed Troll",
+    "french": "Troll à deux têtes",
+    "german": "Zweiköpfiger Troll",
+    "russian": "Двухголовый тролль",
+    "portuguese": "Troll de Duas Cabeças",
+    "chinese": "双头巨魔",
+    "spanish": "Trol de dos cabezas",
+    "chinese_traditional": "雙頭巨魔",
+    "korean": "쌍두 트롤",
+    "japanese": "双頭のトロール"
+  },
+  "descriptions": {},
+  "cost": 6,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": 50,
+  "attack": 40,
+  "size": 4,
+  "picture": "assets/0331ce381682f9f5f0e03d2a1c6b2e334c8568f43e17c14267947f4df129a622.png",
+  "characterPicture": "assets/63bd0bd3eaad1a5386b31bf7e5957c036e3b73c8273ef11f82116e40c6f56da8.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/TwoHeadedTrollArt.png": "assets/0331ce381682f9f5f0e03d2a1c6b2e334c8568f43e17c14267947f4df129a622.png",
+    "textures/TwoHeadedTrollCharacterArt.png": "assets/63bd0bd3eaad1a5386b31bf7e5957c036e3b73c8273ef11f82116e40c6f56da8.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnTwoHeadedTroll",
+        "names": {
+          "english": "Two-Headed Troll",
+          "french": "Troll à deux têtes",
+          "german": "Zweiköpfiger Troll",
+          "russian": "Двухголовый тролль",
+          "portuguese": "Troll de Duas Cabeças",
+          "chinese": "双头巨魔",
+          "spanish": "Trol de dos cabezas",
+          "chinese_traditional": "雙頭巨魔",
+          "korean": "쌍두 트롤",
+          "japanese": "双頭のトロール"
+        },
+        "card_art": "@TwoHeadedTroll",
+        "cost": 6,
+        "card_type": "monster",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnTwoHeadedTrollEffect"
+        ]
+      },
+      {
+        "id": "TwoHeadedWrath",
+        "names": {
+          "english": "Wrath",
+          "french": "Courroux",
+          "german": "Zorn",
+          "russian": "Гнев",
+          "portuguese": "Ira",
+          "chinese": "狂怒",
+          "spanish": "Ira",
+          "chinese_traditional": "狂怒",
+          "korean": "격노",
+          "japanese": "激怒"
+        },
+        "descriptions": {
+          "english": "Attack immediately.",
+          "french": "Attaque immédiatement.",
+          "german": "Greift sofort an.",
+          "russian": "Немедленно атакует.",
+          "portuguese": "Ataca imediatamente.",
+          "chinese": "立即攻击。",
+          "spanish": "Ataca inmediatamente.",
+          "chinese_traditional": "立即攻擊。",
+          "korean": "즉시 공격.",
+          "japanese": "即座に攻撃。"
+        },
+        "card_art": "@TwoHeadedTroll",
+        "is_an_ability": true,
+        "cooldown": 3,
+        "targetless": true,
+        "targets_room": false,
+        "card_type": "spell",
+        "effects": [
+          "@TwoHeadedWrathAttack"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnTwoHeadedTrollEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@TwoHeadedTroll"
+      },
+      {
+        "id": "TwoHeadedWrathAttack",
+        "name": "CardEffectAttackWithUnit",
+        "target_mode": "drop_target_character",
+        "target_team": "both"
+      }
+    ],
+    "characters": [
+      {
+        "id": "TwoHeadedTroll",
+        "names": {
+          "english": "Two-Headed Troll",
+          "french": "Troll à deux têtes",
+          "german": "Zweiköpfiger Troll",
+          "russian": "Двухголовый тролль",
+          "portuguese": "Troll de Duas Cabeças",
+          "chinese": "双头巨魔",
+          "spanish": "Trol de dos cabezas",
+          "chinese_traditional": "雙頭巨魔",
+          "korean": "쌍두 트롤",
+          "japanese": "双頭のトロール"
+        },
+        "character_art": "@TwoHeadedTrollCharacterArt",
+        "size": 4,
+        "attack_damage": 40,
+        "health": 50,
+        "subtypes": [
+          "@Sub_Barbarian",
+          "@Sub_Troll"
+        ],
+        "starting_status_effects": [
+          {
+            "status": "regen",
+            "count": 10
+          }
+        ],
+        "triggers": [],
+        "ability": "@TwoHeadedWrath"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "TwoHeadedTroll",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@TwoHeadedTroll"
+          }
+        }
+      },
+      {
+        "id": "TwoHeadedTrollCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@TwoHeadedTrollCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.5,
+                "z": 0
+              },
+              "scale": {
+                "x": 1.25,
+                "y": 1.25,
+                "z": 1
+              },
+              "offset": {
+                "y": -0.2
+              }
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "TwoHeadedTroll",
+        "path": "textures/TwoHeadedTrollArt.png"
+      },
+      {
+        "id": "TwoHeadedTrollCharacterArt",
+        "path": "textures/TwoHeadedTrollCharacterArt.png"
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Troll",
+        "names": {
+          "english": "Troll",
+          "french": "Troll",
+          "german": "Troll",
+          "russian": "Тролль",
+          "portuguese": "Troll",
+          "chinese": "巨魔",
+          "spanish": "Trol",
+          "chinese_traditional": "巨魔",
+          "korean": "트롤",
+          "japanese": "トロール"
+        }
+      },
+      {
+        "id": "Sub_Barbarian",
+        "names": {
+          "english": "Barbarian",
+          "french": "Barbare",
+          "german": "Barbar",
+          "russian": "Варвар",
+          "portuguese": "Bárbaro",
+          "chinese": "野蛮人",
+          "spanish": "Bárbaro",
+          "chinese_traditional": "野蠻人",
+          "korean": "야만전사",
+          "japanese": "バーバリアン"
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_troll.json": "0101a4aa26a122261bbaf962f12e215a785e10ae1f38def3dd9539cac8ec8d66",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

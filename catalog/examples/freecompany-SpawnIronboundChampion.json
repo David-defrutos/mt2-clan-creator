@@ -1,0 +1,293 @@
+{
+  "id": "freecompany-SpawnIronboundChampion",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnIronboundChampion"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Ironbound Champion",
+    "french": "Champion bardé de fer",
+    "german": "Eisenchampion",
+    "russian": "Железный чемпион",
+    "portuguese": "Campeão de Ferro",
+    "chinese": "铁甲勇士",
+    "spanish": "Campeón de hierro",
+    "chinese_traditional": "鐵甲勇士",
+    "korean": "철갑 투사",
+    "japanese": "鉄鎧の闘士"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": 40,
+  "attack": 10,
+  "size": 2,
+  "picture": "assets/4e3ad8eb14760dc3a2009d5b85d016c7fa8fa8387f257951a19f5b38ef389347.png",
+  "characterPicture": "assets/17c084dde68fd4db2113778ba0bb67e7e06aa40b61cecf738fe7d468994398fa.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/IronboundChampionCardArt.png": "assets/4e3ad8eb14760dc3a2009d5b85d016c7fa8fa8387f257951a19f5b38ef389347.png",
+    "textures/IronboundChampionCharacterArt.png": "assets/17c084dde68fd4db2113778ba0bb67e7e06aa40b61cecf738fe7d468994398fa.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnIronboundChampion",
+        "names": {
+          "english": "Ironbound Champion",
+          "french": "Champion bardé de fer",
+          "german": "Eisenchampion",
+          "russian": "Железный чемпион",
+          "portuguese": "Campeão de Ferro",
+          "chinese": "铁甲勇士",
+          "spanish": "Campeón de hierro",
+          "chinese_traditional": "鐵甲勇士",
+          "korean": "철갑 투사",
+          "japanese": "鉄鎧の闘士"
+        },
+        "card_art": "@IronboundChampion",
+        "cost": 2,
+        "card_type": "monster",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnIronboundChampionEffect"
+        ]
+      },
+      {
+        "id": "IronboundChampionAbility",
+        "names": {
+          "english": "Ironbound Oath",
+          "french": "Serment de fer",
+          "german": "Eiserner Schwur",
+          "russian": "Железная клятва",
+          "portuguese": "Juramento de Ferro",
+          "chinese": "铁甲誓言",
+          "spanish": "Juramento de hierro",
+          "chinese_traditional": "鐵甲誓言",
+          "korean": "철갑의 맹세",
+          "japanese": "鉄の誓い"
+        },
+        "descriptions": {
+          "english": "Gain [effect0.status0.power] [damageshield] and [effect1.status0.power] [armor].",
+          "french": "Gagnez [effect0.status0.power] [damageshield] et [effect1.status0.power] [armor].",
+          "german": "Erhalte [effect0.status0.power] [damageshield] und [effect1.status0.power] [armor].",
+          "russian": "Получите [effect0.status0.power] [damageshield] и [effect1.status0.power] [armor].",
+          "portuguese": "Ganhe [effect0.status0.power] [damageshield] e [effect1.status0.power] [armor].",
+          "chinese": "获得[effect0.status0.power] [damageshield]和[effect1.status0.power] [armor]。",
+          "spanish": "Gana [effect0.status0.power] [damageshield] y [effect1.status0.power] [armor].",
+          "chinese_traditional": "獲得[effect0.status0.power] [damageshield]和[effect1.status0.power] [armor]。",
+          "korean": "[effect0.status0.power] [damageshield] 및 [effect1.status0.power] [armor] 획득.",
+          "japanese": "[effect0.status0.power] [damageshield]と[effect1.status0.power] [armor]を得る。"
+        },
+        "card_art": "@IronboundChampion",
+        "is_an_ability": true,
+        "cooldown": 3,
+        "initial_cooldown": 3,
+        "targetless": true,
+        "targets_room": false,
+        "card_type": "spell",
+        "effects": [
+          "@IronboundChampionAbilityGuard",
+          "@IronboundChampionAbilityArmor"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnIronboundChampionEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@IronboundChampion"
+      },
+      {
+        "id": "IronboundChampionAbilityArmor",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "armor",
+            "count": 20
+          }
+        ]
+      },
+      {
+        "id": "IronboundChampionAbilityGuard",
+        "applied_vfx": "@UnitIronboundChampionArmorVFX",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "damage shield",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "id": "IronboundChampionArmor",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "armor",
+            "count": 10
+          }
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "IronboundChampion",
+        "names": {
+          "english": "Ironbound Champion",
+          "french": "Champion bardé de fer",
+          "german": "Eisenchampion",
+          "russian": "Железный чемпион",
+          "portuguese": "Campeão de Ferro",
+          "chinese": "铁甲勇士",
+          "spanish": "Campeón de hierro",
+          "chinese_traditional": "鐵甲勇士",
+          "korean": "철갑 투사",
+          "japanese": "鉄鎧の闘士"
+        },
+        "character_art": "@IronboundChampionCharacterArt",
+        "size": 2,
+        "attack_damage": 10,
+        "health": 40,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Warrior",
+          "@Sub_Goblin"
+        ],
+        "triggers": [
+          {
+            "id": "@IronboundChampionTrigger"
+          }
+        ],
+        "ability": "@IronboundChampionAbility"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "UnitIronboundChampionArmorVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Wurmkin/EchoInfusion/FX_WurmkinBuff.prefab",
+          "asset_guid": "24aff4cc201a62e41838f1d11b277562"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "IronboundChampion",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@IronboundChampion"
+          }
+        }
+      },
+      {
+        "id": "IronboundChampionCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@IronboundChampionCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.468,
+                "z": 0
+              },
+              "scale": {
+                "x": 0.683,
+                "y": 0.683,
+                "z": 1
+              }
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "IronboundChampion",
+        "path": "textures/IronboundChampionCardArt.png"
+      },
+      {
+        "id": "IronboundChampionCharacterArt",
+        "path": "textures/IronboundChampionCharacterArt.png"
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "IronboundChampionTrigger",
+        "trigger": "on_spawn",
+        "descriptions": {
+          "english": "Apply [effect0.status0.power] [armor] to all friendly units on this floor.",
+          "french": "Appliquez [effect0.status0.power] [armor] à toutes les unités alliées de cet étage.",
+          "german": "Verleihe allen verbündeten Einheiten auf diesem Stockwerk [effect0.status0.power] [armor].",
+          "russian": "Наложите [effect0.status0.power] [armor] на все союзные боевые единицы на этом этаже.",
+          "portuguese": "Aplique [effect0.status0.power] [armor] a todas as unidades aliadas neste andar.",
+          "chinese": "对本层所有友方单位施加[effect0.status0.power] [armor]。",
+          "spanish": "Añade [effect0.status0.power] [armor] a todas las unidades aliadas de este piso.",
+          "chinese_traditional": "對本層所有友方單位施加[effect0.status0.power] [armor]。",
+          "korean": "이 층의 모든 아군 유닛에게 [effect0.status0.power] [armor] 부여.",
+          "japanese": "この階の味方ユニット全体に[effect0.status0.power] [armor]を付与。"
+        },
+        "effects": [
+          "@IronboundChampionArmor"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Warrior",
+        "names": {
+          "english": "Warrior",
+          "french": "Guerrier",
+          "german": "Krieger",
+          "russian": "Воин",
+          "portuguese": "Guerreiro",
+          "chinese": "战士",
+          "spanish": "Guerrero",
+          "chinese_traditional": "戰士",
+          "korean": "전사",
+          "japanese": "戦士"
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_ironbound_champion.json": "3a7875a4ab73d05026f0836c38f155adb4946688810fd46125516853f2bbc4b0",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

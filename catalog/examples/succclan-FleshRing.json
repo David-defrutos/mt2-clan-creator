@@ -1,0 +1,149 @@
+{
+  "id": "succclan-FleshRing",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "relics",
+    "id": "FleshRing"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Flesh Ring",
+    "chinese": "血肉之灾",
+    "spanish": "Anillo de carne",
+    "french": "Anneau de chair",
+    "german": "Fleischring",
+    "portuguese": "Anel de Carne",
+    "russian": "Кольцо плоти",
+    "chinese_traditional": "血肉指環",
+    "japanese": "肉の指輪",
+    "korean": "살점 반지"
+  },
+  "descriptions": {
+    "english": "The first <b>Blight</b> you play each turn draws you [effect0.power] card.",
+    "chinese": "每回合首次打出<b>灾祸</b>牌时，抽 [effect0.power] 张牌。",
+    "spanish": "La primera <b>Ruina</b> que juegas cada turno te hace robar [effect0.power] cartas.",
+    "french": "Le premier <b>Fléau</b> joué chaque tour vous fait piocher [effect0.power] cartes.",
+    "german": "Der erste <b>Fluch</b>, den du in jedem Zug spielst, lässt dich [effect0.power] Karten ziehen.",
+    "portuguese": "A primeira <b>Praga</b> jogada a cada turno faz você comprar [effect0.power] cartas.",
+    "russian": "Первая <b>Порча</b>, сыгранная за ход, даёт [effect0.power] карт.",
+    "chinese_traditional": "每回合打出的第一張<b>禍害</b>牌使你抽 [effect0.power] 張牌。",
+    "japanese": "各ターン最初にプレイした<b>荒廃</b>で、カードを[effect0.power]枚引く。",
+    "korean": "매 턴 처음 사용한 <b>저주</b> 카드로 카드를 [effect0.power]장 뽑습니다."
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/d1a427f4c90bd7d5f3b8459d06466992689e4ba82ed3d4d429a51ed525100ae9.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/RelicIcons/FleshRingIconSmall.png": "assets/1f67727bda439f70cdbb4f41ca036a5d78a23569299057df8ca937b13406f6a1.png",
+    "textures/RelicIcons/FleshRingIcon.png": "assets/d1a427f4c90bd7d5f3b8459d06466992689e4ba82ed3d4d429a51ed525100ae9.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "FleshRing",
+        "type": "collectable",
+        "names": {
+          "english": "Flesh Ring",
+          "chinese": "血肉之灾",
+          "spanish": "Anillo de carne",
+          "french": "Anneau de chair",
+          "german": "Fleischring",
+          "portuguese": "Anel de Carne",
+          "russian": "Кольцо плоти",
+          "chinese_traditional": "血肉指環",
+          "japanese": "肉の指輪",
+          "korean": "살점 반지"
+        },
+        "descriptions": {
+          "english": "The first <b>Blight</b> you play each turn draws you [effect0.power] card.",
+          "chinese": "每回合首次打出<b>灾祸</b>牌时，抽 [effect0.power] 张牌。",
+          "spanish": "La primera <b>Ruina</b> que juegas cada turno te hace robar [effect0.power] cartas.",
+          "french": "Le premier <b>Fléau</b> joué chaque tour vous fait piocher [effect0.power] cartes.",
+          "german": "Der erste <b>Fluch</b>, den du in jedem Zug spielst, lässt dich [effect0.power] Karten ziehen.",
+          "portuguese": "A primeira <b>Praga</b> jogada a cada turno faz você comprar [effect0.power] cartas.",
+          "russian": "Первая <b>Порча</b>, сыгранная за ход, даёт [effect0.power] карт.",
+          "chinese_traditional": "每回合打出的第一張<b>禍害</b>牌使你抽 [effect0.power] 張牌。",
+          "japanese": "各ターン最初にプレイした<b>荒廃</b>で、カードを[effect0.power]枚引く。",
+          "korean": "매 턴 처음 사용한 <b>저주</b> 카드로 카드를 [effect0.power]장 뽑습니다."
+        },
+        "disallow_in_deployment": false,
+        "relic_effects": [
+          "@FleshRingEffect"
+        ],
+        "icon": "@FleshRingIcon",
+        "icon_small": "@FleshRingIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "class": "@ClassSuccubus",
+              "pools": [
+                "MegaRelicPool"
+              ],
+              "rarity": "common",
+              "unlock_level": 0
+            }
+          }
+        ],
+        "relic_activated_texts": {
+          "english": "Draw 1 card.",
+          "chinese": "抽 1 张牌。",
+          "spanish": "Roba 1 carta.",
+          "french": "Piochez 1 carte.",
+          "german": "Ziehe 1 Karte.",
+          "portuguese": "Compre 1 carta.",
+          "russian": "Возьмите 1 карту.",
+          "chinese_traditional": "抽 1 張牌。",
+          "japanese": "カードを1枚引く。",
+          "korean": "카드를 1장 뽑습니다."
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "FleshRingIconSmall",
+        "path": "textures/RelicIcons/FleshRingIconSmall.png"
+      },
+      {
+        "id": "FleshRingIcon",
+        "path": "textures/RelicIcons/FleshRingIcon.png"
+      }
+    ],
+    "relic_effects": [
+      {
+        "id": "FleshRingEffect",
+        "name": "RelicEffectCardDrawOnCardPlay",
+        "param_card_type": "blight",
+        "param_int": 1,
+        "conditions": [
+          {
+            "id": "@FleshRingOncePerTurn"
+          }
+        ]
+      }
+    ],
+    "relic_effect_conditions": [
+      {
+        "id": "FleshRingOncePerTurn",
+        "param_track_trigger_count": true,
+        "allow_multiple_triggers_per_duration": false,
+        "param_entry_duration": "this_turn",
+        "param_int": 1
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_FleshRing.json": "edb953ff6e2ebdcd04c21bad1d24e2793faa3c0df1ec11f0dcc5edd52334f4e9"
+  }
+}

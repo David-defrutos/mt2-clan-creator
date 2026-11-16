@@ -1,0 +1,291 @@
+{
+  "id": "succclan-SpawnSuccbusTorturer",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "SpawnSuccbusTorturer"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Succubus Torturer",
+    "chinese": "魅魔拷打者",
+    "spanish": "Torturadora súcubo",
+    "french": "Tortionnaire succube",
+    "german": "Sukkubus-Folterin",
+    "portuguese": "Torturadora Súcubo",
+    "russian": "Истязательница-суккуб",
+    "chinese_traditional": "魅魔拷問者",
+    "japanese": "サキュバスの拷問者",
+    "korean": "서큐버스 고문관"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 10,
+  "attack": 15,
+  "size": 2,
+  "picture": "assets/b77499150794a070b6fe8c0acbba9e05e6efe13a0fc93d51375e3da0ad94ed9f.png",
+  "characterPicture": "assets/63282ab5e3fd0bfac0648916e54ee047cdb531f0de71deffc728367107db68d5.png",
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "character_trigger_types",
+      "id": "Accursed",
+      "names": {
+        "english": "Accursed",
+        "chinese": "被咒"
+      },
+      "descriptions": {
+        "english": "Triggers when, during your turn, a <b>Blight</b> or [junk] is played or discarded on the floor.",
+        "chinese": "回合结束前在本层打出或舍弃[blight]牌或[junk]牌时触发。"
+      },
+      "file": "packages/Conductor-Conductor/json/triggers.json",
+      "sha256": "0a0e9419dfeeb57f0e0917c7d1eddf6483d0cb58e7b40188c57b4ab2ecae86b5"
+    }
+  ],
+  "assets": {
+    "textures/SuccbusTorturerCharacterArt.png": "assets/63282ab5e3fd0bfac0648916e54ee047cdb531f0de71deffc728367107db68d5.png",
+    "textures/SuccbusTorturerCardArt.png": "assets/b77499150794a070b6fe8c0acbba9e05e6efe13a0fc93d51375e3da0ad94ed9f.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnSuccbusTorturer",
+        "names": {
+          "english": "Succubus Torturer",
+          "chinese": "魅魔拷打者",
+          "spanish": "Torturadora súcubo",
+          "french": "Tortionnaire succube",
+          "german": "Sukkubus-Folterin",
+          "portuguese": "Torturadora Súcubo",
+          "russian": "Истязательница-суккуб",
+          "chinese_traditional": "魅魔拷問者",
+          "japanese": "サキュバスの拷問者",
+          "korean": "서큐버스 고문관"
+        },
+        "card_art": "@SuccbusTorturerCardArt",
+        "cost": 1,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "effects": [
+          "@SpawnSuccbusTorturer"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnSuccbusTorturer",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@SuccbusTorturer"
+      },
+      {
+        "id": "SuccbusTorturerAccursedWeakness",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "front_in_room",
+        "target_team": "heroes",
+        "param_status_effects": [
+          {
+            "status": "melee weakness",
+            "count": 1
+          }
+        ],
+        "applied_vfx": "@SuccFXCursePulse"
+      },
+      {
+        "id": "SuccbusTorturerWeakness",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "last_attacked_character",
+        "target_team": "heroes",
+        "param_status_effects": [
+          {
+            "status": "melee weakness",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "SuccbusTorturer",
+        "attack_vfx": "@SuccFXBladeAttack",
+        "impact_vfx": "@SuccFXShadowImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "names": {
+          "english": "Succubus Torturer",
+          "chinese": "魅魔拷打者",
+          "spanish": "Torturadora súcubo",
+          "french": "Tortionnaire succube",
+          "german": "Sukkubus-Folterin",
+          "portuguese": "Torturadora Súcubo",
+          "russian": "Истязательница-суккуб",
+          "chinese_traditional": "魅魔拷問者",
+          "japanese": "サキュバスの拷問者",
+          "korean": "서큐버스 고문관"
+        },
+        "character_art": "@SuccbusTorturerCharacterArt",
+        "size": 2,
+        "attack_damage": 15,
+        "health": 10,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Naga"
+        ],
+        "triggers": [
+          "@SuccbusTorturerOnAttack",
+          "@SuccbusTorturerAccursed"
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "SuccbusTorturerAccursed",
+        "trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "descriptions": {
+          "english": "Apply [meleeweakness] [effect0.status0.power] to the front enemy unit.",
+          "chinese": "对前排敌方单位施加 [meleeweakness] [effect0.status0.power]。",
+          "spanish": "Añade [meleeweakness] [effect0.status0.power] a la primera unidad enemiga.",
+          "french": "Applique [meleeweakness] [effect0.status0.power] à l’ennemi en première ligne.",
+          "german": "Wende [meleeweakness] [effect0.status0.power] auf die vorderste gegnerische Einheit an.",
+          "portuguese": "Aplica [meleeweakness] [effect0.status0.power] à unidade inimiga na frente.",
+          "russian": "Накладывает [meleeweakness] х[effect0.status0.power] на переднего вражеского бойца.",
+          "chinese_traditional": "對前排敵方單位施加 [meleeweakness] [effect0.status0.power]。",
+          "japanese": "前列の敵ユニットに[meleeweakness] [effect0.status0.power]を付与する。",
+          "korean": "전열 적 유닛에게 [meleeweakness] [effect0.status0.power]을 부여합니다."
+        },
+        "effects": [
+          "@SuccbusTorturerAccursedWeakness"
+        ]
+      },
+      {
+        "id": "SuccbusTorturerOnAttack",
+        "trigger": "on_attacking",
+        "descriptions": {
+          "english": "Apply [meleeweakness] [effect0.status0.power].",
+          "french": "Applique [meleeweakness] [effect0.status0.power].",
+          "german": "Wende [meleeweakness] [effect0.status0.power] an.",
+          "russian": "Накладывает [meleeweakness] х[effect0.status0.power].",
+          "portuguese": "Aplica [meleeweakness] [effect0.status0.power].",
+          "chinese": "施加 [meleeweakness] [effect0.status0.power]。",
+          "spanish": "Añade [meleeweakness] [effect0.status0.power].",
+          "chinese_traditional": "施加[meleeweakness][effect0.status0.power]。",
+          "korean": "[meleeweakness] [effect0.status0.power] 효과를 적용합니다.",
+          "japanese": "[meleeweakness] [effect0.status0.power]を付与する。"
+        },
+        "effects": [
+          "@SuccbusTorturerWeakness"
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXCursePulse",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Wurmkin/EchoSnare/FX_EchoSnare.prefab",
+          "asset_guid": "e16e9b56751ec374b877f3cedf70889b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXBladeAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/DeathsDancer/FX_DeathsDancerAttack.prefab",
+          "asset_guid": "7b4040ba5c134c84eaeb246a77b0a401"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Naga",
+        "names": {
+          "english": "Naga",
+          "chinese": "娜迦",
+          "spanish": "Naga",
+          "french": "Naga",
+          "german": "Naga",
+          "portuguese": "Naga",
+          "russian": "Нага",
+          "chinese_traditional": "娜迦",
+          "japanese": "ナーガ",
+          "korean": "나가"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "SuccbusTorturerCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@SuccbusTorturerCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.068,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 0.85,
+                "y": 0.85,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "SuccbusTorturerCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@SuccbusTorturerCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "SuccbusTorturerCharacterArt",
+        "path": "textures/SuccbusTorturerCharacterArt.png"
+      },
+      {
+        "id": "SuccbusTorturerCardArt",
+        "path": "textures/SuccbusTorturerCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_SuccbusTorturer.json": "9594a1f1497aa088bc275b43c46e38d0c2a7cf54787e88e2056ea496aa7b03c6",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2",
+    "json/class.json": "65c18f4c8b8c97b62edfa51f3d02d2cae856fe878c761586e950fc9993580bc3"
+  }
+}

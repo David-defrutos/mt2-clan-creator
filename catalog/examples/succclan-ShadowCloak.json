@@ -1,0 +1,144 @@
+{
+  "id": "succclan-ShadowCloak",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "relics",
+    "id": "ShadowCloak"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Shadow Cloak",
+    "chinese": "暗影斗篷",
+    "spanish": "Capa de las sombras",
+    "french": "Cape des ombres",
+    "german": "Schattenumhang",
+    "portuguese": "Manto das Sombras",
+    "russian": "Плащ теней",
+    "chinese_traditional": "暗影披風",
+    "japanese": "影のマント",
+    "korean": "그림자 망토"
+  },
+  "descriptions": {
+    "english": "<b>Accursed</b> abilities trigger [effect0.power] additional time.",
+    "chinese": "<b>被咒</b>效果额外触发 [effect0.power] 次。",
+    "spanish": "Las habilidades <b>Maldito</b> se activan [effect0.power] veces adicionales.",
+    "french": "Les capacités <b>Maudit</b> se déclenchent [effect0.power] fois de plus.",
+    "german": "<b>Verflucht</b>-Fähigkeiten werden [effect0.power] zusätzliche Male ausgelöst.",
+    "portuguese": "Habilidades <b>Amaldiçoado</b> são ativadas [effect0.power] vezes adicionais.",
+    "russian": "Способности <b>Проклятие</b> срабатывают ещё [effect0.power] раз.",
+    "chinese_traditional": "<b>詛咒</b>能力額外觸發 [effect0.power] 次。",
+    "japanese": "<b>呪い</b>の能力が追加で[effect0.power]回発動する。",
+    "korean": "<b>저주</b> 능력이 [effect0.power]회 추가로 발동합니다."
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/9439248e185a96f0f86bd4bb953bdffa53b21970e9a7765767f9f02e89d17c5c.png",
+  "characterPicture": null,
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "character_trigger_types",
+      "id": "Accursed",
+      "names": {
+        "english": "Accursed",
+        "chinese": "被咒"
+      },
+      "descriptions": {
+        "english": "Triggers when, during your turn, a <b>Blight</b> or [junk] is played or discarded on the floor.",
+        "chinese": "回合结束前在本层打出或舍弃[blight]牌或[junk]牌时触发。"
+      },
+      "file": "packages/Conductor-Conductor/json/triggers.json",
+      "sha256": "0a0e9419dfeeb57f0e0917c7d1eddf6483d0cb58e7b40188c57b4ab2ecae86b5"
+    }
+  ],
+  "assets": {
+    "textures/RelicIcons/ShadowCloakIconSmall.png": "assets/f17da6529754f714d469dc1118a3d21608bf4440a91dc78d4b1ffa9356095cb1.png",
+    "textures/RelicIcons/ShadowCloakIcon.png": "assets/9439248e185a96f0f86bd4bb953bdffa53b21970e9a7765767f9f02e89d17c5c.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "ShadowCloak",
+        "type": "collectable",
+        "names": {
+          "english": "Shadow Cloak",
+          "chinese": "暗影斗篷",
+          "spanish": "Capa de las sombras",
+          "french": "Cape des ombres",
+          "german": "Schattenumhang",
+          "portuguese": "Manto das Sombras",
+          "russian": "Плащ теней",
+          "chinese_traditional": "暗影披風",
+          "japanese": "影のマント",
+          "korean": "그림자 망토"
+        },
+        "descriptions": {
+          "english": "<b>Accursed</b> abilities trigger [effect0.power] additional time.",
+          "chinese": "<b>被咒</b>效果额外触发 [effect0.power] 次。",
+          "spanish": "Las habilidades <b>Maldito</b> se activan [effect0.power] veces adicionales.",
+          "french": "Les capacités <b>Maudit</b> se déclenchent [effect0.power] fois de plus.",
+          "german": "<b>Verflucht</b>-Fähigkeiten werden [effect0.power] zusätzliche Male ausgelöst.",
+          "portuguese": "Habilidades <b>Amaldiçoado</b> são ativadas [effect0.power] vezes adicionais.",
+          "russian": "Способности <b>Проклятие</b> срабатывают ещё [effect0.power] раз.",
+          "chinese_traditional": "<b>詛咒</b>能力額外觸發 [effect0.power] 次。",
+          "japanese": "<b>呪い</b>の能力が追加で[effect0.power]回発動する。",
+          "korean": "<b>저주</b> 능력이 [effect0.power]회 추가로 발동합니다."
+        },
+        "disallow_in_deployment": false,
+        "relic_effects": [
+          "@ShadowCloakEffect"
+        ],
+        "icon": "@ShadowCloakIcon",
+        "icon_small": "@ShadowCloakIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "class": "@ClassSuccubus",
+              "pools": [
+                "MegaRelicPool"
+              ],
+              "rarity": "rare",
+              "unlock_level": 0
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ShadowCloakIconSmall",
+        "path": "textures/RelicIcons/ShadowCloakIconSmall.png"
+      },
+      {
+        "id": "ShadowCloakIcon",
+        "path": "textures/RelicIcons/ShadowCloakIcon.png"
+      }
+    ],
+    "relic_effects": [
+      {
+        "id": "ShadowCloakEffect",
+        "name": "RelicEffectModifyTriggerCount",
+        "source_team": "monsters",
+        "param_int": 1,
+        "param_trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_ShadowCloak.json": "c0a3faf18b0f7b02d8a376466cf44fdedfb215b42b90868fa22795c59ea683b2"
+  }
+}

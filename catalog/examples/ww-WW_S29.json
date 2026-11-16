@@ -1,0 +1,151 @@
+{
+  "id": "ww-WW_S29",
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S29"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Spike de Prórroga",
+    "english": "Extension Spike",
+    "french": "Pointe de prolongation",
+    "german": "Verlängerungsstachel",
+    "portuguese": "Espigão de Prorrogação",
+    "russian": "Шип отсрочки",
+    "chinese": "延期尖刺",
+    "chinese_traditional": "延期尖刺",
+    "korean": "연장 쐐기",
+    "japanese": "延長のスパイク"
+  },
+  "descriptions": {
+    "english": "Apply [spellweakness] [x] to enemy units.",
+    "spanish": "Añade [spellweakness] [x] a los enemigos.",
+    "french": "Appliquez [spellweakness] [x] aux ennemis.",
+    "german": "Wende [spellweakness] [x] auf Feinde an.",
+    "portuguese": "Aplica [spellweakness] [x] aos inimigos.",
+    "russian": "Примените [spellweakness] [x] к врагам.",
+    "chinese": "对敌人施加[spellweakness] [x]。",
+    "chinese_traditional": "對敵人施加[spellweakness] [x]。",
+    "korean": "적에게 [spellweakness] [x]를 부여합니다.",
+    "japanese": "敵に[spellweakness] [x]を付与する。"
+  },
+  "cost": 0,
+  "costType": "x",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/5b1a26cf5fdff47cdf1d894d13ecc8b3252929abe985b1ce4afb78076d8dcbef.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S29CardArt.png": "assets/5b1a26cf5fdff47cdf1d894d13ecc8b3252929abe985b1ce4afb78076d8dcbef.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S29",
+        "names": {
+          "spanish": "Spike de Prórroga",
+          "english": "Extension Spike",
+          "french": "Pointe de prolongation",
+          "german": "Verlängerungsstachel",
+          "portuguese": "Espigão de Prorrogação",
+          "russian": "Шип отсрочки",
+          "chinese": "延期尖刺",
+          "chinese_traditional": "延期尖刺",
+          "korean": "연장 쐐기",
+          "japanese": "延長のスパイク"
+        },
+        "descriptions": {
+          "english": "Apply [spellweakness] [x] to enemy units.",
+          "spanish": "Añade [spellweakness] [x] a los enemigos.",
+          "french": "Appliquez [spellweakness] [x] aux ennemis.",
+          "german": "Wende [spellweakness] [x] auf Feinde an.",
+          "portuguese": "Aplica [spellweakness] [x] aos inimigos.",
+          "russian": "Примените [spellweakness] [x] к врагам.",
+          "chinese": "对敌人施加[spellweakness] [x]。",
+          "chinese_traditional": "對敵人施加[spellweakness] [x]。",
+          "korean": "적에게 [spellweakness] [x]를 부여합니다.",
+          "japanese": "敵に[spellweakness] [x]を付与する。"
+        },
+        "card_type": "spell",
+        "cost": 0,
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@WW_S29_Effect"
+        ],
+        "card_art": "@WW_S29CardArt",
+        "cost_type": "x",
+        "traits": [
+          "@WW_Consume",
+          "@WW_S29_WeaknessX"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_S29_WeaknessX",
+        "name": "CardTraitScalingAddStatusEffect",
+        "param_status_effects": [
+          {
+            "status": "spell weakness",
+            "count": 0
+          }
+        ],
+        "param_tracked_value": "played_cost",
+        "param_entry_duration": "previous_turn",
+        "param_int": 1,
+        "param_team": "heroes"
+      },
+      {
+        "id": "WW_Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S29CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S29CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S29CardArt",
+        "path": "textures/cards/WW_S29CardArt.png"
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_S29_Effect",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_status_effects": [
+          {
+            "status": "spell weakness",
+            "count": 0
+          }
+        ]
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S29.json": "11a3af233e40c01f39851d1ba3f7e4c12b35480715db42aa7f1a387dd5774053",
+    "content/json/03_common.json": "93d922ea5ee845e8a0ac79dc6480520a849434978141fe1e9353366f1c156353"
+  }
+}

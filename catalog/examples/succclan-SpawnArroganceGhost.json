@@ -1,0 +1,350 @@
+{
+  "id": "succclan-SpawnArroganceGhost",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "SpawnArroganceGhost"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Arrogance Ghost",
+    "chinese": "傲慢幽魂",
+    "spanish": "Fantasma de la soberbia",
+    "french": "Fantôme de l'orgueil",
+    "german": "Geist des Hochmuts",
+    "portuguese": "Fantasma da Soberba",
+    "russian": "Призрак гордыни",
+    "chinese_traditional": "傲慢幽靈",
+    "japanese": "傲慢の幽霊",
+    "korean": "오만의 유령"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": 40,
+  "attack": 0,
+  "size": 1,
+  "picture": "assets/f1e3ef54fcdba97c3887eb2221e1d55aa1fd3fa9f19204ba695a32389be5dc3e.png",
+  "characterPicture": "assets/28b9481723c38cd822c00fc40f86740f26ea79ac2342de8eb7126075b4264c3b.png",
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "character_trigger_types",
+      "id": "Accursed",
+      "names": {
+        "english": "Accursed",
+        "chinese": "被咒"
+      },
+      "descriptions": {
+        "english": "Triggers when, during your turn, a <b>Blight</b> or [junk] is played or discarded on the floor.",
+        "chinese": "回合结束前在本层打出或舍弃[blight]牌或[junk]牌时触发。"
+      },
+      "file": "packages/Conductor-Conductor/json/triggers.json",
+      "sha256": "0a0e9419dfeeb57f0e0917c7d1eddf6483d0cb58e7b40188c57b4ab2ecae86b5"
+    }
+  ],
+  "assets": {
+    "textures/ArroganceGhostCardArt.png": "assets/f1e3ef54fcdba97c3887eb2221e1d55aa1fd3fa9f19204ba695a32389be5dc3e.png",
+    "textures/ArroganceGhostCharacterArt.png": "assets/28b9481723c38cd822c00fc40f86740f26ea79ac2342de8eb7126075b4264c3b.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnArroganceGhost",
+        "names": {
+          "english": "Arrogance Ghost",
+          "chinese": "傲慢幽魂",
+          "spanish": "Fantasma de la soberbia",
+          "french": "Fantôme de l'orgueil",
+          "german": "Geist des Hochmuts",
+          "portuguese": "Fantasma da Soberba",
+          "russian": "Призрак гордыни",
+          "chinese_traditional": "傲慢幽靈",
+          "japanese": "傲慢の幽霊",
+          "korean": "오만의 유령"
+        },
+        "card_type": "monster",
+        "rarity": "rare",
+        "card_art": "@ArroganceGhostCardArt",
+        "cost": 1,
+        "targets_room": true,
+        "effects": [
+          "@SpawnArroganceGhost"
+        ]
+      },
+      {
+        "id": "ArroganceLastWhisper",
+        "names": {
+          "english": "Last Whisper",
+          "spanish": "Último susurro",
+          "french": "Dernier murmure",
+          "german": "Letztes Flüstern",
+          "russian": "Последний шёпот",
+          "portuguese": "Último Sussurro",
+          "chinese": "最后的低语",
+          "chinese_traditional": "最後的低語",
+          "korean": "마지막 속삭임",
+          "japanese": "最後の囁き"
+        },
+        "descriptions": {
+          "english": "Trigger a Ghost’s <b>Accursed</b> ability 3 times. Gain their [attack].",
+          "spanish": "Activa 3 veces la habilidad <b>Maldito</b> de un fantasma. Obtiene su [attack].",
+          "french": "Déclenchez 3 fois la capacité <b>Maudit</b> d’un fantôme. Gagnez son [attack].",
+          "german": "Löse die <b>Verflucht</b>-Fähigkeit eines Geists 3-mal aus. Erhalte seinen [attack].",
+          "russian": "Активирует способность <b>Проклятие</b> призрака 3 раза. Получает его [attack].",
+          "portuguese": "Ative a habilidade <b>Amaldiçoado</b> de um fantasma 3 vezes. Receba o [attack] dele.",
+          "chinese": "触发一个幽魂的<b>被咒</b>能力3次。获得其[attack]。",
+          "chinese_traditional": "觸發一個幽靈的<b>詛咒</b>能力3次。獲得其[attack]。",
+          "korean": "유령의 <b>저주</b> 능력을 3번 발동합니다. 그 유닛의 [attack]을 획득합니다.",
+          "japanese": "ゴーストの<b>呪い</b>アビリティを3回発動する。対象の[attack]を得る。"
+        },
+        "card_art": "@ArroganceGhostCardArt",
+        "card_type": "spell",
+        "is_an_ability": true,
+        "cost": 0,
+        "cooldown": 1,
+        "initial_cooldown": 0,
+        "initial_keyboard_target": "front_friendly",
+        "effects": [
+          "@ArroganceLastWhisperTrigger1",
+          "@ArroganceLastWhisperTrigger2",
+          "@ArroganceLastWhisperTrigger3",
+          "@ArroganceLastWhisperAttack",
+          "@ArroganceLastWhisperSacrifice"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnArroganceGhost",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@ArroganceGhost"
+      },
+      {
+        "id": "ArroganceLastWhisperSacrifice",
+        "name": "CardEffectSacrifice",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "target_subtype": "@Sub_Ghost",
+        "param_subtype": "@Sub_Ghost"
+      },
+      {
+        "id": "ArroganceLastWhisperAttack",
+        "name": "CardEffectTransferAttackFromUnit",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "target_subtype": "@Sub_Ghost",
+        "param_int": 1,
+        "param_int_2": 1
+      },
+      {
+        "id": "ArroganceLastWhisperTrigger3",
+        "name": "CardEffectPlayUnitTrigger",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "target_subtype": "@Sub_Ghost",
+        "param_trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "additional_tooltips": [
+          "@LastWhisperAccursedTooltip"
+        ]
+      },
+      {
+        "id": "ArroganceLastWhisperTrigger2",
+        "name": "CardEffectPlayUnitTrigger",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "target_subtype": "@Sub_Ghost",
+        "param_trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "additional_tooltips": [
+          "@LastWhisperAccursedTooltip"
+        ]
+      },
+      {
+        "id": "ArroganceLastWhisperTrigger1",
+        "name": "CardEffectPlayUnitTrigger",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "target_subtype": "@Sub_Ghost",
+        "param_trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "additional_tooltips": [
+          "@LastWhisperAccursedTooltip"
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "ArroganceGhost",
+        "attack_vfx": "@SuccFXSpectralAttack",
+        "impact_vfx": "@SuccFXSpectralImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "projectile_vfx": "@SuccFXSoulProjectile",
+        "names": {
+          "english": "Arrogance Ghost",
+          "chinese": "傲慢幽魂",
+          "spanish": "Fantasma de la soberbia",
+          "french": "Fantôme de l'orgueil",
+          "german": "Geist des Hochmuts",
+          "portuguese": "Fantasma da Soberba",
+          "russian": "Призрак гордыни",
+          "chinese_traditional": "傲慢幽靈",
+          "japanese": "傲慢の幽霊",
+          "korean": "오만의 유령"
+        },
+        "character_art": "@ArroganceGhostCharacterArt",
+        "size": 1,
+        "attack_damage": 0,
+        "health": 40,
+        "subtypes": [
+          "@Sub_Ghost"
+        ],
+        "ability": "@ArroganceLastWhisper"
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Ghost",
+        "names": {
+          "english": "Ghost",
+          "chinese": "幽魂",
+          "spanish": "Fantasma",
+          "french": "Fantôme",
+          "german": "Geist",
+          "portuguese": "Fantasma",
+          "russian": "Призрак",
+          "chinese_traditional": "幽靈",
+          "japanese": "幽霊",
+          "korean": "유령"
+        }
+      }
+    ],
+    "additional_tooltips": [
+      {
+        "id": "LastWhisperAccursedTooltip",
+        "titles": {
+          "key": "mt2_succclan_LastWhisper_Accursed_Title",
+          "english": "Accursed",
+          "chinese": "被咒",
+          "spanish": "Maldito",
+          "french": "Maudit",
+          "german": "Verflucht",
+          "portuguese": "Amaldiçoado",
+          "russian": "Проклятие",
+          "chinese_traditional": "詛咒",
+          "japanese": "呪い",
+          "korean": "저주"
+        },
+        "descriptions": {
+          "english": "Triggers when a [blight] or [junk] is played or discarded during your turn.",
+          "spanish": "Se activa al jugar o descartar una carta [blight] o [junk] durante tu turno.",
+          "french": "Se déclenche quand vous jouez ou défaussez une carte [blight] ou [junk] pendant votre tour.",
+          "german": "Wird ausgelöst, wenn während deines Zuges ein [blight] oder [junk] gespielt oder abgeworfen wird.",
+          "russian": "Срабатывает, когда во время вашего хода разыгрывается или сбрасывается [blight] или [junk].",
+          "portuguese": "Ativa quando uma [blight] ou [junk] é jogada ou descartada durante seu turno.",
+          "chinese": "在你的回合中打出或舍弃[blight]或[junk]时触发。",
+          "chinese_traditional": "在你的回合中打出或棄掉[blight]或[junk]時觸發。",
+          "korean": "내 턴에 [blight] 또는 [junk] 카드를 사용하거나 버릴 때 발동합니다.",
+          "japanese": "自分のターン中に[blight]または[junk]をプレイするか捨てたときに発動する。"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ArroganceGhostCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ArroganceGhostCardArt"
+          }
+        }
+      },
+      {
+        "id": "ArroganceGhostCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@ArroganceGhostCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.665,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 0.65,
+                "y": 0.65,
+                "z": 1
+              }
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ArroganceGhostCardArt",
+        "path": "textures/ArroganceGhostCardArt.png"
+      },
+      {
+        "id": "ArroganceGhostCharacterArt",
+        "path": "textures/ArroganceGhostCharacterArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXSoulProjectile",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/PurifiedSoul/FX_PurifiedSoulAttack.prefab",
+          "asset_guid": "8eb4671567d56e145aa892824c0c8cb0"
+        },
+        "spawn_location": "character_top"
+      },
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXSpectralImpact",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/EtherealSeelie/FX_EtherealSeelieImpact.prefab",
+          "asset_guid": "b856194664a6e4b4da8f1c47c5a0e765"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXSpectralAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/EtherealSeelie/FX_EtherealSeelieAttack2.prefab",
+          "asset_guid": "50436e5870431eb4d89cda0584d38e59"
+        },
+        "spawn_location": "character_center"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_ArroganceGhost.json": "f1e24bd4dea0e1bb749447297c9ce6a672db76189936bd9ae7e4d0db047954cd",
+    "json/class.json": "65c18f4c8b8c97b62edfa51f3d02d2cae856fe878c761586e950fc9993580bc3",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "id": "freecompany-Haste",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Haste"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Haste",
+    "french": "Hâte",
+    "german": "Hast",
+    "russian": "Ускорение",
+    "portuguese": "Aceleração",
+    "chinese": "加速术",
+    "spanish": "Acelerar",
+    "chinese_traditional": "加速術",
+    "korean": "가속",
+    "japanese": "加速"
+  },
+  "descriptions": {
+    "english": "Apply [effect0.status0.power] [burst] to a friendly unit.",
+    "french": "Appliquez [effect0.status0.power] [burst] à une unité alliée.",
+    "german": "Verleihe einer verbündeten Einheit [effect0.status0.power] [burst].",
+    "russian": "Наложите на союзную боевую единицу [effect0.status0.power] [burst].",
+    "portuguese": "Aplique [effect0.status0.power] [burst] a uma unidade aliada.",
+    "chinese": "对一个友方单位施加[effect0.status0.power] [burst]。",
+    "spanish": "Añade [effect0.status0.power] [burst] a una unidad aliada.",
+    "chinese_traditional": "對一個友方單位施加[effect0.status0.power] [burst]。",
+    "korean": "아군 유닛 하나에게 [effect0.status0.power] [burst] 부여.",
+    "japanese": "味方ユニット1体に[effect0.status0.power] [burst]を付与。"
+  },
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/6e6ca4a681f7d05adf4986d370b456f5517b310188b6ac7470c9b0f501b8e4e4.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/HasteArt.png": "assets/6e6ca4a681f7d05adf4986d370b456f5517b310188b6ac7470c9b0f501b8e4e4.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Haste",
+        "names": {
+          "english": "Haste",
+          "french": "Hâte",
+          "german": "Hast",
+          "russian": "Ускорение",
+          "portuguese": "Aceleração",
+          "chinese": "加速术",
+          "spanish": "Acelerar",
+          "chinese_traditional": "加速術",
+          "korean": "가속",
+          "japanese": "加速"
+        },
+        "descriptions": {
+          "english": "Apply [effect0.status0.power] [burst] to a friendly unit.",
+          "french": "Appliquez [effect0.status0.power] [burst] à une unité alliée.",
+          "german": "Verleihe einer verbündeten Einheit [effect0.status0.power] [burst].",
+          "russian": "Наложите на союзную боевую единицу [effect0.status0.power] [burst].",
+          "portuguese": "Aplique [effect0.status0.power] [burst] a uma unidade aliada.",
+          "chinese": "对一个友方单位施加[effect0.status0.power] [burst]。",
+          "spanish": "Añade [effect0.status0.power] [burst] a una unidad aliada.",
+          "chinese_traditional": "對一個友方單位施加[effect0.status0.power] [burst]。",
+          "korean": "아군 유닛 하나에게 [effect0.status0.power] [burst] 부여.",
+          "japanese": "味方ユニット1体に[effect0.status0.power] [burst]を付与。"
+        },
+        "card_art": "@Haste",
+        "cost": 2,
+        "card_type": "spell",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@HasteBurst"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "HasteBurst",
+        "applied_vfx": "@SpellHasteBuffVFX",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "burst",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellHasteBuffVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Haste",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Haste"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Haste",
+        "path": "textures/HasteArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_haste.json": "723ea9f18ac50c0a28b90a42f8aeca97db42e4d0ec169325c5cbbc8657a87f70"
+  }
+}

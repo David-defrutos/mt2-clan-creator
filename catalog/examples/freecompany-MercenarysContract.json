@@ -1,0 +1,136 @@
+{
+  "id": "freecompany-MercenarysContract",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "MercenarysContract"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Mercenary's Contract",
+    "french": "Contrat de mercenaire",
+    "german": "Söldnervertrag",
+    "russian": "Контракт наёмника",
+    "portuguese": "Contrato de Mercenário",
+    "chinese": "佣兵契约",
+    "spanish": "Contrato de mercenario",
+    "chinese_traditional": "傭兵契約",
+    "korean": "용병 계약",
+    "japanese": "傭兵契約"
+  },
+  "descriptions": {
+    "english": "Apply [effect0.status0.power] [avarice] to a friendly unit.",
+    "french": "Appliquez [effect0.status0.power] [avarice] à une unité alliée.",
+    "german": "Verleihe einer verbündeten Einheit [effect0.status0.power] [avarice].",
+    "russian": "Наложите на союзную боевую единицу [effect0.status0.power] [avarice].",
+    "portuguese": "Aplique [effect0.status0.power] [avarice] a uma unidade aliada.",
+    "chinese": "对一个友方单位施加[effect0.status0.power] [avarice]。",
+    "spanish": "Añade [effect0.status0.power] [avarice] a una unidad aliada.",
+    "chinese_traditional": "對一個友方單位施加[effect0.status0.power] [avarice]。",
+    "korean": "아군 유닛 하나에게 [effect0.status0.power] [avarice] 부여.",
+    "japanese": "味方ユニット1体に[effect0.status0.power] [avarice]を付与。"
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/2c686c565ee3a0fa120258516fa00f7bdaaf6f854c23d08358d7ec89d56c15b2.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/MercenarysContractArt.png": "assets/2c686c565ee3a0fa120258516fa00f7bdaaf6f854c23d08358d7ec89d56c15b2.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "MercenarysContract",
+        "names": {
+          "english": "Mercenary's Contract",
+          "french": "Contrat de mercenaire",
+          "german": "Söldnervertrag",
+          "russian": "Контракт наёмника",
+          "portuguese": "Contrato de Mercenário",
+          "chinese": "佣兵契约",
+          "spanish": "Contrato de mercenario",
+          "chinese_traditional": "傭兵契約",
+          "korean": "용병 계약",
+          "japanese": "傭兵契約"
+        },
+        "descriptions": {
+          "english": "Apply [effect0.status0.power] [avarice] to a friendly unit.",
+          "french": "Appliquez [effect0.status0.power] [avarice] à une unité alliée.",
+          "german": "Verleihe einer verbündeten Einheit [effect0.status0.power] [avarice].",
+          "russian": "Наложите на союзную боевую единицу [effect0.status0.power] [avarice].",
+          "portuguese": "Aplique [effect0.status0.power] [avarice] a uma unidade aliada.",
+          "chinese": "对一个友方单位施加[effect0.status0.power] [avarice]。",
+          "spanish": "Añade [effect0.status0.power] [avarice] a una unidad aliada.",
+          "chinese_traditional": "對一個友方單位施加[effect0.status0.power] [avarice]。",
+          "korean": "아군 유닛 하나에게 [effect0.status0.power] [avarice] 부여.",
+          "japanese": "味方ユニット1体に[effect0.status0.power] [avarice]を付与。"
+        },
+        "card_art": "@MercenarysContract",
+        "cost": 1,
+        "card_type": "spell",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@MercenarysContractAvarice"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "MercenarysContractAvarice",
+        "applied_vfx": "@SpellMercenarysContractGreedVFX",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "avarice",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellMercenarysContractGreedVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Pyreborne/Greed/FX_Greed.prefab",
+          "asset_guid": "0ed94d97470cdda4ea1af178010b635f"
+        },
+        "spawn_location": "character_bottom"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "MercenarysContract",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@MercenarysContract"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "MercenarysContract",
+        "path": "textures/MercenarysContractArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_mercenarys_contract.json": "886309d8f0506c6cb6927f6d525ec35c8be60301d807a15b9e29c164f28f2c8a"
+  }
+}

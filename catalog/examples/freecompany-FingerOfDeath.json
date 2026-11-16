@@ -1,0 +1,137 @@
+{
+  "id": "freecompany-FingerOfDeath",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "FingerOfDeath"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Finger of Death",
+    "french": "Doigt de mort",
+    "german": "Finger des Todes",
+    "russian": "Палец смерти",
+    "portuguese": "Dedo da Morte",
+    "chinese": "死亡一指",
+    "spanish": "Dedo de la muerte",
+    "chinese_traditional": "死亡一指",
+    "korean": "죽음의 손가락",
+    "japanese": "死の指"
+  },
+  "descriptions": {
+    "english": "Apply [effect0.status0.power] [fragile] to an enemy. Cannot target bosses.",
+    "french": "Appliquez [effect0.status0.power] [fragile] à un ennemi. Ne peut pas cibler les boss.",
+    "german": "Verleihe einem Gegner [effect0.status0.power] [fragile]. Kann keine Bosse anvisieren.",
+    "russian": "Наложите на врага [effect0.status0.power] [fragile]. Нельзя выбрать босса целью.",
+    "portuguese": "Aplique [effect0.status0.power] [fragile] a um inimigo. Não pode selecionar chefes como alvo.",
+    "chinese": "对一个敌人施加[effect0.status0.power] [fragile]。 无法以首领为目标。",
+    "spanish": "Añade [effect0.status0.power] [fragile] a un enemigo. No puede seleccionar jefes como objetivo.",
+    "chinese_traditional": "對一個敵人施加[effect0.status0.power] [fragile]。 無法以首領為目標。",
+    "korean": "적 하나에게 [effect0.status0.power] [fragile] 부여. 보스를 대상으로 지정할 수 없습니다.",
+    "japanese": "敵1体に[effect0.status0.power] [fragile]を付与。 ボスは対象にできない。"
+  },
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/6585c14d80a157e74d4fb54553549f37050089900165a0da0560828b96176de4.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/FingerOfDeathArt.png": "assets/6585c14d80a157e74d4fb54553549f37050089900165a0da0560828b96176de4.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "FingerOfDeath",
+        "names": {
+          "english": "Finger of Death",
+          "french": "Doigt de mort",
+          "german": "Finger des Todes",
+          "russian": "Палец смерти",
+          "portuguese": "Dedo da Morte",
+          "chinese": "死亡一指",
+          "spanish": "Dedo de la muerte",
+          "chinese_traditional": "死亡一指",
+          "korean": "죽음의 손가락",
+          "japanese": "死の指"
+        },
+        "descriptions": {
+          "english": "Apply [effect0.status0.power] [fragile] to an enemy. Cannot target bosses.",
+          "french": "Appliquez [effect0.status0.power] [fragile] à un ennemi. Ne peut pas cibler les boss.",
+          "german": "Verleihe einem Gegner [effect0.status0.power] [fragile]. Kann keine Bosse anvisieren.",
+          "russian": "Наложите на врага [effect0.status0.power] [fragile]. Нельзя выбрать босса целью.",
+          "portuguese": "Aplique [effect0.status0.power] [fragile] a um inimigo. Não pode selecionar chefes como alvo.",
+          "chinese": "对一个敌人施加[effect0.status0.power] [fragile]。 无法以首领为目标。",
+          "spanish": "Añade [effect0.status0.power] [fragile] a un enemigo. No puede seleccionar jefes como objetivo.",
+          "chinese_traditional": "對一個敵人施加[effect0.status0.power] [fragile]。 無法以首領為目標。",
+          "korean": "적 하나에게 [effect0.status0.power] [fragile] 부여. 보스를 대상으로 지정할 수 없습니다.",
+          "japanese": "敵1体に[effect0.status0.power] [fragile]を付与。 ボスは対象にできない。"
+        },
+        "card_art": "@FingerOfDeath",
+        "cost": 2,
+        "card_type": "spell",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@FingerFragile"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "FingerFragile",
+        "applied_vfx": "@SpellFingerOfDeathDeathVFX",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "heroes",
+        "target_ignore_bosses": true,
+        "param_status_effects": [
+          {
+            "status": "fragile",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellFingerOfDeathDeathVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_MementoMori_PS.prefab",
+          "asset_guid": "501b8e250e260384e9ef16f6ae8a9fdd"
+        },
+        "spawn_location": "character_bottom"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "FingerOfDeath",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@FingerOfDeath"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "FingerOfDeath",
+        "path": "textures/FingerOfDeathArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_finger_of_death.json": "a2f33156a0864538fc55d4ce4d93263eb71033ccb363239af554d8443f1ea7cf"
+  }
+}

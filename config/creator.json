@@ -4427,8 +4427,8 @@
         "en": "Loading card…"
       },
       "info": {
-        "es": "Copiarás sus efectos y cantidades. El original no cambia. Puedes ponerle otro nombre y volver a editarla después.",
-        "en": "Copy its effects and amounts. The original stays unchanged. Rename your copy and edit it again later."
+        "es": "Elige una carta para copiarla y editarla.",
+        "en": "Choose a card to copy and edit."
       },
       "selected": {
         "es": "Tu selección",
@@ -7581,6 +7581,137 @@
     "notReady": {
       "es": "Completa la revisión del clan para ver sus archivos JSON.",
       "en": "Complete the clan review to view its JSON files."
+    }
+  },
+  "quickStart": {
+    "clanId": "awoken",
+    "bannerUnits": 2,
+    "spells": 1,
+    "steps": [
+      0,
+      1,
+      5,
+      9,
+      10,
+      11,
+      16
+    ]
+  },
+  "backups": {
+    "format": "mt2-clan-draft",
+    "version": 1,
+    "maxBytes": 67108864,
+    "maxAssets": 200,
+    "extension": ".mt2draft"
+  },
+  "usabilityText": {
+    "quickTitle": {
+      "es": "Crear mi primer clan",
+      "en": "Create my first clan"
+    },
+    "quickHelp": {
+      "es": "Empieza con dos campeones, sus sendas, dos cartas iniciales y tres cartas de ejemplo ya preparadas. Cambia lo que quieras y pruébalo.",
+      "en": "Start with two champions, their paths, two starter cards and three prepared example cards. Change what you like and try it."
+    },
+    "quickSteps": {
+      "es": "Recorrido inicial",
+      "en": "Getting started"
+    },
+    "allSteps": {
+      "es": "Todos los pasos del clan",
+      "en": "All clan steps"
+    },
+    "fullWizard": {
+      "es": "Ver el recorrido completo",
+      "en": "Show the full wizard"
+    },
+    "quickNote": {
+      "es": "Las sendas ya están preparadas. Puedes revisarlas desde Todos los pasos del clan.",
+      "en": "The paths are already prepared. You can review them under All clan steps."
+    },
+    "learnMore": {
+      "es": "Cómo funciona",
+      "en": "How it works"
+    },
+    "advanced": {
+      "es": "Opciones avanzadas",
+      "en": "Advanced options"
+    },
+    "previewPath": {
+      "es": "Senda de la vista previa",
+      "en": "Preview path"
+    },
+    "previewLevel": {
+      "es": "Nivel de la vista previa",
+      "en": "Preview level"
+    },
+    "baseStats": {
+      "es": "Solo atributos base",
+      "en": "Base stats only"
+    },
+    "baseStatsNote": {
+      "es": "Los campos de ataque, salud y capacidad son los valores base. La carta muestra la senda y nivel elegidos. Esta selección no cambia el clan.",
+      "en": "Attack, health and capacity fields are base values. The card shows the selected path and level. This selection does not change your clan."
+    },
+    "previewOnly": {
+      "es": "Vista previa",
+      "en": "Preview only"
+    },
+    "backupTitle": {
+      "es": "Copias de seguridad y actualizaciones",
+      "en": "Backups and updates"
+    },
+    "backupHelp": {
+      "es": "Guarda una copia de tu borrador con sus imágenes antes de actualizar o cambiar de ordenador. Restaurar crea un clan independiente; no sustituye tus clanes actuales.",
+      "en": "Save a copy of your draft with its images before updating or moving to another computer. Restoring creates an independent clan; it does not replace existing clans."
+    },
+    "backupButton": {
+      "es": "Guardar copia de seguridad",
+      "en": "Save backup"
+    },
+    "restoreButton": {
+      "es": "Restaurar una copia de seguridad",
+      "en": "Restore a backup"
+    },
+    "backupDone": {
+      "es": "Copia descargada. Guárdala antes de actualizar el programa.",
+      "en": "Backup downloaded. Keep it before updating the program."
+    },
+    "restored": {
+      "es": "Copia restaurada como un clan independiente.",
+      "en": "Backup restored as an independent clan."
+    },
+    "backupBusy": {
+      "es": "Preparando copia…",
+      "en": "Preparing backup…"
+    },
+    "backupError": {
+      "es": "No se pudo guardar la copia. Tus borradores no han cambiado.",
+      "en": "Could not save the backup. Your drafts have not changed."
+    },
+    "restoreError": {
+      "es": "No se pudo restaurar el archivo. Comprueba que es una copia .mt2draft de este creador. Tus clanes actuales no han cambiado.",
+      "en": "Could not restore the file. Check that it is a .mt2draft backup from this creator. Your existing clans have not changed."
+    },
+    "effectSummary": {
+      "es": "Resumen del efecto",
+      "en": "Effect summary"
+    },
+    "spellWhen": {
+      "es": "Al jugar el hechizo",
+      "en": "When the spell is played"
+    },
+    "previewFallback": {
+      "es": "No se ha podido cargar esta senda. Se muestran los atributos base.",
+      "en": "This path could not be loaded. Showing base stats."
+    },
+    "enlarge": {
+      "es": "Ampliar carta",
+      "en": "Enlarge card"
+    },
+    "close": {
+      "es": "Cerrar",
+      "en": "Close"
     }
   }
 }

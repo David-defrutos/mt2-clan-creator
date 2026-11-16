@@ -1,0 +1,136 @@
+{
+  "id": "freecompany-Invisibility",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Invisibility"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Invisibility",
+    "french": "Invisibilité",
+    "german": "Unsichtbarkeit",
+    "russian": "Невидимость",
+    "portuguese": "Invisibilidade",
+    "chinese": "隐形术",
+    "spanish": "Invisibilidad",
+    "chinese_traditional": "隱形術",
+    "korean": "투명화",
+    "japanese": "透明化"
+  },
+  "descriptions": {
+    "english": "Apply [effect0.status0.power] [stealth] to a friendly unit.",
+    "french": "Appliquez [effect0.status0.power] [stealth] à une unité alliée.",
+    "german": "Verleihe einer verbündeten Einheit [effect0.status0.power] [stealth].",
+    "russian": "Наложите на союзную боевую единицу [effect0.status0.power] [stealth].",
+    "portuguese": "Aplique [effect0.status0.power] [stealth] a uma unidade aliada.",
+    "chinese": "对一个友方单位施加[effect0.status0.power] [stealth]。",
+    "spanish": "Añade [effect0.status0.power] [stealth] a una unidad aliada.",
+    "chinese_traditional": "對一個友方單位施加[effect0.status0.power] [stealth]。",
+    "korean": "아군 유닛 하나에게 [effect0.status0.power] [stealth] 부여.",
+    "japanese": "味方ユニット1体に[effect0.status0.power] [stealth]を付与。"
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/42a815fb5bb7f0998eb5f71b3a04519a75b66eb7ddd46ccead865e7d10ab8174.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/InvisibilityArt.png": "assets/42a815fb5bb7f0998eb5f71b3a04519a75b66eb7ddd46ccead865e7d10ab8174.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Invisibility",
+        "names": {
+          "english": "Invisibility",
+          "french": "Invisibilité",
+          "german": "Unsichtbarkeit",
+          "russian": "Невидимость",
+          "portuguese": "Invisibilidade",
+          "chinese": "隐形术",
+          "spanish": "Invisibilidad",
+          "chinese_traditional": "隱形術",
+          "korean": "투명화",
+          "japanese": "透明化"
+        },
+        "descriptions": {
+          "english": "Apply [effect0.status0.power] [stealth] to a friendly unit.",
+          "french": "Appliquez [effect0.status0.power] [stealth] à une unité alliée.",
+          "german": "Verleihe einer verbündeten Einheit [effect0.status0.power] [stealth].",
+          "russian": "Наложите на союзную боевую единицу [effect0.status0.power] [stealth].",
+          "portuguese": "Aplique [effect0.status0.power] [stealth] a uma unidade aliada.",
+          "chinese": "对一个友方单位施加[effect0.status0.power] [stealth]。",
+          "spanish": "Añade [effect0.status0.power] [stealth] a una unidad aliada.",
+          "chinese_traditional": "對一個友方單位施加[effect0.status0.power] [stealth]。",
+          "korean": "아군 유닛 하나에게 [effect0.status0.power] [stealth] 부여.",
+          "japanese": "味方ユニット1体に[effect0.status0.power] [stealth]を付与。"
+        },
+        "card_art": "@Invisibility",
+        "cost": 1,
+        "card_type": "spell",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@InvisibilityStealth"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "InvisibilityStealth",
+        "applied_vfx": "@SpellInvisibilityShadowVFX",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "stealth",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellInvisibilityShadowVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Invisibility",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Invisibility"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Invisibility",
+        "path": "textures/InvisibilityArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_invisibility.json": "351f759b0c100415b83f714c0233854d9a08e5ec0ba50bbd682068d9a7f44cd8"
+  }
+}

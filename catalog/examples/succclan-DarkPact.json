@@ -1,0 +1,231 @@
+{
+  "id": "succclan-DarkPact",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "DarkPact"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Dark Pact",
+    "chinese": "黑暗契约",
+    "spanish": "Pacto oscuro",
+    "french": "Pacte sombre",
+    "german": "Dunkler Pakt",
+    "portuguese": "Pacto Sombrio",
+    "russian": "Тёмный договор",
+    "chinese_traditional": "黑暗契約",
+    "japanese": "闇の契約",
+    "korean": "어둠의 계약"
+  },
+  "descriptions": {
+    "english": "Shuffle [effect0.secondarypower] <b>Obsessing Spark</b> into your deck. +[effect1.power][ember] every turn.",
+    "chinese": "将 [effect0.secondarypower] 张<b>欲望碎片</b>洗入牌库。每回合 +[effect1.power][ember]。",
+    "spanish": "Mezcla [effect0.secondarypower] <b>Chispa obsesiva</b> en tu mazo. +[effect1.power][ember] cada turno.",
+    "french": "Mélangez [effect0.secondarypower] <b>Étincelle obsédante</b> dans votre deck. +[effect1.power][ember] chaque tour.",
+    "german": "Mische [effect0.secondarypower] <b>Besessenheitsfunke</b> in dein Deck. +[effect1.power][ember] in jedem Zug.",
+    "portuguese": "Embaralhe [effect0.secondarypower] <b>Centelha Obsessiva</b> no seu deck. +[effect1.power][ember] a cada turno.",
+    "russian": "Замешивает в колоду [effect0.secondarypower] <b>Искра одержимости</b>. +[effect1.power][ember] каждый ход.",
+    "chinese_traditional": "將 [effect0.secondarypower] 張<b>執念火花</b>洗入牌庫。每回合 +[effect1.power][ember]。",
+    "japanese": "<b>執着の火花</b>を[effect0.secondarypower]枚山札に混ぜる。毎ターン+[effect1.power][ember]。",
+    "korean": "<b>집착의 불꽃</b> [effect0.secondarypower]장을 덱에 섞습니다. 매 턴 +[effect1.power][ember]."
+  },
+  "cost": 3,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/1774d2a5edc6e36413625e0e401f07ea66ba0041bad6b0b6afad860408c2a84a.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ObsessingShardArt.png": "assets/fc6bd964ecb26665a12e65a318a98fd020456df96f868ae0202ada3da2eadb51.png",
+    "textures/DarkPactArt.png": "assets/1774d2a5edc6e36413625e0e401f07ea66ba0041bad6b0b6afad860408c2a84a.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "DarkPact",
+        "names": {
+          "english": "Dark Pact",
+          "chinese": "黑暗契约",
+          "spanish": "Pacto oscuro",
+          "french": "Pacte sombre",
+          "german": "Dunkler Pakt",
+          "portuguese": "Pacto Sombrio",
+          "russian": "Тёмный договор",
+          "chinese_traditional": "黑暗契約",
+          "japanese": "闇の契約",
+          "korean": "어둠의 계약"
+        },
+        "descriptions": {
+          "english": "Shuffle [effect0.secondarypower] <b>Obsessing Spark</b> into your deck. +[effect1.power][ember] every turn.",
+          "chinese": "将 [effect0.secondarypower] 张<b>欲望碎片</b>洗入牌库。每回合 +[effect1.power][ember]。",
+          "spanish": "Mezcla [effect0.secondarypower] <b>Chispa obsesiva</b> en tu mazo. +[effect1.power][ember] cada turno.",
+          "french": "Mélangez [effect0.secondarypower] <b>Étincelle obsédante</b> dans votre deck. +[effect1.power][ember] chaque tour.",
+          "german": "Mische [effect0.secondarypower] <b>Besessenheitsfunke</b> in dein Deck. +[effect1.power][ember] in jedem Zug.",
+          "portuguese": "Embaralhe [effect0.secondarypower] <b>Centelha Obsessiva</b> no seu deck. +[effect1.power][ember] a cada turno.",
+          "russian": "Замешивает в колоду [effect0.secondarypower] <b>Искра одержимости</b>. +[effect1.power][ember] каждый ход.",
+          "chinese_traditional": "將 [effect0.secondarypower] 張<b>執念火花</b>洗入牌庫。每回合 +[effect1.power][ember]。",
+          "japanese": "<b>執着の火花</b>を[effect0.secondarypower]枚山札に混ぜる。毎ターン+[effect1.power][ember]。",
+          "korean": "<b>집착의 불꽃</b> [effect0.secondarypower]장을 덱에 섞습니다. 매 턴 +[effect1.power][ember]."
+        },
+        "card_type": "spell",
+        "rarity": "uncommon",
+        "card_art": "@DarkPactArt",
+        "cost": 3,
+        "targets_room": true,
+        "targetless": true,
+        "traits": [
+          "@Consume"
+        ],
+        "effects": [
+          "@DarkPactShards",
+          "@DarkPactEmber"
+        ]
+      },
+      {
+        "id": "ObsessingShard",
+        "names": {
+          "english": "Obsessing Spark",
+          "chinese": "欲望碎片",
+          "spanish": "Chispa obsesiva",
+          "french": "Étincelle obsédante",
+          "german": "Besessenheitsfunke",
+          "portuguese": "Centelha Obsessiva",
+          "russian": "Искра одержимости",
+          "chinese_traditional": "執念火花",
+          "japanese": "執着の火花",
+          "korean": "집착의 불꽃"
+        },
+        "card_type": "blight",
+        "rarity": "common",
+        "card_art": "@ObsessingShardArt",
+        "cost": 1,
+        "targets_room": false,
+        "targetless": true,
+        "traits": [
+          "@Consume"
+        ],
+        "triggers": [
+          "@ObsessingShardOnUnplayed"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "DarkPactEmber",
+        "name": "CardEffectGainEnergyEveryTurn",
+        "target_mode": "room",
+        "target_team": "none",
+        "param_int": 1
+      },
+      {
+        "id": "DarkPactShards",
+        "name": "CardEffectAddBattleCard",
+        "target_mode": "room",
+        "target_team": "none",
+        "param_int": 7,
+        "param_int_2": 3,
+        "param_card_pool": "@ObsessingShardPool"
+      },
+      {
+        "id": "ObsessingShardPyreDamage",
+        "applied_vfx": "@SuccFXShadowImpact",
+        "name": "CardEffectDamage",
+        "target_mode": "pyre",
+        "target_team": "both",
+        "param_int": 1,
+        "suppress_pyre_room_focus": true
+      }
+    ],
+    "card_pools": [
+      {
+        "id": "ObsessingShardPool",
+        "cards": [
+          "@ObsessingShard"
+        ]
+      }
+    ],
+    "card_triggers": [
+      {
+        "id": "ObsessingShardOnUnplayed",
+        "trigger": "on_unplayed_negative",
+        "descriptions": {
+          "english": "Your Pyre takes [effect0.power] damage.",
+          "chinese": "对薪火造成 [effect0.power] 点伤害。",
+          "spanish": "Tu Pira recibe [effect0.power] de daño.",
+          "french": "Votre Brasier subit [effect0.power] dégâts.",
+          "german": "Deine Höllenglut erleidet [effect0.power] Schaden.",
+          "portuguese": "Sua Pira sofre [effect0.power] de dano.",
+          "russian": "Пекло получает [effect0.power] урона.",
+          "chinese_traditional": "你的薪火受到 [effect0.power] 點傷害。",
+          "japanese": "パイアが[effect0.power]ダメージを受ける。",
+          "korean": "화로가 [effect0.power]의 피해를 받습니다."
+        },
+        "effects": [
+          "@ObsessingShardPyreDamage"
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ObsessingShardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ObsessingShardArt"
+          }
+        }
+      },
+      {
+        "id": "DarkPactArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@DarkPactArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ObsessingShardArt",
+        "path": "textures/ObsessingShardArt.png"
+      },
+      {
+        "id": "DarkPactArt",
+        "path": "textures/DarkPactArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_DarkPact.json": "cb22781f8fd59ff2f503ca19e8bb97e0a9714e47eb9e8a10d95701e48592481b",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d",
+    "json/spells/card_ObsessingShard.json": "aa2f8c8cb633cab56c128cd56a7092c7a79f7b33dbe670f259275d646211bd37",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

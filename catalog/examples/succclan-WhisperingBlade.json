@@ -1,0 +1,189 @@
+{
+  "id": "succclan-WhisperingBlade",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "WhisperingBlade"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Whispering Blade",
+    "spanish": "Hoja susurrante",
+    "chinese": "低语之刃",
+    "french": "Lame murmurante",
+    "german": "Flüsternde Klinge",
+    "portuguese": "Lâmina Sussurrante",
+    "russian": "Шепчущий клинок",
+    "chinese_traditional": "低語之刃",
+    "japanese": "囁く刃",
+    "korean": "속삭이는 칼날"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/2fccd4863a048880e3166bfaeae7bd697e169bb44f1fc9228625e60ee776dec4.png",
+  "characterPicture": null,
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "character_trigger_types",
+      "id": "Accursed",
+      "names": {
+        "english": "Accursed",
+        "chinese": "被咒"
+      },
+      "descriptions": {
+        "english": "Triggers when, during your turn, a <b>Blight</b> or [junk] is played or discarded on the floor.",
+        "chinese": "回合结束前在本层打出或舍弃[blight]牌或[junk]牌时触发。"
+      },
+      "file": "packages/Conductor-Conductor/json/triggers.json",
+      "sha256": "0a0e9419dfeeb57f0e0917c7d1eddf6483d0cb58e7b40188c57b4ab2ecae86b5"
+    }
+  ],
+  "assets": {
+    "textures/EquipmentRoomIcons/WhisperingBlade.png": "assets/32c2f0034d9f009d771656b7b31a46021b82aa9f119c7717daf6b6fecf2c65c9.png",
+    "textures/WhisperingBladeArt.png": "assets/2fccd4863a048880e3166bfaeae7bd697e169bb44f1fc9228625e60ee776dec4.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WhisperingBlade",
+        "names": {
+          "english": "Whispering Blade",
+          "spanish": "Hoja susurrante",
+          "chinese": "低语之刃",
+          "french": "Lame murmurante",
+          "german": "Flüsternde Klinge",
+          "portuguese": "Lâmina Sussurrante",
+          "russian": "Шепчущий клинок",
+          "chinese_traditional": "低語之刃",
+          "japanese": "囁く刃",
+          "korean": "속삭이는 칼날"
+        },
+        "card_art": "@WhisperingBladeArt",
+        "cost": 1,
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@WhisperingBladeAttach"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WhisperingBladeAttach",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@WhisperingBladeUpgrade"
+      },
+      {
+        "id": "WhisperingBladeEffect",
+        "target_mode": "back_in_room",
+        "target_team": "heroes",
+        "name": "CardEffectAddStatusEffect",
+        "param_status_effects": [
+          {
+            "status": "debuff",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WhisperingBladeUpgrade",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "titles": {
+          "english": "Whispering Blade",
+          "spanish": "Hoja susurrante",
+          "chinese": "低语之刃",
+          "french": "Lame murmurante",
+          "german": "Flüsternde Klinge",
+          "portuguese": "Lâmina Sussurrante",
+          "russian": "Шепчущий клинок",
+          "chinese_traditional": "低語之刃",
+          "japanese": "囁く刃",
+          "korean": "속삭이는 칼날"
+        },
+        "icon": "@WhisperingBladeIcon",
+        "trigger_upgrades": [
+          "@WhisperingBladeTrigger"
+        ],
+        "bonus_damage": 5
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "WhisperingBladeTrigger",
+        "trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "descriptions": {
+          "english": "Apply [sap] [effect0.status0.power] to the rear enemy unit.",
+          "spanish": "Añade [sap] [effect0.status0.power] al enemigo de la retaguardia.",
+          "chinese": "对后排敌方单位施加 [sap] [effect0.status0.power]。",
+          "french": "Applique [sap] [effect0.status0.power] à l’ennemi en dernière ligne.",
+          "german": "Wende [sap] [effect0.status0.power] auf die hinterste gegnerische Einheit an.",
+          "portuguese": "Aplica [sap] [effect0.status0.power] à unidade inimiga na retaguarda.",
+          "russian": "Накладывает [sap] х[effect0.status0.power] на заднего вражеского бойца.",
+          "chinese_traditional": "對後排敵方單位施加 [sap] [effect0.status0.power]。",
+          "japanese": "最後列の敵ユニットに[sap] [effect0.status0.power]を付与する。",
+          "korean": "후열 적 유닛에게 [sap] [effect0.status0.power]을 부여합니다."
+        },
+        "effects": [
+          "@WhisperingBladeEffect"
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WhisperingBladeIcon",
+        "path": "textures/EquipmentRoomIcons/WhisperingBlade.png"
+      },
+      {
+        "id": "WhisperingBladeArt",
+        "path": "textures/WhisperingBladeArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXAttackBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WhisperingBladeArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WhisperingBladeArt"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/equipment/equip_WhisperingBlade.json": "9f62f4a974d6edecc0b163226debf5203e0a47717582ab0fce7c950f914854c1",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

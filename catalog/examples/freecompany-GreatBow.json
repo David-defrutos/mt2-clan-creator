@@ -1,0 +1,201 @@
+{
+  "id": "freecompany-GreatBow",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "GreatBow"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Great Bow",
+    "french": "Grand arc",
+    "german": "Großbogen",
+    "russian": "Большой лук",
+    "portuguese": "Arco Grande",
+    "chinese": "巨弓",
+    "spanish": "Gran arco",
+    "chinese_traditional": "巨弓",
+    "korean": "대궁",
+    "japanese": "大弓"
+  },
+  "descriptions": {
+    "english": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+    "french": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+    "german": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+    "russian": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+    "portuguese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+    "chinese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+    "spanish": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+    "chinese_traditional": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+    "korean": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+    "japanese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>."
+  },
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/2af92ed56b86b89470d01770dd4d3cbdc479babae0147486b2e61d362a80d1b5.png",
+  "characterPicture": null,
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "status_effects",
+      "id": "pierce",
+      "names": {
+        "english": "Skewer",
+        "chinese": ""
+      },
+      "descriptions": {},
+      "file": "packages/Conductor-Conductor/json/status_effects/skewer.json",
+      "sha256": "c1d2a4300e9e7f1d5ff3c4e235e822422048a06d989cc245ad8e4a4650b77617"
+    }
+  ],
+  "assets": {
+    "textures/GreatBowArt.png": "assets/2af92ed56b86b89470d01770dd4d3cbdc479babae0147486b2e61d362a80d1b5.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "GreatBow",
+        "names": {
+          "english": "Great Bow",
+          "french": "Grand arc",
+          "german": "Großbogen",
+          "russian": "Большой лук",
+          "portuguese": "Arco Grande",
+          "chinese": "巨弓",
+          "spanish": "Gran arco",
+          "chinese_traditional": "巨弓",
+          "korean": "대궁",
+          "japanese": "大弓"
+        },
+        "descriptions": {
+          "english": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "french": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "german": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "russian": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "portuguese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "chinese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "spanish": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "chinese_traditional": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "korean": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "japanese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>."
+        },
+        "card_art": "@GreatBow",
+        "cost": 2,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipGreatBow"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "EquipGreatBow",
+        "applied_vfx": "@KitRangerCraftVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgGreatBow"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgGreatBow",
+        "titles": {
+          "english": "Great Bow",
+          "french": "Grand arc",
+          "german": "Großbogen",
+          "russian": "Большой лук",
+          "portuguese": "Arco Grande",
+          "chinese": "巨弓",
+          "spanish": "Gran arco",
+          "chinese_traditional": "巨弓",
+          "korean": "대궁",
+          "japanese": "大弓"
+        },
+        "descriptions": {
+          "english": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "french": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "german": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "russian": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "portuguese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "chinese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "spanish": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "chinese_traditional": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "korean": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>.",
+          "japanese": "<b>+15</b> [attack]. [piercing]. [Conductor_pierce] <b>1</b>."
+        },
+        "icon": "@GreatBow",
+        "bonus_damage": 15,
+        "status_effect_upgrades": [
+          {
+            "status": "piercing",
+            "count": 1
+          },
+          {
+            "status": {
+              "id": "@pierce",
+              "mod_reference": "Conductor"
+            },
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "GreatBow",
+        "path": "textures/GreatBowArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitRangerCraftVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Railforged/CraftedEquipment/FX_CraftedEquipment.prefab",
+          "asset_guid": "8b71ea7d8f6189148add8fe2945b0bc5"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "GreatBow",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@GreatBow"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/kits/kit_ranger.json": "9a2ce18dbaf287ba54b81290e7b5b5c80d39fa83935607d88fae2f23ac274011",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

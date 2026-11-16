@@ -1,0 +1,136 @@
+{
+  "id": "freecompany-MassHoldPerson",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "MassHoldPerson"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Mass Hold Person",
+    "french": "Immobilisation de groupe",
+    "german": "Massenlähmung",
+    "russian": "Массовое удержание",
+    "portuguese": "Imobilização em Massa",
+    "chinese": "群体定身术",
+    "spanish": "Inmovilización en masa",
+    "chinese_traditional": "群體定身術",
+    "korean": "집단 포박",
+    "japanese": "集団金縛り"
+  },
+  "descriptions": {
+    "english": "Apply [effect0.status0.power] [dazed] to all enemies on this floor.",
+    "french": "Appliquez [effect0.status0.power] [dazed] à tous les ennemis de cet étage.",
+    "german": "Verleihe allen Gegnern auf diesem Stockwerk [effect0.status0.power] [dazed].",
+    "russian": "Наложите [effect0.status0.power] [dazed] на всех врагов на этом этаже.",
+    "portuguese": "Aplique [effect0.status0.power] [dazed] a todos os inimigos neste andar.",
+    "chinese": "对本层所有敌人施加[effect0.status0.power] [dazed]。",
+    "spanish": "Añade [effect0.status0.power] [dazed] a todos los enemigos de este piso.",
+    "chinese_traditional": "對本層所有敵人施加[effect0.status0.power] [dazed]。",
+    "korean": "이 층의 모든 적에게 [effect0.status0.power] [dazed] 부여.",
+    "japanese": "この階の敵全体に[effect0.status0.power] [dazed]を付与。"
+  },
+  "cost": 4,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/4fcd9e3f375229bdb3c7665ca642d50f978970a99af66ee5c2186c8140acfdd8.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/MassHoldPersonArt.png": "assets/4fcd9e3f375229bdb3c7665ca642d50f978970a99af66ee5c2186c8140acfdd8.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "MassHoldPerson",
+        "names": {
+          "english": "Mass Hold Person",
+          "french": "Immobilisation de groupe",
+          "german": "Massenlähmung",
+          "russian": "Массовое удержание",
+          "portuguese": "Imobilização em Massa",
+          "chinese": "群体定身术",
+          "spanish": "Inmovilización en masa",
+          "chinese_traditional": "群體定身術",
+          "korean": "집단 포박",
+          "japanese": "集団金縛り"
+        },
+        "descriptions": {
+          "english": "Apply [effect0.status0.power] [dazed] to all enemies on this floor.",
+          "french": "Appliquez [effect0.status0.power] [dazed] à tous les ennemis de cet étage.",
+          "german": "Verleihe allen Gegnern auf diesem Stockwerk [effect0.status0.power] [dazed].",
+          "russian": "Наложите [effect0.status0.power] [dazed] на всех врагов на этом этаже.",
+          "portuguese": "Aplique [effect0.status0.power] [dazed] a todos os inimigos neste andar.",
+          "chinese": "对本层所有敌人施加[effect0.status0.power] [dazed]。",
+          "spanish": "Añade [effect0.status0.power] [dazed] a todos los enemigos de este piso.",
+          "chinese_traditional": "對本層所有敵人施加[effect0.status0.power] [dazed]。",
+          "korean": "이 층의 모든 적에게 [effect0.status0.power] [dazed] 부여.",
+          "japanese": "この階の敵全体に[effect0.status0.power] [dazed]を付与。"
+        },
+        "card_art": "@MassHoldPerson",
+        "cost": 4,
+        "card_type": "spell",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": true,
+        "effects": [
+          "@MassHoldDazed"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "MassHoldDazed",
+        "applied_vfx": "@SpellMassHoldPersonDazeVFX",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_status_effects": [
+          {
+            "status": "dazed",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellMassHoldPersonDazeVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_WaxImpact_PS.prefab",
+          "asset_guid": "16baf7e5a46cc9748b8b32ab3aabec0f"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "MassHoldPerson",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@MassHoldPerson"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "MassHoldPerson",
+        "path": "textures/MassHoldPersonArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_mass_hold_person.json": "fc6b255bd3f81b7a023b2273914f8b25f62863b609cfe982772d09a427a6fd95"
+  }
+}

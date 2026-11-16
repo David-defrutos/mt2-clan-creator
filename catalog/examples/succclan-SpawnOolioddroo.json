@@ -1,0 +1,217 @@
+{
+  "id": "succclan-SpawnOolioddroo",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "SpawnOolioddroo"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Oolioddroo",
+    "chinese": "蛾梦魔",
+    "spanish": "Oolioddroo",
+    "french": "Oolioddroo",
+    "german": "Oolioddroo",
+    "portuguese": "Oolioddroo",
+    "russian": "Oolioddroo",
+    "chinese_traditional": "Oolioddroo",
+    "japanese": "Oolioddroo",
+    "korean": "Oolioddroo"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 30,
+  "attack": 0,
+  "size": 2,
+  "picture": "assets/4b677ee57e21da53c46111a7684ad6ef2026f065cb61f5a026695cf85ba11ad1.png",
+  "characterPicture": "assets/eb733ce19ea80b6079a5a8c29786fd53817cf816dd8f68d16c17bfdbf6bb59b4.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/OolioddrooCharacterArt.png": "assets/eb733ce19ea80b6079a5a8c29786fd53817cf816dd8f68d16c17bfdbf6bb59b4.png",
+    "textures/OolioddrooCardArt.png": "assets/4b677ee57e21da53c46111a7684ad6ef2026f065cb61f5a026695cf85ba11ad1.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnOolioddroo",
+        "names": {
+          "english": "Oolioddroo",
+          "chinese": "蛾梦魔",
+          "spanish": "Oolioddroo",
+          "french": "Oolioddroo",
+          "german": "Oolioddroo",
+          "portuguese": "Oolioddroo",
+          "russian": "Oolioddroo",
+          "chinese_traditional": "Oolioddroo",
+          "japanese": "Oolioddroo",
+          "korean": "Oolioddroo"
+        },
+        "card_art": "@OolioddrooCardArt",
+        "cost": 2,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "effects": [
+          "@SpawnOolioddroo"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnOolioddroo",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@Oolioddroo"
+      },
+      {
+        "id": "OolioddrooDamage",
+        "applied_vfx": "@SuccFXArcaneImpact",
+        "name": "CardEffectDamagePerSourceAttack",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_int": 1
+      }
+    ],
+    "characters": [
+      {
+        "id": "Oolioddroo",
+        "attack_vfx": "@SuccFXPsionicAttack",
+        "impact_vfx": "@SuccFXArcaneImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "projectile_vfx": "@SuccFXSoulProjectile",
+        "names": {
+          "english": "Oolioddroo",
+          "chinese": "蛾梦魔",
+          "spanish": "Oolioddroo",
+          "french": "Oolioddroo",
+          "german": "Oolioddroo",
+          "portuguese": "Oolioddroo",
+          "russian": "Oolioddroo",
+          "chinese_traditional": "Oolioddroo",
+          "japanese": "Oolioddroo",
+          "korean": "Oolioddroo"
+        },
+        "character_art": "@OolioddrooCharacterArt",
+        "size": 2,
+        "attack_damage": 0,
+        "health": 30,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "SubtypesData_Demon_fcebd195-f262-4d7a-ac9f-01ffa2007a12"
+        ],
+        "triggers": [
+          "@OolioddrooOnTurn"
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "OolioddrooOnTurn",
+        "trigger": "on_turn_begin",
+        "descriptions": {
+          "english": "Deal damage equal to this unit’s [attack] to enemy units.",
+          "chinese": "对所有敌方单位造成等同于自身[attack]的伤害。",
+          "spanish": "Inflige daño igual a su [attack] a las unidades enemigas.",
+          "french": "Inflige aux unités ennemies des dégâts égaux à son [attack].",
+          "german": "Fügt feindlichen Einheiten Schaden in Höhe des eigenen [attack] zu.",
+          "portuguese": "Causa às unidades inimigas dano igual ao seu [attack].",
+          "russian": "Наносит врагам урон, равный своей [attack].",
+          "chinese_traditional": "對敵方單位造成等同自身 [attack] 的傷害。",
+          "japanese": "自身の[attack]に等しいダメージを敵全員に与える。",
+          "korean": "적에게 자신의 [attack]만큼 피해를 줍니다."
+        },
+        "effects": [
+          "@OolioddrooDamage"
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXArcaneImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXSoulProjectile",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/PurifiedSoul/FX_PurifiedSoulAttack.prefab",
+          "asset_guid": "8eb4671567d56e145aa892824c0c8cb0"
+        },
+        "spawn_location": "character_top"
+      },
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXPsionicAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/Ekka/FX_EkkaAttack.prefab",
+          "asset_guid": "c7e542f2b751e704d93e28e27fa469b4"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "OolioddrooCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@OolioddrooCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.085,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 0.85,
+                "y": 0.85,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "OolioddrooCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@OolioddrooCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "OolioddrooCharacterArt",
+        "path": "textures/OolioddrooCharacterArt.png"
+      },
+      {
+        "id": "OolioddrooCardArt",
+        "path": "textures/OolioddrooCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_Oolioddroo.json": "dfe9b00caf2d8ad01ecc7f8ab7c059ae977328c1bea1928b9f1ee5aa53090027",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

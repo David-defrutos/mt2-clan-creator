@@ -1,0 +1,136 @@
+{
+  "id": "freecompany-ShieldWall",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "ShieldWall"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Shield Wall",
+    "french": "Mur de boucliers",
+    "german": "Schildwall",
+    "russian": "Стена щитов",
+    "portuguese": "Muralha de Escudos",
+    "chinese": "盾墙",
+    "spanish": "Muro de escudos",
+    "chinese_traditional": "盾牆",
+    "korean": "방패벽",
+    "japanese": "盾の壁"
+  },
+  "descriptions": {
+    "english": "Apply [effect0.status0.power] [armor] to all friendly units on this floor.",
+    "french": "Appliquez [effect0.status0.power] [armor] à toutes les unités alliées de cet étage.",
+    "german": "Verleihe allen verbündeten Einheiten auf diesem Stockwerk [effect0.status0.power] [armor].",
+    "russian": "Наложите [effect0.status0.power] [armor] на все союзные боевые единицы на этом этаже.",
+    "portuguese": "Aplique [effect0.status0.power] [armor] a todas as unidades aliadas neste andar.",
+    "chinese": "对本层所有友方单位施加[effect0.status0.power] [armor]。",
+    "spanish": "Añade [effect0.status0.power] [armor] a todas las unidades aliadas de este piso.",
+    "chinese_traditional": "對本層所有友方單位施加[effect0.status0.power] [armor]。",
+    "korean": "이 층의 모든 아군 유닛에게 [effect0.status0.power] [armor] 부여.",
+    "japanese": "この階の味方ユニット全体に[effect0.status0.power] [armor]を付与。"
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/947325f257687743621483a6e02920ec7856e1e0da27ba7983158b2c919c7b97.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ShieldWallArt.png": "assets/947325f257687743621483a6e02920ec7856e1e0da27ba7983158b2c919c7b97.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "ShieldWall",
+        "names": {
+          "english": "Shield Wall",
+          "french": "Mur de boucliers",
+          "german": "Schildwall",
+          "russian": "Стена щитов",
+          "portuguese": "Muralha de Escudos",
+          "chinese": "盾墙",
+          "spanish": "Muro de escudos",
+          "chinese_traditional": "盾牆",
+          "korean": "방패벽",
+          "japanese": "盾の壁"
+        },
+        "descriptions": {
+          "english": "Apply [effect0.status0.power] [armor] to all friendly units on this floor.",
+          "french": "Appliquez [effect0.status0.power] [armor] à toutes les unités alliées de cet étage.",
+          "german": "Verleihe allen verbündeten Einheiten auf diesem Stockwerk [effect0.status0.power] [armor].",
+          "russian": "Наложите [effect0.status0.power] [armor] на все союзные боевые единицы на этом этаже.",
+          "portuguese": "Aplique [effect0.status0.power] [armor] a todas as unidades aliadas neste andar.",
+          "chinese": "对本层所有友方单位施加[effect0.status0.power] [armor]。",
+          "spanish": "Añade [effect0.status0.power] [armor] a todas las unidades aliadas de este piso.",
+          "chinese_traditional": "對本層所有友方單位施加[effect0.status0.power] [armor]。",
+          "korean": "이 층의 모든 아군 유닛에게 [effect0.status0.power] [armor] 부여.",
+          "japanese": "この階の味方ユニット全体に[effect0.status0.power] [armor]を付与。"
+        },
+        "card_art": "@ShieldWall",
+        "cost": 1,
+        "card_type": "spell",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@ShieldWallArmor"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "ShieldWallArmor",
+        "applied_vfx": "@CardShieldWallSanctuaryVFX",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "armor",
+            "count": 3
+          }
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "CardShieldWallSanctuaryVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Banished/Sanctuary/FX_Sanctuary.prefab",
+          "asset_guid": "76644c90ff01eac449740aa5aaadf56e"
+        },
+        "spawn_location": "room_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ShieldWall",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ShieldWall"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ShieldWall",
+        "path": "textures/ShieldWallArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/cards/card_shield_wall.json": "195cb7fab092c2b71ceb4bb6a8ac1fb54bdb6c7d15da80548e7bdb4c1e609c4e"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "id": "succclan-ParadoxTome",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "ParadoxTome"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Paradox Tome",
+    "chinese": "悖论法典",
+    "spanish": "Tomo de la paradoja",
+    "french": "Grimoire du paradoxe",
+    "german": "Paradoxes Buch",
+    "portuguese": "Tomo do Paradoxo",
+    "russian": "Книга парадокса",
+    "chinese_traditional": "悖論之書",
+    "japanese": "逆説の書",
+    "korean": "역설의 고서"
+  },
+  "descriptions": {
+    "english": "Apply [sweep] to a friendly unit. Add [effect1.secondarypower] <b>Obsessing Spark</b> to your hand.",
+    "chinese": "对一个友方单位施加[sweep]。将 [effect1.secondarypower] 张<b>欲望碎片</b>加入手牌。",
+    "spanish": "Otorga [sweep] a una unidad aliada. Añade [effect1.secondarypower] <b>Chispa obsesiva</b> a tu mano.",
+    "french": "Applique [sweep] à une unité alliée. Ajoutez [effect1.secondarypower] <b>Étincelle obsédante</b> à votre main.",
+    "german": "Verleiht einer verbündeten Einheit [sweep]. Füge deiner Hand [effect1.secondarypower] <b>Besessenheitsfunke</b> hinzu.",
+    "portuguese": "Concede [sweep] a uma unidade aliada. Adicione [effect1.secondarypower] <b>Centelha Obsessiva</b> à sua mão.",
+    "russian": "Даёт союзнику [sweep]. Добавляет в руку [effect1.secondarypower] <b>Искра одержимости</b>.",
+    "chinese_traditional": "對一個友方單位施加 [sweep]。將 [effect1.secondarypower] 張<b>執念火花</b>加入手牌。",
+    "japanese": "味方1体に[sweep]を付与する。<b>執着の火花</b>を[effect1.secondarypower]枚手札に加える。",
+    "korean": "아군 하나에게 [sweep]를 부여합니다. <b>집착의 불꽃</b> [effect1.secondarypower]장을 손에 추가합니다."
+  },
+  "cost": 3,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/ac6864ab07e39a0cabe5ceb1cbb5932c6ca612439ddec9f36752d5869fe71871.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ObsessingShardArt.png": "assets/fc6bd964ecb26665a12e65a318a98fd020456df96f868ae0202ada3da2eadb51.png",
+    "textures/ParadoxTomeArt.png": "assets/ac6864ab07e39a0cabe5ceb1cbb5932c6ca612439ddec9f36752d5869fe71871.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "ParadoxTome",
+        "names": {
+          "english": "Paradox Tome",
+          "chinese": "悖论法典",
+          "spanish": "Tomo de la paradoja",
+          "french": "Grimoire du paradoxe",
+          "german": "Paradoxes Buch",
+          "portuguese": "Tomo do Paradoxo",
+          "russian": "Книга парадокса",
+          "chinese_traditional": "悖論之書",
+          "japanese": "逆説の書",
+          "korean": "역설의 고서"
+        },
+        "descriptions": {
+          "english": "Apply [sweep] to a friendly unit. Add [effect1.secondarypower] <b>Obsessing Spark</b> to your hand.",
+          "chinese": "对一个友方单位施加[sweep]。将 [effect1.secondarypower] 张<b>欲望碎片</b>加入手牌。",
+          "spanish": "Otorga [sweep] a una unidad aliada. Añade [effect1.secondarypower] <b>Chispa obsesiva</b> a tu mano.",
+          "french": "Applique [sweep] à une unité alliée. Ajoutez [effect1.secondarypower] <b>Étincelle obsédante</b> à votre main.",
+          "german": "Verleiht einer verbündeten Einheit [sweep]. Füge deiner Hand [effect1.secondarypower] <b>Besessenheitsfunke</b> hinzu.",
+          "portuguese": "Concede [sweep] a uma unidade aliada. Adicione [effect1.secondarypower] <b>Centelha Obsessiva</b> à sua mão.",
+          "russian": "Даёт союзнику [sweep]. Добавляет в руку [effect1.secondarypower] <b>Искра одержимости</b>.",
+          "chinese_traditional": "對一個友方單位施加 [sweep]。將 [effect1.secondarypower] 張<b>執念火花</b>加入手牌。",
+          "japanese": "味方1体に[sweep]を付与する。<b>執着の火花</b>を[effect1.secondarypower]枚手札に加える。",
+          "korean": "아군 하나에게 [sweep]를 부여합니다. <b>집착의 불꽃</b> [effect1.secondarypower]장을 손에 추가합니다."
+        },
+        "card_type": "spell",
+        "rarity": "rare",
+        "card_art": "@ParadoxTomeArt",
+        "cost": 3,
+        "targets_room": true,
+        "targetless": false,
+        "traits": [
+          "@Consume"
+        ],
+        "effects": [
+          "@ParadoxTomeSweep",
+          "@ParadoxTomeShards"
+        ]
+      },
+      {
+        "id": "ObsessingShard",
+        "names": {
+          "english": "Obsessing Spark",
+          "chinese": "欲望碎片",
+          "spanish": "Chispa obsesiva",
+          "french": "Étincelle obsédante",
+          "german": "Besessenheitsfunke",
+          "portuguese": "Centelha Obsessiva",
+          "russian": "Искра одержимости",
+          "chinese_traditional": "執念火花",
+          "japanese": "執着の火花",
+          "korean": "집착의 불꽃"
+        },
+        "card_type": "blight",
+        "rarity": "common",
+        "card_art": "@ObsessingShardArt",
+        "cost": 1,
+        "targets_room": false,
+        "targetless": true,
+        "traits": [
+          "@Consume"
+        ],
+        "triggers": [
+          "@ObsessingShardOnUnplayed"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "ParadoxTomeShards",
+        "name": "CardEffectAddBattleCard",
+        "target_mode": "room",
+        "target_team": "none",
+        "param_int": 3,
+        "param_int_2": 3,
+        "param_card_pool": "@ObsessingShardPool"
+      },
+      {
+        "id": "ObsessingShardPyreDamage",
+        "applied_vfx": "@SuccFXShadowImpact",
+        "name": "CardEffectDamage",
+        "target_mode": "pyre",
+        "target_team": "both",
+        "param_int": 1,
+        "suppress_pyre_room_focus": true
+      },
+      {
+        "id": "ParadoxTomeSweep",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "sweep",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "card_pools": [
+      {
+        "id": "ObsessingShardPool",
+        "cards": [
+          "@ObsessingShard"
+        ]
+      }
+    ],
+    "card_triggers": [
+      {
+        "id": "ObsessingShardOnUnplayed",
+        "trigger": "on_unplayed_negative",
+        "descriptions": {
+          "english": "Your Pyre takes [effect0.power] damage.",
+          "chinese": "对薪火造成 [effect0.power] 点伤害。",
+          "spanish": "Tu Pira recibe [effect0.power] de daño.",
+          "french": "Votre Brasier subit [effect0.power] dégâts.",
+          "german": "Deine Höllenglut erleidet [effect0.power] Schaden.",
+          "portuguese": "Sua Pira sofre [effect0.power] de dano.",
+          "russian": "Пекло получает [effect0.power] урона.",
+          "chinese_traditional": "你的薪火受到 [effect0.power] 點傷害。",
+          "japanese": "パイアが[effect0.power]ダメージを受ける。",
+          "korean": "화로가 [effect0.power]의 피해를 받습니다."
+        },
+        "effects": [
+          "@ObsessingShardPyreDamage"
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ObsessingShardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ObsessingShardArt"
+          }
+        }
+      },
+      {
+        "id": "ParadoxTomeArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ParadoxTomeArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ObsessingShardArt",
+        "path": "textures/ObsessingShardArt.png"
+      },
+      {
+        "id": "ParadoxTomeArt",
+        "path": "textures/ParadoxTomeArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_ParadoxTome.json": "90e83c177ffdacf8f8d67d9aefb4a7d6d81d3e77488ed5e1287752b5da72e498",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d",
+    "json/spells/card_ObsessingShard.json": "aa2f8c8cb633cab56c128cd56a7092c7a79f7b33dbe670f259275d646211bd37",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

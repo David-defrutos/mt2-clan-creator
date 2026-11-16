@@ -1,0 +1,244 @@
+{
+  "id": "ww-WW_T02",
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_T02"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Chaperona de Inconducta",
+    "english": "Witch Affairs Chaperone",
+    "french": "Chaperonne des sorcières",
+    "german": "Hexenbetreuerin",
+    "portuguese": "Acompanhante das Bruxas",
+    "russian": "Сопровождающая ведьм",
+    "chinese": "女巫事务监督员",
+    "chinese_traditional": "女巫事務監督員",
+    "korean": "마녀 담당 보호자",
+    "japanese": "魔女担当の付き添い"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": 10,
+  "attack": 0,
+  "size": 1,
+  "picture": "assets/b7c5afb366bbd01348a14a78fb3740f6900f84f261eee2162a480997d71528d1.png",
+  "characterPicture": "assets/e463f09417dc492c9d4ca0f50b11aae4d6a6ded52e496636b189a8899e9bdbb5.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_T02CardArt.png": "assets/b7c5afb366bbd01348a14a78fb3740f6900f84f261eee2162a480997d71528d1.png",
+    "textures/characters/WW_T02CharacterArt.png": "assets/e463f09417dc492c9d4ca0f50b11aae4d6a6ded52e496636b189a8899e9bdbb5.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_T02",
+        "names": {
+          "spanish": "Chaperona de Inconducta",
+          "english": "Witch Affairs Chaperone",
+          "french": "Chaperonne des sorcières",
+          "german": "Hexenbetreuerin",
+          "portuguese": "Acompanhante das Bruxas",
+          "russian": "Сопровождающая ведьм",
+          "chinese": "女巫事务监督员",
+          "chinese_traditional": "女巫事務監督員",
+          "korean": "마녀 담당 보호자",
+          "japanese": "魔女担当の付き添い"
+        },
+        "card_type": "monster",
+        "cost": 1,
+        "rarity": "common",
+        "targets_room": true,
+        "effects": [
+          "@WW_T02_Spawn"
+        ],
+        "card_art": "@WW_T02CardArt"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_T02CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_T02CardArt"
+          }
+        }
+      },
+      {
+        "id": "WW_T02CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_T02CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.928,
+                "z": 0
+              },
+              "scale": {
+                "x": 1.75,
+                "y": 1.75,
+                "z": 1
+              }
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_T02CardArt",
+        "path": "textures/cards/WW_T02CardArt.png"
+      },
+      {
+        "id": "WW_T02CharacterArt",
+        "path": "textures/characters/WW_T02CharacterArt.png"
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_T02_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@WW_T02_Character"
+      },
+      {
+        "id": "WW_T02_AuraWizard",
+        "name": "CardEffectEnchant",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "target_subtype": "@WW_Wizard",
+        "param_status_effects": [
+          {
+            "status": "conduit",
+            "count": 5
+          }
+        ]
+      },
+      {
+        "id": "WW_T02_Aura",
+        "name": "CardEffectEnchant",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "target_subtype": "@WW_Witch",
+        "param_status_effects": [
+          {
+            "status": "conduit",
+            "count": 5
+          }
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_T02_Character",
+        "names": {
+          "spanish": "Chaperona de Inconducta",
+          "english": "Witch Affairs Chaperone",
+          "french": "Chaperonne des sorcières",
+          "german": "Hexenbetreuerin",
+          "portuguese": "Acompanhante das Bruxas",
+          "russian": "Сопровождающая ведьм",
+          "chinese": "女巫事务监督员",
+          "chinese_traditional": "女巫事務監督員",
+          "korean": "마녀 담당 보호자",
+          "japanese": "魔女担当の付き添い"
+        },
+        "size": 1,
+        "attack_damage": 0,
+        "health": 10,
+        "subtypes": [
+          "@WW_Chaperone"
+        ],
+        "character_art": "@WW_T02CharacterArt",
+        "triggers": [
+          "@WW_T02_Enchant"
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "WW_T02_Enchant",
+        "trigger": "after_spawn_enchant",
+        "effects": [
+          "@WW_T02_Aura",
+          "@WW_T02_AuraWizard"
+        ],
+        "descriptions": {
+          "english": "Grant [conduit] 5 to Wizards and Witches.",
+          "spanish": "Otorga [conduit] 5 a Magos y Brujas.",
+          "french": "Accordez [conduit] 5 aux sorciers et sorcières.",
+          "german": "Gewähre Magiern und Hexen [conduit] 5.",
+          "portuguese": "Concede [conduit] 5 a Magos e Bruxas.",
+          "russian": "Дайте магам и ведьмам [conduit] 5.",
+          "chinese": "使男巫和女巫获得[conduit] 5。",
+          "chinese_traditional": "使男巫和女巫獲得[conduit] 5。",
+          "korean": "마법사와 마녀에게 [conduit] 5를 부여합니다.",
+          "japanese": "魔法使いと魔女に[conduit] 5を与える。"
+        }
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Wizard",
+        "names": {
+          "english": "Wizard",
+          "spanish": "Mago",
+          "french": "Sorcier",
+          "german": "Magier",
+          "portuguese": "Mago",
+          "russian": "Маг",
+          "chinese": "男巫",
+          "chinese_traditional": "男巫",
+          "korean": "마법사",
+          "japanese": "魔法使い"
+        }
+      },
+      {
+        "id": "WW_Witch",
+        "names": {
+          "english": "Witch",
+          "spanish": "Bruja",
+          "french": "Sorcière",
+          "german": "Hexe",
+          "portuguese": "Bruxa",
+          "russian": "Ведьма",
+          "chinese": "女巫",
+          "chinese_traditional": "女巫",
+          "korean": "마녀",
+          "japanese": "魔女"
+        }
+      },
+      {
+        "id": "WW_Chaperone",
+        "names": {
+          "english": "Chaperone",
+          "spanish": "Chaperón",
+          "french": "Chaperon",
+          "german": "Begleitperson",
+          "portuguese": "Acompanhante",
+          "russian": "Сопровождающий",
+          "chinese": "监督员",
+          "chinese_traditional": "監督員",
+          "korean": "보호자",
+          "japanese": "付き添い"
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_T02.json": "71a1f6b06f38dd2a702d430718d580b8c9184bdeeb27b686df271623737e8e0f",
+    "content/json/00_foundation.json": "ee911ff08273912e47de4989dae5fab50408fe20767ad886fb1b87dcdd81b5e4"
+  }
+}

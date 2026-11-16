@@ -1,0 +1,147 @@
+{
+  "id": "succclan-PiercingShriek",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "PiercingShriek"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Piercing Shriek",
+    "chinese": "刺耳尖啸",
+    "spanish": "Grito penetrante",
+    "french": "Cri perçant",
+    "german": "Durchdringender Schrei",
+    "portuguese": "Grito Perfurante",
+    "russian": "Пронзительный крик",
+    "chinese_traditional": "刺耳尖嘯",
+    "japanese": "貫く絶叫",
+    "korean": "꿰뚫는 비명"
+  },
+  "descriptions": {
+    "english": "Deal [effect0.power] damage to all enemy units.",
+    "chinese": "对所有敌方单位造成 [effect0.power] 点伤害。",
+    "spanish": "Inflige [effect0.power] de daño a todas las unidades enemigas.",
+    "french": "Inflige [effect0.power] dégâts à toutes les unités ennemies.",
+    "german": "Fügt allen feindlichen Einheiten [effect0.power] Schaden zu.",
+    "portuguese": "Causa [effect0.power] de dano a todas as unidades inimigas.",
+    "russian": "Наносит [effect0.power] урона всем врагам.",
+    "chinese_traditional": "對所有敵方單位造成 [effect0.power] 點傷害。",
+    "japanese": "敵全員に[effect0.power]ダメージを与える。",
+    "korean": "모든 적에게 [effect0.power]의 피해를 줍니다."
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/7f9e88d69c45cd776bb34e05b4a02330f4afffcd416b8475e8b4c64925feb68d.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/PiercingShriekArt.png": "assets/7f9e88d69c45cd776bb34e05b4a02330f4afffcd416b8475e8b4c64925feb68d.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "PiercingShriek",
+        "names": {
+          "english": "Piercing Shriek",
+          "chinese": "刺耳尖啸",
+          "spanish": "Grito penetrante",
+          "french": "Cri perçant",
+          "german": "Durchdringender Schrei",
+          "portuguese": "Grito Perfurante",
+          "russian": "Пронзительный крик",
+          "chinese_traditional": "刺耳尖嘯",
+          "japanese": "貫く絶叫",
+          "korean": "꿰뚫는 비명"
+        },
+        "descriptions": {
+          "english": "Deal [effect0.power] damage to all enemy units.",
+          "chinese": "对所有敌方单位造成 [effect0.power] 点伤害。",
+          "spanish": "Inflige [effect0.power] de daño a todas las unidades enemigas.",
+          "french": "Inflige [effect0.power] dégâts à toutes les unités ennemies.",
+          "german": "Fügt allen feindlichen Einheiten [effect0.power] Schaden zu.",
+          "portuguese": "Causa [effect0.power] de dano a todas as unidades inimigas.",
+          "russian": "Наносит [effect0.power] урона всем врагам.",
+          "chinese_traditional": "對所有敵方單位造成 [effect0.power] 點傷害。",
+          "japanese": "敵全員に[effect0.power]ダメージを与える。",
+          "korean": "모든 적에게 [effect0.power]의 피해를 줍니다."
+        },
+        "card_type": "spell",
+        "rarity": "uncommon",
+        "card_art": "@PiercingShriekArt",
+        "cost": 0,
+        "targets_room": true,
+        "targetless": true,
+        "traits": [
+          "@Consume",
+          "@Piercing"
+        ],
+        "effects": [
+          "@PiercingShriekDamage"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "PiercingShriekDamage",
+        "applied_vfx": "@SuccFXArcaneImpact",
+        "name": "CardEffectDamage",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_int": 13
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXArcaneImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "Piercing",
+        "name": "CardTraitIgnoreArmor"
+      },
+      {
+        "id": "Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "PiercingShriekArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@PiercingShriekArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "PiercingShriekArt",
+        "path": "textures/PiercingShriekArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_PiercingShriek.json": "e97e2120e7e7b981d6b172f77dea47a705fdda3c83438fa2bdff41f1cbb91dd6",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d"
+  }
+}

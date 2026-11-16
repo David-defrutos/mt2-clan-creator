@@ -1,0 +1,133 @@
+{
+  "id": "freecompany-QuartermastersSeal",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "relics",
+    "id": "QuartermastersSeal"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Quartermaster's Seal",
+    "french": "Sceau de l'intendant",
+    "german": "Quartiermeistersiegel",
+    "russian": "Печать интенданта",
+    "portuguese": "Selo do Intendente",
+    "chinese": "军需官印章",
+    "spanish": "Sello del intendente",
+    "chinese_traditional": "軍需官印章",
+    "korean": "병참 장교의 인장",
+    "japanese": "補給官の印章"
+  },
+  "descriptions": {
+    "english": "Friendly units can hold <b>1</b> additional piece of equipment.",
+    "french": "Les unités alliées peuvent porter <b>1</b> équipement supplémentaire.",
+    "german": "Verbündete Einheiten können <b>1</b> zusätzlichen Ausrüstungsgegenstand tragen.",
+    "russian": "Союзные боевые единицы могут носить на <b>1</b> предмет снаряжения больше.",
+    "portuguese": "Unidades aliadas podem carregar <b>1</b> equipamento adicional.",
+    "chinese": "友方单位可额外携带<b>1</b>件装备。",
+    "spanish": "Las unidades aliadas pueden llevar <b>1</b> pieza de equipo adicional.",
+    "chinese_traditional": "友方單位可額外攜帶<b>1</b>件裝備。",
+    "korean": "아군 유닛은 장비 <b>1</b>개를 추가로 장착 가능.",
+    "japanese": "味方ユニットは装備を追加で<b>1</b>個持てる。"
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/34d15cd7031510f3968556ebd3d8f56af7596ba37781c0615dc9b7adcded538b.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/QuartermastersSealIconSmall.png": "assets/b8502f7525857a8d1b4e261a166ef984683920674dbe6d70870062d8302a3003.png",
+    "textures/QuartermastersSealIcon.png": "assets/34d15cd7031510f3968556ebd3d8f56af7596ba37781c0615dc9b7adcded538b.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "QuartermastersSeal",
+        "type": "collectable",
+        "names": {
+          "english": "Quartermaster's Seal",
+          "french": "Sceau de l'intendant",
+          "german": "Quartiermeistersiegel",
+          "russian": "Печать интенданта",
+          "portuguese": "Selo do Intendente",
+          "chinese": "军需官印章",
+          "spanish": "Sello del intendente",
+          "chinese_traditional": "軍需官印章",
+          "korean": "병참 장교의 인장",
+          "japanese": "補給官の印章"
+        },
+        "descriptions": {
+          "english": "Friendly units can hold <b>1</b> additional piece of equipment.",
+          "french": "Les unités alliées peuvent porter <b>1</b> équipement supplémentaire.",
+          "german": "Verbündete Einheiten können <b>1</b> zusätzlichen Ausrüstungsgegenstand tragen.",
+          "russian": "Союзные боевые единицы могут носить на <b>1</b> предмет снаряжения больше.",
+          "portuguese": "Unidades aliadas podem carregar <b>1</b> equipamento adicional.",
+          "chinese": "友方单位可额外携带<b>1</b>件装备。",
+          "spanish": "Las unidades aliadas pueden llevar <b>1</b> pieza de equipo adicional.",
+          "chinese_traditional": "友方單位可額外攜帶<b>1</b>件裝備。",
+          "korean": "아군 유닛은 장비 <b>1</b>개를 추가로 장착 가능.",
+          "japanese": "味方ユニットは装備を追加で<b>1</b>個持てる。"
+        },
+        "relic_activated_texts": {
+          "english": "Stamped and issued.",
+          "french": "S'estampillé et émis.",
+          "german": "Stempelt und ausgestellt.",
+          "russian": "Опечатана и выпущена.",
+          "portuguese": "Estampado e emitido.",
+          "chinese": "盖章和发行.",
+          "spanish": "Sellado y expedido.",
+          "chinese_traditional": "封印並發行.",
+          "korean": "봉쇄하고 발급",
+          "japanese": "スタンプして発行した"
+        },
+        "relic_effects": [
+          "@QuartermastersSealEffect"
+        ],
+        "icon": "@QuartermastersSealIcon",
+        "icon_small": "@QuartermastersSealIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "class": "@ClassFreeCompany",
+              "pools": [
+                "MegaRelicPool"
+              ],
+              "rarity": "uncommon"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "QuartermastersSealIconSmall",
+        "path": "textures/QuartermastersSealIconSmall.png"
+      },
+      {
+        "id": "QuartermastersSealIcon",
+        "path": "textures/QuartermastersSealIcon.png"
+      }
+    ],
+    "relic_effects": [
+      {
+        "id": "QuartermastersSealEffect",
+        "name": "RelicEffectAddEquipmentLimit",
+        "param_int": 1,
+        "param_bool": false
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_quartermasters_seal.json": "e2115f645cef1a33b2d4e4c8b770e6ab163d00c8ebf654034547eff8e35882e4"
+  }
+}

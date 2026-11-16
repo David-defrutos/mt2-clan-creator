@@ -1,0 +1,184 @@
+{
+  "id": "freecompany-Lockpicks",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Lockpicks"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Lockpicks",
+    "french": "Crochets",
+    "german": "Dietriche",
+    "russian": "Отмычки",
+    "portuguese": "Gazuas",
+    "chinese": "开锁工具",
+    "spanish": "Ganzúas",
+    "chinese_traditional": "開鎖工具",
+    "korean": "자물쇠 따개",
+    "japanese": "ピッキング道具"
+  },
+  "descriptions": {
+    "english": "<b>+4</b> [attack]. Apply <b>1</b> [avarice] and <b>2</b> [stealth].",
+    "french": "<b>+4</b> [attack]. Appliquez <b>1</b> [avarice] et <b>2</b> [stealth].",
+    "german": "<b>+4</b> [attack]. Erhalte <b>1</b> [avarice] und <b>2</b> [stealth].",
+    "russian": "<b>+4</b> [attack]. Получите <b>1</b> [avarice] и <b>2</b> [stealth].",
+    "portuguese": "<b>+4</b> [attack]. Aplique <b>1</b> [avarice] e <b>2</b> [stealth].",
+    "chinese": "<b>+4</b> [attack]. 施加<b>1</b> [avarice]和<b>2</b> [stealth]。",
+    "spanish": "<b>+4</b> [attack]. Añade <b>1</b> [avarice] y <b>2</b> [stealth].",
+    "chinese_traditional": "<b>+4</b> [attack]. 施加<b>1</b> [avarice]和<b>2</b> [stealth]。",
+    "korean": "<b>+4</b> [attack]. <b>1</b> [avarice] 및 <b>2</b> [stealth] 부여.",
+    "japanese": "<b>+4</b> [attack]. <b>1</b> [avarice]と<b>2</b> [stealth]を付与。"
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/2e24deb7ab3d861e6afa8f96fa0602fc2e8bd6de7374b00becd85313c991e652.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/LockpicksArt.png": "assets/2e24deb7ab3d861e6afa8f96fa0602fc2e8bd6de7374b00becd85313c991e652.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Lockpicks",
+        "names": {
+          "english": "Lockpicks",
+          "french": "Crochets",
+          "german": "Dietriche",
+          "russian": "Отмычки",
+          "portuguese": "Gazuas",
+          "chinese": "开锁工具",
+          "spanish": "Ganzúas",
+          "chinese_traditional": "開鎖工具",
+          "korean": "자물쇠 따개",
+          "japanese": "ピッキング道具"
+        },
+        "descriptions": {
+          "english": "<b>+4</b> [attack]. Apply <b>1</b> [avarice] and <b>2</b> [stealth].",
+          "french": "<b>+4</b> [attack]. Appliquez <b>1</b> [avarice] et <b>2</b> [stealth].",
+          "german": "<b>+4</b> [attack]. Erhalte <b>1</b> [avarice] und <b>2</b> [stealth].",
+          "russian": "<b>+4</b> [attack]. Получите <b>1</b> [avarice] и <b>2</b> [stealth].",
+          "portuguese": "<b>+4</b> [attack]. Aplique <b>1</b> [avarice] e <b>2</b> [stealth].",
+          "chinese": "<b>+4</b> [attack]. 施加<b>1</b> [avarice]和<b>2</b> [stealth]。",
+          "spanish": "<b>+4</b> [attack]. Añade <b>1</b> [avarice] y <b>2</b> [stealth].",
+          "chinese_traditional": "<b>+4</b> [attack]. 施加<b>1</b> [avarice]和<b>2</b> [stealth]。",
+          "korean": "<b>+4</b> [attack]. <b>1</b> [avarice] 및 <b>2</b> [stealth] 부여.",
+          "japanese": "<b>+4</b> [attack]. <b>1</b> [avarice]と<b>2</b> [stealth]を付与。"
+        },
+        "card_art": "@Lockpicks",
+        "cost": 0,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipLockpicks"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "EquipLockpicks",
+        "applied_vfx": "@KitRogueShadowVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgLockpicks"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgLockpicks",
+        "titles": {
+          "english": "Lockpicks",
+          "french": "Crochets",
+          "german": "Dietriche",
+          "russian": "Отмычки",
+          "portuguese": "Gazuas",
+          "chinese": "开锁工具",
+          "spanish": "Ganzúas",
+          "chinese_traditional": "開鎖工具",
+          "korean": "자물쇠 따개",
+          "japanese": "ピッキング道具"
+        },
+        "descriptions": {
+          "english": "<b>+4</b> [attack]. Apply <b>1</b> [avarice] and <b>2</b> [stealth].",
+          "french": "<b>+4</b> [attack]. Appliquez <b>1</b> [avarice] et <b>2</b> [stealth].",
+          "german": "<b>+4</b> [attack]. Erhalte <b>1</b> [avarice] und <b>2</b> [stealth].",
+          "russian": "<b>+4</b> [attack]. Получите <b>1</b> [avarice] и <b>2</b> [stealth].",
+          "portuguese": "<b>+4</b> [attack]. Aplique <b>1</b> [avarice] e <b>2</b> [stealth].",
+          "chinese": "<b>+4</b> [attack]. 施加<b>1</b> [avarice]和<b>2</b> [stealth]。",
+          "spanish": "<b>+4</b> [attack]. Añade <b>1</b> [avarice] y <b>2</b> [stealth].",
+          "chinese_traditional": "<b>+4</b> [attack]. 施加<b>1</b> [avarice]和<b>2</b> [stealth]。",
+          "korean": "<b>+4</b> [attack]. <b>1</b> [avarice] 및 <b>2</b> [stealth] 부여.",
+          "japanese": "<b>+4</b> [attack]. <b>1</b> [avarice]と<b>2</b> [stealth]を付与。"
+        },
+        "icon": "@Lockpicks",
+        "bonus_damage": 4,
+        "status_effect_upgrades": [
+          {
+            "status": "avarice",
+            "count": 1
+          },
+          {
+            "status": "stealth",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Lockpicks",
+        "path": "textures/LockpicksArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitRogueShadowVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Lockpicks",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Lockpicks"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/kits/kit_rogue.json": "60ccad914ba5a1cedd187db67b9a14ad67efb65857357767805f708afc2ee44c",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

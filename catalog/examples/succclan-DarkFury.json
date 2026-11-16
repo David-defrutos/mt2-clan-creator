@@ -1,0 +1,159 @@
+{
+  "id": "succclan-DarkFury",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "DarkFury"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Dark Fury",
+    "chinese": "黑暗狂怒",
+    "spanish": "Furia oscura",
+    "french": "Fureur sombre",
+    "german": "Dunkle Wut",
+    "portuguese": "Fúria Sombria",
+    "russian": "Тёмная ярость",
+    "chinese_traditional": "黑暗狂怒",
+    "japanese": "闇の怒り",
+    "korean": "어둠의 격노"
+  },
+  "descriptions": {
+    "english": "Enemy units gain +[effect0.power][attack] and lose [effect1.power][health].",
+    "chinese": "所有敌方单位 +[effect0.power][attack]，-[effect1.power][health]。",
+    "spanish": "Las unidades enemigas obtienen +[effect0.power][attack] y pierden [effect1.power][health].",
+    "french": "Les unités ennemies gagnent +[effect0.power][attack] et perdent [effect1.power][health].",
+    "german": "Feindliche Einheiten erhalten +[effect0.power][attack] und verlieren [effect1.power][health].",
+    "portuguese": "As unidades inimigas ganham +[effect0.power][attack] e perdem [effect1.power][health].",
+    "russian": "Враги получают +[effect0.power][attack] и теряют [effect1.power][health].",
+    "chinese_traditional": "敵方單位獲得 +[effect0.power][attack] 並失去 [effect1.power][health]。",
+    "japanese": "敵全員が+[effect0.power][attack]を得て、[effect1.power][health]を失う。",
+    "korean": "적이 +[effect0.power][attack]을 얻고 [effect1.power][health]을 잃습니다."
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/68d15d40876ace4dd9fe3acdb3c2afa337d0a7a86f6e1e6e1060cd38f5bd2926.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/DarkFuryArt.png": "assets/68d15d40876ace4dd9fe3acdb3c2afa337d0a7a86f6e1e6e1060cd38f5bd2926.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "DarkFury",
+        "names": {
+          "english": "Dark Fury",
+          "chinese": "黑暗狂怒",
+          "spanish": "Furia oscura",
+          "french": "Fureur sombre",
+          "german": "Dunkle Wut",
+          "portuguese": "Fúria Sombria",
+          "russian": "Тёмная ярость",
+          "chinese_traditional": "黑暗狂怒",
+          "japanese": "闇の怒り",
+          "korean": "어둠의 격노"
+        },
+        "descriptions": {
+          "english": "Enemy units gain +[effect0.power][attack] and lose [effect1.power][health].",
+          "chinese": "所有敌方单位 +[effect0.power][attack]，-[effect1.power][health]。",
+          "spanish": "Las unidades enemigas obtienen +[effect0.power][attack] y pierden [effect1.power][health].",
+          "french": "Les unités ennemies gagnent +[effect0.power][attack] et perdent [effect1.power][health].",
+          "german": "Feindliche Einheiten erhalten +[effect0.power][attack] und verlieren [effect1.power][health].",
+          "portuguese": "As unidades inimigas ganham +[effect0.power][attack] e perdem [effect1.power][health].",
+          "russian": "Враги получают +[effect0.power][attack] и теряют [effect1.power][health].",
+          "chinese_traditional": "敵方單位獲得 +[effect0.power][attack] 並失去 [effect1.power][health]。",
+          "japanese": "敵全員が+[effect0.power][attack]を得て、[effect1.power][health]を失う。",
+          "korean": "적이 +[effect0.power][attack]을 얻고 [effect1.power][health]을 잃습니다."
+        },
+        "card_type": "spell",
+        "rarity": "uncommon",
+        "card_art": "@DarkFuryArt",
+        "cost": 1,
+        "targets_room": true,
+        "targetless": true,
+        "traits": [
+          "@Consume"
+        ],
+        "effects": [
+          "@DarkFuryAttack",
+          "@DarkFuryHealth"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "DarkFuryHealth",
+        "applied_vfx": "@SuccFXShadowImpact",
+        "name": "CardEffectDebuffMaxHealth",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_int": 10
+      },
+      {
+        "id": "DarkFuryAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectBuffDamage",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_int": 10
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXAttackBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "DarkFuryArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@DarkFuryArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "DarkFuryArt",
+        "path": "textures/DarkFuryArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_DarkFury.json": "a22296e769958387d3b861c7e5199878d9ff41b2b7ca6d243f324eea735a4da8",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d"
+  }
+}

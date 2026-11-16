@@ -1,0 +1,397 @@
+{
+  "id": "succclan-SpawnGreedGhost",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "SpawnGreedGhost"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Greed Ghost",
+    "chinese": "贪婪幽魂",
+    "spanish": "Fantasma de la avaricia",
+    "french": "Fantôme de l'avarice",
+    "german": "Geist der Gier",
+    "portuguese": "Fantasma da Ganância",
+    "russian": "Призрак алчности",
+    "chinese_traditional": "貪婪幽靈",
+    "japanese": "強欲の幽霊",
+    "korean": "탐욕의 유령"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 8,
+  "attack": 0,
+  "size": 1,
+  "picture": "assets/95614a0130a1cd48932b27784eec71b4f2f82a54663af78b4b32fbf3a28ae5ad.png",
+  "characterPicture": "assets/d1adeba32df47ef0225bf8299c261ff0ffa85403c13dbb16db265f7494e609f8.png",
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "character_trigger_types",
+      "id": "Accursed",
+      "names": {
+        "english": "Accursed",
+        "chinese": "被咒"
+      },
+      "descriptions": {
+        "english": "Triggers when, during your turn, a <b>Blight</b> or [junk] is played or discarded on the floor.",
+        "chinese": "回合结束前在本层打出或舍弃[blight]牌或[junk]牌时触发。"
+      },
+      "file": "packages/Conductor-Conductor/json/triggers.json",
+      "sha256": "0a0e9419dfeeb57f0e0917c7d1eddf6483d0cb58e7b40188c57b4ab2ecae86b5"
+    }
+  ],
+  "assets": {
+    "textures/ObsessingShardArt.png": "assets/fc6bd964ecb26665a12e65a318a98fd020456df96f868ae0202ada3da2eadb51.png",
+    "textures/GreedGhostCharacterArt.png": "assets/d1adeba32df47ef0225bf8299c261ff0ffa85403c13dbb16db265f7494e609f8.png",
+    "textures/GreedGhostCardArt.png": "assets/95614a0130a1cd48932b27784eec71b4f2f82a54663af78b4b32fbf3a28ae5ad.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnGreedGhost",
+        "names": {
+          "english": "Greed Ghost",
+          "chinese": "贪婪幽魂",
+          "spanish": "Fantasma de la avaricia",
+          "french": "Fantôme de l'avarice",
+          "german": "Geist der Gier",
+          "portuguese": "Fantasma da Ganância",
+          "russian": "Призрак алчности",
+          "chinese_traditional": "貪婪幽靈",
+          "japanese": "強欲の幽霊",
+          "korean": "탐욕의 유령"
+        },
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "card_art": "@GreedGhostCardArt",
+        "cost": 0,
+        "targets_room": true,
+        "effects": [
+          "@SpawnGreedGhost"
+        ]
+      },
+      {
+        "id": "GhostObsession",
+        "names": {
+          "english": "Obsession",
+          "spanish": "Obsesión",
+          "chinese": "执念",
+          "french": "Obsession",
+          "german": "Besessenheit",
+          "portuguese": "Obsessão",
+          "russian": "Одержимость",
+          "chinese_traditional": "執念",
+          "japanese": "執着",
+          "korean": "집착"
+        },
+        "descriptions": {
+          "english": "Add [effect0.secondarypower] <b>Obsessing Spark</b> to your hand.",
+          "spanish": "Añade [effect0.secondarypower] <b>Chispa obsesiva</b> a tu mano.",
+          "chinese": "将 [effect0.secondarypower] 张<b>欲望碎片</b>加入手牌。",
+          "french": "Ajoutez [effect0.secondarypower] <b>Étincelle obsédante</b> à votre main.",
+          "german": "Füge deiner Hand [effect0.secondarypower] <b>Besessenheitsfunke</b> hinzu.",
+          "portuguese": "Adicione [effect0.secondarypower] <b>Centelha Obsessiva</b> à sua mão.",
+          "russian": "Добавляет [effect0.secondarypower] <b>Искра одержимости</b> в руку.",
+          "chinese_traditional": "將 [effect0.secondarypower] 張<b>執念火花</b>加入手牌。",
+          "japanese": "手札に<b>執着の火花</b>を[effect0.secondarypower]枚加える。",
+          "korean": "손에 <b>집착의 불꽃</b> [effect0.secondarypower]장을 추가합니다."
+        },
+        "card_art": "@ObsessingShardArt",
+        "card_type": "spell",
+        "is_an_ability": true,
+        "cost": 0,
+        "cooldown": 2,
+        "initial_cooldown": 0,
+        "targetless": true,
+        "targets_room": false,
+        "effects": [
+          "@KnightMareAbyssAddSpark"
+        ]
+      },
+      {
+        "id": "ObsessingShard",
+        "names": {
+          "english": "Obsessing Spark",
+          "chinese": "欲望碎片",
+          "spanish": "Chispa obsesiva",
+          "french": "Étincelle obsédante",
+          "german": "Besessenheitsfunke",
+          "portuguese": "Centelha Obsessiva",
+          "russian": "Искра одержимости",
+          "chinese_traditional": "執念火花",
+          "japanese": "執着の火花",
+          "korean": "집착의 불꽃"
+        },
+        "card_type": "blight",
+        "rarity": "common",
+        "card_art": "@ObsessingShardArt",
+        "cost": 1,
+        "targets_room": false,
+        "targetless": true,
+        "traits": [
+          "@Consume"
+        ],
+        "triggers": [
+          "@ObsessingShardOnUnplayed"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnGreedGhost",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@GreedGhost"
+      },
+      {
+        "id": "KnightMareAbyssAddSpark",
+        "name": "CardEffectAddBattleCard",
+        "target_mode": "room",
+        "target_team": "none",
+        "param_int": 3,
+        "param_int_2": 1,
+        "param_card_pool": "@ObsessingShardPool"
+      },
+      {
+        "id": "ObsessingShardPyreDamage",
+        "applied_vfx": "@SuccFXShadowImpact",
+        "name": "CardEffectDamage",
+        "target_mode": "pyre",
+        "target_team": "both",
+        "param_int": 1,
+        "suppress_pyre_room_focus": true
+      },
+      {
+        "id": "GreedGhostGold",
+        "name": "CardEffectRewardGold",
+        "target_mode": "room",
+        "target_team": "none",
+        "param_int": 5
+      }
+    ],
+    "characters": [
+      {
+        "id": "GreedGhost",
+        "attack_vfx": "@SuccFXSpectralAttack",
+        "impact_vfx": "@SuccFXSpectralImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "projectile_vfx": "@SuccFXSoulProjectile",
+        "names": {
+          "english": "Greed Ghost",
+          "chinese": "贪婪幽魂",
+          "spanish": "Fantasma de la avaricia",
+          "french": "Fantôme de l'avarice",
+          "german": "Geist der Gier",
+          "portuguese": "Fantasma da Ganância",
+          "russian": "Призрак алчности",
+          "chinese_traditional": "貪婪幽靈",
+          "japanese": "強欲の幽霊",
+          "korean": "탐욕의 유령"
+        },
+        "size": 1,
+        "attack_damage": 0,
+        "health": 8,
+        "character_art": "@GreedGhostCharacterArt",
+        "subtypes": [
+          "@Sub_Ghost"
+        ],
+        "triggers": [
+          "@GreedGhostAccursed"
+        ],
+        "ability": "@GhostObsession"
+      }
+    ],
+    "card_pools": [
+      {
+        "id": "ObsessingShardPool",
+        "cards": [
+          "@ObsessingShard"
+        ]
+      }
+    ],
+    "card_triggers": [
+      {
+        "id": "ObsessingShardOnUnplayed",
+        "trigger": "on_unplayed_negative",
+        "descriptions": {
+          "english": "Your Pyre takes [effect0.power] damage.",
+          "chinese": "对薪火造成 [effect0.power] 点伤害。",
+          "spanish": "Tu Pira recibe [effect0.power] de daño.",
+          "french": "Votre Brasier subit [effect0.power] dégâts.",
+          "german": "Deine Höllenglut erleidet [effect0.power] Schaden.",
+          "portuguese": "Sua Pira sofre [effect0.power] de dano.",
+          "russian": "Пекло получает [effect0.power] урона.",
+          "chinese_traditional": "你的薪火受到 [effect0.power] 點傷害。",
+          "japanese": "パイアが[effect0.power]ダメージを受ける。",
+          "korean": "화로가 [effect0.power]의 피해를 받습니다."
+        },
+        "effects": [
+          "@ObsessingShardPyreDamage"
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXSoulProjectile",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/PurifiedSoul/FX_PurifiedSoulAttack.prefab",
+          "asset_guid": "8eb4671567d56e145aa892824c0c8cb0"
+        },
+        "spawn_location": "character_top"
+      },
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXSpectralImpact",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/EtherealSeelie/FX_EtherealSeelieImpact.prefab",
+          "asset_guid": "b856194664a6e4b4da8f1c47c5a0e765"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXSpectralAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/EtherealSeelie/FX_EtherealSeelieAttack2.prefab",
+          "asset_guid": "50436e5870431eb4d89cda0584d38e59"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ObsessingShardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ObsessingShardArt"
+          }
+        }
+      },
+      {
+        "id": "GreedGhostCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@GreedGhostCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.665,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 0.65,
+                "y": 0.65,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "GreedGhostCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@GreedGhostCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ObsessingShardArt",
+        "path": "textures/ObsessingShardArt.png"
+      },
+      {
+        "id": "GreedGhostCharacterArt",
+        "path": "textures/GreedGhostCharacterArt.png"
+      },
+      {
+        "id": "GreedGhostCardArt",
+        "path": "textures/GreedGhostCardArt.png"
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "GreedGhostAccursed",
+        "trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "descriptions": {
+          "english": "Gain [effect0.power][coin].",
+          "chinese": "获得 [effect0.power][coin]。",
+          "spanish": "Gana [effect0.power][coin].",
+          "french": "Gagnez [effect0.power][coin].",
+          "german": "Erhalte [effect0.power][coin].",
+          "portuguese": "Ganhe [effect0.power][coin].",
+          "russian": "Даёт [effect0.power][coin].",
+          "chinese_traditional": "獲得 [effect0.power][coin]。",
+          "japanese": "[effect0.power][coin]を得る。",
+          "korean": "[effect0.power][coin]을 얻습니다."
+        },
+        "effects": [
+          "@GreedGhostGold"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Ghost",
+        "names": {
+          "english": "Ghost",
+          "chinese": "幽魂",
+          "spanish": "Fantasma",
+          "french": "Fantôme",
+          "german": "Geist",
+          "portuguese": "Fantasma",
+          "russian": "Призрак",
+          "chinese_traditional": "幽靈",
+          "japanese": "幽霊",
+          "korean": "유령"
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_GreedGhost.json": "cc5f234692e2dceecae3a143a766f2f23491cebaea5f62f0fb20a191b1fcc729",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d",
+    "json/champions/champion_KnightMare.json": "8018856c48678d50808eac0350ebcdfcf53d0209d3678ce919e689b9171c8ca4",
+    "json/spells/card_ObsessingShard.json": "aa2f8c8cb633cab56c128cd56a7092c7a79f7b33dbe670f259275d646211bd37",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2",
+    "json/class.json": "65c18f4c8b8c97b62edfa51f3d02d2cae856fe878c761586e950fc9993580bc3"
+  }
+}

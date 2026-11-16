@@ -1,0 +1,187 @@
+{
+  "id": "freecompany-NotchedAxe",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "NotchedAxe"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Notched Axe",
+    "french": "Hache entaillée",
+    "german": "Schartige Axt",
+    "russian": "Зазубренный топор",
+    "portuguese": "Machado Entalhado",
+    "chinese": "缺口斧",
+    "spanish": "Hacha mellada",
+    "chinese_traditional": "缺口斧",
+    "korean": "이 빠진 도끼",
+    "japanese": "刃こぼれの斧"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/c2935108df9238768452ce830669c7db83aab10f25c46ce2ae5bbb59d5aab2cb.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/NotchedAxeArt.png": "assets/c2935108df9238768452ce830669c7db83aab10f25c46ce2ae5bbb59d5aab2cb.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "NotchedAxe",
+        "names": {
+          "english": "Notched Axe",
+          "french": "Hache entaillée",
+          "german": "Schartige Axt",
+          "russian": "Зазубренный топор",
+          "portuguese": "Machado Entalhado",
+          "chinese": "缺口斧",
+          "spanish": "Hacha mellada",
+          "chinese_traditional": "缺口斧",
+          "korean": "이 빠진 도끼",
+          "japanese": "刃こぼれの斧"
+        },
+        "card_art": "@NotchedAxe",
+        "cost": 0,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipNotchedAxe"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "EquipNotchedAxe",
+        "applied_vfx": "@KitBarbarianBuffVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgNotchedAxe"
+      },
+      {
+        "id": "NotchedAxeTrigEffect",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "buff",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgNotchedAxe",
+        "titles": {
+          "english": "Notched Axe",
+          "french": "Hache entaillée",
+          "german": "Schartige Axt",
+          "russian": "Зазубренный топор",
+          "portuguese": "Machado Entalhado",
+          "chinese": "缺口斧",
+          "spanish": "Hacha mellada",
+          "chinese_traditional": "缺口斧",
+          "korean": "이 빠진 도끼",
+          "japanese": "刃こぼれの斧"
+        },
+        "descriptions": {
+          "english": "<b>+5</b> [attack]. <b>Slay</b>: gain <b>2</b> [rage].",
+          "french": "<b>+5</b> [attack]. <b>Élimination</b> : gagnez <b>2</b> [rage].",
+          "german": "<b>+5</b> [attack]. <b>Töten</b>: Erhalte <b>2</b> [rage].",
+          "russian": "<b>+5</b> [attack]. <b>Убийство</b>: получите <b>2</b> [rage].",
+          "portuguese": "<b>+5</b> [attack]. <b>Abate</b>: ganhe <b>2</b> [rage].",
+          "chinese": "<b>+5</b> [attack]. <b>击杀</b>：获得<b>2</b> [rage]。",
+          "spanish": "<b>+5</b> [attack]. <b>Matanza</b>: gana <b>2</b> [rage].",
+          "chinese_traditional": "<b>+5</b> [attack]. <b>擊殺</b>：獲得<b>2</b> [rage]。",
+          "korean": "<b>+5</b> [attack]. <b>처치</b>: <b>2</b> [rage] 획득.",
+          "japanese": "<b>+5</b> [attack]. <b>撃破</b>：<b>2</b> [rage]を得る。"
+        },
+        "icon": "@NotchedAxe",
+        "bonus_damage": 5,
+        "trigger_upgrades": [
+          "@NotchedAxeTrigger"
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "NotchedAxeTrigger",
+        "trigger": "on_kill",
+        "descriptions": {
+          "english": "Gain [effect0.status0.power] [rage].",
+          "french": "Gagnez [effect0.status0.power] [rage].",
+          "german": "Erhalte [effect0.status0.power] [rage].",
+          "russian": "Получите [effect0.status0.power] [rage].",
+          "portuguese": "Ganhe [effect0.status0.power] [rage].",
+          "chinese": "获得[effect0.status0.power] [rage]。",
+          "spanish": "Gana [effect0.status0.power] [rage].",
+          "chinese_traditional": "獲得[effect0.status0.power] [rage]。",
+          "korean": "[effect0.status0.power] [rage] 획득.",
+          "japanese": "[effect0.status0.power] [rage]を得る。"
+        },
+        "effects": [
+          "@NotchedAxeTrigEffect"
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "NotchedAxe",
+        "path": "textures/NotchedAxeArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitBarbarianBuffVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "NotchedAxe",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@NotchedAxe"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/kits/kit_barbarian.json": "bb4e9b26871aec51edc5563f0903f9e8854ef2a4970cafef85430cca8a75ff07",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

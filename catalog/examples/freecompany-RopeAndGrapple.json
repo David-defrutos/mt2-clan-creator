@@ -1,0 +1,184 @@
+{
+  "id": "freecompany-RopeAndGrapple",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "RopeAndGrapple"
+  },
+  "kind": "room",
+  "names": {
+    "english": "Rope & Grapple",
+    "french": "Corde et grappin",
+    "german": "Seil und Enterhaken",
+    "russian": "Верёвка и крюк",
+    "portuguese": "Corda e Gancho",
+    "chinese": "绳索与抓钩",
+    "spanish": "Cuerda y garfio",
+    "chinese_traditional": "繩索與抓鉤",
+    "korean": "밧줄과 갈고리",
+    "japanese": "縄と鉤"
+  },
+  "descriptions": {
+    "english": "After combat, friendly units on this floor climb to the floor above.",
+    "french": "Après le combat, les unités alliées de cet étage montent à l’étage supérieur.",
+    "german": "Nach dem Kampf steigen verbündete Einheiten auf diesem Stockwerk ein Stockwerk nach oben.",
+    "russian": "После боя союзные боевые единицы на этом этаже поднимаются на этаж выше.",
+    "portuguese": "Após o combate, as unidades aliadas neste andar sobem para o andar acima.",
+    "chinese": "战斗后，本层友方单位上移一层。",
+    "spanish": "Después del combate, las unidades aliadas de este piso suben al piso superior.",
+    "chinese_traditional": "戰鬥後，本層友方單位上移一層。",
+    "korean": "전투 후 이 층의 아군 유닛이 위층으로 이동.",
+    "japanese": "戦闘後、この階の味方ユニットは1階上へ移動。"
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/ab7a7efeaaee39ccb7b945af4fa78db3274e5756d6659b6e7bc5e66e0956f0ae.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/RopeAndGrappleArt.png": "assets/ab7a7efeaaee39ccb7b945af4fa78db3274e5756d6659b6e7bc5e66e0956f0ae.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "RopeAndGrapple",
+        "names": {
+          "english": "Rope & Grapple",
+          "french": "Corde et grappin",
+          "german": "Seil und Enterhaken",
+          "russian": "Верёвка и крюк",
+          "portuguese": "Corda e Gancho",
+          "chinese": "绳索与抓钩",
+          "spanish": "Cuerda y garfio",
+          "chinese_traditional": "繩索與抓鉤",
+          "korean": "밧줄과 갈고리",
+          "japanese": "縄と鉤"
+        },
+        "descriptions": {
+          "english": "After combat, friendly units on this floor climb to the floor above.",
+          "french": "Après le combat, les unités alliées de cet étage montent à l’étage supérieur.",
+          "german": "Nach dem Kampf steigen verbündete Einheiten auf diesem Stockwerk ein Stockwerk nach oben.",
+          "russian": "После боя союзные боевые единицы на этом этаже поднимаются на этаж выше.",
+          "portuguese": "Após o combate, as unidades aliadas neste andar sobem para o andar acima.",
+          "chinese": "战斗后，本层友方单位上移一层。",
+          "spanish": "Después del combate, las unidades aliadas de este piso suben al piso superior.",
+          "chinese_traditional": "戰鬥後，本層友方單位上移一層。",
+          "korean": "전투 후 이 층의 아군 유닛이 위층으로 이동.",
+          "japanese": "戦闘後、この階の味方ユニットは1階上へ移動。"
+        },
+        "card_art": "@RopeAndGrapple",
+        "cost": 1,
+        "card_type": "room",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": true,
+        "effects": [
+          "@RopeAndGrappleRoomEffect"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "RopeAndGrappleRoomEffect",
+        "name": "CardEffectAttachTrainRoomAttachment",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_upgrade": "@RopeAndGrappleRoomUpgrade",
+        "param_bool": false,
+        "param_bool_2": false
+      },
+      {
+        "id": "RopeAndGrappleClimb",
+        "name": "CardEffectBump",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 1
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "RopeAndGrappleRoomUpgrade",
+        "titles": {
+          "english": "Rope & Grapple",
+          "french": "Corde et grappin",
+          "german": "Seil und Enterhaken",
+          "russian": "Верёвка и крюк",
+          "portuguese": "Corda e Gancho",
+          "chinese": "绳索与抓钩",
+          "spanish": "Cuerda y garfio",
+          "chinese_traditional": "繩索與抓鉤",
+          "korean": "밧줄과 갈고리",
+          "japanese": "縄と鉤"
+        },
+        "descriptions": {
+          "english": "After combat, friendly units on this floor climb to the floor above.",
+          "french": "Après le combat, les unités alliées de cet étage montent à l’étage supérieur.",
+          "german": "Nach dem Kampf steigen verbündete Einheiten auf diesem Stockwerk ein Stockwerk nach oben.",
+          "russian": "После боя союзные боевые единицы на этом этаже поднимаются на этаж выше.",
+          "portuguese": "Após o combate, as unidades aliadas neste andar sobem para o andar acima.",
+          "chinese": "战斗后，本层友方单位上移一层。",
+          "spanish": "Después del combate, las unidades aliadas de este piso suben al piso superior.",
+          "chinese_traditional": "戰鬥後，本層友方單位上移一層。",
+          "korean": "전투 후 이 층의 아군 유닛이 위층으로 이동.",
+          "japanese": "戦闘後、この階の味方ユニットは1階上へ移動。"
+        },
+        "trigger_upgrades": [
+          "@RopeAndGrappleClimbTrigger"
+        ],
+        "hide_icon_on_card": true,
+        "icon": "@RopeAndGrapple"
+      }
+    ],
+    "sprites": [
+      {
+        "id": "RopeAndGrapple",
+        "path": "textures/RopeAndGrappleArt.png"
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "RopeAndGrappleClimbTrigger",
+        "trigger": "post_combat",
+        "descriptions": {
+          "english": "[ascend].",
+          "spanish": "[ascend].",
+          "french": "[ascend].",
+          "german": "[ascend].",
+          "russian": "[ascend].",
+          "portuguese": "[ascend].",
+          "chinese": "[ascend].",
+          "chinese_traditional": "[ascend].",
+          "korean": "[ascend].",
+          "japanese": "[ascend]."
+        },
+        "effects": [
+          "@RopeAndGrappleClimb"
+        ]
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "RopeAndGrapple",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@RopeAndGrapple"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/rooms/room_rope_and_grapple.json": "dcc89bc598315c99c995f7ecafe7949eea2a65724a57c8e18874a06f1f68c830"
+  }
+}

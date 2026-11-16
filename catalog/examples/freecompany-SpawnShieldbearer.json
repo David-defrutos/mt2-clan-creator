@@ -1,0 +1,271 @@
+{
+  "id": "freecompany-SpawnShieldbearer",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnShieldbearer"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Shieldbearer",
+    "french": "Porte-bouclier",
+    "german": "Schildträger",
+    "russian": "Щитоносец",
+    "portuguese": "Porta-Escudo",
+    "chinese": "持盾卫士",
+    "spanish": "Portador de escudo",
+    "chinese_traditional": "持盾衛士",
+    "korean": "방패병",
+    "japanese": "盾兵"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 30,
+  "attack": 6,
+  "size": 2,
+  "picture": "assets/8cda74d3c05468f9353e854480aa6d2f334e8cd6e3629d231311f2d59275ea31.png",
+  "characterPicture": "assets/7f269620291258c583e4daa213c5c37d34257d1f1d8038176a2658ae6d5d6c12.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ShieldbearerCardArt.png": "assets/8cda74d3c05468f9353e854480aa6d2f334e8cd6e3629d231311f2d59275ea31.png",
+    "textures/ShieldbearerCharacterArt.png": "assets/7f269620291258c583e4daa213c5c37d34257d1f1d8038176a2658ae6d5d6c12.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnShieldbearer",
+        "names": {
+          "english": "Shieldbearer",
+          "french": "Porte-bouclier",
+          "german": "Schildträger",
+          "russian": "Щитоносец",
+          "portuguese": "Porta-Escudo",
+          "chinese": "持盾卫士",
+          "spanish": "Portador de escudo",
+          "chinese_traditional": "持盾衛士",
+          "korean": "방패병",
+          "japanese": "盾兵"
+        },
+        "card_art": "@Shieldbearer",
+        "cost": 2,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnShieldbearerEffect"
+        ]
+      },
+      {
+        "id": "ShieldbearerAbility",
+        "names": {
+          "english": "Last Stand",
+          "french": "Dernier rempart",
+          "german": "Letztes Gefecht",
+          "russian": "Последний бой",
+          "portuguese": "Última Resistência",
+          "chinese": "背水一战",
+          "spanish": "Última resistencia",
+          "chinese_traditional": "背水一戰",
+          "korean": "최후의 저항",
+          "japanese": "最後の抵抗"
+        },
+        "descriptions": {
+          "english": "Deal damage to the enemy in front equal to twice this unit's [health]. Then this unit loses half its remaining [health].",
+          "french": "Inflige à l’ennemi de tête des dégâts égaux au double de la [health] de cette unité. Elle perd ensuite la moitié de sa [health] restante.",
+          "german": "Fügt dem vordersten Gegner Schaden in Höhe der doppelten [health] dieser Einheit zu. Danach verliert sie die Hälfte ihrer verbleibenden [health].",
+          "russian": "Наносит переднему врагу урон, равный удвоенному [health] этой боевой единицы. Затем она теряет половину оставшегося [health].",
+          "portuguese": "Causa dano ao inimigo da frente igual ao dobro da [health] desta unidade. Depois, ela perde metade da [health] restante.",
+          "chinese": "对最前方的敌人造成相当于此单位[health]两倍的伤害。随后，此单位失去一半剩余[health]。",
+          "spanish": "Inflige al primer enemigo un daño igual al doble de la [health] de esta unidad. Después, esta unidad pierde la mitad de su [health] restante.",
+          "chinese_traditional": "對最前方的敵人造成相當於此單位[health]兩倍的傷害。隨後，此單位失去一半剩餘[health]。",
+          "korean": "맨 앞 적에게 이 유닛의 [health] 두 배만큼 피해를 가함. 이후 이 유닛은 남은 [health]의 절반을 잃음.",
+          "japanese": "先頭の敵にこのユニットの[health]の2倍のダメージを与える。その後、このユニットは残り[health]の半分を失う。"
+        },
+        "card_art": "@Shieldbearer",
+        "is_an_ability": true,
+        "cooldown": 2,
+        "targetless": true,
+        "targets_room": false,
+        "card_type": "spell",
+        "effects": [
+          "@ShieldbearerAbilityBlast",
+          "@ShieldbearerAbilityRecoil"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnShieldbearerEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@Shieldbearer"
+      },
+      {
+        "id": "ShieldbearerAbilityRecoil",
+        "name": "CardEffectDamageByPercentRemainingHealth",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 50
+      },
+      {
+        "id": "ShieldbearerAbilityBlast",
+        "name": "CardEffectDamagePerHp",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 2
+      },
+      {
+        "id": "ShieldbearerArmor",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "armor",
+            "count": 5
+          }
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "Shieldbearer",
+        "names": {
+          "english": "Shieldbearer",
+          "french": "Porte-bouclier",
+          "german": "Schildträger",
+          "russian": "Щитоносец",
+          "portuguese": "Porta-Escudo",
+          "chinese": "持盾卫士",
+          "spanish": "Portador de escudo",
+          "chinese_traditional": "持盾衛士",
+          "korean": "방패병",
+          "japanese": "盾兵"
+        },
+        "character_art": "@ShieldbearerCharacterArt",
+        "size": 2,
+        "attack_damage": 6,
+        "health": 30,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Warrior",
+          "@Sub_Goblin"
+        ],
+        "triggers": [
+          {
+            "id": "@ShieldbearerSpawnTrigger"
+          }
+        ],
+        "ability": "@ShieldbearerAbility"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Shieldbearer",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Shieldbearer"
+          }
+        }
+      },
+      {
+        "id": "ShieldbearerCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@ShieldbearerCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.74959,
+                "z": 0
+              },
+              "scale": {
+                "x": 0.7284,
+                "y": 0.7284,
+                "z": 1
+              }
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Shieldbearer",
+        "path": "textures/ShieldbearerCardArt.png"
+      },
+      {
+        "id": "ShieldbearerCharacterArt",
+        "path": "textures/ShieldbearerCharacterArt.png"
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "ShieldbearerSpawnTrigger",
+        "trigger": "on_spawn",
+        "descriptions": {
+          "english": "Gain [effect0.status0.power] [armor].",
+          "french": "Gagnez [effect0.status0.power] [armor].",
+          "german": "Erhalte [effect0.status0.power] [armor].",
+          "russian": "Получите [effect0.status0.power] [armor].",
+          "portuguese": "Ganhe [effect0.status0.power] [armor].",
+          "chinese": "获得[effect0.status0.power] [armor]。",
+          "spanish": "Gana [effect0.status0.power] [armor].",
+          "chinese_traditional": "獲得[effect0.status0.power] [armor]。",
+          "korean": "[effect0.status0.power] [armor] 획득.",
+          "japanese": "[effect0.status0.power] [armor]を得る。"
+        },
+        "effects": [
+          "@ShieldbearerArmor"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Warrior",
+        "names": {
+          "english": "Warrior",
+          "french": "Guerrier",
+          "german": "Krieger",
+          "russian": "Воин",
+          "portuguese": "Guerreiro",
+          "chinese": "战士",
+          "spanish": "Guerrero",
+          "chinese_traditional": "戰士",
+          "korean": "전사",
+          "japanese": "戦士"
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_shieldbearer.json": "871ebb2ee35dc61aeea08e5b4608580ae3c1c2ec0ac554c9196ddc903fa8ab18",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

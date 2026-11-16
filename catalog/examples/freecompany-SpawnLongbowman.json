@@ -1,0 +1,338 @@
+{
+  "id": "freecompany-SpawnLongbowman",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnLongbowman"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Longbowman",
+    "french": "Archer à l'arc long",
+    "german": "Langbogenschütze",
+    "russian": "Лучник",
+    "portuguese": "Arqueiro de Arco Longo",
+    "chinese": "长弓手",
+    "spanish": "Arquero de arco largo",
+    "chinese_traditional": "長弓手",
+    "korean": "장궁병",
+    "japanese": "長弓兵"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 10,
+  "attack": 8,
+  "size": 1,
+  "picture": "assets/908199636f912c9da369c3908654cb26d879799537b2e3f820227dd37abeefb0.png",
+  "characterPicture": "assets/497df9e23d6cff151e2f1d6758a4edb30707d714185f8e829c6879825c42026d.png",
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "status_effects",
+      "id": "pierce",
+      "names": {
+        "english": "Skewer",
+        "chinese": ""
+      },
+      "descriptions": {},
+      "file": "packages/Conductor-Conductor/json/status_effects/skewer.json",
+      "sha256": "c1d2a4300e9e7f1d5ff3c4e235e822422048a06d989cc245ad8e4a4650b77617"
+    }
+  ],
+  "assets": {
+    "textures/LongbowmanCardArt.png": "assets/908199636f912c9da369c3908654cb26d879799537b2e3f820227dd37abeefb0.png",
+    "textures/LongbowmanCharacterArt.png": "assets/497df9e23d6cff151e2f1d6758a4edb30707d714185f8e829c6879825c42026d.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnLongbowman",
+        "names": {
+          "english": "Longbowman",
+          "french": "Archer à l'arc long",
+          "german": "Langbogenschütze",
+          "russian": "Лучник",
+          "portuguese": "Arqueiro de Arco Longo",
+          "chinese": "长弓手",
+          "spanish": "Arquero de arco largo",
+          "chinese_traditional": "長弓手",
+          "korean": "장궁병",
+          "japanese": "長弓兵"
+        },
+        "card_art": "@Longbowman",
+        "cost": 2,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnLongbowmanEffect"
+        ]
+      },
+      {
+        "id": "LongbowmanShiftAim",
+        "names": {
+          "english": "Shift Aim",
+          "french": "Changer de cible",
+          "german": "Ziel wechseln",
+          "russian": "Сменить цель",
+          "portuguese": "Mudar a Mira",
+          "chinese": "调整瞄准",
+          "spanish": "Cambiar de objetivo",
+          "chinese_traditional": "調整瞄準",
+          "korean": "조준 변경",
+          "japanese": "照準変更"
+        },
+        "descriptions": {
+          "english": "Until the start of your next turn, lose <b>Sniper</b> and gain [Conductor_pierce] 1.",
+          "spanish": "Hasta el inicio de tu siguiente turno, pierde <b>Francotirador</b> y gana [Conductor_pierce] 1.",
+          "french": "Jusqu’au début de votre prochain tour, perd <b>Tireur d’élite</b> et gagne [Conductor_pierce] 1.",
+          "german": "Verliert bis zu Beginn deines nächsten Zuges <b>Scharfschütze</b> und erhält [Conductor_pierce] 1.",
+          "russian": "До начала вашего следующего хода теряет <b>Снайпер</b> и получает [Conductor_pierce] 1.",
+          "portuguese": "Até o início do seu próximo turno, perde <b>Atirador de Elite</b> e ganha [Conductor_pierce] 1.",
+          "chinese": "直到你的下个回合开始，失去<b>狙击</b>并获得[Conductor_pierce] 1。",
+          "chinese_traditional": "直到你的下個回合開始，失去<b>狙擊</b>並獲得[Conductor_pierce] 1。",
+          "korean": "다음 내 턴 시작까지 <b>저격</b>을 잃고 [Conductor_pierce] 1 획득.",
+          "japanese": "次の自分のターン開始まで<b>狙撃</b>を失い、[Conductor_pierce] 1を得る。"
+        },
+        "card_art": "@Longbowman",
+        "is_an_ability": true,
+        "cooldown": 2,
+        "targetless": true,
+        "targets_room": false,
+        "card_type": "spell",
+        "effects": [
+          "@LongbowmanSniperOff",
+          "@LongbowmanPierceOn"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnLongbowmanEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@Longbowman"
+      },
+      {
+        "id": "LongbowmanSniperOn",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "sniper",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "LongbowmanPierceOff",
+        "name": "CardEffectRemoveTempUpgradeFromUnit",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_upgrade": "@LongbowmanTemporaryPierce",
+        "param_bool": false
+      },
+      {
+        "id": "LongbowmanPierceOn",
+        "name": "CardEffectAddTempCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_upgrade": "@LongbowmanTemporaryPierce",
+        "param_int_3": 1
+      },
+      {
+        "id": "LongbowmanSniperOff",
+        "name": "CardEffectRemoveStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "sniper",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "Longbowman",
+        "names": {
+          "english": "Longbowman",
+          "french": "Archer à l'arc long",
+          "german": "Langbogenschütze",
+          "russian": "Лучник",
+          "portuguese": "Arqueiro de Arco Longo",
+          "chinese": "长弓手",
+          "spanish": "Arquero de arco largo",
+          "chinese_traditional": "長弓手",
+          "korean": "장궁병",
+          "japanese": "長弓兵"
+        },
+        "character_art": "@LongbowmanCharacterArt",
+        "size": 1,
+        "attack_damage": 8,
+        "health": 10,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Ranger",
+          "@Sub_Goblin"
+        ],
+        "starting_status_effects": [
+          {
+            "status": "sniper",
+            "count": 1
+          },
+          {
+            "status": "multistrike",
+            "count": 1
+          }
+        ],
+        "ability": "@LongbowmanShiftAim",
+        "triggers": [
+          {
+            "id": "@LongbowmanSniperBack"
+          }
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "LongbowmanSniperBack",
+        "trigger": "pre_combat",
+        "descriptions": {
+          "english": "Regain <b>Sniper</b>. Remove the temporary [Conductor_pierce] 1.",
+          "french": "Récupère <b>Tireur d’élite</b>. Retire le [Conductor_pierce] 1 temporaire.",
+          "german": "Erhält <b>Scharfschütze</b> zurück. Entfernt das vorübergehende [Conductor_pierce] 1.",
+          "russian": "Снова получает <b>Снайпер</b>. Снимает временный [Conductor_pierce] 1.",
+          "portuguese": "Recupera <b>Atirador de Elite</b>. Remove o [Conductor_pierce] 1 temporário.",
+          "chinese": "重新获得<b>狙击</b>。移除临时的[Conductor_pierce] 1。",
+          "spanish": "Recupera <b>Francotirador</b>. Retira el [Conductor_pierce] 1 temporal.",
+          "chinese_traditional": "重新獲得<b>狙擊</b>。移除暫時的[Conductor_pierce] 1。",
+          "korean": "<b>저격</b> 다시 획득. 임시 [Conductor_pierce] 1 제거.",
+          "japanese": "<b>狙撃</b>を再び得る。一時的な[Conductor_pierce] 1を解除。"
+        },
+        "effects": [
+          "@LongbowmanPierceOff",
+          "@LongbowmanSniperOn"
+        ]
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "LongbowmanTemporaryPierce",
+        "titles": {
+          "english": "Shift Aim",
+          "french": "Changer de cible",
+          "german": "Ziel wechseln",
+          "russian": "Сменить цель",
+          "portuguese": "Mudar a Mira",
+          "chinese": "调整瞄准",
+          "spanish": "Cambiar de objetivo",
+          "chinese_traditional": "調整瞄準",
+          "korean": "조준 변경",
+          "japanese": "照準変更"
+        },
+        "is_unique": true,
+        "hide_icon_on_card": true,
+        "status_effect_upgrades": [
+          {
+            "status": {
+              "id": "@pierce",
+              "mod_reference": "Conductor"
+            },
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Longbowman",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Longbowman"
+          }
+        }
+      },
+      {
+        "id": "LongbowmanCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@LongbowmanCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.7064,
+                "z": 0
+              },
+              "scale": {
+                "x": 0.67275,
+                "y": 0.67275,
+                "z": 1
+              }
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Longbowman",
+        "path": "textures/LongbowmanCardArt.png"
+      },
+      {
+        "id": "LongbowmanCharacterArt",
+        "path": "textures/LongbowmanCharacterArt.png"
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Ranger",
+        "names": {
+          "english": "Ranger",
+          "french": "Rôdeur",
+          "german": "Waldläufer",
+          "russian": "Следопыт",
+          "portuguese": "Patrulheiro",
+          "chinese": "游侠",
+          "spanish": "Explorador",
+          "chinese_traditional": "遊俠",
+          "korean": "레인저",
+          "japanese": "レンジャー"
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_longbowman.json": "2c57dcb8ea20a680a30f675ae185c962ae80e9113e8697da3190051e51a641ef",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

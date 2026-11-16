@@ -1,0 +1,132 @@
+{
+  "id": "ww-WW_G02",
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_G02"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Safety Hat",
+    "spanish": "Sombrero de Seguridad",
+    "french": "Chapeau de sécurité",
+    "german": "Sicherheitshut",
+    "portuguese": "Chapéu de Segurança",
+    "russian": "Защитная шляпа",
+    "chinese": "安全帽",
+    "chinese_traditional": "安全帽",
+    "korean": "안전 모자",
+    "japanese": "安全帽"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/c1340cdb086f743b77cafd1921ad1bc0afae991df30ec21ee267d9da9332b8b6.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/equipment/WW_G02Icon.png": "assets/a191c4a61a2dbd9fff203edef235fa223e9c66bb904795380a2c9482128f1555.png",
+    "textures/cards/WW_G02CardArt.png": "assets/c1340cdb086f743b77cafd1921ad1bc0afae991df30ec21ee267d9da9332b8b6.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_G02",
+        "names": {
+          "english": "Safety Hat",
+          "spanish": "Sombrero de Seguridad",
+          "french": "Chapeau de sécurité",
+          "german": "Sicherheitshut",
+          "portuguese": "Chapéu de Segurança",
+          "russian": "Защитная шляпа",
+          "chinese": "安全帽",
+          "chinese_traditional": "安全帽",
+          "korean": "안전 모자",
+          "japanese": "安全帽"
+        },
+        "card_type": "equipment",
+        "cost": 0,
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "card_art": "@WW_G02CardArt",
+        "effects": [
+          "@WW_G02_Equip"
+        ],
+        "traits": [
+          "@WW_G02_Grafted"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_G02_Grafted",
+        "name": "CardTraitGraftedEquipment",
+        "trait_is_removable": false
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_G02_Equip",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@WW_G02_Upgrade"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WW_G02_Upgrade",
+        "titles": {
+          "english": "Safety Hat",
+          "spanish": "Sombrero de Seguridad",
+          "french": "Chapeau de sécurité",
+          "german": "Sicherheitshut",
+          "portuguese": "Chapéu de Segurança",
+          "russian": "Защитная шляпа",
+          "chinese": "安全帽",
+          "chinese_traditional": "安全帽",
+          "korean": "안전 모자",
+          "japanese": "安全帽"
+        },
+        "hide_icon_on_card": true,
+        "icon": "@WW_G02Icon",
+        "bonus_hp": 10
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_G02Icon",
+        "path": "textures/equipment/WW_G02Icon.png"
+      },
+      {
+        "id": "WW_G02CardArt",
+        "path": "textures/cards/WW_G02CardArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_G02CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_G02CardArt"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/grafts/WW_G02.json": "2c04f578c6dbd3f97b301ff599d9a262c6f033ea2567edbdd96c28de86bb0d1f"
+  }
+}

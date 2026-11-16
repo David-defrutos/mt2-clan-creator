@@ -1,0 +1,197 @@
+{
+  "id": "freecompany-BulwarkPlate",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "BulwarkPlate"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Bulwark Plate",
+    "french": "Armure de rempart",
+    "german": "Bollwerkpanzer",
+    "russian": "Доспех-бастион",
+    "portuguese": "Armadura Baluarte",
+    "chinese": "壁垒板甲",
+    "spanish": "Coraza baluarte",
+    "chinese_traditional": "壁壘板甲",
+    "korean": "보루 판금 갑옷",
+    "japanese": "防壁の板金鎧"
+  },
+  "descriptions": {
+    "english": "<b>+25</b> [health]. Apply <b>10</b> [armor], [steelguard] and <b>1</b> [titanskin].",
+    "french": "<b>+25</b> [health]. Appliquez <b>10</b> [armor], [steelguard] et <b>1</b> [titanskin].",
+    "german": "<b>+25</b> [health]. Erhalte <b>10</b> [armor], [steelguard] und <b>1</b> [titanskin].",
+    "russian": "<b>+25</b> [health]. Получите <b>10</b> [armor], [steelguard] и <b>1</b> [titanskin].",
+    "portuguese": "<b>+25</b> [health]. Aplique <b>10</b> [armor], [steelguard] e <b>1</b> [titanskin].",
+    "chinese": "<b>+25</b> [health]. 施加<b>10</b> [armor], [steelguard]和<b>1</b> [titanskin]。",
+    "spanish": "<b>+25</b> [health]. Añade <b>10</b> [armor], [steelguard] y <b>1</b> [titanskin].",
+    "chinese_traditional": "<b>+25</b> [health]. 施加<b>10</b> [armor], [steelguard]和<b>1</b> [titanskin]。",
+    "korean": "<b>+25</b> [health]. <b>10</b> [armor], [steelguard] 및 <b>1</b> [titanskin] 부여.",
+    "japanese": "<b>+25</b> [health]. <b>10</b> [armor], [steelguard]と<b>1</b> [titanskin]を付与。"
+  },
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/1f76aa4f623b3ab94f7a0eec40254ab68662b13a9fea0b3a291941a4d146a83e.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/BulwarkPlateArt.png": "assets/1f76aa4f623b3ab94f7a0eec40254ab68662b13a9fea0b3a291941a4d146a83e.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "BulwarkPlate",
+        "names": {
+          "english": "Bulwark Plate",
+          "french": "Armure de rempart",
+          "german": "Bollwerkpanzer",
+          "russian": "Доспех-бастион",
+          "portuguese": "Armadura Baluarte",
+          "chinese": "壁垒板甲",
+          "spanish": "Coraza baluarte",
+          "chinese_traditional": "壁壘板甲",
+          "korean": "보루 판금 갑옷",
+          "japanese": "防壁の板金鎧"
+        },
+        "descriptions": {
+          "english": "<b>+25</b> [health]. Apply <b>10</b> [armor], [steelguard] and <b>1</b> [titanskin].",
+          "french": "<b>+25</b> [health]. Appliquez <b>10</b> [armor], [steelguard] et <b>1</b> [titanskin].",
+          "german": "<b>+25</b> [health]. Erhalte <b>10</b> [armor], [steelguard] und <b>1</b> [titanskin].",
+          "russian": "<b>+25</b> [health]. Получите <b>10</b> [armor], [steelguard] и <b>1</b> [titanskin].",
+          "portuguese": "<b>+25</b> [health]. Aplique <b>10</b> [armor], [steelguard] e <b>1</b> [titanskin].",
+          "chinese": "<b>+25</b> [health]. 施加<b>10</b> [armor], [steelguard]和<b>1</b> [titanskin]。",
+          "spanish": "<b>+25</b> [health]. Añade <b>10</b> [armor], [steelguard] y <b>1</b> [titanskin].",
+          "chinese_traditional": "<b>+25</b> [health]. 施加<b>10</b> [armor], [steelguard]和<b>1</b> [titanskin]。",
+          "korean": "<b>+25</b> [health]. <b>10</b> [armor], [steelguard] 및 <b>1</b> [titanskin] 부여.",
+          "japanese": "<b>+25</b> [health]. <b>10</b> [armor], [steelguard]と<b>1</b> [titanskin]を付与。"
+        },
+        "card_art": "@BulwarkPlate",
+        "cost": 2,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipBulwarkPlate",
+          "@BulwarkPlateApplyArmor"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "BulwarkPlateApplyArmor",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "armor",
+            "count": 10
+          }
+        ]
+      },
+      {
+        "id": "EquipBulwarkPlate",
+        "applied_vfx": "@KitWarriorArmorVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgBulwarkPlate"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgBulwarkPlate",
+        "titles": {
+          "english": "Bulwark Plate",
+          "french": "Armure de rempart",
+          "german": "Bollwerkpanzer",
+          "russian": "Доспех-бастион",
+          "portuguese": "Armadura Baluarte",
+          "chinese": "壁垒板甲",
+          "spanish": "Coraza baluarte",
+          "chinese_traditional": "壁壘板甲",
+          "korean": "보루 판금 갑옷",
+          "japanese": "防壁の板金鎧"
+        },
+        "descriptions": {
+          "english": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "french": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "german": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "russian": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "portuguese": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "chinese": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "spanish": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "chinese_traditional": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "korean": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin].",
+          "japanese": "<b>+25</b> [health]. [steelguard]. <b>1</b> [titanskin]."
+        },
+        "icon": "@BulwarkPlate",
+        "bonus_hp": 25,
+        "status_effect_upgrades": [
+          {
+            "status": "steelguard",
+            "count": 1
+          },
+          {
+            "status": "titanskin",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "BulwarkPlate",
+        "path": "textures/BulwarkPlateArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitWarriorArmorVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Wurmkin/EchoInfusion/FX_WurmkinBuff.prefab",
+          "asset_guid": "24aff4cc201a62e41838f1d11b277562"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "BulwarkPlate",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@BulwarkPlate"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/kits/kit_warrior.json": "f7701b9d189e8ea8b681f01a7139c1b026d9da6015eb1f8a168b91a1ca113a0d",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

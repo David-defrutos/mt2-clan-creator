@@ -1,0 +1,269 @@
+{
+  "id": "freecompany-SpawnBattleChaplain",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnBattleChaplain"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Battle Chaplain",
+    "french": "Aumônier de combat",
+    "german": "Kampfkaplan",
+    "russian": "Боевой капеллан",
+    "portuguese": "Capelão de Batalha",
+    "chinese": "战斗牧师",
+    "spanish": "Capellán de batalla",
+    "chinese_traditional": "戰鬥牧師",
+    "korean": "전투 군종사제",
+    "japanese": "従軍司祭"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": 28,
+  "attack": 6,
+  "size": 1,
+  "picture": "assets/ac6b007110389c40d0ca0fa3c0771ef122ea0013fd1aeee0b1d2394b105a9648.png",
+  "characterPicture": "assets/fa91e72de6d432d50b0c66d02108983bcd3d8a6b5076b31e845bdd2629da91b8.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/BattleChaplainCardArt.png": "assets/ac6b007110389c40d0ca0fa3c0771ef122ea0013fd1aeee0b1d2394b105a9648.png",
+    "textures/BattleChaplainCharacterArt.png": "assets/fa91e72de6d432d50b0c66d02108983bcd3d8a6b5076b31e845bdd2629da91b8.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnBattleChaplain",
+        "names": {
+          "english": "Battle Chaplain",
+          "french": "Aumônier de combat",
+          "german": "Kampfkaplan",
+          "russian": "Боевой капеллан",
+          "portuguese": "Capelão de Batalha",
+          "chinese": "战斗牧师",
+          "spanish": "Capellán de batalla",
+          "chinese_traditional": "戰鬥牧師",
+          "korean": "전투 군종사제",
+          "japanese": "従軍司祭"
+        },
+        "card_art": "@BattleChaplain",
+        "cost": 2,
+        "card_type": "monster",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnBattleChaplainEffect"
+        ]
+      },
+      {
+        "id": "BattleChaplainAbility",
+        "names": {
+          "english": "Last Rites",
+          "french": "Derniers sacrements",
+          "german": "Letzte Ölung",
+          "russian": "Последние обряды",
+          "portuguese": "Últimos Ritos",
+          "chinese": "临终仪式",
+          "spanish": "Últimos ritos",
+          "chinese_traditional": "臨終儀式",
+          "korean": "종부성사",
+          "japanese": "最期の儀式"
+        },
+        "descriptions": {
+          "english": "Restore [effect0.power] health to all friendly units on all floors.",
+          "french": "Rendez [effect0.power] PV à toutes les unités alliées de tous les étages.",
+          "german": "Heile alle verbündeten Einheiten auf allen Stockwerken um [effect0.power] Leben.",
+          "russian": "Восстановите [effect0.power] здоровья всем союзным боевым единицам на всех этажах.",
+          "portuguese": "Restaure [effect0.power] de vida de todas as unidades aliadas em todos os andares.",
+          "chinese": "为所有楼层的友方单位恢复[effect0.power]点生命值。",
+          "spanish": "Restaura [effect0.power] de salud a todas las unidades aliadas de todos los pisos.",
+          "chinese_traditional": "為所有樓層的友方單位恢復[effect0.power]點生命值。",
+          "korean": "모든 층의 모든 아군 유닛의 체력을 [effect0.power] 회복.",
+          "japanese": "全階層の味方ユニット全体の体力を[effect0.power]回復。"
+        },
+        "card_art": "@BattleChaplain",
+        "is_an_ability": true,
+        "cooldown": 3,
+        "targetless": true,
+        "targets_room": false,
+        "card_type": "spell",
+        "effects": [
+          "@BattleChaplainAbilityHeal"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnBattleChaplainEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@BattleChaplain"
+      },
+      {
+        "id": "BattleChaplainAbilityHeal",
+        "name": "CardEffectHeal",
+        "target_mode": "tower",
+        "target_team": "monsters",
+        "param_int": 18
+      },
+      {
+        "id": "BattleChaplainHeal",
+        "applied_vfx": "@UnitBattleChaplainHealLargeVFX",
+        "name": "CardEffectHeal",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_int": 8
+      }
+    ],
+    "characters": [
+      {
+        "id": "BattleChaplain",
+        "names": {
+          "english": "Battle Chaplain",
+          "french": "Aumônier de combat",
+          "german": "Kampfkaplan",
+          "russian": "Боевой капеллан",
+          "portuguese": "Capelão de Batalha",
+          "chinese": "战斗牧师",
+          "spanish": "Capellán de batalla",
+          "chinese_traditional": "戰鬥牧師",
+          "korean": "전투 군종사제",
+          "japanese": "従軍司祭"
+        },
+        "character_art": "@BattleChaplainCharacterArt",
+        "size": 1,
+        "attack_damage": 6,
+        "health": 28,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Cleric",
+          "@Sub_Goblin"
+        ],
+        "triggers": [
+          {
+            "id": "@BattleChaplainTrigger"
+          }
+        ],
+        "ability": "@BattleChaplainAbility"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "BattleChaplain",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@BattleChaplain"
+          }
+        }
+      },
+      {
+        "id": "BattleChaplainCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@BattleChaplainCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.69962,
+                "z": 0
+              },
+              "scale": {
+                "x": 0.67965,
+                "y": 0.67965,
+                "z": 1
+              }
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "BattleChaplain",
+        "path": "textures/BattleChaplainCardArt.png"
+      },
+      {
+        "id": "BattleChaplainCharacterArt",
+        "path": "textures/BattleChaplainCharacterArt.png"
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "BattleChaplainTrigger",
+        "trigger": "end_turn_pre_hand_discard",
+        "descriptions": {
+          "english": "Restore [effect0.power] health to all friendly units on this floor.",
+          "french": "Rendez [effect0.power] PV à toutes les unités alliées de cet étage.",
+          "german": "Heile alle verbündeten Einheiten auf diesem Stockwerk um [effect0.power] Leben.",
+          "russian": "Восстановите [effect0.power] здоровья всем союзным боевым единицам на этом этаже.",
+          "portuguese": "Restaure [effect0.power] de vida de todas as unidades aliadas neste andar.",
+          "chinese": "为本层所有友方单位恢复[effect0.power]点生命值。",
+          "spanish": "Restaura [effect0.power] de salud a todas las unidades aliadas de este piso.",
+          "chinese_traditional": "為本層所有友方單位恢復[effect0.power]點生命值。",
+          "korean": "이 층의 모든 아군 유닛의 체력을 [effect0.power] 회복.",
+          "japanese": "この階の味方ユニット全体の体力を[effect0.power]回復。"
+        },
+        "effects": [
+          "@BattleChaplainHeal"
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "UnitBattleChaplainHealLargeVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_HealImpactLarge_PS.prefab",
+          "asset_guid": "da89d764437b23145875547344957522"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Cleric",
+        "names": {
+          "english": "Cleric",
+          "french": "Clerc",
+          "german": "Kleriker",
+          "russian": "Жрец",
+          "portuguese": "Clérigo",
+          "chinese": "牧师",
+          "spanish": "Clérigo",
+          "chinese_traditional": "牧師",
+          "korean": "성직자",
+          "japanese": "クレリック"
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_battle_chaplain.json": "8795dcf87fc74b1bddd8140031426ca453cc44b11c822f4592ccc8fbd2516ac0",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

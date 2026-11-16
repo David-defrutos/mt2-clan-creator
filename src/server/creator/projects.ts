@@ -15,6 +15,7 @@ export async function listDrafts(){await fs.mkdir(projectDirectory,{recursive:tr
 export async function loadDraft(id:string):Promise<Draft>{return JSON.parse(await fs.readFile(path.join(projectFolder(id),'draft.json'),'utf8'));}
 export async function newDraft(){const d=blankDraft(randomUUID());await fs.mkdir(projectFolder(d.id),{recursive:true});await fs.writeFile(path.join(projectFolder(d.id),'draft.json'),JSON.stringify(d),{flag:'wx'});return d;}
 export async function validateDraftShape(value:any){const rules=await creatorRules();
+ if(value?.guidedMode!==undefined&&value.guidedMode!=='quick')throw Error('Invalid wizard mode.');
  if(!value||typeof value!=='object'||value.schemaVersion!==1||typeof value.id!=='string'||!Number.isInteger(value.revision)||value.revision<0)throw Error('El borrador no tiene un formato válido.');projectFolder(value.id);
  const string=(s:any,max:number)=>typeof s==='string'&&s.length<=max&&!s.includes('\0');
  if(!string(value.name,80)||(value.author!==undefined&&!string(value.author,80))||!string(value.description,3000)||!Number.isInteger(value.step)||value.step<0||value.step>=rules.steps.length)throw Error('Revisa el nombre y paso del clan.');
@@ -64,3 +65,4 @@ export async function restoreDraft(id:string){const folder=projectFolder(id);if(
 // 2026-11-15-2301||codex-clan-editor||clan-creator/src/server/creator/projects.ts||Comprobar raiz de papelera antes de restaurar borrador para impedir enlaces fuera de data
 // 2026-11-15-2328||codex-clan-editor||clan-creator/src/server/creator/projects.ts||Validar origen de apariencia conservada contra catalogo incluido y mismo tipo
 // 2026-11-16-2040||codex-clan-editor||clan-creator/src/server/creator/projects.ts||Validar borradores nuevos sin autor y conservar apertura de borradores anteriores
+// 2026-11-16-2144||codex-clan-editor||clan-creator/src/server/creator/projects.ts||Validar indicador opcional de recorrido inicial

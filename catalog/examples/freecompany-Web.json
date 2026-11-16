@@ -1,0 +1,149 @@
+{
+  "id": "freecompany-Web",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Web"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Web",
+    "french": "Toile",
+    "german": "Spinnennetz",
+    "russian": "Паутина",
+    "portuguese": "Teia",
+    "chinese": "蛛网术",
+    "spanish": "Telaraña",
+    "chinese_traditional": "蛛網術",
+    "korean": "거미줄",
+    "japanese": "蜘蛛の巣"
+  },
+  "descriptions": {
+    "english": "Apply [effect0.status0.power] [rooted] and [effect1.status0.power] [sap] to all enemies on this floor.",
+    "french": "Appliquez [effect0.status0.power] [rooted] et [effect1.status0.power] [sap] à tous les ennemis de cet étage.",
+    "german": "Verleihe allen Gegnern auf diesem Stockwerk [effect0.status0.power] [rooted] und [effect1.status0.power] [sap].",
+    "russian": "Наложите [effect0.status0.power] [rooted] и [effect1.status0.power] [sap] на всех врагов на этом этаже.",
+    "portuguese": "Aplique [effect0.status0.power] [rooted] e [effect1.status0.power] [sap] a todos os inimigos neste andar.",
+    "chinese": "对本层所有敌人施加[effect0.status0.power] [rooted]和[effect1.status0.power] [sap]。",
+    "spanish": "Añade [effect0.status0.power] [rooted] y [effect1.status0.power] [sap] a todos los enemigos de este piso.",
+    "chinese_traditional": "對本層所有敵人施加[effect0.status0.power] [rooted]和[effect1.status0.power] [sap]。",
+    "korean": "이 층의 모든 적에게 [effect0.status0.power] [rooted] 및 [effect1.status0.power] [sap] 부여.",
+    "japanese": "この階の敵全体に[effect0.status0.power] [rooted]と[effect1.status0.power] [sap]を付与。"
+  },
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/976d55c044c19aaddfea505d4c05658fcf8b54c9b3a625e3ee152228d70a31ca.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/WebArt.png": "assets/976d55c044c19aaddfea505d4c05658fcf8b54c9b3a625e3ee152228d70a31ca.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Web",
+        "names": {
+          "english": "Web",
+          "french": "Toile",
+          "german": "Spinnennetz",
+          "russian": "Паутина",
+          "portuguese": "Teia",
+          "chinese": "蛛网术",
+          "spanish": "Telaraña",
+          "chinese_traditional": "蛛網術",
+          "korean": "거미줄",
+          "japanese": "蜘蛛の巣"
+        },
+        "descriptions": {
+          "english": "Apply [effect0.status0.power] [rooted] and [effect1.status0.power] [sap] to all enemies on this floor.",
+          "french": "Appliquez [effect0.status0.power] [rooted] et [effect1.status0.power] [sap] à tous les ennemis de cet étage.",
+          "german": "Verleihe allen Gegnern auf diesem Stockwerk [effect0.status0.power] [rooted] und [effect1.status0.power] [sap].",
+          "russian": "Наложите [effect0.status0.power] [rooted] и [effect1.status0.power] [sap] на всех врагов на этом этаже.",
+          "portuguese": "Aplique [effect0.status0.power] [rooted] e [effect1.status0.power] [sap] a todos os inimigos neste andar.",
+          "chinese": "对本层所有敌人施加[effect0.status0.power] [rooted]和[effect1.status0.power] [sap]。",
+          "spanish": "Añade [effect0.status0.power] [rooted] y [effect1.status0.power] [sap] a todos los enemigos de este piso.",
+          "chinese_traditional": "對本層所有敵人施加[effect0.status0.power] [rooted]和[effect1.status0.power] [sap]。",
+          "korean": "이 층의 모든 적에게 [effect0.status0.power] [rooted] 및 [effect1.status0.power] [sap] 부여.",
+          "japanese": "この階の敵全体に[effect0.status0.power] [rooted]と[effect1.status0.power] [sap]を付与。"
+        },
+        "card_art": "@Web",
+        "cost": 2,
+        "card_type": "spell",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": true,
+        "effects": [
+          "@WebRooted",
+          "@WebSap"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WebSap",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_status_effects": [
+          {
+            "status": "debuff",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "id": "WebRooted",
+        "applied_vfx": "@SpellWebRootVFX",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_status_effects": [
+          {
+            "status": "rooted",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellWebRootVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_EncaseVines_PS.prefab",
+          "asset_guid": "5c17914b9ad92cf4f88666384ae72cb4"
+        },
+        "spawn_location": "character_bottom"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Web",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Web"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Web",
+        "path": "textures/WebArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_web.json": "85e67543b86f10a6b6bf7e21a248d8e807d3e2d9cd6ac717bcff45fe22f25539"
+  }
+}

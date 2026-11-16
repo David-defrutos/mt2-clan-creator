@@ -1,0 +1,243 @@
+{
+  "id": "succclan-PainAndPleasure",
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "root": {
+    "section": "cards",
+    "id": "PainAndPleasure"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Pain And Pleasure",
+    "chinese": "喜怒无常",
+    "spanish": "Dolor y placer",
+    "french": "Douleur et plaisir",
+    "german": "Schmerz und Lust",
+    "portuguese": "Dor e Prazer",
+    "russian": "Боль и наслаждение",
+    "chinese_traditional": "痛苦與歡愉",
+    "japanese": "苦痛と快楽",
+    "korean": "고통과 쾌락"
+  },
+  "descriptions": {
+    "english": "Requires [effect0.power] <b>Obsessing Sparks</b> in hand. Discard them and draw [effect1.power].",
+    "chinese": "需要手牌中有 [effect0.power] 张<b>欲望碎片</b>。舍弃这些牌并抽 [effect1.power] 张牌。",
+    "spanish": "Requiere [effect0.power] <b>Chispas obsesivas</b> en la mano. Descártalas y roba [effect1.power].",
+    "french": "Nécessite [effect0.power] <b>Étincelle obsédante</b> en main. Défaussez-les et piochez [effect1.power] cartes.",
+    "german": "Benötigt [effect0.power] <b>Besessenheitsfunke</b> auf der Hand. Wirf sie ab und ziehe [effect1.power] Karten.",
+    "portuguese": "Requer [effect0.power] <b>Centelha Obsessiva</b> na mão. Descarte-as e compre [effect1.power] cartas.",
+    "russian": "Требует [effect0.power] <b>Искра одержимости</b> в руке. Сбрасывает их и даёт [effect1.power] карт.",
+    "chinese_traditional": "需要手牌中有 [effect0.power] 張<b>執念火花</b>。棄掉它們並抽 [effect1.power] 張牌。",
+    "japanese": "手札に<b>執着の火花</b>が[effect0.power]枚必要。それらを捨てて[effect1.power]枚引く。",
+    "korean": "손에 <b>집착의 불꽃</b> [effect0.power]장이 필요합니다. 해당 카드를 버리고 [effect1.power]장을 뽑습니다."
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/06e6f075d74f857da805393594da9404f8414be1cbda3a301b28331faa902dd3.png",
+  "characterPicture": null,
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ObsessingShardArt.png": "assets/fc6bd964ecb26665a12e65a318a98fd020456df96f868ae0202ada3da2eadb51.png",
+    "textures/PainAndPleasureArt.png": "assets/06e6f075d74f857da805393594da9404f8414be1cbda3a301b28331faa902dd3.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "PainAndPleasure",
+        "names": {
+          "english": "Pain And Pleasure",
+          "chinese": "喜怒无常",
+          "spanish": "Dolor y placer",
+          "french": "Douleur et plaisir",
+          "german": "Schmerz und Lust",
+          "portuguese": "Dor e Prazer",
+          "russian": "Боль и наслаждение",
+          "chinese_traditional": "痛苦與歡愉",
+          "japanese": "苦痛と快楽",
+          "korean": "고통과 쾌락"
+        },
+        "descriptions": {
+          "english": "Requires [effect0.power] <b>Obsessing Sparks</b> in hand. Discard them and draw [effect1.power].",
+          "chinese": "需要手牌中有 [effect0.power] 张<b>欲望碎片</b>。舍弃这些牌并抽 [effect1.power] 张牌。",
+          "spanish": "Requiere [effect0.power] <b>Chispas obsesivas</b> en la mano. Descártalas y roba [effect1.power].",
+          "french": "Nécessite [effect0.power] <b>Étincelle obsédante</b> en main. Défaussez-les et piochez [effect1.power] cartes.",
+          "german": "Benötigt [effect0.power] <b>Besessenheitsfunke</b> auf der Hand. Wirf sie ab und ziehe [effect1.power] Karten.",
+          "portuguese": "Requer [effect0.power] <b>Centelha Obsessiva</b> na mão. Descarte-as e compre [effect1.power] cartas.",
+          "russian": "Требует [effect0.power] <b>Искра одержимости</b> в руке. Сбрасывает их и даёт [effect1.power] карт.",
+          "chinese_traditional": "需要手牌中有 [effect0.power] 張<b>執念火花</b>。棄掉它們並抽 [effect1.power] 張牌。",
+          "japanese": "手札に<b>執着の火花</b>が[effect0.power]枚必要。それらを捨てて[effect1.power]枚引く。",
+          "korean": "손에 <b>집착의 불꽃</b> [effect0.power]장이 필요합니다. 해당 카드를 버리고 [effect1.power]장을 뽑습니다."
+        },
+        "card_type": "spell",
+        "rarity": "common",
+        "card_art": "@PainAndPleasureArt",
+        "cost": 0,
+        "targets_room": true,
+        "targetless": true,
+        "effects": [
+          "@PainAndPleasureDiscard",
+          "@PainAndPleasureDraw"
+        ]
+      },
+      {
+        "id": "ObsessingShard",
+        "names": {
+          "english": "Obsessing Spark",
+          "chinese": "欲望碎片",
+          "spanish": "Chispa obsesiva",
+          "french": "Étincelle obsédante",
+          "german": "Besessenheitsfunke",
+          "portuguese": "Centelha Obsessiva",
+          "russian": "Искра одержимости",
+          "chinese_traditional": "執念火花",
+          "japanese": "執着の火花",
+          "korean": "집착의 불꽃"
+        },
+        "card_type": "blight",
+        "rarity": "common",
+        "card_art": "@ObsessingShardArt",
+        "cost": 1,
+        "targets_room": false,
+        "targetless": true,
+        "traits": [
+          "@Consume"
+        ],
+        "triggers": [
+          "@ObsessingShardOnUnplayed"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "PainAndPleasureDraw",
+        "name": "CardEffectDraw",
+        "target_mode": "room",
+        "target_team": "none",
+        "param_int": 3
+      },
+      {
+        "id": "PainAndPleasureDiscard",
+        "applied_vfx": "@SuccFXHandPulse",
+        "name": {
+          "id": "@CardEffectRandomDiscardFromCardPile",
+          "mod_reference": "Conductor"
+        },
+        "should_fail_to_cast_if_test_fails": true,
+        "should_cancel_subsequent_effects_if_test_fails": true,
+        "target_mode": "hand",
+        "target_team": "none",
+        "target_card_type": "blight",
+        "param_int": 2,
+        "param_card_pool": "@ObsessingShardPool"
+      },
+      {
+        "id": "ObsessingShardPyreDamage",
+        "applied_vfx": "@SuccFXShadowImpact",
+        "name": "CardEffectDamage",
+        "target_mode": "pyre",
+        "target_team": "both",
+        "param_int": 1,
+        "suppress_pyre_room_focus": true
+      }
+    ],
+    "card_pools": [
+      {
+        "id": "ObsessingShardPool",
+        "cards": [
+          "@ObsessingShard"
+        ]
+      }
+    ],
+    "card_triggers": [
+      {
+        "id": "ObsessingShardOnUnplayed",
+        "trigger": "on_unplayed_negative",
+        "descriptions": {
+          "english": "Your Pyre takes [effect0.power] damage.",
+          "chinese": "对薪火造成 [effect0.power] 点伤害。",
+          "spanish": "Tu Pira recibe [effect0.power] de daño.",
+          "french": "Votre Brasier subit [effect0.power] dégâts.",
+          "german": "Deine Höllenglut erleidet [effect0.power] Schaden.",
+          "portuguese": "Sua Pira sofre [effect0.power] de dano.",
+          "russian": "Пекло получает [effect0.power] урона.",
+          "chinese_traditional": "你的薪火受到 [effect0.power] 點傷害。",
+          "japanese": "パイアが[effect0.power]ダメージを受ける。",
+          "korean": "화로가 [effect0.power]의 피해를 받습니다."
+        },
+        "effects": [
+          "@ObsessingShardPyreDamage"
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXHandPulse",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Pyreborne/Alchemy/FX_Alchemy.prefab",
+          "asset_guid": "dece7354ce5d1f94e9121ea4e8375122"
+        },
+        "spawn_location": "room_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ObsessingShardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ObsessingShardArt"
+          }
+        }
+      },
+      {
+        "id": "PainAndPleasureArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@PainAndPleasureArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ObsessingShardArt",
+        "path": "textures/ObsessingShardArt.png"
+      },
+      {
+        "id": "PainAndPleasureArt",
+        "path": "textures/PainAndPleasureArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_PainAndPleasure.json": "88c09e6a17a9700948f2a58aaf6ecca35dd3ad86218d091f6af0f76e5b1b83f0",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d",
+    "json/spells/card_ObsessingShard.json": "aa2f8c8cb633cab56c128cd56a7092c7a79f7b33dbe670f259275d646211bd37",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

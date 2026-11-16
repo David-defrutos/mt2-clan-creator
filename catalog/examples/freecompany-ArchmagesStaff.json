@@ -1,0 +1,193 @@
+{
+  "id": "freecompany-ArchmagesStaff",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "ArchmagesStaff"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Archmage's Staff",
+    "french": "Bâton d'archimage",
+    "german": "Erzmagierstab",
+    "russian": "Посох архимага",
+    "portuguese": "Cajado do Arquimago",
+    "chinese": "大法师之杖",
+    "spanish": "Bastón del archimago",
+    "chinese_traditional": "大法師之杖",
+    "korean": "대마법사의 지팡이",
+    "japanese": "大魔術師の杖"
+  },
+  "descriptions": {
+    "english": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Apply <b>6</b> [conduit].",
+    "french": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Applique <b>6</b> [conduit].",
+    "german": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Verleiht <b>6</b> [conduit].",
+    "russian": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Накладывает <b>6</b> [conduit].",
+    "portuguese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Aplica <b>6</b> [conduit].",
+    "chinese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. 施加<b>6</b> [conduit]。",
+    "spanish": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Añade <b>6</b> [conduit].",
+    "chinese_traditional": "<b>+10</b> [attack]. <b>1</b> [mageblade]. 施加<b>6</b> [conduit]。",
+    "korean": "<b>+10</b> [attack]. <b>1</b> [mageblade]. <b>6</b> [conduit] 부여.",
+    "japanese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. <b>6</b> [conduit]を付与。"
+  },
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/d6a3ccdd6128f7113d4f84fa54d805e718a90d208e2e5e7fd69b1a8e46baa871.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ArchmagesStaffArt.png": "assets/d6a3ccdd6128f7113d4f84fa54d805e718a90d208e2e5e7fd69b1a8e46baa871.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "ArchmagesStaff",
+        "names": {
+          "english": "Archmage's Staff",
+          "french": "Bâton d'archimage",
+          "german": "Erzmagierstab",
+          "russian": "Посох архимага",
+          "portuguese": "Cajado do Arquimago",
+          "chinese": "大法师之杖",
+          "spanish": "Bastón del archimago",
+          "chinese_traditional": "大法師之杖",
+          "korean": "대마법사의 지팡이",
+          "japanese": "大魔術師の杖"
+        },
+        "descriptions": {
+          "english": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Apply <b>6</b> [conduit].",
+          "french": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Applique <b>6</b> [conduit].",
+          "german": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Verleiht <b>6</b> [conduit].",
+          "russian": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Накладывает <b>6</b> [conduit].",
+          "portuguese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Aplica <b>6</b> [conduit].",
+          "chinese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. 施加<b>6</b> [conduit]。",
+          "spanish": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Añade <b>6</b> [conduit].",
+          "chinese_traditional": "<b>+10</b> [attack]. <b>1</b> [mageblade]. 施加<b>6</b> [conduit]。",
+          "korean": "<b>+10</b> [attack]. <b>1</b> [mageblade]. <b>6</b> [conduit] 부여.",
+          "japanese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. <b>6</b> [conduit]を付与。"
+        },
+        "card_art": "@ArchmagesStaff",
+        "cost": 2,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipArchmagesStaff",
+          "@ArchmagesStaffApplyConduit"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "ArchmagesStaffApplyConduit",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "conduit",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "id": "EquipArchmagesStaff",
+        "applied_vfx": "@KitWizardArcaneVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgArchmagesStaff"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgArchmagesStaff",
+        "titles": {
+          "english": "Archmage's Staff",
+          "french": "Bâton d'archimage",
+          "german": "Erzmagierstab",
+          "russian": "Посох архимага",
+          "portuguese": "Cajado do Arquimago",
+          "chinese": "大法师之杖",
+          "spanish": "Bastón del archimago",
+          "chinese_traditional": "大法師之杖",
+          "korean": "대마법사의 지팡이",
+          "japanese": "大魔術師の杖"
+        },
+        "descriptions": {
+          "english": "<b>+10</b> [attack]. <b>1</b> [mageblade]. On equip: Apply <b>6</b> [conduit].",
+          "french": "<b>+10</b> [attack]. <b>1</b> [mageblade]. À l’équipement : Applique <b>6</b> [conduit].",
+          "german": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Beim Ausrüsten: Verleiht <b>6</b> [conduit].",
+          "russian": "<b>+10</b> [attack]. <b>1</b> [mageblade]. При экипировке: Накладывает <b>6</b> [conduit].",
+          "portuguese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Ao equipar: Aplica <b>6</b> [conduit].",
+          "chinese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. 装备时： 施加<b>6</b> [conduit]。",
+          "spanish": "<b>+10</b> [attack]. <b>1</b> [mageblade]. Al equipar: Añade <b>6</b> [conduit].",
+          "chinese_traditional": "<b>+10</b> [attack]. <b>1</b> [mageblade]. 裝備時： 施加<b>6</b> [conduit]。",
+          "korean": "<b>+10</b> [attack]. <b>1</b> [mageblade]. 장착 시: <b>6</b> [conduit] 부여.",
+          "japanese": "<b>+10</b> [attack]. <b>1</b> [mageblade]. 装備時： <b>6</b> [conduit]を付与。"
+        },
+        "icon": "@ArchmagesStaff",
+        "bonus_damage": 10,
+        "status_effect_upgrades": [
+          {
+            "status": "mageblade",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ArchmagesStaff",
+        "path": "textures/ArchmagesStaffArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitWizardArcaneVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ArchmagesStaff",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ArchmagesStaff"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/kits/kit_wizard.json": "c217c1e5cfccbf41acb3ec54768f00da42fc90941e4eccff4742d3afaad37160",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

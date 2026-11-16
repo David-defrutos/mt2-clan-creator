@@ -1,0 +1,175 @@
+{
+  "id": "freecompany-Shortbow",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Shortbow"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Shortbow",
+    "french": "Arc court",
+    "german": "Kurzbogen",
+    "russian": "Короткий лук",
+    "portuguese": "Arco Curto",
+    "chinese": "短弓",
+    "spanish": "Arco corto",
+    "chinese_traditional": "短弓",
+    "korean": "단궁",
+    "japanese": "短弓"
+  },
+  "descriptions": {
+    "english": "<b>+5</b> [attack].",
+    "french": "<b>+5</b> [attack].",
+    "german": "<b>+5</b> [attack].",
+    "russian": "<b>+5</b> [attack].",
+    "portuguese": "<b>+5</b> [attack].",
+    "chinese": "<b>+5</b> [attack].",
+    "spanish": "<b>+5</b> [attack].",
+    "chinese_traditional": "<b>+5</b> [attack].",
+    "korean": "<b>+5</b> [attack].",
+    "japanese": "<b>+5</b> [attack]."
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/ec3fb36f2cf1cac61573f36d6c8b73bc93bd22d66600ec08aa540e956084285c.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ShortbowArt.png": "assets/ec3fb36f2cf1cac61573f36d6c8b73bc93bd22d66600ec08aa540e956084285c.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Shortbow",
+        "names": {
+          "english": "Shortbow",
+          "french": "Arc court",
+          "german": "Kurzbogen",
+          "russian": "Короткий лук",
+          "portuguese": "Arco Curto",
+          "chinese": "短弓",
+          "spanish": "Arco corto",
+          "chinese_traditional": "短弓",
+          "korean": "단궁",
+          "japanese": "短弓"
+        },
+        "descriptions": {
+          "english": "<b>+5</b> [attack].",
+          "french": "<b>+5</b> [attack].",
+          "german": "<b>+5</b> [attack].",
+          "russian": "<b>+5</b> [attack].",
+          "portuguese": "<b>+5</b> [attack].",
+          "chinese": "<b>+5</b> [attack].",
+          "spanish": "<b>+5</b> [attack].",
+          "chinese_traditional": "<b>+5</b> [attack].",
+          "korean": "<b>+5</b> [attack].",
+          "japanese": "<b>+5</b> [attack]."
+        },
+        "card_art": "@Shortbow",
+        "cost": 0,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipShortbow"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "EquipShortbow",
+        "applied_vfx": "@KitRangerCraftVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgShortbow"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgShortbow",
+        "titles": {
+          "english": "Shortbow",
+          "french": "Arc court",
+          "german": "Kurzbogen",
+          "russian": "Короткий лук",
+          "portuguese": "Arco Curto",
+          "chinese": "短弓",
+          "spanish": "Arco corto",
+          "chinese_traditional": "短弓",
+          "korean": "단궁",
+          "japanese": "短弓"
+        },
+        "descriptions": {
+          "english": "<b>+5</b> [attack].",
+          "french": "<b>+5</b> [attack].",
+          "german": "<b>+5</b> [attack].",
+          "russian": "<b>+5</b> [attack].",
+          "portuguese": "<b>+5</b> [attack].",
+          "chinese": "<b>+5</b> [attack].",
+          "spanish": "<b>+5</b> [attack].",
+          "chinese_traditional": "<b>+5</b> [attack].",
+          "korean": "<b>+5</b> [attack].",
+          "japanese": "<b>+5</b> [attack]."
+        },
+        "icon": "@Shortbow",
+        "bonus_damage": 5,
+        "status_effect_upgrades": []
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Shortbow",
+        "path": "textures/ShortbowArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitRangerCraftVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Railforged/CraftedEquipment/FX_CraftedEquipment.prefab",
+          "asset_guid": "8b71ea7d8f6189148add8fe2945b0bc5"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Shortbow",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Shortbow"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/kits/kit_ranger.json": "9a2ce18dbaf287ba54b81290e7b5b5c80d39fa83935607d88fae2f23ac274011",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "id": "freecompany-Fireball",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Fireball"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Fireball",
+    "french": "Boule de feu",
+    "german": "Feuerball",
+    "russian": "Огненный шар",
+    "portuguese": "Bola de Fogo",
+    "chinese": "火球术",
+    "spanish": "Bola de fuego",
+    "chinese_traditional": "火球術",
+    "korean": "화염구",
+    "japanese": "ファイアボール"
+  },
+  "descriptions": {
+    "english": "Deal [effect0.power] damage to all enemies on this floor, then shuffle their positions.",
+    "spanish": "Inflige [effect0.power] de daño a todos los enemigos de este piso y luego baraja sus posiciones.",
+    "french": "Infligez [effect0.power] dégâts à tous les ennemis de cet étage, puis mélangez leurs positions.",
+    "german": "Füge allen Gegnern auf diesem Stockwerk [effect0.power] Schaden zu und mische dann ihre Positionen.",
+    "russian": "Нанесите [effect0.power] урона всем врагам на этом этаже, затем перемешайте их позиции.",
+    "portuguese": "Cause [effect0.power] de dano a todos os inimigos neste andar e depois embaralhe suas posições.",
+    "chinese": "对本层所有敌人造成[effect0.power]点伤害，然后打乱其位置。",
+    "chinese_traditional": "對本層所有敵人造成[effect0.power]點傷害，然後打亂其位置。",
+    "korean": "이 층의 모든 적에게 [effect0.power] 피해를 준 뒤 위치를 섞습니다.",
+    "japanese": "この階の敵全体に[effect0.power]ダメージを与え、その後、位置をシャッフルする。"
+  },
+  "cost": 3,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/57d677d66ee859a8bbb88ed59c4883825d323977b14cc79abe70d3874bd9f112.png",
+  "characterPicture": null,
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/FireballArt.png": "assets/57d677d66ee859a8bbb88ed59c4883825d323977b14cc79abe70d3874bd9f112.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Fireball",
+        "names": {
+          "english": "Fireball",
+          "french": "Boule de feu",
+          "german": "Feuerball",
+          "russian": "Огненный шар",
+          "portuguese": "Bola de Fogo",
+          "chinese": "火球术",
+          "spanish": "Bola de fuego",
+          "chinese_traditional": "火球術",
+          "korean": "화염구",
+          "japanese": "ファイアボール"
+        },
+        "descriptions": {
+          "english": "Deal [effect0.power] damage to all enemies on this floor, then shuffle their positions.",
+          "spanish": "Inflige [effect0.power] de daño a todos los enemigos de este piso y luego baraja sus posiciones.",
+          "french": "Infligez [effect0.power] dégâts à tous les ennemis de cet étage, puis mélangez leurs positions.",
+          "german": "Füge allen Gegnern auf diesem Stockwerk [effect0.power] Schaden zu und mische dann ihre Positionen.",
+          "russian": "Нанесите [effect0.power] урона всем врагам на этом этаже, затем перемешайте их позиции.",
+          "portuguese": "Cause [effect0.power] de dano a todos os inimigos neste andar e depois embaralhe suas posições.",
+          "chinese": "对本层所有敌人造成[effect0.power]点伤害，然后打乱其位置。",
+          "chinese_traditional": "對本層所有敵人造成[effect0.power]點傷害，然後打亂其位置。",
+          "korean": "이 층의 모든 적에게 [effect0.power] 피해를 준 뒤 위치를 섞습니다.",
+          "japanese": "この階の敵全体に[effect0.power]ダメージを与え、その後、位置をシャッフルする。"
+        },
+        "card_art": "@Fireball",
+        "cost": 3,
+        "card_type": "spell",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": true,
+        "traits": [
+          "@FireballExplosive"
+        ],
+        "effects": [
+          "@FireballEnemies",
+          "@FireballShuffle"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "FireballShuffle",
+        "name": {
+          "id": "@CardEffectShuffleUnits",
+          "mod_reference": "Conductor"
+        },
+        "target_mode": "room",
+        "target_team": "heroes"
+      },
+      {
+        "id": "FireballEnemies",
+        "applied_vfx": "@SpellFireballFireVFX",
+        "name": "CardEffectDamage",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_int": 20
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellFireballFireVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ImpactFire_PS.prefab",
+          "asset_guid": "2d1444371baed9a4e94156b585c6c64e"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "FireballExplosive",
+        "name": "CardTraitDamageOverflow"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Fireball",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Fireball"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Fireball",
+        "path": "textures/FireballArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_fireball.json": "a0b0e8fa655bb4b9c813e4d5940915bbb6190ff96c476d2c1c70a309103ab1b4"
+  }
+}

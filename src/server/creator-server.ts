@@ -1,3 +1,5 @@
+import {createQuickDraft} from './creator/quick-start.js';
+import {exportDraftBackup,importDraftBackup} from './creator/draft-backup.js';
 import {generatedJsonPreview} from './creator/json-preview.js';
 import {suggestedLocalDestination} from './creator/local-destination.js';
 import {createOfficialDraft} from './creator/official-clans.js';
@@ -19,7 +21,7 @@ import {buildOffline} from './offline-build.js';
 import {packageFiles} from './creator/zip.js';
 const run=promisify(execFile),preparing=new Set<string>();
 function send(res:ServerResponse,status:number,value:unknown){res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(value));}
-async function body(req:IncomingMessage){if(!req.headers['content-type']?.startsWith('application/json'))throw Error('El formulario no se pudo leer. Recarga la pÃ¡gina.');let count=0;const chunks:Buffer[]=[];for await(const chunk of req){count+=chunk.length;if(count>18e6)throw Error('La imagen es demasiado grande.');chunks.push(chunk);}const value=JSON.parse(Buffer.concat(chunks).toString('utf8'));if(!value||typeof value!=='object'||Array.isArray(value))throw Error('El formulario no es vÃ¡lido.');return value;}
+async function body(req:IncomingMessage,limit=18e6){if(!req.headers['content-type']?.startsWith('application/json'))throw Error('El formulario no se pudo leer. Recarga la pÃ¡gina.');let count=0;const chunks:Buffer[]=[];for await(const chunk of req){count+=chunk.length;if(count>limit)throw Error('La imagen es demasiado grande.');chunks.push(chunk);}const value=JSON.parse(Buffer.concat(chunks).toString('utf8'));if(!value||typeof value!=='object'||Array.isArray(value))throw Error('El formulario no es vÃ¡lido.');return value;}
 async function fileResponse(res:ServerResponse,file:string,type:string){const b=await fs.readFile(file);res.writeHead(200,{'Content-Type':type,'Cache-Control':'no-cache','X-Content-Type-Options':'nosniff'});res.end(b);}
 async function chooseFolder(){if(process.platform==='win32'){const script="Add-Type -AssemblyName System.Windows.Forms; $d=New-Object System.Windows.Forms.FolderBrowserDialog; $d.Description='Selecciona la carpeta de Monster Train 2 o de tu perfil de mods'; if($d.ShowDialog() -eq 'OK'){[Console]::Write($d.SelectedPath)}";return (await run('powershell.exe',['-NoProfile','-STA','-Command',script],{windowsHide:false,timeout:120000})).stdout.trim();}if(process.platform==='darwin')return (await run('osascript',['-e','POSIX path of (choose folder with prompt "Monster Train 2 / mods")'],{timeout:120000})).stdout.trim();return (await run('zenity',['--file-selection','--directory','--title=Monster Train 2 / mods'],{timeout:120000})).stdout.trim();}
 export function createCreatorServer(){return createServer((req,res)=>{route(req,res).catch(error=>{if(!res.headersSent)send(res,error.code==='ENOENT'?404:400,{error:error.code==='ENOENT'?'No se encuentra el archivo. Vuelve a abrir tu clan.':String(error.message??error)});else res.end();});});}
@@ -29,11 +31,14 @@ async function route(req:IncomingMessage,res:ServerResponse){const host=req.head
  if(req.method==='GET'&&p==='/api/local-destination'){send(res,200,await suggestedLocalDestination());return;}
  if(req.method==='GET'&&p==='/api/deleted-projects'){send(res,200,await deletedDrafts());return;}
  if(req.method==='GET'&&p==='/api/projects'){send(res,200,await listDrafts());return;}
+ if(req.method==='POST'&&p==='/api/projects/quick-start'){const input=await body(req);send(res,201,await createQuickDraft(input.language==='es'?'es':'en'));return;}
+ if(req.method==='POST'&&p==='/api/projects/restore-backup'){const rules=await creatorRules();send(res,201,await importDraftBackup(await body(req,rules.backups.maxBytes)));return;}
  if(req.method==='POST'&&p==='/api/projects/from-official'){const request=await body(req);send(res,201,await createOfficialDraft(request.clanId,request.language==='en'?'en':'es'));return;}
  if(req.method==='POST'&&p==='/api/projects'){await body(req);send(res,201,await newDraft());return;}
  const detail=p.match(/^\/api\/examples\/([A-Za-z0-9_-]+)$/);if(req.method==='GET'&&detail){const e=await readExample(detail[1]);const language=u.searchParams.get('language')==='en'?'en':'es';send(res,200,{example:e,card:cloneExampleCard(e,randomUUID(),language),parameters:exampleParameters(e)});return;}
- const project=p.match(/^\/api\/projects\/([a-f0-9-]{36})(?:\/(image|review|export|local-plan|local-install|trash-draft|restore-draft|uninstall-plan|uninstall|json-preview))?$/);
+ const project=p.match(/^\/api\/projects\/([a-f0-9-]{36})(?:\/(image|review|export|local-plan|local-install|trash-draft|restore-draft|uninstall-plan|uninstall|json-preview|backup))?$/);
  if(project){const id=project[1],action=project[2];if(req.method==='GET'&&!action){send(res,200,await loadDraft(id));return;}if(req.method==='PUT'&&!action){const value=await body(req);if(value.id!==id)throw Error('El clan del formulario no coincide.');send(res,200,await saveDraft(value));return;}
+ if(req.method==='GET'&&action==='backup'){send(res,200,await exportDraftBackup(id));return;}
  if(req.method==='POST'&&action==='trash-draft'){const input=await body(req);if(preparing.has(id))throw Error('Espera a que termine la preparacion del clan.');send(res,200,await trashDraft(id,input.revision));return;}
  if(req.method==='POST'&&action==='restore-draft'){await body(req);send(res,200,await restoreDraft(id));return;}
  if(req.method==='POST'&&action==='uninstall-plan'){const input=await body(req);if(preparing.has(id))throw Error('Espera a que termine la preparacion del clan.');const plan=await planClanUninstall(input.folder,id);for(const [key,value]of uninstallPlans)if(Date.now()-value.createdAt>600000)uninstallPlans.delete(key);if(uninstallPlans.size>=20)throw Error('Hay demasiadas revisiones abiertas.');const token=randomUUID();uninstallPlans.set(token,plan);send(res,200,{token,target:plan.target,profile:plan.profile});return;}
@@ -75,3 +80,4 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
 // 2026-11-15-2239||codex-clan-editor||clan-creator/src/server/creator-server.ts||Pasar nombre actual del borrador a destino de instalacion
 // 2026-11-15-2300||codex-clan-editor||clan-creator/src/server/creator-server.ts||Exponer papelera restauracion y desinstalacion revisada con tokens propios sin borrar otros mods
 // 2026-11-15-2341||codex-clan-editor||clan-creator/src/server/creator-server.ts||Exponer vista de JSON generado con revision comprobada sin endpoint de escritura de archivos
+// 2026-11-16-2144||codex-clan-editor||clan-creator/src/server/creator-server.ts||Exponer recorrido inicial y copia restauración portátil con límites de tamaño sin instalar ni sobrescribir clanes

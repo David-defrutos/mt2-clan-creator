@@ -1,0 +1,188 @@
+{
+  "id": "freecompany-Grimoire",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Grimoire"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Grimoire",
+    "french": "Grimoire",
+    "german": "Grimoire",
+    "russian": "Гримуар",
+    "portuguese": "Grimório",
+    "chinese": "魔法书",
+    "spanish": "Grimorio",
+    "chinese_traditional": "魔法書",
+    "korean": "마법서",
+    "japanese": "魔導書"
+  },
+  "descriptions": {
+    "english": "<b>+5</b> [attack]. Apply <b>4</b> [conduit].",
+    "french": "<b>+5</b> [attack]. Applique <b>4</b> [conduit].",
+    "german": "<b>+5</b> [attack]. Verleiht <b>4</b> [conduit].",
+    "russian": "<b>+5</b> [attack]. Накладывает <b>4</b> [conduit].",
+    "portuguese": "<b>+5</b> [attack]. Aplica <b>4</b> [conduit].",
+    "chinese": "<b>+5</b> [attack]. 施加<b>4</b> [conduit]。",
+    "spanish": "<b>+5</b> [attack]. Añade <b>4</b> [conduit].",
+    "chinese_traditional": "<b>+5</b> [attack]. 施加<b>4</b> [conduit]。",
+    "korean": "<b>+5</b> [attack]. <b>4</b> [conduit] 부여.",
+    "japanese": "<b>+5</b> [attack]. <b>4</b> [conduit]を付与。"
+  },
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/ecb93506f819a48b3417e72abc47464fadc4b01a38b49330511e5ff83ba1614a.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/GrimoireArt.png": "assets/ecb93506f819a48b3417e72abc47464fadc4b01a38b49330511e5ff83ba1614a.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Grimoire",
+        "names": {
+          "english": "Grimoire",
+          "french": "Grimoire",
+          "german": "Grimoire",
+          "russian": "Гримуар",
+          "portuguese": "Grimório",
+          "chinese": "魔法书",
+          "spanish": "Grimorio",
+          "chinese_traditional": "魔法書",
+          "korean": "마법서",
+          "japanese": "魔導書"
+        },
+        "descriptions": {
+          "english": "<b>+5</b> [attack]. Apply <b>4</b> [conduit].",
+          "french": "<b>+5</b> [attack]. Applique <b>4</b> [conduit].",
+          "german": "<b>+5</b> [attack]. Verleiht <b>4</b> [conduit].",
+          "russian": "<b>+5</b> [attack]. Накладывает <b>4</b> [conduit].",
+          "portuguese": "<b>+5</b> [attack]. Aplica <b>4</b> [conduit].",
+          "chinese": "<b>+5</b> [attack]. 施加<b>4</b> [conduit]。",
+          "spanish": "<b>+5</b> [attack]. Añade <b>4</b> [conduit].",
+          "chinese_traditional": "<b>+5</b> [attack]. 施加<b>4</b> [conduit]。",
+          "korean": "<b>+5</b> [attack]. <b>4</b> [conduit] 부여.",
+          "japanese": "<b>+5</b> [attack]. <b>4</b> [conduit]を付与。"
+        },
+        "card_art": "@Grimoire",
+        "cost": 1,
+        "traits": [
+          "@KitEphemeral"
+        ],
+        "card_type": "equipment",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipGrimoire",
+          "@GrimoireApplyConduit"
+        ],
+        "unlock_level": 99,
+        "hide_in_logbook": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "GrimoireApplyConduit",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "conduit",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "id": "EquipGrimoire",
+        "applied_vfx": "@KitWizardArcaneVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgGrimoire"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgGrimoire",
+        "titles": {
+          "english": "Grimoire",
+          "french": "Grimoire",
+          "german": "Grimoire",
+          "russian": "Гримуар",
+          "portuguese": "Grimório",
+          "chinese": "魔法书",
+          "spanish": "Grimorio",
+          "chinese_traditional": "魔法書",
+          "korean": "마법서",
+          "japanese": "魔導書"
+        },
+        "descriptions": {
+          "english": "<b>+5</b> [attack]. On equip: Apply <b>4</b> [conduit].",
+          "french": "<b>+5</b> [attack]. À l’équipement : Applique <b>4</b> [conduit].",
+          "german": "<b>+5</b> [attack]. Beim Ausrüsten: Verleiht <b>4</b> [conduit].",
+          "russian": "<b>+5</b> [attack]. При экипировке: Накладывает <b>4</b> [conduit].",
+          "portuguese": "<b>+5</b> [attack]. Ao equipar: Aplica <b>4</b> [conduit].",
+          "chinese": "<b>+5</b> [attack]. 装备时： 施加<b>4</b> [conduit]。",
+          "spanish": "<b>+5</b> [attack]. Al equipar: Añade <b>4</b> [conduit].",
+          "chinese_traditional": "<b>+5</b> [attack]. 裝備時： 施加<b>4</b> [conduit]。",
+          "korean": "<b>+5</b> [attack]. 장착 시: <b>4</b> [conduit] 부여.",
+          "japanese": "<b>+5</b> [attack]. 装備時： <b>4</b> [conduit]を付与。"
+        },
+        "icon": "@Grimoire",
+        "bonus_damage": 5,
+        "status_effect_upgrades": []
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Grimoire",
+        "path": "textures/GrimoireArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "KitWizardArcaneVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "KitEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Grimoire",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Grimoire"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/kits/kit_wizard.json": "c217c1e5cfccbf41acb3ec54768f00da42fc90941e4eccff4742d3afaad37160",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

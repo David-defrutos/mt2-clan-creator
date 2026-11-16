@@ -1,0 +1,259 @@
+{
+  "id": "freecompany-SpawnBerserker",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnBerserker"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Berserker",
+    "french": "Berserker",
+    "german": "Berserker",
+    "russian": "Берсерк",
+    "portuguese": "Berserker",
+    "chinese": "狂战士",
+    "spanish": "Berserker",
+    "chinese_traditional": "狂戰士",
+    "korean": "광전사",
+    "japanese": "狂戦士"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 16,
+  "attack": 12,
+  "size": 2,
+  "picture": "assets/5e231c89bdb0e789f70f5eae7f862672a7c8730d12665e722ac9c83b61829a95.png",
+  "characterPicture": "assets/c75a27ebe859db26878330abc72922cb17189281de5e9afca3401993467e810c.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/BerserkerCharacterArt.png": "assets/c75a27ebe859db26878330abc72922cb17189281de5e9afca3401993467e810c.png",
+    "textures/BerserkerCardArt.png": "assets/5e231c89bdb0e789f70f5eae7f862672a7c8730d12665e722ac9c83b61829a95.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnBerserker",
+        "names": {
+          "english": "Berserker",
+          "french": "Berserker",
+          "german": "Berserker",
+          "russian": "Берсерк",
+          "portuguese": "Berserker",
+          "chinese": "狂战士",
+          "spanish": "Berserker",
+          "chinese_traditional": "狂戰士",
+          "korean": "광전사",
+          "japanese": "狂戦士"
+        },
+        "card_art": "@Berserker",
+        "cost": 2,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnBerserkerEffect"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnBerserkerEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@Berserker"
+      },
+      {
+        "id": "BerserkerRageRevenge",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "buff",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "id": "BerserkerRageKill",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "buff",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "Berserker",
+        "names": {
+          "english": "Berserker",
+          "french": "Berserker",
+          "german": "Berserker",
+          "russian": "Берсерк",
+          "portuguese": "Berserker",
+          "chinese": "狂战士",
+          "spanish": "Berserker",
+          "chinese_traditional": "狂戰士",
+          "korean": "광전사",
+          "japanese": "狂戦士"
+        },
+        "character_art": "@BerserkerCharacterArt",
+        "size": 2,
+        "attack_damage": 12,
+        "health": 16,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Barbarian",
+          "@Sub_Goblin"
+        ],
+        "triggers": [
+          {
+            "id": "@BerserkerKillTrigger"
+          },
+          {
+            "id": "@BerserkerRevengeTrigger"
+          }
+        ],
+        "starting_status_effects": [
+          {
+            "status": "sweep",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "BerserkerRevengeTrigger",
+        "trigger": "on_hit",
+        "descriptions": {
+          "english": "Gain [effect0.status0.power] [rage].",
+          "french": "Gagnez [effect0.status0.power] [rage].",
+          "german": "Erhalte [effect0.status0.power] [rage].",
+          "russian": "Получите [effect0.status0.power] [rage].",
+          "portuguese": "Ganhe [effect0.status0.power] [rage].",
+          "chinese": "获得[effect0.status0.power] [rage]。",
+          "spanish": "Gana [effect0.status0.power] [rage].",
+          "chinese_traditional": "獲得[effect0.status0.power] [rage]。",
+          "korean": "[effect0.status0.power] [rage] 획득.",
+          "japanese": "[effect0.status0.power] [rage]を得る。"
+        },
+        "effects": [
+          "@BerserkerRageRevenge"
+        ]
+      },
+      {
+        "id": "BerserkerKillTrigger",
+        "trigger": "on_kill",
+        "descriptions": {
+          "english": "Gain [effect0.status0.power] [rage].",
+          "french": "Gagnez [effect0.status0.power] [rage].",
+          "german": "Erhalte [effect0.status0.power] [rage].",
+          "russian": "Получите [effect0.status0.power] [rage].",
+          "portuguese": "Ganhe [effect0.status0.power] [rage].",
+          "chinese": "获得[effect0.status0.power] [rage]。",
+          "spanish": "Gana [effect0.status0.power] [rage].",
+          "chinese_traditional": "獲得[effect0.status0.power] [rage]。",
+          "korean": "[effect0.status0.power] [rage] 획득.",
+          "japanese": "[effect0.status0.power] [rage]を得る。"
+        },
+        "effects": [
+          "@BerserkerRageKill"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Barbarian",
+        "names": {
+          "english": "Barbarian",
+          "french": "Barbare",
+          "german": "Barbar",
+          "russian": "Варвар",
+          "portuguese": "Bárbaro",
+          "chinese": "野蛮人",
+          "spanish": "Bárbaro",
+          "chinese_traditional": "野蠻人",
+          "korean": "야만전사",
+          "japanese": "バーバリアン"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "BerserkerCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@BerserkerCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.641,
+                "z": 0
+              },
+              "scale": {
+                "x": 0.83,
+                "y": 0.83,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "Berserker",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Berserker"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "BerserkerCharacterArt",
+        "path": "textures/BerserkerCharacterArt.png"
+      },
+      {
+        "id": "Berserker",
+        "path": "textures/BerserkerCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_berserker.json": "6631b8da64b6ad3cf44ac286089830ea26e9106f6e86be7cda88867809df4663",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

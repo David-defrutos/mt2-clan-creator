@@ -1,0 +1,221 @@
+{
+  "id": "freecompany-SpawnTheNewGuy",
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnTheNewGuy"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "The New Guy",
+    "french": "Le petit nouveau",
+    "german": "Der Neue",
+    "russian": "Новенький",
+    "portuguese": "O Novato",
+    "chinese": "新兵",
+    "spanish": "El novato",
+    "chinese_traditional": "新兵",
+    "korean": "신참",
+    "japanese": "新人"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": 1,
+  "attack": 1,
+  "size": 1,
+  "picture": "assets/d8566fa9769ae862a701e0a8e67c9a7b32e642a2eab9a33d777bd9c308654d4d.png",
+  "characterPicture": "assets/da649938ee302676baa6bd6c4b3d7479f7387a748ca95d8b5509e550938f71ff.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/LanceroCharacterArt.png": "assets/da649938ee302676baa6bd6c4b3d7479f7387a748ca95d8b5509e550938f71ff.png",
+    "textures/TheNewGuyCardArt.png": "assets/d8566fa9769ae862a701e0a8e67c9a7b32e642a2eab9a33d777bd9c308654d4d.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnTheNewGuy",
+        "names": {
+          "english": "The New Guy",
+          "french": "Le petit nouveau",
+          "german": "Der Neue",
+          "russian": "Новенький",
+          "portuguese": "O Novato",
+          "chinese": "新兵",
+          "spanish": "El novato",
+          "chinese_traditional": "新兵",
+          "korean": "신참",
+          "japanese": "新人"
+        },
+        "card_art": "@TheNewGuy",
+        "cost": 1,
+        "card_type": "monster",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnTheNewGuyEffect"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnTheNewGuyEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@TheNewGuy"
+      },
+      {
+        "id": "TheNewGuyPromotion",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_upgrade": "@TheNewGuyUpgrade",
+        "param_int_3": 2
+      }
+    ],
+    "characters": [
+      {
+        "id": "TheNewGuy",
+        "names": {
+          "english": "The New Guy",
+          "french": "Le petit nouveau",
+          "german": "Der Neue",
+          "russian": "Новенький",
+          "portuguese": "O Novato",
+          "chinese": "新兵",
+          "spanish": "El novato",
+          "chinese_traditional": "新兵",
+          "korean": "신참",
+          "japanese": "新人"
+        },
+        "character_art": "@TheNewGuyCharacterArt",
+        "size": 1,
+        "attack_damage": 1,
+        "health": 1,
+        "subtypes": [
+          "@Sub_Warrior",
+          "@Sub_Goblin"
+        ],
+        "triggers": [
+          {
+            "id": "@TheNewGuyTrigger"
+          }
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "TheNewGuyTrigger",
+        "trigger": "on_any_monster_death_on_floor",
+        "descriptions": {
+          "english": "When a friendly unit on this floor dies, this unit gains <b>+3</b> [attack] and <b>+3</b> [health] permanently.",
+          "french": "Lorsqu’une unité alliée de cet étage meurt, cette unité gagne définitivement <b>+3</b> [attack] et <b>+3</b> [health].",
+          "german": "Wenn eine verbündete Einheit auf diesem Stockwerk stirbt, erhält diese Einheit dauerhaft <b>+3</b> [attack] und <b>+3</b> [health].",
+          "russian": "Когда союзная боевая единица на этом этаже погибает, эта боевая единица навсегда получает <b>+3</b> [attack] и <b>+3</b> [health].",
+          "portuguese": "Quando uma unidade aliada neste andar morre, esta unidade ganha <b>+3</b> [attack] e <b>+3</b> [health] permanentemente.",
+          "chinese": "本层一个友方单位死亡时，此单位永久获得<b>+3</b> [attack]和<b>+3</b> [health]。",
+          "spanish": "Cuando muere una unidad aliada de este piso, esta unidad gana <b>+3</b> [attack] y <b>+3</b> [health] permanentemente.",
+          "chinese_traditional": "本層一個友方單位死亡時，此單位永久獲得<b>+3</b> [attack]和<b>+3</b> [health]。",
+          "korean": "이 층의 아군 유닛이 사망하면 이 유닛은 영구적으로 <b>+3</b> [attack] 및 <b>+3</b> [health] 획득.",
+          "japanese": "この階の味方ユニットが死亡すると、このユニットは永続的に<b>+3</b> [attack]と<b>+3</b> [health]を得る。"
+        },
+        "effects": [
+          "@TheNewGuyPromotion"
+        ]
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "TheNewGuyUpgrade",
+        "bonus_damage": 3,
+        "bonus_hp": 3
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Warrior",
+        "names": {
+          "english": "Warrior",
+          "french": "Guerrier",
+          "german": "Krieger",
+          "russian": "Воин",
+          "portuguese": "Guerreiro",
+          "chinese": "战士",
+          "spanish": "Guerrero",
+          "chinese_traditional": "戰士",
+          "korean": "전사",
+          "japanese": "戦士"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "TheNewGuyCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@TheNewGuyCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.52869,
+                "z": 0
+              },
+              "scale": {
+                "x": 0.6677,
+                "y": 0.6677,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "TheNewGuy",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@TheNewGuy"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "TheNewGuyCharacterArt",
+        "path": "textures/LanceroCharacterArt.png"
+      },
+      {
+        "id": "TheNewGuy",
+        "path": "textures/TheNewGuyCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_the_new_guy.json": "ce6a416556c56ac7c430d50839780a63d68c74b1be7342d2c2dd2daae22708a9",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}
