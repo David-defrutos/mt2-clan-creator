@@ -10,3 +10,22 @@ examples/
 
 # Official game sprites extracted locally are not redistributed.
 art/original/
+
+# Official resources stay local and are included only in the local package.
+catalog/official/
+
+# Local audited third-party binaries; assembled by prepare-modding.mjs.
+vendor/modding/
+
+# Python caches and local execution artefacts.
+__pycache__/
+*.py[cod]
+*.log
+
+# Private working notes and reports in the repository root.
+/*.md
+!/README.md
+
+# Workspace-only authoring and installation helpers.
+/scripts/write-task.py
+/scripts/verify-default-install.ts

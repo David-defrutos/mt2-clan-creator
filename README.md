@@ -1,47 +1,37 @@
-<!-- Documento generado el 2026-11-15-0828 -->
+<!-- Documento generado el 2026-11-16-2047 -->
 
 # MT2 Clan Creator
 
-Un creador de clanes de Monster Train 2 para personas sin conocimientos de programación.
+A guided Monster Train 2 clan creator for people with no programming experience. Uses the game, Trainworks Reloaded and Conductor components.
 
-## La experiencia que vamos a construir
+## Download and run on Windows
 
-Un único asistente acompaña al usuario: nombre del clan → campeón 1 y sus tres sendas → campeón 2 y sus tres sendas → cartas iniciales → unidades → hechizos → salas → artefactos → revisión y prueba.
+Download the Windows ZIP from [Releases](https://github.com/David-defrutos/mt2-clan-creator/releases), extract the entire folder to a writable location, and run **Abrir-creador.cmd**. It opens the creator in your browser. Node is included; no separate Node installation is needed.
 
-Cada paso explica qué hay que hacer, propone valores y permite guardar y continuar otro día. Solo se ofrecen mecánicas del juego disponibles mediante **Trainworks Reloaded y Conductor**. El usuario no necesita escribir JSON, C# ni comandos. Los ejemplos se seleccionan de las versiones actuales de Free Company, W&W Inc. y SuccClan, previa revisión de sus dependencias para excluir código propio de esos clanes.
+English is the initial language. Spanish is available from the language selector, and the program remembers your choice.
 
-## Estado real
+## Create and try a clan
 
-**Repositorio independiente creado; el nuevo asistente todavía no está implementado.** El código ejecutable inicial procede del editor anterior y conserva sus pantallas. No es una entrega terminada para principiantes. El siguiente desarrollo debe sustituir esa experiencia por el asistente definido en el [plan del creador](PLAN-CREADOR-2026-11-15-0828.md).
+Follow the wizard to define two champions, their three paths each, starting cards, units, spells, rooms, equipment, artifacts, rewards and artwork. You can return to earlier steps, copy examples, edit or remove their effects, and undo changes.
 
-La simplicidad se mide por lo que puede completar una persona principiante, no por cuántas herramientas técnicas conserva la base heredada.
+The Windows distribution includes 938 current official examples from 13 clans, including DLC, and 124 audited mod examples compatible with the supported components. Complex official behavior can be copied without copying the name, artwork or base statistics.
 
-## Conservación del trabajo anterior
+**Review and install** checks your clan and explains how to prepare the game. To compile, install **Monster Train 2** and the **.NET 10 SDK or newer**. The creator checks compilation requirements before enabling installation. Trainworks Reloaded 0.8.0 and Conductor 0.6.0 references are included for compilation.
 
-- Original: `D:/Juegos/MT2_mod/clan-editor`, [mt2-clan-editor](https://github.com/David-defrutos/mt2-clan-editor). No se ha modificado para crear esta copia.
-- Nuevo proyecto: `D:/Juegos/MT2_mod/clan-creator`, [mt2-clan-creator](https://github.com/David-defrutos/mt2-clan-creator).
-- Historial completo conservado desde `9f951e5`, sin compartir archivos Git mediante hardlinks.
-- Los últimos cambios locales de planificación se guardaron en el commit `982497e` del nuevo proyecto. El README anterior se puede consultar en ese commit.
-- `origin` apunta al nuevo repositorio. `upstream` identifica el original; no se actualiza ni se sobrescribe automáticamente.
-- `data/`, credenciales, mods instalados, dependencias y recursos locales no se copian al repositorio nuevo ni se publican. Siguen conservados en su ubicación original. El creador tendrá sus propios proyectos y respaldos.
+To play, install BepInExPack, Trainworks Reloaded and Conductor through [Thunderstore Mod Manager](https://www.overwolf.com/app/thunderstore-thunderstore_mod_manager). The [r2modman](https://r2modman.com/download-latest/) guide is still in development. With the game closed, provide your profile folder and install the clan, then launch that profile with mods enabled.
 
-Los documentos históricos heredados describen el editor anterior y se conservan como referencia. El alcance y la prioridad del nuevo producto los fija el plan del creador.
+Optional technical details show the generated JSON in read-only mode. External changes do not update the wizard draft. The creator does not generate a CREADO-CON.md file or request an author field.
 
-## Desarrollo
+Drafts are stored under **data/creator-projects**. Keep the whole **data** folder when updating or moving to another computer. Extract updates separately; do not overwrite or delete your existing data folder. Deleted drafts can be restored from the creator; uninstalling a clan preserves its draft and backs up the installed copy.
 
-Esta sección es para desarrollar la aplicación, no para la persona que creará su clan. Se preparará una distribución con arranque sencillo cuando exista el asistente.
+## Development
 
-Recomendado Node.js 24 y SDK .NET 10 para las pruebas de compilación de mods.
+See [the development guide](docs/DEVELOPMENT-2026-11-16-2047.md) for setup, resources, tests and packaging. Windows x64 is the tested distribution; macOS and Linux packages have not been validated.
 
-```powershell
-Set-Location 'D:\Juegos\MT2_mod\clan-creator'
-npm ci
-npm run build
-npm start
-```
+## Contact and credits
 
-Abrir `http://127.0.0.1:4320`. El editor original mantiene su puerto 4318. Para desarrollar la web, `npm run dev:web` usa 5174 y conecta al servidor del creador en 4320; `npm run dev:server` inicia ese servidor.
+Discord: **frutos**. [Monster Train 2 modding channel](https://discord.com/channels/336546996779483136/1377778943674810368).
 
-Comprobaciones: `npm test`, `npm run build` y `npm run check:i18n`. Las pruebas existentes sirven para verificar el motor heredado; no acreditan que el nuevo recorrido para principiantes esté completo.
+The creator relies on community tools, including [Trainworks Reloaded](https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded) and Conductor. Thanks to Brandon (**tricksterguy** on Discord) and their contributors. Resource provenance and notices are kept under **catalog/credits** and in the distribution's dependency license files.
 
-<!-- 2026-11-15-0828||codex-clan-editor||clan-creator/README.md||Definir nuevo producto para principiantes, separación del editor original y estado pendiente del asistente -->
+<!-- 2026-11-16-2047||codex-clan-editor||clan-creator/README.md||Sustituir historial e informes internos por guía pública de uso y enlace de desarrollo -->

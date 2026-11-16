@@ -1,0 +1,4499 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "asset": "sharedassets0.assets",
+    "sha256": "a12004cfae573fccbf14d2b51929e1e8a388f7cb8130e2c76c9a27a7c6a34bc1",
+    "method": "Native ClassData and ChampionData with generated type trees; audited local card snapshots"
+  },
+  "clans": [
+    {
+      "id": "awoken",
+      "classId": "ClassAwoken",
+      "name": {
+        "es": "Despertados",
+        "en": "Awoken"
+      },
+      "champions": [
+        {
+          "baseId": "official-AwokenChampionSentient",
+          "paths": [
+            "official-AwokenChampionSentient-path-1-level-1",
+            "official-AwokenChampionSentient-path-2-level-1",
+            "official-AwokenChampionSentient-path-3-level-1"
+          ],
+          "starterId": "official-StarterHeal"
+        },
+        {
+          "baseId": "official-AwokenChampionRoot",
+          "paths": [
+            "official-AwokenChampionRoot-path-1-level-1",
+            "official-AwokenChampionRoot-path-2-level-1",
+            "official-AwokenChampionRoot-path-3-level-1"
+          ],
+          "starterId": "official-StarterBuff"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "official-AdaptiveMutation",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 10
+        },
+        {
+          "templateId": "official-AnimusOfSpeed",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-AnimusOfWill",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-AwakeningThicket",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-AwokenHollow",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-AwokensRailSpike",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-BrambleLash",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-relic-StingBuffPower",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Channelsong",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ChanceToVineGrasp",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-CycleOfLife",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-EdgePrior",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 9
+        },
+        {
+          "templateId": "official-relic-UpgradeMaxHpFrontUnit",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Engraft",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Ensnare",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FocusedGrowth",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Glimmer",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-MoreSpikes",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-HuskHermit",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-CardDrawPotion",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-OldGrowth",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-StrongerSpikes",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-AddThornsPotion",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-HealToDamage",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-SpikePotion",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PyreGro",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-RazorsharpEdge",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-RestorationDetonation",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-RestoringRetreat",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-RootBeforePyre",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-CardDrawOnHeal",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-ShardChanneler",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-Sharpen",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ShatteredShell",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-SpreadingSpores",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-SteelEnhancer",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Steelsinger",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Sting",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-AwokenRegen",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-StingBuffPiercing",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-ThornedHollow",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-AddStingToHand",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-UnleashTheWildwood",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-VineGrasp",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Vinemother",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-WildwoodCustodian",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-RegenPotion",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-WildwoodTome",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-WiltingSapwood",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        }
+      ],
+      "requiredDlc": null
+    },
+    {
+      "id": "banished",
+      "classId": "ClassBanished",
+      "name": {
+        "es": "Desterrados",
+        "en": "Banished"
+      },
+      "champions": [
+        {
+          "baseId": "official-BanishedChamp1",
+          "paths": [
+            "official-BanishedChamp1-path-1-level-1",
+            "official-BanishedChamp1-path-2-level-1",
+            "official-BanishedChamp1-path-3-level-1"
+          ],
+          "starterId": "official-JustCause"
+        },
+        {
+          "baseId": "official-BanishedChamp2",
+          "paths": [
+            "official-BanishedChamp2-path-1-level-1",
+            "official-BanishedChamp2-path-2-level-1",
+            "official-BanishedChamp2-path-3-level-1"
+          ],
+          "starterId": "official-InspireStarterCard"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "official-relic-AngelsSpawnWithShiftyValor",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Avenger",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-BattleDancer",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Begone",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Benediction",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-UpgradeEquipmentOnDeath",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-BloodsoakedArena",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-RageOnHymnistDeath",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-relic-FriendlyUnitsGainDeathwishValor",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ExtraValorOnValor",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ManyBuffonAngelEquip",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Challenge",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Cleave",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-CursedTwinblade",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-DeadlyPlunge",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-DeathsDancer",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-DeathmetalHymnist",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 9
+        },
+        {
+          "templateId": "official-HeroInTraining",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Demonize",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-DivineDancer",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Divinity",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Eagleheart",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-EverlastingLight",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Firebrand",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Heavensward",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-HeroicDive",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Hostguard",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-ImprisonedZephyr",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-relic-ValorTransferOnAngelDeath",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-LeadSongbird",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-LiquidCourage",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-FriendlyUnitsGainDeathwishPermanentHealth",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-PenitentsBloodsuit",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PenitentsDeathsuit",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-PunkrockReveler",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DamageShieldOnEquip",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-RisingRage",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-Sanctuary",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SelflessSacrifice",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ShieldOfWyngh",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-HymnistsApplyValorOnSummon",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-SpikeOfTheBanished",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SteadfastCrusader",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Swordmaiden",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-RebalanceValor",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-TomeOfTheLostPath",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-UpbeatWarbler",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Windblade",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-WynghsRadiance",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 10
+        }
+      ],
+      "requiredDlc": null
+    },
+    {
+      "id": "hellhorned",
+      "classId": "ClassHellhorned",
+      "name": {
+        "es": "Astados Infernales",
+        "en": "Hellhorned"
+      },
+      "champions": [
+        {
+          "baseId": "official-HornbreakerChampion",
+          "paths": [
+            "official-HornbreakerChampion-path-1-level-1",
+            "official-HornbreakerChampion-path-2-level-1",
+            "official-HornbreakerChampion-path-3-level-1"
+          ],
+          "starterId": "official-StarterTorch"
+        },
+        {
+          "baseId": "official-ImpQueenChampion",
+          "paths": [
+            "official-ImpQueenChampion-path-1-level-1",
+            "official-ImpQueenChampion-path-2-level-1",
+            "official-ImpQueenChampion-path-3-level-1"
+          ],
+          "starterId": "official-StarterImp"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "official-ImmortalityPotion",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-AlphaFiend",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-ApexImp",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ExtraSpawnTrigger",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-BatteringRam",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-BrandedWarrior",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-BrandingRite",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-RagePreservedOnFriendlies",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-AddAttackOnKill",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ConsumerOfCrowns",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-DarkDeal",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-Basher",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-DerangedBrute",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Enflame",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-AggressiveImp",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Fortify",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ImpDamageBuff",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-HiddenPassage",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-HornBreak",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-HornedWarrior",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-AddImpToHand",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-ImpInABox",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-ImpOlate",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ImpProvisation",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ImpPressive",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-EnlightenedInfery",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Inferno",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-LastStand",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-MarchOfShields",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-UnstableInfery",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-OnehornsTome",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 10
+        },
+        {
+          "templateId": "official-EmberedInfery",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-FirstImpBonus",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-RageRoom",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-RageSerum",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Railbeater",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-relic-IncreaseArmorStacks",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Reinforce",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-IncreaseRageDamage",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-RitualOfBattle",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-SpawnWithArmor",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-SpawnWithRage",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SpikeOfTheHellhorned",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Steelworker",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ConserveEmber",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-TiresomeClimb",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-TranscendImp",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 9
+        },
+        {
+          "templateId": "official-Vent",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-WelderHelper",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        }
+      ],
+      "requiredDlc": null
+    },
+    {
+      "id": "lazarusleague",
+      "classId": "ClassLazarusLeague",
+      "name": {
+        "es": "Liga de Lázaro",
+        "en": "Lazarus League"
+      },
+      "champions": [
+        {
+          "baseId": "official-LazarusLeagueChamp1",
+          "paths": [
+            "official-LazarusLeagueChamp1-path-1-level-1",
+            "official-LazarusLeagueChamp1-path-2-level-1",
+            "official-LazarusLeagueChamp1-path-3-level-1"
+          ],
+          "starterId": "official-SecretIngredient"
+        },
+        {
+          "baseId": "official-LazarusLeagueChamp2",
+          "paths": [
+            "official-LazarusLeagueChamp2-path-1-level-1",
+            "official-LazarusLeagueChamp2-path-2-level-1",
+            "official-LazarusLeagueChamp2-path-3-level-1"
+          ],
+          "starterId": "official-StarterErraticAssistant"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "official-AcidShower",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-AdvancedGrowth",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-BlastInfusion",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-BrainTransfer",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-relic-UncontrolledGroup",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-CombustibleSuit",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ContingencyPlans",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-DoubleEdgedArms",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-DoubleEdgedBearer",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ElectricityChamber",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-EnfeeblingInfusion",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ExplosiveReaction",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FaultyBody",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 9
+        },
+        {
+          "templateId": "official-ForevermoreSerum",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-Frenzystesia",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-GoliathInfusion",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-HairOfTheHybrid",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Horrify",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-HulkingMass",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-HydraArmedHorror",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-TinkermasterTools",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-InsatiableHunger",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-ItsAlive",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-relic-LifeInsurer",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MadmanInfusion",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MakeshiftGolem",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Meathook",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MindsOfTheirOwn",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Mixalot",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Mixology",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-NefariousOverflow",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-NineLivedNightmare",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-OrganHarvester",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-OverworkedAssistant",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-PartFactory",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-Pincushion",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PlagueDoctor",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PotionKit",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ProgressPacemaker",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Pseudoscience",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Pufferflesh",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ReanimationLab",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ReformingOoze",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-ReplicatorRay",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-RiskyOperation",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-SanguineAssistant",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ScissorHands",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ScrapForParts",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-LazarusLeagueSpike",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SpikySkin",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-SurgeonsStitcher",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SurgicalStrike",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-TestSubjectAlpha",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-TomeOfHorrors",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 10
+        },
+        {
+          "templateId": "official-TwistedAssistant",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-TwistedAssistantsBack",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-VampiresTooth",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-WeaponizedProsthetic",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        }
+      ],
+      "requiredDlc": null
+    },
+    {
+      "id": "lunacoven",
+      "classId": "ClassLunaCoven",
+      "name": {
+        "es": "Aquelarre Lunar",
+        "en": "Luna Coven"
+      },
+      "champions": [
+        {
+          "baseId": "official-LunaCovenChamp1",
+          "paths": [
+            "official-LunaCovenChamp1-path-1-level-1",
+            "official-LunaCovenChamp1-path-2-level-1",
+            "official-LunaCovenChamp1-path-3-level-1"
+          ],
+          "starterId": "official-Witchweave"
+        },
+        {
+          "baseId": "official-LunaCovenChamp2",
+          "paths": [
+            "official-LunaCovenChamp2-path-1-level-1",
+            "official-LunaCovenChamp2-path-2-level-1",
+            "official-LunaCovenChamp2-path-3-level-1"
+          ],
+          "starterId": "official-MoonRitual"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "official-Astrologer",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-MoonPhaseModifyEmber",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-AuroraWeaver",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-BloodyMoon",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DrawSpellOnDeployment",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-CelestialStorm",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-relic-MooncycleRestoreFriendlyHealth",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-CosmicBolt",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-SpikeOfTheLunaCoven",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-CoverOfNight",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Duality",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-DuskMantle",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-EclipseChamber",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-EtherealSeelie",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-FaesBlessing",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-MooncycleFaeAddMagicPower",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-GlitteringDraught",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Gravity",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-Heavenfall",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 10
+        },
+        {
+          "templateId": "official-Hexcalation",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-IncreaseSpellHealing",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-LunaCyclestaff",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Lunacy",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-SeleneandSilentBuff",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-LunarPriestess",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FaeMeddler",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FaeMoonPixie",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Moonbeam",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Mooncaller",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Moonguard",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MoonlitGlaive",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Moonrise",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-MoonPhaseRoomsGainMagicPower",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Nightingale",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Planetarium",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DoubleMagebladeDamage",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-RitualTome",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-Scrivener",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-relic-ExtraSpellWeakness",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-SeleneAcolyte",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-Shadeguard",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SilentSentinel",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-MoonPhaseAddArmorToSilent",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SilverInk",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 9
+        },
+        {
+          "templateId": "official-SilverStrike",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-StardustInvocation",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-AddConduitOnSpawn",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Starstruck",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-TidalTurning",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        }
+      ],
+      "requiredDlc": null
+    },
+    {
+      "id": "punished",
+      "classId": "ClassPunished",
+      "name": {
+        "es": "Los Castigados",
+        "en": "The Punished"
+      },
+      "champions": [
+        {
+          "baseId": "official-PunishedChamp1",
+          "paths": [
+            "official-PunishedChamp1-path-1-level-1",
+            "official-PunishedChamp1-path-2-level-1",
+            "official-PunishedChamp1-path-3-level-1"
+          ],
+          "starterId": "official-CruelLesson"
+        },
+        {
+          "baseId": "official-PunishedChamp2",
+          "paths": [
+            "official-PunishedChamp2-path-1-level-1",
+            "official-PunishedChamp2-path-2-level-1",
+            "official-PunishedChamp2-path-3-level-1"
+          ],
+          "starterId": "official-StarterSharedSentence"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "official-Agonize",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-AnointingOil",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ArbitraryVerdict",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DeathwishAttack",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-BlindingDarkshard",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-BlindingDarkshard_1",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-BlindingDarkshard_2",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-BrandedApostate",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DamageFriendlyOnSpawn",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ChainBearer",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-CloisterofChains",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-CollectivePunishment",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-CollectorOfSorrows",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-DarkInitiate",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ZealDamageIncrease",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DamagedMaxHealthOnCelebrate",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-DivinePunishment",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-DragThemDown",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 10
+        },
+        {
+          "templateId": "official-relic-ChainedDamageIncrease",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-EchoOfPain",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 9
+        },
+        {
+          "templateId": "official-Exaltation",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Flagellate",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ForbiddenCovenant",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ForsakenBerserker",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-relic-SpellsNoKillFriendlies",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Imprison",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-InitiateSermon",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Lasher",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DrawCardOnTurnDamage",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-LoomingDarkshard",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-LoomingDarkshard_1",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-LoomingDarkshard_2",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-MonolithDevotion",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Mournguard",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-PainTithe",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PenitentSentinel",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PenitentSanctuary",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-FriendlyUnitPunish",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PunishedSpike",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-GrimDisciple",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ScarredJusticar",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ScourgedZealot",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SpitefulShackles",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-ShatteringDarkshard",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ShatteringDarkshard_1",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ShatteringDarkshard_2",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Sineater",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Cantor",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SpurTheFaithful",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-relic-RevengeTriggerTwice",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-TheCondemned",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-TomeOfAtonement",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-TrialByFire",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-EmberForDamagedPerFloor",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DrawCardOnEarlyDiscard",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-UnholyCommunion",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Venerate",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-WickedFervor",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ZealotsHalo",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        }
+      ],
+      "requiredDlc": "punished"
+    },
+    {
+      "id": "pyreborne",
+      "classId": "ClassPyreborne",
+      "name": {
+        "es": "Hijos de la Pira",
+        "en": "Pyreborne"
+      },
+      "champions": [
+        {
+          "baseId": "official-PyreborneChamp1",
+          "paths": [
+            "official-PyreborneChamp1-path-1-level-1",
+            "official-PyreborneChamp1-path-2-level-1",
+            "official-PyreborneChamp1-path-3-level-1"
+          ],
+          "starterId": "official-StarterFireStarter"
+        },
+        {
+          "baseId": "official-PyreborneChamp2",
+          "paths": [
+            "official-PyreborneChamp2-path-1-level-1",
+            "official-PyreborneChamp2-path-2-level-1",
+            "official-PyreborneChamp2-path-3-level-1"
+          ],
+          "starterId": "official-BloatedWhelp"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "official-Alchemy",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-IncantTriggeredByUnitAbilities",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-CursedDragonstaff",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-Deathroar",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-DevilishDetails",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 10
+        },
+        {
+          "templateId": "official-DragonsBreath",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-OneEmberFirstTurn_DH",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ModifyDragonsHoardCap",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FanningTheFlame",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-WhelpStrikeAddPyregel_DH",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DragonsGainStrikeAddPyregel",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-PyregelOnAscend_DH",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Flicker",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ExtinguishSpreadPyregel",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-AlchemicalAssistant",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-relic-SummonWithAvarice",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-GoldenTouch",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Goldtooth",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Greed",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-GreedDragon",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ApplyExtraPyregel_DH",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Hellfurnace",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-PyregelOnEnterTopFloor",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ModifyDragonsHoardCap_DH",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-HotHead",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-InequivalentExchange",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-LavaArmor",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-LavaFlow",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-PyreRevengeAddPyregel",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-MagmaCultist",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Sycophant",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MakeItRain",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-GiveUnitStatsForUpgrades_DH",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Mindcage",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Miser",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PayOff",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-relic-ModifyDragonsHoardBattleEnd",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Pyreball",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Pyreblooded",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-PyreborneBrainspike",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 9
+        },
+        {
+          "templateId": "official-relic-EquipmentBoon_DH",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Pyrecask",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Pyreclasm",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SacrificialChamber",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-WhelpsGainExtinguishHealPyre",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-IncreaseArmorStacks_DH",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-WhelpDragonAttack_DH",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-GiveSpellStatsForUpgrades_DH",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SmeltedTreasure",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SnottyWhelp",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SoldierOfFortune",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Soulsmelter",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-IncreasePyregelStacks",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-AvariceOnSummon",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-RoyalWhelp",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Superheated",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-CooldownOnDamage_DH",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ModifyDragonsHoardBattleStart",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-TomeOfContracts",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-GoldyWhelp",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Zealot",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        }
+      ],
+      "requiredDlc": null
+    },
+    {
+      "id": "railforged",
+      "classId": "ClassRailforged",
+      "name": {
+        "es": "Forjados del Raíl y neutrales",
+        "en": "Railforged and neutral"
+      },
+      "champions": [
+        {
+          "baseId": "official-RailforgedChamp1",
+          "paths": [
+            "official-RailforgedChamp1-path-1-level-1",
+            "official-RailforgedChamp1-path-2-level-1",
+            "official-RailforgedChamp1-path-3-level-1"
+          ],
+          "starterId": "official-StarterForge"
+        },
+        {
+          "baseId": "official-RailforgedChamp2",
+          "paths": [
+            "official-RailforgedChamp2-path-1-level-1",
+            "official-RailforgedChamp2-path-2-level-1",
+            "official-RailforgedChamp2-path-3-level-1"
+          ],
+          "starterId": "official-StarterScrap"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "official-AnvilBreaker",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ArmamentDrive",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-AssemblyRoom",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 10
+        },
+        {
+          "templateId": "official-Boilerplate",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Bonk",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-BrokenRail",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-CarCollapse",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-CarriageJack",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-ConductorSteward",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-CraftedEquipment",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-CrucibleSteward",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Disassemble",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-EmberFoundryCrucible",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ForgeSteward",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FoundryLine",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FullThrottle",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-FusedPyreshard",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-FusedWeaponry",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-GearedGauntlet",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Hammerfall",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-HephsBlueprints",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-HerzalsAnvil",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-HerzalsHammer",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-Juggernaut",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-KnucklerSteward",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 9
+        },
+        {
+          "templateId": "official-MachinistsTome",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MagneticRelay",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MassProduction",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Masterwork",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Metallurgy",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-relic-MoltenManifold",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-PressurizedBoiler",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-relic-PyrePiping",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PyrePlating",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-PyreSteward",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-Pyreshot",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-QuenchingOil",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-RailforgedSpike",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Railgun",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Renovate",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-SalvageMachine",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ScrapMetal",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SentryTurret",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-SpikedriverFactory",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SpikedriverSpider",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SteelPulleyClaw",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SteelSteward",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-SteelStockpile",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-TrapChute",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-TunedGear",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Weldling",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        }
+      ],
+      "requiredDlc": "railforged"
+    },
+    {
+      "id": "remnant",
+      "classId": "ClassRemnant",
+      "name": {
+        "es": "Restos de la Fusión",
+        "en": "Melting Remnant"
+      },
+      "champions": [
+        {
+          "baseId": "official-RemnantChampion",
+          "paths": [
+            "official-RemnantChampion-path-1-level-1",
+            "official-RemnantChampion-path-2-level-1",
+            "official-RemnantChampion-path-3-level-1"
+          ],
+          "starterId": "official-StarterDreg"
+        },
+        {
+          "baseId": "official-RemnantFirstWaxerChampion",
+          "paths": [
+            "official-RemnantFirstWaxerChampion-path-1-level-1",
+            "official-RemnantFirstWaxerChampion-path-2-level-1",
+            "official-RemnantFirstWaxerChampion-path-3-level-1"
+          ],
+          "starterId": "official-StarterReform"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "official-DamageExtinguish",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Monstrosity",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-BountyStalker",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-IncreaseBurnoutStacks",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-KillRandomUnit",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-DeathEater",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Draff",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Dripfall",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-EmberOnTombDeath",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-EngulfedInSmoke",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-EntombedExplosive",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DamageOnBurnoutDeath",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-RageOnBurnoutStackLoss",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ReduceRandomCardCostOnUnitPlay",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-FormlessChild",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-WickExtension",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-HallowedHalls",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-IntentOnDeath",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-LadyOfTheHouse",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-LadyOfTheReformed",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SplitterUnit",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-relic-ExtraToughTombs",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-MementoMori",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MemorialOfTheMelted",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-GoldOnDeath",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DamageOnGoingDownFloor",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-Molded",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MoltenEncasement",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-RIP",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-ParrafinEnforcer",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-ParrafinThug",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PurifyingCleanse",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-DregsTomb",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-RemnantPact",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ResinBlades",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-EnhanceAttackOnConsume",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ResinRemoval",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-RapidRaise",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SacrificialRessurection",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 9
+        },
+        {
+          "templateId": "official-SubsumingBlade",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-Votivary",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-StealthWaxers",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-WaxenSpike",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ExtraDeathTrigger",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-WickedBlaze",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Wicklash",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-WicklessBaron",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-WicklessRecruitment",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 10
+        },
+        {
+          "templateId": "official-WicklessTycoon",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        }
+      ],
+      "requiredDlc": null
+    },
+    {
+      "id": "stygian",
+      "classId": "ClassStygian",
+      "name": {
+        "es": "Guardia Estigia",
+        "en": "Stygian Guard"
+      },
+      "champions": [
+        {
+          "baseId": "official-StygianChampionTethys",
+          "paths": [
+            "official-StygianChampionTethys-path-1-level-1",
+            "official-StygianChampionTethys-path-2-level-1",
+            "official-StygianChampionTethys-path-3-level-1"
+          ],
+          "starterId": "official-StarterIceSpear"
+        },
+        {
+          "baseId": "official-StygianChampionMartyr",
+          "paths": [
+            "official-StygianChampionMartyr-path-1-level-1",
+            "official-StygianChampionMartyr-path-2-level-1",
+            "official-StygianChampionMartyr-path-3-level-1"
+          ],
+          "starterId": "official-StarterFrostbiteDiscard"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "official-relic-IncreaseMagicPowerOnSpellsPlayed",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-AncientSynergy",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 10
+        },
+        {
+          "templateId": "official-ColdstingSiren",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-CryptBuilder",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-JarOfFrost",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-IncreaseFrostbiteStacks",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-HoardAcolyte",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-DeepOffering",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Drain",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-EelGorgon",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-EnergySiphon",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FlashFreeze",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ExtraSpellCastTrigger",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FeedingFrenzy",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Frostpiercer",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-GiftsForAGuard",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 9
+        },
+        {
+          "templateId": "official-BlightedTotem",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-RuneboundGuardian",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-HealingTotem",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-GuardianAmulet",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MagicPowerHand",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-TwinShards",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FrostChanneling",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-IceAndPyre",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-IceTornado",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-Icestorm",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-FreezeRandomEndOfTurn",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ColdstrikeSiren",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-EmberOnEarlyDiscard",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FrozenTotem",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-MagicPowerAcolyte",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-EnlightenedSiren",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ProsperityTotem",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-OfferingToken",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Preserve",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-relic-FrostbiteOnEnemies",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-relic-ChanceToSilence",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-CombativeSiren",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SirenSong",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-SpikeOfTheStygian",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ChanceForSpellWeakness",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-RuneboundProtector",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-relic-FreezeReduceCost",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-TitansGratitude",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Titanstooth",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DamageOnCardPlayed",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-relic-SpellWeaknessBelowPyre",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-UnnamedTome",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MagicJuice",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        }
+      ],
+      "requiredDlc": null
+    },
+    {
+      "id": "umbra",
+      "classId": "ClassUmbra",
+      "name": {
+        "es": "Umbra",
+        "en": "Umbra"
+      },
+      "champions": [
+        {
+          "baseId": "official-ChampionPenumbra",
+          "paths": [
+            "official-ChampionPenumbra-path-1-level-1",
+            "official-ChampionPenumbra-path-2-level-1",
+            "official-ChampionPenumbra-path-3-level-1"
+          ],
+          "starterId": "official-StarterRandomFood"
+        },
+        {
+          "baseId": "official-ChampionPrimordium",
+          "paths": [
+            "official-ChampionPrimordium-path-1-level-1",
+            "official-ChampionPrimordium-path-2-level-1",
+            "official-ChampionPrimordium-path-3-level-1"
+          ],
+          "starterId": "official-StarterDamageForMorsel"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "official-relic-AddSnackToHand",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-AlloyedConstruct",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-AntumbraAssault",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ShadowMorsel",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-AnnihilateRoomDamage2",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-AnnihilateRoomDamage3",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-AnnihilateRoomDamage1",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-Cannibalize",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-CaveIn",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-relic-FirstUnitGainDamageShield",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-relic-SpawnRandomMorsels",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-CrucibleCollector",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-IncreaseRoomCapacity",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-CrucibleWarden",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-EmberCache",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-EmberForge",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-EngineUpgrade",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-ExcavationEruption",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Feast",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ForeverConsumed",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ExtraFeedTrigger",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FurnaceTap",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-GemTrove",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-GluttonsMaw",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Grovel",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ImmortalTrade",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-GainXEnergy",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-MoltenMorsel",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MakingOfAMorsel",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-relic-DrawOnSnackPlayed",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-MineCollapse",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-MoreCapacity",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-VoidExcavator",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MorselJeweler",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MorselMiner",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MorselMade",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Morselmaker",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-CopyMorselsUnit",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FeederPermanentAttackBoost",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PackedMorsels",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PerilsOfProduction",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PrismRetrieval",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-PrismalDust",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-UnitsGainLifesteal",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Retch",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-RubbleRaiser",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-AddSnackOnKill",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-relic-BigDamageFromManyMorsels",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FeederDamageEnemiesUnit",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-Shadowsiege",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 10
+        },
+        {
+          "templateId": "official-CopyMorselTwice",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 9
+        },
+        {
+          "templateId": "official-ShroudSpike",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SpacePrism",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DamageOnEaten",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-UmbraStone",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-VoidBinding",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-MorselsGetDamageShield",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        }
+      ],
+      "requiredDlc": null
+    },
+    {
+      "id": "underlegion",
+      "classId": "ClassUnderlegion",
+      "name": {
+        "es": "Legión Subterránea",
+        "en": "Underlegion"
+      },
+      "champions": [
+        {
+          "baseId": "official-UnderlegionChamp1",
+          "paths": [
+            "official-UnderlegionChamp1-path-1-level-1",
+            "official-UnderlegionChamp1-path-2-level-1",
+            "official-UnderlegionChamp1-path-3-level-1"
+          ],
+          "starterId": "official-EagerConscript"
+        },
+        {
+          "baseId": "official-UnderlegionChamp2",
+          "paths": [
+            "official-UnderlegionChamp2-path-1-level-1",
+            "official-UnderlegionChamp2-path-2-level-1",
+            "official-UnderlegionChamp2-path-3-level-1"
+          ],
+          "starterId": "official-Sporetouch"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "official-AmorousEnoki",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ReduceFirstSpellCostPerDeckSize",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-Balmabello",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-CheeryDeathcap",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ClusterColonel",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Contagious",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-relic-ShroomsGainRegen",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-DeadlyVariant",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-DeathcappedProphet",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-DigDeep",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 9
+        },
+        {
+          "templateId": "official-Enchantrelle",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DrawCardPerDeckSize",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-PropagateOnStatusEffectApplied",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-FertileGround",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-FunguyInASuit",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-GlowUp",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Gooeyflask",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-GreenRecruit",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-GrowRoom",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Infectory",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Inhale",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Loamcoat",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MitosisCap",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 10
+        },
+        {
+          "templateId": "official-MorelMistress",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-Mulch",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-MushroomCloud",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-MushyRoom",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Pandemic",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-Pox",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PricklyPuffball",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Proliferate",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Rot",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ShroomsGainSapDecay",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-StartOfTurnPropagate",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SpawningPods",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SpikeOfTheLegion",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Sporelauncher",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-AddAttackToFunguy",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SquadLeader",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-TheGreatDecay",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-TomeOfEvergrowth",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Truffles",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-CopyFirstConsumePlayed",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-relic-StartOfTurnAddFunguysPerDeckSize",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-UnearthTreasure",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-relic-DrawCardWhenConsumePlayed",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-EnthusiasticFan",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-OnDecayDeathApplyStatusEffects",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-WrackingPain",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        }
+      ],
+      "requiredDlc": null
+    },
+    {
+      "id": "wurmkin",
+      "classId": "ClassWurm",
+      "name": {
+        "es": "Wurmkin",
+        "en": "Wurmkin"
+      },
+      "champions": [
+        {
+          "baseId": "official-WurmChamp1",
+          "paths": [
+            "official-WurmChamp1-path-1-level-1",
+            "official-WurmChamp1-path-2-level-1",
+            "official-WurmChamp1-path-3-level-1"
+          ],
+          "starterId": "official-StarterFracture"
+        },
+        {
+          "baseId": "official-WurmChamp2",
+          "paths": [
+            "official-WurmChamp2-path-1-level-1",
+            "official-WurmChamp2-path-2-level-1",
+            "official-WurmChamp2-path-3-level-1"
+          ],
+          "starterId": "official-StarterEchoBreak"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "official-AcceleratedIncubation",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-AmbientCharge",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-AncientResonance",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-CorruptionBattleStart",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-BogChrysalis",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-BogFly",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-2ChargesOnCardConsumed",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-BogWurmling",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-BogdeepCocoon",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 4
+        },
+        {
+          "templateId": "official-BoundingEchoes",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-BrokenMemories",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-ExtractForEmberAndEchos",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-TotalRecallRoom",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 5
+        },
+        {
+          "templateId": "official-relic-IncreaseDecaySlimeStacks",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DrawOnCorruption",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-EchoBloom",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-EchoInfusion",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-CopyConsumedCard",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-EchoSnare",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-EchoTransfer",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-EchoesOfThePast",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-UnremovableCorruptionTop",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-EternalKinstone",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 10
+        },
+        {
+          "templateId": "official-FirstOfKin",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ForcedContamination",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-ForgottenTrade",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 2
+        },
+        {
+          "templateId": "official-Glareminder",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Glugsider",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-EggHatchRemoval",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-HostingKin",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-KeeperOfEchoes",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-KinhostCarapace",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-KinhostPupa",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-KinhostVessel",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-IncreaseMaxCorruption",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 3
+        },
+        {
+          "templateId": "official-relic-MagicPowerWhenCardConsumed",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-PerfectInsanity",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 8
+        },
+        {
+          "templateId": "official-PowerOfKnowledge",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 6
+        },
+        {
+          "templateId": "official-Proclamation",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ReturnedSoul",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-RevengeOfTheDamned",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-DamageOnCorruptPlay",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-ShardsoulCarver",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-Shelter",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SoulCripple",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SoulSiphon",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SoulcrushingGuilt",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-SymphonyOfTheSoul",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 9
+        },
+        {
+          "templateId": "official-UnearthedRemains",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 7
+        },
+        {
+          "templateId": "official-WurmkinEtchings",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-WurmkinSpike",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "official-relic-StarterWurmRelic",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        }
+      ],
+      "requiredDlc": null
+    }
+  ]
+}

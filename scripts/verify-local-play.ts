@@ -1,0 +1,22 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {randomUUID,createHash} from 'node:crypto';
+import {dataRoot,inside} from '../src/server/paths.js';
+import {blankDraft} from '../src/server/creator/model.js';
+import {cloneExampleCard,readExample,exampleList,exampleParameters} from '../src/server/creator/catalog.js';
+import {inheritedAbilities} from '../src/web/creator/inherited-abilities.js';
+import {detectRuntime} from '../src/server/creator/dependencies.js';
+import {generateClan} from '../src/server/creator/export.js';
+import {buildOffline} from '../src/server/offline-build.js';
+import {planInstallation,installTools} from '../src/server/creator/install-tools.js';
+import {planClanInstall,installClan} from '../src/server/creator/install-clan.js';
+import {bundledReferences} from '../src/server/creator/bundled.js';
+const d=blankDraft(randomUUID());d.name='Prueba integral local';d.author='codex-clan-editor';
+const brawler=(await exampleList()).items.find(e=>e.championPath?.baseId==='official-HornbreakerChampion'&&e.championPath.path===1)!;
+const e=await readExample(brawler.id);d.champions[0].card=cloneExampleCard(e,'champion-0');for(const a of inheritedAbilities(d.champions[0].card,{example:e,parameters:exampleParameters(e)}))if(a.key&&['armor','multistrike'].includes(a.status))d.champions[0].card.parameters[a.key]=0;
+d.champions[1].card=cloneExampleCard(await readExample('official-TrainStewardShield'),'champion-1');d.champions.forEach(c=>c.paths.forEach((p,i)=>p.name='Senda '+(i+1)));d.starters=[cloneExampleCard(await readExample('official-StarterTorch'),'starter-0'),cloneExampleCard(await readExample('official-StarterHeal'),'starter-1')];for(const id of ['official-TrainStewardShield','official-TrainStewardSpear','official-StarterTorch']){const c=cloneExampleCard(await readExample(id),randomUUID());c.banner=c.kind==='unit';d.cards.push(c);}d.cards[0].effects=[{recipe:'attack',amount:3,when:'on_any_unit_death_on_floor',target:'friendly',duration:'run'},{recipe:'rage',amount:2,when:'on_spawn',target:'friendly',duration:'run'},{recipe:'max_health',amount:4,when:'on_spawn',target:'friendly',duration:'combat'}];
+const runtime=await detectRuntime();if(!runtime.ready)throw Error('Faltan componentes '+JSON.stringify(runtime.missing));const generated=await generateClan(d),build=await buildOffline(generated.root,generated.project);if(!build.ok||!build.dll)throw Error(build.log);
+const fixture=await fs.mkdtemp(path.join(dataRoot,'local-play-acceptance-')),profile=path.join(fixture,'Profile');await fs.mkdir(path.join(profile,'BepInEx/core'),{recursive:true});await fs.mkdir(path.join(profile,'BepInEx/plugins'));const refs=await bundledReferences();await fs.copyFile(refs.references.BepInEx,path.join(profile,'BepInEx/core/BepInEx.dll'));await installTools(await planInstallation(profile),{isRunning:async()=>false});
+const plan=await planClanInstall({folder:profile,projectId:d.id,revision:d.revision,source:generated.root,dll:build.dll}),installed=await installClan(plan,{isRunning:async()=>false,isCurrent:async()=>true});const hash=(b:Buffer)=>createHash('sha256').update(b).digest('hex');if(hash(await fs.readFile(path.join(installed.target,path.basename(build.dll))))!==build.sha256)throw Error('DLL instalada distinta');
+const receipt={timestamp:new Date().toISOString(),testProfile:true,gameplayTested:false,zipGenerated:false,source:generated.root,dll:build.dll,sha256:build.sha256,sdk:runtime.sdk,versions:runtime.versions,installed,validationErrors:generated.validation.filter((v:any)=>v.severity==='error').length};await fs.writeFile(path.join(fixture,'result.json'),JSON.stringify(receipt,null,2));console.log(JSON.stringify({receipt:path.join(fixture,'result.json'),...receipt},null,2));
+// 2026-11-15-1833||codex-clan-editor||clan-creator/scripts/verify-local-play.ts||Compilar un clan real con sendas editadas y efectos permanentes e instalarlo en perfil aislado, sin ZIP

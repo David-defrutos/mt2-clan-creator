@@ -1,0 +1,81 @@
+{
+  "version": "0.6.0",
+  "abilities": [
+    "Conductor_brambles",
+    "Conductor_construct",
+    "Conductor_divine_blessing",
+    "Conductor_growth",
+    "Conductor_heroic",
+    "Conductor_hex",
+    "Conductor_hyper",
+    "Conductor_intangible",
+    "Conductor_recoil",
+    "Conductor_pierce",
+    "Conductor_smirk",
+    "Conductor_sparkles"
+  ],
+  "sources": [
+    {
+      "file": "packages/Conductor-Conductor/json/status_effects/brambles.json",
+      "sha256": "7a27a35d30b0c38a9310c56e9613479e4ca6b3ad71e33b0cc07eb5f317dca8ff"
+    },
+    {
+      "file": "packages/Conductor-Conductor/json/status_effects/construct.json",
+      "sha256": "b838f6db3d2608db33e6020dfe7a35eebdaf4bf5f28237ac4020c3ae32e201a2"
+    },
+    {
+      "file": "packages/Conductor-Conductor/json/status_effects/divine_blessing.json",
+      "sha256": "7bb430fc79e7e3e42251965c7d81c698e1b349d0764a6d877fae58c530e23134"
+    },
+    {
+      "file": "packages/Conductor-Conductor/json/status_effects/growth.json",
+      "sha256": "47a59ae205f0b6946898edb6d7cdfe5018e117bda9565667f4f0ce06c9a6e977"
+    },
+    {
+      "file": "packages/Conductor-Conductor/json/status_effects/heroic.json",
+      "sha256": "84475666d0b6249902c3816b708e6643c99297a5035ff2a3b6efbc08099eb032"
+    },
+    {
+      "file": "packages/Conductor-Conductor/json/status_effects/hex.json",
+      "sha256": "d9311d4907ca7f0b8b8dafcbe0a5c11adaec4c0b8f2845a39201ea290e9bc90c"
+    },
+    {
+      "file": "packages/Conductor-Conductor/json/status_effects/hyper.json",
+      "sha256": "e9ac6ce3cae7ae8b3f1c5a7516ee8b60cad68aa3a4b7bc5e8a18049702eafeeb"
+    },
+    {
+      "file": "packages/Conductor-Conductor/json/status_effects/intangible.json",
+      "sha256": "0f6aa95edf878bd63fca72e2ada61ff634075a7fec632d33f593acff7e54cc62"
+    },
+    {
+      "file": "packages/Conductor-Conductor/json/status_effects/other_sprites.json",
+      "sha256": "cd8561ea21bdd34a1d6ecf7b4c2a1a975e7dafe30b7ba2aaaeb9f06095e683d2"
+    },
+    {
+      "file": "packages/Conductor-Conductor/json/status_effects/recoil.json",
+      "sha256": "bd525db8c7a5cc38855f5d496cbbb7706f1d373259934f8c63c53192cc1657d0"
+    },
+    {
+      "file": "packages/Conductor-Conductor/json/status_effects/skewer.json",
+      "sha256": "c1d2a4300e9e7f1d5ff3c4e235e822422048a06d989cc245ad8e4a4650b77617"
+    },
+    {
+      "file": "packages/Conductor-Conductor/json/status_effects/smirk.json",
+      "sha256": "818d111f4c9ad65300be8d94b5ae28c57cf24b08ab5ce1b7355d0a76ddfe0c91"
+    },
+    {
+      "file": "packages/Conductor-Conductor/json/status_effects/sparkles.json",
+      "sha256": "532398134c582813df154504db7251fb499b549898f879fb2a326897ca81170b"
+    }
+  ],
+  "excluded": [
+    {
+      "id": "growth_inactive",
+      "reason": "Estado interno sin nombre visible"
+    },
+    {
+      "id": "dizzy",
+      "reason": "No existe en Conductor 0.6.0; pertenece a FreeCompany y requiere StatusEffectFreeCompanyDizzyState"
+    }
+  ]
+}

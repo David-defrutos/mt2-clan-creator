@@ -1,4 +1,4 @@
-name: Editor checks
+name: Creator checks
 on:
   push:
   pull_request:
@@ -24,4 +24,25 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run check:i18n
+      - name: Load audited resources from tested Windows release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          $bundleDir = Join-Path $env:RUNNER_TEMP 'creator-release-fixture'
+          New-Item -ItemType Directory -Path $bundleDir -Force | Out-Null
+          $found = $false
+          for ($attempt = 0; $attempt -lt 24; $attempt++) {
+            gh release download v0.1.0-beta.1 --pattern 'ClanCreator-win32-x64-2026-11-16-2040.zip' --dir $bundleDir --clobber
+            if ($LASTEXITCODE -eq 0) { $found = $true; break }
+            Start-Sleep -Seconds 10
+          }
+          if (-not $found) { throw 'Tested release resources are unavailable.' }
+          $zip = Join-Path $bundleDir 'ClanCreator-win32-x64-2026-11-16-2040.zip'
+          if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant() -ne '61e7bf4fc64d6e29fa76b8fe8f7159685a49153dc2422417a66e3f72db4cd659') { throw 'Release resource hash mismatch.' }
+          Expand-Archive -LiteralPath $zip -DestinationPath $bundleDir
+          Copy-Item -LiteralPath (Join-Path $bundleDir 'ClanCreator/catalog/official') -Destination 'catalog/official' -Recurse
+          New-Item -ItemType Directory -Path 'vendor' -Force | Out-Null
+          Copy-Item -LiteralPath (Join-Path $bundleDir 'ClanCreator/vendor/modding') -Destination 'vendor/modding' -Recurse
       - run: npm test

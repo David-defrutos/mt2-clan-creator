@@ -1,0 +1,41 @@
+Documento generado el 2026-11-15-0940
+
+MT2 CLAN CREATOR
+
+1. Extrae toda la carpeta del ZIP en un lugar donde puedas guardar archivos.
+2. En Windows, haz doble clic en Abrir-creador.cmd. Se abrirá tu navegador.
+3. Pulsa Crear mi clan y sigue los pasos. Puedes volver a cualquier paso.
+4. El trabajo se guarda automáticamente en este equipo. Guardar y salir permite continuar otro día.
+5. Al terminar, Revisar y probar permite compilar e instalar el clan en tu perfil.
+
+La copia de trabajo incluye los marcos originales de Monster Train 2 y 938 ejemplos oficiales actuales de 13 clanes, con arte de Railforged y The Punished. El paquete ZIP anterior todavía no contiene esta actualización.
+Los ejemplos oficiales aparecen primero y puedes filtrarlos por clan.
+La copia de trabajo incluye 124 ejemplos auditados de The Free Company, SuccClan y W&W Inc., con sus imágenes y efectos compatibles. No necesitas instalar Free Company, SuccClan ni W&W Inc.
+Trainworks Reloaded 0.8.0 y Conductor 0.6.0 vienen incluidos para compilar. Necesitas Monster Train 2 y el SDK de .NET 10.
+Para jugar, recomendamos Thunderstore Mod Manager. La guía de r2modman está en desarrollo. Elige Monster Train 2 y un perfil. Instala BepInExPack, Trainworks Reloaded y Conductor desde ese gestor. Sus enlaces están en Revisar y probar. Con el juego cerrado, pulsa Seleccionar perfil y compilar; después, Instalar clan en este perfil. Abre ese mismo perfil en el gestor y pulsa Iniciar con mods. Las actualizaciones del clan conservan un respaldo.
+La instalación de BepInExPack, Trainworks Reloaded y Conductor en el perfil queda en manos del usuario; el creador muestra instrucciones y enlaces, sin comprobar automáticamente el perfil.
+La versión para Windows distribuida con runtime/node.exe no necesita que instales Node ni escribas comandos.
+
+Tus proyectos y copias de seguridad están en data/creator-projects. Guarda esa carpeta si cambias de ordenador.
+No extraigas una actualización encima de tu carpeta data ni la borres para actualizar el programa.
+
+El ZIP de un clan jugable incluye su DLL y su arte; no incluye las librerías del juego.
+La instalación local del creador copia esos archivos sin tener que descargar ni extraer un ZIP.
+
+Puedes buscar una carta por lo que hace. Las imágenes ausentes no impiden copiarla.
+Deshacer y Rehacer recuperan cambios de la sesión. El recorrido indica lo que falta.
+Equipos, plagas y cargas están en Más tipos de carta dentro de Hechizos.
+
+El catálogo muestra seis variantes de campeón por clan. Al copiar una senda se copian sus tres niveles.
+Los efectos y cantidades se editan directamente en tu copia.
+Puedes asignar Quick, Trample, Multistrike y otras capacidades, o elegir Harvest y otras activaciones.
+
+En la portada, Aprender con un clan oficial permite cargar una copia completa de cualquiera de los 13 clanes. Puedes revisarla y editarla paso a paso.
+Preparar el juego para usar mods explica cómo instalar los tres requisitos desde Thunderstore.
+Las capacidades incluyen Skewer/Pierce y otras 11 de Conductor. Dizzy requiere código propio de FreeCompany y no se ofrece.
+
+En Tus clanes guardados, Borrar o desinstalar permite elegir entre retirar el borrador o quitar la copia del juego. Cada opcion explica que conserva y pide confirmacion. Los borradores se recuperan desde Borradores borrados. Desinstalar requiere cerrar el juego y conserva un respaldo fuera de plugins.
+
+En Revisar e instalar, Detalles técnicos (opcional) permite Ver archivos JSON. Solo se pueden leer; para modificarlos debes abrir la ruta indicada con un editor externo. Los cambios externos no actualizan el borrador y una nueva generación crea otra copia. No se compila ni instala el clan al consultar sus JSON.
+
+El idioma inicial es inglés. Puedes elegir español en el selector de idioma; se recuerda tu elección.

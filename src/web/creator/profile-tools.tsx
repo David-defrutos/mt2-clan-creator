@@ -1,0 +1,12 @@
+import React from 'react';
+import {local,type Language} from './presentation';
+export function ModManagerLinks({rules,language}:{rules:any;language:Language}){const t=(key:string)=>local(rules.labels[key],language);return <ul>{rules.modManagers.map((m:any)=><li key={m.name}><a href={m.url} target="_blank" rel="noreferrer">{m.name} ↗</a>{m.status==='development'&&<span> · {t('managerDevelopment')}</span>}</li>)}</ul>;}
+export function GameSetupGuide({rules,language,includePackages=true}:{rules:any;language:Language;includePackages?:boolean}){const t=(key:string)=>local(rules.labels[key],language);return <><ModManagerLinks rules={rules} language={language}/><ol><li>{t('profileGuide1')}</li>{includePackages&&<li>{t('profileGuide2')}<ul>{rules.moddingPackages.map((m:any)=><li key={m.name}><a href={m.url} target="_blank" rel="noreferrer">{m.name} ↗</a></li>)}</ul></li>}<li>{t('profileManual')}</li></ol>{rules.modSetupExample&&<figure className="mod-setup-example"><img src={rules.modSetupExample.image} alt={local(rules.modSetupExample.alt,language)} width={460} height={413} loading="lazy"/><figcaption>{local(rules.modSetupExample.caption,language)}</figcaption></figure>}</>;}
+export function ProfileTools({rules,language}:{rules:any;language:Language}){return <details className="profile-tools"><summary>{local(rules.labels.installTools,language)}</summary><p>{local(rules.labels.profileHelp,language)}</p><GameSetupGuide rules={rules} language={language}/></details>;}
+
+// 2026-11-15-2003||codex-clan-editor||clan-creator/src/web/creator/profile-tools.tsx||Guiar instalacion externa de requisitos y ofrecer unicamente comprobacion en ES y EN
+// 2026-11-15-2122||codex-clan-editor||clan-creator/src/web/creator/profile-tools.tsx||Enlazar r2modman manteniendo aviso en desarrollo y mostrar progreso de comprobacion real
+// 2026-11-15-2126||codex-clan-editor||clan-creator/src/web/creator/profile-tools.tsx||Retirar boton dialogo resultados y peticion de comprobacion; dejar instalacion manual de requisitos
+// 2026-11-15-2127||codex-clan-editor||clan-creator/src/web/creator/profile-tools.tsx||Mostrar captura suministrada en Prepare the game for mods con texto accesible
+// 2026-11-15-2211||codex-clan-editor||clan-creator/src/web/creator/profile-tools.tsx||Compartir guia unica de instalacion manual sin repetir enlaces y requisitos en pantalla final
+// 2026-11-15-2212||codex-clan-editor||clan-creator/src/web/creator/profile-tools.tsx||Evitar repetir lista de requisitos en instrucciones desplegadas de pantalla final

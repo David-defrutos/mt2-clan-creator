@@ -11,7 +11,7 @@ await fs.mkdir(actualWorkspace);
 await fs.symlink(actualWorkspace, workspace, process.platform === 'win32' ? 'junction' : 'dir');
 await fs.mkdir(path.join(workspace, 'config'));
 await fs.copyFile(new URL('../config/library-discovery.json', import.meta.url), path.join(workspace, 'config/library-discovery.json'));
-process.env.CLAN_EDITOR_HOME = workspace;
+process.env.CLAN_CREATOR_HOME = workspace;
 const { discoverMods, importDiscovered } = await import('../src/server/discovery.ts');
 after(async () => { await fs.unlink(workspace); await fs.rm(fixtureRoot, { recursive: true, force: true }); });
 
@@ -49,3 +49,4 @@ test('importa copia editable sin reactivar originales y reutiliza una copia ya r
   assert.ok((await fs.readFile(path.join(result.item.root, 'json/clan.json'), 'utf8')).endsWith('// editado'));
   await assert.rejects(() => importDiscovered(path.join(workspace, 'plugins/Helper')), /Sin definición/);
 });
+// 2026-11-15-0927||codex-clan-editor||clan-creator/tests\discovery.test.ts||Usar la variable propia del creador en los fixtures de descubrimiento heredados

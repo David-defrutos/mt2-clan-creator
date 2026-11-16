@@ -1,0 +1,241 @@
+{
+  "fields": {
+    "upgrades": {
+      "upgradeTitleKey": "titles",
+      "upgradeDescriptionKey": "descriptions",
+      "upgradeNotificationKey": "notifications",
+      "showUpgradeDescriptionOnCards": "show_description_on_cards",
+      "bonusHP": "bonus_hp",
+      "bonusDamage": "bonus_damage",
+      "allowSecondaryTooltipPlacement": "allow_secondary_tooltip_placement",
+      "bonusEquipment": "bonus_equipment",
+      "doNotReplaceExistingUnitAbility": "does_not_replace_ability",
+      "bonusSize": "bonus_size",
+      "useUpgradeHighlightTextTags": "use_upgrade_highlight_tags",
+      "upgradeWillBeScaledByNonMagicPowerTrait": "upgrade_will_be_scaled_by_non_magic_power_trait",
+      "isUnique": "is_unique",
+      "costReduction": "cost_reduction",
+      "xCostReduction": "x_cost_reduction",
+      "hideUpgradeIconOnCard": "hide_icon_on_card",
+      "bonusHeal": "bonus_heal"
+    },
+    "effects": {
+      "effectStateName": "name",
+      "paramInt": "param_int",
+      "targetMode": "target_mode",
+      "targetTeamType": "target_team",
+      "additionalParamInt1": "param_int_3",
+      "additionalParamInt": "param_int_2",
+      "paramBool": "param_bool",
+      "targetCharacterSubtype": "target_subtype",
+      "paramSubtype": "param_subtype",
+      "hideTooltip": "hide_tooltip",
+      "targetCardSelectionMode": "target_card_selection_mode",
+      "paramCardPool": "param_card_pool",
+      "shouldFailToCastIfTestFails": "fail_to_cast_on_failure",
+      "targetCardType": "target_card_type",
+      "paramStr": "param_str",
+      "useStatusEffectStackMultiplier": "use_status_effect_multiplier",
+      "statusEffectStackMultiplier": "status_effect_multiplier",
+      "targetCharacterExcludedSubtypes": "target_character_excluded_subtypes"
+    },
+    "character_triggers": {
+      "descriptionKey": "descriptions",
+      "trigger": "trigger",
+      "hideVisualAndIgnoreSilence": "hide_tooltip",
+      "suppressTriggerNotification": "suppress_notifications",
+      "additionalTextOnTriggerKey": "additional_text_on_trigger",
+      "triggerOnce": "trigger_once",
+      "displayEffectHintText": "display_hint_text",
+      "triggerAtThreshold": "trigger_at_threshold"
+    },
+    "room_modifiers": {
+      "descriptionKey": "descriptions",
+      "roomStateModifierClassName": "name",
+      "descriptionKeyInPlay": "in_play_descriptions",
+      "overrideTitleKey": "titles",
+      "paramInt": "param_int",
+      "extraTooltipBodyKey": "extra_body_tooltips",
+      "extraTooltipTitleKey": "extra_title_tooltips",
+      "paramInt2": "param_int_2",
+      "paramFloat": "param_float",
+      "tooltipsSuppressed": "tooltips_suppressed"
+    },
+    "additional_tooltips": {
+      "trigger": "trigger",
+      "style": "style",
+      "allowSecondaryPlacement": "allow_secondary_placement",
+      "descriptionKey": "descriptions",
+      "titleKey": "titles",
+      "statusId": "status",
+      "hideInTrainRoomUI": "hide_in_train_room_ui"
+    },
+    "characters": {
+      "nameKey": "names",
+      "size": "size",
+      "health": "health",
+      "attackDamage": "attack_damage",
+      "subtypeKeys": "subtypes",
+      "attackTeleportsToDefender": "attack_teleports_to_defender"
+    },
+    "cards": {
+      "nameKey": "names",
+      "overrideDescriptionKey": "descriptions",
+      "cardType": "card_type",
+      "rarity": "rarity",
+      "linkedClass": "class",
+      "cooldownAfterActivated": "cooldown",
+      "isUnitAbility": "ability",
+      "initialKeyboardTarget": "initial_keyboard_target",
+      "targetless": "targetless",
+      "requiredDLC": "required_dlc",
+      "canAbilityTargetOtherFloors": "ability_effects_other_floors"
+    },
+    "upgrade_masks": {
+      "cardType": "card_type",
+      "requiredCardEffectsOperator": "required_effects_operator",
+      "requiredCardEffects": "required_effects",
+      "disallowedCardPools": "disallowed_pools",
+      "allowedCardPools": "allowed_pools",
+      "excludedSubtypesOperator": "excluded_subtypes_operator",
+      "excludedSubtypes": "excluded_subtypes",
+      "useBaseCostForCostRange": "use_base_cost_for_cost_range"
+    },
+    "traits": {
+      "traitStateName": "name",
+      "traitIsRemovable": "trait_is_removable",
+      "paramInt": "param_int",
+      "paramBool": "param_bool",
+      "stackMode": "stack_mode"
+    }
+  },
+  "nested": {
+    "upgrades": {
+      "unitAbilityUpgrade": [
+        "ability_upgrade",
+        "cards"
+      ],
+      "triggerUpgrades": [
+        "trigger_upgrades",
+        "character_triggers"
+      ],
+      "roomModifierUpgrades": [
+        "room_modifier_upgrades",
+        "room_modifiers"
+      ],
+      "traitDataUpgrades": [
+        "trait_upgrades",
+        "traits"
+      ],
+      "filters": [
+        "filters",
+        "upgrade_masks"
+      ]
+    },
+    "effects": {
+      "paramCardUpgradeData": [
+        "param_upgrade",
+        "upgrades"
+      ],
+      "paramCharacterData": [
+        "param_character",
+        "characters"
+      ],
+      "additionalTooltips": [
+        "additional_tooltips",
+        "additional_tooltips"
+      ],
+      "paramCardFilter": [
+        "param_card_filter",
+        "upgrade_masks"
+      ]
+    },
+    "character_triggers": {
+      "effects": [
+        "effects",
+        "effects"
+      ]
+    },
+    "characters": {
+      "triggers": [
+        "triggers",
+        "character_triggers"
+      ],
+      "roomModifiers": [
+        "room_modifiers",
+        "room_modifiers"
+      ],
+      "unitAbility": [
+        "ability",
+        "cards"
+      ]
+    },
+    "cards": {
+      "effects": [
+        "effects",
+        "effects"
+      ],
+      "traits": [
+        "traits",
+        "traits"
+      ]
+    },
+    "room_modifiers": {
+      "additionalTooltips": [
+        "additional_tooltips",
+        "additional_tooltips"
+      ]
+    }
+  },
+  "statuses": {
+    "upgrades": {
+      "statusEffectUpgrades": "status_effect_upgrades"
+    },
+    "effects": {
+      "paramStatusEffects": "param_status_effects"
+    },
+    "characters": {
+      "startingStatusEffects": "starting_status_effects"
+    },
+    "room_modifiers": {
+      "paramStatusEffects": "param_status_effects"
+    }
+  },
+  "assets": {
+    "characters": {
+      "characterPrefabVariantRef": "character_art"
+    },
+    "cards": {
+      "cardArtPrefabVariantRef": "card_art"
+    }
+  },
+  "vfx": {
+    "effects": {
+      "appliedToSelfVFX": "applied_to_self_vfx",
+      "appliedVFX": "applied_vfx"
+    },
+    "characters": {
+      "impactVFX": "impact_vfx",
+      "projectilePrefab": "projectile_vfx"
+    }
+  },
+  "localizationFields": [
+    "titles",
+    "names",
+    "descriptions",
+    "notifications",
+    "in_play_descriptions",
+    "extra_body_tooltips",
+    "extra_title_tooltips",
+    "additional_text_on_trigger"
+  ],
+  "ignored": [
+    "guid",
+    "characterChatterData",
+    "characterLoreTooltipKeys",
+    "isTriggerTooltip",
+    "isStatusTooltip",
+    "__type",
+    "__path"
+  ]
+}

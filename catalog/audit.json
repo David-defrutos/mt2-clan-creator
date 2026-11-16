@@ -1,0 +1,1798 @@
+{
+  "generatedAt": "2026-11-15T18:19:50.525Z",
+  "method": "Typed transitive reference closure + verified game/Trainworks/Conductor DLL types and Conductor JSON resources + hash-bound code review + functional patch exclusion + complete bundled art",
+  "libraries": {
+    "Conductor": {
+      "file": "packages/Conductor-Conductor/Conductor.dll",
+      "sha256": "86b1d2b31ccaeee5d845a65ad0ceaf73fcd8a7c4a21f8ebe7af9ff1f642464f3"
+    },
+    "TrainworksReloaded.Base": {
+      "file": "packages/MT2-Trainworks_Reloaded/TrainworksReloaded.Base.dll",
+      "sha256": "6cfa3e157a8dcc57fd41f9d257d5f7442dfeb8199cf677f1fc955cae4ff484e1"
+    },
+    "TrainworksReloaded.Core": {
+      "file": "packages/MT2-Trainworks_Reloaded/TrainworksReloaded.Core.dll",
+      "sha256": "f2e6ac198c98e18af5f8c06bc22f0eb21f51544247ce6c3fc9d8fbab93cfd89f"
+    },
+    "TrainworksReloaded.Plugin": {
+      "file": "packages/MT2-Trainworks_Reloaded/TrainworksReloaded.Plugin.dll",
+      "sha256": "7e5010498c48935749d02a00e10696634fd5b0008d1123506a9b214793dd063a"
+    }
+  },
+  "dependencyVersions": [
+    {
+      "id": "trainworks",
+      "version": "0.8.0"
+    },
+    {
+      "id": "conductor",
+      "version": "0.6.0"
+    }
+  ],
+  "gameAssemblySha256": "49c71329eb27ae77462e6e59e1fd300d6a249dba95af5b22f9aea766432e27b9",
+  "sources": [
+    {
+      "codeSources": [
+        {
+          "file": "src/Plugin.cs",
+          "sha256": "0c53d7d77ebff4a67612b35e50eb6d243e60266eb14c5151f06d9fd792b6bf40"
+        },
+        {
+          "file": "src/code/BeastmasterCardText.cs",
+          "sha256": "2c554bab15d8d7fee371afd40de192c226d15546b78f4700175660683f444ea0"
+        },
+        {
+          "file": "src/code/BeastmasterMarkers.cs",
+          "sha256": "aedfd69c56f5dbc59cee9f4c470c09f0d2d6513c0fc5ea8af50c960f3e3502ae"
+        },
+        {
+          "file": "src/code/BeastmasterTraining.cs",
+          "sha256": "5ac7ad5831d46f86033948e8f407e832c731673405b8c011b6a69bf373ee5d82"
+        },
+        {
+          "file": "src/code/CardEffectBeastmasterCommand.cs",
+          "sha256": "5469adbe7f23f6c612ba4252e0794239c7e3cff577d819280f550429c929e0fc"
+        },
+        {
+          "file": "src/code/CardEffectCleanseRandomDebuffed.cs",
+          "sha256": "343f85d724848dd0ebe4247cfa3d2ec4acb6335949800c4ac1e90530a4c8b611"
+        },
+        {
+          "file": "src/code/CardEffectConsumeFromHand.cs",
+          "sha256": "7ba7704f6d050d731f99986b1cd206f3578f0097bd2a64a1f39b046cfcbe132b"
+        },
+        {
+          "file": "src/code/CardEffectGrantOnce.cs",
+          "sha256": "119ab79aa2e32b61d5da93922078e4b531c46fa30f1ca9b0fe5c1b28e8840f1e"
+        },
+        {
+          "file": "src/code/CardEffectOfferRandomFromPool.cs",
+          "sha256": "8f4de031c8049d94591b3a775f90c9d87a537e4ea62fd9eb140344cc11547bc5"
+        },
+        {
+          "file": "src/code/CardEffectRefreshAbilityOnKill.cs",
+          "sha256": "245fff7b61154e3ad31514c981c71f728495e4544d7aea72f579dff4327e949b"
+        },
+        {
+          "file": "src/code/CardEffectRemoveRandomDebuff.cs",
+          "sha256": "7f20d6d8033471cbbbf895aa6cd99d32bb16aad0626c6dd050a1e902f995f434"
+        },
+        {
+          "file": "src/code/CardEffectRequisition.cs",
+          "sha256": "17989f28028d714f50552c90becb9c6a40a8513cedc87f156adde184ef6ff41d"
+        },
+        {
+          "file": "src/code/CardEffectRingPyreDamage.cs",
+          "sha256": "a26d19b6642420196e484e25ed405ac4b145ed802fab740172e69987b9f13dbc"
+        },
+        {
+          "file": "src/code/CardEffectRodericReinforcements.cs",
+          "sha256": "58a1c24f268a12c17cc559dee89b9d6c4328bef3d342d18a1d17afb24a082cca"
+        },
+        {
+          "file": "src/code/CardEffectWatchtowerToggle.cs",
+          "sha256": "550e2be442fc509356746ce4958e6c0eba7c8f3267c6138778dd05d8cd14cda5"
+        },
+        {
+          "file": "src/code/CardEffectWidowsPension.cs",
+          "sha256": "d6f98728f4d6b439d12fa18bc5185dc8b79e4690b4f6c4b7c04b2b788656c5bc"
+        },
+        {
+          "file": "src/code/ChampionCardTypeLabel.cs",
+          "sha256": "60a490ae8e1a6f194f73bc01c33c8dd6ae9beed0c5c798c723dcf5b200c62144"
+        },
+        {
+          "file": "src/code/ChampionSpriteVisuals.cs",
+          "sha256": "2a46b148094176929862f1ae56dcef9bc118fab6c78991c24a76cd4d7249eefb"
+        },
+        {
+          "file": "src/code/CountdownOnFloorChange.cs",
+          "sha256": "017a6e3eb7202265e7e7b167fc7ee8c46a0976c2a4e7f33ebbef206c468118b8"
+        },
+        {
+          "file": "src/code/FieldForgeMergeCost.cs",
+          "sha256": "4ee054da7a741b22bdfc546cd9eb091e86cdcffccc8ef42bc322745fcd195afb"
+        },
+        {
+          "file": "src/code/FreeCompanyCardSounds.cs",
+          "sha256": "fad359be0ea13aaa42f7babe7bf0926fb9ba9aa5ebf0a78ce2d29822791e24c5"
+        },
+        {
+          "file": "src/code/RelicEffectFirstUnitDiscountEachTurn.cs",
+          "sha256": "c6ba45474258afe377bf4cb29a6a7bd87084464a98c8e4de7ec04c7b5f2a237c"
+        },
+        {
+          "file": "src/code/RelicEffectUnitDiscountPerUpgrade.cs",
+          "sha256": "d76195194e7e6b6e5455639de3c4c067e4d9176517a2226e71158bcb026a8082"
+        },
+        {
+          "file": "src/code/RodericQuartermaster.cs",
+          "sha256": "37bfa97d94d05034cbeb1b473c21bbcde99918a76941da378da8786ca1dba119"
+        },
+        {
+          "file": "src/code/ShieldwallInterception.cs",
+          "sha256": "cae42c53835abfc8fce9f9b87febfc6900b53c53d7d77b838c8b3efcfe652ff4"
+        },
+        {
+          "file": "src/code/StatusEffectFreeCompanyDizzyState.cs",
+          "sha256": "effbbe8bcaf6ae2395f8daff5a247de209c4ceb1312c4bc4c1ec01179a7fa431"
+        },
+        {
+          "file": "src/code/VesperAnimationTiming.cs",
+          "sha256": "55b892b252885720e6c70a8d2d60736279d0fb55ac30dc186529c02e6c93d90f"
+        }
+      ],
+      "reviewedCode": [
+        {
+          "source": "freecompany",
+          "file": "src/code/CardEffectConsumeFromHand.cs",
+          "sha256": "7ba7704f6d050d731f99986b1cd206f3578f0097bd2a64a1f39b046cfcbe132b",
+          "classification": "consumer",
+          "sections": [
+            "card_pools"
+          ],
+          "reason": "El efecto C# consume categorías o pools; mencionar un subtipo no añade una regla intrínseca a cada unidad. El efecto propio sigue excluido por su clase."
+        },
+        {
+          "source": "freecompany",
+          "file": "src/code/CardEffectOfferRandomFromPool.cs",
+          "sha256": "8f4de031c8049d94591b3a775f90c9d87a537e4ea62fd9eb140344cc11547bc5",
+          "classification": "consumer",
+          "sections": [
+            "subtypes",
+            "card_pools"
+          ],
+          "reason": "El efecto C# consume categorías o pools; mencionar un subtipo no añade una regla intrínseca a cada unidad. El efecto propio sigue excluido por su clase."
+        },
+        {
+          "source": "freecompany",
+          "file": "src/code/CardEffectRequisition.cs",
+          "sha256": "17989f28028d714f50552c90becb9c6a40a8513cedc87f156adde184ef6ff41d",
+          "classification": "consumer",
+          "sections": [
+            "subtypes",
+            "cards",
+            "game_objects",
+            "sprites"
+          ],
+          "reason": "Requisition selecciona equipos existentes y los añade a mano; no implementa sus efectos al equipar. Los equipos y su arte funcionan solos. El efecto CardEffectRequisition sigue excluido por su clase propia."
+        },
+        {
+          "source": "freecompany",
+          "file": "src/code/ChampionCardTypeLabel.cs",
+          "sha256": "60a490ae8e1a6f194f73bc01c33c8dd6ae9beed0c5c798c723dcf5b200c62144",
+          "classification": "presentation",
+          "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+        },
+        {
+          "source": "freecompany",
+          "file": "src/code/ChampionSpriteVisuals.cs",
+          "sha256": "2a46b148094176929862f1ae56dcef9bc118fab6c78991c24a76cd4d7249eefb",
+          "classification": "required_visual_fix",
+          "reason": "El parche oculta el SpriteRenderer de referencia y corrige bounds/anclajes del quad animado. Con Trainworks 0.8.0 la ruta animada habilita ese renderer. Estos personajes no se admiten sin conservar o sustituir esa corrección; no se aproxima el arte.",
+          "ids": [
+            "RodericCharacterArt",
+            "VesperCharacterArt"
+          ]
+        },
+        {
+          "source": "freecompany",
+          "file": "src/code/FreeCompanyCardSounds.cs",
+          "sha256": "fad359be0ea13aaa42f7babe7bf0926fb9ba9aa5ebf0a78ce2d29822791e24c5",
+          "classification": "presentation",
+          "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+        },
+        {
+          "source": "freecompany",
+          "file": "src/code/VesperAnimationTiming.cs",
+          "sha256": "55b892b252885720e6c70a8d2d60736279d0fb55ac30dc186529c02e6c93d90f",
+          "classification": "presentation",
+          "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+        }
+      ],
+      "source": "freecompany",
+      "version": "0.3.6",
+      "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+      "totalCards": 113,
+      "totalRelics": 12,
+      "notCandidates": [
+        {
+          "id": "RodericCallToArms",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "RodericCallToArms2",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "RodericCallToArms3",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "RodericRequisition",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "RodericRequisition2",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "RodericRequisition3",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "RodericSlam",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "RodericSlam2",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "RodericSlam3",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "VesperCommand1",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "VesperCommand2",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "VesperCommand3",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "ChirurgeonSurgery1",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "ChirurgeonSurgery2",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "ChirurgeonSurgery3",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "GrimoireSpell1",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "GrimoireSpell2",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "GrimoireSpell3",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "BattleChaplainAbility",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "BountyHunterShot",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "CutpurseAbility",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "ConjurerVolatile",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "HedgeMageVolley",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "IronboundChampionAbility",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "LongbowmanShiftAim",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "ShieldbearerAbility",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "StoneTrollAbility",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "TwoHeadedWrath",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        }
+      ],
+      "scanned": 97,
+      "accepted": [
+        "freecompany-MagicMissile",
+        "freecompany-GrimoireMagicMissile1",
+        "freecompany-GrimoireMagicMissile2",
+        "freecompany-GrimoireMagicMissile3",
+        "freecompany-ShieldWall",
+        "freecompany-NotchedAxe",
+        "freecompany-TwinAxes",
+        "freecompany-ReaversMaul",
+        "freecompany-Bandages",
+        "freecompany-HolySymbol",
+        "freecompany-Reliquary",
+        "freecompany-Shortbow",
+        "freecompany-Longbow",
+        "freecompany-GreatBow",
+        "freecompany-Lockpicks",
+        "freecompany-PoisonedDagger",
+        "freecompany-ThiefsMantle",
+        "freecompany-Buckler",
+        "freecompany-KiteShield",
+        "freecompany-BulwarkPlate",
+        "freecompany-ChalkCircle",
+        "freecompany-Grimoire",
+        "freecompany-ArchmagesStaff",
+        "freecompany-ButchersBill",
+        "freecompany-ExpandedBillet",
+        "freecompany-HazardPay",
+        "freecompany-LetterOfMarque",
+        "freecompany-QuartermastersSeal",
+        "freecompany-SappersCharges",
+        "freecompany-SappersBombCard",
+        "freecompany-WarChest",
+        "freecompany-Caltrops",
+        "freecompany-PaymastersTent",
+        "freecompany-QuartermastersStore",
+        "freecompany-RopeAndGrapple",
+        "freecompany-ThePit",
+        "freecompany-Bless",
+        "freecompany-Cloudkill",
+        "freecompany-CureWounds",
+        "freecompany-DimensionDoor",
+        "freecompany-Fear",
+        "freecompany-FingerOfDeath",
+        "freecompany-Fireball",
+        "freecompany-Grease",
+        "freecompany-Haste",
+        "freecompany-Invisibility",
+        "freecompany-KitBash",
+        "freecompany-LightningBolt",
+        "freecompany-MassHoldPerson",
+        "freecompany-MercenarysContract",
+        "freecompany-PaidInFull",
+        "freecompany-Resurrection",
+        "freecompany-Shield",
+        "freecompany-Silence",
+        "freecompany-SpoilsOfWar",
+        "freecompany-Web",
+        "freecompany-SpawnBattleChaplain",
+        "freecompany-SpawnBerserker",
+        "freecompany-SpawnCampBrawler",
+        "freecompany-SpawnChapelAcolyte",
+        "freecompany-SpawnCutpurse",
+        "freecompany-SpawnFreeLance",
+        "freecompany-SpawnHedgeConjurer",
+        "freecompany-SpawnIronboundChampion",
+        "freecompany-SpawnLongbowman",
+        "freecompany-SpawnMasterOfCoin",
+        "freecompany-SpawnSellswordScout",
+        "freecompany-SpawnShieldbearer",
+        "freecompany-SpawnTheNewGuy",
+        "freecompany-SpawnBogTroll",
+        "freecompany-SpawnStoneTroll",
+        "freecompany-SpawnWarTroll",
+        "freecompany-SpawnCautiousTroll",
+        "freecompany-SpawnTwoHeadedTroll"
+      ],
+      "excluded": [
+        {
+          "id": "FieldDressing",
+          "name": "Field Dressing",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectRemoveRandomDebuff"
+          ]
+        },
+        {
+          "id": "SpawnRoderic",
+          "name": "Roderic",
+          "reasons": [
+            "Corrección visual propia necesaria: src/code/ChampionSpriteVisuals.cs -> RodericCharacterArt",
+            "Dependencia funcional o no resuelta en C#: src/code/RodericQuartermaster.cs -> cards/SpawnRoderic",
+            "Dependencia funcional o no resuelta en C#: src/code/ShieldwallInterception.cs -> cards/SpawnRoderic"
+          ]
+        },
+        {
+          "id": "SpawnVesper",
+          "name": "Vesper",
+          "reasons": [
+            "Corrección visual propia necesaria: src/code/ChampionSpriteVisuals.cs -> VesperCharacterArt",
+            "Dependencia funcional o no resuelta en C#: src/code/BeastmasterTraining.cs -> cards/SpawnVesper"
+          ]
+        },
+        {
+          "id": "WidowsPension",
+          "name": "Widow's Pension",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectWidowsPension",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWidowsPension.cs -> cards/WidowsPension",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWidowsPension.cs -> game_objects/WidowsPension",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWidowsPension.cs -> sprites/WidowsPension"
+          ]
+        },
+        {
+          "id": "FreeCompanyTestDeck",
+          "name": "Test Orders",
+          "reasons": [
+            "Contenido de pruebas o selección auxiliar, no una carta autónoma para aprender."
+          ]
+        },
+        {
+          "id": "FieldForge",
+          "name": "Field Forge",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectFieldForgeCost"
+          ]
+        },
+        {
+          "id": "MarchingOrders",
+          "name": "Marching Orders",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectFirstUnitDiscountEachTurn"
+          ]
+        },
+        {
+          "id": "ScoutsMap",
+          "name": "Scout's Map",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectWatchtowerToggle",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWatchtowerToggle.cs -> upgrades/WatchtowerRoomOffUpgrade",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWatchtowerToggle.cs -> upgrades/WatchtowerRoomUpgrade"
+          ]
+        },
+        {
+          "id": "VeteransPapers",
+          "name": "Veteran's Papers",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectUnitDiscountPerUpgrade"
+          ]
+        },
+        {
+          "id": "Watchtower",
+          "name": "Watchtower",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectWatchtowerToggle",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWatchtowerToggle.cs -> upgrades/WatchtowerRoomOffUpgrade",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWatchtowerToggle.cs -> upgrades/WatchtowerRoomUpgrade"
+          ]
+        },
+        {
+          "id": "WatchtowerToggle",
+          "name": "Change Firing Orders",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectWatchtowerToggle",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWatchtowerToggle.cs -> upgrades/WatchtowerRoomOffUpgrade"
+          ]
+        },
+        {
+          "id": "Banishment",
+          "name": "Banishment",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectCountdownTick",
+            "Clase propia o no verificada: CardEffectPlantCountdown",
+            "Clase propia o no verificada: StatusEffectFreeCompanyCountdownState"
+          ]
+        },
+        {
+          "id": "DelayedBlastFireball",
+          "name": "Delayed Blast Fireball",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectCountdownTick",
+            "Clase propia o no verificada: CardEffectPlantCountdown",
+            "Clase propia o no verificada: StatusEffectFreeCompanyCountdownState"
+          ]
+        },
+        {
+          "id": "DoubleShift",
+          "name": "Double Shift",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFreeCompanyDizzyState"
+          ]
+        },
+        {
+          "id": "SeverancePay",
+          "name": "Severance Pay",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectRingPyreDamage"
+          ]
+        },
+        {
+          "id": "SpawnBountyHunter",
+          "name": "Bounty Hunter",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectRefreshAbilityOnKill"
+          ]
+        },
+        {
+          "id": "SpawnFieldMedic",
+          "name": "Field Medic",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectCleanseRandomDebuffed"
+          ]
+        },
+        {
+          "id": "SpawnHedgeMage",
+          "name": "Hedge-Mage",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFreeCompanyCountdownState"
+          ]
+        },
+        {
+          "id": "TameBogTroll",
+          "name": "Tame the Bog Troll",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectConsumeFromHand",
+            "Clase propia o no verificada: CardEffectGrantOnce"
+          ]
+        },
+        {
+          "id": "TameStoneTroll",
+          "name": "Tame the Stone Troll",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectConsumeFromHand",
+            "Clase propia o no verificada: CardEffectGrantOnce"
+          ]
+        },
+        {
+          "id": "TameWarTroll",
+          "name": "Tame the War Troll",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectConsumeFromHand",
+            "Clase propia o no verificada: CardEffectGrantOnce"
+          ]
+        },
+        {
+          "id": "TameCautiousTroll",
+          "name": "Tame the Cautious Troll",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectConsumeFromHand",
+            "Clase propia o no verificada: CardEffectGrantOnce"
+          ]
+        },
+        {
+          "id": "TameTwoHeadedTroll",
+          "name": "Tame the Two-Headed Troll",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectConsumeFromHand",
+            "Clase propia o no verificada: CardEffectGrantOnce"
+          ]
+        }
+      ],
+      "notes": [
+        "Cierre por sección y proveedor real; no es una prueba en partida.",
+        "Se excluyen clases propias y parches funcionales; sonidos y animaciones revisados no bloquean reglas nativas.",
+        "Spare y otros eventos externos solo se admiten si su registro existe en la biblioteca incluida."
+      ]
+    },
+    {
+      "codeSources": [
+        {
+          "file": "src/Plugin.cs",
+          "sha256": "13d6b8c262b83e9fdcd90ab717d47ba6dcf0469a8c61ae96380d22c7750565d8"
+        },
+        {
+          "file": "src/code/AuditedCardEffects.cs",
+          "sha256": "c092e9756b081b99a12aea710caa36e8c8b6b6efc5e1699878c1dd945bd79a5b"
+        },
+        {
+          "file": "src/code/ButcherAnimationRendering.cs",
+          "sha256": "b9950a730de548d0c5c82604160d20404c7a899bab35e91b6fb35a5c17d1a14c"
+        },
+        {
+          "file": "src/code/CardEffectAddStatusEffectToClones.cs",
+          "sha256": "686ac4fe0a5aaa007373d2cf441bc49125c7b3522578cd4e73baebc16bf0126d"
+        },
+        {
+          "file": "src/code/CardEffectCopyWithStatuses.cs",
+          "sha256": "8d6ae41a1f0db16128b59b4b584848462b50725580c2e63ceb4f4e470ee4e942"
+        },
+        {
+          "file": "src/code/CardEffectEndlessShadowRebirth.cs",
+          "sha256": "70f1cdb4b956c1c84611ee55ebcbe132798bfbc72a59ae5f85922348c1ad146b"
+        },
+        {
+          "file": "src/code/CardEffectKnightmareRebirth.cs",
+          "sha256": "ef36af8517246ebce3ac0f620f7294fa5f8ddfd15115657ce60274df715351c3"
+        },
+        {
+          "file": "src/code/CardEffectMultiplyNegativeStatusEffects.cs",
+          "sha256": "4ad61b7060c8ec66a423a10df2f87d8f6205076d9eef6220d4063b1e83a58630"
+        },
+        {
+          "file": "src/code/ChampionCardAnimation.cs",
+          "sha256": "4d22a035902d45306cb8f6b970b840cc26dfd7bbf81806fe45ed29a99e04fa3b"
+        },
+        {
+          "file": "src/code/FranticBossImmunity.cs",
+          "sha256": "db75c39173ef04d3e3b501ceda1d87b74add2c0c0e6ff5587a2ce86f9ce63a8b"
+        },
+        {
+          "file": "src/code/LastWhisperTooltips.cs",
+          "sha256": "aff26fb16f88984a7af97b3808a7876639be91babb5c27fdd9b9b065110e792e"
+        },
+        {
+          "file": "src/code/NonBossTargeting.cs",
+          "sha256": "3537fd6abca2f7abc671ed645e8f9b6bb764aa12cd9b071c6d7136d3a798e245"
+        },
+        {
+          "file": "src/code/PowerSiphonEffects.cs",
+          "sha256": "66155f065afb19c4c9a690f476a251d54961e8f88a1f1564d38ce03f5d1e2d65"
+        },
+        {
+          "file": "src/code/StatusEffectFranticState.cs",
+          "sha256": "ed5b9cba2d49e8ade6130286db701ac6c1114c252bd7d0bafaab59339c835e79"
+        },
+        {
+          "file": "src/code/StatusEffectMarkerState.cs",
+          "sha256": "17485275d22667116fd9400d03000fb9d7f9e095d8fe4aaa448980d906c8e61f"
+        },
+        {
+          "file": "src/code/SuccClanPresentation.cs",
+          "sha256": "1351d6873c9ed489c1cb80265091e5ddafe48fd8819626326f4801c717ebe12e"
+        },
+        {
+          "file": "src/code/TurnStartRooms.cs",
+          "sha256": "93505f6b0509597d9169c9179c042f8a75bdca9aa616c3c8fb3bc08479c6f175"
+        }
+      ],
+      "reviewedCode": [
+        {
+          "source": "succclan",
+          "file": "src/code/ButcherAnimationRendering.cs",
+          "sha256": "b9950a730de548d0c5c82604160d20404c7a899bab35e91b6fb35a5c17d1a14c",
+          "classification": "presentation",
+          "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+        },
+        {
+          "source": "succclan",
+          "file": "src/code/ChampionCardAnimation.cs",
+          "sha256": "4d22a035902d45306cb8f6b970b840cc26dfd7bbf81806fe45ed29a99e04fa3b",
+          "classification": "presentation",
+          "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+        },
+        {
+          "source": "succclan",
+          "file": "src/code/SuccClanPresentation.cs",
+          "sha256": "1351d6873c9ed489c1cb80265091e5ddafe48fd8819626326f4801c717ebe12e",
+          "classification": "presentation",
+          "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+        }
+      ],
+      "source": "succclan",
+      "version": "0.2.1",
+      "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+      "totalCards": 48,
+      "totalRelics": 13,
+      "notCandidates": [
+        {
+          "id": "KnightMareAbyssSpark",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "GhostObsession",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "ArroganceLastWhisper",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        }
+      ],
+      "scanned": 58,
+      "accepted": [
+        "succclan-SpawnShadowLady",
+        "succclan-MourningVeil",
+        "succclan-WhisperingBlade",
+        "succclan-CurseguardStone",
+        "succclan-CurseguardSlab",
+        "succclan-DemonBlood",
+        "succclan-DesireCrystal",
+        "succclan-FleshRing",
+        "succclan-PoisonSerum",
+        "succclan-ProfaneCrossbow",
+        "succclan-ShadowCloak",
+        "succclan-BloodCarnival",
+        "succclan-DarkFury",
+        "succclan-DarkPact",
+        "succclan-Flogging",
+        "succclan-ForTheQueen",
+        "succclan-ObsessingShard",
+        "succclan-PainAndPleasure",
+        "succclan-ParadoxTome",
+        "succclan-PiercingShriek",
+        "succclan-PlagueBoost",
+        "succclan-ShadowEmbrace",
+        "succclan-SpawnArroganceGhost",
+        "succclan-SpawnDemonPioneer",
+        "succclan-SpawnEnvyGhost",
+        "succclan-SpawnGluttonyGhost",
+        "succclan-SpawnGreedGhost",
+        "succclan-SpawnIncubusButcher",
+        "succclan-SpawnOolioddroo",
+        "succclan-SpawnShadowWarrior",
+        "succclan-SpawnSlothGhost",
+        "succclan-SpawnSuccbusTorturer",
+        "succclan-SpawnVrolikai",
+        "succclan-SpawnWrathGhost"
+      ],
+      "excluded": [
+        {
+          "id": "SpawnKnightMare",
+          "name": "Knightmare",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectKnightmareHarvest",
+            "Clase propia o no verificada: StatusEffectMarkerState"
+          ]
+        },
+        {
+          "id": "AbyssCrown",
+          "name": "Abyss Crown",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectMarkerState"
+          ]
+        },
+        {
+          "id": "FlareRibbon",
+          "name": "Flare Ribbon",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectArmorOnPyreAttacked"
+          ]
+        },
+        {
+          "id": "MutantElixirs",
+          "name": "Mutant Elixirs",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectMarkerState"
+          ]
+        },
+        {
+          "id": "NetherBlossom",
+          "name": "Nether Blossom",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectRageOnFrantic"
+          ]
+        },
+        {
+          "id": "ObsessingAromatherapy",
+          "name": "Obsessing Aromatherapy",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ]
+        },
+        {
+          "id": "ObsessionVault",
+          "name": "Obsession Vault",
+          "reasons": [
+            "Clase propia o no verificada: RoomStateSuccClanTurnStartEffects"
+          ]
+        },
+        {
+          "id": "SpectralRefuge",
+          "name": "Spectral Refuge",
+          "reasons": [
+            "Clase propia o no verificada: RoomStateSuccClanTurnStartEffects"
+          ]
+        },
+        {
+          "id": "CubusSpike",
+          "name": "Cubus Spike",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ]
+        },
+        {
+          "id": "DangerousGame",
+          "name": "Dangerous Game",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ]
+        },
+        {
+          "id": "DepressionWhisper",
+          "name": "Depression Whisper",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectMultiplyNegativeStatusEffects"
+          ]
+        },
+        {
+          "id": "DreadShot",
+          "name": "Dread Shot",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ]
+        },
+        {
+          "id": "IllusionTwins",
+          "name": "Illusion Twins",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectCopyWithStatuses"
+          ]
+        },
+        {
+          "id": "Inception",
+          "name": "Inception",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectMarkerState"
+          ]
+        },
+        {
+          "id": "InsanityReach",
+          "name": "Insanity Reach",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ]
+        },
+        {
+          "id": "MindBurning",
+          "name": "Mind Burning",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ]
+        },
+        {
+          "id": "MindDomination",
+          "name": "Mind Domination",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ]
+        },
+        {
+          "id": "PowerSiphon",
+          "name": "Power Siphon",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectDiscardAllBlights",
+            "Clase propia o no verificada: CardTraitBlightHandDamage"
+          ]
+        },
+        {
+          "id": "ProfaneAscending",
+          "name": "Profane Ascending",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ]
+        },
+        {
+          "id": "VitalityExtraction",
+          "name": "Vitality Extraction",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState",
+            "Clase propia o no verificada: StatusEffectMarkerState"
+          ]
+        },
+        {
+          "id": "SpawnAbyssPrincess",
+          "name": "Abyss Princess",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ]
+        },
+        {
+          "id": "SpawnChaosCreation",
+          "name": "Chaos Creation",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ]
+        },
+        {
+          "id": "SpawnEndlessShadow",
+          "name": "Endless Shadow",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectEndlessShadowRebirth"
+          ]
+        },
+        {
+          "id": "SpawnLustGhost",
+          "name": "Lust Ghost",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ]
+        }
+      ],
+      "notes": [
+        "Cierre por sección y proveedor real; no es una prueba en partida.",
+        "Se excluyen clases propias y parches funcionales; sonidos y animaciones revisados no bloquean reglas nativas.",
+        "Spare y otros eventos externos solo se admiten si su registro existe en la biblioteca incluida."
+      ]
+    },
+    {
+      "codeSources": [
+        {
+          "file": "src/AcademicEffects.cs",
+          "sha256": "fcd6903fc6ee7a393bbc7f0d012e1e4f4c49378e469317d5f1431c33078c3aa8"
+        },
+        {
+          "file": "src/AcademicMath.cs",
+          "sha256": "ff973410aa5a778dcd7283f89ef9b0f7b75d70f6556c78c7d3f499a509e62ba8"
+        },
+        {
+          "file": "src/AcademicRelics.cs",
+          "sha256": "7f4845e0c270b45d0aa6e8068fece4118c79dc2bf82614de1a641f5b0da7faaf"
+        },
+        {
+          "file": "src/AcademicRuntime.cs",
+          "sha256": "b7ef5daef1ad3d5e67ae3bed76ef47ed6b73099bf96091a751b0481678719b70"
+        },
+        {
+          "file": "src/AcademicTooltips.cs",
+          "sha256": "33b3a4a9c5cc1e73d91de8738f9623ce84baed4244a59b0d95fc600f2843c1a6"
+        },
+        {
+          "file": "src/ApprovedSpells.cs",
+          "sha256": "0265de24984915069d6aefb3175585a2dbeeeabe9e8f0d60dc63158a8e629410"
+        },
+        {
+          "file": "src/ArcaneSlayConductor.cs",
+          "sha256": "4d8e03536f0734be559dccf42b6ba5342b76ad2cd15deb5c377a24c84538cf6a"
+        },
+        {
+          "file": "src/ArcaneSlayEffects.cs",
+          "sha256": "f4984e064933da2e01d1d615797bbc7768b83ffdf2c671351a0459e41d6c282e"
+        },
+        {
+          "file": "src/ArcaneSlayEvent.cs",
+          "sha256": "ec4852e2d71a0231ff995ae66e909dc9f425ecec884e03e3c86c5fd814b19e49"
+        },
+        {
+          "file": "src/ArmorHonorsRound.cs",
+          "sha256": "4a9855b0cb1a5fc2c668c833627e9a319635f00053307b0cadba1ee6c5114eef"
+        },
+        {
+          "file": "src/BannerPresentation.cs",
+          "sha256": "a4bef9d60cb350d858f4a429969cda9b20496fc776ccef22e392619d1d4d35f3"
+        },
+        {
+          "file": "src/BattlePresentationContext.cs",
+          "sha256": "4546e04cdd3a6c6fbce48e24b7d0d204a62b3b78dc921890c8c9d410c24a0232"
+        },
+        {
+          "file": "src/CateringRules.cs",
+          "sha256": "e9ff96fe4aec65535ae58b1d0706964aca6f1528df01d6ff0b6ae92f39aaee5f"
+        },
+        {
+          "file": "src/ChampionNameRules.cs",
+          "sha256": "39e5ae355bfeff7baab7dd0cd23f121b0214646dc05b1d261be3091b95c36dba"
+        },
+        {
+          "file": "src/ChampionNames.cs",
+          "sha256": "1f0685d9519128ac21e1001e3c09851d45294e2134312f45f46d75add4eaea29"
+        },
+        {
+          "file": "src/ChampionPathText.cs",
+          "sha256": "7cabbaae7194d09527ce49520d4cdaf381ba8a42d0431d01858381b7c92c0330"
+        },
+        {
+          "file": "src/CollectionSnapshot.cs",
+          "sha256": "38393bd12c07e0ab6bdcf5dbc9d3e455c46acc70b48d4eb9817a5fe2f66a8786"
+        },
+        {
+          "file": "src/CollectiveAssessment.cs",
+          "sha256": "9b2bab649540552ef7a1f02446eb247974d4cfeb3f2a48f38c9de8ee572b893e"
+        },
+        {
+          "file": "src/CollectiveAssessmentMarker.cs",
+          "sha256": "7a7fb01d6947a91815febd964451714558fc398ab673b3241df9fc5e8a29abf9"
+        },
+        {
+          "file": "src/CollectiveAssessmentTargets.cs",
+          "sha256": "2fa6ac7923fba97a03c452dd1bcd505725524e768a8b55a7f227106f780bdf19"
+        },
+        {
+          "file": "src/CombatHooks.cs",
+          "sha256": "8a3d8ba239422337f35180b7f2bbb64f64eafa007c453840bd36eabedcf5bf2c"
+        },
+        {
+          "file": "src/ConsumableCredits.cs",
+          "sha256": "5b2a2734efbf2040f430a2b178ab5e6b16fc3b32865edcdcc63e97dceb9e2578"
+        },
+        {
+          "file": "src/ConsumedDamage.cs",
+          "sha256": "54078cfe92fb16f155fc18e60dfe48b5e2603dd4d9f825ce03e4644d98bc4895"
+        },
+        {
+          "file": "src/DeskSwap.cs",
+          "sha256": "a95e87216a011aa49d1f2233a8997a2957b8835830eae4ba972af39943b50129"
+        },
+        {
+          "file": "src/DissertationMarker.cs",
+          "sha256": "70dd755883260600a8c37ce8eb5eef1ac7a6dcd62f979fb134f971728450b3b5"
+        },
+        {
+          "file": "src/DissertationPolicy.cs",
+          "sha256": "405faf20a4b4542dcc8889e9c91e936c7ba923e2fa2658f001f9adb9a8336001"
+        },
+        {
+          "file": "src/DissertationTargeting.cs",
+          "sha256": "03c7dac009916692a341e6e272912b687d93eaea802a786b3ca9c7d9ca606bc0"
+        },
+        {
+          "file": "src/EducationPreview.cs",
+          "sha256": "c0fb021bf675b663aba0fbce9ed89e23eb128f9ff71093bb4443b5248f6ee6e4"
+        },
+        {
+          "file": "src/EffectLifetimes.cs",
+          "sha256": "c899b0eb130d91068e8f967ffc16a438d5daa3a699637bece94d8e3e5dc57613"
+        },
+        {
+          "file": "src/EnchantedDissertation.cs",
+          "sha256": "d979842ac6be85a8588c71ad2439b523ae0fe5a28b0948ef26b839eb1b1fb7e7"
+        },
+        {
+          "file": "src/ExcessCredit.cs",
+          "sha256": "c8908e2d46c92646ec890ce89409e8cdf425473a230c53aa9c9fe8ef93de3dd6"
+        },
+        {
+          "file": "src/ExcessCreditSave.cs",
+          "sha256": "34305a8e550177a22f590e2f114c6ceb575a82387ed18c2f96053f90cae26f48"
+        },
+        {
+          "file": "src/FrozenEnrollmentScholarship.cs",
+          "sha256": "8f504f77c24283eb3ecb656160bc79f1f8307d65fba375f728aeacb60a4af56f"
+        },
+        {
+          "file": "src/FrozenTuition.cs",
+          "sha256": "bb38c2ef03ed95f32386173dafda5da40b5010dc8d72460b98937d85fcc10a7e"
+        },
+        {
+          "file": "src/GrantedEffectTooltips.cs",
+          "sha256": "e397563f387264b9b9fdd1735462637c2e5e6a04717a891f29c1e6d406400db3"
+        },
+        {
+          "file": "src/HandSelection.cs",
+          "sha256": "5daf521d8f5daa1a1b3be9d90f96bf0b73bcf17f123bf1bd8cc3d1a6695f6075"
+        },
+        {
+          "file": "src/HandSelectionPresentation.cs",
+          "sha256": "4352554a7d3d6dd36c0d9fc1835a6f021e562c2dce5939aca84614c7a5b4334b"
+        },
+        {
+          "file": "src/InsuranceMarker.cs",
+          "sha256": "719a81e4089a9e1c740750d595579244bd27e62d3a38fb4203864b923fd42d75"
+        },
+        {
+          "file": "src/IntegrationEffects.cs",
+          "sha256": "965286a2a26aee743f35303d1d9c70009483c2eabaa4e92c70e7d036e90df258"
+        },
+        {
+          "file": "src/InterdepartmentalDamageMemo.cs",
+          "sha256": "8500154c647c03e565d79ba8cea349377574bda1f7913a1c26f4097ef46cb367"
+        },
+        {
+          "file": "src/LegacySpellEffects.cs",
+          "sha256": "df5c519902bf174b05ebfc1fb603ba93bd32384ffa75d0855bc49cab0919f708"
+        },
+        {
+          "file": "src/LifecycleHooks.cs",
+          "sha256": "4d198fea320b9129440437f426b8095871dbc5c6302c3336a57fb29fba71e01d"
+        },
+        {
+          "file": "src/LightningRodSafety.cs",
+          "sha256": "8aee4de1cfdaa72e2340ded28732b79d6ff607d615a8d45f7d4a5d6544565cf4"
+        },
+        {
+          "file": "src/MineMineMine.cs",
+          "sha256": "9ea39a1b5486483d1b6436b98e01375014969272fd26d1d2e57940f8a0e79745"
+        },
+        {
+          "file": "src/MineMineMineRules.cs",
+          "sha256": "5dfd3df45a7e7c491665bd962ef71e9d7c2cfbc1c22f2ed03259cb22ef02b1fa"
+        },
+        {
+          "file": "src/NextUseUpgrade.cs",
+          "sha256": "e9bed6be356dd16ed2c1244aa4dfa22211343a5dff8ee08cff69b0bece049fea"
+        },
+        {
+          "file": "src/OverdamageEvent.cs",
+          "sha256": "930fb2055ee112adc3a6cb289750c31936fafc2943e3f612b47a441f3de7ee2d"
+        },
+        {
+          "file": "src/OverhealEffects.cs",
+          "sha256": "6676f7ec574496c031d82246b09b83fca2a7d22a17e4858facc40dc7be76ffe7"
+        },
+        {
+          "file": "src/OverhealEvent.cs",
+          "sha256": "08d7c1ed40323361ba3e8be957887b9dd5c08b6c412ad8019bdf37423e28389f"
+        },
+        {
+          "file": "src/PairAssignmentPreview.cs",
+          "sha256": "5cf2b230ba233711c4a61058bab7ac2d1b2b8b23a88b665c30b3ea91d3164434"
+        },
+        {
+          "file": "src/PendingSpellRules.cs",
+          "sha256": "b2c162c84e3a14f70b5d8b1b6bcee7c79f2de62484f06575a5543c5e60d0b40e"
+        },
+        {
+          "file": "src/Plugin.cs",
+          "sha256": "e8d63310d63a42ad5039b66bf7102acdf4ad0c78defd071c1295fec619c9e3e4"
+        },
+        {
+          "file": "src/PreviewDependencies.cs",
+          "sha256": "9fc7586fdc31d2c105ca536f09e5a075e9e9c391711a72c7fa5bbb9371aefb41"
+        },
+        {
+          "file": "src/PreviewHooks.cs",
+          "sha256": "24213537646d92ac0a2b1d72921d0a478b0c0b8cd98a236b0c2fd633ee0eaf5f"
+        },
+        {
+          "file": "src/PreviewTargets.cs",
+          "sha256": "2e43f49aa30b2306dc57bc4a636a91078f9beef6ca34950e328c8f8e158a9ce6"
+        },
+        {
+          "file": "src/RelicEffectAdministrativeSilence.cs",
+          "sha256": "5e2e9d534065327c9e436564996854a49dc6051a666933278a26bfd6cd70b562"
+        },
+        {
+          "file": "src/RelicEffectComplaintsOffice.cs",
+          "sha256": "b7184bf218a816a0ee4173bba040b21b14493b5d648e2546c06d44bbee4345fa"
+        },
+        {
+          "file": "src/RelicEffectConsumeCopy.cs",
+          "sha256": "f47faa182010ef9af210616167c85f8d5feb52374b2b9db58b5bfd25638828dc"
+        },
+        {
+          "file": "src/RelicEffectExtendedExam.cs",
+          "sha256": "1f6b72ad830487f535eb6e7420e7740dcb72c57d1bf8f467ccbced2327760a56"
+        },
+        {
+          "file": "src/RelicEffectLethalRefund.cs",
+          "sha256": "9a866b42541c568d8ecd1e4c26632e3055ef78f0535a5787828fe0f46157fb5a"
+        },
+        {
+          "file": "src/RelicEffectOffensiveMedicine.cs",
+          "sha256": "16bce17e531c5799e5b025e1c5f24665776270a35300b6886310857e330b8bc9"
+        },
+        {
+          "file": "src/RelicEffectQuietStudy.cs",
+          "sha256": "97dc7784cddf57d6bb94ed5ba5686bfa8b85ddf9d4bb3ea1404705e588aac8b8"
+        },
+        {
+          "file": "src/RelicEffectRelationsCommittee.cs",
+          "sha256": "c58872202a3ffaeddf7916a4d260887be160b0078ac4efaaeadb66faa3b12f12"
+        },
+        {
+          "file": "src/RelicEffectStrengthChair.cs",
+          "sha256": "7d3f1a4f5dd4c82fa95855d5abf5cb0925ef325ddf70a4c555e510ab89f5e5f1"
+        },
+        {
+          "file": "src/RepresentativeDamage.cs",
+          "sha256": "618953e2035f0576c992fa7ccd77ecdd71cbeed6234ea3cb8a28988029227d6d"
+        },
+        {
+          "file": "src/ReservedSpellMarkers.cs",
+          "sha256": "f706329796b991c6ffac1915e57426dd224326fd49f077ff26c5aa96a191584e"
+        },
+        {
+          "file": "src/RingPermitLedger.cs",
+          "sha256": "cfe94002bf1b904e2af362ee8b72e773cb56305a26f6d9a48d104ef480f3f04c"
+        },
+        {
+          "file": "src/RoomPowerEligibility.cs",
+          "sha256": "eb8dc51124b3e7ef44857da939965e6bcea14a41defadafade3524e3c33ef8b4"
+        },
+        {
+          "file": "src/RunLoadDiagnostic.cs",
+          "sha256": "bb1104fbbbaaadf7aaed78b5cdbe3c4f0b60339aa5d191602e02ee2ad3d9782d"
+        },
+        {
+          "file": "src/ScholarshipStatus.cs",
+          "sha256": "116f7cb525137cee95f5b5495e521c9caf3a8b4c2350e627d709891f998882e1"
+        },
+        {
+          "file": "src/SocialRules.cs",
+          "sha256": "1fddeb78342c0615e47d037b5a523d3ef48d3b5760f00b2ffa579d2f7d7ce18a"
+        },
+        {
+          "file": "src/SpatialCreditNotification.cs",
+          "sha256": "261e75b95ba1d4e2358215ac1a68a67567906a738a410e7ddfd47af2ad136c07"
+        },
+        {
+          "file": "src/SpellReplay.cs",
+          "sha256": "16c845d2c97acd788141f66f26419b49e53f1691477fb85d2cc90552083ae69a"
+        },
+        {
+          "file": "src/SpellRules.cs",
+          "sha256": "1afaf6cff76988bd26c5a96ee33ff27b8a829f66ec786ebd125336c70d8501a7"
+        },
+        {
+          "file": "src/SpellTrample.cs",
+          "sha256": "7aa6b9db092230aa0886b6a34f70d847cf392a973cde66e8c998f438bdea357a"
+        },
+        {
+          "file": "src/TooltipFailureDiagnostic.cs",
+          "sha256": "bf6b39947e395cc1f1842e858da3a5f14aeb250f3e37777325bc53405f59ca01"
+        },
+        {
+          "file": "src/TooltipIdentity.cs",
+          "sha256": "fbaaeed1a6a6629180a9fa055786b1e5ce3b3268aef6c875a0d52ae37a7721fb"
+        },
+        {
+          "file": "src/TrainingWand.cs",
+          "sha256": "71b7f431a677d70e422d22fd996a2f6938835fad81e088169136d6f5a42a103f"
+        },
+        {
+          "file": "src/TrainingWandText.cs",
+          "sha256": "3e2d8c7926e8efa0b97dbc69476e71eedba6489d29790771cd6b621836af09f5"
+        },
+        {
+          "file": "src/TrampleOverflowGuard.cs",
+          "sha256": "c5f103becce59ddda911eaad83db27900c20bcc4d23984cadbe8d088f0cce143"
+        },
+        {
+          "file": "src/TurnCleanup.cs",
+          "sha256": "8f921d0de4567f7574648da616f8329d893dc51eff9cceb8d570ebd68a0f1b59"
+        },
+        {
+          "file": "src/UnitBindings.cs",
+          "sha256": "3ca4f6185853b8c495f03af4a106ce72e9468819233a99b790923d3e7ca275bb"
+        },
+        {
+          "file": "src/UnitSpellPassives.cs",
+          "sha256": "f9ef8b25984c979c7945c0b28b089b1fc058575862907d06db599e1b189b8d67"
+        }
+      ],
+      "reviewedCode": [
+        {
+          "source": "ww",
+          "file": "src/AcademicTooltips.cs",
+          "sha256": "33b3a4a9c5cc1e73d91de8738f9623ce84baed4244a59b0d95fc600f2843c1a6",
+          "classification": "presentation",
+          "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+        },
+        {
+          "source": "ww",
+          "file": "src/ChampionNameRules.cs",
+          "sha256": "39e5ae355bfeff7baab7dd0cd23f121b0214646dc05b1d261be3091b95c36dba",
+          "classification": "presentation",
+          "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+        },
+        {
+          "source": "ww",
+          "file": "src/ChampionNames.cs",
+          "sha256": "1f0685d9519128ac21e1001e3c09851d45294e2134312f45f46d75add4eaea29",
+          "classification": "presentation",
+          "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+        },
+        {
+          "source": "ww",
+          "file": "src/ChampionPathText.cs",
+          "sha256": "7cabbaae7194d09527ce49520d4cdaf381ba8a42d0431d01858381b7c92c0330",
+          "classification": "presentation",
+          "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+        },
+        {
+          "source": "ww",
+          "file": "src/PairAssignmentPreview.cs",
+          "sha256": "5cf2b230ba233711c4a61058bab7ac2d1b2b8b23a88b665c30b3ea91d3164434",
+          "classification": "presentation",
+          "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+        },
+        {
+          "source": "ww",
+          "file": "src/SpatialCreditNotification.cs",
+          "sha256": "261e75b95ba1d4e2358215ac1a68a67567906a738a410e7ddfd47af2ad136c07",
+          "classification": "presentation",
+          "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+        }
+      ],
+      "source": "ww",
+      "version": "0.1.171",
+      "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+      "totalCards": 68,
+      "totalRelics": 10,
+      "notCandidates": [
+        {
+          "id": "WW_C01_Ability",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "WW_E01_Ability",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "WW_U06_Ability",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "WW_U10_Ability",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "WW_U11_Ability",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        },
+        {
+          "id": "WW_U18_Ability",
+          "reason": "Carta auxiliar de habilidad: se revisa si una carta seleccionada la necesita."
+        }
+      ],
+      "scanned": 72,
+      "accepted": [
+        "ww-WW_E02",
+        "ww-WW_S12",
+        "ww-WW_S13",
+        "ww-WW_S14",
+        "ww-WW_S20",
+        "ww-WW_S22",
+        "ww-WW_S23",
+        "ww-WW_S26",
+        "ww-WW_S29",
+        "ww-WW_S31",
+        "ww-WW_T01",
+        "ww-WW_T02",
+        "ww-WW_G02",
+        "ww-WW_G03",
+        "ww-WW_G04",
+        "ww-WW_G05"
+      ],
+      "excluded": [
+        {
+          "id": "WW_Token_ExtraCredit",
+          "name": "Extra Credit",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicAuthoredDamage",
+            "Dependencia funcional o no resuelta en C#: src/ExcessCredit.cs -> cards/WW_Token_ExtraCredit"
+          ]
+        },
+        {
+          "id": "WW_C01",
+          "name": "Dean of the Hat Department",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicWizardDraw",
+            "Clase propia o no verificada: CardTraitAcademicNextUseUpgrade",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Dependencia funcional o no resuelta en C#: src/SocialRules.cs -> cards/WW_C01"
+          ]
+        },
+        {
+          "id": "WW_C02",
+          "name": "Professor of Advanced Witchcraft",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectMineMineMineClaim",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Dependencia funcional o no resuelta en C#: src/SocialRules.cs -> cards/WW_C02",
+            "Evento no verificado: @WW_MineMineMine",
+            "Requiere bundle o evento propio: WW_MineMineMine"
+          ]
+        },
+        {
+          "id": "WW_E01",
+          "name": "Withdrawal Stamp",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicPurgePermit",
+            "Dependencia funcional o no resuelta en C#: src/IntegrationEffects.cs -> cards/WW_E01"
+          ]
+        },
+        {
+          "id": "WW_E03",
+          "name": "Tenured Wand",
+          "reasons": [
+            "Evento no verificado: @WW_ArcaneSlay",
+            "Requiere bundle o evento propio: WW_ArcaneSlay"
+          ]
+        },
+        {
+          "id": "WW_R01",
+          "name": "Strictly Platonic",
+          "reasons": [
+            "Clase propia o no verificada: RoomStateAcademicPlatonic"
+          ]
+        },
+        {
+          "id": "WW_R02",
+          "name": "Awkward Silence",
+          "reasons": [
+            "Clase propia o no verificada: CardTraitAcademicPairPower",
+            "Clase propia o no verificada: RoomStateAcademicPower"
+          ]
+        },
+        {
+          "id": "WW_S01",
+          "name": "Interdepartmental Damage Memo",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicInterdepartmentalMemo"
+          ]
+        },
+        {
+          "id": "WW_S02",
+          "name": "Enchanted Dissertation",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicDissertation"
+          ]
+        },
+        {
+          "id": "WW_Dissertation_Allies",
+          "name": "Allies",
+          "reasons": [
+            "Contenido de pruebas o selección auxiliar, no una carta autónoma para aprender."
+          ]
+        },
+        {
+          "id": "WW_Dissertation_Enemies",
+          "name": "Enemies",
+          "reasons": [
+            "Contenido de pruebas o selección auxiliar, no una carta autónoma para aprender."
+          ]
+        },
+        {
+          "id": "WW_S03",
+          "name": "Weakness Central Office",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicTransfer"
+          ]
+        },
+        {
+          "id": "WW_S04",
+          "name": "Offensive Medicine Practicum",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicSpellRule"
+          ]
+        },
+        {
+          "id": "WW_S05",
+          "name": "Consume and Re-enroll",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicInteractiveRule"
+          ]
+        },
+        {
+          "id": "WW_S06",
+          "name": "Extraordinary Exam Session",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicInteractiveRule"
+          ]
+        },
+        {
+          "id": "WW_S07",
+          "name": "Conduit Credit Transfer",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicConduitTransfer"
+          ]
+        },
+        {
+          "id": "WW_S08",
+          "name": "Consumed Bibliography",
+          "reasons": [
+            "Clase propia o no verificada: CardTraitAcademicConsumedDamage"
+          ]
+        },
+        {
+          "id": "WW_S09",
+          "name": "Concussion Scholarship",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicScholarship"
+          ]
+        },
+        {
+          "id": "WW_S10",
+          "name": "Double Publication",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicSpellRule"
+          ]
+        },
+        {
+          "id": "WW_S11",
+          "name": "Credit Recovery",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicInteractiveRule"
+          ]
+        },
+        {
+          "id": "WW_S15",
+          "name": "Negative Group Assignment",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicTransfer"
+          ]
+        },
+        {
+          "id": "WW_S16",
+          "name": "Vital Records Exchange",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicHealthExchange"
+          ]
+        },
+        {
+          "id": "WW_S17",
+          "name": "One Turn Sabbatical",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicSabbatical"
+          ]
+        },
+        {
+          "id": "WW_S18",
+          "name": "Desk Swap",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicDeskSwap"
+          ]
+        },
+        {
+          "id": "WW_S19",
+          "name": "Course Withdrawal",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicDiscardForEmber"
+          ]
+        },
+        {
+          "id": "WW_S21",
+          "name": "Armored Honors Enrollment",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicArmorHonors"
+          ]
+        },
+        {
+          "id": "WW_S24",
+          "name": "Loaned Equipment Return",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicEquipmentReturn"
+          ]
+        },
+        {
+          "id": "WW_S25",
+          "name": "Arcane Liability Insurance",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicOneTurnUpgrade",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance"
+          ]
+        },
+        {
+          "id": "WW_S27",
+          "name": "Campus Ice Cream Stand",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicCatering",
+            "Dependencia funcional o no resuelta en C#: src/CateringRules.cs -> characters/WW_Token_IceCreamStand",
+            "Registro de estado propio en Plugin.cs: characters/WW_Token_IceCreamStand"
+          ]
+        },
+        {
+          "id": "WW_S28",
+          "name": "Deferred Project",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicReturnFrozen"
+          ]
+        },
+        {
+          "id": "WW_S30",
+          "name": "Tome of Destructive Assessment",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicTome"
+          ]
+        },
+        {
+          "id": "WW_S32",
+          "name": "Pair Assignment",
+          "reasons": [
+            "Dependencia funcional o no resuelta en C#: src/SpellRules.cs -> cards/WW_S32"
+          ]
+        },
+        {
+          "id": "WW_U01",
+          "name": "Lightning Rod Intern",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Dependencia funcional o no resuelta en C#: src/CombatHooks.cs -> cards/WW_U01",
+            "Dependencia funcional o no resuelta en C#: src/IntegrationEffects.cs -> cards/WW_U01"
+          ]
+        },
+        {
+          "id": "WW_U02",
+          "name": "PhD in Arcane First Aid",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Registro de estado propio en Plugin.cs: characters/WW_U02_Character"
+          ]
+        },
+        {
+          "id": "WW_U03",
+          "name": "Professor of Hostile Medicine",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectOverhealDamage",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Evento no verificado: @WW_Overheal",
+            "Requiere bundle o evento propio: WW_Overheal"
+          ]
+        },
+        {
+          "id": "WW_U04",
+          "name": "Professor of Magical Education",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicTrainingWand",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Registro de estado propio en Plugin.cs: characters/WW_U04_Character"
+          ]
+        },
+        {
+          "id": "WW_U05",
+          "name": "Explosive Lab Assistant",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Evento no verificado: @WW_ArcaneSlay",
+            "Requiere bundle o evento propio: WW_ArcaneSlay"
+          ]
+        },
+        {
+          "id": "WW_U06",
+          "name": "Professor of Shared Damages",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicCollectiveAssessment",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance"
+          ]
+        },
+        {
+          "id": "WW_U08",
+          "name": "Postdoc of Unfinished Business",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicCopyLastCommon",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance"
+          ]
+        },
+        {
+          "id": "WW_U10",
+          "name": "Consumable Credits Intern",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicConsumeCredits",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance"
+          ]
+        },
+        {
+          "id": "WW_U11",
+          "name": "Lost Spells Archivist",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance"
+          ]
+        },
+        {
+          "id": "WW_U13",
+          "name": "Emeritus Professor of Defensive Medicine",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectOverhealStatus",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Evento no verificado: @WW_Overheal",
+            "Requiere bundle o evento propio: WW_Overheal"
+          ]
+        },
+        {
+          "id": "WW_U16",
+          "name": "Applied Weakness Inspector",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance"
+          ]
+        },
+        {
+          "id": "WW_U17",
+          "name": "First Spell Class Representative",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Registro de estado propio en Plugin.cs: characters/WW_U17_Character"
+          ]
+        },
+        {
+          "id": "WW_U18",
+          "name": "Professor of Frozen Tuition",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Registro de estado propio en Plugin.cs: characters/WW_U18_Character"
+          ]
+        },
+        {
+          "id": "WW_G01",
+          "name": "Training Wand",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicTrainingWand"
+          ]
+        },
+        {
+          "id": "WW_A01",
+          "name": "Chair of Magical Strength",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectStrengthChair",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A01"
+          ]
+        },
+        {
+          "id": "WW_A02",
+          "name": "Consumable Spell Photocopier",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectConsumeCopy",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A02"
+          ]
+        },
+        {
+          "id": "WW_A03",
+          "name": "Frozen Enrollment Scholarship",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectAcademicFrozenDraw"
+          ]
+        },
+        {
+          "id": "WW_A04",
+          "name": "Certificate of Good Conduct",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectQuietStudy",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A04"
+          ]
+        },
+        {
+          "id": "WW_A05",
+          "name": "Lethal Tuition Refund",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectLethalRefund",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A05"
+          ]
+        },
+        {
+          "id": "WW_A06",
+          "name": "Extended Exam Session",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectExtendedExam",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A06"
+          ]
+        },
+        {
+          "id": "WW_A07",
+          "name": "Committee for Improper Relations",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectRelationsCommittee",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A07"
+          ]
+        },
+        {
+          "id": "WW_A08",
+          "name": "Administrative Minute of Silence",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectAdministrativeSilence",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A08"
+          ]
+        },
+        {
+          "id": "WW_A09",
+          "name": "Office of Complaints and Curses",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectComplaintsOffice",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A09"
+          ]
+        },
+        {
+          "id": "WW_A10",
+          "name": "Offensive Medicine Practicum",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectOffensiveMedicine",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A10"
+          ]
+        }
+      ],
+      "notes": [
+        "Cierre por sección y proveedor real; no es una prueba en partida.",
+        "Se excluyen clases propias y parches funcionales; sonidos y animaciones revisados no bloquean reglas nativas.",
+        "Spare y otros eventos externos solo se admiten si su registro existe en la biblioteca incluida."
+      ]
+    }
+  ]
+}

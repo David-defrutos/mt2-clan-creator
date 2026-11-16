@@ -1,0 +1,10 @@
+import React from 'react';
+import type {CardDraft} from '../../server/creator/model';
+import {unitAuras,unitAuraSource} from '../../server/creator/unit-auras';
+import {referencedParameters} from './champion-copy';
+import {description,type Language} from './presentation';
+import {numberField,parameterLabel} from './components';
+export function auraParameters(template:any){return template?unitAuras(template.example.document,template.example.root).flatMap(a=>referencedParameters(template,'room_modifiers',a.id)):[];}
+export function auraDescription(card:CardDraft,template:any,id:string,language:Language,rules:any){const isolated=structuredClone(template),e=isolated.example,{card:root,unit}=unitAuraSource(e.document,e.root);root.descriptions={};root.traits=[];root.triggers=[];root.initial_upgrades=[];unit.starting_status_effects=[];unit.triggers=[];delete unit.ability;unit.room_modifiers=['@'+id];return description({...card,description:'',abilities:[],effects:[],removedAuras:[]},isolated,language,rules);}
+export function UnitAuraEditor({card,template,onChange,rules,language}:{card:CardDraft;template:any;onChange:(card:CardDraft)=>void;rules:any;language:Language}){if(!template)return null;const t=(key:string)=>rules.labels[key][language];return <>{unitAuras(template.example.document,template.example.root).filter(a=>!card.removedAuras?.includes(a.id)).map(a=><section className="unit-aura-card" key={a.id}><p>{auraDescription(card,template,a.id,language,rules)}</p>{referencedParameters(template,'room_modifiers',a.id).map((p:any,i:number)=>numberField(parameterLabel(p,language,rules)+(i?' · '+(i+1):''),card.parameters[p.key]??p.value,v=>onChange({...card,parameters:{...card.parameters,[p.key]:v}}),-100000,100000))}<button className="quiet danger" onClick={()=>onChange({...card,removedAuras:[...(card.removedAuras??[]),a.id]})}>{t('removeEffect')}</button></section>)}</>;}
+// 2026-11-15-2041||codex-clan-editor||clan-creator/src/web/creator/unit-aura-editor.tsx||Mostrar cada aura como efecto editable con boton Eliminar efecto en la copia

@@ -1,0 +1,10 @@
+import React from 'react';
+import type {PathLevel} from '../../server/creator/model';
+import {nativeLevelTemplate,levelParameters} from './champion-copy';
+import {inheritedAbilities} from './inherited-abilities';
+import {UnitAbilities} from './unit-abilities';
+import {TemplateEffectsEditor,templateEffectParameterKeys} from './template-effects-editor';
+import {numberField,parameterLabel} from './components';
+import type {Language} from './presentation';
+export function NativePathEffects({level,detail,onChange,rules,language}:{level:PathLevel;detail:any;onChange:(level:PathLevel)=>void;rules:any;language:Language}){if(!level.native||!detail)return null;const template=nativeLevelTemplate(level,detail),root={section:'upgrades',id:level.native.upgradeId},card={...detail.card,parameters:level.native.parameters,removedTemplateEffects:level.native.removedTemplateEffects};const inherited=inheritedAbilities(card,template).filter(a=>a.key?.startsWith('upgrades|'+root.id+'|')),abilityKeys=new Set(inherited.map(a=>a.key)),effectKeys=templateEffectParameterKeys(template,root);return <><UnitAbilities value={level.abilities} inherited={inherited} onInheritedChange={(key,count)=>onChange({...level,native:{...level.native!,parameters:{...level.native!.parameters,[key]:count}}})} onChange={abilities=>onChange({...level,abilities})} rules={rules} language={language}/><TemplateEffectsEditor card={card} template={template} root={root} onChange={card=>onChange({...level,native:{...level.native!,parameters:card.parameters,removedTemplateEffects:card.removedTemplateEffects}})} rules={rules} language={language}/>{levelParameters(level,detail).filter((p:any)=>!effectKeys.has(p.key)&&!abilityKeys.has(p.key)).map((p:any,i:number)=>numberField(parameterLabel(p,language,rules)+(i?' · '+(i+1):''),level.native!.parameters[p.key]??p.value,value=>onChange({...level,native:{...level.native!,parameters:{...level.native!.parameters,[p.key]:value}}}),-100000,100000))}</>;}
+// 2026-11-15-2048||codex-clan-editor||clan-creator/src/web/creator/native-path-effects.tsx||Editar o eliminar efectos y capacidades nativas de cada nivel de senda con los mismos controles generales

@@ -1,0 +1,2 @@
+export function clanFolderName(name:string){let folder=Array.from(name.normalize('NFC').replace(/[<>:"/\\|?*\x00-\x1f]/g,'-').replace(/\s+/g,' ').replace(/^[. ]+|[. ]+$/g,'')).slice(0,60).join('').replace(/[. ]+$/g,'');if(!folder)folder='Mi clan';if(/^(?:CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])(?:[.]|$)/i.test(folder))folder='_'+folder;return folder;}
+// 2026-11-15-2239||codex-clan-editor||clan-creator/src/server/creator/clan-folder.ts||Usar nombre legible de clan como carpeta con caracteres y nombres validos en Windows

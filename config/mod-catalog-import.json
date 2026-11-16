@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "freecompany",
+      "root": "repos/MT2/repos-propios/mt2-freecompany",
+      "json": "json",
+      "manifest": "manifest.json",
+      "name": "The Free Company"
+    },
+    {
+      "id": "succclan",
+      "root": "repos/MT2/variaciones-mias/mt2-succclan",
+      "json": "json",
+      "manifest": "manifest.json",
+      "name": "SuccClan"
+    },
+    {
+      "id": "ww",
+      "root": "salidas/build/ww-inc",
+      "json": "content/json",
+      "manifest": "thunderstore/manifest.json",
+      "name": "W&W Inc."
+    }
+  ],
+  "cardTypes": [
+    "monster",
+    "spell",
+    "room",
+    "equipment",
+    "blight",
+    "junk"
+  ],
+  "referenceSections": {
+    "cards": "cards",
+    "card_art": "game_objects",
+    "character_art": "game_objects",
+    "sprite": "sprites",
+    "icon": "sprites",
+    "icon_small": "sprites",
+    "portrait": "sprites",
+    "param_character": "characters",
+    "param_character_data": "characters",
+    "param_upgrade": "upgrades",
+    "param_card_upgrade": "upgrades",
+    "room_modifier_upgrades": "room_modifiers",
+    "room_modifiers": "room_modifiers",
+    "modifiers": "room_modifiers",
+    "effects": "effects",
+    "traits": "traits",
+    "trait_upgrades": "traits",
+    "ability": "cards",
+    "ability_upgrade": "cards",
+    "room_ability_upgrade": "cards",
+    "param_card": "cards",
+    "status": "status_effects",
+    "subtypes": "subtypes",
+    "relic_effects": "relic_effects",
+    "relic_effect_conditions": "relic_effect_conditions",
+    "param_card_filter": "upgrade_masks",
+    "filters": "upgrade_masks",
+    "initial_upgrades": "upgrades",
+    "remove_upgrades": "upgrades",
+    "card_pools": "card_pools",
+    "param_card_pool": "card_pools",
+    "card_pool": "card_pools",
+    "additional_tooltips": "additional_tooltips",
+    "applied_vfx": "vfxs",
+    "impact_vfx": "vfxs",
+    "projectile_vfx": "vfxs",
+    "trigger_upgrades": "character_triggers",
+    "card_trigger_upgrades": "card_triggers",
+    "target_mode": "target_modes",
+    "target_mode2": "target_modes",
+    "tracked_value": "tracked_value_types",
+    "tracked_value_type": "tracked_value_types"
+  },
+  "reviews": [
+    {
+      "source": "freecompany",
+      "file": "src/code/FreeCompanyCardSounds.cs",
+      "sha256": "fad359be0ea13aaa42f7babe7bf0926fb9ba9aa5ebf0a78ce2d29822791e24c5",
+      "classification": "presentation",
+      "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+    },
+    {
+      "source": "freecompany",
+      "file": "src/code/ChampionCardTypeLabel.cs",
+      "sha256": "60a490ae8e1a6f194f73bc01c33c8dd6ae9beed0c5c798c723dcf5b200c62144",
+      "classification": "presentation",
+      "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+    },
+    {
+      "source": "freecompany",
+      "file": "src/code/ChampionSpriteVisuals.cs",
+      "sha256": "2a46b148094176929862f1ae56dcef9bc118fab6c78991c24a76cd4d7249eefb",
+      "classification": "required_visual_fix",
+      "reason": "El parche oculta el SpriteRenderer de referencia y corrige bounds/anclajes del quad animado. Con Trainworks 0.8.0 la ruta animada habilita ese renderer. Estos personajes no se admiten sin conservar o sustituir esa corrección; no se aproxima el arte.",
+      "ids": [
+        "RodericCharacterArt",
+        "VesperCharacterArt"
+      ]
+    },
+    {
+      "source": "freecompany",
+      "file": "src/code/VesperAnimationTiming.cs",
+      "sha256": "55b892b252885720e6c70a8d2d60736279d0fb55ac30dc186529c02e6c93d90f",
+      "classification": "presentation",
+      "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+    },
+    {
+      "source": "freecompany",
+      "file": "src/code/CardEffectRequisition.cs",
+      "sha256": "17989f28028d714f50552c90becb9c6a40a8513cedc87f156adde184ef6ff41d",
+      "classification": "consumer",
+      "sections": [
+        "subtypes",
+        "cards",
+        "game_objects",
+        "sprites"
+      ],
+      "reason": "Requisition selecciona equipos existentes y los añade a mano; no implementa sus efectos al equipar. Los equipos y su arte funcionan solos. El efecto CardEffectRequisition sigue excluido por su clase propia."
+    },
+    {
+      "source": "freecompany",
+      "file": "src/code/CardEffectOfferRandomFromPool.cs",
+      "sha256": "8f4de031c8049d94591b3a775f90c9d87a537e4ea62fd9eb140344cc11547bc5",
+      "classification": "consumer",
+      "sections": [
+        "subtypes",
+        "card_pools"
+      ],
+      "reason": "El efecto C# consume categorías o pools; mencionar un subtipo no añade una regla intrínseca a cada unidad. El efecto propio sigue excluido por su clase."
+    },
+    {
+      "source": "freecompany",
+      "file": "src/code/CardEffectConsumeFromHand.cs",
+      "sha256": "7ba7704f6d050d731f99986b1cd206f3578f0097bd2a64a1f39b046cfcbe132b",
+      "classification": "consumer",
+      "sections": [
+        "card_pools"
+      ],
+      "reason": "El efecto C# consume categorías o pools; mencionar un subtipo no añade una regla intrínseca a cada unidad. El efecto propio sigue excluido por su clase."
+    },
+    {
+      "source": "succclan",
+      "file": "src/code/ChampionCardAnimation.cs",
+      "sha256": "4d22a035902d45306cb8f6b970b840cc26dfd7bbf81806fe45ed29a99e04fa3b",
+      "classification": "presentation",
+      "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+    },
+    {
+      "source": "succclan",
+      "file": "src/code/ButcherAnimationRendering.cs",
+      "sha256": "b9950a730de548d0c5c82604160d20404c7a899bab35e91b6fb35a5c17d1a14c",
+      "classification": "presentation",
+      "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+    },
+    {
+      "source": "succclan",
+      "file": "src/code/SuccClanPresentation.cs",
+      "sha256": "1351d6873c9ed489c1cb80265091e5ddafe48fd8819626326f4801c717ebe12e",
+      "classification": "presentation",
+      "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+    },
+    {
+      "source": "ww",
+      "file": "src/ChampionNameRules.cs",
+      "sha256": "39e5ae355bfeff7baab7dd0cd23f121b0214646dc05b1d261be3091b95c36dba",
+      "classification": "presentation",
+      "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+    },
+    {
+      "source": "ww",
+      "file": "src/ChampionNames.cs",
+      "sha256": "1f0685d9519128ac21e1001e3c09851d45294e2134312f45f46d75add4eaea29",
+      "classification": "presentation",
+      "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+    },
+    {
+      "source": "ww",
+      "file": "src/ChampionPathText.cs",
+      "sha256": "7cabbaae7194d09527ce49520d4cdaf381ba8a42d0431d01858381b7c92c0330",
+      "classification": "presentation",
+      "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+    },
+    {
+      "source": "ww",
+      "file": "src/AcademicTooltips.cs",
+      "sha256": "33b3a4a9c5cc1e73d91de8738f9623ce84baed4244a59b0d95fc600f2843c1a6",
+      "classification": "presentation",
+      "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+    },
+    {
+      "source": "ww",
+      "file": "src/SpatialCreditNotification.cs",
+      "sha256": "261e75b95ba1d4e2358215ac1a68a67567906a738a410e7ddfd47af2ad136c07",
+      "classification": "presentation",
+      "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+    },
+    {
+      "source": "ww",
+      "file": "src/PairAssignmentPreview.cs",
+      "sha256": "5cf2b230ba233711c4a61058bab7ac2d1b2b8b23a88b665c30b3ea91d3164434",
+      "classification": "presentation",
+      "reason": "Sonido, imagen, animación o texto de presentación; no implementa las reglas de la carta. No se copia su C#."
+    }
+  ],
+  "excludeCandidatePatterns": [
+    "TestDeck",
+    "^WW_Dissertation_(Allies|Enemies)$"
+  ],
+  "ignoredReferenceFields": [
+    "class",
+    "pools",
+    "chatter",
+    "lore_tooltips",
+    "lore_style"
+  ],
+  "functionalAssignments": {
+    "ww": [
+      "WW_U17_Character",
+      "WW_U02_Character",
+      "WW_U04_Character",
+      "WW_U18_Character",
+      "WW_Token_IceCreamStand",
+      "WW_Token_IceCream",
+      "WW_Token_Chaperon",
+      "WW_Token_Chaperona"
+    ]
+  }
+}

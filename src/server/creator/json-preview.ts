@@ -1,0 +1,6 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {generateClan} from './export.js';
+import type {Draft} from './model.js';
+export async function generatedJsonPreview(draft:Draft){const generated=await generateClan(draft),files:{name:string;path:string;content:string}[]=[];async function walk(dir:string){for(const entry of (await fs.readdir(dir,{withFileTypes:true})).sort((a,b)=>a.name.localeCompare(b.name))){const file=path.join(dir,entry.name);if(entry.isSymbolicLink())throw Error('El archivo generado no es valido.');if(entry.isDirectory())await walk(file);else if(entry.isFile()&&entry.name.endsWith('.json')){const content=await fs.readFile(file,'utf8');JSON.parse(content.replace(/^\uFEFF/,''));files.push({name:path.relative(generated.root,file).replaceAll('\\','/'),path:file,content});}}}await walk(path.join(generated.root,'json'));const manifest=path.join(generated.root,'manifest.json');files.push({name:'manifest.json',path:manifest,content:await fs.readFile(manifest,'utf8')});return {revision:draft.revision,root:generated.root,files,readOnly:true};}
+// 2026-11-15-2341||codex-clan-editor||clan-creator/src/server/creator/json-preview.ts||Preparar archivos JSON reales del borrador sin compilar instalar ni empaquetar y devolver solo lectura
