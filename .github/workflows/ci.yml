@@ -40,7 +40,7 @@ jobs:
           }
           if (-not $found) { throw 'Tested release resources are unavailable.' }
           $zip = Join-Path $bundleDir 'ClanCreator-win32-x64-2026-11-16-2040.zip'
-          if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant() -ne '61e7bf4fc64d6e29fa76b8fe8f7159685a49153dc2422417a66e3f72db4cd659') { throw 'Release resource hash mismatch.' }
+          if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant() -ne 'fbf98ee92644b140c755fd38ffe918d3ff681228b3faedaa16cbedb864ff27cc') { throw 'Release resource hash mismatch.' }
           Expand-Archive -LiteralPath $zip -DestinationPath $bundleDir
           Copy-Item -LiteralPath (Join-Path $bundleDir 'ClanCreator/catalog/official') -Destination 'catalog/official' -Recurse
           New-Item -ItemType Directory -Path 'vendor' -Force | Out-Null

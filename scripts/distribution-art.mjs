@@ -1,0 +1,11 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+export function dlcImagePaths(index,art){const ids=new Set(index.items.filter(e=>e.requiredDlc).map(e=>e.requiredDlc)),images=new Set(index.items.filter(e=>e.requiredDlc).flatMap(e=>[e.picture,e.characterPicture]).filter(Boolean));for(const [key,frame]of Object.entries(art.frames??{}))if([...ids].some(id=>key.endsWith('-'+id)))images.add(frame.asset);return images;}
+export async function sanitizeDistributionArt(root){const catalog=path.join(root,'catalog'),official=path.join(catalog,'official'),indexFile=path.join(official,'index.json'),artFile=path.join(official,'art-manifest.json'),index=JSON.parse(await fs.readFile(indexFile,'utf8')),art=JSON.parse(await fs.readFile(artFile,'utf8')),excluded=dlcImagePaths(index,art);let changed=0,removed=0;
+ for(const entry of index.items){const file=path.join(official,'examples',entry.id+'.json');const example=JSON.parse(await fs.readFile(file,'utf8'));let dirty=false;for(const object of [entry,example]){for(const key of ['picture','characterPicture'])if(excluded.has(object[key])){object[key]='';dirty=true;}for(const [key,value]of Object.entries(object.assets??{}))if(excluded.has(value)){delete object.assets[key];dirty=true;}}
+  if(dirty){const bytes=Buffer.from(JSON.stringify(example,null,2));await fs.writeFile(file,bytes);entry.sha256=createHash('sha256').update(bytes).digest('hex');changed++;}}
+ for(const collection of ['frames','portraits'])for(const [key,value]of Object.entries(art[collection]??{}))if(excluded.has(value.asset))delete art[collection][key];
+ for(const asset of excluded){if(!/^official\/assets\/[a-f0-9]{64}\.png$/.test(asset))throw Error('Invalid DLC artwork path.');const file=path.join(catalog,asset);try{await fs.unlink(file);removed++;}catch(e){if(e.code!=='ENOENT')throw e;}}
+ await fs.writeFile(indexFile,JSON.stringify(index,null,2));await fs.writeFile(artFile,JSON.stringify(art,null,2));return {excluded:[...excluded],removed,examplesWithoutDlcImages:changed};}
+// 2026-11-17-0025||codex-clan-editor||clan-creator/scripts/distribution-art.mjs||Excluir imágenes y marcos DLC únicamente de copias de distribución conservando datos efectos y originales locales

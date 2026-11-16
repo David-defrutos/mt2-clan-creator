@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import {sanitizeDistributionArt,dlcImagePaths} from '../scripts/distribution-art.mjs';
+test('public package removes only DLC image files and references, retaining card graphs and valid hashes',async t=>{
+ const root=await fs.mkdtemp(path.join(os.tmpdir(),'creator-art-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));const dir=path.join(root,'catalog/official');await fs.mkdir(path.join(dir,'examples'),{recursive:true});await fs.mkdir(path.join(dir,'assets'));
+ const asset=(c:string)=>'official/assets/'+c.repeat(64)+'.png',dlc=asset('a'),base=asset('b'),frame=asset('c'),index={items:[{id:'base',picture:base},{id:'dlc',requiredDlc:'punished',picture:dlc}]},graph={cards:[{id:'Champion',effects:['@Punish']}],effects:[{id:'Punish',name:'CardEffectAddStatusEffect',param_status_effects:[{status:'zeal',count:5}]}]};for(const entry of index.items){const bytes=Buffer.from(JSON.stringify({...entry,document:graph}));await fs.writeFile(path.join(dir,'examples',entry.id+'.json'),bytes);(entry as any).sha256=createHash('sha256').update(bytes).digest('hex');}await fs.writeFile(path.join(dir,'index.json'),JSON.stringify(index));await fs.writeFile(path.join(dir,'art-manifest.json'),JSON.stringify({frames:{'unit-cardframe-punished':{asset:frame},'unit-cardframe-awoken':{asset:base}},portraits:{dlc:{asset:dlc},base:{asset:base}}}));for(const value of [dlc,base,frame])await fs.writeFile(path.join(root,'catalog',value),'fixture');
+ const before=await fs.readFile(path.join(dir,'examples/base.json')),result=await sanitizeDistributionArt(root);assert.equal(result.removed,2);assert.equal(await fs.readFile(path.join(root,'catalog',base),'utf8'),'fixture');assert.equal(await fs.stat(path.join(root,'catalog',dlc)).catch(()=>null),null);assert.deepEqual(await fs.readFile(path.join(dir,'examples/base.json')),before);const output=JSON.parse(await fs.readFile(path.join(dir,'examples/dlc.json'),'utf8'));assert.equal(output.picture,'');assert.deepEqual(output.document,graph);const updated=JSON.parse(await fs.readFile(path.join(dir,'index.json'),'utf8'));assert.equal(updated.items[1].sha256,createHash('sha256').update(await fs.readFile(path.join(dir,'examples/dlc.json'))).digest('hex'));assert.equal(dlcImagePaths(index,{frames:{}}).has(dlc),true);
+});
+// 2026-11-17-0027||codex-clan-editor||clan-creator/tests/creator-distribution-art.test.ts||Probar exclusión pública de arte DLC sin retirar habilidades datos ni arte base
