@@ -1,0 +1,5 @@
+import {creatorRules} from './catalog.js';
+import {loadDraft} from './projects.js';
+import {gameContentHash,readProjectState,updateProjectState} from './project-state.js';
+export async function savePlaytest(id:string,input:any){const d=await loadDraft(id),state=await readProjectState(id),rules=await creatorRules(),hash=gameContentHash(d);if(!input||input.contentHash!==hash||state.lastInstall?.contentHash!==hash||state.uninstalledAt)throw Error('Instala los cambios actuales antes de confirmar la prueba.');if(!input.checks||typeof input.checks!=='object'||Array.isArray(input.checks)||Object.entries(input.checks).some(([key,value])=>typeof value!=='boolean'||!rules.playtestChecks.some((c:any)=>c.id===key)))throw Error('Comprobaciones no válidas.');await updateProjectState(id,{playtest:{contentHash:hash,checks:input.checks,at:new Date().toISOString()}});}
+// 2026-11-17-2236||codex-clan-editor||clan-creator/src/server/creator/playtest.ts||Registrar comprobaciones declaradas por el jugador solo para la versión instalada vigente

@@ -1,3 +1,8 @@
+import {deriveArtwork} from './creator/art-variants.js';
+import {savePlaytest} from './creator/playtest.js';
+import {collectionViews} from './creator/collection-view.js';
+import {listRecoveryPoints,recordRecoveryPoint,recoverDraft} from './creator/recovery.js';
+import {exportCollectionBackup,previewCollectionBackup,importCollectionBackup} from './creator/collection-backup.js';
 import {editingView} from './creator/navigation-state.js';
 import {errorGuidance} from './creator/user-errors.js';
 import {installationState,rememberDestination,recordInstallation,gameContentHash,updateProjectState} from './creator/project-state.js';
@@ -34,20 +39,27 @@ async function route(req:IncomingMessage,res:ServerResponse){const host=req.head
  if(req.method==='GET'&&p==='/api/local-destination'){send(res,200,await suggestedLocalDestination());return;}
  if(req.method==='GET'&&p==='/api/deleted-projects'){send(res,200,await deletedDrafts());return;}
  if(req.method==='GET'&&p==='/api/projects'){send(res,200,await listDrafts());return;}
+ if(req.method==='GET'&&p==='/api/collection-backup'){send(res,200,await exportCollectionBackup());return;}
+ if(req.method==='POST'&&p==='/api/collection-backup/preview'){const rules=await creatorRules();send(res,200,await previewCollectionBackup(await body(req,rules.collectionBackups.maxBytes)));return;}
+ if(req.method==='POST'&&p==='/api/collection-backup/restore'){const rules=await creatorRules(),input=await body(req,rules.collectionBackups.maxBytes+65536);send(res,201,await importCollectionBackup(input.backup,input.selected));return;}
  if(req.method==='POST'&&p==='/api/projects/quick-start'){const input=await body(req);send(res,201,await createQuickDraft(input.language==='es'?'es':'en'));return;}
  if(req.method==='POST'&&p==='/api/projects/restore-backup'){const rules=await creatorRules();send(res,201,await importDraftBackup(await body(req,rules.backups.maxBytes)));return;}
  if(req.method==='POST'&&p==='/api/projects/from-official'){const request=await body(req);send(res,201,await createOfficialDraft(request.clanId,request.language==='en'?'en':'es'));return;}
  if(req.method==='POST'&&p==='/api/projects'){await body(req);send(res,201,await newDraft());return;}
  const detail=p.match(/^\/api\/examples\/([A-Za-z0-9_-]+)$/);if(req.method==='GET'&&detail){const e=await readExample(detail[1]);const language=u.searchParams.get('language')==='en'?'en':'es';send(res,200,{example:e,card:cloneExampleCard(e,randomUUID(),language),parameters:exampleParameters(e)});return;}
- const project=p.match(/^\/api\/projects\/([a-f0-9-]{36})(?:\/(image|review|export|local-plan|local-install|trash-draft|restore-draft|uninstall-plan|uninstall|json-preview|backup|local-state))?$/);
+ const project=p.match(/^\/api\/projects\/([a-f0-9-]{36})(?:\/(art-variants|image|review|export|local-plan|local-install|trash-draft|restore-draft|uninstall-plan|uninstall|json-preview|backup|local-state|history|checkpoint|recover))?$/);
  if(project){const id=project[1],action=project[2];if(req.method==='GET'&&!action){send(res,200,await loadDraft(id));return;}if(req.method==='PUT'&&!action){const value=await body(req);if(value.id!==id)throw Error('El clan del formulario no coincide.');send(res,200,await saveDraft(value));return;}
  if(req.method==='GET'&&action==='local-state'){send(res,200,await installationState(await loadDraft(id)));return;}
- if(req.method==='PUT'&&action==='local-state'){const input=await body(req);if(Object.hasOwn(input,'folder'))await rememberDestination(id,input.folder);if(Object.hasOwn(input,'view')){const draft=await loadDraft(id),rules=await creatorRules();const view=editingView(draft,input.view,rules.steps),card=[...draft.starters,...draft.cards].find(c=>c.uid===view.editing);await updateProjectState(id,{view:{...view,editingName:card?.name}});}send(res,200,await installationState(await loadDraft(id)));return;}
+ if(req.method==='PUT'&&action==='local-state'){const input=await body(req);if(Object.hasOwn(input,'playtest'))await savePlaytest(id,input.playtest);if(Object.hasOwn(input,'folder'))await rememberDestination(id,input.folder);if(Object.hasOwn(input,'collections'))await updateProjectState(id,{collections:collectionViews(input.collections,await creatorRules())});if(Object.hasOwn(input,'view')){const draft=await loadDraft(id),rules=await creatorRules();const view=editingView(draft,input.view,rules.steps),card=[...draft.starters,...draft.cards].find(c=>c.uid===view.editing);await updateProjectState(id,{view:{...view,editingName:card?.name}});}send(res,200,await installationState(await loadDraft(id)));return;}
+ if(req.method==='GET'&&action==='history'){send(res,200,await listRecoveryPoints(id));return;}
+ if(req.method==='POST'&&action==='checkpoint'){const input=await body(req),d=await loadDraft(id);if(input.revision!==d.revision)throw Error('El clan ha cambiado. Vuelve a abrir la recuperación.');send(res,201,await recordRecoveryPoint(d,true));return;}
+ if(req.method==='POST'&&action==='recover'){const input=await body(req);if(preparing.has(id))throw Error('Espera a que termine la preparación del clan.');send(res,200,await recoverDraft(id,input.key,input.revision));return;}
  if(req.method==='GET'&&action==='backup'){send(res,200,await exportDraftBackup(id));return;}
  if(req.method==='POST'&&action==='trash-draft'){const input=await body(req);if(preparing.has(id))throw Error('Espera a que termine la preparacion del clan.');send(res,200,await trashDraft(id,input.revision));return;}
  if(req.method==='POST'&&action==='restore-draft'){await body(req);send(res,200,await restoreDraft(id));return;}
  if(req.method==='POST'&&action==='uninstall-plan'){const input=await body(req);if(preparing.has(id))throw Error('Espera a que termine la preparacion del clan.');const plan=await planClanUninstall(input.folder,id);for(const [key,value]of uninstallPlans)if(Date.now()-value.createdAt>600000)uninstallPlans.delete(key);if(uninstallPlans.size>=20)throw Error('Hay demasiadas revisiones abiertas.');const token=randomUUID();uninstallPlans.set(token,plan);send(res,200,{token,target:plan.target,profile:plan.profile});return;}
  if(req.method==='POST'&&action==='uninstall'){const input=await body(req),plan=uninstallPlans.get(input.token);if(!plan||plan.projectId!==id)throw Error('Busca y revisa este clan antes de desinstalar.');if(preparing.has(id))throw Error('Espera a que termine la preparacion del clan.');uninstallPlans.delete(input.token);const removed=await uninstallClan(plan);try{await updateProjectState(id,{uninstalledAt:new Date().toISOString()});}catch{}send(res,200,removed);return;}
+ if(req.method==='POST'&&action==='art-variants'){send(res,200,await deriveArtwork(id,await body(req)));return;}
  if(req.method==='POST'&&action==='image'){const input=await body(req);send(res,200,await uploadImage(id,input.base64,input.framing));return;}
  if(req.method==='GET'&&action==='review'){const d=await loadDraft(id);send(res,200,{revision:d.revision,issues:await reviewDraft(d)});return;}
  if(req.method==='POST'&&action==='json-preview'){const input=await body(req),d=await loadDraft(id);if(input.revision!==d.revision)throw Error('Guarda los ultimos cambios antes de ver el JSON.');if(preparing.has(id))throw Error('Ya hay una preparacion en curso.');preparing.add(id);try{const preview=await generatedJsonPreview(d);if((await loadDraft(id)).revision!==d.revision)throw Error('El clan ha cambiado. Vuelve a abrir su JSON.');send(res,200,preview);return;}finally{preparing.delete(id);}}
@@ -90,3 +102,5 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
 // 2026-11-16-2327||codex-clan-editor||clan-creator/src/server/creator-server.ts||Aceptar encuadre de imagen validado sin rutas arbitrarias ni modificación del original
 // 2026-11-16-2331||codex-clan-editor||clan-creator/src/server/creator-server.ts||No informar de fallo de instalación o desinstalación cuando solo falla su registro local posterior
 // 2026-11-17-0021||codex-clan-editor||clan-creator/src\server\creator-server.ts||Persistir contexto de edición validado por proyecto sin escribir rutas ni revisar instalaciones
+// 2026-11-17-1848||codex-clan-editor||clan-creator/src\server\creator-server.ts||Exponer recuperación protegida copias múltiples y filtros persistentes sin tocar instalaciones
+// 2026-11-17-2236||codex-clan-editor||clan-creator/src\server\creator-server.ts||Exponer vista previa de derivados y comprobaciones manuales de la versión instalada

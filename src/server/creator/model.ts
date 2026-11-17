@@ -3,7 +3,11 @@ export interface UnitAbility {status:string;count:number}
 export interface CardDraft {abilities?:UnitAbility[];uid:string;kind:'unit'|'spell'|'room'|'artifact'|'equipment'|'blight'|'junk';name:string;description:string;templateId?:string;appearanceTemplateId?:string;pathInTree?:boolean;removedAuras?:string[];removedTemplateEffects?:string[];cost:number;attack:number;health:number;size:number;rarity:string;banner:boolean;reward?:boolean;unlockLevel:number;image?:string;characterImage?:string;scale:number;positionY:number;effects:EffectChoice[];passive?:{recipe:string;amount:number};parameters:Record<string,number>}
 export interface PathLevel {native?:{templateId:string;upgradeId:string;removedTemplateEffects?:string[];parameters:Record<string,number>};abilities?:UnitAbility[];attack:number;health:number;size:number;effects:EffectChoice[]}
 export interface ChampionDraft {card:CardDraft;paths:{name:string;levels:PathLevel[]}[]}
-export interface Draft {schemaVersion:1;id:string;revision:number;updatedAt:string;name:string;author?:string;description:string;step:number;guidedMode?:'quick';reviewedSteps?:Record<string,string>;icon?:string;champions:ChampionDraft[];starters:CardDraft[];cards:CardDraft[]}
+export interface ClanArtDesign {style:string;palette:string;avoid:string;reference?:string}
+export interface ArtVersion {at:string;image?:string;source?:string;prompt?:string;scale?:number;positionY?:number}
+export interface ArtRecord {previous?:ArtVersion[];scale?:number;positionY?:number;brief:string;image?:string;source?:string;prompt?:string}
+export interface PendingCard {card:CardDraft;stage:number}
+export interface Draft {pendingCard?:PendingCard;artDesign?:ClanArtDesign;artwork?:Record<string,ArtRecord>;schemaVersion:1;id:string;revision:number;updatedAt:string;name:string;author?:string;description:string;step:number;guidedMode?:'quick';reviewedSteps?:Record<string,string>;icon?:string;champions:ChampionDraft[];starters:CardDraft[];cards:CardDraft[]}
 export const kindGroups=['unit','spell','room','artifact','equipment','blight','junk'] as const;
 export function blankCard(kind:CardDraft['kind'],uid:string):CardDraft{return {uid,kind,name:'',description:'',cost:1,attack:5,health:10,size:1,rarity:'common',banner:false,unlockLevel:1,scale:1,positionY:0,...(kind==='room'?{passive:{recipe:'room_avarice',amount:1}}:kind==='artifact'?{passive:{recipe:'relic_ember',amount:1}}:{}),effects:kind==='spell'?[{recipe:'damage',amount:6,target:'enemy',when:'on_spawn'}]:[],parameters:{}};}
 export function blankDraft(id:string):Draft{return {schemaVersion:1,id,revision:0,updatedAt:new Date().toISOString(),name:'',description:'',step:0,champions:[0,1].map(i=>({card:{...blankCard('unit','champion-'+i),cost:0},paths:[0,1,2].map(()=>({name:'',levels:[0,1,2].map(l=>({attack:5*(l+1),health:5*(l+1),size:0,effects:[]}))}))})),starters:[0,1].map(i=>blankCard('spell','starter-'+i)),cards:[]};}
@@ -29,3 +33,8 @@ export function unitStatusKey(value:any):string{return value&&typeof value==='ob
 // 2026-11-16-2040||codex-clan-editor||clan-creator/src/server/creator/model.ts||No crear autor en nuevos borradores y admitirlo opcionalmente por compatibilidad
 // 2026-11-16-2144||codex-clan-editor||clan-creator/src/server/creator/model.ts||Conservar modo de recorrido corto opcional en borradores compatibles
 // 2026-11-16-2322||codex-clan-editor||clan-creator/src/server/creator/model.ts||Conservar revisiones personales por paso sin confundirlas con datos preparados
+
+export function draftImageAssets(d:Draft):string[]{return [...new Set([d.icon,d.artDesign?.reference,...Object.values(d.artwork??{}).flatMap(a=>[a.image,a.source,...(a.previous??[]).flatMap(v=>[v.image,v.source])]),d.pendingCard?.card.image,d.pendingCard?.card.characterImage,...allCards(d).flatMap(c=>[c.image,c.characterImage])].filter((x):x is string=>!!x))];}
+// 2026-11-17-1950||codex-clan-editor||clan-creator/src\server\creator\model.ts||Guardar estilo común recursos adicionales y fuentes de arte en borradores compatibles
+// 2026-11-17-2004||codex-clan-editor||clan-creator/src\server\creator\model.ts||Conservar tamaño y altura de personajes de selección en recursos del taller
+// 2026-11-17-2236||codex-clan-editor||clan-creator/src\server\creator\model.ts||Guardar carta provisional e historial acotado de imágenes incluyendo sus fuentes en backups

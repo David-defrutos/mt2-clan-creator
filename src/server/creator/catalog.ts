@@ -56,3 +56,5 @@ export function applyExampleParameters(e:Example,card:CardDraft){const copy=stru
 // 2026-11-15-2013||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Conservar cantidades centinela nativas sin exponerlas como importes editables fuera de limites
 // 2026-11-15-2041||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Eliminar el enlace al aura al generar la carta sin afectar al ejemplo original
 // 2026-11-15-2048||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Aplicar eliminaciones generales a la copia exportada y corregir los textos de acciones restantes
+// 2026-11-17-1909||codex-clan-editor||clan-creator/src\server\creator\catalog.ts||Leer preferencia local de expansiones sin incluir datos personales en configuración pública
+// 2026-11-17-1918||codex-clan-editor||clan-creator/src\server\creator\catalog.ts||Retirar excepción privada del selector DLC al habilitarlo públicamente

@@ -4271,7 +4271,7 @@
     },
     "railforged": {
       "es": "Forjados del Raíl y neutrales",
-      "en": "Railforged and neutral"
+      "en": "Railforged and wurmkin"
     },
     "clanless": {
       "es": "Neutrales",
@@ -7601,7 +7601,7 @@
     "format": "mt2-clan-draft",
     "version": 1,
     "maxBytes": 67108864,
-    "maxAssets": 200,
+    "maxAssets": 2000,
     "extension": ".mt2draft"
   },
   "usabilityText": {
@@ -8533,7 +8533,7 @@
       "id": "railforged",
       "label": {
         "es": "Forjados del Raíl y neutrales",
-        "en": "Railforged and neutral"
+        "en": "Railforged and wurmkin"
       }
     }
   ],
@@ -8563,5 +8563,1320 @@
       "es": "Las unidades seleccionadas del piso",
       "en": "The selected units on the floor"
     }
-  }
+  },
+  "round4Text": {
+    "continueClan": {
+      "es": "Continuar mi clan",
+      "en": "Continue my clan"
+    },
+    "resumeLatest": {
+      "es": "Tu trabajo más reciente",
+      "en": "Your most recent work"
+    },
+    "newCard": {
+      "es": "Crear una carta paso a paso",
+      "en": "Create a card step by step"
+    },
+    "chooseType": {
+      "es": "1. Elige el tipo de carta",
+      "en": "1. Choose the card type"
+    },
+    "chooseSource": {
+      "es": "2. Elige cómo empezar",
+      "en": "2. Choose how to start"
+    },
+    "basics": {
+      "es": "3. Nombre y atributos",
+      "en": "3. Name and attributes"
+    },
+    "effects": {
+      "es": "4. Habilidades y efectos",
+      "en": "4. Abilities and effects"
+    },
+    "art": {
+      "es": "5. Imágenes opcionales",
+      "en": "5. Optional artwork"
+    },
+    "next": {
+      "es": "Continuar",
+      "en": "Continue"
+    },
+    "back": {
+      "es": "Volver",
+      "en": "Back"
+    },
+    "finishCard": {
+      "es": "Añadir carta a mi clan",
+      "en": "Add card to my clan"
+    },
+    "wizardHelp": {
+      "es": "Puedes volver a los pasos anteriores. La carta se añadirá al clan al terminar.",
+      "en": "You can return to earlier steps. The card is added to your clan when you finish."
+    },
+    "sourceHelp": {
+      "es": "Copia una carta como punto de partida o empieza con una carta vacía. Después puedes cambiarla.",
+      "en": "Copy a card as a starting point or start with an empty card. You can change it afterwards."
+    },
+    "cancelCard": {
+      "es": "Cancelar nueva carta",
+      "en": "Cancel new card"
+    },
+    "pendingCard": {
+      "es": "Continuar carta en preparación",
+      "en": "Continue unfinished card"
+    },
+    "numberEmpty": {
+      "es": "Introduce un número.",
+      "en": "Enter a number."
+    },
+    "numberFinite": {
+      "es": "Introduce un número válido.",
+      "en": "Enter a valid number."
+    },
+    "numberInteger": {
+      "es": "Introduce un número entero.",
+      "en": "Enter a whole number."
+    },
+    "numberMin": {
+      "es": "El valor mínimo es {min}.",
+      "en": "The minimum value is {min}."
+    },
+    "numberMax": {
+      "es": "El valor máximo es {max}.",
+      "en": "The maximum value is {max}."
+    },
+    "numberKept": {
+      "es": "Se ha conservado el valor anterior: {value}.",
+      "en": "The previous value was kept: {value}."
+    },
+    "history": {
+      "es": "Recuperar una versión anterior",
+      "en": "Recover an earlier version"
+    },
+    "historyHelp": {
+      "es": "Se guardan puntos de recuperación automáticamente. Al recuperar uno, se guarda primero el estado actual. Esto cambia el borrador, no el clan instalado.",
+      "en": "Recovery points are saved automatically. Recovering one first saves the current state. This changes the draft, not the installed clan."
+    },
+    "savePoint": {
+      "es": "Guardar un punto ahora",
+      "en": "Save a point now"
+    },
+    "pointSaved": {
+      "es": "Punto de recuperación guardado.",
+      "en": "Recovery point saved."
+    },
+    "noPoints": {
+      "es": "Todavía no hay versiones anteriores guardadas.",
+      "en": "No earlier versions have been saved yet."
+    },
+    "reviewPoint": {
+      "es": "Revisar esta versión",
+      "en": "Review this version"
+    },
+    "restorePoint": {
+      "es": "Recuperar esta versión",
+      "en": "Recover this version"
+    },
+    "pointPreview": {
+      "es": "Contenido de la versión elegida",
+      "en": "Contents of the selected version"
+    },
+    "changedCards": {
+      "es": "Cartas distintas respecto al borrador actual",
+      "en": "Cards different from the current draft"
+    },
+    "noCardChanges": {
+      "es": "No hay cambios en las cartas. Puede haber cambios en el nombre o en las sendas.",
+      "en": "There are no card changes. The clan name or paths may differ."
+    },
+    "recovered": {
+      "es": "Versión recuperada. El estado anterior sigue disponible en los puntos de recuperación.",
+      "en": "Version recovered. The previous state remains available in recovery points."
+    },
+    "advice": {
+      "es": "Consejos para revisar tu clan",
+      "en": "Suggestions for reviewing your clan"
+    },
+    "adviceHelp": {
+      "es": "Son observaciones orientativas, no requisitos ni una garantía de equilibrio. No impiden instalar el clan.",
+      "en": "These are suggestions, not requirements or a guarantee of balance. They do not prevent installation."
+    },
+    "adviceSmall": {
+      "es": "Tu clan tiene {count} cartas de recompensa. Los clanes oficiales incluidos tienen entre {min} y {max}. Puedes ampliarlo poco a poco.",
+      "en": "Your clan has {count} reward cards. Included official clans have between {min} and {max}. You can grow it gradually."
+    },
+    "adviceCost": {
+      "es": "{count} de tus {total} cartas de recompensa cuestan 3 o más. Prueba si necesitas más opciones de coste bajo.",
+      "en": "{count} of your {total} reward cards cost 3 or more. Consider whether you need more low-cost options."
+    },
+    "adviceRarity": {
+      "es": "Las raras representan el {percent} de tus recompensas. La referencia oficial incluida está entre {min} y {max}. Revisa si quieres esa distribución.",
+      "en": "Rares make up {percent} of your rewards. The included official reference ranges from {min} to {max}. Check whether this is the distribution you want."
+    },
+    "adviceUnits": {
+      "es": "Tienes {count} unidades de recompensa; la referencia oficial incluida tiene entre {min} y {max}. Comprueba si tus estrategias tienen suficientes unidades.",
+      "en": "You have {count} reward units; the included official reference has between {min} and {max}. Check whether your strategies have enough units."
+    },
+    "adviceNone": {
+      "es": "No hay observaciones destacadas con estas comprobaciones. La prueba en partida sigue siendo necesaria.",
+      "en": "These checks found no notable suggestions. Testing in-game is still needed."
+    },
+    "overview": {
+      "es": "Mi clan completo",
+      "en": "My whole clan"
+    },
+    "overviewHelp": {
+      "es": "Revisa tus campeones, sendas, cartas iniciales y colecciones. Usa los botones para ir directamente a su edición.",
+      "en": "Review your champions, paths, starter cards and collections. Use the buttons to go directly to editing."
+    },
+    "editChampion": {
+      "es": "Editar campeón",
+      "en": "Edit champion"
+    },
+    "editStarter": {
+      "es": "Editar carta inicial",
+      "en": "Edit starter card"
+    },
+    "starterFor": {
+      "es": "Carta inicial de",
+      "en": "Starter card for"
+    },
+    "editPath": {
+      "es": "Editar senda",
+      "en": "Edit path"
+    },
+    "unnamed": {
+      "es": "Sin nombre",
+      "en": "Unnamed"
+    },
+    "emptyGroup": {
+      "es": "Todavía no has añadido cartas de este tipo.",
+      "en": "You have not added cards of this type yet."
+    },
+    "allBackup": {
+      "es": "Guardar todos mis clanes",
+      "en": "Save all my clans"
+    },
+    "restoreAll": {
+      "es": "Restaurar una copia de varios clanes",
+      "en": "Restore a multi-clan backup"
+    },
+    "allBackupHelp": {
+      "es": "Guarda todos los borradores activos con sus imágenes en un solo archivo. Al restaurarlo eliges cuáles recuperar; se crean copias independientes y no se sobrescribe nada.",
+      "en": "Save all active drafts and their uploaded images in one file. When restoring, choose which clans to recover; independent copies are created and nothing is overwritten."
+    },
+    "selectRestore": {
+      "es": "Elige los clanes que quieres recuperar",
+      "en": "Choose the clans to restore"
+    },
+    "restoreSelected": {
+      "es": "Restaurar los seleccionados",
+      "en": "Restore selected clans"
+    },
+    "restoredCount": {
+      "es": "Clanes restaurados: {count}.",
+      "en": "Clans restored: {count}."
+    },
+    "selectAll": {
+      "es": "Seleccionar todos",
+      "en": "Select all"
+    },
+    "collectionReady": {
+      "es": "Copia de todos los clanes preparada para descargar.",
+      "en": "The backup of all clans is ready to download."
+    },
+    "allRestoreError": {
+      "es": "No se pudo leer o restaurar esta copia. Comprueba el archivo y vuelve a intentarlo.",
+      "en": "This backup could not be read or restored. Check the file and try again."
+    },
+    "working": {
+      "es": "Preparando…",
+      "en": "Preparing…"
+    },
+    "continueCard": {
+      "es": "Continuar con esta carta",
+      "en": "Continue with this card"
+    },
+    "equipmentExample": {
+      "es": "Para crear un equipo, empieza copiando uno existente.",
+      "en": "To create equipment, start by copying an existing example."
+    },
+    "cardsCount": {
+      "en": "cards",
+      "es": "cartas"
+    },
+    "allBackupError": {
+      "en": "The backup could not be saved. Check that every draft can be opened and try again.",
+      "es": "No se pudo guardar la copia. Comprueba que puedes abrir todos los borradores e inténtalo de nuevo."
+    }
+  },
+  "recovery": {
+    "retention": 20,
+    "minimumIntervalMs": 120000,
+    "maxPointBytes": 8388608
+  },
+  "collectionBackups": {
+    "format": "mt2-clan-collection",
+    "version": 1,
+    "extension": ".mt2collection",
+    "maxBytes": 134217728,
+    "maxDrafts": 50
+  },
+  "balanceAdvice": {
+    "minimumSample": 6,
+    "highCostMinimum": 3,
+    "highCostRatio": 0.6
+  },
+  "cardWizard": {
+    "kinds": [
+      "unit",
+      "spell",
+      "room",
+      "equipment",
+      "artifact"
+    ],
+    "stages": [
+      "type",
+      "source",
+      "basics",
+      "effects",
+      "art"
+    ]
+  },
+  "showExpansionSettings": true,
+  "aiArtText": {
+    "title": {
+      "en": "Art workshop",
+      "es": "Taller de arte"
+    },
+    "intro": {
+      "en": "Prepare instructions for ChatGPT or another image generator, then bring the result back here. Nothing is sent automatically.",
+      "es": "Prepara instrucciones para ChatGPT u otro generador y trae aquí el resultado. No se envía nada automáticamente."
+    },
+    "styleTitle": {
+      "en": "1. A shared style for your clan",
+      "es": "1. Un estilo común para tu clan"
+    },
+    "style": {
+      "en": "Visual style",
+      "es": "Estilo visual"
+    },
+    "palette": {
+      "en": "Colours and materials",
+      "es": "Colores y materiales"
+    },
+    "avoid": {
+      "en": "Avoid",
+      "es": "Evitar"
+    },
+    "styleHelp": {
+      "en": "Describe outlines, shading, proportions and mood. Reuse this style for every resource. It does not repaint existing images.",
+      "es": "Describe contornos, sombras, proporciones y ambiente. Este estilo se reutiliza en todos los recursos. No repinta las imágenes existentes."
+    },
+    "reference": {
+      "en": "Style reference image",
+      "es": "Imagen de referencia del estilo"
+    },
+    "noReference": {
+      "en": "No reference selected",
+      "es": "Sin referencia seleccionada"
+    },
+    "referenceHelp": {
+      "en": "Attach this image in the other program with the instructions. Keep the rendering and palette, not the same subject. If the style drifts, start a new conversation with the same reference.",
+      "es": "Adjunta esta imagen en el otro programa junto con las instrucciones. Conserva el acabado y la paleta, no el mismo sujeto. Si el estilo se desvía, abre otra conversación con la misma referencia."
+    },
+    "resourceTitle": {
+      "en": "2. What image do you need?",
+      "es": "2. ¿Qué imagen necesitas?"
+    },
+    "resource": {
+      "en": "Image to create",
+      "es": "Imagen que vas a crear"
+    },
+    "brief": {
+      "en": "What should it show?",
+      "es": "¿Qué debe mostrar?"
+    },
+    "briefHelp": {
+      "en": "Describe appearance, clothing, props, action and background. This description is for the illustration, not the card rules.",
+      "es": "Describe aspecto, ropa, accesorios, acción y fondo. Esta descripción es para la ilustración, no para las reglas de la carta."
+    },
+    "promptTitle": {
+      "en": "3. Prepare your request",
+      "es": "3. Prepara tu petición"
+    },
+    "grid": {
+      "en": "Explore nine alternatives in a 3 × 3 sheet",
+      "es": "Explorar nueve alternativas en una lámina 3 × 3"
+    },
+    "gridHelp": {
+      "en": "Nine alternatives for this same image, not nine finished cards. Each cell has less detail. Choose one before creating a final large image.",
+      "es": "Nueve alternativas de esta misma imagen, no nueve cartas terminadas. Cada celda tiene menos detalle. Escoge una antes de crear la imagen final grande."
+    },
+    "copy": {
+      "en": "Copy instructions",
+      "es": "Copiar instrucciones"
+    },
+    "copied": {
+      "en": "Instructions copied. Paste them into your image generator.",
+      "es": "Instrucciones copiadas. Pégalas en el generador de imágenes."
+    },
+    "manualCopy": {
+      "en": "Select the instructions and copy them manually.",
+      "es": "Selecciona las instrucciones y cópialas manualmente."
+    },
+    "openChatGPT": {
+      "en": "Open ChatGPT",
+      "es": "Abrir ChatGPT"
+    },
+    "promptLabel": {
+      "en": "Instructions for the image generator",
+      "es": "Instrucciones para el generador de imágenes"
+    },
+    "englishPrompt": {
+      "en": "The instructions follow the language selected in the creator. Attach reference images yourself.",
+      "es": "Las instrucciones usan el idioma seleccionado en el creador. Adjunta tú las imágenes de referencia."
+    },
+    "resultTitle": {
+      "en": "4. Choose and apply the result",
+      "es": "4. Escoge y aplica el resultado"
+    },
+    "import": {
+      "en": "Import the generated image or sheet",
+      "es": "Importar imagen o lámina generada"
+    },
+    "review": {
+      "en": "Check faces, eyes, hands and complete weapons. A generated image is a proposal until you choose it. No existing artwork is replaced until you apply the image.",
+      "es": "Revisa caras, ojos, manos y armas completas. Una imagen generada es una propuesta hasta que la eliges. El arte existente no se sustituye hasta que apliques la imagen."
+    },
+    "applied": {
+      "en": "Image applied to the selected resource.",
+      "es": "Imagen aplicada al recurso seleccionado."
+    },
+    "noCards": {
+      "en": "Create a card first to prepare its artwork. Other clan resources are available now.",
+      "es": "Crea una carta para preparar su arte. Los demás recursos del clan ya están disponibles."
+    },
+    "card": {
+      "en": "Card illustration",
+      "es": "Ilustración de carta"
+    },
+    "character": {
+      "en": "Combat character",
+      "es": "Personaje de combate"
+    },
+    "cards": {
+      "en": "Cards and characters",
+      "es": "Cartas y personajes"
+    },
+    "clanResources": {
+      "en": "Other clan artwork",
+      "es": "Otros recursos del clan"
+    },
+    "complete": {
+      "en": "Custom image assigned",
+      "es": "Imagen propia asignada"
+    },
+    "default": {
+      "en": "Using existing artwork",
+      "es": "Con arte existente"
+    },
+    "download": {
+      "en": "Download reference image",
+      "es": "Descargar imagen de referencia"
+    },
+    "sheet": {
+      "en": "This is a 3 × 3 sheet",
+      "es": "Esta imagen es una lámina 3 × 3"
+    },
+    "chooseCell": {
+      "en": "Choose a proposal, numbered from left to right, top to bottom.",
+      "es": "Escoge una propuesta, numerada de izquierda a derecha y de arriba abajo."
+    },
+    "proposal": {
+      "en": "Proposal",
+      "es": "Propuesta"
+    },
+    "cropHelp": {
+      "en": "The grid is a starting point. Check the actual borders and adjust the selection if cells are uneven. Do not cut hands, feet or weapons.",
+      "es": "La cuadrícula es un punto de partida. Revisa los bordes reales y ajusta la selección si las celdas son desiguales. No cortes manos, pies ni armas."
+    },
+    "cropAdvanced": {
+      "en": "Adjust the selected area",
+      "es": "Ajustar el área seleccionada"
+    },
+    "cropLeft": {
+      "en": "Left edge (%)",
+      "es": "Borde izquierdo (%)"
+    },
+    "cropTop": {
+      "en": "Top edge (%)",
+      "es": "Borde superior (%)"
+    },
+    "cropWidth": {
+      "en": "Width (%)",
+      "es": "Ancho (%)"
+    },
+    "cropHeight": {
+      "en": "Height (%)",
+      "es": "Alto (%)"
+    },
+    "cropInset": {
+      "en": "Space removed around the edges (%)",
+      "es": "Margen que quitar en los bordes (%)"
+    },
+    "sourceSaved": {
+      "en": "The source image and instructions are kept in your draft backup. Only the applied images are installed in the game.",
+      "es": "La imagen de origen y las instrucciones se conservan en la copia del borrador. Solo las imágenes aplicadas se instalan en el juego."
+    },
+    "templateHelp": {
+      "en": "Use the existing frame as a layout reference. Preserve its transparent opening and outline; review the result before applying.",
+      "es": "Usa el marco existente como plantilla. Conserva su hueco transparente y contorno; revisa el resultado antes de aplicarlo."
+    },
+    "characterHelp": {
+      "en": "Create this separately from the card illustration: full body facing right, true transparent background and complete equipment. Attach the chosen card image to preserve the same character.",
+      "es": "Créalo separado de la ilustración de carta: cuerpo completo mirando a la derecha, transparencia real y equipo completo. Adjunta la carta elegida para conservar el mismo personaje."
+    },
+    "remove": {
+      "en": "Use existing artwork again",
+      "es": "Volver al arte existente"
+    },
+    "close": {
+      "en": "Close",
+      "es": "Cerrar"
+    },
+    "cardFirst": {
+      "en": "Chosen card as character reference",
+      "es": "Carta elegida como referencia del personaje"
+    },
+    "transparencyWarning": {
+      "en": "This image appears opaque. Check that the background, and the inner opening for a frame, are truly transparent before applying it.",
+      "es": "Esta imagen parece opaca. Comprueba que el fondo, y el hueco interior si es un marco, sean realmente transparentes antes de aplicarla."
+    },
+    "detailIcon": {
+      "en": "In-game icon",
+      "es": "Icono en partida"
+    },
+    "downloadSource": {
+      "en": "Download source image",
+      "es": "Descargar imagen de origen"
+    },
+    "savedRequest": {
+      "en": "Instructions used for this image",
+      "es": "Instrucciones usadas para esta imagen"
+    }
+  },
+  "aiArt": {
+    "maxText": 3000,
+    "maxRecords": 500,
+    "resources": [
+      {
+        "id": "clan-logo",
+        "label": {
+          "en": "Clan logo",
+          "es": "Logo del clan"
+        },
+        "width": 256,
+        "height": 256,
+        "kind": "icon",
+        "target": "logo",
+        "allowGrid": true
+      },
+      {
+        "id": "clan-silhouette",
+        "label": {
+          "en": "Clan logo silhouette",
+          "es": "Silueta del logo"
+        },
+        "width": 72,
+        "height": 72,
+        "kind": "silhouette",
+        "target": "class-icon",
+        "allowGrid": true,
+        "field": "silhouette"
+      },
+      {
+        "id": "draft-icon",
+        "label": {
+          "en": "Card reward icon",
+          "es": "Icono de recompensa de cartas"
+        },
+        "width": 71,
+        "height": 84,
+        "kind": "icon",
+        "target": "draft-icon",
+        "allowGrid": true
+      },
+      {
+        "id": "banner-enabled_sprite",
+        "label": {
+          "en": "Banner · Available",
+          "es": "Estandarte · Disponible"
+        },
+        "width": 420,
+        "height": 420,
+        "kind": "banner",
+        "target": "banner",
+        "allowGrid": true,
+        "field": "enabled_sprite"
+      },
+      {
+        "id": "banner-disabled_sprite",
+        "label": {
+          "en": "Banner · Unavailable",
+          "es": "Estandarte · No disponible"
+        },
+        "width": 420,
+        "height": 420,
+        "kind": "banner",
+        "target": "banner",
+        "allowGrid": true,
+        "field": "disabled_sprite"
+      },
+      {
+        "id": "banner-frozen_sprite",
+        "label": {
+          "en": "Banner · Frozen",
+          "es": "Estandarte · Congelado"
+        },
+        "width": 420,
+        "height": 420,
+        "kind": "banner",
+        "target": "banner",
+        "allowGrid": true,
+        "field": "frozen_sprite"
+      },
+      {
+        "id": "banner-visited_sprite_disabled",
+        "label": {
+          "en": "Banner · Visited",
+          "es": "Estandarte · Visitado"
+        },
+        "width": 420,
+        "height": 420,
+        "kind": "banner",
+        "target": "banner",
+        "allowGrid": true,
+        "field": "visited_sprite_disabled"
+      },
+      {
+        "id": "map-icon",
+        "label": {
+          "en": "Banner map icon",
+          "es": "Icono de mapa del estandarte"
+        },
+        "width": 84,
+        "height": 84,
+        "kind": "icon",
+        "target": "map",
+        "allowGrid": true,
+        "field": "map_icon"
+      },
+      {
+        "id": "minimap-icon",
+        "label": {
+          "en": "Minimap icon",
+          "es": "Icono del minimapa"
+        },
+        "width": 48,
+        "height": 48,
+        "kind": "icon",
+        "target": "map",
+        "allowGrid": true,
+        "field": "minimap_icon"
+      },
+      {
+        "id": "frame-unit",
+        "label": {
+          "en": "Unit card frame",
+          "es": "Marco · Unidades"
+        },
+        "width": 495,
+        "height": 588,
+        "kind": "frame",
+        "target": "frame",
+        "allowGrid": false,
+        "field": "unit_card_frame_sprite"
+      },
+      {
+        "id": "frame-spell",
+        "label": {
+          "en": "Spell card frame",
+          "es": "Marco · Hechizos"
+        },
+        "width": 499,
+        "height": 515,
+        "kind": "frame",
+        "target": "frame",
+        "allowGrid": false,
+        "field": "spell_card_frame_sprite"
+      },
+      {
+        "id": "frame-room",
+        "label": {
+          "en": "Room card frame",
+          "es": "Marco · Salas"
+        },
+        "width": 495,
+        "height": 480,
+        "kind": "frame",
+        "target": "frame",
+        "allowGrid": false,
+        "field": "room_card_frame_sprite"
+      },
+      {
+        "id": "frame-equipment",
+        "label": {
+          "en": "Equipment card frame",
+          "es": "Marco · Equipos"
+        },
+        "width": 495,
+        "height": 480,
+        "kind": "frame",
+        "target": "frame",
+        "allowGrid": false,
+        "field": "equipment_card_frame_sprite"
+      },
+      {
+        "id": "champion1-icon",
+        "label": {
+          "en": "Champion 1 · Icon",
+          "es": "Campeón 1 · Icono"
+        },
+        "width": 320,
+        "height": 256,
+        "kind": "icon",
+        "target": "champion",
+        "allowGrid": true,
+        "field": "icon",
+        "champion": 0
+      },
+      {
+        "id": "champion1-locked_icon",
+        "label": {
+          "en": "Champion 1 · Locked icon",
+          "es": "Campeón 1 · Icono bloqueado"
+        },
+        "width": 320,
+        "height": 256,
+        "kind": "icon",
+        "target": "champion",
+        "allowGrid": true,
+        "field": "locked_icon",
+        "champion": 0
+      },
+      {
+        "id": "champion1-portrait",
+        "label": {
+          "en": "Champion 1 · Selection portrait",
+          "es": "Campeón 1 · Retrato de selección"
+        },
+        "width": 240,
+        "height": 270,
+        "kind": "portrait",
+        "target": "champion",
+        "allowGrid": true,
+        "field": "portrait",
+        "champion": 0
+      },
+      {
+        "id": "champion1-display",
+        "label": {
+          "en": "Champion 1 · Selection character",
+          "es": "Campeón 1 · Personaje de selección"
+        },
+        "width": 500,
+        "height": 500,
+        "kind": "character",
+        "target": "champion-display",
+        "allowGrid": true,
+        "field": "display",
+        "champion": 0
+      },
+      {
+        "id": "champion2-icon",
+        "label": {
+          "en": "Champion 2 · Icon",
+          "es": "Campeón 2 · Icono"
+        },
+        "width": 320,
+        "height": 256,
+        "kind": "icon",
+        "target": "champion",
+        "allowGrid": true,
+        "field": "icon",
+        "champion": 1
+      },
+      {
+        "id": "champion2-locked_icon",
+        "label": {
+          "en": "Champion 2 · Locked icon",
+          "es": "Campeón 2 · Icono bloqueado"
+        },
+        "width": 320,
+        "height": 256,
+        "kind": "icon",
+        "target": "champion",
+        "allowGrid": true,
+        "field": "locked_icon",
+        "champion": 1
+      },
+      {
+        "id": "champion2-portrait",
+        "label": {
+          "en": "Champion 2 · Selection portrait",
+          "es": "Campeón 2 · Retrato de selección"
+        },
+        "width": 240,
+        "height": 270,
+        "kind": "portrait",
+        "target": "champion",
+        "allowGrid": true,
+        "field": "portrait",
+        "champion": 1
+      },
+      {
+        "id": "champion2-display",
+        "label": {
+          "en": "Champion 2 · Selection character",
+          "es": "Campeón 2 · Personaje de selección"
+        },
+        "width": 500,
+        "height": 500,
+        "kind": "character",
+        "target": "champion-display",
+        "allowGrid": true,
+        "field": "display",
+        "champion": 1
+      },
+      {
+        "id": "clan-small",
+        "field": "small",
+        "target": "class-icon",
+        "label": {
+          "en": "Small clan logo",
+          "es": "Logo pequeño del clan"
+        },
+        "width": 48,
+        "height": 48,
+        "kind": "icon",
+        "allowGrid": true
+      },
+      {
+        "id": "clan-medium",
+        "field": "medium",
+        "target": "class-icon",
+        "label": {
+          "en": "Medium clan logo",
+          "es": "Logo mediano del clan"
+        },
+        "width": 128,
+        "height": 128,
+        "kind": "icon",
+        "allowGrid": true
+      },
+      {
+        "id": "clan-large",
+        "field": "large",
+        "target": "class-icon",
+        "label": {
+          "en": "Large clan logo",
+          "es": "Logo grande del clan"
+        },
+        "width": 92,
+        "height": 92,
+        "kind": "icon",
+        "allowGrid": true
+      }
+    ],
+    "defaultStyle": {
+      "en": "Expressive fantasy illustration with clear silhouettes, defined outlines, strong colour separation and two or three broad shading steps. Moderate detail that remains readable at card size.",
+      "es": "Ilustración de fantasía expresiva con siluetas claras, contornos definidos, colores bien separados y dos o tres sombras amplias. Detalle moderado que siga siendo legible al tamaño de una carta."
+    },
+    "defaultAvoid": {
+      "en": "No text, labels, numbers, logos, watermarks, card frames or game interface in illustrations. No cut-off equipment.",
+      "es": "Sin texto, rótulos, números, logotipos, marcas de agua, marcos ni interfaz en las ilustraciones. Sin equipo cortado."
+    },
+    "instructions": {
+      "style": {
+        "en": "Keep the same rendering, outlines, palette and proportions for the entire clan. Use the attached style reference for visual language, not for copying its subject.",
+        "es": "Mantén el mismo acabado, contornos, paleta y proporciones en todo el clan. Usa la referencia adjunta como lenguaje visual, no para copiar su sujeto."
+      },
+      "grid": {
+        "en": "Create ONE sheet in a regular 3 by 3 grid: NINE alternatives of this SAME subject, not nine different cards. Equal cells; each cell has the requested aspect ratio. Read from left to right, top to bottom. Vary pose, expression, composition and props while keeping the same identity and clan style. No labels or numbers drawn in the image, minimal separators, no elements crossing cells. Keep weapons and accessories complete with safe margins.",
+        "es": "Crea UNA lámina en cuadrícula regular de 3 por 3: NUEVE alternativas de este MISMO sujeto, no nueve cartas distintas. Celdas iguales con la proporción indicada. Orden de izquierda a derecha y de arriba abajo. Varía pose, expresión, composición y accesorios manteniendo identidad y estilo del clan. Sin rótulos ni números dibujados, separadores mínimos y sin elementos que crucen celdas. Armas y accesorios completos con márgenes seguros."
+      },
+      "single": {
+        "en": "Create ONE finished image at high resolution. Preserve the chosen design. Do not upscale a small proposal and claim it has new detail.",
+        "es": "Crea UNA imagen final de alta resolución. Conserva el diseño elegido. No amplíes una propuesta pequeña fingiendo que contiene detalle nuevo."
+      },
+      "card": {
+        "en": "Card illustration only, with a supporting background and a clearly readable main subject. No card frame, text, cost, stats or interface. Use a portrait composition with aspect ratio 21:25. The application will resize it to 210 by 250 pixels; keep detail readable at that size.",
+        "es": "Solo ilustración de carta, con fondo secundario y protagonista legible. Sin marco, texto, coste, estadísticas ni interfaz. Composición vertical de proporción 21:25. El programa la reducirá a 210 por 250 píxeles; conserva el detalle legible a ese tamaño."
+      },
+      "character": {
+        "en": "An isolated combat character, full body facing RIGHT, three-quarter view. Use the selected card illustration as the identity reference: same face, clothes, colours and equipment. Real transparent background with an alpha channel, no checkerboard painted into the image, no floor, scenery or cast shadow. Both feet have coherent ground contact. Keep all weapons inside generous transparent margins. No chibi proportions or compressed anatomy. Review both hands and eyes. Generate this separately from the card illustration.",
+        "es": "Personaje de combate aislado, cuerpo completo mirando a la DERECHA, vista de tres cuartos. Usa la carta elegida como referencia de identidad: misma cara, ropa, colores y equipo. Fondo realmente transparente con canal alfa, sin ajedrezado dibujado, suelo, escenario ni sombra proyectada. Los dos pies deben apoyar de forma coherente. Armas completas dentro de márgenes transparentes generosos. Sin proporciones chibi ni anatomía aplastada. Revisa ambas manos y ojos. Genéralo separado de la ilustración de carta."
+      },
+      "icon": {
+        "en": "A single clear isolated symbol or object. Transparent background, strong silhouette and moderate detail readable at small size. No text or interface.",
+        "es": "Un único símbolo u objeto claro y aislado. Fondo transparente, silueta fuerte y detalle moderado legible en pequeño. Sin texto ni interfaz."
+      },
+      "portrait": {
+        "en": "Champion portrait based on the chosen character. Preserve face, costume, palette and identity, with a clean crop appropriate for the selection screen.",
+        "es": "Retrato del campeón basado en el personaje elegido. Conserva cara, vestuario, paleta e identidad, con encuadre limpio apropiado para la selección."
+      },
+      "silhouette": {
+        "en": "The clan symbol as a flat WHITE silhouette on a truly transparent background. No colour, gradients, text, shadow or scenery.",
+        "es": "El símbolo del clan como silueta BLANCA plana sobre fondo realmente transparente. Sin color, degradados, texto, sombra ni escenario."
+      },
+      "banner": {
+        "en": "A clan banner/map monument with true transparency around the complete object. Keep the exact mast, base, position, silhouette and scale from the available-state reference for every state. Only change the appearance required by this state. No rectangular backdrop or floor extending outside the object.",
+        "es": "Estandarte o monumento de mapa del clan con transparencia real alrededor del objeto completo. Mantén exactamente mástil, base, posición, silueta y escala de la referencia disponible para todos sus estados. Cambia solo el aspecto propio de este estado. Sin fondo rectangular ni suelo que sobresalga del objeto."
+      },
+      "frame": {
+        "en": "Edit the ATTACHED EXISTING GAME FRAME as a template. Preserve its exact canvas, outline, inner transparent opening and alignment of every UI region. Change only colours, material and ornamentation to match the clan. Do not invent a new frame geometry or add text, cost, stats or illustration. Keep all originally transparent areas transparent. This is a frame resource; the no-frames rule for card illustrations does not apply here.",
+        "es": "Edita el MARCO EXISTENTE DEL JUEGO ADJUNTO como plantilla. Conserva exactamente lienzo, contorno, hueco interior transparente y alineación de todas las zonas de interfaz. Cambia solo colores, material y adornos para adaptarlo al clan. No inventes geometría nueva ni añadas texto, coste, estadísticas o ilustración. Conserva transparentes todas las áreas que lo eran. Este recurso es un marco: aquí no se aplica la prohibición de marcos de las ilustraciones de cartas."
+      },
+      "format": {
+        "en": "Requested final canvas: {width} x {height} pixels (aspect ratio {width}:{height}). Higher-resolution source is welcome with the same aspect ratio; the application handles the final resize.",
+        "es": "Lienzo final solicitado: {width} x {height} píxeles (proporción {width}:{height}). Puede generarse a mayor resolución conservando esa proporción; el programa ajustará el tamaño final."
+      },
+      "stateGrid": {
+        "en": "Create one 3 by 3 sheet of nine treatments of this SAME banner state. Keep the reference geometry, mast, base and alignment identical in every cell. Vary only the surface treatment or state appearance. Equal cells, no labels, no overlap, generous margins.",
+        "es": "Crea una lámina 3 por 3 de nueve tratamientos de este MISMO estado del estandarte. Mantén idénticos geometría de referencia, mástil, base y alineación en todas las celdas. Varía solo el acabado o apariencia del estado. Celdas iguales, sin rótulos ni solapamientos y con márgenes generosos."
+      },
+      "formatCharacter": {
+        "en": "Suggested source canvas: around {width} x {height} pixels, with transparent margins. Keep a high-quality original. The creator preserves the selected character image resolution and adjusts its visible size using scale and height.",
+        "es": "Lienzo de origen orientativo: alrededor de {width} x {height} píxeles, con márgenes transparentes. Conserva un original de calidad. El creador mantiene la resolución del personaje seleccionado y ajusta el tamaño visible mediante escala y altura."
+      }
+    },
+    "formats": {
+      "illustration": {
+        "id": "illustration",
+        "label": {
+          "en": "Card illustration",
+          "es": "Ilustración de carta"
+        },
+        "kind": "card",
+        "width": 210,
+        "height": 250,
+        "allowGrid": true
+      },
+      "room-icon": {
+        "id": "room-icon",
+        "label": {
+          "en": "In-game icon",
+          "es": "Icono en partida"
+        },
+        "kind": "icon",
+        "width": 112,
+        "height": 112,
+        "allowGrid": true
+      },
+      "equipment-icon": {
+        "id": "equipment-icon",
+        "label": {
+          "en": "In-game icon",
+          "es": "Icono en partida"
+        },
+        "kind": "icon",
+        "width": 128,
+        "height": 128,
+        "allowGrid": true
+      },
+      "relic-hud": {
+        "id": "relic-hud",
+        "label": {
+          "en": "In-game icon",
+          "es": "Icono en partida"
+        },
+        "kind": "icon",
+        "width": 96,
+        "height": 96,
+        "allowGrid": true
+      },
+      "character": {
+        "width": 500,
+        "height": 500
+      }
+    },
+    "historyLimit": 5,
+    "groups": [
+      "all",
+      "cards",
+      "characters",
+      "champions",
+      "banners",
+      "frames",
+      "identity",
+      "icons"
+    ],
+    "presets": [
+      {
+        "id": "outlined",
+        "label": {
+          "en": "Clear fantasy outlines",
+          "es": "Fantasía de contornos marcados"
+        },
+        "referenceExample": "freecompany-SpawnBattleChaplain",
+        "style": {
+          "en": "Readable fantasy illustration with clean dark outlines, strong silhouettes and two or three broad shading steps. Expressive faces, practical equipment, moderate detail.",
+          "es": "Ilustración de fantasía legible, con contornos oscuros definidos, siluetas claras y dos o tres sombras amplias. Caras expresivas, equipo práctico y detalle moderado."
+        },
+        "palette": {
+          "en": "Bronze, worn steel, parchment cream and a cold accent.",
+          "es": "Bronce, acero gastado, crema de pergamino y un acento frío."
+        }
+      },
+      {
+        "id": "academy",
+        "label": {
+          "en": "Colourful magical academy",
+          "es": "Academia de magia colorida"
+        },
+        "referenceExample": "ww-WW_T01",
+        "style": {
+          "en": "Expressive medieval fantasy cartoon, clear contours, rounded volumetric shapes and broad painted shadows. Humorous character roles, varied poses and readable props.",
+          "es": "Cartoon de fantasía medieval expresivo, con contornos claros, formas redondeadas con volumen y sombras pintadas amplias. Oficios con humor, poses variadas y accesorios legibles."
+        },
+        "palette": {
+          "en": "Blue, green, warm gold and cream, with purple magical accents.",
+          "es": "Azul, verde, oro cálido y crema, con acentos mágicos violetas."
+        }
+      },
+      {
+        "id": "painted",
+        "label": {
+          "en": "Painted fantasy with volume",
+          "es": "Fantasía pintada con volumen"
+        },
+        "referenceExample": "official-AnimusOfSpeed",
+        "style": {
+          "en": "Stylized painted fantasy with strong volumes, selective texture, clear lighting and a readable silhouette. Keep detail focused on the main subject and simplify the background.",
+          "es": "Fantasía pintada estilizada, con volúmenes fuertes, textura selectiva, iluminación clara y silueta legible. Concentra el detalle en el protagonista y simplifica el fondo."
+        },
+        "palette": {
+          "en": "Deep green, pale ivory and contrasting magical light.",
+          "es": "Verde profundo, marfil claro y luz mágica de contraste."
+        }
+      }
+    ]
+  },
+  "simpleArtText": {
+    "stepStyle": {
+      "en": "Style",
+      "es": "Estilo"
+    },
+    "stepLibrary": {
+      "en": "Choose artwork",
+      "es": "Elegir recurso"
+    },
+    "stepRequest": {
+      "en": "Prepare request",
+      "es": "Preparar petición"
+    },
+    "stepResult": {
+      "en": "Import result",
+      "es": "Importar resultado"
+    },
+    "next": {
+      "en": "Continue",
+      "es": "Continuar"
+    },
+    "back": {
+      "en": "Back",
+      "es": "Atrás"
+    },
+    "finish": {
+      "en": "Done",
+      "es": "Terminar"
+    },
+    "step": {
+      "en": "Step {current} of {total}",
+      "es": "Paso {current} de {total}"
+    },
+    "presets": {
+      "en": "Choose a starting style",
+      "es": "Elige un estilo de partida"
+    },
+    "presetHelp": {
+      "en": "These examples help describe a visual style. You can change the text and colours. Existing images are not repainted.",
+      "es": "Estos ejemplos ayudan a describir un estilo visual. Puedes cambiar el texto y los colores. Las imágenes existentes no se repintan."
+    },
+    "customStyle": {
+      "en": "Adjust the style",
+      "es": "Personalizar el estilo"
+    },
+    "previewRequest": {
+      "en": "Read the instructions",
+      "es": "Leer las instrucciones"
+    },
+    "referenceExample": {
+      "en": "Reference example",
+      "es": "Ejemplo de referencia"
+    },
+    "librarySearch": {
+      "en": "Search artwork by name…",
+      "es": "Buscar recurso por nombre…"
+    },
+    "all": {
+      "en": "All",
+      "es": "Todos"
+    },
+    "groupCards": {
+      "en": "Cards",
+      "es": "Cartas"
+    },
+    "groupCharacters": {
+      "en": "Combat characters",
+      "es": "Personajes de combate"
+    },
+    "groupChampions": {
+      "en": "Champion presentation",
+      "es": "Presentación de campeones"
+    },
+    "groupBanners": {
+      "en": "Banners and map",
+      "es": "Estandartes y mapa"
+    },
+    "groupFrames": {
+      "en": "Card frames",
+      "es": "Marcos de cartas"
+    },
+    "groupIdentity": {
+      "en": "Clan identity",
+      "es": "Identidad del clan"
+    },
+    "groupIcons": {
+      "en": "In-game icons",
+      "es": "Iconos en partida"
+    },
+    "noneFound": {
+      "en": "No artwork matches these filters.",
+      "es": "Ningún recurso coincide con los filtros."
+    },
+    "statusCustom": {
+      "en": "Your image",
+      "es": "Imagen propia"
+    },
+    "statusExample": {
+      "en": "Included example artwork",
+      "es": "Arte de un ejemplo incluido"
+    },
+    "statusGame": {
+      "en": "Uses a game resource",
+      "es": "Usa un recurso del juego"
+    },
+    "statusPlaceholder": {
+      "en": "Placeholder · replace when you want",
+      "es": "Provisional · puedes sustituirlo"
+    },
+    "statusMissing": {
+      "en": "Image unavailable",
+      "es": "Imagen no disponible"
+    },
+    "gameResourceHelp": {
+      "en": "The game supplies this resource. Its presence and DLC ownership are not checked here. No combat-character preview is included.",
+      "es": "El juego aporta este recurso. Aquí no se comprueba su presencia ni la propiedad del DLC. No incluye vista previa del personaje de combate."
+    },
+    "placeholderHelp": {
+      "en": "The creator supplies a placeholder. You can try the clan now and replace it later.",
+      "es": "El creador proporciona una imagen provisional. Puedes probar el clan ahora y sustituirla después."
+    },
+    "sizeOutput": {
+      "en": "The program prepares this image at {width} × {height} pixels.",
+      "es": "El programa prepara esta imagen a {width} × {height} píxeles."
+    },
+    "sizeCharacter": {
+      "en": "Suggested working canvas: around {width} × {height}. Your image keeps its resolution; visible size depends on margins and scale.",
+      "es": "Lienzo de trabajo orientativo: alrededor de {width} × {height}. Tu imagen conserva su resolución; el tamaño visible depende de márgenes y escala."
+    },
+    "sizeFrame": {
+      "en": "Match the supplied template: {width} × {height}. Keep its transparent opening and outline.",
+      "es": "Respeta la plantilla: {width} × {height}. Conserva su hueco transparente y contorno."
+    },
+    "sheetSize": {
+      "en": "For nine proposals, request at least {width} × {height} pixels for the entire sheet. More pixels give each proposal more detail.",
+      "es": "Para nueve propuestas, pide al menos {width} × {height} píxeles para toda la lámina. Más píxeles permiten más detalle por propuesta."
+    },
+    "compareTitle": {
+      "en": "Compare before replacing",
+      "es": "Compara antes de sustituir"
+    },
+    "before": {
+      "en": "Current image",
+      "es": "Imagen actual"
+    },
+    "after": {
+      "en": "New image",
+      "es": "Imagen nueva"
+    },
+    "useNew": {
+      "en": "Use the new image",
+      "es": "Usar la imagen nueva"
+    },
+    "keepCurrent": {
+      "en": "Keep the current image",
+      "es": "Conservar la imagen actual"
+    },
+    "previousImages": {
+      "en": "Previous images",
+      "es": "Imágenes anteriores"
+    },
+    "restoreImage": {
+      "en": "Use this image again",
+      "es": "Volver a usar esta imagen"
+    },
+    "useOriginal": {
+      "en": "Use the original artwork",
+      "es": "Usar el arte original"
+    },
+    "original": {
+      "en": "Original artwork",
+      "es": "Arte original"
+    },
+    "derive": {
+      "en": "Prepare related images",
+      "es": "Preparar imágenes relacionadas"
+    },
+    "deriveHelp": {
+      "en": "Preview the derived sizes and crops, then choose which images to apply. No character body or new drawing is invented.",
+      "es": "Revisa los tamaños y recortes derivados y elige cuáles aplicar. No se inventan cuerpos de personajes ni dibujos nuevos."
+    },
+    "deriveOpaque": {
+      "en": "The source has no transparency. A white silhouette cannot be separated reliably, so it has not been prepared. Remove the background first if you need it.",
+      "es": "El origen no tiene transparencia. No se puede separar una silueta blanca con fiabilidad, por lo que no se ha preparado. Quita el fondo antes si la necesitas."
+    },
+    "applySelected": {
+      "en": "Apply selected images",
+      "es": "Aplicar imágenes seleccionadas"
+    },
+    "cancel": {
+      "en": "Cancel",
+      "es": "Cancelar"
+    },
+    "derived": {
+      "en": "Related images applied.",
+      "es": "Imágenes relacionadas aplicadas."
+    },
+    "working": {
+      "en": "Preparing images…",
+      "es": "Preparando imágenes…"
+    },
+    "pendingTitle": {
+      "en": "Card in progress",
+      "es": "Carta a medio crear"
+    },
+    "pendingHelp": {
+      "en": "This card is saved but is not part of the clan yet. Continue whenever you want.",
+      "es": "Esta carta está guardada, pero aún no forma parte del clan. Continúa cuando quieras."
+    },
+    "resumeCard": {
+      "en": "Continue this card",
+      "es": "Continuar esta carta"
+    },
+    "saveClose": {
+      "en": "Save and close",
+      "es": "Guardar y cerrar"
+    },
+    "discardCard": {
+      "en": "Discard this unfinished card",
+      "es": "Descartar esta carta sin terminar"
+    },
+    "discardConfirm": {
+      "en": "Discard this card? You can undo it from the editor.",
+      "es": "¿Descartar esta carta? Puedes deshacerlo desde el editor."
+    },
+    "pendingSaved": {
+      "en": "Progress is saved automatically. You can close and continue later.",
+      "es": "El progreso se guarda automáticamente. Puedes cerrar y continuar después."
+    },
+    "pendingInstall": {
+      "en": "Your unfinished card will not be included until you finish creating it.",
+      "es": "La carta sin terminar no se incluirá hasta que completes su creación."
+    },
+    "playtestTitle": {
+      "en": "Your first in-game test",
+      "es": "Tu primera prueba en partida"
+    },
+    "playtestHelp": {
+      "en": "Confirm these checks yourself in the game. Installing successfully does not mean that gameplay has been tested.",
+      "es": "Confirma estas comprobaciones tú en el juego. Una instalación correcta no significa que se haya probado la partida."
+    },
+    "playtestProgress": {
+      "en": "{done} of {total} checks confirmed by you",
+      "es": "{done} de {total} comprobaciones confirmadas por ti"
+    },
+    "playtestStale": {
+      "en": "Install the current changes before confirming tests for this version.",
+      "es": "Instala los cambios actuales antes de confirmar pruebas de esta versión."
+    },
+    "playtestReady": {
+      "en": "This installed version has been checked by you.",
+      "es": "Has comprobado esta versión instalada."
+    },
+    "installedOnly": {
+      "en": "Installed · not yet checked in-game",
+      "es": "Instalado · aún sin comprobar en partida"
+    }
+  },
+  "playtestChecks": [
+    {
+      "id": "clan",
+      "label": {
+        "en": "The clan appears in the modded profile.",
+        "es": "El clan aparece en el perfil con mods."
+      }
+    },
+    {
+      "id": "champion1",
+      "label": {
+        "en": "{champion1} can start a run.",
+        "es": "{champion1} puede iniciar una partida."
+      }
+    },
+    {
+      "id": "champion2",
+      "label": {
+        "en": "{champion2} can start a run.",
+        "es": "{champion2} puede iniciar una partida."
+      }
+    },
+    {
+      "id": "paths",
+      "label": {
+        "en": "Both champions show their three upgrade paths.",
+        "es": "Ambos campeones muestran sus tres sendas."
+      }
+    },
+    {
+      "id": "starters",
+      "label": {
+        "en": "The correct starting cards are added.",
+        "es": "Se añaden las cartas iniciales correctas."
+      }
+    },
+    {
+      "id": "unit",
+      "label": {
+        "en": "A unit can be played and its combat character appears.",
+        "es": "Se puede jugar una unidad y aparece su personaje de combate."
+      }
+    },
+    {
+      "id": "spell",
+      "label": {
+        "en": "A spell can be played and its effect works as intended.",
+        "es": "Se puede jugar un hechizo y su efecto funciona como esperabas."
+      }
+    },
+    {
+      "id": "art",
+      "label": {
+        "en": "Card artwork, champion selection and banner look correct.",
+        "es": "El arte de cartas, la selección de campeón y el estandarte se ven bien."
+      }
+    }
+  ]
 }
