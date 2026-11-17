@@ -2471,8 +2471,8 @@
       "id": "railforged",
       "classId": "ClassRailforged",
       "name": {
-        "es": "Forjados del Raíl y neutrales",
-        "en": "Railforged and wurmkin"
+        "en": "Railforged",
+        "es": "Forjados del Raíl"
       },
       "champions": [
         {

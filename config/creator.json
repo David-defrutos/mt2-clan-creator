@@ -4270,12 +4270,12 @@
       "en": "Lazarus League"
     },
     "railforged": {
-      "es": "Forjados del Raíl y neutrales",
-      "en": "Railforged and wurmkin"
+      "en": "Railforged",
+      "es": "Forjados del Raíl"
     },
     "clanless": {
-      "es": "Neutrales",
-      "en": "Neutral"
+      "en": "Clanless",
+      "es": "Clanless (sin clan)"
     },
     "wurm": {
       "es": "Wurmkin",
@@ -4451,12 +4451,12 @@
         "en": "Example source"
       },
       "clan": {
-        "es": "Clan oficial",
-        "en": "Official clan"
+        "en": "Clan or card group",
+        "es": "Clan o grupo de cartas"
       },
       "allClans": {
-        "es": "Todos los clanes oficiales",
-        "en": "All official clans"
+        "en": "All clans and card groups",
+        "es": "Todos los clanes y grupos de cartas"
       },
       "result": {
         "es": "carta encontrada",
@@ -8532,8 +8532,8 @@
     {
       "id": "railforged",
       "label": {
-        "es": "Forjados del Raíl y neutrales",
-        "en": "Railforged and wurmkin"
+        "en": "Railforged expansion",
+        "es": "Expansión de Railforged"
       }
     }
   ],
