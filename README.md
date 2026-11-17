@@ -28,6 +28,12 @@ Ready steps and steps reviewed by you are shown separately. Review messages open
 
 Common effects are grouped by purpose; search or **More effects** shows the full set. Importing artwork opens a preview before applying it, with separate guidance for card illustrations, combat characters and clan icons. Originals are preserved.
 
+The creator remembers the last card, path and editing level for each draft. Collections can be searched by name or effect, filtered and shown in a compact view. Path editing shows one level at a time and compares final statistics and effects across all three levels.
+
+Warnings appear while editing and use the same checks as the final review. Replacing a customized card or path requires reviewing the replacement; card names and images can be retained. Copied native effects keep any special conditions that the simple controls cannot safely change.
+
+Use **My expansions** to choose which DLC examples to show. This is a manual preference. Public packages exclude DLC artwork while retaining card data and abilities; local original images are not deleted. After installation, the creator explains how to start the modded profile and find your clan.
+
 Optional technical details show the generated JSON in read-only mode. External changes do not update the wizard draft. The creator does not generate a CREADO-CON.md file or request an author field.
 
 Use **Backups and updates** to save a portable **.mt2draft** file containing a draft and uploaded images. Restore it in a new version or on another computer; restoration creates an independent draft and does not overwrite existing work.
@@ -49,3 +55,5 @@ The creator relies on community tools, including [Trainworks Reloaded](https://g
 <!-- 2026-11-16-2158||codex-clan-editor||clan-creator/README.md||Documentar ocho mejoras para uso público con inicio corto vista por senda copias y lanzador inglés -->
 
 <!-- 2026-11-16-2340||codex-clan-editor||clan-creator/README.md||Documentar revisión guiada recuperación estados registrados y encuadre de imágenes -->
+
+<!-- 2026-11-17-0037||codex-clan-editor||clan-creator/README.md||Documentar recuperación de contexto edición por nivel búsqueda sustituciones y ausencia de arte DLC en paquetes públicos -->

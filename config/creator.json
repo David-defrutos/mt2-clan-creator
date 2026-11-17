@@ -8314,5 +8314,254 @@
       "mode": "original"
     },
     "maxZoom": 3
+  },
+  "guidedText": {
+    "resume": {
+      "es": "Continuar con",
+      "en": "Continue with"
+    },
+    "resumeHelp": {
+      "es": "Se recuerda la carta, senda y nivel que estabas editando.",
+      "en": "The last card, path and level you edited are remembered."
+    },
+    "fixNow": {
+      "es": "Pendiente en este paso",
+      "en": "To finish in this step"
+    },
+    "pathChampion": {
+      "es": "Campeón",
+      "en": "Champion"
+    },
+    "pathSelect": {
+      "es": "Senda",
+      "en": "Path"
+    },
+    "pathLevel": {
+      "es": "Nivel que editas",
+      "en": "Level you are editing"
+    },
+    "compareLevels": {
+      "es": "Comparar niveles",
+      "en": "Compare levels"
+    },
+    "finalStats": {
+      "es": "Atributos finales",
+      "en": "Final stats"
+    },
+    "bonusHelp": {
+      "es": "Estas cantidades se suman a los atributos base del campeón. Cada nivel sustituye al anterior.",
+      "en": "These amounts are added to the champion’s base stats. Each level replaces the previous one."
+    },
+    "searchMine": {
+      "es": "Buscar mis cartas por nombre o efecto",
+      "en": "Search my cards by name or effect"
+    },
+    "anyCost": {
+      "es": "Cualquier coste",
+      "en": "Any cost"
+    },
+    "anyRarity": {
+      "es": "Cualquier rareza",
+      "en": "Any rarity"
+    },
+    "sort": {
+      "es": "Ordenar",
+      "en": "Sort"
+    },
+    "nameSort": {
+      "es": "Nombre",
+      "en": "Name"
+    },
+    "costSort": {
+      "es": "Coste",
+      "en": "Cost"
+    },
+    "raritySort": {
+      "es": "Rareza",
+      "en": "Rarity"
+    },
+    "recentSort": {
+      "es": "Últimas añadidas",
+      "en": "Recently added"
+    },
+    "compact": {
+      "es": "Vista compacta",
+      "en": "Compact view"
+    },
+    "noMatch": {
+      "es": "Ninguna carta coincide. Prueba a quitar los filtros.",
+      "en": "No cards match. Try clearing the filters."
+    },
+    "clearFilters": {
+      "es": "Quitar filtros",
+      "en": "Clear filters"
+    },
+    "replaceTitle": {
+      "es": "Revisar sustitución",
+      "en": "Review replacement"
+    },
+    "replaceHelp": {
+      "es": "Tu carta ya tiene contenido. Revisa lo que se sustituirá antes de aplicar el ejemplo.",
+      "en": "Your card already has content. Review what will be replaced before applying the example."
+    },
+    "replaceAll": {
+      "es": "Sustituir carta y efectos",
+      "en": "Replace card and effects"
+    },
+    "keepIdentity": {
+      "es": "Conservar nombre e imágenes",
+      "en": "Keep name and images"
+    },
+    "replaceMechanics": {
+      "es": "Solo sustituir efectos",
+      "en": "Replace effects only"
+    },
+    "replacePath": {
+      "es": "Sustituir esta senda completa",
+      "en": "Replace this entire path"
+    },
+    "replacePathHelp": {
+      "es": "Se sustituirán los tres niveles de esta senda. Las otras sendas se conservan.",
+      "en": "All three levels of this path will be replaced. Other paths are kept."
+    },
+    "current": {
+      "es": "Actual",
+      "en": "Current"
+    },
+    "replacement": {
+      "es": "Ejemplo elegido",
+      "en": "Selected example"
+    },
+    "applyReplacement": {
+      "es": "Aplicar sustitución",
+      "en": "Apply replacement"
+    },
+    "nativeFixed": {
+      "es": "Este componente conserva condiciones especiales del juego. Puedes cambiar las cantidades disponibles o eliminarlo.",
+      "en": "This component preserves special game conditions. You can change the available amounts or remove it."
+    },
+    "nativeWhen": {
+      "es": "Según las condiciones de este efecto",
+      "en": "As defined by this effect"
+    },
+    "nativeTarget": {
+      "es": "Según la selección original del efecto",
+      "en": "As defined by the effect’s selection"
+    },
+    "noAmount": {
+      "es": "Este efecto no tiene una cantidad editable.",
+      "en": "This effect has no editable amount."
+    },
+    "dlcTitle": {
+      "es": "Mis expansiones",
+      "en": "My expansions"
+    },
+    "dlcHelp": {
+      "es": "Indica las expansiones que tienes. No se comprueba tu instalación.",
+      "en": "Choose the expansions you own. Your installation is not checked."
+    },
+    "compatibleOnly": {
+      "es": "Solo ejemplos compatibles con mis expansiones",
+      "en": "Only examples compatible with my expansions"
+    },
+    "dlcNeeded": {
+      "es": "Expansiones utilizadas por este clan",
+      "en": "Expansions used by this clan"
+    },
+    "dlcMissing": {
+      "es": "No has marcado estas expansiones como disponibles:",
+      "en": "You have not marked these expansions as available:"
+    },
+    "dlcBase": {
+      "es": "No se han identificado requisitos de expansión en los ejemplos utilizados.",
+      "en": "No expansion requirements were identified in the examples used."
+    },
+    "dlcUnknown": {
+      "es": "Los requisitos se basan en los ejemplos incluidos. No se comprueba la instalación del juego.",
+      "en": "Requirements are based on included examples. The game installation is not checked."
+    },
+    "playNext": {
+      "es": "Probar el clan en el juego",
+      "en": "Try your clan in the game"
+    },
+    "playManager": {
+      "es": "Abre tu gestor de mods y selecciona el mismo perfil en el que instalaste el clan.",
+      "en": "Open your mod manager and select the same profile where you installed the clan."
+    },
+    "playModded": {
+      "es": "Inicia Monster Train 2 con los mods activados desde ese perfil.",
+      "en": "Start Monster Train 2 with mods enabled from that profile."
+    },
+    "playChoose": {
+      "es": "Empieza una partida y busca el clan «{name}» en la selección de clanes.",
+      "en": "Start a run and look for “{name}” in the clan selection."
+    },
+    "notVisible": {
+      "es": "Mi clan no aparece",
+      "en": "My clan does not appear"
+    },
+    "helpProfile": {
+      "es": "Comprueba que has iniciado el mismo perfil que muestra el destino de instalación.",
+      "en": "Check that you started the same profile shown in the installation destination."
+    },
+    "helpMods": {
+      "es": "En el gestor, confirma que BepInExPack, Trainworks Reloaded y Conductor están activados.",
+      "en": "In your manager, confirm that BepInExPack, Trainworks Reloaded and Conductor are enabled."
+    },
+    "helpRestart": {
+      "es": "Si el juego estaba abierto, ciérralo y vuelve a iniciarlo con mods después de instalar.",
+      "en": "If the game was open, close it and start it with mods again after installing."
+    },
+    "helpChanges": {
+      "es": "Si has seguido editando, instala tus cambios antes de volver al juego.",
+      "en": "If you continued editing, install your changes before returning to the game."
+    },
+    "keepEditing": {
+      "es": "Seguir editando mi clan",
+      "en": "Continue editing my clan"
+    }
+  },
+  "expansions": [
+    {
+      "id": "punished",
+      "label": {
+        "es": "Los Castigados",
+        "en": "The Punished"
+      }
+    },
+    {
+      "id": "railforged",
+      "label": {
+        "es": "Forjados del Raíl y neutrales",
+        "en": "Railforged and neutral"
+      }
+    }
+  ],
+  "collectionSearch": {
+    "sortOrder": [
+      "common",
+      "uncommon",
+      "rare",
+      "champion"
+    ],
+    "pageSize": 24
+  },
+  "nativeTargetLabels": {
+    "self": {
+      "es": "Esta unidad",
+      "en": "This unit"
+    },
+    "drop_target_character": {
+      "es": "La unidad que recibe la carta",
+      "en": "The unit receiving the card"
+    },
+    "front_in_room": {
+      "es": "La primera unidad seleccionada del piso",
+      "en": "The front selected unit on the floor"
+    },
+    "room": {
+      "es": "Las unidades seleccionadas del piso",
+      "en": "The selected units on the floor"
+    }
   }
 }

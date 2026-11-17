@@ -1,3 +1,4 @@
+import {draftIssues} from './validation.js';
 import {nativeDocumentCopy} from './native-copy.js';
 import {recipeDescription,spellRecipientTeam} from './recipe-text.js';
 import {removeTemplateEffects} from './template-effects.js';
@@ -15,18 +16,8 @@ import {allCards,unitStatusKey,type Draft,type CardDraft,type EffectChoice} from
 import {projectFolder} from './projects.js';
 const langKeys=['english','spanish','french','german','portuguese','russian','chinese','chinese_traditional','korean','japanese'];
 const localized=(text:string)=>Object.fromEntries(langKeys.map(k=>[k,text]));
-export interface ReviewIssue {step:number;message:string;messageEn:string;uid?:string;field?:string}
-export async function reviewDraft(d:Draft){
- const issues:ReviewIssue[]=[],issue=(step:number,message:string,messageEn:string,uid?:string,field?:string)=>issues.push({step,message,messageEn,uid,field});
- if(!d.name.trim())issue(0,'Pon un nombre a tu clan.','Give your clan a name.',undefined,'name');
- d.champions.forEach((c,i)=>{const step=i?5:1;if(!c.card.name.trim())issue(step,`Pon nombre al campeón ${i+1}.`,`Name champion ${i+1}.`,c.card.uid,'name');if(c.card.health<1)issue(step,'El campeón necesita salud mayor que cero.','Champion health must be greater than zero.',c.card.uid,'health');if(c.card.size<1)issue(step,'El campeón necesita capacidad mayor que cero.','Champion capacity must be greater than zero.',c.card.uid,'size');c.paths.forEach((p,j)=>{if(!p.name.trim())issue(step+j+1,`Pon nombre a la senda ${j+1} del campeón ${i+1}.`,`Name path ${j+1} of champion ${i+1}.`,undefined,'pathName');});});
- d.starters.forEach((c,i)=>{if(!c.name.trim())issue(9,`Completa la carta inicial ${i+1}.`,`Complete starter card ${i+1}.`,c.uid,'name');});
- if(!d.cards.some(c=>c.kind!=='artifact'&&!c.banner&&c.reward!==false))issue(11,'Añade un hechizo, una sala o una unidad sin estandarte para las recompensas normales.','Add a spell, a room, or a non-banner unit for normal rewards.',undefined,'collection');
- if(d.cards.filter(c=>c.kind==='unit'&&c.banner&&c.reward!==false).length<2){const candidate=d.cards.find(c=>c.kind==='unit'&&!c.banner&&c.reward!==false);issue(10,'Añade al menos dos unidades y márcalas como unidades de estandarte.','Add at least two units and mark them as banner units.',candidate?.uid,candidate?'banner':'collection');}
- for(const c of d.cards){const step=c.kind==='unit'?10:['spell','equipment','blight','junk'].includes(c.kind)?11:c.kind==='room'?12:13;if(!c.name.trim())issue(step,'Hay una carta sin nombre.','A card has no name.',c.uid,'name');if(c.kind==='unit'&&c.health<1)issue(step,`${c.name||'La unidad'} necesita salud mayor que cero.`,`${c.name||'The unit'} needs health greater than zero.`,c.uid,'health');if(c.kind==='unit'&&c.size<1)issue(step,`${c.name||'La unidad'} necesita capacidad mayor que cero.`,`${c.name||'The unit'} needs capacity greater than zero.`,c.uid,'size');if(['room','artifact'].includes(c.kind)&&!c.templateId&&!c.passive)issue(step,'Elige un efecto para tu sala o artefacto.','Choose an effect for your room or artifact.',c.uid,'effects');}
- for(const c of allCards(d))if(c.kind==='spell'&&!c.templateId&&!c.effects.length)issue(d.starters.includes(c)?9:11,`${c.name||'El hechizo'} necesita al menos un efecto.`,`${c.name||'The spell'} needs at least one effect.`,c.uid,'effects');
- return issues;
-}
+export {type ReviewIssue} from './validation.js';
+export async function reviewDraft(d:Draft){return draftIssues(d);}
 
 async function imageBytes(d:Draft,asset:string){if(/^(?:official\/)?assets\/[a-f0-9]{64}\.png$/.test(asset)){const b=await fs.readFile(path.join(catalogRoot,asset));if(createHash('sha256').update(b).digest('hex')!==path.basename(asset,'.png'))throw Error('Una imagen del catálogo cambió. Reinstala el creador.');return b;}if(/^upload\/[a-f0-9-]{36}\.png$/.test(asset))return fs.readFile(path.join(projectFolder(d.id),asset));throw Error('La imagen no pertenece al catálogo ni a tu clan.');}
 export async function generateClan(d:Draft){const issues=await reviewDraft(d);if(issues.length)throw Error(issues[0].message);
@@ -133,3 +124,4 @@ export async function generateClan(d:Draft){const issues=await reviewDraft(d);if
 // 2026-11-16-2032||codex-clan-editor||clan-creator/src/server/creator/export.ts||Dejar de generar CREADO-CON.md conservando credits y README del clan
 // 2026-11-16-2040||codex-clan-editor||clan-creator/src/server/creator/export.ts||Usar namespace Local interno sin dependencia del autor legado
 // 2026-11-16-2322||codex-clan-editor||clan-creator/src/server/creator/export.ts||Identificar carta y campo exactos en cada aviso de revisión
+// 2026-11-17-0021||codex-clan-editor||clan-creator/src\server\creator\export.ts||Usar las mismas comprobaciones en revisión y asistente

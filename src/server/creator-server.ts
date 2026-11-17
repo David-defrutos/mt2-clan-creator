@@ -1,3 +1,4 @@
+import {editingView} from './creator/navigation-state.js';
 import {errorGuidance} from './creator/user-errors.js';
 import {installationState,rememberDestination,recordInstallation,gameContentHash,updateProjectState} from './creator/project-state.js';
 import {createQuickDraft} from './creator/quick-start.js';
@@ -41,7 +42,7 @@ async function route(req:IncomingMessage,res:ServerResponse){const host=req.head
  const project=p.match(/^\/api\/projects\/([a-f0-9-]{36})(?:\/(image|review|export|local-plan|local-install|trash-draft|restore-draft|uninstall-plan|uninstall|json-preview|backup|local-state))?$/);
  if(project){const id=project[1],action=project[2];if(req.method==='GET'&&!action){send(res,200,await loadDraft(id));return;}if(req.method==='PUT'&&!action){const value=await body(req);if(value.id!==id)throw Error('El clan del formulario no coincide.');send(res,200,await saveDraft(value));return;}
  if(req.method==='GET'&&action==='local-state'){send(res,200,await installationState(await loadDraft(id)));return;}
- if(req.method==='PUT'&&action==='local-state'){const input=await body(req);await rememberDestination(id,input.folder);send(res,200,await installationState(await loadDraft(id)));return;}
+ if(req.method==='PUT'&&action==='local-state'){const input=await body(req);if(Object.hasOwn(input,'folder'))await rememberDestination(id,input.folder);if(Object.hasOwn(input,'view')){const draft=await loadDraft(id),rules=await creatorRules();const view=editingView(draft,input.view,rules.steps),card=[...draft.starters,...draft.cards].find(c=>c.uid===view.editing);await updateProjectState(id,{view:{...view,editingName:card?.name}});}send(res,200,await installationState(await loadDraft(id)));return;}
  if(req.method==='GET'&&action==='backup'){send(res,200,await exportDraftBackup(id));return;}
  if(req.method==='POST'&&action==='trash-draft'){const input=await body(req);if(preparing.has(id))throw Error('Espera a que termine la preparacion del clan.');send(res,200,await trashDraft(id,input.revision));return;}
  if(req.method==='POST'&&action==='restore-draft'){await body(req);send(res,200,await restoreDraft(id));return;}
@@ -88,3 +89,4 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
 // 2026-11-16-2323||codex-clan-editor||clan-creator/src/server/creator-server.ts||Exponer estado local y destino recordado registrar instalación real y devolver códigos de error traducibles
 // 2026-11-16-2327||codex-clan-editor||clan-creator/src/server/creator-server.ts||Aceptar encuadre de imagen validado sin rutas arbitrarias ni modificación del original
 // 2026-11-16-2331||codex-clan-editor||clan-creator/src/server/creator-server.ts||No informar de fallo de instalación o desinstalación cuando solo falla su registro local posterior
+// 2026-11-17-0021||codex-clan-editor||clan-creator/src\server\creator-server.ts||Persistir contexto de edición validado por proyecto sin escribir rutas ni revisar instalaciones
