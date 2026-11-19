@@ -2,6 +2,7 @@
   "name": "mt2-clan-creator",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev:server": "tsx watch src/server/creator-server.ts",

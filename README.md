@@ -4,6 +4,12 @@
 
 A guided Monster Train 2 clan creator for people with no programming experience. Uses the game, Trainworks Reloaded and Conductor components.
 
+Clan mechanics are defined in JSON using existing effects from Monster Train 2, Trainworks Reloaded, and Conductor 0.6.0. The creator compiles a standard loader for the game. It does not generate custom C# mechanics.
+
+## License
+
+The creator’s code is available under the [MIT License](LICENSE). Monster Train 2 artwork and assets, third-party dependencies, and example mod content retain their respective rights and notices. See [catalog credits](catalog/credits).
+
 ## Download and run on Windows
 
 Download the Windows ZIP from [Releases](https://github.com/David-defrutos/mt2-clan-creator/releases), extract the entire folder to a writable location, and run **Launch-Creator.cmd**. It opens the creator in your browser. Node is included; no separate Node installation is needed.
