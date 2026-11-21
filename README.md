@@ -16,6 +16,33 @@ Download the Windows ZIP from [Releases](https://github.com/David-defrutos/mt2-c
 
 English is the initial language. Spanish is available from the language selector, and the program remembers your choice.
 
+## Screenshots
+
+**Start from scratch or learn with an example clan**
+
+![Create my clan dialog with the official clan selector open](docs/screenshots/create-clan.png)
+
+<details>
+<summary>See the champion, card, artwork, and installation screens</summary>
+
+**Customize a champion path**
+
+![Champion path editor with a level selector, stat bonuses, and a card preview](docs/screenshots/champion-path.png)
+
+**Edit unit abilities and effects**
+
+![Bounty Stalker in the unit editor with abilities, an effect trigger, and a live card preview](docs/screenshots/unit-effects.png)
+
+**Set up clan artwork**
+
+![Clan assets editor showing logos, card frames, and map banners](docs/screenshots/clan-assets.png)
+
+**Install your clan to try it in the game**
+
+![Install and play screen with prerequisites and a Thunderstore profile selected](docs/screenshots/install-and-play.png)
+
+</details>
+
 ## Create and try a clan
 
 Choose **Create my clan** to start from scratch, learn with an official clan, or open an editable example of The Free Company, SuccClan, or W&W Inc. The community examples mark any effects that were simplified to work with the supported components.
@@ -137,3 +164,4 @@ The creator relies on community tools, including [Trainworks Reloaded](https://g
 <!-- 2026-11-21-1427||codex-clan-editor||clan-creator/README.md||Documentar el orden alfabético por defecto para las listas -->
 <!-- 2026-11-21-1931||codex-clan-editor||clan-creator/README.md||Explicar cómo consultar la documentación y volver al asistente -->
 <!-- 2026-11-21-1945||codex-clan-editor||clan-creator/README.md||Explicar dónde consultar los requisitos del perfil antes de instalar -->
+<!-- 2026-11-21-2202||codex-clan-editor||clan-creator/README.md||Documentar el asistente con cinco capturas en inglés -->
