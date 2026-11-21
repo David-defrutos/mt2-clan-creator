@@ -5382,6 +5382,7 @@
         "sanar",
         "curacion",
         "heal",
+        "healing",
         "restore"
       ],
       [
@@ -5436,7 +5437,8 @@
       [
         "ember",
         "ambar",
-        "energia"
+        "energia",
+        "energy"
       ],
       [
         "ataque",
@@ -5445,6 +5447,19 @@
       [
         "multiataque",
         "multistrike"
+      ],
+      [
+        "dazed",
+        "stun"
+      ],
+      [
+        "enemy",
+        "enemies"
+      ],
+      [
+        "ally",
+        "allies",
+        "allie"
       ]
     ],
     "stopWords": [
