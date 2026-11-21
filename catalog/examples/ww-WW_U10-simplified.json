@@ -1,0 +1,177 @@
+{
+  "id": "ww-WW_U10-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_U10_Character/ability",
+      "characters/WW_U10_Character/starting_status_effects"
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_U10"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Becario de Créditos Consumibles",
+    "english": "Consumable Credits Intern",
+    "french": "Stagiaire des crédits consommables",
+    "german": "Praktikant für verbrauchbare Leistungspunkte",
+    "portuguese": "Estagiário de Créditos Consumíveis",
+    "russian": "Стажёр расходуемых зачётов",
+    "chinese": "消耗学分实习生",
+    "chinese_traditional": "消耗學分實習生",
+    "korean": "소모 학점 인턴",
+    "japanese": "消費単位インターン"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 20,
+  "attack": 6,
+  "size": 1,
+  "picture": "assets/94a6d02f4112409181d0b5356009a7564eff604d722cc729bf3aaee68ee60acf.png",
+  "characterPicture": "assets/d1309ce1d11a6e6cab9993b40770ed1ef1e46c22c1078ae3d191c0a591c3c472.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/characters/WW_U10CharacterArt.png": "assets/d1309ce1d11a6e6cab9993b40770ed1ef1e46c22c1078ae3d191c0a591c3c472.png",
+    "textures/cards/WW_U10CardArt.png": "assets/94a6d02f4112409181d0b5356009a7564eff604d722cc729bf3aaee68ee60acf.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_U10",
+        "names": {
+          "spanish": "Becario de Créditos Consumibles",
+          "english": "Consumable Credits Intern",
+          "french": "Stagiaire des crédits consommables",
+          "german": "Praktikant für verbrauchbare Leistungspunkte",
+          "portuguese": "Estagiário de Créditos Consumíveis",
+          "russian": "Стажёр расходуемых зачётов",
+          "chinese": "消耗学分实习生",
+          "chinese_traditional": "消耗學分實習生",
+          "korean": "소모 학점 인턴",
+          "japanese": "消費単位インターン"
+        },
+        "card_type": "monster",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_U10CardArt",
+        "effects": [
+          "@WW_U10_Spawn"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_U10_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_U10_Character"
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_U10_Character",
+        "names": {
+          "spanish": "Becario de Créditos Consumibles",
+          "english": "Consumable Credits Intern",
+          "french": "Stagiaire des crédits consommables",
+          "german": "Praktikant für verbrauchbare Leistungspunkte",
+          "portuguese": "Estagiário de Créditos Consumíveis",
+          "russian": "Стажёр расходуемых зачётов",
+          "chinese": "消耗学分实习生",
+          "chinese_traditional": "消耗學分實習生",
+          "korean": "소모 학점 인턴",
+          "japanese": "消費単位インターン"
+        },
+        "character_art": "@WW_U10CharacterArt",
+        "size": 1,
+        "health": 20,
+        "attack_damage": 6,
+        "subtypes": [
+          "@WW_Wizard",
+          "SubtypesData_BannerUnit"
+        ],
+        "starting_status_effects": [
+          {
+            "status": "mageblade",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Wizard",
+        "names": {
+          "english": "Wizard",
+          "spanish": "Mago",
+          "french": "Sorcier",
+          "german": "Magier",
+          "portuguese": "Mago",
+          "russian": "Маг",
+          "chinese": "男巫",
+          "chinese_traditional": "男巫",
+          "korean": "마법사",
+          "japanese": "魔法使い"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_U10CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_U10CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.98,
+                "z": 0
+              },
+              "scale": {
+                "x": 1.75,
+                "y": 1.75,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WW_U10CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_U10CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_U10CharacterArt",
+        "path": "textures/characters/WW_U10CharacterArt.png"
+      },
+      {
+        "id": "WW_U10CardArt",
+        "path": "textures/cards/WW_U10CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_U10.json": "790947ce4737dbca9c7c06f216d0a40366b62b316f8be9eda92f422bf6613e07",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

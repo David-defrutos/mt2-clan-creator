@@ -1,0 +1,407 @@
+{
+  "id": "succclan-SpawnShadowLady-clan-path-1",
+  "championPath": {
+    "baseId": "succclan-SpawnShadowLady",
+    "path": 1,
+    "level": 1,
+    "names": {
+      "english": "Blood Thirsty",
+      "chinese": "嗜血",
+      "spanish": "Sed de sangre",
+      "french": "Soif de sang",
+      "german": "Blutdurst",
+      "portuguese": "Sede de Sangue",
+      "russian": "Жажда крови",
+      "chinese_traditional": "嗜血",
+      "japanese": "血への渇望",
+      "korean": "피의 갈증"
+    },
+    "upgradeId": "upg_BloodThirstyBasic",
+    "localUpgradeId": "upg_BloodThirstyBasic",
+    "upgrade": {
+      "id": "upg_BloodThirstyBasic",
+      "titles": {
+        "english": "Blood Thirsty",
+        "chinese": "嗜血",
+        "spanish": "Sed de sangre",
+        "french": "Soif de sang",
+        "german": "Blutdurst",
+        "portuguese": "Sede de Sangue",
+        "russian": "Жажда крови",
+        "chinese_traditional": "嗜血",
+        "japanese": "血への渇望",
+        "korean": "피의 갈증"
+      },
+      "bonus_damage": 10,
+      "bonus_hp": 10,
+      "use_upgrade_highlight_tags": true,
+      "trigger_upgrades": [
+        "@BloodThirstyBasicTrigger"
+      ]
+    },
+    "levels": [
+      {
+        "upgradeId": "upg_BloodThirstyBasic",
+        "ref": "@upg_BloodThirstyBasic"
+      },
+      {
+        "upgradeId": "upg_BloodThirstyPre",
+        "ref": "@upg_BloodThirstyPre"
+      },
+      {
+        "upgradeId": "upg_BloodThirstyPro",
+        "ref": "@upg_BloodThirstyPro"
+      }
+    ]
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "SpawnShadowLady"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Shadow Lady · Blood Thirsty · I",
+    "chinese": "匿影女士 · 嗜血 · I",
+    "spanish": "Dama de las sombras · Sed de sangre · I",
+    "french": "Dame des ombres · Soif de sang · I",
+    "german": "Schattendame · Blutdurst · I",
+    "portuguese": "Dama das Sombras · Sede de Sangue · I",
+    "russian": "Владычица теней · Жажда крови · I",
+    "chinese_traditional": "暗影女士 · 嗜血 · I",
+    "japanese": "影の貴婦人 · 血への渇望 · I",
+    "korean": "그림자 여군주 · 피의 갈증 · I"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 30,
+  "attack": 10,
+  "size": 2,
+  "picture": "assets/1bcf94aadb2b46a54ce8ba4c480695de3b5c4a98cdd56dd87fbd1ba248b18a64.png",
+  "characterPicture": "assets/e1be8935f0112b5ad280f31c47cb34e628c9dd8aabfc20b79530315468ce00fa.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ShadowLadyCharacterArt.png": "assets/e1be8935f0112b5ad280f31c47cb34e628c9dd8aabfc20b79530315468ce00fa.png",
+    "textures/ShadowLadyCardArt.png": "assets/1bcf94aadb2b46a54ce8ba4c480695de3b5c4a98cdd56dd87fbd1ba248b18a64.png"
+  },
+  "document": {
+    "upgrades": [
+      {
+        "id": "upg_BloodThirstyPro",
+        "titles": {
+          "english": "Blood Thirsty III",
+          "chinese": "嗜血 III",
+          "spanish": "Sed de sangre III",
+          "french": "Soif de sang III",
+          "german": "Blutdurst III",
+          "portuguese": "Sede de Sangue III",
+          "russian": "Жажда крови III",
+          "chinese_traditional": "嗜血 III",
+          "japanese": "血への渇望 III",
+          "korean": "피의 갈증 III"
+        },
+        "bonus_damage": 50,
+        "bonus_hp": 40,
+        "use_upgrade_highlight_tags": true,
+        "trigger_upgrades": [
+          "@BloodThirstyProTrigger"
+        ]
+      },
+      {
+        "id": "BattleGrowthBloodThirstyProAttack",
+        "bonus_damage": 25
+      },
+      {
+        "id": "upg_BloodThirstyPre",
+        "titles": {
+          "english": "Blood Thirsty II",
+          "chinese": "嗜血 II",
+          "spanish": "Sed de sangre II",
+          "french": "Soif de sang II",
+          "german": "Blutdurst II",
+          "portuguese": "Sede de Sangue II",
+          "russian": "Жажда крови II",
+          "chinese_traditional": "嗜血 II",
+          "japanese": "血への渇望 II",
+          "korean": "피의 갈증 II"
+        },
+        "bonus_damage": 20,
+        "bonus_hp": 30,
+        "use_upgrade_highlight_tags": true,
+        "trigger_upgrades": [
+          "@BloodThirstyPreTrigger"
+        ]
+      },
+      {
+        "id": "BattleGrowthBloodThirstyPreAttack",
+        "bonus_damage": 15
+      },
+      {
+        "id": "upg_BloodThirstyBasic",
+        "titles": {
+          "english": "Blood Thirsty",
+          "chinese": "嗜血",
+          "spanish": "Sed de sangre",
+          "french": "Soif de sang",
+          "german": "Blutdurst",
+          "portuguese": "Sede de Sangue",
+          "russian": "Жажда крови",
+          "chinese_traditional": "嗜血",
+          "japanese": "血への渇望",
+          "korean": "피의 갈증"
+        },
+        "bonus_damage": 10,
+        "bonus_hp": 10,
+        "use_upgrade_highlight_tags": true,
+        "trigger_upgrades": [
+          "@BloodThirstyBasicTrigger"
+        ]
+      },
+      {
+        "id": "BattleGrowthBloodThirstyBasicAttack",
+        "bonus_damage": 10
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "BloodThirstyProTrigger",
+        "trigger": "on_turn_begin",
+        "descriptions": {
+          "english": "Apply +[effect0.power][attack] to all units.",
+          "spanish": "Otorga +[effect0.power][attack] a todas las unidades.",
+          "french": "Applique +[effect0.power][attack] à toutes les unités.",
+          "german": "Verleihe allen Einheiten +[effect0.power][attack].",
+          "russian": "Даёт всем бойцам +[effect0.power][attack].",
+          "portuguese": "Concede +[effect0.power][attack] a todas as unidades.",
+          "chinese": "所有单位获得+[effect0.power][attack]。",
+          "chinese_traditional": "所有單位獲得+[effect0.power][attack]。",
+          "korean": "모든 유닛에게 +[effect0.power][attack]을 부여합니다.",
+          "japanese": "全ユニットに+[effect0.power][attack]を付与する。"
+        },
+        "effects": [
+          "@BloodThirstyProAttack"
+        ]
+      },
+      {
+        "id": "BloodThirstyPreTrigger",
+        "trigger": "on_turn_begin",
+        "descriptions": {
+          "english": "Apply +[effect0.power][attack] to all units.",
+          "spanish": "Otorga +[effect0.power][attack] a todas las unidades.",
+          "french": "Applique +[effect0.power][attack] à toutes les unités.",
+          "german": "Verleihe allen Einheiten +[effect0.power][attack].",
+          "russian": "Даёт всем бойцам +[effect0.power][attack].",
+          "portuguese": "Concede +[effect0.power][attack] a todas as unidades.",
+          "chinese": "所有单位获得+[effect0.power][attack]。",
+          "chinese_traditional": "所有單位獲得+[effect0.power][attack]。",
+          "korean": "모든 유닛에게 +[effect0.power][attack]을 부여합니다.",
+          "japanese": "全ユニットに+[effect0.power][attack]を付与する。"
+        },
+        "effects": [
+          "@BloodThirstyPreAttack"
+        ]
+      },
+      {
+        "id": "BloodThirstyBasicTrigger",
+        "trigger": "on_turn_begin",
+        "descriptions": {
+          "english": "Apply +[effect0.power][attack] to all units.",
+          "spanish": "Otorga +[effect0.power][attack] a todas las unidades.",
+          "french": "Applique +[effect0.power][attack] à toutes les unités.",
+          "german": "Verleihe allen Einheiten +[effect0.power][attack].",
+          "russian": "Даёт всем бойцам +[effect0.power][attack].",
+          "portuguese": "Concede +[effect0.power][attack] a todas as unidades.",
+          "chinese": "所有单位获得+[effect0.power][attack]。",
+          "chinese_traditional": "所有單位獲得+[effect0.power][attack]。",
+          "korean": "모든 유닛에게 +[effect0.power][attack]을 부여합니다.",
+          "japanese": "全ユニットに+[effect0.power][attack]を付与する。"
+        },
+        "effects": [
+          "@BloodThirstyBasicAttack"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "BloodThirstyProAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "room",
+        "target_team": "both",
+        "param_int": 25,
+        "param_upgrade": "@BattleGrowthBloodThirstyProAttack",
+        "param_int_3": 0
+      },
+      {
+        "id": "BloodThirstyPreAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "room",
+        "target_team": "both",
+        "param_int": 15,
+        "param_upgrade": "@BattleGrowthBloodThirstyPreAttack",
+        "param_int_3": 0
+      },
+      {
+        "id": "BloodThirstyBasicAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "room",
+        "target_team": "both",
+        "param_int": 10,
+        "param_upgrade": "@BattleGrowthBloodThirstyBasicAttack",
+        "param_int_3": 0
+      },
+      {
+        "id": "SpawnShadowLady",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@ShadowLady"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXAttackBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXBladeAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/DeathsDancer/FX_DeathsDancerAttack.prefab",
+          "asset_guid": "7b4040ba5c134c84eaeb246a77b0a401"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "cards": [
+      {
+        "id": "SpawnShadowLady",
+        "names": {
+          "english": "Shadow Lady",
+          "chinese": "匿影女士",
+          "spanish": "Dama de las sombras",
+          "french": "Dame des ombres",
+          "german": "Schattendame",
+          "portuguese": "Dama das Sombras",
+          "russian": "Владычица теней",
+          "chinese_traditional": "暗影女士",
+          "japanese": "影の貴婦人",
+          "korean": "그림자 여군주"
+        },
+        "card_art": "@ShadowLadyCardArt",
+        "cost": 0,
+        "card_type": "monster",
+        "rarity": "champion",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnShadowLady"
+        ],
+        "initial_upgrades": [
+          "@upg_BloodThirstyBasic"
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "ShadowLady",
+        "attack_vfx": "@SuccFXBladeAttack",
+        "impact_vfx": "@SuccFXShadowImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "names": {
+          "english": "Shadow Lady",
+          "chinese": "匿影女士",
+          "spanish": "Dama de las sombras",
+          "french": "Dame des ombres",
+          "german": "Schattendame",
+          "portuguese": "Dama das Sombras",
+          "russian": "Владычица теней",
+          "chinese_traditional": "暗影女士",
+          "japanese": "影の貴婦人",
+          "korean": "그림자 여군주"
+        },
+        "character_art": "@ShadowLadyCharacterArt",
+        "size": 2,
+        "attack_damage": 10,
+        "health": 30,
+        "subtypes": [
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+        ]
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ShadowLadyCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@ShadowLadyCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.39,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "ShadowLadyCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ShadowLadyCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ShadowLadyCharacterArt",
+        "path": "textures/ShadowLadyCharacterArt.png"
+      },
+      {
+        "id": "ShadowLadyCardArt",
+        "path": "textures/ShadowLadyCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/champions/champion_ShadowLady.json": "48f05c11e190a258521c92fa9cd7b5635478748ce94ddadaee9dcb879e36dbda",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "id": "succclan-MindDomination-simplified",
+  "simplified": {
+    "removed": [
+      "cards/MindDomination/effects"
+    ],
+    "needsEffect": false
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "MindDomination"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Mind Domination",
+    "chinese": "支配他人",
+    "spanish": "Dominación mental",
+    "french": "Domination mentale",
+    "german": "Gedankenkontrolle",
+    "portuguese": "Dominação Mental",
+    "russian": "Подчинение разума",
+    "chinese_traditional": "心靈支配",
+    "japanese": "精神支配",
+    "korean": "정신 지배"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/edbe9b791ec8029d530f54dfe286edac26d4f76e83670d530de3cd4853efeb8e.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/MindDominationArt.png": "assets/edbe9b791ec8029d530f54dfe286edac26d4f76e83670d530de3cd4853efeb8e.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "MindDomination",
+        "names": {
+          "english": "Mind Domination",
+          "chinese": "支配他人",
+          "spanish": "Dominación mental",
+          "french": "Domination mentale",
+          "german": "Gedankenkontrolle",
+          "portuguese": "Dominação Mental",
+          "russian": "Подчинение разума",
+          "chinese_traditional": "心靈支配",
+          "japanese": "精神支配",
+          "korean": "정신 지배"
+        },
+        "card_type": "spell",
+        "rarity": "common",
+        "card_art": "@MindDominationArt",
+        "cost": 1,
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@MindDominationValidTarget",
+          "@MindDominationBump",
+          "@MindDominationHeal"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "MindDominationHeal",
+        "applied_vfx": "@SuccFXHealNormal",
+        "name": "CardEffectHeal",
+        "target_mode": "last_targeted_characters",
+        "target_team": "both",
+        "param_int": 20,
+        "target_ignore_bosses": true
+      },
+      {
+        "id": "MindDominationBump",
+        "name": "CardEffectBump",
+        "target_mode": "last_targeted_characters",
+        "target_team": "both",
+        "param_int": -1,
+        "target_ignore_bosses": true,
+        "should_test": true
+      },
+      {
+        "id": "MindDominationValidTarget",
+        "name": "CardEffectNULL",
+        "target_mode": "drop_target_character",
+        "target_team": "both",
+        "target_ignore_bosses": true,
+        "should_fail_to_cast_if_test_fails": true,
+        "should_cancel_subsequent_effects_if_test_fails": true
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXHealNormal",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_HealImpactNormal_PS.prefab",
+          "asset_guid": "a1b4834936900f44c97dcde93697e47b"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "MindDominationArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@MindDominationArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "MindDominationArt",
+        "path": "textures/MindDominationArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_MindDomination.json": "9bf11e089f410d9479f40338aa925821a5a4ce4655cbb84baaa753af1b480f47",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

@@ -7,7 +7,7 @@ const run=promisify(execFile),root=path.resolve(import.meta.dirname,'..'),proofF
 const env=Object.fromEntries(Object.entries(process.env).filter(([key])=>!['path','node_path','node_options','clan_creator_home','clan_creator_port'].includes(key.toLowerCase())));
 env.PATH=[path.join(system,'System32'),system,path.join(system,'System32/WindowsPowerShell/v1.0')].join(';');
 let nodeAvailable=true;try{await run(path.join(system,'System32/where.exe'),['node'],{cwd:home,env,windowsHide:true});}catch{nodeAvailable=false;}if(nodeAvailable)throw Error('El entorno todavía puede encontrar Node');
-const cmd=path.join(system,'System32/cmd.exe'),launcher=await fs.stat(path.join(home,'Launch-Creator.cmd')).then(()=> 'Launch-Creator.cmd').catch(()=> 'Abrir-creador.cmd');
+const cmd=path.join(system,'System32/cmd.exe'),launcher='start-clan-creator.cmd';
 const launched=await new Promise((resolve,reject)=>{const child=spawn(cmd,['/d','/c',launcher],{cwd:home,env,windowsHide:true,stdio:'ignore'});const timer=setTimeout(()=>reject(Error('El lanzador no termina en 60 s')),60000);child.once('error',e=>{clearTimeout(timer);reject(e)});child.once('exit',code=>{clearTimeout(timer);if(code===0)resolve({stdout:'Real CMD launcher exited successfully with stdio ignored'});else reject(Error('Launcher exit '+code));});});
 const rules=JSON.parse(await fs.readFile(path.join(home,'config/creator.json'),'utf8')),instance=createHash('sha256').update(home.toLowerCase()).digest('hex').slice(0,20);let url,info;
 for(let n=0;n<rules.application.portSearchCount;n++){const candidate='http://127.0.0.1:'+(rules.application.port+n);try{const res=await fetch(candidate+'/api/creator',{signal:AbortSignal.timeout(1000)});const body=await res.json();if(body.instance===instance){url=candidate;info=body;break;}}catch{}}
@@ -23,3 +23,4 @@ Object.assign(report,{testedAt:new Date().toISOString(),systemNodeAvailable:node
 // 2026-11-16-2027||codex-clan-editor||clan-creator/scripts/verify-windows-distribution.mjs||No confundir borradores creados tras arrancar con datos incluidos en ZIP; conservar actividad del usuario
 // 2026-11-16-2030||codex-clan-editor||clan-creator/scripts/verify-windows-distribution.mjs||Medir salida real del lanzador sin esperar pipes heredados por el navegador externo
 // 2026-11-16-2149||codex-clan-editor||clan-creator/scripts/verify-windows-distribution.mjs||Verificar lanzador inglés cuando está incluido con compatibilidad para versiones anteriores
+// 2026-11-21-1000||codex-clan-editor||clan-creator/scripts/verify-windows-distribution.mjs||Comprobar el nuevo lanzador de Windows en la distribucion

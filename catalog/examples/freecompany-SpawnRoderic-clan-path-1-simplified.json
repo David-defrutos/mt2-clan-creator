@@ -1,0 +1,575 @@
+{
+  "id": "freecompany-SpawnRoderic-clan-path-1-simplified",
+  "simplified": {
+    "removed": [
+      "game_objects/RodericCharacterArt/animation"
+    ],
+    "path": false
+  },
+  "championPath": {
+    "baseId": "freecompany-SpawnRoderic-simplified",
+    "path": 1,
+    "level": 1,
+    "names": {
+      "english": "Shield Wall",
+      "french": "Mur de boucliers",
+      "german": "Schildwall",
+      "russian": "Стена щитов",
+      "portuguese": "Muralha de Escudos",
+      "chinese": "盾墙",
+      "spanish": "Muro de escudos",
+      "chinese_traditional": "盾牆",
+      "korean": "방패벽",
+      "japanese": "盾の壁"
+    },
+    "upgradeId": "upg_Wall1",
+    "localUpgradeId": "upg_Wall1",
+    "upgrade": {
+      "id": "upg_Wall1",
+      "titles": {
+        "english": "Shield Wall",
+        "french": "Mur de boucliers",
+        "german": "Schildwall",
+        "russian": "Стена щитов",
+        "portuguese": "Muralha de Escudos",
+        "chinese": "盾墙",
+        "spanish": "Muro de escudos",
+        "chinese_traditional": "盾牆",
+        "korean": "방패벽",
+        "japanese": "盾の壁"
+      },
+      "descriptions": {
+        "english": "Intercepts attack damage for allies behind this unit on this floor.",
+        "spanish": "Intercepta el daño de ataques a los aliados situados detrás de esta unidad en este piso.",
+        "french": "Intercepte les dégâts des attaques visant les alliés derrière cette unité à cet étage.",
+        "german": "Fängt Angriffsschaden für Verbündete hinter dieser Einheit auf dieser Ebene ab.",
+        "russian": "Перехватывает урон от атак по союзникам позади этой боевой единицы на этом этаже.",
+        "portuguese": "Intercepta o dano de ataques contra aliados atrás desta unidade neste andar.",
+        "chinese": "拦截本层位于此单位身后的友军受到的攻击伤害。",
+        "chinese_traditional": "攔截本層位於此單位身後的友軍受到的攻擊傷害。",
+        "korean": "이 층에서 이 유닛 뒤에 있는 아군이 받을 공격 피해를 대신 받습니다.",
+        "japanese": "このフロアで自身の後ろにいる味方への攻撃ダメージを肩代わりする。"
+      },
+      "bonus_hp": 9,
+      "trigger_upgrades": [
+        "@WallTrigger1"
+      ],
+      "status_effect_upgrades": [
+        {
+          "status": "titanskin",
+          "count": 2
+        },
+        {
+          "status": "damage shield",
+          "count": 2
+        }
+      ],
+      "show_description_on_cards": true
+    },
+    "levels": [
+      {
+        "upgradeId": "upg_Wall1",
+        "ref": "@upg_Wall1"
+      },
+      {
+        "upgradeId": "upg_Wall2",
+        "ref": "@upg_Wall2"
+      },
+      {
+        "upgradeId": "upg_Wall3",
+        "ref": "@upg_Wall3"
+      }
+    ]
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnRoderic"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Roderic · Shield Wall · I",
+    "french": "Roderic · Mur de boucliers · I",
+    "german": "Roderic · Schildwall · I",
+    "russian": "Roderic · Стена щитов · I",
+    "portuguese": "Roderic · Muralha de Escudos · I",
+    "chinese": "Roderic · 盾墙 · I",
+    "spanish": "Roderic · Muro de escudos · I",
+    "chinese_traditional": "Roderic · 盾牆 · I",
+    "korean": "Roderic · 방패벽 · I",
+    "japanese": "Roderic · 盾の壁 · I"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 36,
+  "attack": 10,
+  "size": 2,
+  "picture": "assets/1989907266018a5120878e50580cd8376484fc2444956a4ee8163f023c1c1c4d.png",
+  "characterPicture": "assets/acc783546049a1129f26d9e0ce9bd462c75bd462eb2facf2679e03e681328d37.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/RodericCharacterArt.png": "assets/acc783546049a1129f26d9e0ce9bd462c75bd462eb2facf2679e03e681328d37.png",
+    "textures/RodericCardFrame1.png": "assets/1989907266018a5120878e50580cd8376484fc2444956a4ee8163f023c1c1c4d.png",
+    "textures/RodericCardBlend33.png": "assets/12de67de6f93a5a8e9679f32271810897f51f6e8a2a70133c154e89ff6f099ed.png",
+    "textures/RodericCardBlend67.png": "assets/19e252f3c6b8ffebb4b1fa17e3ab888cccb2b8aa5c5c35c88ea9afeb8c6cb42e.png",
+    "textures/RodericCardFrame2.png": "assets/b8acf6e1135fa5680896445dd39e2aacf359c10d15201ef2be95d7b338175754.png",
+    "textures/RodericCardArt.png": "assets/1989907266018a5120878e50580cd8376484fc2444956a4ee8163f023c1c1c4d.png"
+  },
+  "document": {
+    "upgrades": [
+      {
+        "id": "upg_Wall3",
+        "titles": {
+          "english": "Shield Wall III",
+          "french": "Mur de boucliers III",
+          "german": "Schildwall III",
+          "russian": "Стена щитов III",
+          "portuguese": "Muralha de Escudos III",
+          "chinese": "盾墙 III",
+          "spanish": "Muro de escudos III",
+          "chinese_traditional": "盾牆 III",
+          "korean": "방패벽 III",
+          "japanese": "盾の壁 III"
+        },
+        "descriptions": {
+          "english": "Intercepts attack damage for allies behind this unit on this floor.",
+          "spanish": "Intercepta el daño de ataques a los aliados situados detrás de esta unidad en este piso.",
+          "french": "Intercepte les dégâts des attaques visant les alliés derrière cette unité à cet étage.",
+          "german": "Fängt Angriffsschaden für Verbündete hinter dieser Einheit auf dieser Ebene ab.",
+          "russian": "Перехватывает урон от атак по союзникам позади этой боевой единицы на этом этаже.",
+          "portuguese": "Intercepta o dano de ataques contra aliados atrás desta unidade neste andar.",
+          "chinese": "拦截本层位于此单位身后的友军受到的攻击伤害。",
+          "chinese_traditional": "攔截本層位於此單位身後的友軍受到的攻擊傷害。",
+          "korean": "이 층에서 이 유닛 뒤에 있는 아군이 받을 공격 피해를 대신 받습니다.",
+          "japanese": "このフロアで自身の後ろにいる味方への攻撃ダメージを肩代わりする。"
+        },
+        "bonus_hp": 34,
+        "remove_upgrades": [
+          "@upg_Wall2"
+        ],
+        "trigger_upgrades": [
+          "@WallTrigger3"
+        ],
+        "status_effect_upgrades": [
+          {
+            "status": "titanskin",
+            "count": 6
+          },
+          {
+            "status": "damage shield",
+            "count": 4
+          }
+        ],
+        "show_description_on_cards": true
+      },
+      {
+        "id": "upg_Wall2",
+        "titles": {
+          "english": "Shield Wall II",
+          "french": "Mur de boucliers II",
+          "german": "Schildwall II",
+          "russian": "Стена щитов II",
+          "portuguese": "Muralha de Escudos II",
+          "chinese": "盾墙 II",
+          "spanish": "Muro de escudos II",
+          "chinese_traditional": "盾牆 II",
+          "korean": "방패벽 II",
+          "japanese": "盾の壁 II"
+        },
+        "descriptions": {
+          "english": "Intercepts attack damage for allies behind this unit on this floor.",
+          "spanish": "Intercepta el daño de ataques a los aliados situados detrás de esta unidad en este piso.",
+          "french": "Intercepte les dégâts des attaques visant les alliés derrière cette unité à cet étage.",
+          "german": "Fängt Angriffsschaden für Verbündete hinter dieser Einheit auf dieser Ebene ab.",
+          "russian": "Перехватывает урон от атак по союзникам позади этой боевой единицы на этом этаже.",
+          "portuguese": "Intercepta o dano de ataques contra aliados atrás desta unidade neste andar.",
+          "chinese": "拦截本层位于此单位身后的友军受到的攻击伤害。",
+          "chinese_traditional": "攔截本層位於此單位身後的友軍受到的攻擊傷害。",
+          "korean": "이 층에서 이 유닛 뒤에 있는 아군이 받을 공격 피해를 대신 받습니다.",
+          "japanese": "このフロアで自身の後ろにいる味方への攻撃ダメージを肩代わりする。"
+        },
+        "bonus_hp": 19,
+        "remove_upgrades": [
+          "@upg_Wall1"
+        ],
+        "trigger_upgrades": [
+          "@WallTrigger2"
+        ],
+        "status_effect_upgrades": [
+          {
+            "status": "titanskin",
+            "count": 4
+          },
+          {
+            "status": "damage shield",
+            "count": 3
+          }
+        ],
+        "show_description_on_cards": true
+      },
+      {
+        "id": "upg_Wall1",
+        "titles": {
+          "english": "Shield Wall",
+          "french": "Mur de boucliers",
+          "german": "Schildwall",
+          "russian": "Стена щитов",
+          "portuguese": "Muralha de Escudos",
+          "chinese": "盾墙",
+          "spanish": "Muro de escudos",
+          "chinese_traditional": "盾牆",
+          "korean": "방패벽",
+          "japanese": "盾の壁"
+        },
+        "descriptions": {
+          "english": "Intercepts attack damage for allies behind this unit on this floor.",
+          "spanish": "Intercepta el daño de ataques a los aliados situados detrás de esta unidad en este piso.",
+          "french": "Intercepte les dégâts des attaques visant les alliés derrière cette unité à cet étage.",
+          "german": "Fängt Angriffsschaden für Verbündete hinter dieser Einheit auf dieser Ebene ab.",
+          "russian": "Перехватывает урон от атак по союзникам позади этой боевой единицы на этом этаже.",
+          "portuguese": "Intercepta o dano de ataques contra aliados atrás desta unidade neste andar.",
+          "chinese": "拦截本层位于此单位身后的友军受到的攻击伤害。",
+          "chinese_traditional": "攔截本層位於此單位身後的友軍受到的攻擊傷害。",
+          "korean": "이 층에서 이 유닛 뒤에 있는 아군이 받을 공격 피해를 대신 받습니다.",
+          "japanese": "このフロアで自身の後ろにいる味方への攻撃ダメージを肩代わりする。"
+        },
+        "bonus_hp": 9,
+        "trigger_upgrades": [
+          "@WallTrigger1"
+        ],
+        "status_effect_upgrades": [
+          {
+            "status": "titanskin",
+            "count": 2
+          },
+          {
+            "status": "damage shield",
+            "count": 2
+          }
+        ],
+        "show_description_on_cards": true
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "WallTrigger3",
+        "trigger": "pre_combat",
+        "descriptions": {
+          "english": "Gain [effect0.status0.power] [valor].",
+          "spanish": "Gana [effect0.status0.power] [valor].",
+          "french": "Gagne [effect0.status0.power] [valor].",
+          "german": "Erhält [effect0.status0.power] [valor].",
+          "russian": "Получает [effect0.status0.power] [valor].",
+          "portuguese": "Recebe [effect0.status0.power] [valor].",
+          "chinese": "获得[effect0.status0.power] [valor]。",
+          "chinese_traditional": "獲得[effect0.status0.power] [valor]。",
+          "korean": "[effect0.status0.power] [valor] 획득.",
+          "japanese": "[effect0.status0.power] [valor]を得る。"
+        },
+        "effects": [
+          "@WallArmor3"
+        ]
+      },
+      {
+        "id": "WallTrigger2",
+        "trigger": "pre_combat",
+        "descriptions": {
+          "english": "Gain [effect0.status0.power] [valor].",
+          "spanish": "Gana [effect0.status0.power] [valor].",
+          "french": "Gagne [effect0.status0.power] [valor].",
+          "german": "Erhält [effect0.status0.power] [valor].",
+          "russian": "Получает [effect0.status0.power] [valor].",
+          "portuguese": "Recebe [effect0.status0.power] [valor].",
+          "chinese": "获得[effect0.status0.power] [valor]。",
+          "chinese_traditional": "獲得[effect0.status0.power] [valor]。",
+          "korean": "[effect0.status0.power] [valor] 획득.",
+          "japanese": "[effect0.status0.power] [valor]を得る。"
+        },
+        "effects": [
+          "@WallArmor2"
+        ]
+      },
+      {
+        "id": "WallTrigger1",
+        "trigger": "pre_combat",
+        "descriptions": {
+          "english": "Gain [effect0.status0.power] [valor].",
+          "spanish": "Gana [effect0.status0.power] [valor].",
+          "french": "Gagne [effect0.status0.power] [valor].",
+          "german": "Erhält [effect0.status0.power] [valor].",
+          "russian": "Получает [effect0.status0.power] [valor].",
+          "portuguese": "Recebe [effect0.status0.power] [valor].",
+          "chinese": "获得[effect0.status0.power] [valor]。",
+          "chinese_traditional": "獲得[effect0.status0.power] [valor]。",
+          "korean": "[effect0.status0.power] [valor] 획득.",
+          "japanese": "[effect0.status0.power] [valor]を得る。"
+        },
+        "effects": [
+          "@WallArmor1"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WallArmor3",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "valor",
+            "count": 9
+          }
+        ],
+        "additional_tooltips": [
+          "@ShieldwallInterceptionRules"
+        ]
+      },
+      {
+        "id": "WallArmor2",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "valor",
+            "count": 6
+          }
+        ],
+        "additional_tooltips": [
+          "@ShieldwallInterceptionRules"
+        ]
+      },
+      {
+        "id": "WallArmor1",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "valor",
+            "count": 3
+          }
+        ],
+        "additional_tooltips": [
+          "@ShieldwallInterceptionRules"
+        ]
+      },
+      {
+        "id": "SpawnRodericEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@Roderic"
+      }
+    ],
+    "additional_tooltips": [
+      {
+        "id": "ShieldwallInterceptionRules",
+        "titles": {
+          "english": "Interception",
+          "spanish": "Intercepción",
+          "french": "Interception",
+          "german": "Abfangen",
+          "russian": "Перехват",
+          "portuguese": "Interceptação",
+          "chinese": "拦截",
+          "chinese_traditional": "攔截",
+          "korean": "가로막기",
+          "japanese": "迎撃"
+        },
+        "descriptions": {
+          "english": "Intercepts attack damage for allies behind this unit on this floor. Their Damage Shield blocks first. Other attack effects stay on them.",
+          "spanish": "Intercepta el daño de ataques a los aliados situados detrás de esta unidad en este piso. Primero bloquea el escudo de daño del aliado. Los otros efectos del ataque permanecen en ese aliado.",
+          "french": "Intercepte les dégâts des attaques visant les alliés derrière cette unité à cet étage. Le bouclier de dégâts de l’allié bloque en premier. Les autres effets de l’attaque restent sur cet allié.",
+          "german": "Fängt Angriffsschaden für Verbündete hinter dieser Einheit auf dieser Ebene ab. Der Schadensschild des Verbündeten blockiert zuerst. Andere Angriffseffekte treffen weiterhin den Verbündeten.",
+          "russian": "Перехватывает урон от атак по союзникам позади этой боевой единицы на этом этаже. Сначала срабатывает щит союзника. Прочие эффекты атаки остаются на исходной цели.",
+          "portuguese": "Intercepta o dano de ataques contra aliados atrás desta unidade neste andar. O escudo de dano do aliado bloqueia primeiro. Os outros efeitos do ataque continuam nesse aliado.",
+          "chinese": "拦截本层位于此单位身后的友军受到的攻击伤害。 优先消耗该友军的伤害护盾。攻击的其他效果仍作用于该友军。",
+          "chinese_traditional": "攔截本層位於此單位身後的友軍受到的攻擊傷害。 優先消耗該友軍的傷害護盾。攻擊的其他效果仍作用於該友軍。",
+          "korean": "이 층에서 이 유닛 뒤에 있는 아군이 받을 공격 피해를 대신 받습니다. 해당 아군의 피해 보호막이 먼저 막습니다. 공격의 다른 효과는 해당 아군에게 적용됩니다.",
+          "japanese": "このフロアで自身の後ろにいる味方への攻撃ダメージを肩代わりする。 味方のダメージシールドが先に防ぐ。攻撃のその他の効果は元の対象に適用される。"
+        }
+      }
+    ],
+    "cards": [
+      {
+        "id": "SpawnRoderic",
+        "names": {
+          "english": "Roderic",
+          "french": "Roderic",
+          "german": "Roderic",
+          "russian": "Roderic",
+          "portuguese": "Roderic",
+          "chinese": "Roderic",
+          "spanish": "Roderic",
+          "chinese_traditional": "Roderic",
+          "korean": "Roderic",
+          "japanese": "Roderic"
+        },
+        "card_art": "@Roderic",
+        "cost": 0,
+        "card_type": "monster",
+        "rarity": "champion",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnRodericEffect"
+        ],
+        "initial_upgrades": [
+          "@upg_Wall1"
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "Roderic",
+        "names": {
+          "english": "Roderic",
+          "french": "Roderic",
+          "german": "Roderic",
+          "russian": "Roderic",
+          "portuguese": "Roderic",
+          "chinese": "Roderic",
+          "spanish": "Roderic",
+          "chinese_traditional": "Roderic",
+          "korean": "Roderic",
+          "japanese": "Roderic"
+        },
+        "character_art": "@RodericCharacterArt",
+        "size": 2,
+        "attack_damage": 10,
+        "health": 36,
+        "death_type": "large",
+        "subtypes": [
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34",
+          "@Sub_Warrior",
+          "@Sub_Goblin"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Warrior",
+        "names": {
+          "english": "Warrior",
+          "french": "Guerrier",
+          "german": "Krieger",
+          "russian": "Воин",
+          "portuguese": "Guerreiro",
+          "chinese": "战士",
+          "spanish": "Guerrero",
+          "chinese_traditional": "戰士",
+          "korean": "전사",
+          "japanese": "戦士"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "RodericCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@RodericCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0.0658,
+                "y": 0.5146,
+                "z": 0
+              },
+              "scale": {
+                "x": 3.5186,
+                "y": 3.5186,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "Roderic",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Roderic",
+            "animation_clip": {
+              "id": "RodericCardIdle",
+              "sample_rate": 8,
+              "loop_time": "loop",
+              "frames": [
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardBlend33",
+                "@RodericCardBlend67",
+                "@RodericCardFrame2",
+                "@RodericCardBlend67",
+                "@RodericCardBlend33",
+                "@RodericCardFrame1"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "RodericCharacterArt",
+        "path": "textures/RodericCharacterArt.png"
+      },
+      {
+        "id": "RodericCardFrame1",
+        "path": "textures/RodericCardFrame1.png"
+      },
+      {
+        "id": "RodericCardBlend33",
+        "path": "textures/RodericCardBlend33.png"
+      },
+      {
+        "id": "RodericCardBlend67",
+        "path": "textures/RodericCardBlend67.png"
+      },
+      {
+        "id": "RodericCardFrame2",
+        "path": "textures/RodericCardFrame2.png"
+      },
+      {
+        "id": "Roderic",
+        "path": "textures/RodericCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/champions/champion_roderic_wall.json": "ab261abb1a8ac9e1427a2f65a7309605a31b76180bb0603cf3d88d78b778ca15",
+    "json/champions/champion_roderic.json": "9407052c7cfc42068cd18b80061218708d85c39266ca42f99d9eeb1a9edd4647",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

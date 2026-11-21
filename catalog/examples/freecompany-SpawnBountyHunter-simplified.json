@@ -1,0 +1,250 @@
+{
+  "id": "freecompany-SpawnBountyHunter-simplified",
+  "simplified": {
+    "removed": [
+      "characters/BountyHunter/triggers"
+    ]
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnBountyHunter"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Bounty Hunter",
+    "french": "Chasseur de primes",
+    "german": "Kopfgeldjäger",
+    "russian": "Охотник за головами",
+    "portuguese": "Caçador de Recompensas",
+    "chinese": "赏金猎人",
+    "spanish": "Cazarrecompensas",
+    "chinese_traditional": "賞金獵人",
+    "korean": "현상금 사냥꾼",
+    "japanese": "賞金稼ぎ"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": 16,
+  "attack": 7,
+  "size": 1,
+  "picture": "assets/4274fa69868a7b44d9aa1c9403b744150d30eb5b32d6ff3ccadd742295409d4a.png",
+  "characterPicture": "assets/91e53c2c6c9e0870b3f2b7a738ed9162806606f4ce7efd6b2ed4cce07b94f58a.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/BountyHunterCardArt.png": "assets/4274fa69868a7b44d9aa1c9403b744150d30eb5b32d6ff3ccadd742295409d4a.png",
+    "textures/BountyHunterCharacterArt.png": "assets/91e53c2c6c9e0870b3f2b7a738ed9162806606f4ce7efd6b2ed4cce07b94f58a.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnBountyHunter",
+        "names": {
+          "english": "Bounty Hunter",
+          "french": "Chasseur de primes",
+          "german": "Kopfgeldjäger",
+          "russian": "Охотник за головами",
+          "portuguese": "Caçador de Recompensas",
+          "chinese": "赏金猎人",
+          "spanish": "Cazarrecompensas",
+          "chinese_traditional": "賞金獵人",
+          "korean": "현상금 사냥꾼",
+          "japanese": "賞金稼ぎ"
+        },
+        "card_art": "@BountyHunter",
+        "cost": 2,
+        "card_type": "monster",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnBountyHunterEffect"
+        ]
+      },
+      {
+        "id": "BountyHunterShot",
+        "names": {
+          "english": "Claim the Bounty",
+          "french": "Réclamer la prime",
+          "german": "Kopfgeld kassieren",
+          "russian": "Получить награду",
+          "portuguese": "Resgatar a Recompensa",
+          "chinese": "领取赏金",
+          "spanish": "Cobrar la recompensa",
+          "chinese_traditional": "領取賞金",
+          "korean": "현상금 받기",
+          "japanese": "賞金の取り立て"
+        },
+        "descriptions": {
+          "english": "Deal damage equal to this unit’s [attack] to an enemy unit of your choice on any floor.",
+          "french": "Inflige des dégâts égaux à l’[attack] de cette unité à une unité ennemie de votre choix, à n’importe quel étage.",
+          "german": "Füge einer gegnerischen Einheit deiner Wahl auf einem beliebigen Stockwerk Schaden in Höhe von [attack] dieser Einheit zu.",
+          "russian": "Наносит выбранному врагу на любом этаже урон, равный [attack] этого бойца.",
+          "portuguese": "Cause dano igual ao [attack] desta unidade a uma unidade inimiga à sua escolha em qualquer andar.",
+          "chinese": "对任意楼层的一个指定敌方单位造成等同于本单位[attack]的伤害。",
+          "spanish": "Inflige daño igual al [attack] de esta unidad a una unidad enemiga de tu elección en cualquier piso.",
+          "chinese_traditional": "對任意樓層的一個指定敵方單位造成等同於本單位[attack]的傷害。",
+          "korean": "어느 층이든 선택한 적 유닛 하나에게 이 유닛의 [attack]만큼 피해를 줍니다.",
+          "japanese": "任意の階の選んだ敵ユニット1体に、このユニットの[attack]に等しいダメージを与える。"
+        },
+        "card_art": "@BountyHunter",
+        "is_an_ability": true,
+        "cooldown": 1,
+        "initial_cooldown": 1,
+        "targetless": false,
+        "targets_room": true,
+        "can_ability_target_other_floors": true,
+        "card_type": "spell",
+        "effects": [
+          "@BountyHunterShotAttack"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnBountyHunterEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@BountyHunter"
+      },
+      {
+        "id": "BountyHunterShotAttack",
+        "applied_vfx": "@UnitBountyHunterImpactVFX",
+        "name": "CardEffectDamagePerSourceAttack",
+        "target_mode": "drop_target_character",
+        "target_team": "heroes",
+        "param_int": 1,
+        "param_bool": false
+      }
+    ],
+    "characters": [
+      {
+        "id": "BountyHunter",
+        "names": {
+          "english": "Bounty Hunter",
+          "french": "Chasseur de primes",
+          "german": "Kopfgeldjäger",
+          "russian": "Охотник за головами",
+          "portuguese": "Caçador de Recompensas",
+          "chinese": "赏金猎人",
+          "spanish": "Cazarrecompensas",
+          "chinese_traditional": "賞金獵人",
+          "korean": "현상금 사냥꾼",
+          "japanese": "賞金稼ぎ"
+        },
+        "character_art": "@BountyHunterCharacterArt",
+        "size": 1,
+        "attack_damage": 7,
+        "health": 16,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Ranger",
+          "@Sub_Goblin"
+        ],
+        "starting_status_effects": [
+          {
+            "status": "ambush",
+            "count": 1
+          }
+        ],
+        "ability": "@BountyHunterShot"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "UnitBountyHunterImpactVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_SmallImpact_PS.prefab",
+          "asset_guid": "83810142b01f4fc40af3a3f4030a2c35"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "BountyHunter",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@BountyHunter"
+          }
+        }
+      },
+      {
+        "id": "BountyHunterCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@BountyHunterCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.524,
+                "z": 0
+              },
+              "scale": {
+                "x": 0.733,
+                "y": 0.733,
+                "z": 1
+              }
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "BountyHunter",
+        "path": "textures/BountyHunterCardArt.png"
+      },
+      {
+        "id": "BountyHunterCharacterArt",
+        "path": "textures/BountyHunterCharacterArt.png"
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Ranger",
+        "names": {
+          "english": "Ranger",
+          "french": "Rôdeur",
+          "german": "Waldläufer",
+          "russian": "Следопыт",
+          "portuguese": "Patrulheiro",
+          "chinese": "游侠",
+          "spanish": "Explorador",
+          "chinese_traditional": "遊俠",
+          "korean": "레인저",
+          "japanese": "レンジャー"
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_bounty_hunter.json": "9729d066491808513b1cf6e6934b97ce9b21d8ddae06464d5338ede6baef8bd8",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

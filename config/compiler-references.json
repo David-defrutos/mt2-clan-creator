@@ -1,0 +1,35 @@
+{
+  "packages": [
+    {
+      "id": "trainworks",
+      "name": "Trainworks Reloaded",
+      "version": "0.8.0",
+      "url": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/download/0.8.0/MT2-Trainworks_Reloaded-0.8.0.zip",
+      "assemblies": {
+        "TrainworksReloaded.Base": "6cfa3e157a8dcc57fd41f9d257d5f7442dfeb8199cf677f1fc955cae4ff484e1",
+        "TrainworksReloaded.Core": "f2e6ac198c98e18af5f8c06bc22f0eb21f51544247ce6c3fc9d8fbab93cfd89f",
+        "TrainworksReloaded.Plugin": "7e5010498c48935749d02a00e10696634fd5b0008d1123506a9b214793dd063a",
+        "Microsoft.Extensions.Configuration.Abstractions": "8b280864e6482580349f6a345c6b69069fb8ae6a54ab0a88f699ef45807d58f6"
+      }
+    },
+    {
+      "id": "conductor",
+      "name": "Conductor",
+      "version": "0.6.0",
+      "url": "https://github.com/Monster-Train-2-Modding-Group/Conductor/releases/download/0.6.0/Conductor-Conductor-0.6.0.zip",
+      "assemblies": {
+        "Conductor": "86b1d2b31ccaeee5d845a65ad0ceaf73fcd8a7c4a21f8ebe7af9ff1f642464f3"
+      }
+    },
+    {
+      "id": "bepinex",
+      "name": "BepInEx BaseLib",
+      "entries": {"BepInEx": "lib/netstandard2.0/BepInEx.dll"},
+      "version": "5.4.20",
+      "url": "https://nuget.bepinex.dev/v3/package/bepinex.baselib/5.4.20/bepinex.baselib.5.4.20.nupkg",
+      "assemblies": {
+        "BepInEx": "dd06d2a45a3cd7ed11819621fb56405986456f1b5e33b13c300da9e47d450e3f"
+      }
+    }
+  ]
+}

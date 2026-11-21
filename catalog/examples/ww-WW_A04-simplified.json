@@ -1,0 +1,89 @@
+{
+  "id": "ww-WW_A04-simplified",
+  "simplified": {
+    "removed": [
+      "relics/WW_A04/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "relics",
+    "id": "WW_A04"
+  },
+  "kind": "artifact",
+  "names": {
+    "spanish": "Certificado de Buena Conducta",
+    "english": "Certificate of Good Conduct",
+    "french": "Certificat de bonne conduite",
+    "german": "Führungszeugnis",
+    "portuguese": "Certificado de Boa Conduta",
+    "russian": "Справка о хорошем поведении",
+    "chinese": "良好行为证明",
+    "chinese_traditional": "良好行為證明",
+    "korean": "품행 증명서",
+    "japanese": "素行証明書"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/3b0fcc2092dc80a37771e53588a0103fae250ce5947f8019b768de12deddcc13.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/relics/WW_A04IconSmall.png": "assets/5c32592b0105cbc5482fec48fb00d3848527c601bcd566e1880db883389b7e06.png",
+    "textures/relics/WW_A04Icon.png": "assets/3b0fcc2092dc80a37771e53588a0103fae250ce5947f8019b768de12deddcc13.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "WW_A04",
+        "type": "collectable",
+        "names": {
+          "spanish": "Certificado de Buena Conducta",
+          "english": "Certificate of Good Conduct",
+          "french": "Certificat de bonne conduite",
+          "german": "Führungszeugnis",
+          "portuguese": "Certificado de Boa Conduta",
+          "russian": "Справка о хорошем поведении",
+          "chinese": "良好行为证明",
+          "chinese_traditional": "良好行為證明",
+          "korean": "품행 증명서",
+          "japanese": "素行証明書"
+        },
+        "icon": "@WW_A04Icon",
+        "icon_small": "@WW_A04IconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "common"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_A04IconSmall",
+        "path": "textures/relics/WW_A04IconSmall.png"
+      },
+      {
+        "id": "WW_A04Icon",
+        "path": "textures/relics/WW_A04Icon.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/relics/WW_A04.json": "8f31058b59bdae6d7943474e07348b32563ec274ec2e58acb4c48cd00c650cec"
+  }
+}

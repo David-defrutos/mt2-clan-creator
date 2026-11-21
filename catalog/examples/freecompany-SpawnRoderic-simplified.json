@@ -1,0 +1,228 @@
+{
+  "id": "freecompany-SpawnRoderic-simplified",
+  "simplified": {
+    "removed": [
+      "game_objects/RodericCharacterArt/animation"
+    ]
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnRoderic"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Roderic",
+    "french": "Roderic",
+    "german": "Roderic",
+    "russian": "Roderic",
+    "portuguese": "Roderic",
+    "chinese": "Roderic",
+    "spanish": "Roderic",
+    "chinese_traditional": "Roderic",
+    "korean": "Roderic",
+    "japanese": "Roderic"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 36,
+  "attack": 10,
+  "size": 2,
+  "picture": "assets/1989907266018a5120878e50580cd8376484fc2444956a4ee8163f023c1c1c4d.png",
+  "characterPicture": "assets/acc783546049a1129f26d9e0ce9bd462c75bd462eb2facf2679e03e681328d37.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/RodericCharacterArt.png": "assets/acc783546049a1129f26d9e0ce9bd462c75bd462eb2facf2679e03e681328d37.png",
+    "textures/RodericCardFrame1.png": "assets/1989907266018a5120878e50580cd8376484fc2444956a4ee8163f023c1c1c4d.png",
+    "textures/RodericCardBlend33.png": "assets/12de67de6f93a5a8e9679f32271810897f51f6e8a2a70133c154e89ff6f099ed.png",
+    "textures/RodericCardBlend67.png": "assets/19e252f3c6b8ffebb4b1fa17e3ab888cccb2b8aa5c5c35c88ea9afeb8c6cb42e.png",
+    "textures/RodericCardFrame2.png": "assets/b8acf6e1135fa5680896445dd39e2aacf359c10d15201ef2be95d7b338175754.png",
+    "textures/RodericCardArt.png": "assets/1989907266018a5120878e50580cd8376484fc2444956a4ee8163f023c1c1c4d.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnRoderic",
+        "names": {
+          "english": "Roderic",
+          "french": "Roderic",
+          "german": "Roderic",
+          "russian": "Roderic",
+          "portuguese": "Roderic",
+          "chinese": "Roderic",
+          "spanish": "Roderic",
+          "chinese_traditional": "Roderic",
+          "korean": "Roderic",
+          "japanese": "Roderic"
+        },
+        "card_art": "@Roderic",
+        "cost": 0,
+        "card_type": "monster",
+        "rarity": "champion",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnRodericEffect"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnRodericEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@Roderic"
+      }
+    ],
+    "characters": [
+      {
+        "id": "Roderic",
+        "names": {
+          "english": "Roderic",
+          "french": "Roderic",
+          "german": "Roderic",
+          "russian": "Roderic",
+          "portuguese": "Roderic",
+          "chinese": "Roderic",
+          "spanish": "Roderic",
+          "chinese_traditional": "Roderic",
+          "korean": "Roderic",
+          "japanese": "Roderic"
+        },
+        "character_art": "@RodericCharacterArt",
+        "size": 2,
+        "attack_damage": 10,
+        "health": 36,
+        "death_type": "large",
+        "subtypes": [
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34",
+          "@Sub_Warrior",
+          "@Sub_Goblin"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Warrior",
+        "names": {
+          "english": "Warrior",
+          "french": "Guerrier",
+          "german": "Krieger",
+          "russian": "Воин",
+          "portuguese": "Guerreiro",
+          "chinese": "战士",
+          "spanish": "Guerrero",
+          "chinese_traditional": "戰士",
+          "korean": "전사",
+          "japanese": "戦士"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "RodericCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@RodericCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0.0658,
+                "y": 0.5146,
+                "z": 0
+              },
+              "scale": {
+                "x": 3.5186,
+                "y": 3.5186,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "Roderic",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Roderic",
+            "animation_clip": {
+              "id": "RodericCardIdle",
+              "sample_rate": 8,
+              "loop_time": "loop",
+              "frames": [
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardBlend33",
+                "@RodericCardBlend67",
+                "@RodericCardFrame2",
+                "@RodericCardBlend67",
+                "@RodericCardBlend33",
+                "@RodericCardFrame1"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "RodericCharacterArt",
+        "path": "textures/RodericCharacterArt.png"
+      },
+      {
+        "id": "RodericCardFrame1",
+        "path": "textures/RodericCardFrame1.png"
+      },
+      {
+        "id": "RodericCardBlend33",
+        "path": "textures/RodericCardBlend33.png"
+      },
+      {
+        "id": "RodericCardBlend67",
+        "path": "textures/RodericCardBlend67.png"
+      },
+      {
+        "id": "RodericCardFrame2",
+        "path": "textures/RodericCardFrame2.png"
+      },
+      {
+        "id": "Roderic",
+        "path": "textures/RodericCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/champions/champion_roderic.json": "9407052c7cfc42068cd18b80061218708d85c39266ca42f99d9eeb1a9edd4647",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

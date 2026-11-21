@@ -1,0 +1,232 @@
+{
+  "id": "ww-WW_U18-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_U18_Character/grafted_equipment",
+      "characters/WW_U18_Character/starting_status_effects"
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_U18"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Catedrática de Matrícula Congelada",
+    "english": "Professor of Frozen Tuition",
+    "french": "Professeur des frais gelés",
+    "german": "Professor für eingefrorene Studiengebühren",
+    "portuguese": "Professor de Mensalidades Congeladas",
+    "russian": "Профессор замороженной платы",
+    "chinese": "冻结学费教授",
+    "chinese_traditional": "凍結學費教授",
+    "korean": "동결 등록금 교수",
+    "japanese": "凍結授業料教授"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": 25,
+  "attack": 26,
+  "size": 2,
+  "picture": "assets/d9de9045000ff72ee91965377244f7e5785d62a8dc14411df416d3128d5ee873.png",
+  "characterPicture": "assets/1bb8c7f9ffb7e9cf334a581fcf1414eeaa9a7b61907db3ae3552adc87713c35b.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_U18CardArt.png": "assets/d9de9045000ff72ee91965377244f7e5785d62a8dc14411df416d3128d5ee873.png",
+    "textures/characters/WW_U18CharacterArt.png": "assets/1bb8c7f9ffb7e9cf334a581fcf1414eeaa9a7b61907db3ae3552adc87713c35b.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_U18",
+        "names": {
+          "spanish": "Catedrática de Matrícula Congelada",
+          "english": "Professor of Frozen Tuition",
+          "french": "Professeur des frais gelés",
+          "german": "Professor für eingefrorene Studiengebühren",
+          "portuguese": "Professor de Mensalidades Congeladas",
+          "russian": "Профессор замороженной платы",
+          "chinese": "冻结学费教授",
+          "chinese_traditional": "凍結學費教授",
+          "korean": "동결 등록금 교수",
+          "japanese": "凍結授業料教授"
+        },
+        "card_type": "monster",
+        "cost": 2,
+        "rarity": "rare",
+        "targets_room": true,
+        "card_art": "@WW_U18CardArt",
+        "effects": [
+          "@WW_U18_Spawn"
+        ]
+      },
+      {
+        "id": "WW_U18_Ability",
+        "names": {
+          "english": "Frozen Enrollment",
+          "spanish": "Matrícula Congelada",
+          "french": "Inscription gelée",
+          "german": "Eingefrorene Einschreibung",
+          "portuguese": "Matrícula Congelada",
+          "russian": "Замороженная запись",
+          "chinese": "冻结注册",
+          "chinese_traditional": "凍結註冊",
+          "korean": "동결 등록",
+          "japanese": "凍結登録"
+        },
+        "descriptions": {
+          "english": "Apply [freeze] to a card in hand.",
+          "french": "Confère [freeze] à une carte en main.",
+          "german": "Wende [freeze] auf eine Karte auf deiner Hand an.",
+          "russian": "Наложите [freeze] на карту в руке.",
+          "portuguese": "Aplica [freeze] a uma carta na mão.",
+          "chinese": "使一张手牌获得[freeze]。",
+          "spanish": "Añade [freeze] a una carta de tu mano.",
+          "chinese_traditional": "對手牌中的一張牌施加[freeze]。",
+          "korean": "패에 있는 카드 하나에 [freeze] 효과를 적용합니다.",
+          "japanese": "手札のカードに[freeze]を付与する。"
+        },
+        "card_type": "spell",
+        "cost": 0,
+        "rarity": "starter",
+        "is_an_ability": true,
+        "targetless": true,
+        "targets_room": false,
+        "cooldown": 2,
+        "hide_in_logbook": true,
+        "ignore_when_counting_mastery": true,
+        "card_art": "@WW_U18CardArt",
+        "effects": [
+          "@WW_U18_Ability_Effect"
+        ],
+        "initial_keyboard_target": "front_friendly"
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_U18_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_U18_Character"
+      },
+      {
+        "id": "WW_U18_Ability_Effect",
+        "name": "CardEffectFreezeCard",
+        "should_fail_to_cast_if_test_fails": true,
+        "additional_tooltips": [
+          "@WW_U18_PassiveTooltip"
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_U18_Character",
+        "names": {
+          "spanish": "Catedrática de Matrícula Congelada",
+          "english": "Professor of Frozen Tuition",
+          "french": "Professeur des frais gelés",
+          "german": "Professor für eingefrorene Studiengebühren",
+          "portuguese": "Professor de Mensalidades Congeladas",
+          "russian": "Профессор замороженной платы",
+          "chinese": "冻结学费教授",
+          "chinese_traditional": "凍結學費教授",
+          "korean": "동결 등록금 교수",
+          "japanese": "凍結授業料教授"
+        },
+        "character_art": "@WW_U18CharacterArt",
+        "size": 2,
+        "health": 25,
+        "attack_damage": 26,
+        "subtypes": [
+          "@WW_Witch",
+          "SubtypesData_BannerUnit"
+        ],
+        "ability": "@WW_U18_Ability"
+      }
+    ],
+    "additional_tooltips": [
+      {
+        "id": "WW_U18_PassiveTooltip",
+        "titles": {
+          "key": "CardData_nameKey-david.wwinc-Card-WW_U18"
+        },
+        "descriptions": {
+          "key": "CardData_descriptionKey-david.wwinc-Card-WW_U18"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_U18CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_U18CardArt"
+          }
+        }
+      },
+      {
+        "id": "WW_U18CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_U18CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.03,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_U18CardArt",
+        "path": "textures/cards/WW_U18CardArt.png"
+      },
+      {
+        "id": "WW_U18CharacterArt",
+        "path": "textures/characters/WW_U18CharacterArt.png"
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Witch",
+        "names": {
+          "english": "Witch",
+          "spanish": "Bruja",
+          "french": "Sorcière",
+          "german": "Hexe",
+          "portuguese": "Bruxa",
+          "russian": "Ведьма",
+          "chinese": "女巫",
+          "chinese_traditional": "女巫",
+          "korean": "마녀",
+          "japanese": "魔女"
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_U18.json": "aa59d3bbc83476bf14aebeb165731c60ddaecedca60cb0adf8d4488a400aad90",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

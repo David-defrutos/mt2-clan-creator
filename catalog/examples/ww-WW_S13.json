@@ -146,11 +146,11 @@
         "name": "CardEffectDamage",
         "target_mode": "drop_target_character",
         "target_team": "both",
-        "param_int": 4
+        "param_int": 6
       }
     ]
   },
   "files": {
-    "content/json/cards/WW_S13.json": "123c8df28f7dac740fe24cd5490f787b81cf851f86ec5c10d6eb75948a071524"
+    "content/json/cards/WW_S13.json": "7dbfd0471c09544563052194dc2bccc6f102a6ff0e4868006c8ed89ccb825464"
   }
 }

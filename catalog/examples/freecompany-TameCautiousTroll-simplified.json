@@ -1,0 +1,100 @@
+{
+  "id": "freecompany-TameCautiousTroll-simplified",
+  "simplified": {
+    "removed": [
+      "cards/TameCautiousTroll/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "TameCautiousTroll"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Tame the Cautious Troll",
+    "french": "Apprivoiser : Troll prudent",
+    "german": "Vorsichtiger Troll zähmen",
+    "russian": "Приручить: Осторожный тролль",
+    "portuguese": "Domar: Troll Cauteloso",
+    "chinese": "驯服谨慎巨魔",
+    "spanish": "Domar al Trol cauteloso",
+    "chinese_traditional": "馴服謹慎巨魔",
+    "korean": "신중한 트롤 길들이기",
+    "japanese": "慎重なトロールを手なずける"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/e6c5d07777e039b5541f1fdacbb6c248fc945be0e67b0feeaa81af4394f3d9d1.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/CautiousTrollArt.png": "assets/e6c5d07777e039b5541f1fdacbb6c248fc945be0e67b0feeaa81af4394f3d9d1.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "TameCautiousTroll",
+        "names": {
+          "english": "Tame the Cautious Troll",
+          "french": "Apprivoiser : Troll prudent",
+          "german": "Vorsichtiger Troll zähmen",
+          "russian": "Приручить: Осторожный тролль",
+          "portuguese": "Domar: Troll Cauteloso",
+          "chinese": "驯服谨慎巨魔",
+          "spanish": "Domar al Trol cauteloso",
+          "chinese_traditional": "馴服謹慎巨魔",
+          "korean": "신중한 트롤 길들이기",
+          "japanese": "慎重なトロールを手なずける"
+        },
+        "card_art": "@CautiousTroll",
+        "cost": 0,
+        "card_type": "spell",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": true,
+        "traits": [
+          "@TameEphemeral"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "TameEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "CautiousTroll",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@CautiousTroll"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "CautiousTroll",
+        "path": "textures/CautiousTrollArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_troll.json": "f91102b775c131b0895bbc03577750fdf220670f0afba52e5d9dfe111f90f01f"
+  }
+}

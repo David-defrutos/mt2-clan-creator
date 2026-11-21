@@ -1,0 +1,678 @@
+{
+  "id": "succclan-SpawnShadowLady-clan-path-2",
+  "championPath": {
+    "baseId": "succclan-SpawnShadowLady",
+    "path": 2,
+    "level": 1,
+    "names": {
+      "english": "Plague",
+      "chinese": "瘟疫",
+      "spanish": "Plaga",
+      "french": "Peste",
+      "german": "Seuche",
+      "portuguese": "Praga",
+      "russian": "Чума",
+      "chinese_traditional": "瘟疫",
+      "japanese": "疫病",
+      "korean": "역병"
+    },
+    "upgradeId": "upg_PlagueBasic",
+    "localUpgradeId": "upg_PlagueBasic",
+    "upgrade": {
+      "id": "upg_PlagueBasic",
+      "titles": {
+        "english": "Plague",
+        "chinese": "瘟疫",
+        "spanish": "Plaga",
+        "french": "Peste",
+        "german": "Seuche",
+        "portuguese": "Praga",
+        "russian": "Чума",
+        "chinese_traditional": "瘟疫",
+        "japanese": "疫病",
+        "korean": "역병"
+      },
+      "bonus_damage": 0,
+      "bonus_hp": 10,
+      "use_upgrade_highlight_tags": true,
+      "trigger_upgrades": [
+        "@PlagueBasicPreCombat",
+        "@PlagueBasicAccursed"
+      ],
+      "room_modifier_upgrades": [
+        "@ShadowLadyPlagueEmber"
+      ]
+    },
+    "levels": [
+      {
+        "upgradeId": "upg_PlagueBasic",
+        "ref": "@upg_PlagueBasic"
+      },
+      {
+        "upgradeId": "upg_PlaguePre",
+        "ref": "@upg_PlaguePre"
+      },
+      {
+        "upgradeId": "upg_PlaguePro",
+        "ref": "@upg_PlaguePro"
+      }
+    ]
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "SpawnShadowLady"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Shadow Lady · Plague · I",
+    "chinese": "匿影女士 · 瘟疫 · I",
+    "spanish": "Dama de las sombras · Plaga · I",
+    "french": "Dame des ombres · Peste · I",
+    "german": "Schattendame · Seuche · I",
+    "portuguese": "Dama das Sombras · Praga · I",
+    "russian": "Владычица теней · Чума · I",
+    "chinese_traditional": "暗影女士 · 瘟疫 · I",
+    "japanese": "影の貴婦人 · 疫病 · I",
+    "korean": "그림자 여군주 · 역병 · I"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 30,
+  "attack": 10,
+  "size": 2,
+  "picture": "assets/1bcf94aadb2b46a54ce8ba4c480695de3b5c4a98cdd56dd87fbd1ba248b18a64.png",
+  "characterPicture": "assets/e1be8935f0112b5ad280f31c47cb34e628c9dd8aabfc20b79530315468ce00fa.png",
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "character_trigger_types",
+      "id": "Accursed",
+      "names": {
+        "english": "Accursed",
+        "chinese": "被咒"
+      },
+      "descriptions": {
+        "english": "Triggers when, during your turn, a <b>Blight</b> or [junk] is played or discarded on the floor.",
+        "chinese": "回合结束前在本层打出或舍弃[blight]牌或[junk]牌时触发。"
+      },
+      "file": "packages/Conductor-Conductor/json/triggers.json",
+      "sha256": "0a0e9419dfeeb57f0e0917c7d1eddf6483d0cb58e7b40188c57b4ab2ecae86b5"
+    }
+  ],
+  "assets": {
+    "textures/ObsessingShardArt.png": "assets/fc6bd964ecb26665a12e65a318a98fd020456df96f868ae0202ada3da2eadb51.png",
+    "textures/ShadowLadyCharacterArt.png": "assets/e1be8935f0112b5ad280f31c47cb34e628c9dd8aabfc20b79530315468ce00fa.png",
+    "textures/ShadowLadyCardArt.png": "assets/1bcf94aadb2b46a54ce8ba4c480695de3b5c4a98cdd56dd87fbd1ba248b18a64.png"
+  },
+  "document": {
+    "upgrades": [
+      {
+        "id": "upg_PlaguePro",
+        "titles": {
+          "english": "Plague III",
+          "chinese": "瘟疫 III",
+          "spanish": "Plaga III",
+          "french": "Peste III",
+          "german": "Seuche III",
+          "portuguese": "Praga III",
+          "russian": "Чума III",
+          "chinese_traditional": "瘟疫 III",
+          "japanese": "疫病 III",
+          "korean": "역병 III"
+        },
+        "bonus_damage": 20,
+        "bonus_hp": 50,
+        "use_upgrade_highlight_tags": true,
+        "trigger_upgrades": [
+          "@PlagueProPreCombat",
+          "@PlagueProAccursed"
+        ],
+        "room_modifier_upgrades": [
+          "@ShadowLadyPlagueEmber"
+        ]
+      },
+      {
+        "id": "BattleGrowthPlagueProAttack",
+        "bonus_damage": 7
+      },
+      {
+        "id": "upg_PlaguePre",
+        "titles": {
+          "english": "Plague II",
+          "chinese": "瘟疫 II",
+          "spanish": "Plaga II",
+          "french": "Peste II",
+          "german": "Seuche II",
+          "portuguese": "Praga II",
+          "russian": "Чума II",
+          "chinese_traditional": "瘟疫 II",
+          "japanese": "疫病 II",
+          "korean": "역병 II"
+        },
+        "bonus_damage": 10,
+        "bonus_hp": 20,
+        "use_upgrade_highlight_tags": true,
+        "trigger_upgrades": [
+          "@PlaguePrePreCombat",
+          "@PlaguePreAccursed"
+        ],
+        "room_modifier_upgrades": [
+          "@ShadowLadyPlagueEmber"
+        ]
+      },
+      {
+        "id": "BattleGrowthPlaguePreAttack",
+        "bonus_damage": 5
+      },
+      {
+        "id": "upg_PlagueBasic",
+        "titles": {
+          "english": "Plague",
+          "chinese": "瘟疫",
+          "spanish": "Plaga",
+          "french": "Peste",
+          "german": "Seuche",
+          "portuguese": "Praga",
+          "russian": "Чума",
+          "chinese_traditional": "瘟疫",
+          "japanese": "疫病",
+          "korean": "역병"
+        },
+        "bonus_damage": 0,
+        "bonus_hp": 10,
+        "use_upgrade_highlight_tags": true,
+        "trigger_upgrades": [
+          "@PlagueBasicPreCombat",
+          "@PlagueBasicAccursed"
+        ],
+        "room_modifier_upgrades": [
+          "@ShadowLadyPlagueEmber"
+        ]
+      },
+      {
+        "id": "BattleGrowthPlagueBasicAttack",
+        "bonus_damage": 3
+      }
+    ],
+    "room_modifiers": [
+      {
+        "id": "ShadowLadyPlagueEmber",
+        "name": "RoomStateEnergyModifier",
+        "param_int": 1,
+        "descriptions": {
+          "english": "+[power][ember] per turn.",
+          "chinese": "每回合 +[power][ember]。",
+          "spanish": "+[power][ember] por turno.",
+          "french": "+[power][ember] par tour.",
+          "german": "+[power][ember] pro Zug.",
+          "portuguese": "+[power][ember] por turno.",
+          "russian": "+[power][ember] в ход.",
+          "chinese_traditional": "每回合+[power][ember]。",
+          "japanese": "ターンごとに+[power][ember]。",
+          "korean": "턴당 +[power][ember]."
+        }
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "PlagueProAccursed",
+        "trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "descriptions": {
+          "english": "Gain +[effect0.power][attack] and [damageshield] [effect1.status0.power].",
+          "chinese": "获得 +[effect0.power][attack] 和[damageshield] [effect1.status0.power]。",
+          "spanish": "Obtiene +[effect0.power][attack] y [damageshield] [effect1.status0.power].",
+          "french": "Gagne +[effect0.power][attack] et [damageshield] [effect1.status0.power].",
+          "german": "Erhält +[effect0.power][attack] und [damageshield] [effect1.status0.power].",
+          "portuguese": "Ganha +[effect0.power][attack] e [damageshield] [effect1.status0.power].",
+          "russian": "Получает +[effect0.power][attack] и [damageshield] [effect1.status0.power].",
+          "chinese_traditional": "獲得 +[effect0.power][attack] 與 [damageshield] [effect1.status0.power]。",
+          "japanese": "+[effect0.power][attack]と[damageshield] [effect1.status0.power]を得る。",
+          "korean": "+[effect0.power][attack] 및 [damageshield] [effect1.status0.power]을 얻습니다."
+        },
+        "effects": [
+          "@PlagueProAttack",
+          "@PlagueProShield"
+        ]
+      },
+      {
+        "id": "PlagueProPreCombat",
+        "trigger": "pre_combat",
+        "descriptions": {
+          "english": "Add 1 <b>Obsessing Spark</b> to your hand.",
+          "chinese": "将 1 张<b>欲望碎片</b>加入手牌。",
+          "spanish": "Añade 1 <b>Chispa obsesiva</b> a tu mano.",
+          "french": "Ajoutez 1 <b>Étincelle obsédante</b> à votre main.",
+          "german": "Füge deiner Hand 1 <b>Besessenheitsfunke</b> hinzu.",
+          "portuguese": "Adicione 1 <b>Centelha Obsessiva</b> à sua mão.",
+          "russian": "Добавляет в руку 1 <b>Искра одержимости</b>.",
+          "chinese_traditional": "將 1 張<b>執念火花</b>加入手牌。",
+          "japanese": "<b>執着の火花</b>を1枚手札に加える。",
+          "korean": "<b>집착의 불꽃</b> 1장을 손에 추가합니다."
+        },
+        "effects": [
+          "@PlagueProAddShard"
+        ]
+      },
+      {
+        "id": "PlaguePreAccursed",
+        "trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "descriptions": {
+          "english": "Gain +[effect0.power][attack] and [damageshield] [effect1.status0.power].",
+          "chinese": "获得 +[effect0.power][attack] 和[damageshield] [effect1.status0.power]。",
+          "spanish": "Obtiene +[effect0.power][attack] y [damageshield] [effect1.status0.power].",
+          "french": "Gagne +[effect0.power][attack] et [damageshield] [effect1.status0.power].",
+          "german": "Erhält +[effect0.power][attack] und [damageshield] [effect1.status0.power].",
+          "portuguese": "Ganha +[effect0.power][attack] e [damageshield] [effect1.status0.power].",
+          "russian": "Получает +[effect0.power][attack] и [damageshield] [effect1.status0.power].",
+          "chinese_traditional": "獲得 +[effect0.power][attack] 與 [damageshield] [effect1.status0.power]。",
+          "japanese": "+[effect0.power][attack]と[damageshield] [effect1.status0.power]を得る。",
+          "korean": "+[effect0.power][attack] 및 [damageshield] [effect1.status0.power]을 얻습니다."
+        },
+        "effects": [
+          "@PlaguePreAttack",
+          "@PlaguePreShield"
+        ]
+      },
+      {
+        "id": "PlaguePrePreCombat",
+        "trigger": "pre_combat",
+        "descriptions": {
+          "english": "Add 1 <b>Obsessing Spark</b> to your hand.",
+          "chinese": "将 1 张<b>欲望碎片</b>加入手牌。",
+          "spanish": "Añade 1 <b>Chispa obsesiva</b> a tu mano.",
+          "french": "Ajoutez 1 <b>Étincelle obsédante</b> à votre main.",
+          "german": "Füge deiner Hand 1 <b>Besessenheitsfunke</b> hinzu.",
+          "portuguese": "Adicione 1 <b>Centelha Obsessiva</b> à sua mão.",
+          "russian": "Добавляет в руку 1 <b>Искра одержимости</b>.",
+          "chinese_traditional": "將 1 張<b>執念火花</b>加入手牌。",
+          "japanese": "<b>執着の火花</b>を1枚手札に加える。",
+          "korean": "<b>집착의 불꽃</b> 1장을 손에 추가합니다."
+        },
+        "effects": [
+          "@PlaguePreAddShard"
+        ]
+      },
+      {
+        "id": "PlagueBasicAccursed",
+        "trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "descriptions": {
+          "english": "Gain +[effect0.power][attack] and [damageshield] [effect1.status0.power].",
+          "chinese": "获得 +[effect0.power][attack] 和[damageshield] [effect1.status0.power]。",
+          "spanish": "Obtiene +[effect0.power][attack] y [damageshield] [effect1.status0.power].",
+          "french": "Gagne +[effect0.power][attack] et [damageshield] [effect1.status0.power].",
+          "german": "Erhält +[effect0.power][attack] und [damageshield] [effect1.status0.power].",
+          "portuguese": "Ganha +[effect0.power][attack] e [damageshield] [effect1.status0.power].",
+          "russian": "Получает +[effect0.power][attack] и [damageshield] [effect1.status0.power].",
+          "chinese_traditional": "獲得 +[effect0.power][attack] 與 [damageshield] [effect1.status0.power]。",
+          "japanese": "+[effect0.power][attack]と[damageshield] [effect1.status0.power]を得る。",
+          "korean": "+[effect0.power][attack] 및 [damageshield] [effect1.status0.power]을 얻습니다."
+        },
+        "effects": [
+          "@PlagueBasicAttack",
+          "@PlagueBasicShield"
+        ]
+      },
+      {
+        "id": "PlagueBasicPreCombat",
+        "trigger": "pre_combat",
+        "descriptions": {
+          "english": "Add 1 <b>Obsessing Spark</b> to your hand.",
+          "chinese": "将 1 张<b>欲望碎片</b>加入手牌。",
+          "spanish": "Añade 1 <b>Chispa obsesiva</b> a tu mano.",
+          "french": "Ajoutez 1 <b>Étincelle obsédante</b> à votre main.",
+          "german": "Füge deiner Hand 1 <b>Besessenheitsfunke</b> hinzu.",
+          "portuguese": "Adicione 1 <b>Centelha Obsessiva</b> à sua mão.",
+          "russian": "Добавляет в руку 1 <b>Искра одержимости</b>.",
+          "chinese_traditional": "將 1 張<b>執念火花</b>加入手牌。",
+          "japanese": "<b>執着の火花</b>を1枚手札に加える。",
+          "korean": "<b>집착의 불꽃</b> 1장을 손에 추가합니다."
+        },
+        "effects": [
+          "@PlagueBasicAddShard"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "PlagueProShield",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "damage shield",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "PlagueProAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 7,
+        "param_upgrade": "@BattleGrowthPlagueProAttack",
+        "param_int_3": 0
+      },
+      {
+        "id": "PlagueProAddShard",
+        "name": "CardEffectAddBattleCard",
+        "target_mode": "room",
+        "target_team": "none",
+        "param_int": 3,
+        "param_int_2": 1,
+        "param_card_pool": "@ObsessingShardPool"
+      },
+      {
+        "id": "ObsessingShardPyreDamage",
+        "applied_vfx": "@SuccFXShadowImpact",
+        "name": "CardEffectDamage",
+        "target_mode": "pyre",
+        "target_team": "both",
+        "param_int": 1,
+        "suppress_pyre_room_focus": true
+      },
+      {
+        "id": "PlaguePreShield",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "damage shield",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "PlaguePreAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 5,
+        "param_upgrade": "@BattleGrowthPlaguePreAttack",
+        "param_int_3": 0
+      },
+      {
+        "id": "PlaguePreAddShard",
+        "name": "CardEffectAddBattleCard",
+        "target_mode": "room",
+        "target_team": "none",
+        "param_int": 3,
+        "param_int_2": 1,
+        "param_card_pool": "@ObsessingShardPool"
+      },
+      {
+        "id": "PlagueBasicShield",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "damage shield",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "PlagueBasicAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 3,
+        "param_upgrade": "@BattleGrowthPlagueBasicAttack",
+        "param_int_3": 0
+      },
+      {
+        "id": "PlagueBasicAddShard",
+        "name": "CardEffectAddBattleCard",
+        "target_mode": "room",
+        "target_team": "none",
+        "param_int": 3,
+        "param_int_2": 1,
+        "param_card_pool": "@ObsessingShardPool"
+      },
+      {
+        "id": "SpawnShadowLady",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@ShadowLady"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXAttackBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXBladeAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/DeathsDancer/FX_DeathsDancerAttack.prefab",
+          "asset_guid": "7b4040ba5c134c84eaeb246a77b0a401"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "card_pools": [
+      {
+        "id": "ObsessingShardPool",
+        "cards": [
+          "@ObsessingShard"
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "id": "ObsessingShard",
+        "names": {
+          "english": "Obsessing Spark",
+          "chinese": "欲望碎片",
+          "spanish": "Chispa obsesiva",
+          "french": "Étincelle obsédante",
+          "german": "Besessenheitsfunke",
+          "portuguese": "Centelha Obsessiva",
+          "russian": "Искра одержимости",
+          "chinese_traditional": "執念火花",
+          "japanese": "執着の火花",
+          "korean": "집착의 불꽃"
+        },
+        "card_type": "blight",
+        "rarity": "common",
+        "card_art": "@ObsessingShardArt",
+        "cost": 1,
+        "targets_room": false,
+        "targetless": true,
+        "traits": [
+          "@Consume"
+        ],
+        "triggers": [
+          "@ObsessingShardOnUnplayed"
+        ]
+      },
+      {
+        "id": "SpawnShadowLady",
+        "names": {
+          "english": "Shadow Lady",
+          "chinese": "匿影女士",
+          "spanish": "Dama de las sombras",
+          "french": "Dame des ombres",
+          "german": "Schattendame",
+          "portuguese": "Dama das Sombras",
+          "russian": "Владычица теней",
+          "chinese_traditional": "暗影女士",
+          "japanese": "影の貴婦人",
+          "korean": "그림자 여군주"
+        },
+        "card_art": "@ShadowLadyCardArt",
+        "cost": 0,
+        "card_type": "monster",
+        "rarity": "champion",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnShadowLady"
+        ],
+        "initial_upgrades": [
+          "@upg_PlagueBasic"
+        ]
+      }
+    ],
+    "card_triggers": [
+      {
+        "id": "ObsessingShardOnUnplayed",
+        "trigger": "on_unplayed_negative",
+        "descriptions": {
+          "english": "Your Pyre takes [effect0.power] damage.",
+          "chinese": "对薪火造成 [effect0.power] 点伤害。",
+          "spanish": "Tu Pira recibe [effect0.power] de daño.",
+          "french": "Votre Brasier subit [effect0.power] dégâts.",
+          "german": "Deine Höllenglut erleidet [effect0.power] Schaden.",
+          "portuguese": "Sua Pira sofre [effect0.power] de dano.",
+          "russian": "Пекло получает [effect0.power] урона.",
+          "chinese_traditional": "你的薪火受到 [effect0.power] 點傷害。",
+          "japanese": "パイアが[effect0.power]ダメージを受ける。",
+          "korean": "화로가 [effect0.power]의 피해를 받습니다."
+        },
+        "effects": [
+          "@ObsessingShardPyreDamage"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ObsessingShardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ObsessingShardArt"
+          }
+        }
+      },
+      {
+        "id": "ShadowLadyCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@ShadowLadyCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.39,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "ShadowLadyCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ShadowLadyCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ObsessingShardArt",
+        "path": "textures/ObsessingShardArt.png"
+      },
+      {
+        "id": "ShadowLadyCharacterArt",
+        "path": "textures/ShadowLadyCharacterArt.png"
+      },
+      {
+        "id": "ShadowLadyCardArt",
+        "path": "textures/ShadowLadyCardArt.png"
+      }
+    ],
+    "characters": [
+      {
+        "id": "ShadowLady",
+        "attack_vfx": "@SuccFXBladeAttack",
+        "impact_vfx": "@SuccFXShadowImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "names": {
+          "english": "Shadow Lady",
+          "chinese": "匿影女士",
+          "spanish": "Dama de las sombras",
+          "french": "Dame des ombres",
+          "german": "Schattendame",
+          "portuguese": "Dama das Sombras",
+          "russian": "Владычица теней",
+          "chinese_traditional": "暗影女士",
+          "japanese": "影の貴婦人",
+          "korean": "그림자 여군주"
+        },
+        "character_art": "@ShadowLadyCharacterArt",
+        "size": 2,
+        "attack_damage": 10,
+        "health": 30,
+        "subtypes": [
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+        ]
+      }
+    ]
+  },
+  "files": {
+    "json/champions/champion_ShadowLady.json": "48f05c11e190a258521c92fa9cd7b5635478748ce94ddadaee9dcb879e36dbda",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d",
+    "json/spells/card_ObsessingShard.json": "aa2f8c8cb633cab56c128cd56a7092c7a79f7b33dbe670f259275d646211bd37"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "id": "ww-WW_S11-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S11/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S11"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Recuperación de Créditos",
+    "english": "Credit Recovery",
+    "french": "Récupération de crédits",
+    "german": "Leistungspunktrückgewinnung",
+    "portuguese": "Recuperação de Créditos",
+    "russian": "Возврат зачётов",
+    "chinese": "学分补修",
+    "chinese_traditional": "學分補修",
+    "korean": "학점 회복",
+    "japanese": "単位回収"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "x",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/657055b91726052bc8c016d20167ebf4505541a39bb46650d98c373923c6ed4d.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S11CardArt.png": "assets/657055b91726052bc8c016d20167ebf4505541a39bb46650d98c373923c6ed4d.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S11",
+        "names": {
+          "spanish": "Recuperación de Créditos",
+          "english": "Credit Recovery",
+          "french": "Récupération de crédits",
+          "german": "Leistungspunktrückgewinnung",
+          "portuguese": "Recuperação de Créditos",
+          "russian": "Возврат зачётов",
+          "chinese": "学分补修",
+          "chinese_traditional": "學分補修",
+          "korean": "학점 회복",
+          "japanese": "単位回収"
+        },
+        "card_type": "spell",
+        "cost": 0,
+        "rarity": "rare",
+        "targets_room": true,
+        "card_art": "@WW_S11CardArt",
+        "cost_type": "x",
+        "targetless": true,
+        "traits": [
+          "@WW_Consume"
+        ],
+        "hide_in_logbook": true,
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S11CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S11CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S11CardArt",
+        "path": "textures/cards/WW_S11CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S11.json": "d485f7e8dc4899e7c97b043596439d03fe86e1bd4b9fa0a04080b13661e52f39",
+    "content/json/03_common.json": "93d922ea5ee845e8a0ac79dc6480520a849434978141fe1e9353366f1c156353"
+  }
+}

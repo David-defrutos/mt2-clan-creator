@@ -1,0 +1,130 @@
+{
+  "id": "succclan-DangerousGame-simplified",
+  "simplified": {
+    "removed": [
+      "cards/DangerousGame/effects"
+    ],
+    "needsEffect": false
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "DangerousGame"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Dangerous Game",
+    "chinese": "危险的游戏",
+    "spanish": "Juego peligroso",
+    "french": "Jeu dangereux",
+    "german": "Gefährliches Spiel",
+    "portuguese": "Jogo Perigoso",
+    "russian": "Опасная игра",
+    "chinese_traditional": "危險遊戲",
+    "japanese": "危険な遊戯",
+    "korean": "위험한 게임"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/bca8c4af1347c4bab8f28a1b61369c114df5510e66c76dc2ce59532fde8bb5c7.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/DangerousGameArt.png": "assets/bca8c4af1347c4bab8f28a1b61369c114df5510e66c76dc2ce59532fde8bb5c7.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "DangerousGame",
+        "names": {
+          "english": "Dangerous Game",
+          "chinese": "危险的游戏",
+          "spanish": "Juego peligroso",
+          "french": "Jeu dangereux",
+          "german": "Gefährliches Spiel",
+          "portuguese": "Jogo Perigoso",
+          "russian": "Опасная игра",
+          "chinese_traditional": "危險遊戲",
+          "japanese": "危険な遊戯",
+          "korean": "위험한 게임"
+        },
+        "card_type": "spell",
+        "rarity": "uncommon",
+        "card_art": "@DangerousGameArt",
+        "cost": 1,
+        "targets_room": true,
+        "targetless": true,
+        "effects": [
+          "@DangerousGameAttack",
+          "@DangerousGameArmor"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "DangerousGameArmor",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_status_effects": [
+          {
+            "status": "armor",
+            "count": 20
+          }
+        ],
+        "target_ignore_bosses": true
+      },
+      {
+        "id": "DangerousGameAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectBuffDamage",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_int": 10,
+        "target_ignore_bosses": true
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXAttackBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "DangerousGameArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@DangerousGameArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "DangerousGameArt",
+        "path": "textures/DangerousGameArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_DangerousGame.json": "e85672647d3b34ba0a63950c6af673121e27162c9d3f5245756fc0e35455f373",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

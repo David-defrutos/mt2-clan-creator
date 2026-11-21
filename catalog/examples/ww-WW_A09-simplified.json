@@ -1,0 +1,89 @@
+{
+  "id": "ww-WW_A09-simplified",
+  "simplified": {
+    "removed": [
+      "relics/WW_A09/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "relics",
+    "id": "WW_A09"
+  },
+  "kind": "artifact",
+  "names": {
+    "spanish": "Oficina de Quejas y Maleficios",
+    "english": "Office of Complaints and Curses",
+    "french": "Bureau des plaintes et malédictions",
+    "german": "Beschwerde- und Fluchstelle",
+    "portuguese": "Departamento de Reclamações e Maldições",
+    "russian": "Бюро жалоб и проклятий",
+    "chinese": "投诉与诅咒办公室",
+    "chinese_traditional": "投訴與詛咒辦公室",
+    "korean": "불만 및 저주 사무국",
+    "japanese": "苦情と呪いの窓口"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/0b460919d62a6e72674b11f3e611b3e57828f2b355a9653ee2d7039bd95a6e09.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/relics/WW_A09IconSmall.png": "assets/4b8fc9d33aefcb0c5298b321438a0d7a8b9e6915f52de3d857cd10971dbd6f83.png",
+    "textures/relics/WW_A09Icon.png": "assets/0b460919d62a6e72674b11f3e611b3e57828f2b355a9653ee2d7039bd95a6e09.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "WW_A09",
+        "type": "collectable",
+        "names": {
+          "spanish": "Oficina de Quejas y Maleficios",
+          "english": "Office of Complaints and Curses",
+          "french": "Bureau des plaintes et malédictions",
+          "german": "Beschwerde- und Fluchstelle",
+          "portuguese": "Departamento de Reclamações e Maldições",
+          "russian": "Бюро жалоб и проклятий",
+          "chinese": "投诉与诅咒办公室",
+          "chinese_traditional": "投訴與詛咒辦公室",
+          "korean": "불만 및 저주 사무국",
+          "japanese": "苦情と呪いの窓口"
+        },
+        "icon": "@WW_A09Icon",
+        "icon_small": "@WW_A09IconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "common"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_A09IconSmall",
+        "path": "textures/relics/WW_A09IconSmall.png"
+      },
+      {
+        "id": "WW_A09Icon",
+        "path": "textures/relics/WW_A09Icon.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/relics/WW_A09.json": "56e2b387d620f199858475cc70591a64232209b005343e493b05c76023e3c038"
+  }
+}

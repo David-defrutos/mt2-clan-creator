@@ -1,0 +1,103 @@
+{
+  "id": "ww-WW_S27-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S27/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S27"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Puesto de Helados del Campus",
+    "english": "Campus Ice Cream Stand",
+    "french": "Stand de glaces du campus",
+    "german": "Campus-Eisstand",
+    "portuguese": "Barraca de Sorvetes do Campus",
+    "russian": "Ларёк мороженого в кампусе",
+    "chinese": "校园冰淇淋摊",
+    "chinese_traditional": "校園冰淇淋攤",
+    "korean": "캠퍼스 아이스크림 가판대",
+    "japanese": "キャンパスのアイス屋台"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/942996f2d648220eb1d764bd848d725e6d5a226b225ad06da926d028da07de38.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S27CardArt.png": "assets/942996f2d648220eb1d764bd848d725e6d5a226b225ad06da926d028da07de38.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S27",
+        "names": {
+          "spanish": "Puesto de Helados del Campus",
+          "english": "Campus Ice Cream Stand",
+          "french": "Stand de glaces du campus",
+          "german": "Campus-Eisstand",
+          "portuguese": "Barraca de Sorvetes do Campus",
+          "russian": "Ларёк мороженого в кампусе",
+          "chinese": "校园冰淇淋摊",
+          "chinese_traditional": "校園冰淇淋攤",
+          "korean": "캠퍼스 아이스크림 가판대",
+          "japanese": "キャンパスのアイス屋台"
+        },
+        "card_type": "spell",
+        "cost": 2,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_S27CardArt",
+        "targetless": true,
+        "traits": [
+          "@WW_Consume"
+        ],
+        "hide_in_logbook": true,
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S27CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S27CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S27CardArt",
+        "path": "textures/cards/WW_S27CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S27.json": "0651050d00e332c8848d24e5b687d3ae84e9af2a4bcd569f001c3a8e4861fcfd",
+    "content/json/03_common.json": "93d922ea5ee845e8a0ac79dc6480520a849434978141fe1e9353366f1c156353"
+  }
+}

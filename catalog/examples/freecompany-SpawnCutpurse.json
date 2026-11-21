@@ -79,16 +79,16 @@
           "japanese": "財布を掏る"
         },
         "descriptions": {
-          "english": "Gain [effect0.status0.power] [stealth] and [effect1.power] gold.",
-          "french": "Gagnez [effect0.status0.power] [stealth] et [effect1.power] pièces d’or.",
-          "german": "Erhalte [effect0.status0.power] [stealth] und [effect1.power] Gold.",
-          "russian": "Получите [effect0.status0.power] [stealth] и [effect1.power] золота.",
-          "portuguese": "Ganhe [effect0.status0.power] [stealth] e [effect1.power] de ouro.",
-          "chinese": "获得[effect0.status0.power]层[stealth]和[effect1.power]金币。",
-          "spanish": "Gana [effect0.status0.power] [stealth] y [effect1.power] de oro.",
-          "chinese_traditional": "獲得[effect0.status0.power]層[stealth]和[effect1.power]金幣。",
-          "korean": "[effect0.status0.power] [stealth] 및 [effect1.power]골드 획득.",
-          "japanese": "[effect0.status0.power] [stealth]と[effect1.power]ゴールドを得る。"
+          "english": "Gain [effect0.status0.power] [stealth].",
+          "french": "Gagnez [effect0.status0.power] [stealth].",
+          "german": "Erhalte [effect0.status0.power] [stealth].",
+          "russian": "Получите [effect0.status0.power] [stealth].",
+          "portuguese": "Ganhe [effect0.status0.power] [stealth].",
+          "chinese": "获得[effect0.status0.power]层[stealth]。",
+          "spanish": "Gana [effect0.status0.power] [stealth].",
+          "chinese_traditional": "獲得[effect0.status0.power]層[stealth]。",
+          "korean": "[effect0.status0.power] [stealth] 획득.",
+          "japanese": "[effect0.status0.power]の[stealth]を得る。"
         },
         "card_art": "@Cutpurse",
         "is_an_ability": true,
@@ -97,8 +97,7 @@
         "targets_room": false,
         "card_type": "spell",
         "effects": [
-          "@CutpurseAbilityStealth",
-          "@CutpurseAbilityGold"
+          "@CutpurseAbilityStealth"
         ]
       }
     ],
@@ -108,13 +107,6 @@
         "name": "CardEffectSpawnMonster",
         "target_mode": "room",
         "param_character": "@Cutpurse"
-      },
-      {
-        "id": "CutpurseAbilityGold",
-        "name": "CardEffectRewardGold",
-        "target_mode": "self",
-        "target_team": "monsters",
-        "param_int": 10
       },
       {
         "id": "CutpurseAbilityStealth",
@@ -157,7 +149,7 @@
         "starting_status_effects": [
           {
             "status": "avarice",
-            "count": 1
+            "count": 3
           },
           {
             "status": "stealth",
@@ -253,7 +245,7 @@
     ]
   },
   "files": {
-    "json/units/unit_cutpurse.json": "d51c6c095862c967312e1fdb34cb2e16bde45d30fd673723b38aeea55d0d4ce4",
+    "json/units/unit_cutpurse.json": "c238ecf927128885c825897cf1e4119edba1ff30ec5c350deb980a3415581164",
     "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
   }
 }

@@ -1,0 +1,260 @@
+{
+  "id": "ww-WW_U05-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_U05_Character/starting_status_effects",
+      "characters/WW_U05_Character/triggers"
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_U05"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Ayudante de Laboratorio Explosivo",
+    "english": "Explosive Lab Assistant",
+    "french": "Assistant de laboratoire explosif",
+    "german": "Explosiver Laborassistent",
+    "portuguese": "Assistente de Laboratório Explosivo",
+    "russian": "Ассистент взрывной лаборатории",
+    "chinese": "爆炸实验室助教",
+    "chinese_traditional": "爆炸實驗室助教",
+    "korean": "폭발 실험실 조교",
+    "japanese": "爆発実験室助手"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 20,
+  "attack": 16,
+  "size": 2,
+  "picture": "assets/b549d174dab4a98b4ea22d29039d3932b886bfe1a62683368326061d411ba93d.png",
+  "characterPicture": "assets/edfab75d0aeb5387f4d13d591cec31e1b11e85eea6da75e1310ee98479973a33.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/equipment/WW_G02Icon.png": "assets/a191c4a61a2dbd9fff203edef235fa223e9c66bb904795380a2c9482128f1555.png",
+    "textures/cards/WW_G02CardArt.png": "assets/c1340cdb086f743b77cafd1921ad1bc0afae991df30ec21ee267d9da9332b8b6.png",
+    "textures/WW_U05CharacterArt.png": "assets/edfab75d0aeb5387f4d13d591cec31e1b11e85eea6da75e1310ee98479973a33.png",
+    "textures/cards/WW_U05CardArt.png": "assets/b549d174dab4a98b4ea22d29039d3932b886bfe1a62683368326061d411ba93d.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_U05",
+        "names": {
+          "spanish": "Ayudante de Laboratorio Explosivo",
+          "english": "Explosive Lab Assistant",
+          "french": "Assistant de laboratoire explosif",
+          "german": "Explosiver Laborassistent",
+          "portuguese": "Assistente de Laboratório Explosivo",
+          "russian": "Ассистент взрывной лаборатории",
+          "chinese": "爆炸实验室助教",
+          "chinese_traditional": "爆炸實驗室助教",
+          "korean": "폭발 실험실 조교",
+          "japanese": "爆発実験室助手"
+        },
+        "card_type": "monster",
+        "cost": 2,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_U05CardArt",
+        "effects": [
+          "@WW_U05_Spawn"
+        ]
+      },
+      {
+        "id": "WW_G02",
+        "names": {
+          "english": "Safety Hat",
+          "spanish": "Sombrero de Seguridad",
+          "french": "Chapeau de sécurité",
+          "german": "Sicherheitshut",
+          "portuguese": "Chapéu de Segurança",
+          "russian": "Защитная шляпа",
+          "chinese": "安全帽",
+          "chinese_traditional": "安全帽",
+          "korean": "안전 모자",
+          "japanese": "安全帽"
+        },
+        "card_type": "equipment",
+        "cost": 0,
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "card_art": "@WW_G02CardArt",
+        "effects": [
+          "@WW_G02_Equip"
+        ],
+        "traits": [
+          "@WW_G02_Grafted"
+        ],
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_U05_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_U05_Character"
+      },
+      {
+        "id": "WW_G02_Equip",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@WW_G02_Upgrade"
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_U05_Character",
+        "names": {
+          "spanish": "Ayudante de Laboratorio Explosivo",
+          "english": "Explosive Lab Assistant",
+          "french": "Assistant de laboratoire explosif",
+          "german": "Explosiver Laborassistent",
+          "portuguese": "Assistente de Laboratório Explosivo",
+          "russian": "Ассистент взрывной лаборатории",
+          "chinese": "爆炸实验室助教",
+          "chinese_traditional": "爆炸實驗室助教",
+          "korean": "폭발 실험실 조교",
+          "japanese": "爆発実験室助手"
+        },
+        "character_art": "@WW_U05CharacterArt",
+        "size": 2,
+        "health": 20,
+        "attack_damage": 16,
+        "subtypes": [
+          "@WW_Witch",
+          "SubtypesData_BannerUnit"
+        ],
+        "starting_status_effects": [
+          {
+            "status": "trample",
+            "count": 1
+          }
+        ],
+        "grafted_equipment": "@WW_G02"
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_G02_Grafted",
+        "name": "CardTraitGraftedEquipment",
+        "trait_is_removable": false
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WW_G02_Upgrade",
+        "titles": {
+          "english": "Safety Hat",
+          "spanish": "Sombrero de Seguridad",
+          "french": "Chapeau de sécurité",
+          "german": "Sicherheitshut",
+          "portuguese": "Chapéu de Segurança",
+          "russian": "Защитная шляпа",
+          "chinese": "安全帽",
+          "chinese_traditional": "安全帽",
+          "korean": "안전 모자",
+          "japanese": "安全帽"
+        },
+        "hide_icon_on_card": true,
+        "icon": "@WW_G02Icon",
+        "bonus_hp": 10
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_G02Icon",
+        "path": "textures/equipment/WW_G02Icon.png"
+      },
+      {
+        "id": "WW_G02CardArt",
+        "path": "textures/cards/WW_G02CardArt.png"
+      },
+      {
+        "id": "WW_U05CharacterArt",
+        "path": "textures/WW_U05CharacterArt.png"
+      },
+      {
+        "id": "WW_U05CardArt",
+        "path": "textures/cards/WW_U05CardArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_G02CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_G02CardArt"
+          }
+        }
+      },
+      {
+        "id": "WW_U05CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_U05CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.96,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WW_U05CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_U05CardArt"
+          }
+        }
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Witch",
+        "names": {
+          "english": "Witch",
+          "spanish": "Bruja",
+          "french": "Sorcière",
+          "german": "Hexe",
+          "portuguese": "Bruxa",
+          "russian": "Ведьма",
+          "chinese": "女巫",
+          "chinese_traditional": "女巫",
+          "korean": "마녀",
+          "japanese": "魔女"
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_U05.json": "20baf85b6465515e76e4faeee548f578d14d1133d8cf99ea592d605eda7c4469",
+    "content/json/grafts/WW_G02.json": "3d3e5fd52057da4c02fd1a019ef3cee195a7acf484af9d4ca540025a52e7de1d",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

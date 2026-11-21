@@ -1,0 +1,128 @@
+{
+  "id": "ww-WW_E01-simplified",
+  "simplified": {
+    "removed": [
+      "upgrades/WW_E01_Upgrade/ability_upgrade"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_E01"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Withdrawal Stamp",
+    "spanish": "Sello de Baja",
+    "french": "Tampon d'exclusion",
+    "german": "Abmeldestempel",
+    "portuguese": "Carimbo de Retirada",
+    "russian": "Печать исключения",
+    "chinese": "退学印章",
+    "chinese_traditional": "退學印章",
+    "korean": "철회 도장",
+    "japanese": "退学の印"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/5e3b7ae008ab40ad303418c4fe9c4982eeac36e15c07fb0b8f278806178bbd72.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ui/WW_E01Icon.png": "assets/400ec03475e264f470655d771a87c946983078a3266ad742651b413790161c5f.png",
+    "textures/cards/WW_E01CardArt.png": "assets/5e3b7ae008ab40ad303418c4fe9c4982eeac36e15c07fb0b8f278806178bbd72.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_E01",
+        "names": {
+          "english": "Withdrawal Stamp",
+          "spanish": "Sello de Baja",
+          "french": "Tampon d'exclusion",
+          "german": "Abmeldestempel",
+          "portuguese": "Carimbo de Retirada",
+          "russian": "Печать исключения",
+          "chinese": "退学印章",
+          "chinese_traditional": "退學印章",
+          "korean": "철회 도장",
+          "japanese": "退学の印"
+        },
+        "card_type": "equipment",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_E01CardArt",
+        "targetless": false,
+        "effects": [
+          "@WW_E01_Equip"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_E01_Equip",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@WW_E01_Upgrade"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WW_E01_Upgrade",
+        "titles": {
+          "english": "Withdrawal Stamp",
+          "spanish": "Sello de Baja",
+          "french": "Tampon d'exclusion",
+          "german": "Abmeldestempel",
+          "portuguese": "Carimbo de Retirada",
+          "russian": "Печать исключения",
+          "chinese": "退学印章",
+          "chinese_traditional": "退學印章",
+          "korean": "철회 도장",
+          "japanese": "退学の印"
+        },
+        "hide_icon_on_card": true,
+        "icon": "@WW_E01Icon"
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_E01Icon",
+        "path": "textures/ui/WW_E01Icon.png"
+      },
+      {
+        "id": "WW_E01CardArt",
+        "path": "textures/cards/WW_E01CardArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_E01CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_E01CardArt"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_E01.json": "33ecbccd19abcb261fae3a25ddc923bd9245fe6cddb67d44aa79ee27cd64f6d9",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

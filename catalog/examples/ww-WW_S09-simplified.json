@@ -1,0 +1,101 @@
+{
+  "id": "ww-WW_S09-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S09/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S09"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Beca por Contusión",
+    "english": "Concussion Scholarship",
+    "french": "Bourse de commotion",
+    "german": "Gehirnerschütterungsstipendium",
+    "portuguese": "Bolsa de Concussão",
+    "russian": "Стипендия за сотрясение",
+    "chinese": "脑震荡奖学金",
+    "chinese_traditional": "腦震盪獎學金",
+    "korean": "뇌진탕 장학금",
+    "japanese": "脳震盪奨学金"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/a1e5d36125800c5d567d55f44a4c0a1784521fa112caf21bef23ba92470ece58.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S09CardArt.png": "assets/a1e5d36125800c5d567d55f44a4c0a1784521fa112caf21bef23ba92470ece58.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S09",
+        "names": {
+          "spanish": "Beca por Contusión",
+          "english": "Concussion Scholarship",
+          "french": "Bourse de commotion",
+          "german": "Gehirnerschütterungsstipendium",
+          "portuguese": "Bolsa de Concussão",
+          "russian": "Стипендия за сотрясение",
+          "chinese": "脑震荡奖学金",
+          "chinese_traditional": "腦震盪獎學金",
+          "korean": "뇌진탕 장학금",
+          "japanese": "脳震盪奨学金"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "rare",
+        "targets_room": true,
+        "card_art": "@WW_S09CardArt",
+        "targetless": false,
+        "traits": [
+          "@WW_Consume"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S09CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S09CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S09CardArt",
+        "path": "textures/cards/WW_S09CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S09.json": "5402142d18e3217efc951b6c8074f618c0901a8edf355c5eddb76b7d26aff4af",
+    "content/json/03_common.json": "93d922ea5ee845e8a0ac79dc6480520a849434978141fe1e9353366f1c156353"
+  }
+}

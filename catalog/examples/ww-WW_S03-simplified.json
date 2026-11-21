@@ -1,0 +1,93 @@
+{
+  "id": "ww-WW_S03-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S03/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S03"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Centralización de Puntos Débiles",
+    "english": "Weakness Central Office",
+    "french": "Bureau central des faiblesses",
+    "german": "Zentralstelle für Schwäche",
+    "portuguese": "Central de Fraquezas",
+    "russian": "Центральное бюро слабостей",
+    "chinese": "弱点中央办公室",
+    "chinese_traditional": "弱點中央辦公室",
+    "korean": "약점 중앙 사무국",
+    "japanese": "弱点中央事務局"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/40407479313ba31bd75522d5e10b5753a3567812931b7891b22d783bd3d3dffd.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S03CardArt.png": "assets/40407479313ba31bd75522d5e10b5753a3567812931b7891b22d783bd3d3dffd.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S03",
+        "names": {
+          "spanish": "Centralización de Puntos Débiles",
+          "english": "Weakness Central Office",
+          "french": "Bureau central des faiblesses",
+          "german": "Zentralstelle für Schwäche",
+          "portuguese": "Central de Fraquezas",
+          "russian": "Центральное бюро слабостей",
+          "chinese": "弱点中央办公室",
+          "chinese_traditional": "弱點中央辦公室",
+          "korean": "약점 중앙 사무국",
+          "japanese": "弱点中央事務局"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_S03CardArt",
+        "targetless": false,
+        "hide_in_logbook": true,
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S03CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S03CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S03CardArt",
+        "path": "textures/cards/WW_S03CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S03.json": "407aa0e4ba37232d5633fbbc67ad36633767c8f508fc1a3e195230d27025b84a"
+  }
+}

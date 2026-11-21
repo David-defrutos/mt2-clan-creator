@@ -1,0 +1,363 @@
+{
+  "id": "freecompany-SpawnVesper-clan-path-3-simplified",
+  "simplified": {
+    "removed": [
+      "game_objects/VesperCharacterArt/animation",
+      "upgrades/upg_Beastmaster1/trigger_upgrades",
+      "upgrades/upg_Beastmaster1/ability_upgrade",
+      "upgrades/upg_Beastmaster2/remove_upgrades",
+      "upgrades/upg_Beastmaster2/trigger_upgrades",
+      "upgrades/upg_Beastmaster2/ability_upgrade",
+      "upgrades/upg_Beastmaster3/remove_upgrades",
+      "upgrades/upg_Beastmaster3/trigger_upgrades",
+      "upgrades/upg_Beastmaster3/ability_upgrade"
+    ],
+    "path": true
+  },
+  "championPath": {
+    "baseId": "freecompany-SpawnVesper-simplified",
+    "path": 3,
+    "level": 1,
+    "names": {
+      "english": "Beastmaster",
+      "french": "Maître des bêtes",
+      "german": "Bestienmeister",
+      "russian": "Повелитель зверей",
+      "portuguese": "Mestre das Feras",
+      "chinese": "驯兽师",
+      "spanish": "Maestro de bestias",
+      "chinese_traditional": "馴獸師",
+      "korean": "야수 조련사",
+      "japanese": "獣使い"
+    },
+    "upgradeId": "upg_Beastmaster1",
+    "localUpgradeId": "upg_Beastmaster1",
+    "upgrade": {
+      "id": "upg_Beastmaster1",
+      "titles": {
+        "english": "Beastmaster",
+        "french": "Maître des bêtes",
+        "german": "Bestienmeister",
+        "russian": "Повелитель зверей",
+        "portuguese": "Mestre das Feras",
+        "chinese": "驯兽师",
+        "spanish": "Maestro de bestias",
+        "chinese_traditional": "馴獸師",
+        "korean": "야수 조련사",
+        "japanese": "獣使い"
+      },
+      "bonus_hp": 6,
+      "show_description_on_cards": true
+    },
+    "levels": [
+      {
+        "upgradeId": "upg_Beastmaster1",
+        "ref": "@upg_Beastmaster1"
+      },
+      {
+        "upgradeId": "upg_Beastmaster2",
+        "ref": "@upg_Beastmaster2"
+      },
+      {
+        "upgradeId": "upg_Beastmaster3",
+        "ref": "@upg_Beastmaster3"
+      }
+    ]
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnVesper"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Vesper · Beastmaster · I",
+    "french": "Vesper · Maître des bêtes · I",
+    "german": "Vesper · Bestienmeister · I",
+    "russian": "Vesper · Повелитель зверей · I",
+    "portuguese": "Vesper · Mestre das Feras · I",
+    "chinese": "Vesper · 驯兽师 · I",
+    "spanish": "Vesper · Maestro de bestias · I",
+    "chinese_traditional": "Vesper · 馴獸師 · I",
+    "korean": "Vesper · 야수 조련사 · I",
+    "japanese": "Vesper · 獣使い · I"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 22,
+  "attack": 5,
+  "size": 1,
+  "picture": "assets/279d51ddc56ea289b34f4cfa7480e26a592c91f476f58f148be1a104132219b1.png",
+  "characterPicture": "assets/582d49dfd2c9f06bd401919fe504c9032511640a4867f99c86968cfb8c1adfb0.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/VesperCharacterArt.png": "assets/582d49dfd2c9f06bd401919fe504c9032511640a4867f99c86968cfb8c1adfb0.png",
+    "textures/VesperCardBlend41.png": "assets/c89a410d841fbf2f5b545b00751095743d68bb3e42fdd1c3757c08a484167211.png",
+    "textures/VesperCardFrame4.png": "assets/ffbbfef4dbe0a79e60bd7749a3bac59e30236d1860f29698d423f1882431a177.png",
+    "textures/VesperCardBlend34.png": "assets/e47145a6116ac163cafd06cfbf51a24f1ae262e1928db1457eddc4597d2bc066.png",
+    "textures/VesperCardFrame3.png": "assets/4a5011fddf2f1e724aac80f1fa5bedccc4c1477a82af07b93bddc2b5be40803f.png",
+    "textures/VesperCardBlend23.png": "assets/fcde10a87eae8fc0409708ad74a0a47ee951f23f0d714e36e9ce84349a9c7c4e.png",
+    "textures/VesperCardFrame2.png": "assets/0af6a98f7cb6b40792223c92f62d802e6d85de35be9c584aec68835dc1a23fa7.png",
+    "textures/VesperCardBlend12.png": "assets/51c4049b8c0dced439fabb7af169811d9059e9b12b5a4ba0b8375a65186761a3.png",
+    "textures/VesperCardFrame1.png": "assets/5094904de9a37276f08a168bec4f3a8efea6cb515bf9dbd4b1ad8925ded6bad2.png",
+    "textures/VesperCardArt.png": "assets/279d51ddc56ea289b34f4cfa7480e26a592c91f476f58f148be1a104132219b1.png"
+  },
+  "document": {
+    "upgrades": [
+      {
+        "id": "upg_Beastmaster3",
+        "titles": {
+          "english": "Beastmaster III",
+          "french": "Maître des bêtes III",
+          "german": "Bestienmeister III",
+          "russian": "Повелитель зверей III",
+          "portuguese": "Mestre das Feras III",
+          "chinese": "驯兽师 III",
+          "spanish": "Maestro de bestias III",
+          "chinese_traditional": "馴獸師 III",
+          "korean": "야수 조련사 III",
+          "japanese": "獣使い III"
+        },
+        "bonus_hp": 18,
+        "bonus_damage": 8,
+        "show_description_on_cards": true
+      },
+      {
+        "id": "upg_Beastmaster2",
+        "titles": {
+          "english": "Beastmaster II",
+          "french": "Maître des bêtes II",
+          "german": "Bestienmeister II",
+          "russian": "Повелитель зверей II",
+          "portuguese": "Mestre das Feras II",
+          "chinese": "驯兽师 II",
+          "spanish": "Maestro de bestias II",
+          "chinese_traditional": "馴獸師 II",
+          "korean": "야수 조련사 II",
+          "japanese": "獣使い II"
+        },
+        "bonus_hp": 12,
+        "bonus_damage": 4,
+        "show_description_on_cards": true
+      },
+      {
+        "id": "upg_Beastmaster1",
+        "titles": {
+          "english": "Beastmaster",
+          "french": "Maître des bêtes",
+          "german": "Bestienmeister",
+          "russian": "Повелитель зверей",
+          "portuguese": "Mestre das Feras",
+          "chinese": "驯兽师",
+          "spanish": "Maestro de bestias",
+          "chinese_traditional": "馴獸師",
+          "korean": "야수 조련사",
+          "japanese": "獣使い"
+        },
+        "bonus_hp": 6,
+        "show_description_on_cards": true
+      }
+    ],
+    "cards": [
+      {
+        "id": "SpawnVesper",
+        "names": {
+          "english": "Vesper",
+          "french": "Vesper",
+          "german": "Vesper",
+          "russian": "Vesper",
+          "portuguese": "Vesper",
+          "chinese": "Vesper",
+          "spanish": "Vesper",
+          "chinese_traditional": "Vesper",
+          "korean": "Vesper",
+          "japanese": "Vesper"
+        },
+        "card_art": "@Vesper",
+        "cost": 0,
+        "card_type": "monster",
+        "rarity": "champion",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnVesperEffect"
+        ],
+        "initial_upgrades": [
+          "@upg_Beastmaster1"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnVesperEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@Vesper"
+      }
+    ],
+    "characters": [
+      {
+        "id": "Vesper",
+        "names": {
+          "english": "Vesper",
+          "french": "Vesper",
+          "german": "Vesper",
+          "russian": "Vesper",
+          "portuguese": "Vesper",
+          "chinese": "Vesper",
+          "spanish": "Vesper",
+          "chinese_traditional": "Vesper",
+          "korean": "Vesper",
+          "japanese": "Vesper"
+        },
+        "character_art": "@VesperCharacterArt",
+        "size": 1,
+        "attack_damage": 5,
+        "health": 22,
+        "death_type": "large",
+        "subtypes": [
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34",
+          "@Sub_Wizard",
+          "@Sub_Goblin"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Wizard",
+        "names": {
+          "english": "Wizard",
+          "french": "Magicien",
+          "german": "Magier",
+          "russian": "Волшебник",
+          "portuguese": "Mago",
+          "chinese": "法师",
+          "spanish": "Mago",
+          "chinese_traditional": "法師",
+          "korean": "마법사",
+          "japanese": "魔術師"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "VesperCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@VesperCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0.1535,
+                "y": 0.715,
+                "z": 0
+              },
+              "scale": {
+                "x": 2.14,
+                "y": 2.85,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "Vesper",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Vesper",
+            "animation_clip": {
+              "id": "VesperCardIdle",
+              "sample_rate": 6,
+              "loop_time": "loop",
+              "frames": [
+                "@VesperCardFrame1",
+                "@VesperCardFrame1",
+                "@VesperCardFrame1",
+                "@VesperCardFrame1",
+                "@VesperCardBlend12",
+                "@VesperCardFrame2",
+                "@VesperCardBlend23",
+                "@VesperCardFrame3",
+                "@VesperCardBlend34",
+                "@VesperCardFrame4",
+                "@VesperCardBlend41"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "VesperCharacterArt",
+        "path": "textures/VesperCharacterArt.png"
+      },
+      {
+        "id": "VesperCardBlend41",
+        "path": "textures/VesperCardBlend41.png"
+      },
+      {
+        "id": "VesperCardFrame4",
+        "path": "textures/VesperCardFrame4.png"
+      },
+      {
+        "id": "VesperCardBlend34",
+        "path": "textures/VesperCardBlend34.png"
+      },
+      {
+        "id": "VesperCardFrame3",
+        "path": "textures/VesperCardFrame3.png"
+      },
+      {
+        "id": "VesperCardBlend23",
+        "path": "textures/VesperCardBlend23.png"
+      },
+      {
+        "id": "VesperCardFrame2",
+        "path": "textures/VesperCardFrame2.png"
+      },
+      {
+        "id": "VesperCardBlend12",
+        "path": "textures/VesperCardBlend12.png"
+      },
+      {
+        "id": "VesperCardFrame1",
+        "path": "textures/VesperCardFrame1.png"
+      },
+      {
+        "id": "Vesper",
+        "path": "textures/VesperCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/champions/champion_vesper_beastmaster.json": "11b841bed84bf4a410af378d6362331a9528c617ecb0b9fdc6d650fe4d950132",
+    "json/champions/champion_vesper.json": "198e2d9d717938a14783ea8d9b9ecba4c5e3bde17b3f7c88f8cd293928271be7",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

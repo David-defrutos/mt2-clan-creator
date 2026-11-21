@@ -9,7 +9,7 @@ import {renderToStaticMarkup} from 'react-dom/server';
 import sharp from 'sharp';
 import {buildQuickDraft,createQuickDraft} from '../src/server/creator/quick-start.ts';
 import {buildOfficialDraft} from '../src/server/creator/official-clans.ts';
-import {exportDraftBackup,importDraftBackup} from '../src/server/creator/draft-backup.ts';
+import {exportDraftBackup,importDraftBackup,duplicateDraft} from '../src/server/creator/draft-backup.ts';
 import {uploadImage,saveDraft,loadDraft,projectFolder,listDrafts} from '../src/server/creator/projects.ts';
 import {reviewDraft,generateClan} from '../src/server/creator/export.ts';
 import {creatorRules,readExample,exampleParameters,cloneExampleCard} from '../src/server/creator/catalog.ts';
@@ -21,7 +21,7 @@ import {EffectEditor} from '../src/web/creator/components.tsx';
 import {dataRoot} from '../src/server/paths.ts';
 
 test('quick start has valid complete paths, two starters and three independent playable examples',async()=>{
- const rules=await creatorRules();for(const language of ['es','en']){const draft=await buildQuickDraft(language);assert.equal(draft.guidedMode,'quick');assert.equal(draft.cards.length,3);assert.equal(draft.cards.filter(c=>c.banner).length,2);assert.equal(draft.cards.filter(c=>c.kind==='spell').length,1);assert.equal(draft.champions.length,2);assert.ok(draft.champions.every(c=>c.paths.length===3&&c.paths.every(p=>p.levels.length===3)));draft.name='First clan';assert.deepEqual(await reviewDraft(draft),[]);assert.deepEqual(wizardStepOrder(draft,rules),[0,1,5,9,10,11,16]);draft.step=2;assert.equal(wizardStepOrder(draft,rules).length,17);const generated=await generateClan(draft);try{assert.deepEqual(generated.validation.filter((v:any)=>v.severity==='error'),[]);}finally{await fs.rm(generated.root,{recursive:true,force:true});}}
+ const rules=await creatorRules();for(const language of ['es','en']){const draft=await buildQuickDraft(language);assert.equal(draft.guidedMode,'quick');assert.equal(draft.cards.length,3);assert.equal(draft.cards.filter(c=>c.banner).length,2);assert.equal(draft.cards.filter(c=>c.kind==='spell').length,1);assert.equal(draft.champions.length,2);assert.ok(draft.champions.every(c=>c.paths.length===3&&c.paths.every(p=>p.levels.length===3)));draft.name='First clan';assert.deepEqual(await reviewDraft(draft),[]);assert.deepEqual(wizardStepOrder(draft,rules),[0,1,5,9,10,11,rules.steps.findIndex((step:any)=>step.id==='review')]);draft.step=2;assert.equal(wizardStepOrder(draft,rules).length,rules.steps.length);const generated=await generateClan(draft);try{assert.deepEqual(generated.validation.filter((v:any)=>v.severity==='error'),[]);}finally{await fs.rm(generated.root,{recursive:true,force:true});}}
 });
 
 test('portable backups restore uploaded artwork, preserve source and create independent project identities',async t=>{
@@ -42,7 +42,7 @@ test('champion preview shows base or exact edited path level without modifying t
 
 test('guided effects retain target and duration controls and all new explanatory text is bilingual',async()=>{
  const rules=await creatorRules(),effect={recipe:'armor',amount:7,target:'friendly',when:'on_death',duration:'run'};for(const language of ['es','en'] as const){for(const value of Object.values(rules.usabilityText) as any[])assert.ok(value[language]?.trim());const html=renderToStaticMarkup(React.createElement(EffectEditor,{effects:[effect as any],onChange:()=>{},rules,language,t:(key:string)=>rules.labels[key]?.[language]??key}));assert.match(html,/effect-basics/);assert.match(html,/value="run"/);assert.match(html,/value="friendly"/);assert.ok(html.indexOf(rules.labels.when[language])<html.indexOf(rules.labels.mechanics[language]));}
- const launcher=await fs.readFile('Launch-Creator.cmd','utf8');assert.match(launcher,/runtime\/node.exe/);assert.match(launcher,/Opening MT2 Clan Creator/);const packageScript=await fs.readFile('scripts/package-creator.mjs','utf8');assert.match(packageScript,/'Launch-Creator.cmd','README.txt'/);
+ const launcher=await fs.readFile('start-clan-creator.cmd','utf8');assert.match(launcher,/runtime\/node.exe/);assert.match(launcher,/Opening MT2 Clan Creator/);const packageScript=await fs.readFile('scripts/package-creator.mjs','utf8');assert.match(packageScript,/'start-clan-creator\.cmd','README\.txt'/);assert.doesNotMatch(packageScript,/'(?:Launch-Creator|Abrir-creador)\.cmd'/i);
 });
 // 2026-11-16-2150||codex-clan-editor||clan-creator/tests/creator-improvements.test.ts||Probar clan mínimo generación copias con imágenes y restauración segura senda nivel y formularios bilingües
 
@@ -55,3 +55,24 @@ test('HTTP quick start and backup restoration work without compiling or replacin
 });
 // 2026-11-16-2158||codex-clan-editor||clan-creator/tests/creator-improvements.test.ts||Comprobar recorrido y copia restauración por HTTP con identidad independiente y bloqueo de origen ajeno
 // 2026-11-16-2203||codex-clan-editor||clan-creator/tests/creator-improvements.test.ts||Aislar comprobación de restauración a sus propios borradores sin contar proyectos de otras pruebas paralelas o del usuario
+// 2026-11-21-1000||codex-clan-editor||clan-creator/tests/creator-improvements.test.ts||Verificar en las pruebas el nombre ingles y que no se empaqueten duplicados
+
+test('duplicating an existing clan preserves its art and never carries the legacy author into shareable copies',async t=>{
+ const draft=await createQuickDraft('en'), ids=[draft.id];
+ t.after(async()=>{for(const id of ids)await fs.rm(projectFolder(id),{recursive:true,force:true});});
+ const source=await saveDraft({...draft,name:'Test clan',author:'Private legacy author'});
+ const backup=await exportDraftBackup(source.id);
+ assert.equal(backup.draft.author,undefined);
+ const copy=await duplicateDraft(source.id,'es');
+ ids.push(copy.id);
+ assert.notEqual(copy.id,source.id);
+ assert.equal(copy.name,'Copia de Test clan');
+ assert.equal(copy.author,undefined);
+ assert.deepEqual(copy.cards,source.cards);
+ const original=JSON.parse(await fs.readFile(path.join(projectFolder(source.id),'draft.json'),'utf8'));
+ assert.equal(original.name,source.name);
+ assert.equal(original.author,source.author);
+});
+// 2026-11-21-1116||codex-clan-editor||clan-creator/tests/creator-improvements.test.ts||Probar que una copia editable conserva sus cartas y omite el autor antiguo
+// 2026-11-21-1219||codex-clan-editor||clan-creator/tests/creator-improvements.test.ts||Verificar el paso final del recorrido corto y los 18 pasos completos
+// 2026-11-21-1334||codex-clan-editor||clan-creator/tests/creator-improvements.test.ts||Comprobar la navegación rápida a Instalar con los nuevos pasos opcionales

@@ -65,7 +65,8 @@
         ],
         "traits": [
           "@WW_G05_Grafted"
-        ]
+        ],
+        "ignore_when_counting_mastery": true
       }
     ],
     "traits": [
@@ -132,6 +133,6 @@
     ]
   },
   "files": {
-    "content/json/grafts/WW_G05.json": "e0e2e079fd95791e007a4c4ccf290ce35ce0311aa05bebaf241e2bb8a8a5a657"
+    "content/json/grafts/WW_G05.json": "36434d280e1444c4ac90eac70fa6724e4ac47a5001083b7c46be3478cd53e498"
   }
 }

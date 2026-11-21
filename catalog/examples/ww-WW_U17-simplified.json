@@ -1,0 +1,258 @@
+{
+  "id": "ww-WW_U17-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_U17_Character/starting_status_effects"
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_U17"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Delegada del Primer Hechizo",
+    "english": "First Spell Class Representative",
+    "french": "Délégué du premier sort",
+    "german": "Klassensprecher des ersten Zaubers",
+    "portuguese": "Representante do Primeiro Feitiço",
+    "russian": "Староста первого заклинания",
+    "chinese": "首个法术班长",
+    "chinese_traditional": "首個法術班長",
+    "korean": "첫 주문 반장",
+    "japanese": "最初の呪文の学級委員"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 35,
+  "attack": 6,
+  "size": 1,
+  "picture": "assets/06479327ba3630ad7e6954d03e40a2015e4f015b3229bf86a163729e3ff2417a.png",
+  "characterPicture": "assets/42c5bfe7023aac71da8a7ce31c915d6e4ec10b3560c6c1f957c48511c03e7098.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/equipment/WW_G05Icon.png": "assets/1fc51bd0ec77535dcf72369958a32f56894155bdd2618b854dba88d6c9e8cccf.png",
+    "textures/cards/WW_G05CardArt.png": "assets/45e0d4f14ca8d36a8dab984952d1f5eb17c1abbe654c81742ed65ed7da7cb3ff.png",
+    "textures/characters/WW_U17CharacterArt.png": "assets/42c5bfe7023aac71da8a7ce31c915d6e4ec10b3560c6c1f957c48511c03e7098.png",
+    "textures/cards/WW_U17CardArt.png": "assets/06479327ba3630ad7e6954d03e40a2015e4f015b3229bf86a163729e3ff2417a.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_U17",
+        "names": {
+          "spanish": "Delegada del Primer Hechizo",
+          "english": "First Spell Class Representative",
+          "french": "Délégué du premier sort",
+          "german": "Klassensprecher des ersten Zaubers",
+          "portuguese": "Representante do Primeiro Feitiço",
+          "russian": "Староста первого заклинания",
+          "chinese": "首个法术班长",
+          "chinese_traditional": "首個法術班長",
+          "korean": "첫 주문 반장",
+          "japanese": "最初の呪文の学級委員"
+        },
+        "card_type": "monster",
+        "cost": 2,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_U17CardArt",
+        "effects": [
+          "@WW_U17_Spawn"
+        ]
+      },
+      {
+        "id": "WW_G05",
+        "names": {
+          "english": "Emergency Battery",
+          "spanish": "Batería de Emergencia",
+          "french": "Batterie de secours",
+          "german": "Notfallbatterie",
+          "portuguese": "Bateria de Emergência",
+          "russian": "Аварийная батарея",
+          "chinese": "应急电池",
+          "chinese_traditional": "應急電池",
+          "korean": "비상 배터리",
+          "japanese": "非常用バッテリー"
+        },
+        "card_type": "equipment",
+        "cost": 0,
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "card_art": "@WW_G05CardArt",
+        "effects": [
+          "@WW_G05_Equip"
+        ],
+        "traits": [
+          "@WW_G05_Grafted"
+        ],
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_U17_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_U17_Character"
+      },
+      {
+        "id": "WW_G05_Equip",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@WW_G05_Upgrade"
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_U17_Character",
+        "names": {
+          "spanish": "Delegada del Primer Hechizo",
+          "english": "First Spell Class Representative",
+          "french": "Délégué du premier sort",
+          "german": "Klassensprecher des ersten Zaubers",
+          "portuguese": "Representante do Primeiro Feitiço",
+          "russian": "Староста первого заклинания",
+          "chinese": "首个法术班长",
+          "chinese_traditional": "首個法術班長",
+          "korean": "첫 주문 반장",
+          "japanese": "最初の呪文の学級委員"
+        },
+        "character_art": "@WW_U17CharacterArt",
+        "size": 1,
+        "health": 35,
+        "attack_damage": 6,
+        "subtypes": [
+          "@WW_Witch",
+          "SubtypesData_BannerUnit"
+        ],
+        "grafted_equipment": "@WW_G05"
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_G05_Grafted",
+        "name": "CardTraitGraftedEquipment",
+        "trait_is_removable": false
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WW_G05_Upgrade",
+        "titles": {
+          "english": "Emergency Battery",
+          "spanish": "Batería de Emergencia",
+          "french": "Batterie de secours",
+          "german": "Notfallbatterie",
+          "portuguese": "Bateria de Emergência",
+          "russian": "Аварийная батарея",
+          "chinese": "应急电池",
+          "chinese_traditional": "應急電池",
+          "korean": "비상 배터리",
+          "japanese": "非常用バッテリー"
+        },
+        "hide_icon_on_card": true,
+        "icon": "@WW_G05Icon",
+        "status_effect_upgrades": [
+          {
+            "status": "burst",
+            "count": 3
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_G05Icon",
+        "path": "textures/equipment/WW_G05Icon.png"
+      },
+      {
+        "id": "WW_G05CardArt",
+        "path": "textures/cards/WW_G05CardArt.png"
+      },
+      {
+        "id": "WW_U17CharacterArt",
+        "path": "textures/characters/WW_U17CharacterArt.png"
+      },
+      {
+        "id": "WW_U17CardArt",
+        "path": "textures/cards/WW_U17CardArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_G05CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_G05CardArt"
+          }
+        }
+      },
+      {
+        "id": "WW_U17CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_U17CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.97,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WW_U17CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_U17CardArt"
+          }
+        }
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Witch",
+        "names": {
+          "english": "Witch",
+          "spanish": "Bruja",
+          "french": "Sorcière",
+          "german": "Hexe",
+          "portuguese": "Bruxa",
+          "russian": "Ведьма",
+          "chinese": "女巫",
+          "chinese_traditional": "女巫",
+          "korean": "마녀",
+          "japanese": "魔女"
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_U17.json": "7eca76d5c5a7befae18d507c8be001394aefdc9f6efee5c68317b96f847cc342",
+    "content/json/grafts/WW_G05.json": "36434d280e1444c4ac90eac70fa6724e4ac47a5001083b7c46be3478cd53e498",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

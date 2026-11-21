@@ -1,0 +1,101 @@
+{
+  "id": "ww-WW_S30-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S30/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S30"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Tomo de Evaluación Destructiva",
+    "english": "Tome of Destructive Assessment",
+    "french": "Tome d’évaluation destructrice",
+    "german": "Foliant der zerstörerischen Bewertung",
+    "portuguese": "Tomo de Avaliação Destrutiva",
+    "russian": "Том разрушительной оценки",
+    "chinese": "破坏性评估之书",
+    "chinese_traditional": "破壞性評估之書",
+    "korean": "파괴적 평가의 고서",
+    "japanese": "破壊的評価の書"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/f0f4c5e6124c11ea2465754f59f5178cbeaa25925cfce67cbe72f6cfda6c1e39.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S30CardArt.png": "assets/f0f4c5e6124c11ea2465754f59f5178cbeaa25925cfce67cbe72f6cfda6c1e39.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S30",
+        "names": {
+          "spanish": "Tomo de Evaluación Destructiva",
+          "english": "Tome of Destructive Assessment",
+          "french": "Tome d’évaluation destructrice",
+          "german": "Foliant der zerstörerischen Bewertung",
+          "portuguese": "Tomo de Avaliação Destrutiva",
+          "russian": "Том разрушительной оценки",
+          "chinese": "破坏性评估之书",
+          "chinese_traditional": "破壞性評估之書",
+          "korean": "파괴적 평가의 고서",
+          "japanese": "破壊的評価の書"
+        },
+        "card_type": "spell",
+        "cost": 2,
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": true,
+        "card_art": "@WW_S30CardArt",
+        "traits": [
+          "@WW_Consume"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S30CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S30CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S30CardArt",
+        "path": "textures/cards/WW_S30CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S30.json": "bbddabd829dcb9796f64c4869106d6a81beac46e18e42afa963894055d4e5760",
+    "content/json/03_common.json": "93d922ea5ee845e8a0ac79dc6480520a849434978141fe1e9353366f1c156353"
+  }
+}

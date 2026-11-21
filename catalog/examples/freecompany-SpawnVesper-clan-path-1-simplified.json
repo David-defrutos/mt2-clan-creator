@@ -1,0 +1,826 @@
+{
+  "id": "freecompany-SpawnVesper-clan-path-1-simplified",
+  "simplified": {
+    "removed": [
+      "game_objects/VesperCharacterArt/animation"
+    ],
+    "path": false
+  },
+  "championPath": {
+    "baseId": "freecompany-SpawnVesper-simplified",
+    "path": 1,
+    "level": 1,
+    "names": {
+      "english": "Grimoire",
+      "french": "Grimoire",
+      "german": "Grimoire",
+      "russian": "Гримуар",
+      "portuguese": "Grimório",
+      "chinese": "魔法书",
+      "spanish": "Grimorio",
+      "chinese_traditional": "魔法書",
+      "korean": "마법서",
+      "japanese": "魔導書"
+    },
+    "upgradeId": "upg_Grimoire1",
+    "localUpgradeId": "upg_Grimoire1",
+    "upgrade": {
+      "id": "upg_Grimoire1",
+      "titles": {
+        "english": "Grimoire",
+        "french": "Grimoire",
+        "german": "Grimoire",
+        "russian": "Гримуар",
+        "portuguese": "Grimório",
+        "chinese": "魔法书",
+        "spanish": "Grimorio",
+        "chinese_traditional": "魔法書",
+        "korean": "마법서",
+        "japanese": "魔導書"
+      },
+      "descriptions": {
+        "korean": "턴 시작 시: <b>3</b>회 타격하는 무료 [ephemeral] <b>마법 화살</b>을 손에 추가.\n축하: 영구적으로 <b>2</b> [conduit] 획득.",
+        "japanese": "ターン開始時：<b>3</b>回攻撃する無料の[ephemeral]<b>マジックミサイル</b>を手札に追加。\n祝福：永続的に<b>2</b> [conduit]を得る。",
+        "chinese": "回合开始时：将一张免费的[ephemeral]<b>魔法飞弹</b>加入手牌，攻击<b>3</b>次。\n庆祝：永久获得<b>2</b> [conduit]。",
+        "german": "Zu Zugbeginn: Füge deiner Hand ein kostenloses <b>Magisches Geschoss</b> mit [ephemeral] und <b>3</b> Treffern hinzu.\nFeiern: Erhalte dauerhaft <b>2</b> [conduit].",
+        "portuguese": "No início do turno: Adicione à mão <b>Míssil Mágico</b> gratuito com [ephemeral] e <b>3</b> impactos.\nCelebração: Ganhe <b>2</b> [conduit] permanentemente.",
+        "french": "Au début du tour : Ajoutez à votre main <b>Projectile magique</b> gratuit avec [ephemeral] et <b>3</b> impacts.\nCélébration : Gagnez définitivement <b>2</b> [conduit].",
+        "russian": "В начале хода: Добавьте в руку бесплатную карту <b>Волшебная стрела</b> с [ephemeral] и <b>3</b> попаданиями.\nТоржество: Навсегда получите <b>2</b> [conduit].",
+        "chinese_traditional": "回合開始時：將一張免費的[ephemeral]<b>魔法飛彈</b>加入手牌，攻擊<b>3</b>次。\n慶祝：永久獲得<b>2</b> [conduit]。",
+        "spanish": "Al inicio del turno: Añade a tu mano <b>Proyectil mágico</b> gratis y [ephemeral], de <b>3</b> impactos.\nCelebración: Gana <b>2</b> [conduit] permanentemente.",
+        "english": "At start of turn: Add a free [ephemeral] <b>Magic Missile</b> with <b>3</b> hits to your hand.\nCelebrate: Gain <b>2</b> [conduit] permanently."
+      },
+      "bonus_damage": 4,
+      "trigger_upgrades": [
+        "@GrimoireMissileTurn1",
+        "@GrimoireCelebrate"
+      ],
+      "status_effect_upgrades": [
+        {
+          "status": "conduit",
+          "count": 5
+        }
+      ],
+      "show_description_on_cards": false
+    },
+    "levels": [
+      {
+        "upgradeId": "upg_Grimoire1",
+        "ref": "@upg_Grimoire1"
+      },
+      {
+        "upgradeId": "upg_Grimoire2",
+        "ref": "@upg_Grimoire2"
+      },
+      {
+        "upgradeId": "upg_Grimoire3",
+        "ref": "@upg_Grimoire3"
+      }
+    ]
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnVesper"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Vesper · Grimoire · I",
+    "french": "Vesper · Grimoire · I",
+    "german": "Vesper · Grimoire · I",
+    "russian": "Vesper · Гримуар · I",
+    "portuguese": "Vesper · Grimório · I",
+    "chinese": "Vesper · 魔法书 · I",
+    "spanish": "Vesper · Grimorio · I",
+    "chinese_traditional": "Vesper · 魔法書 · I",
+    "korean": "Vesper · 마법서 · I",
+    "japanese": "Vesper · 魔導書 · I"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 22,
+  "attack": 5,
+  "size": 1,
+  "picture": "assets/279d51ddc56ea289b34f4cfa7480e26a592c91f476f58f148be1a104132219b1.png",
+  "characterPicture": "assets/582d49dfd2c9f06bd401919fe504c9032511640a4867f99c86968cfb8c1adfb0.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/MagicMissileArt.png": "assets/0b940663a0c87b3db5df80af07f67fbc6ab7b1e6068a19bf760b66a05c491d56.png",
+    "textures/VesperCharacterArt.png": "assets/582d49dfd2c9f06bd401919fe504c9032511640a4867f99c86968cfb8c1adfb0.png",
+    "textures/VesperCardBlend41.png": "assets/c89a410d841fbf2f5b545b00751095743d68bb3e42fdd1c3757c08a484167211.png",
+    "textures/VesperCardFrame4.png": "assets/ffbbfef4dbe0a79e60bd7749a3bac59e30236d1860f29698d423f1882431a177.png",
+    "textures/VesperCardBlend34.png": "assets/e47145a6116ac163cafd06cfbf51a24f1ae262e1928db1457eddc4597d2bc066.png",
+    "textures/VesperCardFrame3.png": "assets/4a5011fddf2f1e724aac80f1fa5bedccc4c1477a82af07b93bddc2b5be40803f.png",
+    "textures/VesperCardBlend23.png": "assets/fcde10a87eae8fc0409708ad74a0a47ee951f23f0d714e36e9ce84349a9c7c4e.png",
+    "textures/VesperCardFrame2.png": "assets/0af6a98f7cb6b40792223c92f62d802e6d85de35be9c584aec68835dc1a23fa7.png",
+    "textures/VesperCardBlend12.png": "assets/51c4049b8c0dced439fabb7af169811d9059e9b12b5a4ba0b8375a65186761a3.png",
+    "textures/VesperCardFrame1.png": "assets/5094904de9a37276f08a168bec4f3a8efea6cb515bf9dbd4b1ad8925ded6bad2.png",
+    "textures/VesperCardArt.png": "assets/279d51ddc56ea289b34f4cfa7480e26a592c91f476f58f148be1a104132219b1.png"
+  },
+  "document": {
+    "upgrades": [
+      {
+        "id": "upg_Grimoire3",
+        "titles": {
+          "english": "Grimoire III",
+          "french": "Grimoire III",
+          "german": "Grimoire III",
+          "russian": "Гримуар III",
+          "portuguese": "Grimório III",
+          "chinese": "魔法书 III",
+          "spanish": "Grimorio III",
+          "chinese_traditional": "魔法書 III",
+          "korean": "마법서 III",
+          "japanese": "魔導書 III"
+        },
+        "descriptions": {
+          "korean": "턴 시작 시: <b>5</b>회 타격하는 무료 [ephemeral] <b>마법 화살</b>을 손에 추가.\n축하: 영구적으로 <b>6</b> [conduit] 획득.",
+          "japanese": "ターン開始時：<b>5</b>回攻撃する無料の[ephemeral]<b>マジックミサイル</b>を手札に追加。\n祝福：永続的に<b>6</b> [conduit]を得る。",
+          "chinese": "回合开始时：将一张免费的[ephemeral]<b>魔法飞弹</b>加入手牌，攻击<b>5</b>次。\n庆祝：永久获得<b>6</b> [conduit]。",
+          "german": "Zu Zugbeginn: Füge deiner Hand ein kostenloses <b>Magisches Geschoss</b> mit [ephemeral] und <b>5</b> Treffern hinzu.\nFeiern: Erhalte dauerhaft <b>6</b> [conduit].",
+          "portuguese": "No início do turno: Adicione à mão <b>Míssil Mágico</b> gratuito com [ephemeral] e <b>5</b> impactos.\nCelebração: Ganhe <b>6</b> [conduit] permanentemente.",
+          "french": "Au début du tour : Ajoutez à votre main <b>Projectile magique</b> gratuit avec [ephemeral] et <b>5</b> impacts.\nCélébration : Gagnez définitivement <b>6</b> [conduit].",
+          "russian": "В начале хода: Добавьте в руку бесплатную карту <b>Волшебная стрела</b> с [ephemeral] и <b>5</b> попаданиями.\nТоржество: Навсегда получите <b>6</b> [conduit].",
+          "chinese_traditional": "回合開始時：將一張免費的[ephemeral]<b>魔法飛彈</b>加入手牌，攻擊<b>5</b>次。\n慶祝：永久獲得<b>6</b> [conduit]。",
+          "spanish": "Al inicio del turno: Añade a tu mano <b>Proyectil mágico</b> gratis y [ephemeral], de <b>5</b> impactos.\nCelebración: Gana <b>6</b> [conduit] permanentemente.",
+          "english": "At start of turn: Add a free [ephemeral] <b>Magic Missile</b> with <b>5</b> hits to your hand.\nCelebrate: Gain <b>6</b> [conduit] permanently."
+        },
+        "bonus_damage": 18,
+        "remove_upgrades": [
+          "@upg_Grimoire2"
+        ],
+        "trigger_upgrades": [
+          "@GrimoireMissileTurn3",
+          "@GrimoireCelebrate3"
+        ],
+        "status_effect_upgrades": [
+          {
+            "status": "conduit",
+            "count": 5
+          }
+        ],
+        "show_description_on_cards": false
+      },
+      {
+        "id": "GrimoireCelebrateUpgrade3",
+        "status_effect_upgrades": [
+          {
+            "status": "conduit",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "id": "upg_Grimoire2",
+        "titles": {
+          "english": "Grimoire II",
+          "french": "Grimoire II",
+          "german": "Grimoire II",
+          "russian": "Гримуар II",
+          "portuguese": "Grimório II",
+          "chinese": "魔法书 II",
+          "spanish": "Grimorio II",
+          "chinese_traditional": "魔法書 II",
+          "korean": "마법서 II",
+          "japanese": "魔導書 II"
+        },
+        "descriptions": {
+          "korean": "턴 시작 시: <b>4</b>회 타격하는 무료 [ephemeral] <b>마법 화살</b>을 손에 추가.\n축하: 영구적으로 <b>4</b> [conduit] 획득.",
+          "japanese": "ターン開始時：<b>4</b>回攻撃する無料の[ephemeral]<b>マジックミサイル</b>を手札に追加。\n祝福：永続的に<b>4</b> [conduit]を得る。",
+          "chinese": "回合开始时：将一张免费的[ephemeral]<b>魔法飞弹</b>加入手牌，攻击<b>4</b>次。\n庆祝：永久获得<b>4</b> [conduit]。",
+          "german": "Zu Zugbeginn: Füge deiner Hand ein kostenloses <b>Magisches Geschoss</b> mit [ephemeral] und <b>4</b> Treffern hinzu.\nFeiern: Erhalte dauerhaft <b>4</b> [conduit].",
+          "portuguese": "No início do turno: Adicione à mão <b>Míssil Mágico</b> gratuito com [ephemeral] e <b>4</b> impactos.\nCelebração: Ganhe <b>4</b> [conduit] permanentemente.",
+          "french": "Au début du tour : Ajoutez à votre main <b>Projectile magique</b> gratuit avec [ephemeral] et <b>4</b> impacts.\nCélébration : Gagnez définitivement <b>4</b> [conduit].",
+          "russian": "В начале хода: Добавьте в руку бесплатную карту <b>Волшебная стрела</b> с [ephemeral] и <b>4</b> попаданиями.\nТоржество: Навсегда получите <b>4</b> [conduit].",
+          "chinese_traditional": "回合開始時：將一張免費的[ephemeral]<b>魔法飛彈</b>加入手牌，攻擊<b>4</b>次。\n慶祝：永久獲得<b>4</b> [conduit]。",
+          "spanish": "Al inicio del turno: Añade a tu mano <b>Proyectil mágico</b> gratis y [ephemeral], de <b>4</b> impactos.\nCelebración: Gana <b>4</b> [conduit] permanentemente.",
+          "english": "At start of turn: Add a free [ephemeral] <b>Magic Missile</b> with <b>4</b> hits to your hand.\nCelebrate: Gain <b>4</b> [conduit] permanently."
+        },
+        "bonus_damage": 10,
+        "remove_upgrades": [
+          "@upg_Grimoire1"
+        ],
+        "trigger_upgrades": [
+          "@GrimoireMissileTurn2",
+          "@GrimoireCelebrate2"
+        ],
+        "status_effect_upgrades": [
+          {
+            "status": "conduit",
+            "count": 5
+          }
+        ],
+        "show_description_on_cards": false
+      },
+      {
+        "id": "GrimoireCelebrateUpgrade2",
+        "status_effect_upgrades": [
+          {
+            "status": "conduit",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "id": "upg_Grimoire1",
+        "titles": {
+          "english": "Grimoire",
+          "french": "Grimoire",
+          "german": "Grimoire",
+          "russian": "Гримуар",
+          "portuguese": "Grimório",
+          "chinese": "魔法书",
+          "spanish": "Grimorio",
+          "chinese_traditional": "魔法書",
+          "korean": "마법서",
+          "japanese": "魔導書"
+        },
+        "descriptions": {
+          "korean": "턴 시작 시: <b>3</b>회 타격하는 무료 [ephemeral] <b>마법 화살</b>을 손에 추가.\n축하: 영구적으로 <b>2</b> [conduit] 획득.",
+          "japanese": "ターン開始時：<b>3</b>回攻撃する無料の[ephemeral]<b>マジックミサイル</b>を手札に追加。\n祝福：永続的に<b>2</b> [conduit]を得る。",
+          "chinese": "回合开始时：将一张免费的[ephemeral]<b>魔法飞弹</b>加入手牌，攻击<b>3</b>次。\n庆祝：永久获得<b>2</b> [conduit]。",
+          "german": "Zu Zugbeginn: Füge deiner Hand ein kostenloses <b>Magisches Geschoss</b> mit [ephemeral] und <b>3</b> Treffern hinzu.\nFeiern: Erhalte dauerhaft <b>2</b> [conduit].",
+          "portuguese": "No início do turno: Adicione à mão <b>Míssil Mágico</b> gratuito com [ephemeral] e <b>3</b> impactos.\nCelebração: Ganhe <b>2</b> [conduit] permanentemente.",
+          "french": "Au début du tour : Ajoutez à votre main <b>Projectile magique</b> gratuit avec [ephemeral] et <b>3</b> impacts.\nCélébration : Gagnez définitivement <b>2</b> [conduit].",
+          "russian": "В начале хода: Добавьте в руку бесплатную карту <b>Волшебная стрела</b> с [ephemeral] и <b>3</b> попаданиями.\nТоржество: Навсегда получите <b>2</b> [conduit].",
+          "chinese_traditional": "回合開始時：將一張免費的[ephemeral]<b>魔法飛彈</b>加入手牌，攻擊<b>3</b>次。\n慶祝：永久獲得<b>2</b> [conduit]。",
+          "spanish": "Al inicio del turno: Añade a tu mano <b>Proyectil mágico</b> gratis y [ephemeral], de <b>3</b> impactos.\nCelebración: Gana <b>2</b> [conduit] permanentemente.",
+          "english": "At start of turn: Add a free [ephemeral] <b>Magic Missile</b> with <b>3</b> hits to your hand.\nCelebrate: Gain <b>2</b> [conduit] permanently."
+        },
+        "bonus_damage": 4,
+        "trigger_upgrades": [
+          "@GrimoireMissileTurn1",
+          "@GrimoireCelebrate"
+        ],
+        "status_effect_upgrades": [
+          {
+            "status": "conduit",
+            "count": 5
+          }
+        ],
+        "show_description_on_cards": false
+      },
+      {
+        "id": "GrimoireCelebrateUpgrade",
+        "status_effect_upgrades": [
+          {
+            "status": "conduit",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "GrimoireCelebrate3",
+        "trigger": "on_encounter_complete",
+        "descriptions": {
+          "english": "Gain <b>6</b> [conduit] permanently.",
+          "french": "Gagnez définitivement <b>6</b> [conduit].",
+          "german": "Erhalte dauerhaft <b>6</b> [conduit].",
+          "russian": "Навсегда получите <b>6</b> [conduit].",
+          "portuguese": "Ganhe <b>6</b> [conduit] permanentemente.",
+          "chinese": "永久获得<b>6</b> [conduit]。",
+          "spanish": "Gana <b>6</b> [conduit] permanentemente.",
+          "chinese_traditional": "永久獲得<b>6</b> [conduit]。",
+          "korean": "영구적으로 <b>6</b> [conduit] 획득.",
+          "japanese": "永続的に<b>6</b> [conduit]を得る。"
+        },
+        "effects": [
+          "@GrimoireCelebrateGain3"
+        ]
+      },
+      {
+        "id": "GrimoireMissileTurn3",
+        "trigger": "pre_combat",
+        "descriptions": {
+          "korean": "<b>5</b>회 타격하는 무료 [ephemeral] <b>마법 화살</b>을 손에 추가.",
+          "japanese": "<b>5</b>回攻撃する無料の[ephemeral]<b>マジックミサイル</b>を手札に追加。",
+          "chinese": "将一张免费的[ephemeral]<b>魔法飞弹</b>加入手牌，攻击<b>5</b>次。",
+          "german": "Füge deiner Hand ein kostenloses <b>Magisches Geschoss</b> mit [ephemeral] und <b>5</b> Treffern hinzu.",
+          "portuguese": "Adicione à mão <b>Míssil Mágico</b> gratuito com [ephemeral] e <b>5</b> impactos.",
+          "french": "Ajoutez à votre main <b>Projectile magique</b> gratuit avec [ephemeral] et <b>5</b> impacts.",
+          "russian": "Добавьте в руку бесплатную карту <b>Волшебная стрела</b> с [ephemeral] и <b>5</b> попаданиями.",
+          "chinese_traditional": "將一張免費的[ephemeral]<b>魔法飛彈</b>加入手牌，攻擊<b>5</b>次。",
+          "spanish": "Añade a tu mano <b>Proyectil mágico</b> gratis y [ephemeral], de <b>5</b> impactos.",
+          "english": "Add a free [ephemeral] <b>Magic Missile</b> with <b>5</b> hits to your hand."
+        },
+        "effects": [
+          "@GrimoireMissileEffect3"
+        ]
+      },
+      {
+        "id": "GrimoireCelebrate2",
+        "trigger": "on_encounter_complete",
+        "descriptions": {
+          "english": "Gain <b>4</b> [conduit] permanently.",
+          "french": "Gagnez définitivement <b>4</b> [conduit].",
+          "german": "Erhalte dauerhaft <b>4</b> [conduit].",
+          "russian": "Навсегда получите <b>4</b> [conduit].",
+          "portuguese": "Ganhe <b>4</b> [conduit] permanentemente.",
+          "chinese": "永久获得<b>4</b> [conduit]。",
+          "spanish": "Gana <b>4</b> [conduit] permanentemente.",
+          "chinese_traditional": "永久獲得<b>4</b> [conduit]。",
+          "korean": "영구적으로 <b>4</b> [conduit] 획득.",
+          "japanese": "永続的に<b>4</b> [conduit]を得る。"
+        },
+        "effects": [
+          "@GrimoireCelebrateGain2"
+        ]
+      },
+      {
+        "id": "GrimoireMissileTurn2",
+        "trigger": "pre_combat",
+        "descriptions": {
+          "korean": "<b>4</b>회 타격하는 무료 [ephemeral] <b>마법 화살</b>을 손에 추가.",
+          "japanese": "<b>4</b>回攻撃する無料の[ephemeral]<b>マジックミサイル</b>を手札に追加。",
+          "chinese": "将一张免费的[ephemeral]<b>魔法飞弹</b>加入手牌，攻击<b>4</b>次。",
+          "german": "Füge deiner Hand ein kostenloses <b>Magisches Geschoss</b> mit [ephemeral] und <b>4</b> Treffern hinzu.",
+          "portuguese": "Adicione à mão <b>Míssil Mágico</b> gratuito com [ephemeral] e <b>4</b> impactos.",
+          "french": "Ajoutez à votre main <b>Projectile magique</b> gratuit avec [ephemeral] et <b>4</b> impacts.",
+          "russian": "Добавьте в руку бесплатную карту <b>Волшебная стрела</b> с [ephemeral] и <b>4</b> попаданиями.",
+          "chinese_traditional": "將一張免費的[ephemeral]<b>魔法飛彈</b>加入手牌，攻擊<b>4</b>次。",
+          "spanish": "Añade a tu mano <b>Proyectil mágico</b> gratis y [ephemeral], de <b>4</b> impactos.",
+          "english": "Add a free [ephemeral] <b>Magic Missile</b> with <b>4</b> hits to your hand."
+        },
+        "effects": [
+          "@GrimoireMissileEffect2"
+        ]
+      },
+      {
+        "id": "GrimoireCelebrate",
+        "trigger": "on_encounter_complete",
+        "descriptions": {
+          "english": "Gain <b>2</b> [conduit] permanently.",
+          "french": "Gagnez définitivement <b>2</b> [conduit].",
+          "german": "Erhalte dauerhaft <b>2</b> [conduit].",
+          "russian": "Навсегда получите <b>2</b> [conduit].",
+          "portuguese": "Ganhe <b>2</b> [conduit] permanentemente.",
+          "chinese": "永久获得<b>2</b> [conduit]。",
+          "spanish": "Gana <b>2</b> [conduit] permanentemente.",
+          "chinese_traditional": "永久獲得<b>2</b> [conduit]。",
+          "korean": "영구적으로 <b>2</b> [conduit] 획득.",
+          "japanese": "永続的に<b>2</b> [conduit]を得る。"
+        },
+        "effects": [
+          "@GrimoireCelebrateGain"
+        ]
+      },
+      {
+        "id": "GrimoireMissileTurn1",
+        "trigger": "pre_combat",
+        "descriptions": {
+          "korean": "<b>3</b>회 타격하는 무료 [ephemeral] <b>마법 화살</b>을 손에 추가.",
+          "japanese": "<b>3</b>回攻撃する無料の[ephemeral]<b>マジックミサイル</b>を手札に追加。",
+          "chinese": "将一张免费的[ephemeral]<b>魔法飞弹</b>加入手牌，攻击<b>3</b>次。",
+          "german": "Füge deiner Hand ein kostenloses <b>Magisches Geschoss</b> mit [ephemeral] und <b>3</b> Treffern hinzu.",
+          "portuguese": "Adicione à mão <b>Míssil Mágico</b> gratuito com [ephemeral] e <b>3</b> impactos.",
+          "french": "Ajoutez à votre main <b>Projectile magique</b> gratuit avec [ephemeral] et <b>3</b> impacts.",
+          "russian": "Добавьте в руку бесплатную карту <b>Волшебная стрела</b> с [ephemeral] и <b>3</b> попаданиями.",
+          "chinese_traditional": "將一張免費的[ephemeral]<b>魔法飛彈</b>加入手牌，攻擊<b>3</b>次。",
+          "spanish": "Añade a tu mano <b>Proyectil mágico</b> gratis y [ephemeral], de <b>3</b> impactos.",
+          "english": "Add a free [ephemeral] <b>Magic Missile</b> with <b>3</b> hits to your hand."
+        },
+        "effects": [
+          "@GrimoireMissileEffect1"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "GrimoireCelebrateGain3",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_upgrade": "@GrimoireCelebrateUpgrade3",
+        "param_int_3": 2
+      },
+      {
+        "id": "GrimoireMissileEffect3",
+        "name": "CardEffectAddBattleCard",
+        "param_card_pool": "@GrimoireMissilePool3",
+        "param_int": 3,
+        "param_int_2": 1
+      },
+      {
+        "id": "MagicMissileDart1",
+        "applied_vfx": "@CardMagicMissileArcaneVFX",
+        "name": "CardEffectDamage",
+        "target_mode": "random_in_room",
+        "target_team": "heroes",
+        "param_int": 3
+      },
+      {
+        "id": "GrimoireCelebrateGain2",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_upgrade": "@GrimoireCelebrateUpgrade2",
+        "param_int_3": 2
+      },
+      {
+        "id": "GrimoireMissileEffect2",
+        "name": "CardEffectAddBattleCard",
+        "param_card_pool": "@GrimoireMissilePool2",
+        "param_int": 3,
+        "param_int_2": 1
+      },
+      {
+        "id": "GrimoireCelebrateGain",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_upgrade": "@GrimoireCelebrateUpgrade",
+        "param_int_3": 2
+      },
+      {
+        "id": "GrimoireMissileEffect1",
+        "name": "CardEffectAddBattleCard",
+        "param_card_pool": "@GrimoireMissilePool1",
+        "param_int": 3,
+        "param_int_2": 1
+      },
+      {
+        "id": "SpawnVesperEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@Vesper"
+      }
+    ],
+    "card_pools": [
+      {
+        "id": "GrimoireMissilePool3",
+        "cards": [
+          "@GrimoireMagicMissile3"
+        ]
+      },
+      {
+        "id": "GrimoireMissilePool2",
+        "cards": [
+          "@GrimoireMagicMissile2"
+        ]
+      },
+      {
+        "id": "GrimoireMissilePool1",
+        "cards": [
+          "@GrimoireMagicMissile1"
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "id": "GrimoireMagicMissile3",
+        "names": {
+          "english": "Magic Missile",
+          "french": "Projectile magique",
+          "german": "Magisches Geschoss",
+          "russian": "Волшебная стрела",
+          "portuguese": "Míssil Mágico",
+          "chinese": "魔法飞弹",
+          "spanish": "Proyectil mágico",
+          "chinese_traditional": "魔法飛彈",
+          "korean": "마법 화살",
+          "japanese": "マジックミサイル"
+        },
+        "descriptions": {
+          "korean": "무작위 적에게 [effect0.power] 피해를 5회 가함.",
+          "japanese": "ランダムな敵に[effect0.power]ダメージを5回与える。",
+          "chinese": "随机对一个敌人造成[effect0.power]点伤害，重复5次。",
+          "german": "Füge einem zufälligen Gegner 5-mal [effect0.power] Schaden zu.",
+          "portuguese": "Cause [effect0.power] de dano a um inimigo aleatório 5 vezes.",
+          "french": "Inflige [effect0.power] dégâts à un ennemi aléatoire, 5 fois.",
+          "russian": "Нанесите [effect0.power] урона случайному врагу 5 раз.",
+          "chinese_traditional": "隨機對一個敵人造成[effect0.power]點傷害，重複5次。",
+          "spanish": "Inflige [effect0.power] de daño a un enemigo aleatorio 5 veces.",
+          "english": "Deal [effect0.power] damage to a random enemy 5 times."
+        },
+        "card_art": "@MagicMissile",
+        "cost": 0,
+        "card_type": "spell",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@MagicMissileDart1",
+          "@MagicMissileDart1",
+          "@MagicMissileDart1",
+          "@MagicMissileDart1",
+          "@MagicMissileDart1"
+        ],
+        "traits": [
+          "@GrimoireEphemeralTrait"
+        ],
+        "hide_in_logbook": true,
+        "unlock_level": 99
+      },
+      {
+        "id": "GrimoireMagicMissile2",
+        "names": {
+          "english": "Magic Missile",
+          "french": "Projectile magique",
+          "german": "Magisches Geschoss",
+          "russian": "Волшебная стрела",
+          "portuguese": "Míssil Mágico",
+          "chinese": "魔法飞弹",
+          "spanish": "Proyectil mágico",
+          "chinese_traditional": "魔法飛彈",
+          "korean": "마법 화살",
+          "japanese": "マジックミサイル"
+        },
+        "descriptions": {
+          "korean": "무작위 적에게 [effect0.power] 피해를 4회 가함.",
+          "japanese": "ランダムな敵に[effect0.power]ダメージを4回与える。",
+          "chinese": "随机对一个敌人造成[effect0.power]点伤害，重复4次。",
+          "german": "Füge einem zufälligen Gegner 4-mal [effect0.power] Schaden zu.",
+          "portuguese": "Cause [effect0.power] de dano a um inimigo aleatório 4 vezes.",
+          "french": "Inflige [effect0.power] dégâts à un ennemi aléatoire, 4 fois.",
+          "russian": "Нанесите [effect0.power] урона случайному врагу 4 раза.",
+          "chinese_traditional": "隨機對一個敵人造成[effect0.power]點傷害，重複4次。",
+          "spanish": "Inflige [effect0.power] de daño a un enemigo aleatorio 4 veces.",
+          "english": "Deal [effect0.power] damage to a random enemy 4 times."
+        },
+        "card_art": "@MagicMissile",
+        "cost": 0,
+        "card_type": "spell",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@MagicMissileDart1",
+          "@MagicMissileDart1",
+          "@MagicMissileDart1",
+          "@MagicMissileDart1"
+        ],
+        "traits": [
+          "@GrimoireEphemeralTrait"
+        ],
+        "hide_in_logbook": true,
+        "unlock_level": 99
+      },
+      {
+        "id": "GrimoireMagicMissile1",
+        "names": {
+          "english": "Magic Missile",
+          "french": "Projectile magique",
+          "german": "Magisches Geschoss",
+          "russian": "Волшебная стрела",
+          "portuguese": "Míssil Mágico",
+          "chinese": "魔法飞弹",
+          "spanish": "Proyectil mágico",
+          "chinese_traditional": "魔法飛彈",
+          "korean": "마법 화살",
+          "japanese": "マジックミサイル"
+        },
+        "descriptions": {
+          "korean": "무작위 적에게 [effect0.power] 피해를 3회 가함.",
+          "japanese": "ランダムな敵に[effect0.power]ダメージを3回与える。",
+          "chinese": "随机对一个敌人造成[effect0.power]点伤害，重复3次。",
+          "german": "Füge einem zufälligen Gegner 3-mal [effect0.power] Schaden zu.",
+          "portuguese": "Cause [effect0.power] de dano a um inimigo aleatório 3 vezes.",
+          "french": "Inflige [effect0.power] dégâts à un ennemi aléatoire, 3 fois.",
+          "russian": "Нанесите [effect0.power] урона случайному врагу 3 раза.",
+          "chinese_traditional": "隨機對一個敵人造成[effect0.power]點傷害，重複3次。",
+          "spanish": "Inflige [effect0.power] de daño a un enemigo aleatorio 3 veces.",
+          "english": "Deal [effect0.power] damage to a random enemy 3 times."
+        },
+        "card_art": "@MagicMissile",
+        "cost": 0,
+        "card_type": "spell",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@MagicMissileDart1",
+          "@MagicMissileDart1",
+          "@MagicMissileDart1"
+        ],
+        "traits": [
+          "@GrimoireEphemeralTrait"
+        ],
+        "hide_in_logbook": true,
+        "unlock_level": 99
+      },
+      {
+        "id": "SpawnVesper",
+        "names": {
+          "english": "Vesper",
+          "french": "Vesper",
+          "german": "Vesper",
+          "russian": "Vesper",
+          "portuguese": "Vesper",
+          "chinese": "Vesper",
+          "spanish": "Vesper",
+          "chinese_traditional": "Vesper",
+          "korean": "Vesper",
+          "japanese": "Vesper"
+        },
+        "card_art": "@Vesper",
+        "cost": 0,
+        "card_type": "monster",
+        "rarity": "champion",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnVesperEffect"
+        ],
+        "initial_upgrades": [
+          "@upg_Grimoire1"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "GrimoireEphemeralTrait",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "CardMagicMissileArcaneVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "MagicMissile",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@MagicMissile"
+          }
+        }
+      },
+      {
+        "id": "VesperCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@VesperCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0.1535,
+                "y": 0.715,
+                "z": 0
+              },
+              "scale": {
+                "x": 2.14,
+                "y": 2.85,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "Vesper",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Vesper",
+            "animation_clip": {
+              "id": "VesperCardIdle",
+              "sample_rate": 6,
+              "loop_time": "loop",
+              "frames": [
+                "@VesperCardFrame1",
+                "@VesperCardFrame1",
+                "@VesperCardFrame1",
+                "@VesperCardFrame1",
+                "@VesperCardBlend12",
+                "@VesperCardFrame2",
+                "@VesperCardBlend23",
+                "@VesperCardFrame3",
+                "@VesperCardBlend34",
+                "@VesperCardFrame4",
+                "@VesperCardBlend41"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "MagicMissile",
+        "path": "textures/MagicMissileArt.png"
+      },
+      {
+        "id": "VesperCharacterArt",
+        "path": "textures/VesperCharacterArt.png"
+      },
+      {
+        "id": "VesperCardBlend41",
+        "path": "textures/VesperCardBlend41.png"
+      },
+      {
+        "id": "VesperCardFrame4",
+        "path": "textures/VesperCardFrame4.png"
+      },
+      {
+        "id": "VesperCardBlend34",
+        "path": "textures/VesperCardBlend34.png"
+      },
+      {
+        "id": "VesperCardFrame3",
+        "path": "textures/VesperCardFrame3.png"
+      },
+      {
+        "id": "VesperCardBlend23",
+        "path": "textures/VesperCardBlend23.png"
+      },
+      {
+        "id": "VesperCardFrame2",
+        "path": "textures/VesperCardFrame2.png"
+      },
+      {
+        "id": "VesperCardBlend12",
+        "path": "textures/VesperCardBlend12.png"
+      },
+      {
+        "id": "VesperCardFrame1",
+        "path": "textures/VesperCardFrame1.png"
+      },
+      {
+        "id": "Vesper",
+        "path": "textures/VesperCardArt.png"
+      }
+    ],
+    "characters": [
+      {
+        "id": "Vesper",
+        "names": {
+          "english": "Vesper",
+          "french": "Vesper",
+          "german": "Vesper",
+          "russian": "Vesper",
+          "portuguese": "Vesper",
+          "chinese": "Vesper",
+          "spanish": "Vesper",
+          "chinese_traditional": "Vesper",
+          "korean": "Vesper",
+          "japanese": "Vesper"
+        },
+        "character_art": "@VesperCharacterArt",
+        "size": 1,
+        "attack_damage": 5,
+        "health": 22,
+        "death_type": "large",
+        "subtypes": [
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34",
+          "@Sub_Wizard",
+          "@Sub_Goblin"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Wizard",
+        "names": {
+          "english": "Wizard",
+          "french": "Magicien",
+          "german": "Magier",
+          "russian": "Волшебник",
+          "portuguese": "Mago",
+          "chinese": "法师",
+          "spanish": "Mago",
+          "chinese_traditional": "法師",
+          "korean": "마법사",
+          "japanese": "魔術師"
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/champions/champion_vesper_grimoire.json": "36bd076fb3e998cda3496d97d9f4420a7f8189a70123df44f56cc708cffa22fa",
+    "json/cards/card_magic_missile.json": "009df893749283e11a068e96bbcbf45c603e38b07deac535201b080ecd3220f7",
+    "json/champions/champion_vesper.json": "198e2d9d717938a14783ea8d9b9ecba4c5e3bde17b3f7c88f8cd293928271be7",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

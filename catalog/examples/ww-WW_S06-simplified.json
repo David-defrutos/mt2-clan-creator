@@ -1,0 +1,103 @@
+{
+  "id": "ww-WW_S06-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S06/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S06"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Convocatoria Extraordinaria",
+    "english": "Extraordinary Exam Session",
+    "french": "Session d'examens extraordinaire",
+    "german": "Außerordentliche Prüfungsrunde",
+    "portuguese": "Exame Extraordinário",
+    "russian": "Внеочередная экзаменационная сессия",
+    "chinese": "特别考试场次",
+    "chinese_traditional": "特別考試場次",
+    "korean": "특별 시험 기간",
+    "japanese": "臨時試験期間"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/adea17bed201e73b5973a535e86c8880e89990473c81f5b5da8e2d034cdb047a.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S06CardArt.png": "assets/adea17bed201e73b5973a535e86c8880e89990473c81f5b5da8e2d034cdb047a.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S06",
+        "names": {
+          "spanish": "Convocatoria Extraordinaria",
+          "english": "Extraordinary Exam Session",
+          "french": "Session d'examens extraordinaire",
+          "german": "Außerordentliche Prüfungsrunde",
+          "portuguese": "Exame Extraordinário",
+          "russian": "Внеочередная экзаменационная сессия",
+          "chinese": "特别考试场次",
+          "chinese_traditional": "特別考試場次",
+          "korean": "특별 시험 기간",
+          "japanese": "臨時試験期間"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "rare",
+        "targets_room": true,
+        "card_art": "@WW_S06CardArt",
+        "targetless": true,
+        "traits": [
+          "@WW_Consume"
+        ],
+        "hide_in_logbook": true,
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S06CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S06CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S06CardArt",
+        "path": "textures/cards/WW_S06CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S06.json": "92d543e90236ccfd39eedff454579c885872942703c6b2a7b7aab7adad85c397",
+    "content/json/03_common.json": "93d922ea5ee845e8a0ac79dc6480520a849434978141fe1e9353366f1c156353"
+  }
+}

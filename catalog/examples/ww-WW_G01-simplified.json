@@ -1,0 +1,102 @@
+{
+  "id": "ww-WW_G01-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_G01/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_G01"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Training Wand",
+    "spanish": "Varita de Prácticas",
+    "french": "Baguette d’entraînement",
+    "german": "Übungszauberstab",
+    "portuguese": "Varinha de Treino",
+    "russian": "Учебная палочка",
+    "chinese": "练习魔杖",
+    "chinese_traditional": "練習魔杖",
+    "korean": "연습용 지팡이",
+    "japanese": "練習用の杖"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/f60efdd847c596ad155ad1055d901e428f288ede258ee5b51203186f25238f37.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_G01CardArt.png": "assets/f60efdd847c596ad155ad1055d901e428f288ede258ee5b51203186f25238f37.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_G01",
+        "names": {
+          "english": "Training Wand",
+          "spanish": "Varita de Prácticas",
+          "french": "Baguette d’entraînement",
+          "german": "Übungszauberstab",
+          "portuguese": "Varinha de Treino",
+          "russian": "Учебная палочка",
+          "chinese": "练习魔杖",
+          "chinese_traditional": "練習魔杖",
+          "korean": "연습용 지팡이",
+          "japanese": "練習用の杖"
+        },
+        "card_type": "equipment",
+        "cost": 0,
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "card_art": "@WW_G01CardArt",
+        "traits": [
+          "@WW_G01_Grafted"
+        ],
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_G01_Grafted",
+        "name": "CardTraitGraftedEquipment",
+        "trait_is_removable": false
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_G01CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_G01CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_G01CardArt",
+        "path": "textures/cards/WW_G01CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/grafts/WW_G01.json": "11dcc6c629d3ba3c09d7f40d39737f85a2de0511cd1a1aa0ade32ec254c9177b"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "freecompany-VeteransPapers-simplified",
+  "simplified": {
+    "removed": [
+      "relics/VeteransPapers/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "relics",
+    "id": "VeteransPapers"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Veteran's Papers",
+    "french": "Papiers du vétéran",
+    "german": "Veteranenpapiere",
+    "russian": "Документы ветерана",
+    "portuguese": "Documentos do Veterano",
+    "chinese": "老兵证书",
+    "spanish": "Documentos del veterano",
+    "chinese_traditional": "老兵證書",
+    "korean": "고참의 증서",
+    "japanese": "古参兵の証書"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/6930f118f30bf093309802605904d9ac1d78bfe3e5f78923a78ad5c26e202af7.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/VeteransPapersIconSmall.png": "assets/62693af18caf7e468d609e83657fcac487c36e41ff6f4c306a4eddb8a00c1039.png",
+    "textures/VeteransPapersIcon.png": "assets/6930f118f30bf093309802605904d9ac1d78bfe3e5f78923a78ad5c26e202af7.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "VeteransPapers",
+        "type": "collectable",
+        "names": {
+          "english": "Veteran's Papers",
+          "french": "Papiers du vétéran",
+          "german": "Veteranenpapiere",
+          "russian": "Документы ветерана",
+          "portuguese": "Documentos do Veterano",
+          "chinese": "老兵证书",
+          "spanish": "Documentos del veterano",
+          "chinese_traditional": "老兵證書",
+          "korean": "고참의 증서",
+          "japanese": "古参兵の証書"
+        },
+        "icon": "@VeteransPapersIcon",
+        "icon_small": "@VeteransPapersIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "uncommon"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "VeteransPapersIconSmall",
+        "path": "textures/VeteransPapersIconSmall.png"
+      },
+      {
+        "id": "VeteransPapersIcon",
+        "path": "textures/VeteransPapersIcon.png"
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_veterans_papers.json": "47801cce21b04dca4c92388e425910d5f2b8983c98c641fba8dca467e98263f3"
+  }
+}

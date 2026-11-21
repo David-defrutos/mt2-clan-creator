@@ -13,7 +13,7 @@ import {blankCard} from '../src/server/creator/model.ts';
 import {saveDraft,loadDraft,projectFolder,listDrafts} from '../src/server/creator/projects.ts';
 import {installationState,gameContentHash,rememberDestination,recordInstallation,updateProjectState,readProjectState} from '../src/server/creator/project-state.ts';
 import {exportDraftBackup,importDraftBackup} from '../src/server/creator/draft-backup.ts';
-import {stepReviewKey,stepIsReviewed,restoreRemovedCard} from '../src/server/creator/workflow-state.ts';
+import {restoreRemovedCard} from '../src/server/creator/workflow-state.ts';
 import {wizardProgress} from '../src/web/creator/progress.ts';
 import {errorGuidance} from '../src/server/creator/user-errors.ts';
 import {ErrorNotice} from '../src/web/creator/error-notice.tsx';
@@ -36,16 +36,23 @@ test('restoring a removed card preserves later edits and cannot duplicate its id
  const d=await buildQuickDraft('en'),removed=structuredClone(d.cards[0]);d.cards=d.cards.slice(1);d.cards[0].name='Later edit';const restored=restoreRemovedCard(d,removed,0);assert.equal(restored.cards[0].uid,removed.uid);assert.equal(restored.cards[1].name,'Later edit');assert.equal(restoreRemovedCard(restored,removed,0),restored);
 });
 
-test('prepared steps are not personally reviewed; content edits invalidate only affected review marks',async()=>{
- const d=await buildQuickDraft('en'),rules=await creatorRules();d.name='Review';const before=wizardProgress(d,rules.steps);assert.ok(before.flags[1]);assert.ok(!before.reviewedFlags.some(Boolean));d.reviewedSteps={};for(const n of [0,1,10])d.reviewedSteps[rules.steps[n].id]=stepReviewKey(d,rules.steps[n]);assert.equal(stepIsReviewed(d,rules.steps[10]),true);const hash=gameContentHash(d);d.step=16;d.revision++;d.updatedAt=new Date().toISOString();assert.equal(gameContentHash(d),hash);assert.equal(stepIsReviewed(d,rules.steps[10]),true);d.cards[0].attack++;assert.equal(stepIsReviewed(d,rules.steps[10]),false);assert.equal(stepIsReviewed(d,rules.steps[1]),true);assert.notEqual(gameContentHash(d),hash);
+test('step readiness ignores legacy review marks and still tracks incomplete work',async()=>{
+ const d=await buildQuickDraft('en'),rules=await creatorRules();
+ d.name='Progress';
+ const ready=wizardProgress(d,rules.steps);
+ assert.ok(ready.flags[1]);
+ d.reviewedSteps={identity:'0123456789abcdef'};
+ assert.deepEqual(wizardProgress(d,rules.steps),ready);
+ d.name='';
+ assert.equal(wizardProgress(d,rules.steps).flags[0],false);
 });
 
 test('installation records remember destination, ignore navigation, identify pending changes and stay out of portable backups',async t=>{
- let d=await createQuickDraft('en');const ids=[d.id];t.after(async()=>{for(const id of ids)await fs.rm(projectFolder(id),{recursive:true,force:true});});d=await saveDraft({...d,name:'State'});assert.equal((await installationState(d)).status,'never');const folder=path.join(projectFolder(d.id),'Private profile');await Promise.all([rememberDestination(d.id,folder),updateProjectState(d.id,{note:'queued update'})]);assert.equal((await readProjectState(d.id)).note,'queued update');await recordInstallation(d,gameContentHash(d),{target:path.join(folder,'BepInEx/plugins/State')},folder);assert.equal((await installationState(d)).status,'current');d=await saveDraft({...d,step:16,reviewedSteps:{identity:stepReviewKey(d,(await creatorRules()).steps[0])}});assert.equal((await installationState(d)).status,'current');const changed=structuredClone(d);changed.cards[0].attack++;assert.equal((await installationState(changed)).status,'pending');assert.equal((await installationState(d)).folder,folder);const backup=await exportDraftBackup(d.id);assert.ok(!JSON.stringify(backup).includes('Private profile'));const restored=await importDraftBackup(backup);ids.push(restored.id);assert.equal((await installationState(restored)).status,'never');assert.ok((await listDrafts()).find((p:any)=>p.id===restored.id)?.restoredAt);await updateProjectState(d.id,{uninstalledAt:new Date().toISOString()});assert.equal((await installationState(d)).status,'removed');
+ let d=await createQuickDraft('en');const ids=[d.id];t.after(async()=>{for(const id of ids)await fs.rm(projectFolder(id),{recursive:true,force:true});});d=await saveDraft({...d,name:'State'});assert.equal((await installationState(d)).status,'never');const folder=path.join(projectFolder(d.id),'Private profile');await Promise.all([rememberDestination(d.id,folder),updateProjectState(d.id,{note:'queued update'})]);assert.equal((await readProjectState(d.id)).note,'queued update');await recordInstallation(d,gameContentHash(d),{target:path.join(folder,'BepInEx/plugins/State')},folder);assert.equal((await installationState(d)).status,'current');d=await saveDraft({...d,step:16,reviewedSteps:{identity:'0123456789abcdef'}});assert.equal((await installationState(d)).status,'current');const changed=structuredClone(d);changed.cards[0].attack++;assert.equal((await installationState(changed)).status,'pending');assert.equal((await installationState(d)).folder,folder);const backup=await exportDraftBackup(d.id);assert.ok(!JSON.stringify(backup).includes('Private profile'));const restored=await importDraftBackup(backup);ids.push(restored.id);assert.equal((await installationState(restored)).status,'never');assert.ok((await listDrafts()).find((p:any)=>p.id===restored.id)?.restoredAt);await updateProjectState(d.id,{uninstalledAt:new Date().toISOString()});assert.equal((await installationState(d)).status,'removed');
 });
 
-test('grouped effect chooser starts with common effects but search and More effects retain every recipe',async()=>{
- const rules=await creatorRules();for(const language of ['en','es'] as const){const options=effectOptions(rules,language,true);assert.deepEqual(new Set(options.map((o:any)=>o.value)),new Set(rules.recipes.map((r:any)=>r.id)));const common=visibleSearchOptions(options,'',true,false,'damage');assert.ok(common.length<options.length);assert.ok(common.every(o=>o.common));assert.ok(visibleSearchOptions(options,'zeal',true,false,'damage').some(o=>o.value==='status_zeal'));assert.equal(visibleSearchOptions(options,'',true,true).length,options.length);assert.ok(visibleSearchOptions(options,'',true,false,'status_zeal').some(o=>o.value==='status_zeal'));}}
+test('grouped effect chooser starts with common effects but search and More effects retain every compatible recipe',async()=>{
+ const rules=await creatorRules();for(const language of ['en','es'] as const){const options=effectOptions(rules,language,true);assert.deepEqual(new Set(options.map((o:any)=>o.value)),new Set(rules.recipes.filter((r:any)=>!r.castOnly).map((r:any)=>r.id)));const common=visibleSearchOptions(options,'',true,false,'damage');assert.ok(common.length<options.length);assert.ok(common.every(o=>o.common));assert.ok(visibleSearchOptions(options,'zeal',true,false,'damage').some(o=>o.value==='status_zeal'));assert.equal(visibleSearchOptions(options,'',true,true).length,options.length);assert.ok(visibleSearchOptions(options,'',true,false,'status_zeal').some(o=>o.value==='status_zeal'));}}
 );
 
 test('artwork preparation previews crop semantics, transparent padding and preserves complete character silhouettes',async()=>{
@@ -63,3 +70,5 @@ test('HTTP destination and artwork endpoints return useful codes and preserve sa
  const source=await sharp({create:{width:80,height:40,channels:4,background:'#dd3344'}}).png().toBuffer();const image=await fetch(base+'/image',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({base64:source.toString('base64'),framing:{purpose:'icon',mode:'contain'}})});assert.equal(image.status,200);const file=(await image.json()).file;assert.equal((await sharp(await fs.readFile(path.join(projectFolder(d.id),file))).metadata()).width,256);assert.equal((await loadDraft(d.id)).revision,d.revision);
 });
 // 2026-11-16-2333||codex-clan-editor||clan-creator/tests/creator-beginner-workflow.test.ts||Probar reparación concreta errores localizados deshacer independiente revisión personal registros locales grupos e imágenes encuadradas
+// 2026-11-21-1021||codex-clan-editor||clan-creator/tests/creator-beginner-workflow.test.ts||Verificar progreso por contenido y compatibilidad con borradores que conservan marcas antiguas
+// 2026-11-21-1829||codex-clan-editor||clan-creator/tests/creator-beginner-workflow.test.ts||Comprobar que la búsqueda conserva todas las recetas compatibles con el tipo de carta

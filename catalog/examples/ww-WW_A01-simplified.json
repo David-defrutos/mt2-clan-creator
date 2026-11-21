@@ -1,0 +1,89 @@
+{
+  "id": "ww-WW_A01-simplified",
+  "simplified": {
+    "removed": [
+      "relics/WW_A01/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "relics",
+    "id": "WW_A01"
+  },
+  "kind": "artifact",
+  "names": {
+    "spanish": "Cátedra de Fuerza Mágica",
+    "english": "Chair of Magical Strength",
+    "french": "Chaire de force magique",
+    "german": "Lehrstuhl für magische Stärke",
+    "portuguese": "Cátedra de Força Mágica",
+    "russian": "Кафедра магической силы",
+    "chinese": "魔法力量教席",
+    "chinese_traditional": "魔法力量教席",
+    "korean": "마법 힘 석좌",
+    "japanese": "魔力の講座"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/5901fb3390d8f42b553ded94be42f71637b5856651d9f614098181e0aa235ab7.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/relics/WW_A01IconSmall.png": "assets/a6bddf1ac932b0daacb4003983da82ba97958afaa5718a03c4ebf625b31f84eb.png",
+    "textures/relics/WW_A01Icon.png": "assets/5901fb3390d8f42b553ded94be42f71637b5856651d9f614098181e0aa235ab7.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "WW_A01",
+        "type": "collectable",
+        "names": {
+          "spanish": "Cátedra de Fuerza Mágica",
+          "english": "Chair of Magical Strength",
+          "french": "Chaire de force magique",
+          "german": "Lehrstuhl für magische Stärke",
+          "portuguese": "Cátedra de Força Mágica",
+          "russian": "Кафедра магической силы",
+          "chinese": "魔法力量教席",
+          "chinese_traditional": "魔法力量教席",
+          "korean": "마법 힘 석좌",
+          "japanese": "魔力の講座"
+        },
+        "icon": "@WW_A01Icon",
+        "icon_small": "@WW_A01IconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "common"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_A01IconSmall",
+        "path": "textures/relics/WW_A01IconSmall.png"
+      },
+      {
+        "id": "WW_A01Icon",
+        "path": "textures/relics/WW_A01Icon.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/relics/WW_A01.json": "0ca6da0a40ffd583bfa7a47e741e1fe8a22bfc59a83cb0a8d8f958a5a1729e66"
+  }
+}

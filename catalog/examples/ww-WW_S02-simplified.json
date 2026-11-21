@@ -1,0 +1,101 @@
+{
+  "id": "ww-WW_S02-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S02/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S02"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Tesis Encantada",
+    "english": "Enchanted Dissertation",
+    "french": "Thèse enchantée",
+    "german": "Verzauberte Dissertation",
+    "portuguese": "Tese Encantada",
+    "russian": "Зачарованная диссертация",
+    "chinese": "附魔论文",
+    "chinese_traditional": "附魔論文",
+    "korean": "마법 논문",
+    "japanese": "魔法の学位論文"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/a2eb75f77de2f7b128cf812c8c00bde295e88b7673ee268f0913071b691ee202.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S02CardArt.png": "assets/a2eb75f77de2f7b128cf812c8c00bde295e88b7673ee268f0913071b691ee202.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S02",
+        "names": {
+          "spanish": "Tesis Encantada",
+          "english": "Enchanted Dissertation",
+          "french": "Thèse enchantée",
+          "german": "Verzauberte Dissertation",
+          "portuguese": "Tese Encantada",
+          "russian": "Зачарованная диссертация",
+          "chinese": "附魔论文",
+          "chinese_traditional": "附魔論文",
+          "korean": "마법 논문",
+          "japanese": "魔法の学位論文"
+        },
+        "card_type": "spell",
+        "cost": 2,
+        "rarity": "rare",
+        "targets_room": true,
+        "card_art": "@WW_S02CardArt",
+        "targetless": false,
+        "traits": [
+          "@WW_Consume"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S02CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S02CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S02CardArt",
+        "path": "textures/cards/WW_S02CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S02.json": "a5aabf178c155534db8052f75b09990b178acca9988caff038c6b536b2850a0e",
+    "content/json/03_common.json": "93d922ea5ee845e8a0ac79dc6480520a849434978141fe1e9353366f1c156353"
+  }
+}

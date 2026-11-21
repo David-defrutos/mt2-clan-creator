@@ -1,0 +1,127 @@
+{
+  "id": "ww-WW_S08-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S08/traits"
+    ],
+    "needsEffect": false
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S08"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Bibliografía Consumida",
+    "english": "Consumed Bibliography",
+    "french": "Bibliographie consommée",
+    "german": "Verbrauchte Bibliografie",
+    "portuguese": "Bibliografia Consumida",
+    "russian": "Израсходованная библиография",
+    "chinese": "已消耗参考文献",
+    "chinese_traditional": "已消耗參考文獻",
+    "korean": "소모된 참고 문헌",
+    "japanese": "消費済み参考文献"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/4e00cc83288c557ec6eba00bf9b024b3b8c22ba38d20f3874039fe7837f375ac.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S08CardArt.png": "assets/4e00cc83288c557ec6eba00bf9b024b3b8c22ba38d20f3874039fe7837f375ac.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S08",
+        "names": {
+          "spanish": "Bibliografía Consumida",
+          "english": "Consumed Bibliography",
+          "french": "Bibliographie consommée",
+          "german": "Verbrauchte Bibliografie",
+          "portuguese": "Bibliografia Consumida",
+          "russian": "Израсходованная библиография",
+          "chinese": "已消耗参考文献",
+          "chinese_traditional": "已消耗參考文獻",
+          "korean": "소모된 참고 문헌",
+          "japanese": "消費済み参考文献"
+        },
+        "card_type": "spell",
+        "cost": 2,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "effects": [
+          "@WW_S08_Damage"
+        ],
+        "triggers": [
+          "@WW_S08_Kill"
+        ],
+        "card_art": "@WW_S08CardArt",
+        "hide_in_logbook": true,
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S08CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S08CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S08CardArt",
+        "path": "textures/cards/WW_S08CardArt.png"
+      }
+    ],
+    "card_triggers": [
+      {
+        "id": "WW_S08_Kill",
+        "trigger": "on_kill",
+        "effects": [
+          "@WW_S08_Recover"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_S08_Recover",
+        "name": "CardEffectRecursion",
+        "target_mode": "exhaust",
+        "target_team": "none",
+        "target_card_type": "spell",
+        "target_card_selection_mode": "choose_to_hand",
+        "param_int": 1,
+        "should_test": false,
+        "hide_tooltip": true
+      },
+      {
+        "id": "WW_S08_Damage",
+        "name": "CardEffectDamage",
+        "target_mode": "drop_target_character",
+        "target_team": "both",
+        "param_int": 10
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S08.json": "8390798b242330769b95159b4aebca53f6ce5b100d46123fdbf70cdb69405480"
+  }
+}

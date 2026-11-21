@@ -1,0 +1,116 @@
+{
+  "id": "ww-WW_R01-simplified",
+  "simplified": {
+    "removed": [
+      "upgrades/WW_R01_Upgrade/room_modifier_upgrades"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_R01"
+  },
+  "kind": "room",
+  "names": {
+    "spanish": "Strictly Platonic",
+    "english": "Strictly Platonic",
+    "french": "Strictement platonique",
+    "german": "Streng platonisch",
+    "portuguese": "Estritamente Platônico",
+    "russian": "Строго платонически",
+    "chinese": "纯粹柏拉图式",
+    "chinese_traditional": "純粹柏拉圖式",
+    "korean": "엄격한 플라토닉",
+    "japanese": "厳密にプラトニック"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/2a6674ea7e82894cebeffc753fb34494300ad4789251ebf8df785c4f81a381c9.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ui/WW_R01Icon.png": "assets/5874fe9c3b45a74ac2b0192c53a3c798de701f9811330b3c9933b4a9c56e09ab.png",
+    "textures/cards/WW_R01CardArt.png": "assets/2a6674ea7e82894cebeffc753fb34494300ad4789251ebf8df785c4f81a381c9.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_R01",
+        "names": {
+          "spanish": "Strictly Platonic",
+          "english": "Strictly Platonic",
+          "french": "Strictement platonique",
+          "german": "Streng platonisch",
+          "portuguese": "Estritamente Platônico",
+          "russian": "Строго платонически",
+          "chinese": "纯粹柏拉图式",
+          "chinese_traditional": "純粹柏拉圖式",
+          "korean": "엄격한 플라토닉",
+          "japanese": "厳密にプラトニック"
+        },
+        "card_type": "room",
+        "cost": 1,
+        "rarity": "rare",
+        "targets_room": true,
+        "card_art": "@WW_R01CardArt",
+        "targetless": true,
+        "effects": [
+          "@WW_R01_Attach"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_R01_Attach",
+        "name": "CardEffectAttachTrainRoomAttachment",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_upgrade": "@WW_R01_Upgrade"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WW_R01_Upgrade",
+        "hide_icon_on_card": true,
+        "icon": "@WW_R01Icon"
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_R01Icon",
+        "path": "textures/ui/WW_R01Icon.png"
+      },
+      {
+        "id": "WW_R01CardArt",
+        "path": "textures/cards/WW_R01CardArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_R01CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_R01CardArt"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_R01.json": "115c874c672b0af83d77eaea847b87da33ef3ce88dee6ae9dc0b870a4e82e51b",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

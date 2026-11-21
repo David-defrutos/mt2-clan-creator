@@ -1,0 +1,127 @@
+{
+  "id": "succclan-PowerSiphon-simplified",
+  "simplified": {
+    "removed": [
+      "cards/PowerSiphon/traits",
+      "cards/PowerSiphon/effects"
+    ],
+    "needsEffect": false
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "PowerSiphon"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Power Siphon",
+    "chinese": "力量虹吸",
+    "spanish": "Sifón de poder",
+    "french": "Siphon de puissance",
+    "german": "Kraftentzug",
+    "portuguese": "Sifão de Poder",
+    "russian": "Поглощение силы",
+    "chinese_traditional": "力量虹吸",
+    "japanese": "力の吸収",
+    "korean": "힘 흡수"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/3f856dba2ceed736e77be0a2b4bfc4d0035a7f5ac4e9635ebc6e875881d221ae.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/PowerSiphonArt.png": "assets/3f856dba2ceed736e77be0a2b4bfc4d0035a7f5ac4e9635ebc6e875881d221ae.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "PowerSiphon",
+        "names": {
+          "english": "Power Siphon",
+          "chinese": "力量虹吸",
+          "spanish": "Sifón de poder",
+          "french": "Siphon de puissance",
+          "german": "Kraftentzug",
+          "portuguese": "Sifão de Poder",
+          "russian": "Поглощение силы",
+          "chinese_traditional": "力量虹吸",
+          "japanese": "力の吸収",
+          "korean": "힘 흡수"
+        },
+        "card_type": "spell",
+        "rarity": "uncommon",
+        "card_art": "@PowerSiphonArt",
+        "cost": 1,
+        "targets_room": true,
+        "targetless": true,
+        "traits": [
+          "@Attuned"
+        ],
+        "effects": [
+          "@PowerSiphonDamage"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "PowerSiphonDamage",
+        "applied_vfx": "@SuccFXArcaneImpact",
+        "name": "CardEffectDamage",
+        "target_mode": "front_in_room",
+        "target_team": "heroes",
+        "param_int": 0
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXArcaneImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "Attuned",
+        "name": "CardTraitStrongerMagicPower",
+        "param_int": 5
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "PowerSiphonArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@PowerSiphonArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "PowerSiphonArt",
+        "path": "textures/PowerSiphonArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_PowerSiphon.json": "10a9112aadb044424517451e7a482a5252aca7f5e9253a30910112bd3f7a276b",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d"
+  }
+}

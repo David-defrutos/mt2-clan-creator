@@ -1,0 +1,378 @@
+{
+  "id": "ww-WW_C02-clan-path-2-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_C02_Character/triggers",
+      "characters/WW_C02_Character/starting_status_effects",
+      "upgrades/WW_PublishOrIncant1/trigger_upgrades",
+      "upgrades/WW_PublishOrIncant2/trigger_upgrades",
+      "upgrades/WW_PublishOrIncant3/trigger_upgrades"
+    ],
+    "path": true
+  },
+  "championPath": {
+    "baseId": "ww-WW_C02-simplified",
+    "path": 2,
+    "level": 1,
+    "names": {
+      "spanish": "Brujería Avanzada I",
+      "english": "Advanced Spellwork I",
+      "french": "Magie avancée I",
+      "german": "Fortgeschrittene Zauberkunst I",
+      "portuguese": "Feitiçaria Avançada I",
+      "russian": "Высшая магия I",
+      "chinese": "高等施法 I",
+      "chinese_traditional": "高等施法 I",
+      "korean": "고급 주문술 I",
+      "japanese": "上級呪文学 I"
+    },
+    "upgradeId": "WW_PublishOrIncant1",
+    "localUpgradeId": "WW_PublishOrIncant1",
+    "upgrade": {
+      "id": "WW_PublishOrIncant1",
+      "titles": {
+        "spanish": "Brujería Avanzada I",
+        "english": "Advanced Spellwork I",
+        "french": "Magie avancée I",
+        "german": "Fortgeschrittene Zauberkunst I",
+        "portuguese": "Feitiçaria Avançada I",
+        "russian": "Высшая магия I",
+        "chinese": "高等施法 I",
+        "chinese_traditional": "高等施法 I",
+        "korean": "고급 주문술 I",
+        "japanese": "上級呪文学 I"
+      },
+      "bonus_damage": 0,
+      "bonus_hp": 5,
+      "does_not_replace_ability": true,
+      "trigger_upgrades": [
+        "@WW_PublishOrIncant1_IncantTrigger"
+      ]
+    },
+    "levels": [
+      {
+        "upgradeId": "WW_PublishOrIncant1",
+        "ref": "@WW_PublishOrIncant1"
+      },
+      {
+        "upgradeId": "WW_PublishOrIncant2",
+        "ref": "@WW_PublishOrIncant2"
+      },
+      {
+        "upgradeId": "WW_PublishOrIncant3",
+        "ref": "@WW_PublishOrIncant3"
+      }
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_C02"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Catedrática de Brujería Avanzada · Brujería Avanzada I · I",
+    "english": "Professor of Advanced Witchcraft · Advanced Spellwork I · I",
+    "french": "Professeure de sorcellerie avancée · Magie avancée I · I",
+    "german": "Professorin für höhere Hexenkunst · Fortgeschrittene Zauberkunst I · I",
+    "portuguese": "Professora de Bruxaria Avançada · Feitiçaria Avançada I · I",
+    "russian": "Профессор высшего колдовства · Высшая магия I · I",
+    "chinese": "高等巫术教授 · 高等施法 I · I",
+    "chinese_traditional": "高等巫術教授 · 高等施法 I · I",
+    "korean": "고급 마녀술 교수 · 고급 주문술 I · I",
+    "japanese": "上級魔女術教授 · 上級呪文学 I · I"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 20,
+  "attack": 10,
+  "size": 2,
+  "picture": "assets/ae3dac4246098e0e0437b2ffde86b3daebb48b6b12889ecb1749cc39a3100dfc.png",
+  "characterPicture": "assets/f3d99cbc22654112c12ef23ae96bc01327bb7be471dd64d0638ae3e039124e21.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/WW_C02CharacterArt.png": "assets/f3d99cbc22654112c12ef23ae96bc01327bb7be471dd64d0638ae3e039124e21.png",
+    "textures/cards/WW_C02CardArt.png": "assets/ae3dac4246098e0e0437b2ffde86b3daebb48b6b12889ecb1749cc39a3100dfc.png"
+  },
+  "document": {
+    "upgrades": [
+      {
+        "id": "WW_PublishOrIncant3",
+        "titles": {
+          "spanish": "Brujería Avanzada III",
+          "english": "Advanced Spellwork III",
+          "french": "Magie avancée III",
+          "german": "Fortgeschrittene Zauberkunst III",
+          "portuguese": "Feitiçaria Avançada III",
+          "russian": "Высшая магия III",
+          "chinese": "高等施法 III",
+          "chinese_traditional": "高等施法 III",
+          "korean": "고급 주문술 III",
+          "japanese": "上級呪文学 III"
+        },
+        "bonus_damage": 10,
+        "bonus_hp": 20,
+        "does_not_replace_ability": true,
+        "trigger_upgrades": [
+          "@WW_PublishOrIncant3_IncantTrigger"
+        ]
+      },
+      {
+        "id": "WW_PublishOrIncant2",
+        "titles": {
+          "spanish": "Brujería Avanzada II",
+          "english": "Advanced Spellwork II",
+          "french": "Magie avancée II",
+          "german": "Fortgeschrittene Zauberkunst II",
+          "portuguese": "Feitiçaria Avançada II",
+          "russian": "Высшая магия II",
+          "chinese": "高等施法 II",
+          "chinese_traditional": "高等施法 II",
+          "korean": "고급 주문술 II",
+          "japanese": "上級呪文学 II"
+        },
+        "bonus_damage": 6,
+        "bonus_hp": 10,
+        "does_not_replace_ability": true,
+        "trigger_upgrades": [
+          "@WW_PublishOrIncant2_IncantTrigger"
+        ]
+      },
+      {
+        "id": "WW_PublishOrIncant1",
+        "titles": {
+          "spanish": "Brujería Avanzada I",
+          "english": "Advanced Spellwork I",
+          "french": "Magie avancée I",
+          "german": "Fortgeschrittene Zauberkunst I",
+          "portuguese": "Feitiçaria Avançada I",
+          "russian": "Высшая магия I",
+          "chinese": "高等施法 I",
+          "chinese_traditional": "高等施法 I",
+          "korean": "고급 주문술 I",
+          "japanese": "上級呪文学 I"
+        },
+        "bonus_damage": 0,
+        "bonus_hp": 5,
+        "does_not_replace_ability": true,
+        "trigger_upgrades": [
+          "@WW_PublishOrIncant1_IncantTrigger"
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "WW_PublishOrIncant3_IncantTrigger",
+        "trigger": "card_spell_played",
+        "effects": [
+          "@WW_PublishOrIncant3_IncantEffect"
+        ],
+        "descriptions": {
+          "spanish": "+20 [attack].",
+          "english": "+20 [attack].",
+          "french": "+20 [attack].",
+          "german": "+20 [attack].",
+          "portuguese": "+20 [attack].",
+          "russian": "+20 [attack].",
+          "chinese": "+20 [attack].",
+          "chinese_traditional": "+20 [attack].",
+          "korean": "+20 [attack].",
+          "japanese": "+20 [attack]."
+        }
+      },
+      {
+        "id": "WW_PublishOrIncant2_IncantTrigger",
+        "trigger": "card_spell_played",
+        "effects": [
+          "@WW_PublishOrIncant2_IncantEffect"
+        ],
+        "descriptions": {
+          "spanish": "+10 [attack].",
+          "english": "+10 [attack].",
+          "french": "+10 [attack].",
+          "german": "+10 [attack].",
+          "portuguese": "+10 [attack].",
+          "russian": "+10 [attack].",
+          "chinese": "+10 [attack].",
+          "chinese_traditional": "+10 [attack].",
+          "korean": "+10 [attack].",
+          "japanese": "+10 [attack]."
+        }
+      },
+      {
+        "id": "WW_PublishOrIncant1_IncantTrigger",
+        "trigger": "card_spell_played",
+        "effects": [
+          "@WW_PublishOrIncant1_IncantEffect"
+        ],
+        "descriptions": {
+          "spanish": "+5 [attack].",
+          "english": "+5 [attack].",
+          "french": "+5 [attack].",
+          "german": "+5 [attack].",
+          "portuguese": "+5 [attack].",
+          "russian": "+5 [attack].",
+          "chinese": "+5 [attack].",
+          "chinese_traditional": "+5 [attack].",
+          "korean": "+5 [attack].",
+          "japanese": "+5 [attack]."
+        }
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_PublishOrIncant3_IncantEffect",
+        "name": "CardEffectBuffDamage",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 20
+      },
+      {
+        "id": "WW_PublishOrIncant2_IncantEffect",
+        "name": "CardEffectBuffDamage",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 10
+      },
+      {
+        "id": "WW_PublishOrIncant1_IncantEffect",
+        "name": "CardEffectBuffDamage",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 5
+      },
+      {
+        "id": "WW_C02_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_C02_Character"
+      }
+    ],
+    "cards": [
+      {
+        "id": "WW_C02",
+        "names": {
+          "spanish": "Catedrática de Brujería Avanzada",
+          "english": "Professor of Advanced Witchcraft",
+          "french": "Professeure de sorcellerie avancée",
+          "german": "Professorin für höhere Hexenkunst",
+          "portuguese": "Professora de Bruxaria Avançada",
+          "russian": "Профессор высшего колдовства",
+          "chinese": "高等巫术教授",
+          "chinese_traditional": "高等巫術教授",
+          "korean": "고급 마녀술 교수",
+          "japanese": "上級魔女術教授"
+        },
+        "card_type": "monster",
+        "cost": 0,
+        "rarity": "champion",
+        "targets_room": true,
+        "card_art": "@WW_C02CardArt",
+        "effects": [
+          "@WW_C02_Spawn"
+        ],
+        "initial_upgrades": [
+          "@WW_PublishOrIncant1"
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_C02_Character",
+        "names": {
+          "spanish": "Catedrática de Brujería Avanzada",
+          "english": "Professor of Advanced Witchcraft",
+          "french": "Professeure de sorcellerie avancée",
+          "german": "Professorin für höhere Hexenkunst",
+          "portuguese": "Professora de Bruxaria Avançada",
+          "russian": "Профессор высшего колдовства",
+          "chinese": "高等巫术教授",
+          "chinese_traditional": "高等巫術教授",
+          "korean": "고급 마녀술 교수",
+          "japanese": "上級魔女術教授"
+        },
+        "character_art": "@WW_C02CharacterArt",
+        "size": 2,
+        "health": 20,
+        "attack_damage": 10,
+        "subtypes": [
+          "@WW_Witch",
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Witch",
+        "names": {
+          "english": "Witch",
+          "spanish": "Bruja",
+          "french": "Sorcière",
+          "german": "Hexe",
+          "portuguese": "Bruxa",
+          "russian": "Ведьма",
+          "chinese": "女巫",
+          "chinese_traditional": "女巫",
+          "korean": "마녀",
+          "japanese": "魔女"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_C02CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_C02CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.05,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WW_C02CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_C02CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_C02CharacterArt",
+        "path": "textures/WW_C02CharacterArt.png"
+      },
+      {
+        "id": "WW_C02CardArt",
+        "path": "textures/cards/WW_C02CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/02_witch_incant_paths.json": "3ecb98664db1e695e3795d3f907e71fae2951ef1ea782597f7542d067a7d13af",
+    "content/json/cards/WW_C02.json": "f835fd60b5bc1de1c2efe41b2dd0656a9b5e7253fba484ea03e3adca30043470",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

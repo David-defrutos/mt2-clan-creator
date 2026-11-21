@@ -1,5 +1,536 @@
 {
   "schemaVersion": 1,
+  "mechanicGuide": {
+    "title": {
+      "en": "Help",
+      "es": "Ayuda"
+    },
+    "fieldLink": {
+      "en": "View guide",
+      "es": "Ver guía"
+    },
+    "openTopic": {
+      "en": "Help with {topic}",
+      "es": "Ayuda sobre {topic}"
+    },
+    "close": {
+      "en": "Back to the creator",
+      "es": "Volver al creador"
+    },
+    "returnToField": {
+      "en": "Back to editing",
+      "es": "Volver a la edición"
+    },
+    "navigation": {
+      "en": "Help topics",
+      "es": "Temas de ayuda"
+    },
+    "search": {
+      "en": "Search this guide",
+      "es": "Buscar en esta guía"
+    },
+    "clear": {
+      "en": "Clear filters",
+      "es": "Limpiar filtros"
+    },
+    "all": {
+      "en": "All",
+      "es": "Todas las opciones"
+    },
+    "results": {
+      "en": "{count} results",
+      "es": "{count} resultados"
+    },
+    "oneResult": {
+      "en": "1 result",
+      "es": "1 resultado"
+    },
+    "empty": {
+      "en": "No results match these filters.",
+      "es": "No hay resultados con estos filtros."
+    },
+    "available": {
+      "en": "Only options available here",
+      "es": "Solo opciones disponibles aquí"
+    },
+    "current": {
+      "en": "Current choice",
+      "es": "Opción actual"
+    },
+    "viewAll": {
+      "en": "Show the full guide",
+      "es": "Ver toda la guía"
+    },
+    "catalogNotice": {
+      "en": "Copied rules have their own controls. Check the fields shown on the example to see what you can change.",
+      "es": "Las reglas copiadas tienen sus propios controles. Consulta los campos del ejemplo para saber qué puedes cambiar."
+    },
+    "pages": {
+      "effects": {
+        "title": {
+          "en": "What it does",
+          "es": "Qué hace"
+        },
+        "intro": {
+          "en": "Compare actions by purpose, card type and target. Search for a name or what you want the effect to do.",
+          "es": "Compara acciones por finalidad, tipo de carta y destinatario. Busca por nombre o por lo que quieres que haga el efecto."
+        }
+      },
+      "timings": {
+        "title": {
+          "en": "When it happens",
+          "es": "Cuándo ocurre"
+        },
+        "intro": {
+          "en": "Choose the event that starts the effect. For example, Summon waits for the unit to enter, and Slay waits for it to defeat something.",
+          "es": "Elige el evento que inicia el efecto. Por ejemplo, Invocación espera a que entre la unidad y Matanza, a que derrote a otra."
+        }
+      },
+      "targets": {
+        "title": {
+          "en": "Who it affects",
+          "es": "A quién afecta"
+        },
+        "intro": {
+          "en": "Choose who receives the effect and how far it reaches. The same choice can work differently on a spell and on a unit.",
+          "es": "Elige quién recibe el efecto y hasta dónde llega. Una misma opción puede funcionar de forma distinta en un hechizo y en una unidad."
+        }
+      },
+      "abilities": {
+        "title": {
+          "en": "Unit abilities",
+          "es": "Capacidades de unidad"
+        },
+        "intro": {
+          "en": "Compare the starting abilities a unit can have and the abilities equipment can grant to its wearer.",
+          "es": "Compara las capacidades iniciales de una unidad y las que el equipo puede conceder a su portador."
+        }
+      },
+      "properties": {
+        "title": {
+          "en": "Card properties",
+          "es": "Propiedades de carta"
+        },
+        "intro": {
+          "en": "Look up rules that change how the card itself is played, drawn or discarded.",
+          "es": "Consulta reglas que cambian cómo se juega, roba o descarta la propia carta."
+        }
+      },
+      "duration": {
+        "title": {
+          "en": "Duration",
+          "es": "Duración"
+        },
+        "intro": {
+          "en": "Check how long a change lasts when the chosen effect gives you a duration option.",
+          "es": "Consulta cuánto dura un cambio cuando el efecto elegido te permite seleccionar la duración."
+        }
+      }
+    },
+    "facets": {
+      "category": {
+        "en": "Category",
+        "es": "Categoría"
+      },
+      "context": {
+        "en": "Card type",
+        "es": "Tipo de carta"
+      },
+      "scope": {
+        "en": "Scope",
+        "es": "Alcance"
+      },
+      "team": {
+        "en": "Who receives it",
+        "es": "Quién lo recibe"
+      },
+      "duration": {
+        "en": "Duration",
+        "es": "Duración"
+      },
+      "source": {
+        "en": "Available as",
+        "es": "Disponible como"
+      },
+      "amount": {
+        "en": "Amount",
+        "es": "Cantidad"
+      }
+    },
+    "labels": {
+      "spell": {
+        "en": "Spell",
+        "es": "Hechizo"
+      },
+      "unit": {
+        "en": "Unit or path",
+        "es": "Unidad o senda"
+      },
+      "equipment": {
+        "en": "Equipment",
+        "es": "Equipo"
+      },
+      "artifact": {
+        "en": "Artifact",
+        "es": "Artefacto"
+      },
+      "room": {
+        "en": "Room",
+        "es": "Sala"
+      },
+      "blight": {
+        "en": "Blight",
+        "es": "Plaga"
+      },
+      "junk": {
+        "en": "Junk",
+        "es": "Basura"
+      },
+      "passive": {
+        "en": "Passive rules",
+        "es": "Reglas pasivas"
+      },
+      "native": {
+        "en": "Native effects",
+        "es": "Efectos nativos"
+      },
+      "ready": {
+        "en": "Choose in the editor",
+        "es": "Elegir en el editor"
+      },
+      "copied": {
+        "en": "In copied examples",
+        "es": "En ejemplos copiados"
+      },
+      "other": {
+        "en": "Other",
+        "es": "Otros"
+      },
+      "units": {
+        "en": "Affects units",
+        "es": "Afecta a unidades"
+      },
+      "noTarget": {
+        "en": "No unit target",
+        "es": "Sin destinatario de unidad"
+      },
+      "automatic": {
+        "en": "Automatic",
+        "es": "Automática"
+      },
+      "cardEvent": {
+        "en": "Playing or using cards",
+        "es": "Jugar o usar cartas"
+      },
+      "combatEvent": {
+        "en": "Combat and turns",
+        "es": "Combate y turnos"
+      },
+      "unitEvent": {
+        "en": "Unit events",
+        "es": "Eventos de unidad"
+      },
+      "otherEvent": {
+        "en": "Other events",
+        "es": "Otros eventos"
+      },
+      "single": {
+        "en": "One unit",
+        "es": "Una unidad"
+      },
+      "floor": {
+        "en": "One floor",
+        "es": "Un piso"
+      },
+      "train": {
+        "en": "All floors",
+        "es": "Todos los pisos"
+      },
+      "allied": {
+        "en": "Allies",
+        "es": "Aliados"
+      },
+      "enemy": {
+        "en": "Enemies",
+        "es": "Enemigos"
+      },
+      "both": {
+        "en": "Both teams",
+        "es": "Ambos equipos"
+      },
+      "selected": {
+        "en": "Chosen unit",
+        "es": "Unidad elegida"
+      },
+      "withAmount": {
+        "en": "With an amount",
+        "es": "Con cantidad"
+      },
+      "fixed": {
+        "en": "Without an amount",
+        "es": "Sin cantidad"
+      },
+      "game": {
+        "en": "Game",
+        "es": "Juego"
+      }
+    },
+    "targetText": {
+      "spellFriendly": {
+        "en": "Choose a friendly unit when you play the spell.",
+        "es": "Elige una unidad aliada al jugar el hechizo."
+      },
+      "spellEnemy": {
+        "en": "Choose an enemy unit when you play the spell.",
+        "es": "Elige una unidad enemiga al jugar el hechizo."
+      },
+      "unitFriendly": {
+        "en": "Applies to the unit that owns the effect.",
+        "es": "Se aplica a la unidad que tiene el efecto."
+      },
+      "unitEnemy": {
+        "en": "Applies to the first enemy on that floor.",
+        "es": "Se aplica a la primera unidad enemiga de ese piso."
+      },
+      "equipped": {
+        "en": "Applies to the unit wearing the equipment.",
+        "es": "Se aplica a la unidad que lleva el equipo."
+      },
+      "floor": {
+        "en": "Applies to every matching unit on the relevant floor.",
+        "es": "Se aplica a todas las unidades indicadas del piso que corresponda."
+      },
+      "train": {
+        "en": "Applies to every matching unit across the train.",
+        "es": "Se aplica a todas las unidades indicadas de todos los pisos."
+      }
+    },
+    "durationText": {
+      "combat": {
+        "en": "The change ends when the current combat ends. Individual statuses may expire or lose stacks earlier according to their rules.",
+        "es": "El cambio termina al acabar el combate. Algunos estados pueden caducar o perder acumulaciones antes según sus reglas."
+      },
+      "run": {
+        "en": "The eligible upgrade stays on a friendly unit between battles. The editor offers this duration only for effects that support it.",
+        "es": "La mejora compatible permanece en una unidad aliada entre combates. El editor solo ofrece esta duración en los efectos que la admiten."
+      }
+    },
+    "nativeEffects": {
+      "CardEffectUnitAbilityTeleport": {"en":"The unit moves to the position you select. The ability’s settings determine which floors are available.","es":"La unidad se mueve a la posición que elijas. Los ajustes de la habilidad determinan qué pisos puedes seleccionar."},
+      "CardEffectDamagePerSourceAttack": {"en":"The amount of damage depends on the source’s attack.","es":"La cantidad de daño depende del ataque de quien lo causa."},
+      "CardEffectAddBattleCard": {"en":"Adds new copies of cards during the current battle. The copied effect defines the cards, how many are added and the destination pile.","es":"Añade copias de cartas durante el combate actual. El efecto copiado indica qué cartas, cuántas y a qué pila van."},
+      "CardEffectAddRunCard": {"en":"Adds a card to the run deck. The original effect determines which card is added.","es":"Añade una carta al mazo de la partida. El efecto original determina qué carta se añade."},
+      "CardEffectDrawType": {"en":"Draws cards of the specified type or matching the original filter.","es":"Roba cartas del tipo indicado o que cumplen el filtro original."},
+      "CardEffectAddTempCardUpgradeToNextDrawnCard": {"en":"Applies the copied upgrade to the next card drawn. A later draw effect can trigger it immediately.","es":"Aplica la mejora copiada a la próxima carta que robes. Otro efecto de robo puede activarla en el mismo momento."},
+      "CardEffectAddTempCardUpgradeToUnits": {"en":"Applies an upgrade to the selected units for the current battle. The copied upgrade supplies its stats and abilities.","es":"Aplica una mejora a las unidades indicadas durante el combate actual. La mejora copiada contiene las estadísticas y capacidades."},
+      "CardEffectRecursion": {"en":"Returns eligible cards from their previous pile. The copied rule determines which cards qualify and whether they are chosen or random.","es":"Recupera cartas de una pila anterior. La regla copiada determina qué cartas admite y si se eligen o salen al azar."},
+      "CardEffectDrawAdditionalNextTurn": {"en":"Increases your draw on the next turn. The effect’s amount controls the extra cards in the fixed-count version.","es":"Aumenta el robo del próximo turno. En la versión de cantidad fija, ese valor determina cuántas cartas adicionales robas."},
+      "CardEffectAdjustCorruption": {"en":"Adds or removes Corruption. The original effect determines the direction. In this effect, −1 fills or clears the floor’s Corruption.","es":"Añade o retira Corrupción. El efecto original determina el sentido. En este efecto, −1 llena o vacía toda la Corrupción del piso."},
+      "CardEffectBump": {"en":"Moves a unit between floors. A positive value moves up and a negative value moves down.","es":"Mueve una unidad entre pisos. Un valor positivo la sube y uno negativo la baja."},
+      "CardEffectFloorRearrange": {"en":"Changes a unit’s position within its floor, toward the front with Advance or toward the back with Retreat.","es":"Cambia la posición de una unidad en su piso, hacia delante con Avanzar o hacia atrás con Retroceder."},
+      "RoomStateRecastSpellModifier": {"en":"Recasts the last spell on this floor at the activation set by the room rule.","es":"Vuelve a lanzar el último hechizo del piso en el momento que indique la regla de la sala."},
+      "RelicEffectModifyTriggerCount": {"en":"Changes how many times a trigger runs. The copied artifact determines which triggers it changes.","es":"Cambia cuántas veces se ejecuta una activación. El artefacto copiado determina a cuáles afecta."},
+      "RelicEffectModifyStatusMagnitude": {"en":"Changes how many stacks the original rule adds or removes for the specified status.","es":"Modifica cuántas acumulaciones añade o retira la regla original para el estado indicado."}
+    },
+    "timingText": {
+      "room:RoomStateAddEffectPreCombatModifier": {"en":"Runs on this floor just before its combat phase, before units start their attacks.","es":"Se activa en este piso justo antes de su fase de combate, antes de que ataquen las unidades. Este momento corresponde al combate del piso."},
+      "room:RoomStateAddEffectPostCombatModifier": {"en":"Runs on this floor after its combat phase has resolved. In a mixed sequence of floors, it happens after this floor is finished fighting.","es":"Se activa en este piso tras resolverse su fase de combate. El momento depende de cuándo termina el combate de este piso."},
+      "unit:end_turn_pre_hand_discard": {"en":"Runs once at the end of your turn while your remaining cards are still in hand, before the normal discard.","es":"Se activa una vez al final de tu turno, mientras aún tienes las cartas en la mano, antes del descarte habitual."},
+      "unit:on_pre_own_ability_activated": {"en":"Runs just before this unit’s activated ability resolves, once per use.","es":"Se activa justo antes de que se resuelva la habilidad activada de esta unidad, una vez por uso."},
+      "unit:on_attacking_before_damage": {"en":"Runs for each qualifying attack hit before it deals damage, including each hit of Multistrike. Use it when the effect should influence the hit itself.","es":"Se activa antes de aplicar el daño de cada golpe de ataque válido, incluidos los golpes de Multimpacto. Sirve para efectos que deben influir en ese mismo golpe."},
+      "unit:on_heal": {"en":"Runs after the unit receives an eligible healing effect, once per heal rather than once per point restored. It can trigger at full health.","es":"Se activa después de que la unidad reciba un efecto de curación válido, una vez por curación y no por punto recuperado. Puede activarse aunque tenga toda su salud."},
+      "unit:on_moon_lit": {"en":"Runs when this floor enters Moonlit. Remaining in Moonlit does not trigger it again.","es":"Se activa cuando este piso entra en fase iluminada. Permanecer en ella no vuelve a activarla."},
+      "unit:on_moonlit_lost": {"en":"Runs when this floor leaves Moonlit. It can run again after a later return to and departure from that phase.","es":"Se activa cuando este piso sale de la fase iluminada. Puede volver a activarse si el piso entra y sale de esa fase otra vez."},
+      "unit:on_moon_shade": {"en":"Runs when this floor enters Moonshade. Remaining in Moonshade does not trigger it again.","es":"Se activa cuando este piso entra en fase sombría. Permanecer en ella no vuelve a activarla."},
+      "unit:on_moonshade_lost": {"en":"Runs when this floor leaves Moonshade. It can run again after a later return to and departure from that phase.","es":"Se activa cuando este piso sale de la fase sombría. Puede volver a activarse si el piso entra y sale de esa fase otra vez."},
+      "unit:on_silence_lost": {"en":"Runs when Silence is fully removed from this unit. A later application of Silence can trigger the rule again when it ends.","es":"Se activa cuando esta unidad pierde por completo Silencio. Si vuelve a recibir Silencio, la regla puede activarse al perderlo de nuevo."},
+      "unit:on_food_spawn": {"en":"Runs when a Morsel is summoned on this unit’s floor. Each Morsel can trigger it, including several on the same turn.","es":"Se activa al invocar un Bocado en el piso de esta unidad. Cada Bocado puede activarla, incluso si invocas varios en el mismo turno."},
+      "unit:card_exhausted": {"en":"Runs when a card is Consumed. Each card Consumed can trigger it separately.","es":"Se activa cuando se consume una carta. Cada carta consumida puede activarla por separado."},
+      "unit:on_remove_hatch": {"en":"Runs at the floor’s shell-removal step, when an Egg normally loses a Shell stack. Choose When hatched for the event that happens when the Egg actually hatches.","es":"Se activa en el paso del piso en el que los Huevos suelen perder una carga de caparazón. Elige Al eclosionar si quieres que se active cuando el Huevo se abra."},
+      "unit:on_equipment_added_to_any": {"en":"Runs each time a unit on this floor receives equipment, including an enemy on that floor or the unit with this rule.","es":"Se activa cada vez que se equipa una unidad de este piso, incluidos un enemigo del piso o la propia unidad que tiene la regla."},
+      "unit:card_monster_played": {"en":"Runs when a unit card is played on this floor. Some copy effects also fire this event. Use Summon for an effect when this particular unit appears.","es":"Se activa al jugar una carta de unidad en este piso. Algunos efectos que crean copias también la activan. Elige Invocación si quieres que se active al aparecer esta unidad concreta."},
+      "unit:on_any_hero_death_on_floor": {"en":"Runs for each enemy that dies on this unit’s floor, regardless of who dealt the killing blow.","es":"Se activa por cada enemigo que muere en el piso de esta unidad, sin importar quién lo haya matado."},
+      "unit:on_armor_added": {"en":"Runs when an effect adds Armor to this unit. Adding several stacks at once counts as one application.","es":"Se activa cuando un efecto añade armadura a esta unidad. Añadir varias acumulaciones de golpe cuenta como una sola aplicación."},
+      "unit:on_attacking": {"en":"Runs after damage from each qualifying attack hit is applied. A unit with Multistrike can trigger it more than once per attack sequence.","es":"Se activa después de aplicar el daño de cada golpe de ataque válido. Una unidad con Multimpacto puede activarla más de una vez en la misma secuencia de ataque."},
+      "unit:corruption_added": {"en":"Runs when Corruption is added to this unit’s floor. It can trigger again if another effect adds Corruption there on the same turn.","es":"Se activa cuando se añade Corrupción al piso de esta unidad. Puede volver a activarse si otro efecto añade Corrupción al mismo piso durante ese turno."},
+      "unit:on_eaten": {"en":"Runs on the unit being eaten, at the moment it is eaten. Use When eating a Morsel for the rule on the eater.","es":"Se activa en la unidad devorada, en el momento en que la devoran. Usa Al devorar para la regla de la unidad que se come el Bocado."},
+      "unit:on_feed": {"en":"Runs on the unit that eats the Morsel. Each Morsel eaten can trigger the rule separately.","es":"Se activa en la unidad que se come el Bocado. Cada Bocado devorado puede activarla por separado."},
+      "unit:on_hatched": {"en":"Runs when the Egg finishes hatching. Losing Shell can happen more than once, while each Egg hatches once.","es":"Se activa cuando el Huevo termina de eclosionar. Puede perder caparazón varias veces y eclosiona una sola vez."},
+      "unit:on_shift": {"en":"Runs when this unit is moved between floors or changes position on its floor. Each qualifying move can trigger it.","es":"Se activa cuando esta unidad cambia de piso o de posición en su piso. Cada desplazamiento válido puede activarla."},
+      "unit:on_encounter_complete": {"en":"Runs once when you win the battle, after the encounter ends. Use Resolve for an effect after this floor’s combat.","es":"Se activa una vez al ganar la batalla, cuando termina el encuentro. Usa Resolución para un efecto al terminar el combate de este piso."},
+      "unit:on_moon_phase_shift": {"en":"Runs when the train changes its lunar phase. It can trigger more than once in a turn if the phase changes again.","es":"Se activa cuando cambia la fase lunar del tren. Puede activarse más de una vez en un turno si la fase vuelve a cambiar."},
+      "unit:on_equipment_added": {"en":"Runs each time this specific unit receives equipment. Equipping a different unit does not trigger its rule.","es":"Se activa cada vez que se equipa esta unidad concreta. Equipar a otra unidad no activa su regla."},
+      "spell:on_forge": {"en":"Runs when you spend Forge Points to Forge this card. The rule can scale with the number of Forge Points spent.","es":"Se activa al gastar puntos de Forja para forjar esta carta. La regla puede escalar con los puntos de Forja gastados."},
+      "spell:on_spare": {"en":"Runs when this spell damages a unit and the unit survives the hit. If the spell kills it, use Slay for that outcome.","es":"Se activa cuando este hechizo daña a una unidad y esta sobrevive al golpe. Usa Matanza para el caso en que el hechizo la mate."},
+      "unit:on_round_start": {"en":"Runs at the start of a round, which can happen more than once within a battle.","es":"Se ejecuta al comenzar una ronda, que puede repetirse dentro de la misma batalla."},
+      "unit:on_turn_begin": {"en":"Runs when this unit’s combat turn begins, before its attack check. It can repeat in Relentless combat.","es":"Se activa cuando empieza el turno de combate de la unidad, antes de comprobar si puede atacar. Puede repetirse en combate Implacable."},
+      "unit:pre_combat": {"en":"Runs before attacks begin on the floor.","es":"Se ejecuta antes de que comiencen los ataques en el piso."},
+      "unit:post_combat": {"en":"Runs after that floor resolves its combat.","es":"Se ejecuta cuando termina el combate de ese piso."},
+      "unit:card_spell_played": {"en":"Runs when a spell is played on the floor of the unit with Incant.","es":"Se ejecuta al jugar un hechizo en el piso de la unidad con Encantamiento."},
+      "unit:on_bloodshed": {"en":"Runs when a friendly unit takes damage.","es":"Se ejecuta cuando una unidad aliada recibe daño."},
+      "unit:on_valiant": {"en":"Runs when the unit gains the required number of stacks of Valor.","es":"Se ejecuta al obtener el número requerido de acumulaciones de Valor."},
+      "spell:activate_ability": {"en":"Runs when the player uses the activated ability. Its cooldown is a separate setting.","es":"Se ejecuta cuando el jugador usa la habilidad activada. Su enfriamiento se configura por separado."},
+      "spell:equip_card": {"en":"Applies when the card is equipped. Effects with their own activation follow their separate timing.","es":"Se aplica al equipar la carta. Los efectos con activación propia siguen su momento correspondiente."},
+      "spell:on_spawn": {
+        "en": "The effect runs when you play the spell.",
+        "es": "El efecto se ejecuta cuando juegas el hechizo."
+      },
+      "spell:on_cast": {
+        "en": "The effect runs as the card is played.",
+        "es": "El efecto se ejecuta al jugar la carta."
+      },
+      "spell:on_unplayed_positive": {
+        "en": "The effect runs if the spell is left in your hand at the end of the turn.",
+        "es": "El efecto se ejecuta si el hechizo sigue en tu mano al final del turno."
+      },
+      "spell:on_unplayed_negative": {
+        "en": "The penalty runs if the card is left in your hand at the end of the turn.",
+        "es": "La penalización se ejecuta si la carta sigue en tu mano al final del turno."
+      },
+      "unit:on_spawn": {
+        "en": "Runs when the unit is summoned.",
+        "es": "Se ejecuta cuando se invoca la unidad."
+      },
+      "unit:on_hit": {
+        "en": "Runs after the unit is hit.",
+        "es": "Se ejecuta después de que golpeen a la unidad."
+      },
+      "unit:on_kill": {
+        "en": "Runs when the unit kills another unit.",
+        "es": "Se ejecuta cuando la unidad mata a otra."
+      },
+      "unit:on_death": {
+        "en": "Runs when the unit dies, before it is removed from the floor.",
+        "es": "Se ejecuta cuando muere la unidad, antes de retirarla del piso."
+      },
+      "unit:on_reanimated": {
+        "en": "Runs when the unit returns to life through Reanimate.",
+        "es": "Se ejecuta cuando la unidad vuelve a la vida con Reanimar."
+      },
+      "unit:on_any_unit_death_on_floor": {
+        "en": "The dying unit can be friendly or enemy. The event must occur on this floor.",
+        "es": "La unidad que muere puede ser aliada o enemiga. El evento debe ocurrir en este piso."
+      }
+    },
+    "traitText": {
+      "CardTraitDamageOverflow": {"en":"Any damage beyond what is needed to kill the target is dealt in full to each other eligible unit on that floor. The rule determines which side can take the overflow damage.","es":"El daño que sobra tras matar al objetivo se inflige entero a cada otra unidad válida del piso. La regla indica a qué bando puede afectar ese daño."},
+      "CardTraitInfusion": {"en":"Marks an Infusion created by Mix. The resulting card has special rules that prevent it from being discarded or copied.","es":"Identifica una Infusión creada al mezclar. La carta resultante tiene reglas especiales que impiden descartarla o copiarla."},
+      "CardTraitCorruptState": {"en":"Playing this Infused card adds Corruption to its floor. The amount follows the current game rules.","es":"Al jugar esta carta Imbuida, añade Corrupción a su piso. La cantidad sigue las reglas de la partida."},
+      "CardTraitDistinct": {"en":"Indicates that the affected selection excludes other copies of the same card. The card’s effect filter defines exactly what it can select.","es":"Indica que la selección del efecto excluye otras copias de la misma carta. El filtro del efecto determina qué cartas se pueden elegir."},
+      "CardTraitScalingAddStatusEffect": {"en":"Changes the number of status stacks according to the resource or event tracked by the card. On a Spike card, this can be the ember spent.","es":"Cambia las acumulaciones de un estado según el recurso o evento que cuente la carta. En una carta Spike, puede depender del ember gastado."},
+      "CardTraitScalingAddEnergy": {"en":"Scales the amount of ember gained with the card’s tracked resource or event. The rule can grant it this turn or on the next turn.","es":"Ajusta cuánto ember se gana según el recurso o evento que cuente la carta. La regla puede concederlo este turno o el siguiente."},
+      "CardTraitIncreaseCostOfCardsInHand": {"en":"Raises the ember cost of the affected cards in your hand. The rule specifies the amount and which card type it affects.","es":"Sube el coste en ember de las cartas afectadas de tu mano. La regla indica cuánto sube y a qué tipo de carta afecta."},
+      "CardTraitShowCardTargets": {"en":"Shows the number of cards available for the effect’s selection.","es":"Muestra cuántas cartas están disponibles para la selección del efecto."},
+      "CardTraitGraftedEquipment": {"en":"Equipment generated by a unit with Graft returns to your hand when its wearer dies.","es":"El equipo generado por una unidad con Injerto vuelve a tu mano cuando muere su portador."},
+      "CardTraitDrawInDeploymentPhase": {"en":"You draw this card during the deployment phase.","es":"Robas esta carta durante la fase de despliegue."},
+      "CardTraitTrample": {"en":"Excess damage is passed to the next enemy unit.","es":"El daño sobrante pasa a la siguiente unidad enemiga."},
+      "CardTraitLimitedRange": {"en":"Limits where the card can be played according to its Pyrebound rules.","es":"Limita dónde puedes jugar la carta según sus reglas de Pírica."},
+      "CardTraitCorruptRestricted": {"en":"Playing the card requires the indicated amount of Corruption on the appropriate floor.","es":"Jugar la carta requiere la cantidad indicada de Corrupción en el piso correspondiente."},
+      "CardTraitRefine": {"en":"Grants the indicated extra Forge or Ember when the card is Smelted.","es":"Concede la Forja o el Ember adicional indicado al fundir la carta."},
+      "CardTraitUnplayable": {"en":"The card cannot be played by selecting it from your hand.","es":"No puedes jugar la carta seleccionándola desde la mano."},
+      "CardTraitFreeze": {"en":"The card is kept in hand at the end of the turn. Playing it removes Frozen.","es":"La carta se conserva en la mano al final del turno. Al jugarla, pierde Congelar."},
+      "CardTraitExhaustState": {
+        "en": "Playing the card removes it from normal circulation for the rest of this combat.",
+        "es": "Al jugarla, la carta se retira de la circulación normal durante el resto del combate."
+      },
+      "CardTraitSelfPurge": {
+        "en": "Playing the card removes it from your deck for the rest of the run.",
+        "es": "Al jugarla, la carta se elimina del mazo durante el resto de la partida."
+      },
+      "CardTraitEphemeral": {
+        "en": "The card is purged when played or discarded, or when the turn ends.",
+        "es": "La carta se purga al jugarla, descartarla o al terminar el turno."
+      },
+      "CardTraitPermafrost": {
+        "en": "Applies Frozen when the card is drawn.",
+        "es": "Aplica Congelar cuando robas la carta."
+      },
+      "CardTraitIgnoreArmor": {
+        "en": "The card’s damage bypasses Armor.",
+        "es": "El daño de la carta atraviesa la Armadura."
+      },
+      "CardTraitPersistent": {
+        "en": "The card cannot be discarded and stays in your hand when the turn ends.",
+        "es": "La carta no se puede descartar y se queda en tu mano al final del turno."
+      },
+      "CardTraitTreasure": {
+        "en": "If the card is discarded before the end of the turn, it plays in place of the discard.",
+        "es": "Si descartas la carta antes del final del turno, se juega en su lugar."
+      },
+      "CardTraitStrongerMagicPower": {
+        "en": "Magic Power has an increased effect on this card.",
+        "es": "El Poder mágico tiene un efecto mayor en esta carta."
+      },
+      "CardTraitUnpurgable": {
+        "en": "The card cannot be purged through the usual removal options.",
+        "es": "La carta no se puede purgar con las opciones normales de eliminación."
+      }
+    }
+  },
+  "openClan": {
+    "title": {"en": "Open an existing clan", "es": "Abrir un clan existente"},
+    "help": {"en": "Continue a saved clan or open an editable file someone shared with you.", "es": "Continúa un clan guardado o abre un archivo editable que te hayan enviado."},
+    "saved": {"en": "Saved on this computer", "es": "Guardados en este equipo"},
+    "search": {"en": "Find a saved clan", "es": "Buscar un clan guardado"},
+    "noMatches": {"en": "No saved clans match your search.", "es": "Ningún clan guardado coincide con la búsqueda."},
+    "open": {"en": "Open", "es": "Abrir"},
+    "duplicate": {"en": "Make a copy", "es": "Crear una copia"},
+    "import": {"en": "Open a .mt2draft file", "es": "Abrir un archivo .mt2draft"},
+    "importHelp": {"en": "An editable file includes the clan and its uploaded art. A ZIP made for playing is installed through your mod manager.", "es": "El archivo editable incluye el clan y el arte que se ha subido. El ZIP para jugar se instala desde tu gestor de mods."},
+    "browse": {"en": "Browse and edit cards", "es": "Ver y editar cartas"}
+  },
+  "appUpdate": {
+    "repository": "David-defrutos/mt2-clan-creator",
+    "version": {"en": "Version {version}", "es": "Versión {version}"},
+    "check": {"en": "Check for updates", "es": "Buscar actualizaciones"},
+    "checking": {"en": "Checking…", "es": "Buscando…"},
+    "available": {"en": "Version {version} is available.", "es": "La versión {version} está disponible."},
+    "current": {"en": "You have the latest version.", "es": "Tienes la última versión."},
+    "ahead": {"en": "Your version is newer than the latest published release ({version}).", "es": "Tu versión es más reciente que la última publicada ({version})."},
+    "unavailable": {"en": "Could not check for updates. You can still open the releases page.", "es": "No se pudo comprobar si hay actualizaciones. Puedes consultar la página de versiones."},
+    "download": {"en": "Open release and downloads", "es": "Ver versión y descargas"},
+    "releases": {"en": "All releases", "es": "Todas las versiones"},
+    "source": {"en": "Project on GitHub", "es": "Proyecto en GitHub"}
+  },
+  "communityClanText": {
+    "title": {"en": "Learn with a community clan", "es": "Aprende con un clan de la comunidad"},
+    "select": {"en": "Choose a community clan", "es": "Elige un clan de la comunidad"},
+    "load": {"en": "Open editable copy", "es": "Abrir copia editable"},
+    "authorInvitation": {"en": "If you’re a clan author and wouldn’t mind us including your clan here, let me know on Discord ({contact}).", "es": "Si has creado un clan y no te importa que lo incluyamos aquí, avísame por Discord ({contact})."},
+    "coverage": {"en": "{cards} collection cards and artifacts · {champions}/2 champions · {paths}/6 paths · {starters}/2 starter cards · {bannerUnits} banner units", "es": "{cards} cartas de colección y artefactos · {champions}/2 campeones · {paths}/6 sendas · {starters}/2 cartas iniciales · {bannerUnits} unidades de estandarte"},
+    "versionNotice": {
+      "en": "This is a {simplified}, not the current community clan.",
+      "es": "Esta es una {simplified}, distinta de la versión actual del clan de la comunidad."
+    },
+    "versionEmphasis": {
+      "en": "simplified version",
+      "es": "versión simplificada"
+    },
+    "limits": {"en": "The creator uses effects from the game, Trainworks Reloaded and Conductor. Cards and paths that use the mod’s own code are marked as simplified. Add effects where needed before playing.", "es": "El creador usa efectos del juego, Trainworks Reloaded y Conductor. Las cartas y sendas que usan código propio del mod se marcan como simplificadas. Añade los efectos que falten antes de jugar."},
+    "simplifiedCount": {"en": "{count} simplified cards and artifacts", "es": "{count} cartas y artefactos simplificados"},
+    "simplifiedLabel": {"en": "Simplified version", "es": "Versión simplificada"},
+    "removedTitle":{"en":"What changed in this copy","es":"Qué cambió en esta copia"},
+    "removedParts":{
+      "effects":{"en":"Card effects","es":"Efectos de carta"},
+      "relic_effects":{"en":"Artifact effects","es":"Efectos de artefacto"},
+      "triggers":{"en":"Triggered abilities","es":"Capacidades con activación"},
+      "trigger_upgrades":{"en":"Triggered upgrade abilities","es":"Capacidades con activación de una mejora"},
+      "starting_status_effects":{"en":"Starting unit abilities","es":"Capacidades iniciales de unidad"},
+      "status_effect_upgrades":{"en":"Abilities granted by an upgrade","es":"Capacidades concedidas por una mejora"},
+      "ability":{"en":"Activated abilities","es":"Habilidades activadas"},
+      "ability_upgrade":{"en":"Activated abilities","es":"Habilidades activadas"},
+      "room_ability_upgrade":{"en":"Activated room abilities","es":"Habilidades activadas de sala"},
+      "room_modifier_upgrades":{"en":"Room rules","es":"Reglas de sala"},
+      "remove_upgrades":{"en":"Rules that remove upgrades","es":"Reglas que quitan mejoras"},
+      "traits":{"en":"Card properties","es":"Propiedades de carta"},
+      "grafted_equipment":{"en":"Starting equipment","es":"Equipo inicial"},
+      "animation":{"en":"Custom animations","es":"Animaciones personalizadas"},
+      "other":{"en":"Other special rules","es":"Otras reglas especiales"}
+    },
+    "simplifiedHelp": {"en": "Some original effects were removed. You can edit the remaining effects or add your own.", "es": "Se han quitado algunos efectos originales. Puedes editar los que quedan o añadir los tuyos."},
+    "simplifiedChooseEffect": {"en": "Choose an effect", "es": "Elige un efecto"},
+    "loaded": {"en": "Based on {clan} · {version}", "es": "Basado en {clan} · {version}"}
+  },
   "languages": [
     "es",
     "en"
@@ -26,8 +557,8 @@
         "en": "Champion 1"
       },
       "help": {
-        "es": "Tu primer líder. Ajusta su aspecto y sus estadísticas.",
-        "en": "Your first leader. Choose artwork and starting stats."
+        "es": "Elige el arte y las estadísticas iniciales de tu primer campeón. Estos ajustes se aplican a sus tres sendas. Puedes personalizar cada senda en los pasos siguientes.",
+        "en": "Choose your first champion’s artwork and starting stats. These settings apply to all three paths. You can customize each path in the following steps."
       },
       "type": "champion",
       "index": 0,
@@ -91,8 +622,8 @@
         "en": "Champion 2"
       },
       "help": {
-        "es": "El segundo líder ofrece otra forma de jugar.",
-        "en": "Your second leader offers another way to play."
+        "es": "Elige el arte y las estadísticas iniciales de tu segundo campeón. Estos ajustes se aplican a sus tres sendas. Puedes personalizar cada senda en los pasos siguientes.",
+        "en": "Choose your second champion’s artwork and starting stats. These settings apply to all three paths. You can customize each path in the following steps."
       },
       "type": "champion",
       "index": 1,
@@ -180,15 +711,29 @@
     {
       "id": "spells",
       "title": {
-        "es": "Hechizos y equipos",
-        "en": "Spells and equipment"
+        "es": "Hechizos",
+        "en": "Spells"
       },
       "help": {
-        "es": "Los hechizos y los equipos son tipos de carta distintos. Crea o copia cada uno en su apartado.",
-        "en": "Spells and equipment are different card types. Create or copy each in its own section."
+        "es": "Crea o copia hechizos que puedas jugar durante el combate.",
+        "en": "Create or copy spells to play during battle."
       },
       "type": "collection",
       "index": "spell",
+      "optional": true
+    },
+    {
+      "id": "equipment",
+      "title": {
+        "es": "Equipo",
+        "en": "Equipment"
+      },
+      "help": {
+        "es": "Copia una carta de equipo y edítala para que una unidad pueda llevarla.",
+        "en": "Copy an equipment card and edit what it does when a unit equips it."
+      },
+      "type": "collection",
+      "index": "equipment",
       "optional": true
     },
     {
@@ -233,11 +778,13 @@
       "index": null,
       "optional": false
     },
+    {"id": "stones", "title": {"en": "Stones and slabs", "es": "Piedras y losas"}, "help": {"en": "Create upgrades that appear at merchants for your clan.", "es": "Crea mejoras que los mercaderes ofrecen a tu clan."}, "type": "stones", "index": null, "optional": true},
+    {"id": "clan-assets", "title": {"en": "Clan assets", "es": "Recursos del clan"}, "help": {"en": "Edit the clan icon, card frames, map banners and champion selection art.", "es": "Edita el icono del clan, los marcos, los estandartes y el arte de selección de campeones."}, "type": "clan-assets", "index": null, "optional": true},
     {
       "id": "art",
       "title": {
-        "es": "Aspecto del clan",
-        "en": "Clan artwork"
+        "es": "Arte de cartas",
+        "en": "Card artwork"
       },
       "help": {
         "es": "Revisa las imágenes y cómo se ven tus unidades.",
@@ -250,12 +797,12 @@
     {
       "id": "review",
       "title": {
-        "es": "Revisar e instalar",
-        "en": "Review and install"
+        "es": "Instalar y jugar",
+        "en": "Install and play"
       },
       "help": {
-        "es": "Sigue estos tres pasos para probar tu clan en el juego.",
-        "en": "Follow these three steps to try your clan in the game."
+        "es": "Prepara el juego e instala tu clan para probarlo.",
+        "en": "Set up the game and install your clan to try it."
       },
       "type": "review",
       "index": null,
@@ -319,6 +866,7 @@
       "es": "Salud",
       "en": "Health"
     },
+    "maximumHealth": {"es": "salud máxima", "en": "maximum health"},
     "size": {
       "es": "Espacio en el piso",
       "en": "Floor capacity"
@@ -358,6 +906,15 @@
     "done": {
       "es": "Listo",
       "en": "Done"
+    },
+    "movementDestination": {"es":"Movimiento dentro del piso","en":"Movement on this floor"},
+    "editPathStats": {
+      "es": "Editar las bonificaciones en la senda",
+      "en": "Edit stat bonuses in the path"
+    },
+    "replaceExample": {
+      "es": "Sustituir por una carta de ejemplo",
+      "en": "Replace with an example card"
     },
     "examples": {
       "es": "Copiar una carta de ejemplo",
@@ -728,8 +1285,8 @@
       "en": "This example preserves its original effects and has no editable amounts. You can change its name and rarity."
     },
     "bundledHelp": {
-      "es": "Trainworks y Conductor vienen incluidos para compilar. No hace falta instalarlos antes en el juego.",
-      "en": "Trainworks and Conductor are included for compilation. You do not need to install them in the game first."
+      "es": "El creador descarga Trainworks y Conductor al compilar por primera vez.",
+      "en": "The creator downloads Trainworks and Conductor the first time you compile."
     },
     "installTools": {
       "es": "Preparar el juego para usar mods",
@@ -803,6 +1360,8 @@
       "es": "Añadir capacidad",
       "en": "Add ability"
     },
+    "equipmentAbilities": {"es": "Capacidades del equipo", "en": "Abilities granted by the equipment"},
+    "equipmentAbilityHelp": {"es": "La unidad que lleva el equipo recibe estas capacidades.", "en": "These abilities are granted to the unit wearing the equipment."},
     "abilityHelp": {
       "es": "Capacidades presentes desde que la unidad entra en combate. Para otorgarlas durante la batalla, usa un efecto y elige cuándo ocurre.",
       "en": "Abilities present when the unit enters combat. To grant them during battle, use an effect and choose when it happens."
@@ -1116,8 +1675,8 @@
       "en": "Select the profile folder you play with. The check looks for BepInEx/core/BepInEx.dll and the Trainworks Reloaded and Conductor DLLs inside BepInEx/plugins. Versions are read from the installed package files. If they cannot be identified, the result says so."
     },
     "profileManual": {
-      "es": "Inicia el juego desde tu gestor de mods para usar ese perfil. El creador no comprueba ni instala estos requisitos.",
-      "en": "Launch the game through your mod manager to use that profile. The creator does not check or install these requirements."
+      "es": "Inicia el juego desde tu gestor de mods para usar ese perfil. Instala y activa allí los tres requisitos.",
+      "en": "Launch the game through your mod manager to use that profile. Install and enable all three requirements there."
     },
     "copyMechanics": {
       "es": "Copiar solo habilidades y efectos de una carta oficial",
@@ -1190,6 +1749,21 @@
         "combat",
         "run"
       ]
+    },
+    {
+      "id": "mix",
+      "label": {"es": "Mezclar", "en": "Mix"},
+      "help": {
+        "es": "Elige una de las infusiones que aparecen al azar. Si ya tienes una infusión en preparación, elige una mejora para ella.",
+        "en": "Choose from randomly offered Infusions. If you already have an Infusion in progress, choose an upgrade for it instead."
+      },
+      "class": "CardEffectMix",
+      "amount": 2,
+      "minimumAmount": 1,
+      "castOnly": true,
+      "cardPool": "InfusionPool",
+      "gameDescription": "[mix].",
+      "target": "none"
     },
     {
       "id": "draw",
@@ -2297,7 +2871,9 @@
         "es": "Contador de almas usado por otros efectos de la carta, como los de Devorador de muerte. Las cargas no hacen daño por sí solas.",
         "en": "A soul counter used by other card effects, such as Devourer of Death. Its stacks do not deal damage on their own."
       }
-    }
+    },
+    {"id": "advance", "label": {"es": "Avanzar", "en": "Advance"}, "help": {"es": "Mueve a la unidad al frente de su piso.", "en": "Move the unit to the front of its floor."}, "class": "CardEffectFloorRearrange", "target": "friendly", "spellTeam": "both", "amount": 1, "fixedAmount": true, "paramInt": 0, "singleTarget": true},
+    {"id": "retreat", "label": {"es": "Retirar", "en": "Retreat"}, "help": {"es": "Mueve a la unidad al fondo de su piso.", "en": "Move the unit to the back of its floor."}, "class": "CardEffectFloorRearrange", "target": "friendly", "spellTeam": "both", "amount": 1, "fixedAmount": true, "paramInt": 1, "singleTarget": true}
   ],
   "rarities": [
     {
@@ -2324,6 +2900,15 @@
   ],
   "triggers": [
     {
+      "value": "Conductor_Accursed",
+      "reference": {"mod_reference": "Conductor", "id": "@Accursed"},
+      "label": {"es": "Maldito (Accursed)", "en": "Accursed"},
+      "help": {
+        "es": "Se activa durante tu turno al jugar o descartar una plaga o carta basura en ese piso.",
+        "en": "Triggers during your turn when a Blight or Junk card is played or discarded on that floor."
+      }
+    },
+    {
       "value": "on_round_start",
       "label": {
         "es": "Al inicio de cada ronda",
@@ -2333,8 +2918,8 @@
     {
       "value": "on_turn_begin",
       "label": {
-        "es": "Al comenzar tu turno",
-        "en": "At the start of your turn"
+        "es": "Al comenzar el turno de combate de esta unidad",
+        "en": "At the start of this unit’s combat turn"
       }
     },
     {
@@ -2702,6 +3287,36 @@
       }
     },
     {
+      "value": "all_units",
+      "label": {
+        "es": "Todas las unidades del piso",
+        "en": "All units on the floor"
+      },
+      "unitLabel": {
+        "es": "Todas las unidades del piso",
+        "en": "All units on the floor"
+      },
+      "help": {
+        "es": "Afecta a las unidades aliadas y enemigas de ese piso.",
+        "en": "Affects both friendly and enemy units on that floor."
+      }
+    },
+    {
+      "value": "all_floors_enemy",
+      "label": {"es": "Unidades enemigas en todos los pisos", "en": "Enemy units on all floors"},
+      "unitLabel": {"es": "Unidades enemigas en todos los pisos", "en": "Enemy units on all floors"}
+    },
+    {
+      "value": "all_floors_friendly",
+      "label": {"es": "Unidades aliadas en todos los pisos", "en": "Friendly units on all floors"},
+      "unitLabel": {"es": "Unidades aliadas en todos los pisos", "en": "Friendly units on all floors"}
+    },
+    {
+      "value": "all_floors_units",
+      "label": {"es": "Todas las unidades en todos los pisos", "en": "All units on all floors"},
+      "unitLabel": {"es": "Todas las unidades en todos los pisos", "en": "All units on all floors"}
+    },
+    {
       "value": "spell_target",
       "label": {
         "es": "La unidad que recibe el hechizo",
@@ -2717,6 +3332,192 @@
       }
     }
   ],
+  "stones": {
+    "maximum": 30,
+    "iconPixels": 256,
+    "hudPixels": 96,
+    "recipes": [
+      {
+        "id": "attack",
+        "kind": "unit",
+        "fields": [
+          "bonus_damage"
+        ],
+        "default": 5,
+        "label": {
+          "en": "Extra attack",
+          "es": "Ataque adicional"
+        },
+        "description": {
+          "en": "+{amount} Attack.",
+          "es": "+{amount} de ataque."
+        }
+      },
+      {
+        "id": "health",
+        "kind": "unit",
+        "fields": [
+          "bonus_hp"
+        ],
+        "default": 10,
+        "label": {
+          "en": "Extra health",
+          "es": "Salud adicional"
+        },
+        "description": {
+          "en": "+{amount} Health.",
+          "es": "+{amount} de salud."
+        }
+      },
+      {
+        "id": "power",
+        "kind": "spell",
+        "fields": [
+          "bonus_damage",
+          "bonus_heal"
+        ],
+        "filters": [
+          "MagicPowerSpells",
+          "ExcludedSpellsFromMagicPower"
+        ],
+        "default": 10,
+        "label": {
+          "en": "Extra spell power",
+          "es": "Potencia mágica adicional"
+        },
+        "description": {
+          "en": "+{amount} Magic Power.",
+          "es": "+{amount} de potencia mágica."
+        }
+      },
+      {
+        "id": "accursed-armor",
+        "kind": "unit",
+        "fields": [],
+        "default": 5,
+        "trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "status": "armor",
+        "label": {
+          "en": "Accursed · Gain Armor",
+          "es": "Maldito · Añadir armadura"
+        },
+        "description": {
+          "en": "Accursed: Gain Armor {amount}.",
+          "es": "Maldito: Añade {amount} de armadura."
+        }
+      }
+    ],
+    "targets": [
+      {
+        "id": "unit",
+        "cardType": "monster",
+        "label": {
+          "en": "Unit",
+          "es": "Unidad"
+        },
+        "pool": "UnitUpgradePool"
+      },
+      {
+        "id": "spell",
+        "cardType": "spell",
+        "label": {
+          "en": "Spell",
+          "es": "Hechizo"
+        },
+        "pool": "SpellUpgradePool"
+      }
+    ],
+    "groups": [
+      {
+        "id": "stone",
+        "prefix": "",
+        "label": {
+          "en": "Stone · Standard run",
+          "es": "Piedra · Partida estándar"
+        }
+      },
+      {
+        "id": "slab",
+        "prefix": "SoulSavior_",
+        "label": {
+          "en": "Slab · Soul Savior",
+          "es": "Losa · Soul Savior"
+        }
+      }
+    ],
+    "text": {
+      "add": {
+        "en": "Add an upgrade",
+        "es": "Añadir mejora"
+      },
+      "empty": {
+        "en": "No stones or slabs yet.",
+        "es": "Todavía no hay piedras ni losas."
+      },
+      "new": {
+        "en": "New upgrade",
+        "es": "Nueva mejora"
+      },
+      "mode": {
+        "en": "Where it appears",
+        "es": "Dónde aparece"
+      },
+      "target": {
+        "en": "Applies to",
+        "es": "Se aplica a"
+      },
+      "effect": {
+        "en": "Upgrade benefit",
+        "es": "Qué mejora"
+      },
+      "picture": {
+        "en": "Upgrade icon",
+        "es": "Icono de la mejora"
+      },
+      "draftReward": {
+        "en": "Also offer in upgrade rewards",
+        "es": "Ofrecer también como recompensa de mejora"
+      }
+    },
+    "draftRewardPools": [
+      "DraftUpgradePool",
+      "MalickaDraftUpgradePool"
+    ],
+    "examples": {
+      "succclan": [
+        {
+          "uid": "curseguard-stone",
+          "name": {
+            "en": "Curseguard Stone",
+            "es": "Piedra de guardia maldita"
+          },
+          "kind": "unit",
+          "group": "stone",
+          "rarity": "common",
+          "recipe": "accursed-armor",
+          "amount": 5,
+          "image": "assets/4f09531cfda14a66c38e4bde188c2c0060d19addc78e055fb561bda230f40681.png",
+          "draftReward": true
+        },
+        {
+          "uid": "curseguard-slab",
+          "name": {
+            "en": "Curseguard Slab",
+            "es": "Losa de guardia maldita"
+          },
+          "kind": "unit",
+          "group": "slab",
+          "rarity": "common",
+          "recipe": "accursed-armor",
+          "amount": 10,
+          "image": "assets/7ef4daa52f13c8b596e8a9bb8d83a6cf2cc658dce38d5ce434cd2bf6b834e486.png"
+        }
+      ]
+    }
+  },
   "limits": {
     "maxCards": 200,
     "maxImageBytes": 12000000,
@@ -2785,6 +3586,9 @@
     }
   ],
   "recipeDescriptions": {
+    "mix": {"es": "Mezclar.", "en": "Mix."},
+    "advance": {"es":"Adelanta a {target}.","en":"Advance {target}."},
+    "retreat": {"es":"Mueve a {target} al fondo.","en":"Retreat {target}."},
     "damage": {
       "es": "Inflige {amount} de daño a {target}.",
       "en": "Deal {amount} damage to {target}."
@@ -3816,7 +4620,25 @@
       "en": "Captured souls"
     }
   },
+  "nativeTraitLabels": {
+    "CardTraitIncreaseCostOfCardsInHand": {"en":"Increase the cost of cards in hand","es":"Aumentar el coste de las cartas en mano"},
+    "CardTraitShowCardTargets": {"en":"Show how many targets are available","es":"Mostrar cuántos objetivos hay disponibles"}
+  },
   "traitLabels": {
+    "CardTraitEphemeral": {"es":"Efímera","en":"Ephemeral"},
+    "CardTraitGraftedEquipment": {"es":"Injerto","en":"Graft"},
+    "CardTraitDamageOverflow": {"es":"Fulminante","en":"Explosive"},
+    "CardTraitUnpurgable": {"es":"Impurgable","en":"Unpurgeable"},
+    "CardTraitPersistent": {"es":"Persistente","en":"Persistent"},
+    "CardTraitTreasure": {"es":"Ofrenda","en":"Offering"},
+    "CardTraitLimitedRange": {"es":"Pírica","en":"Pyrebound"},
+    "CardTraitInfusion": {"es":"Infusión","en":"Infusion"},
+    "CardTraitPermafrost": {"es":"Hielo eterno","en":"Permafrost"},
+    "CardTraitRefine": {"es":"Refinación","en":"Refined"},
+    "CardTraitUnplayable": {"es":"Injugable","en":"Unplayable"},
+    "CardTraitDrawInDeploymentPhase": {"es":"Desplegable","en":"Deployable"},
+    "CardTraitCorruptRestricted": {"es":"Extracción","en":"Extract"},
+    "CardTraitCorruptState": {"es":"Imbuida","en":"Infused"},
     "CardTraitExhaustState": {
       "es": "Consumir",
       "en": "Consume"
@@ -3854,6 +4676,22 @@
       "en": "Attuned"
     }
   },
+  "cardTraitOptions": {
+    "CardTraitExhaustState": ["spell","unit","blight"],
+    "CardTraitSelfPurge": ["spell","unit","blight","junk"],
+    "CardTraitEphemeral": ["spell","unit","equipment","junk"],
+    "CardTraitPersistent": ["spell","blight"],
+    "CardTraitPermafrost": ["spell"],
+    "CardTraitIgnoreArmor": ["spell"],
+    "CardTraitStrongerMagicPower": ["spell"],
+    "CardTraitTreasure": ["spell","unit"],
+    "CardTraitUnpurgable": ["blight"]
+  },
+  "copiedUnitTriggerScopes": {
+    "artifact": ["on_any_unit_death_on_floor","on_attacking","on_death","on_deathwish","on_deathwish_lost","on_encounter_complete","on_equipment_added","on_hit","on_kill","on_own_ability_activated","on_reanimated","on_shift","on_spawn","on_vanguard","on_vanguard_lost","pre_combat"],
+    "room": ["on_attacking","on_death","on_hit","on_kill","on_punish","on_reanimated","on_spawn","post_combat"],
+    "equipment": ["card_spell_played","on_any_hero_death_on_floor","on_attacking","on_attacking_before_damage","on_death","on_encounter_complete","on_heal","on_hit","on_kill","on_moon_phase_shift","on_moon_shade","on_moonshade_lost","on_shift","post_combat"]
+  },
   "triggerLabels": {
     "on_spawn": {
       "es": "Invocación",
@@ -3864,8 +4702,8 @@
       "en": "When attacking"
     },
     "on_turn_begin": {
-      "es": "Al comenzar tu turno",
-      "en": "At the start of your turn"
+      "es": "Al comenzar el turno de combate de esta unidad",
+      "en": "At the start of this unit’s combat turn"
     },
     "on_kill": {
       "es": "Matanza (Slay)",
@@ -4078,6 +4916,8 @@
         "en": "Enemy units on this floor have Rooted {amount}."
       }
     },
+    {"id":"room_capacity","kind":"room","label":{"en":"Extra capacity on this floor","es":"Espacio adicional en este piso"},"modifier":"RoomStateCapacityModifier","team":"monsters","amount":1,"description":{"en":"+{amount} capacity on this floor.","es":"+{amount} de espacio en este piso."}},
+    {"id":"room_ember","kind":"room","label":{"en":"Extra ember each turn","es":"Ember adicional cada turno"},"modifier":"RoomStateEnergyModifier","team":"monsters","amount":1,"description":{"en":"+{amount} ember each turn.","es":"+{amount} ember cada turno."}},
     {
       "id": "relic_ember",
       "kind": "artifact",
@@ -4106,18 +4946,27 @@
         "en": "+{amount} capacity on each floor."
       }
     },
+    {"id":"relic_deployment_ember","kind":"artifact","label":{"es":"Ember durante el despliegue","en":"Ember during deployment"},"class":"RelicEffectModifyEnergyDuringDeployment","amount":1,"description":{"es":"+{amount} ember durante el despliegue.","en":"+{amount} ember during deployment."}},
+    {"id":"relic_first_turn_ember","kind":"artifact","label":{"es":"Ember el primer turno","en":"Ember on the first turn"},"class":"RelicEffectModifyEnergyStartOfCombat","amount":1,"description":{"es":"+{amount} ember en el primer turno.","en":"+{amount} ember on the first turn."}},
+    {"id":"relic_pyre_health","kind":"artifact","label":{"es":"Salud máxima de la Pira","en":"Maximum Pyre health"},"class":"RelicEffectIncreasePyreHealthFlat","amount":10,"description":{"es":"+{amount} de salud máxima de la Pira.","en":"+{amount} maximum Pyre health."}},
+    {"id":"relic_pyre_attack","kind":"artifact","label":{"es":"Ataque de la Pira","en":"Pyre attack"},"class":"RelicEffectIncreasePyreAttackFlat","amount":5,"description":{"es":"+{amount} de ataque de la Pira.","en":"+{amount} Pyre attack."}},
+    {"id":"relic_corruption_capacity","kind":"artifact","label":{"en":"Extra Corruption capacity","es":"Capacidad de Corrupción adicional"},"class":"RelicEffectModifyMaxCorruption","amount":1,"description":{"en":"+{amount} maximum Corruption on each floor.","es":"+{amount} de Corrupción máxima en cada piso."}},
+    {"id":"relic_spell_healing","kind":"artifact","label":{"en":"Extra healing from spells","es":"Curación adicional de los hechizos"},"class":"RelicEffectModifyCardHealingPower","amount":10,"description":{"en":"Spells restore {amount} additional health.","es":"Los hechizos restauran {amount} de salud adicional."}},
+    {"id":"relic_mix_choices","kind":"artifact","label":{"en":"Extra Mix choices","es":"Más opciones de Infusión"},"class":"RelicEffectAdjustMixAmount","amount":1,"description":{"en":"Mix offers {amount} additional choices.","es":"Infusión ofrece {amount} opciones adicionales."}},
+    {"id":"relic_trial_gold","kind":"artifact","label":{"en":"Extra gold from trials","es":"Oro adicional en pruebas"},"class":"RelicEffectModifyTrialGoldRewards","amount":25,"description":{"en":"Trial gold rewards increase by {amount}%.","es":"Las recompensas de oro de las pruebas aumentan un {amount} %."}},
+    {"id":"relic_full_pyre_draw","kind":"artifact","label":{"en":"Extra cards while the Pyre is at full health","es":"Cartas adicionales con la Pira a plena salud"},"class":"RelicEffectAdditionalDrawOnTowerFullHealth","amount":1,"description":{"en":"While the Pyre is at full health, draw {amount} extra cards each turn.","es":"Mientras la Pira tenga toda su salud, roba {amount} cartas adicionales cada turno."}},
     {
       "id": "relic_draw",
       "kind": "artifact",
       "label": {
-        "es": "Más cartas en la mano inicial",
-        "en": "More cards in the starting hand"
+        "es": "Cartas adicionales cada turno",
+        "en": "Extra cards drawn each turn"
       },
       "class": "RelicEffectChangeStartingHandSize",
       "amount": 1,
       "description": {
-        "es": "+{amount} cartas en la mano inicial.",
-        "en": "+{amount} cards in the starting hand."
+        "es": "Roba {amount} cartas adicionales cada turno.",
+        "en": "Draw {amount} extra cards each turn."
       }
     }
   ],
@@ -4131,7 +4980,6 @@
       "{APPDATA}/Thunderstore Mod Manager/DataFolder/MonsterTrain2/profiles/Default/BepInEx/core",
       "{APPDATA}/r2modmanPlus-local/MonsterTrain2/profiles/Default/BepInEx",
       "{HOME}/.config/r2modmanPlus-local/MonsterTrain2/profiles/Default/BepInEx",
-      "C:/Juegos/Steam/steamapps/common/Monster Train 2/MonsterTrain2_Data/Managed",
       "C:/Program Files (x86)/Steam/steamapps/common/Monster Train 2/MonsterTrain2_Data/Managed",
       "{HOME}/.steam/steam/steamapps/common/Monster Train 2/MonsterTrain2_Data/Managed"
     ],
@@ -4141,7 +4989,71 @@
     "port": 4320,
     "portSearchCount": 10
   },
+  "exampleParamIntRules": {
+    "CardEffectCopyUnits": {"minimum":1},
+    "CardEffectAdjustForgePoints": {"minimum":0},
+    "RelicEffectModifyCardMagicPowerOnCardPlayed": {"minimum":0},
+    "RelicEffectModifyEnergyOnMoonPhase": {"minimum":0},
+    "RelicEffectModifyCorruptionStartOfCombat": {"minimum":0},
+    "RelicEffectAddGoldOnPurge": {"minimum":0},
+    "RoomStateDrawRandomConsumedCardsPreCombatModifier": {"minimum":1},
+    "RelicEffectChanceAddEffectAfterSpawn": {"minimum":0,"maximum":100},
+    "CardEffectDrawAdditionalNextTurn": {"ignoreRange":true,"minimum":0},
+    "CardEffectDrawType": {"ignoreRange":true,"minimum":0},
+    "CardEffectDamagePerSourceAttack": {"ignoreRange":true,"minimum":0},
+    "CardEffectRecursion": {"selectionPrefix":"random_","minimum":1},
+    "CardEffectAdjustCorruption": {"minimum":-1},
+    "CardTraitCorruptRestricted": {"minimum":0},
+    "CardTraitDamageOverflow": {"minimum":1},
+    "CardTraitRefine": {"minimum":0},
+    "RelicEffectModifyCardAttack": {"excludeFields":["param_float","param_int_2"]}
+  },
   "exampleParameterRules": {
+    "CardEffectCopyUnits": {"en":"Copies summoned","es":"Copias invocadas"},
+    "CardEffectAdjustForgePoints": {"en":"Forge Points gained","es":"Puntos de Forja ganados"},
+    "RelicEffectModifyCardMagicPowerOnCardPlayed": {"en":"Magic Power gained","es":"Poder mágico ganado"},
+    "RelicEffectModifyEnergyOnMoonPhase": {"en":"Ember gained","es":"Ember ganado"},
+    "RelicEffectModifyCorruptionStartOfCombat": {"en":"Starting Corruption per floor","es":"Corrupción inicial por piso"},
+    "RelicEffectAddGoldOnPurge": {"en":"Gold per purge","es":"Oro por purga"},
+    "RoomStateDrawRandomConsumedCardsPreCombatModifier": {"en":"Consumed spells returned","es":"Hechizos consumidos devueltos"},
+    "RelicEffectChanceAddEffectAfterSpawn": {"en":"Activation chance (%)","es":"Probabilidad de activación (%)"},
+    "RelicSpellCountThreshold": {"en":"Spells played this turn","es":"Hechizos jugados este turno"},
+    "RelicActiveMoonPhase": {"en":"Moon phase","es":"Fase lunar"},
+    "CardEffectBump": {"es": "Dirección entre pisos", "en": "Movement between floors"},
+    "CardTraitAddCardUpgradeOnMoonPhase": {"es": "Fase lunar que concede la mejora", "en": "Moon phase that grants the upgrade"},
+    "CardTraitScalingAddDamage": {"es":"Daño por cada punto","en":"Damage per point"},
+    "CardTraitScalingAddDamagePerCard": {"es":"Daño por carta contada","en":"Damage per counted card"},
+    "CardTraitScalingAddStatusEffect": {"es":"Acumulaciones por cada punto","en":"Stacks per point"},
+    "CardTraitCorruptRestricted": {"es":"Corrupción necesaria","en":"Required Corruption"},
+    "CardTraitDamageOverflow": {"es":"Objetivos del daño sobrante","en":"Overflow targets"},
+    "CardTraitScalingUpgradeUnitAttack": {"es":"Ataque por cada punto","en":"Attack per point"},
+    "CardTraitScalingUpgradeUnitHealth": {"es":"Salud por cada punto","en":"Health per point"},
+    "CardTraitScalingUpgradeUnitSize": {"es":"Tamaño por cada punto","en":"Size per point"},
+    "CardTraitScalingAddEnergy": {"es":"Ember por cada punto","en":"Ember per point"},
+    "CardTraitScalingAddMagicPower": {"es":"Poder mágico por cada punto","en":"Magic Power per point"},
+    "CardTraitScalingHeal": {"es":"Curación por cada punto","en":"Healing per point"},
+    "CardTraitScalingReduceCost": {"es":"Reducción de coste por cada punto","en":"Cost reduction per point"},
+    "CardTraitScalingDrawAdditionalNextTurn": {"es":"Multiplicador del robo","en":"Draw multiplier"},
+    "CardTraitScalingBuffDamage": {"es":"Ataque por cada punto","en":"Attack per point"},
+    "CardTraitRefine": {"es":"Bonificación al fundir","en":"Smelt bonus"},
+    "CardEffectDrawAdditionalNextTurn": {"es":"Cartas que se roban el próximo turno","en":"Cards drawn next turn"},
+    "CardEffectAdjustCorruption": {"es":"Corrupción añadida o retirada (−1: toda)","en":"Corruption added or removed (−1: all)"},
+    "CardEffectRecursion": {"es":"Cartas recuperadas o unidades invocadas","en":"Cards returned or units summoned"},
+    "CardEffectDrawType": {"es":"Cartas que se roban","en":"Cards drawn"},
+    "RelicEffectModifyCardAttack": {"es":"Modificador de ataque","en":"Attack modifier"},
+    "CardEffectDamagePerSourceAttack": {"es":"Multiplicador del ataque","en":"Attack multiplier"},
+    "RelicEffectModifyTriggerCount": {"es":"Modificador de activaciones","en":"Trigger count modifier"},
+    "RelicEffectModifyEnergyDuringDeployment": {"es":"Ember en el despliegue","en":"Ember during deployment"},
+    "CardEffectAdjustRoomCapacity": {"es":"Cambio de capacidad","en":"Capacity change"},
+    "RelicEffectModifyEnergyStartOfCombat": {"es":"Ember el primer turno","en":"Ember on the first turn"},
+    "RelicEffectIncreasePyreHealthFlat": {"es":"Salud máxima de la Pira","en":"Maximum Pyre health"},
+    "RelicEffectIncreasePyreAttackFlat": {"es":"Ataque de la Pira","en":"Pyre attack"},
+    "RelicEffectModifyMaxCorruption": {"es":"Capacidad de Corrupción","en":"Corruption capacity"},
+    "CardEffectMix": {"es": "Opciones de infusión", "en": "Infusion choices"},
+    "RoomStateCapacityModifier": {"es": "Ajustar la capacidad del piso", "en": "Adjust floor capacity"},
+    "RoomStateEnergyModifier": {"es": "Ganar Ember por turno", "en": "Gain Ember each turn"},
+    "RoomStateSpellCostModifier": {"es": "Ajustar el coste de los hechizos", "en": "Adjust spell cost"},
+    "RoomStateEquipmentCostModifier": {"es": "Ajustar el coste del equipo", "en": "Adjust equipment cost"},
     "CardEffectDamage": {
       "es": "Daño",
       "en": "Damage"
@@ -4365,7 +5277,6 @@
       "official-StarterImp"
     ],
     "extraKinds": [
-      "equipment",
       "blight",
       "junk"
     ],
@@ -4510,7 +5421,17 @@
       ],
       [
         "veneno",
-        "poison"
+        "poison",
+        "envenenar"
+      ],
+      [
+        "proteger",
+        "escudo",
+        "shield"
+      ],
+      [
+        "capacidad",
+        "capacity"
       ],
       [
         "ember",
@@ -4536,11 +5457,37 @@
       "de",
       "del",
       "al",
+      "y",
       "the",
+      "and",
       "a",
       "an",
       "to",
-      "of"
+      "of",
+      "hacer",
+      "hace",
+      "haz",
+      "poner",
+      "pon",
+      "aplicar",
+      "aplica",
+      "dar",
+      "añadir",
+      "quitar",
+      "ganar",
+      "más",
+      "menos",
+      "cada",
+      "deal",
+      "give",
+      "apply",
+      "add",
+      "remove",
+      "gain",
+      "more",
+      "less",
+      "each",
+      "every"
     ],
     "rarities": [
       {
@@ -4614,12 +5561,12 @@
       },
       {
         "title": {
-          "es": "Revisa y prueba el clan",
-          "en": "Review and test the clan"
+          "es": "Instala y prueba el clan",
+          "en": "Install and test the clan"
         },
         "description": {
-          "es": "Comprueba los datos y prepara el mod para el juego.",
-          "en": "Check the data and prepare the mod for the game."
+          "es": "Prepara el juego e instala tu clan.",
+          "en": "Set up the game and install your clan."
         }
       }
     ],
@@ -4646,9 +5593,31 @@
       "en": "This editor uses Trainworks Reloaded and Conductor, modding tools developed by the community. Trainworks Reloaded loads clan definitions and Conductor provides additional effects and utilities. They make it possible to create clans with existing components without the user writing code."
     },
     "thanks": {
-      "es": "Gracias a Brandon (tricksterguy en Discord) y a las demás personas que desarrollan y mantienen estas herramientas.",
-      "en": "Thanks to Brandon (tricksterguy on Discord) and everyone else who develops and maintains these tools."
+      "es": "Gracias a quienes desarrollan y mantienen estas herramientas.",
+      "en": "Thanks to everyone who develops and maintains these tools."
     },
+    "contributors": [
+      {
+        "name": "Amaury-Lepicard",
+        "github": "Amaury-Lepicard"
+      },
+      {
+        "name": "amaurylepicard-neovision",
+        "github": "amaurylepicard-neovision"
+      },
+      {
+        "name": "crazyjackel",
+        "github": "crazyjackel"
+      },
+      {
+        "name": "lostone-zc",
+        "github": "lostone-zc"
+      },
+      {
+        "name": "TricksterGuy",
+        "github": "TricksterGuy"
+      }
+    ],
     "tools": [
       {
         "name": "Trainworks Reloaded",
@@ -4671,7 +5640,13 @@
         "es": "Ataca antes que las unidades enemigas durante el combate.",
         "en": "Attacks before enemy units during combat."
       },
-      "fixed": true
+      "fixed": true,
+      "aliases": [
+        "atacar primero",
+        "ataca primero",
+        "attack first",
+        "strike first"
+      ]
     },
     {
       "status": "armor",
@@ -5175,7 +6150,13 @@
         "es": "Al atacar, se aplica el daño sobrante a la siguiente unidad enemiga.",
         "en": "When attacking, excess damage is applied to the subsequent enemy unit."
       },
-      "fixed": true
+      "fixed": true,
+      "aliases": [
+        "daño sobrante",
+        "daño que sobra",
+        "excess damage",
+        "leftover damage"
+      ]
     },
     {
       "status": "undying",
@@ -5601,7 +6582,76 @@
       "PunishedChamp2": "UpgradeTreePunished2.json"
     }
   },
+  "conditionalUpgradeText": {
+    "self":{"en":"Gain {stats} per stack of {status} on this unit.","es":"Añade {stats} por cada acumulación de {status} en esta unidad."},
+    "group":{"en":"Grant {stats} to {target} for each stack of {status} across those units.","es":"Añade {stats} a {target} por cada acumulación de {status} entre esas unidades."}
+  },
+  "nativeActionText": {
+    "nextDrawnCost":{"en":"Reduce the cost of the next card drawn by {amount}.","es":"Reduce en {amount} el coste de la próxima carta robada."}
+  },
+  "battleCardPiles": {
+    "0":{"en":"Add {amount} × {card} to your draw pile.","es":"Añade {amount} × {card} al mazo de robo."},
+    "1":{"en":"Add {amount} × {card} to your discard pile.","es":"Añade {amount} × {card} al descarte."},
+    "3":{"en":"Add {amount} × {card} to your hand.","es":"Añade {amount} × {card} a tu mano."},
+    "5":{"en":"Put {amount} × {card} on top of your draw pile.","es":"Pon {amount} × {card} encima del mazo de robo."},
+    "7":{"en":"Shuffle {amount} × {card} into your deck.","es":"Mezcla {amount} × {card} en tu mazo."}
+  },
+  "nativeRelicTiming": {
+    "unit":{"en":"unit","es":"unidad"},
+    "firstSpawn":{"en":"When the first {unit} is summoned each turn","es":"Al invocar el primer ejemplar de {unit} de cada turno"},
+    "chanceSpawn":{"en":"{chance}% chance when a unit is summoned","es":"{chance} % de probabilidad al invocar una unidad"},
+    "enemyChanceSpawn":{"en":"{chance}% chance when an enemy enters the train","es":"{chance} % de probabilidad cuando un enemigo entra en el tren"},
+    "RelicEffectAddEffectOnUnitSpawn":{"en":"When a {unit} is summoned","es":"Al invocar una unidad de tipo {unit}"},
+    "RelicEffectAddEffectStartOfTurn":{"en":"At the start of your turn","es":"Al comenzar tu turno"},
+    "RelicEffectAddEffectOnMooncycle":{"en":"When the moon cycles","es":"Al cambiar la fase lunar"},
+    "RelicEffectAddEffectOnStatusAdded":{"en":"When a qualifying status is added","es":"Al aplicar un estado que cumpla la condición"},
+    "RelicEffectAddEffectOnUnitDeath":{"en":"When a qualifying unit dies","es":"Al morir una unidad que cumpla la condición"}
+  },
   "nativeEffectLabels": {
+    "RelicEffectModifyCardMagicPowerOnCardPlayed": {"en":"Increase Magic Power after playing cards","es":"Aumentar el poder mágico al jugar cartas"},
+    "RelicEffectModifyEnergyOnMoonPhase": {"en":"Gain ember when the moon changes phase","es":"Ganar ember al cambiar la fase lunar"},
+    "RelicEffectModifyCorruptionStartOfCombat": {"en":"Add Corruption to each floor at the start of the battle","es":"Añadir Corrupción a cada piso al comienzo de la batalla"},
+    "RelicEffectAddGoldOnPurge": {"en":"Gain gold when a card is purged","es":"Ganar oro al purgar una carta"},
+    "CardEffectSpawnMonster": {"en":"Summon a unit","es":"Invocar una unidad"},
+    "CardEffectEnchant": {"en":"Apply an aura to units on the floor","es":"Aplicar un aura a las unidades del piso"},
+    "CardEffectDamagePerHp": {"en":"Deal damage based on health","es":"Infligir daño según la salud"},
+    "CardEffectBuffDamage": {"en":"Modify attack","es":"Modificar el ataque"},
+    "CardEffectPlayUnitTrigger": {"en":"Activate a unit’s trigger","es":"Activar una regla de una unidad"},
+    "CardEffectAdjustMaxHealth": {"en":"Change maximum health","es":"Cambiar la salud máxima"},
+    "CardEffectTransferAllStatusEffectsFromUnit": {"en":"Transfer statuses from a unit","es":"Transferir estados de una unidad"},
+    "CardEffectTransferAttackFromUnit": {"en":"Transfer attack from a unit","es":"Transferir ataque de una unidad"},
+    "CardEffectRemoveStatusEffectPerCorrupt": {"en":"Remove status stacks based on Corruption","es":"Retirar acumulaciones de un estado según la Corrupción"},
+    "CardEffectForceHatchCheck": {"en":"Check if an Egg can hatch","es":"Comprobar si un Huevo puede eclosionar"},
+    "CardEffectFreezeCard": {"en":"Freeze a card","es":"Congelar una carta"},
+    "CardEffectDamageFloorByFloor": {"en":"Deal damage floor by floor","es":"Infligir daño piso por piso"},
+    "CardEffectFeederRules": {"en":"Activate feeding effects","es":"Activar efectos de alimentación"},
+    "CardEffectRemoveEquipment": {"en":"Remove equipment","es":"Quitar el equipo"},
+    "CardEffectSetUnitAbility": {"en":"Set the unit’s ability","es":"Asignar la habilidad de la unidad"},
+    "RelicEffectAddEffectStartOfTurn": {"en":"Apply an effect at the start of the turn","es":"Aplicar un efecto al comienzo del turno"},
+    "RelicEffectAddEffectOnUnitSpawn": {"en":"Apply an effect when a unit is summoned","es":"Aplicar un efecto al invocar una unidad"},
+    "RelicEffectChanceAddEffectAfterSpawn": {"en":"Chance to apply an effect after a unit is summoned","es":"Probabilidad de aplicar un efecto después de invocar una unidad"},
+    "RelicEffectDamageEnemyOnFriendlyTrigger": {"en":"Damage an enemy when a friendly unit triggers the rule","es":"Dañar a un enemigo cuando una unidad aliada activa la regla"},
+    "RelicEffectSpawnUnitStartOfCombat": {"en":"Summon a unit at the start of battle","es":"Invocar una unidad al comienzo de la batalla"},
+    "RelicEffectSpawnUnitFromDeck": {"en":"Summon a unit from your deck","es":"Invocar una unidad de tu mazo"},
+    "RelicEffectDamageOnCardPlayed": {"en":"Deal damage when a card is played","es":"Infligir daño cuando se juega una carta"},
+    "CardEffectUnitAbilityTeleport": {"en":"Move to a chosen position","es":"Mover a una posición elegida"},
+    "CardEffectDamagePerSourceAttack": {"en":"Deal damage based on the source’s attack","es":"Infligir daño según el ataque de quien lo causa"},
+    "CardEffectBump": {"es": "Mover entre pisos", "en": "Move between floors"},
+    "CardEffectMix": {"es": "Mezclar", "en": "Mix"},
+    "CardEffectUpdateMoonPhaseResource": {"es":"Actualizar la fase lunar del piso","en":"Update the floor’s moon phase"},
+    "CardEffectSpawnMonsterOrAddStatusEffect": {"es":"Invocar o aplicar un estado a la unidad existente","en":"Summon or apply a status to the existing unit"},
+    "RoomStateDrawRandomConsumedCardsPreCombatModifier": {"es": "Recuperar hechizos consumidos", "en": "Return consumed spells to hand"},
+    "RoomStateAddStatusEffectOnEnemyEnter": {"es": "Aplicar estados al enemigo", "en": "Apply statuses to the enemy"},
+    "RoomStateCapacityModifier": {"es": "Ajustar la capacidad del piso", "en": "Adjust floor capacity"},
+    "RoomStateCorruptionModifier": {"es": "Ajustar Corrupción y Corrupción vacía", "en": "Adjust Corruption and Empty Corruption"},
+    "RoomStateRecastSpellModifier": {"es": "Volver a lanzar el último hechizo jugado en este piso", "en": "Recast the last spell played on this floor"},
+    "RoomStateNewMoonAlwaysActiveModifier": {"es": "Mantener activos los efectos de Luna nueva", "en": "Keep New Moon effects active"},
+    "RoomStateMagicalPowerModifier": {"es": "Ajustar el poder mágico", "en": "Adjust Magic Power"},
+    "RoomStateEnergyModifier": {"es": "Ganar Ember por turno", "en": "Gain Ember each turn"},
+    "RoomStateSpawnUnitOnUnitSpawnModifier": {"es": "Crear una copia de la unidad jugada", "en": "Create a copy of the unit played"},
+    "RoomStateStatusEffectStackModifier": {"es": "Aumentar las cargas del estado recibido", "en": "Increase the stacks of the status gained"},
+    "RoomStateSpellCostModifier": {"es": "Ajustar el coste de los hechizos", "en": "Adjust spell cost"},
+    "RoomStateEquipmentCostModifier": {"es": "Ajustar el coste del equipo", "en": "Adjust equipment cost"},
     "CardEffectAddStatusEffect": {
       "es": "Aplicar estados",
       "en": "Apply statuses"
@@ -5619,7 +6669,7 @@
       "en": "Draw cards"
     },
     "CardEffectGainEnergy": {
-      "es": "Ganar ember",
+      "es": "Ganar ascuas",
       "en": "Gain ember"
     },
     "CardEffectAttachEquipment": {
@@ -5645,10 +6695,6 @@
     "CardEffectAddRunCard": {
       "es": "Añadir cartas al mazo",
       "en": "Add cards to deck"
-    },
-    "CardEffectBump": {
-      "es": "Mover una unidad",
-      "en": "Move a unit"
     },
     "CardEffectFloorRearrange": {
       "es": "Cambiar posición",
@@ -5840,6 +6886,9 @@
     "CardEffectAddCardUpgradeToUnits"
   ],
   "spellRecipeDescriptions": {
+    "mix": {"es": "Mezclar.", "en": "Mix."},
+    "advance": {"es":"Avanzar.","en":"Advance."},
+    "retreat": {"es":"Retirar.","en":"Retreat."},
     "damage": {
       "es": "Inflige {amount} de daño.",
       "en": "Deal {amount} damage."
@@ -6170,42 +7219,68 @@
     "defaultDirectories": [
       "{APPDATA}/Thunderstore Mod Manager/DataFolder/MonsterTrain2/profiles/Default/BepInEx/plugins"
     ],
+    "profileCheck": {
+      "button": {
+        "en": "Check this profile",
+        "es": "Comprobar este perfil"
+      },
+      "again": {
+        "en": "Check again",
+        "es": "Volver a comprobar"
+      },
+      "checking": {
+        "en": "Checking this profile…",
+        "es": "Comprobando este perfil…"
+      },
+      "failed": {
+        "en": "Could not read this folder. Choose your profile folder or check the requirements in your mod manager.",
+        "es": "No se pudo leer la carpeta. Elige la carpeta de tu perfil o comprueba los requisitos en tu gestor de mods."
+      },
+      "found": {
+        "en": "The three required files were found.",
+        "es": "Se encontraron los tres archivos necesarios."
+      },
+      "action": {
+        "en": "Check the following results in your mod manager.",
+        "es": "Revisa estos resultados en tu gestor de mods."
+      },
+      "enabled": {
+        "en": "Check in your mod manager that all three packages are enabled.",
+        "es": "Comprueba en tu gestor de mods que los tres paquetes estén activados."
+      },
+      "ready": {
+        "en": "Found",
+        "es": "Encontrado"
+      },
+      "missing": {
+        "en": "Missing. Install it in this profile.",
+        "es": "Falta. Instálalo en este perfil."
+      },
+      "outdated": {
+        "en": "Update to {version} or later.",
+        "es": "Actualiza a la versión {version} o posterior."
+      },
+      "duplicate": {
+        "en": "More than one copy found. Keep one version enabled and remove extra copies from this profile.",
+        "es": "Hay más de una copia. Deja una versión activada y retira las copias sobrantes del perfil."
+      },
+      "unknown": {
+        "en": "File found. Check that the installed version is {version} or later.",
+        "es": "Archivo encontrado. Comprueba que la versión instalada sea la {version} o posterior."
+      }
+    },
     "text": {
-      "reviewTitle": {
-        "es": "1. Revisa tu clan",
-        "en": "1. Review your clan"
-      },
-      "reviewHelp": {
-        "es": "Comprueba el resumen. Si falta algo, pulsa el aviso para volver al paso que debes completar.",
-        "en": "Check the summary. If something is missing, select the message to return to that step."
-      },
-      "reviewTech": {
-        "es": "Se revisan nombres, campeones, sendas y cartas necesarias. Esta revisión no instala archivos ni prueba el clan dentro del juego.",
-        "en": "Checks names, champions, paths and required cards. This review does not install files or test the clan in the game."
-      },
-      "reviewReady": {
-        "es": "El clan está listo para instalar.",
-        "en": "Your clan is ready to install."
-      },
-      "reviewPending": {
-        "es": "Revisando el clan...",
-        "en": "Reviewing your clan..."
-      },
-      "reviewAgain": {
-        "es": "Volver a revisar",
-        "en": "Review again"
-      },
       "gameTitle": {
-        "es": "2. Prepara el juego",
-        "en": "2. Prepare the game"
+        "es": "1. Prepara el juego",
+        "en": "1. Prepare the game"
       },
       "gameHelp": {
         "es": "Instala y activa estos tres requisitos en el perfil donde vas a jugar. Si ya lo has hecho, marca la casilla para continuar.",
         "en": "Install and enable these three requirements in the profile you will play with. If you have already done this, tick the box to continue."
       },
       "gameTech": {
-        "es": "El gestor instala BepInExPack, Trainworks Reloaded y Conductor para que el juego cargue tu clan. El creador no los instala ni comprueba su presencia.",
-        "en": "Your mod manager installs BepInExPack, Trainworks Reloaded and Conductor so the game can load your clan. The creator does not install or check them."
+        "es": "Instala los tres paquetes con tu gestor de mods. Si eliges comprobar el perfil, el creador busca los archivos y lee las versiones disponibles.",
+        "en": "Install all three packages through your mod manager. If you choose to check the profile, the creator looks for the files and reads available versions."
       },
       "gameGuide": {
         "es": "Ver instrucciones y ejemplo de Thunderstore",
@@ -6216,8 +7291,8 @@
         "en": "I have installed and enabled all three requirements in my profile."
       },
       "installTitle": {
-        "es": "3. Instala tu clan y pruébalo",
-        "en": "3. Install your clan and try it"
+        "es": "2. Instala tu clan y pruébalo",
+        "en": "2. Install your clan and try it"
       },
       "installHelp": {
         "es": "Cierra Monster Train 2 y revisa la carpeta de destino. Después pulsa Instalar mi clan.",
@@ -6276,8 +7351,8 @@
         "en": "If something is missing to prepare the clan"
       },
       "compileTech": {
-        "es": "Para compilar se necesita .NET SDK. El creador incluye las referencias de Trainworks y Conductor; son independientes de los requisitos que instalas en el juego.",
-        "en": "Compilation requires the .NET SDK. The creator includes Trainworks and Conductor references; these are separate from the prerequisites you install in the game."
+        "es": "Para compilar se necesita el SDK de .NET. El creador descarga las referencias la primera vez que compilas y las guarda para reutilizarlas.",
+        "en": "Compilation requires the .NET SDK. The creator downloads the references the first time you compile and saves them for reuse."
       },
       "help": {
         "es": "Información: {name}",
@@ -6287,6 +7362,10 @@
         "es": "Comprobando lo necesario para preparar el clan...",
         "en": "Checking what is needed to prepare your clan..."
       },
+      "compileDownloadPending": {
+        "es": "La primera compilación descargará las referencias necesarias. Necesitas conexión a Internet.",
+        "en": "The first build will download the required references. You’ll need an internet connection."
+      },
       "compileReady": {
         "es": "Todo listo para preparar los archivos del clan.",
         "en": "Everything needed to prepare your clan files is available."
@@ -6295,9 +7374,13 @@
         "es": "Falta .NET SDK {version} o superior. Instálalo desde el enlace y vuelve a comprobar.",
         "en": ".NET SDK {version} or later is missing. Install it using the link, then check again."
       },
+      "gameFolderLabel": {"en": "Folder where Monster Train 2 is installed", "es": "Carpeta donde está instalado Monster Train 2"},
+      "gameFolderCheck": {"en": "Check this folder", "es": "Comprobar esta carpeta"},
+      "gameFolderChecking": {"en": "Checking the folder…", "es": "Comprobando la carpeta…"},
+      "gameFolderInvalid": {"en": "Enter the full path to the folder that contains MonsterTrain2_Data.", "es": "Introduce la ruta completa de la carpeta que contiene MonsterTrain2_Data."},
       "compileGameMissing": {
-        "es": "No se encuentran los archivos necesarios de Monster Train 2. Instala el juego y vuelve a comprobar.",
-        "en": "Required Monster Train 2 files could not be found. Install the game and check again."
+        "es": "No se encuentran los archivos necesarios de Monster Train 2. Si ya lo tienes instalado, indica su carpeta.",
+        "en": "Required Monster Train 2 files could not be found. If the game is installed, enter its folder."
       },
       "compileCreatorMissing": {
         "es": "Faltan archivos del creador para preparar el clan. Vuelve a extraer el programa completo y comprueba de nuevo.",
@@ -6311,6 +7394,40 @@
         "es": "Comprobar de nuevo",
         "en": "Check again"
       }
+    }
+  },
+  "bulkRemoval": {
+    "uninstall": {
+      "en": "Uninstall all",
+      "es": "Desinstalar todos"
+    },
+    "trash": {
+      "en": "Delete all drafts",
+      "es": "Borrar todos los borradores"
+    },
+    "uninstallHelp": {
+      "en": "Uninstall these clans from the recorded folders. The creator keeps a backup in each profile. Close Monster Train 2 first.",
+      "es": "Desinstala estos clanes de las carpetas registradas. El creador guarda un respaldo en cada perfil. Cierra Monster Train 2 antes de continuar."
+    },
+    "trashHelp": {
+      "en": "Move these drafts to Deleted drafts. You can restore them there.",
+      "es": "Envía estos borradores a Borradores borrados. Puedes recuperarlos desde allí."
+    },
+    "uninstallDone": {
+      "en": "Uninstalled: {done} of {total}",
+      "es": "Desinstalados: {done} de {total}"
+    },
+    "trashDone": {
+      "en": "Moved to Deleted drafts: {done} of {total}",
+      "es": "Enviados a la papelera: {done} de {total}"
+    },
+    "changed": {
+      "en": "The installation folder changed. Use the clan’s individual uninstall option to review it.",
+      "es": "La carpeta de instalación ha cambiado. Usa la opción individual del clan para revisarla."
+    },
+    "failed": {
+      "en": "Could not finish for these clans",
+      "es": "No se pudo completar la acción en estos clanes"
     }
   },
   "clanRemoval": {
@@ -6475,6 +7592,10 @@
       "en": "Triggers when this unit takes damage from your cards, units or artifacts."
     }
   },
+  "spellTimings": [
+    {"value":"on_spawn","label":{"es":"Al jugar el hechizo","en":"When the spell is played"}},
+    {"value":"on_unplayed_positive","label":{"es":"Reserva: al no jugarlo","en":"Reserve: when left in hand"}}
+  ],
   "officialCardTriggers": [
     {
       "value": "on_cast",
@@ -7541,7 +8662,18 @@
       "en": "Negates Inert and Dormant while it has stacks. Loses one stack at the end of each turn."
     }
   },
+  "compilerUpdates": {
+    "title": {"es": "Versiones de compilación", "en": "Compilation versions"},
+    "available": {"es": "Hay nuevas versiones para compilar", "en": "New compilation versions available"},
+    "help": {"es": "Puedes seguir usando tus versiones actuales. Si eliges una nueva, se usará al compilar. Para jugar, actualiza los mods por separado en tu gestor.", "en": "You can keep your current versions. If you choose a newer one, it will be used for compilation. To play, update the mods separately in your mod manager."},
+    "download": {"es": "Descargar y usar {version}", "en": "Download and use {version}"},
+    "reset": {"es": "Volver a {version}", "en": "Switch back to {version}"},
+    "downloading": {"es": "Preparando la versión elegida…", "en": "Preparing the selected version…"}
+  },
   "jsonViewer": {
+    "cardButton": {"es": "Ver JSON de la carta", "en": "View card JSON"},
+    "cardTitle": {"es": "JSON de {name}", "en": "JSON for {name}"},
+    "cardHelp": {"es": "Definición de esta carta y sus recursos asociados. Solo lectura.", "en": "This card’s definition and related resources. Read only."},
     "button": {
       "es": "Ver archivos JSON",
       "en": "View JSON files"
@@ -7579,8 +8711,8 @@
       "en": "Technical details (optional)"
     },
     "notReady": {
-      "es": "Completa la revisión del clan para ver sus archivos JSON.",
-      "en": "Complete the clan review to view its JSON files."
+      "es": "Completa los datos del clan para ver sus archivos JSON.",
+      "en": "Complete the clan data to view its JSON files."
     }
   },
   "quickStart": {
@@ -7594,7 +8726,7 @@
       9,
       10,
       11,
-      16
+      19
     ]
   },
   "backups": {
@@ -7605,9 +8737,9 @@
     "extension": ".mt2draft"
   },
   "usabilityText": {
-    "quickTitle": {
-      "es": "Crear mi primer clan",
-      "en": "Create my first clan"
+    "startQuestion": {
+      "es": "¿Cómo quieres empezar?",
+      "en": "How would you like to start?"
     },
     "quickHelp": {
       "es": "Empieza con dos campeones, sus sendas, dos cartas iniciales y tres cartas de ejemplo ya preparadas. Cambia lo que quieras y pruébalo.",
@@ -7719,21 +8851,9 @@
       "es": "Completa este campo para continuar.",
       "en": "Complete this field to continue."
     },
-    "reviewed": {
-      "es": "Revisado por mí",
-      "en": "Reviewed by me"
-    },
-    "notReviewed": {
-      "es": "Sin revisar",
-      "en": "Not reviewed"
-    },
     "prepared": {
       "es": "Preparados",
       "en": "Prepared"
-    },
-    "reviewHelp": {
-      "es": "Preparado significa que hay datos suficientes. Marca Revisado por mí cuando lo hayas comprobado. Puedes continuar sin marcarlo.",
-      "en": "Prepared means there is enough data. Mark Reviewed by me after checking it. You can continue without marking it."
     },
     "cardRemoved": {
       "es": "Carta eliminada: {name}",
@@ -7776,8 +8896,8 @@
       "en": "This status records what the creator installed. It does not check changes made outside the program."
     },
     "goInstall": {
-      "es": "Revisar e instalar cambios",
-      "en": "Review and install changes"
+      "es": "Instalar cambios",
+      "en": "Install changes"
     },
     "rememberedFolder": {
       "es": "Se ha recuperado el destino que elegiste para este clan.",
@@ -7915,16 +9035,24 @@
       "es": "Desinstalado",
       "en": "Uninstalled"
     },
-    "reviewContinue": {
-      "es": "Revisado y continuar",
-      "en": "Reviewed and continue"
-    },
     "installNotRecorded": {
       "es": "El clan se ha instalado, pero el creador no ha podido recordar esta instalación. Puedes jugar con él.",
       "en": "The clan was installed, but the creator could not remember this installation. You can still play it."
     }
   },
   "errorGuidance": [
+    {
+      "code": "COMPILER_REFERENCES",
+      "title": {
+        "es": "No se pudieron descargar o verificar las referencias de compilación.",
+        "en": "The compilation references could not be downloaded or verified."
+      },
+      "action": {
+        "es": "Comprueba tu conexión a Internet y vuelve a intentarlo. Tu clan sigue guardado.",
+        "en": "Check your internet connection and try again. Your clan is still saved."
+      },
+      "retry": true
+    },
     {
       "code": "GAME_RUNNING",
       "patterns": [
@@ -8291,6 +9419,11 @@
       "recipes": []
     },
     {
+      "id": "move",
+      "label": {"es":"Mover una unidad","en":"Move a unit"},
+      "recipes": ["advance","retreat"]
+    },
+    {
       "id": "other",
       "label": {
         "es": "Otros efectos",
@@ -8316,6 +9449,8 @@
     "maxZoom": 3
   },
   "guidedText": {
+    "artifactRule": {"es":"Añadir una regla al artefacto","en":"Add a rule to the artifact"},
+    "addTrait": {"es":"Añadir una propiedad de carta","en":"Add a card property"},
     "resume": {
       "es": "Continuar con",
       "en": "Continue with"
@@ -8436,17 +9571,30 @@
       "es": "Aplicar sustitución",
       "en": "Apply replacement"
     },
+    "preservedEffectTarget": {
+      "es": "Este efecto usa directamente el objetivo del efecto que quitaste.",
+      "en": "This effect now directly uses the target of the effect you removed."
+    },
+    "abilityActivation": {"es": "Al activar la habilidad", "en": "When you activate this ability"},
+    "abilityCooldown": {"es": "Turnos de recarga", "en": "Cooldown (turns)"},
+    "abilityInitialCooldown": {"es": "Turnos de espera inicial", "en": "Initial cooldown (turns)"},
+    "abilityFloor": {"es": "Pisos que puedes seleccionar", "en": "Which floors you can target"},
+    "abilityCurrentFloor": {"es": "Solo el piso actual", "en": "Current floor only"},
+    "abilityAnyFloor": {"es": "Cualquier piso", "en": "Any floor"},
+    "replaceCopiedEffect": {"es": "Cambiar este efecto", "en": "Change this effect"},
+    "replaceCopiedHelp": {"es": "Elige un efecto. Tras aplicarlo, puedes ajustar sus opciones en el editor.", "en": "Choose a replacement. After applying it, you can adjust its options in the editor."},
+    "replaceCopiedApply": {"es": "Aplicar cambio", "en": "Apply change"},
+    "auxiliaryPyreDamage": {"es":"Daño a la Pira","en":"Damage to the Pyre"},
+    "equippedUnit": {"es": "La unidad equipada", "en": "The equipped unit"},
+    "whenEquipped": {"es": "Al equipar la carta", "en": "When the card is equipped"},
+    "sharedRelicTiming": {"en":"These actions share the artifact’s activation and conditions. Removing one action leaves the others in place.","es":"Estas acciones comparten la activación y las condiciones del artefacto. Quitar una acción conserva las demás."},
+    "sharedTriggerTiming": {
+      "es": "Este momento es común a los efectos de esta activación.",
+      "en": "This timing applies to all effects in this trigger."
+    },
     "nativeFixed": {
-      "es": "Este componente conserva condiciones especiales del juego. Puedes cambiar las cantidades disponibles o eliminarlo.",
-      "en": "This component preserves special game conditions. You can change the available amounts or remove it."
-    },
-    "nativeWhen": {
-      "es": "Según las condiciones de este efecto",
-      "en": "As defined by this effect"
-    },
-    "nativeTarget": {
-      "es": "Según la selección original del efecto",
-      "en": "As defined by the effect’s selection"
+      "es": "Puedes cambiar los campos que aparecen como controles o quitar este componente.",
+      "en": "You can change the fields shown as controls or remove this component."
     },
     "noAmount": {
       "es": "Este efecto no tiene una cantidad editable.",
@@ -8546,7 +9694,45 @@
     ],
     "pageSize": 24
   },
+  "nativeRoomTiming": {
+    "RoomStateAddEffectOnUnitDeath": {"es":"Cuando muere una unidad del piso","en":"When a unit on this floor dies"},
+    "RoomStateSpawnUnitOnUnitSpawnModifier": {"es":"Al jugar una unidad en el piso","en":"When a unit is played on this floor"},
+    "RoomStateAddEffectPreCombatModifier": {
+      "es": "Al comienzo del combate",
+      "en": "At the start of combat"
+    },
+    "RoomStateAddEffectPostCombatModifier": {
+      "es": "Al final del combate",
+      "en": "At the end of combat"
+    },
+    "RoomStateAddStatusEffectOnEnemyEnter": {
+      "es": "Cuando un enemigo entra en el piso",
+      "en": "When an enemy enters the floor"
+    },
+    "RoomStateRecastSpellModifier": {
+      "es": "Al final del turno",
+      "en": "At the end of the turn"
+    }
+  },
+  "nativeRoomTeams": {
+    "monsters": {
+      "es": "Unidades aliadas del piso",
+      "en": "Friendly units on this floor"
+    },
+    "heroes": {
+      "es": "Unidades enemigas del piso",
+      "en": "Enemy units on this floor"
+    },
+    "both": {
+      "es": "Unidades aliadas y enemigas del piso",
+      "en": "Friendly and enemy units on this floor"
+    }
+  },
   "nativeTargetLabels": {
+    "last_targeted_characters": {
+      "es": "Las unidades seleccionadas por el efecto anterior",
+      "en": "The units targeted by the previous effect"
+    },
     "self": {
       "es": "Esta unidad",
       "en": "This unit"
@@ -8694,8 +9880,8 @@
       "en": "Version recovered. The previous state remains available in recovery points."
     },
     "advice": {
-      "es": "Consejos para revisar tu clan",
-      "en": "Suggestions for reviewing your clan"
+      "es": "Consejos de equilibrio",
+      "en": "Balance suggestions"
     },
     "adviceHelp": {
       "es": "Son observaciones orientativas, no requisitos ni una garantía de equilibrio. No impiden instalar el clan.",
@@ -9069,6 +10255,13 @@
   "aiArt": {
     "maxText": 3000,
     "maxRecords": 500,
+    "referenceArtwork": [
+      {
+        "id": "ww-consumable-credits-intern",
+        "names": {"english": "Consumable Credits Intern", "spanish": "Becario de Créditos Consumibles"},
+        "picture": "assets/94a6d02f4112409181d0b5356009a7564eff604d722cc729bf3aaee68ee60acf.png"
+      }
+    ],
     "resources": [
       {
         "id": "clan-logo",
@@ -9514,52 +10707,270 @@
     ],
     "presets": [
       {
-        "id": "outlined",
+        "id": "awoken",
+        "group": "official",
         "label": {
-          "en": "Clear fantasy outlines",
-          "es": "Fantasía de contornos marcados"
-        },
-        "referenceExample": "freecompany-SpawnBattleChaplain",
-        "style": {
-          "en": "Readable fantasy illustration with clean dark outlines, strong silhouettes and two or three broad shading steps. Expressive faces, practical equipment, moderate detail.",
-          "es": "Ilustración de fantasía legible, con contornos oscuros definidos, siluetas claras y dos o tres sombras amplias. Caras expresivas, equipo práctico y detalle moderado."
-        },
-        "palette": {
-          "en": "Bronze, worn steel, parchment cream and a cold accent.",
-          "es": "Bronce, acero gastado, crema de pergamino y un acento frío."
-        }
-      },
-      {
-        "id": "academy",
-        "label": {
-          "en": "Colourful magical academy",
-          "es": "Academia de magia colorida"
-        },
-        "referenceExample": "ww-WW_T01",
-        "style": {
-          "en": "Expressive medieval fantasy cartoon, clear contours, rounded volumetric shapes and broad painted shadows. Humorous character roles, varied poses and readable props.",
-          "es": "Cartoon de fantasía medieval expresivo, con contornos claros, formas redondeadas con volumen y sombras pintadas amplias. Oficios con humor, poses variadas y accesorios legibles."
-        },
-        "palette": {
-          "en": "Blue, green, warm gold and cream, with purple magical accents.",
-          "es": "Azul, verde, oro cálido y crema, con acentos mágicos violetas."
-        }
-      },
-      {
-        "id": "painted",
-        "label": {
-          "en": "Painted fantasy with volume",
-          "es": "Fantasía pintada con volumen"
+          "es": "Despertados",
+          "en": "Awoken"
         },
         "referenceExample": "official-AnimusOfSpeed",
         "style": {
-          "en": "Stylized painted fantasy with strong volumes, selective texture, clear lighting and a readable silhouette. Keep detail focused on the main subject and simplify the background.",
-          "es": "Fantasía pintada estilizada, con volúmenes fuertes, textura selectiva, iluminación clara y silueta legible. Concentra el detalle en el protagonista y simplifica el fondo."
+          "en": "Paint botanical fantasy with clear volumes, selective texture and one strong light source. Concentrate detail on the subject and soften the background.",
+          "es": "Pinta fantasía botánica con volúmenes claros, textura selectiva y una luz principal. Detalla el sujeto y suaviza el fondo."
         },
         "palette": {
-          "en": "Deep green, pale ivory and contrasting magical light.",
-          "es": "Verde profundo, marfil claro y luz mágica de contraste."
+          "en": "Deep green and pale ivory with a contrasting magical light.",
+          "es": "Verde profundo y marfil claro con luz mágica de contraste."
         }
+      },
+      {
+        "id": "hellhorned",
+        "group": "official",
+        "label": {
+          "es": "Astados Infernales",
+          "en": "Hellhorned"
+        },
+        "referenceExample": "official-AlphaFiend",
+        "style": {
+          "en": "Use broad, angular shapes and strong silhouettes. Light rough armour and horns with restrained fire highlights.",
+          "es": "Usa formas anchas y angulosas y siluetas marcadas. Ilumina armaduras y cuernos con reflejos de fuego contenidos."
+        },
+        "palette": {
+          "en": "Ember orange, brick red, soot black and worn iron.",
+          "es": "Naranja ascua, rojo ladrillo, negro hollín y hierro gastado."
+        }
+      },
+      {
+        "id": "banished",
+        "group": "official",
+        "label": {
+          "es": "Desterrados",
+          "en": "Banished"
+        },
+        "referenceExample": "official-BattleDancer",
+        "style": {
+          "en": "Use sweeping lines, sweeping fabric and clearly readable poses. Give armour a few bright highlights against shapes with cool shadows.",
+          "es": "Usa líneas amplias, telas en movimiento y poses claras. Da a la armadura unos pocos reflejos sobre formas con sombra fría."
+        },
+        "palette": {
+          "en": "Ivory, gold and accents of blue or scarlet.",
+          "es": "Marfil, oro y acentos azules o escarlata."
+        }
+      },
+      {
+        "id": "stygian",
+        "group": "official",
+        "label": {
+          "es": "Guardia Estigia",
+          "en": "Stygian Guard"
+        },
+        "referenceExample": "official-ColdstingSiren",
+        "style": {
+          "en": "Use flowing silhouettes, aquatic forms and strong value separation. Keep the background soft as if seen underwater.",
+          "es": "Usa siluetas fluidas, formas acuáticas y contrastes claros. Suaviza el fondo como si se viera bajo el agua."
+        },
+        "palette": {
+          "en": "Deep teal, cool blue, hints of purple and pale light.",
+          "es": "Verde azulado oscuro, azul frío, toques púrpura y luz clara."
+        }
+      },
+      {
+        "id": "umbra",
+        "group": "official",
+        "label": {
+          "es": "Umbra",
+          "en": "Umbra"
+        },
+        "referenceExample": "official-AlloyedConstruct",
+        "style": {
+          "en": "Contrast large dark masses with a small, sharply readable light source. Use clean contours for stone, metal or shadow.",
+          "es": "Contrasta grandes masas oscuras con un foco pequeño y nítido. Define contornos claros para la piedra, el metal o la sombra."
+        },
+        "palette": {
+          "en": "Charcoal, brass, amber and a small bright accent.",
+          "es": "Carbón, latón, ámbar y un pequeño acento luminoso."
+        }
+      },
+      {
+        "id": "remnant",
+        "group": "official",
+        "label": {
+          "es": "Restos de la Fusión",
+          "en": "Melting Remnant"
+        },
+        "referenceExample": "official-Monstrosity",
+        "style": {
+          "en": "Shape wax and smoke with rounded, slightly irregular forms. Focus the composition with warm local light and leave room around the silhouette.",
+          "es": "Da forma a la cera y el humo con formas redondeadas e irregulares. Usa luz cálida localizada y deja margen alrededor de la silueta."
+        },
+        "palette": {
+          "en": "Wax yellow, burnt orange, faded burgundy and dark brown.",
+          "es": "Amarillo cera, naranja quemado, granate apagado y marrón oscuro."
+        }
+      },
+      {
+        "id": "wurmkin",
+        "group": "official",
+        "label": {
+          "es": "Wurmkin",
+          "en": "Wurmkin"
+        },
+        "referenceExample": "official-BogChrysalis",
+        "style": {
+          "en": "Combine firm shell shapes and translucent crystal. Use a restrained glow to separate the subject from a simplified bog.",
+          "es": "Combina caparazones firmes y cristal translúcido. Usa un brillo contenido para separar el sujeto de un pantano simplificado."
+        },
+        "palette": {
+          "en": "Peat green, violet, lilac and bright pink accents.",
+          "es": "Verde turba, violeta, lila y acentos rosa vivos."
+        }
+      },
+      {
+        "id": "pyreborne",
+        "group": "official",
+        "label": {
+          "es": "Hijos de la Pira",
+          "en": "Pyreborne"
+        },
+        "referenceExample": "official-BloatedWhelp",
+        "style": {
+          "en": "Use a chunky dragon silhouette, rounded volumes and a single flame or metal highlight. Keep scenery secondary.",
+          "es": "Usa una silueta de dragón compacta, volúmenes redondeados y un solo foco de fuego o reflejo metálico. Deja el paisaje en segundo plano."
+        },
+        "palette": {
+          "en": "Warm gold, copper, red and cool shadow.",
+          "es": "Oro cálido, cobre, rojo y sombras frías."
+        }
+      },
+      {
+        "id": "lunacoven",
+        "group": "official",
+        "label": {
+          "es": "Aquelarre Lunar",
+          "en": "Luna Coven"
+        },
+        "referenceExample": "official-AuroraWeaver",
+        "style": {
+          "en": "Use ribbons of light, flowing shapes and clear separation between an elegant figure and the night around it.",
+          "es": "Usa cintas de luz, formas fluidas y una separación clara entre la figura y su entorno nocturno."
+        },
+        "palette": {
+          "en": "Night blue, violet, turquoise and pale silver.",
+          "es": "Azul noche, violeta, turquesa y plata clara."
+        }
+      },
+      {
+        "id": "underlegion",
+        "group": "official",
+        "label": {
+          "es": "Legión Subterránea",
+          "en": "Underlegion"
+        },
+        "referenceExample": "official-ClusterColonel",
+        "style": {
+          "en": "Use compact mushroom silhouettes, broad painted shadows and a few bright spore details. Keep each creature distinct.",
+          "es": "Usa siluetas de hongos compactas, sombras amplias pintadas y unos pocos detalles de esporas brillantes. Distingue cada criatura."
+        },
+        "palette": {
+          "en": "Moss green, ochre, soil brown and bright accent colours.",
+          "es": "Verde musgo, ocre, marrón tierra y acentos vivos."
+        }
+      },
+      {
+        "id": "lazarusleague",
+        "group": "official",
+        "label": {
+          "es": "Liga de Lázaro",
+          "en": "Lazarus League"
+        },
+        "referenceExample": "official-DoubleEdgedBearer",
+        "style": {
+          "en": "Show visibly assembled parts and one clearly readable experiment or tool. Keep stitching, bolts and glass highlights selective.",
+          "es": "Muestra piezas ensambladas y un experimento o herramienta fácil de leer. Usa costuras, tornillos y reflejos de vidrio con moderación."
+        },
+        "palette": {
+          "en": "Muted steel and leather with vivid green or cyan accents.",
+          "es": "Acero y cuero apagados con acentos verdes o cian vivos."
+        }
+      },
+      {
+        "id": "railforged",
+        "group": "official",
+        "label": {
+          "en": "Railforged",
+          "es": "Forjados del Raíl"
+        },
+        "referenceExample": "official-CrucibleSteward",
+        "style": {
+          "en": "Use a heavy industrial silhouette, forged plates and one clearly glowing core. Suggest workshop depth with broad shapes.",
+          "es": "Usa una silueta industrial pesada, placas forjadas y un núcleo luminoso claro. Sugiere profundidad con formas amplias de taller."
+        },
+        "palette": {
+          "en": "Copper, dark steel, hot orange and cool shadows.",
+          "es": "Cobre, acero oscuro, naranja caliente y sombras frías."
+        }
+      },
+      {
+        "id": "punished",
+        "group": "official",
+        "label": {
+          "es": "Los Castigados",
+          "en": "The Punished"
+        },
+        "referenceExample": "official-BrandedApostate",
+        "style": {
+          "en": "Use Gothic shapes, dramatic framing and a sharp rim light on dark armour or fabric. Keep the silhouette readable at card size.",
+          "es": "Usa formas góticas, encuadre dramático y luz de borde en armaduras o telas oscuras. Mantén la silueta legible a tamaño de carta."
+        },
+        "palette": {
+          "en": "Charcoal, bone ivory, crimson and limited violet or gold accents.",
+          "es": "Carbón, marfil hueso, carmesí y acentos limitados violetas o dorados."
+        }
+      },
+      {
+        "id": "succclan",
+        "group": "community",
+        "label": {
+          "en": "SuccClan",
+          "es": "SuccClan"
+        },
+        "referenceExample": "succclan-ShadowEmbrace",
+        "additionalExamples": [
+          "succclan-SpawnEnvyGhost",
+          "succclan-SpawnGreedGhost"
+        ],
+        "style": "Create artwork for SuccClan, a Monster Train 2 clan inspired by the seven deadly sins.\n\nSTYLE\nUse polished 2D cartoon fantasy with a Western comic-book feel. Use clean, dark outlines, readable silhouettes, large blocks of colour, simple cel shading, a few tones per material and restrained highlights. Avoid realism, painterly rendering, anime faces, fine textures, filigree and excessive particles. The artwork must remain clear at small card size.\n\nCHARACTERS\nKeep everything strictly safe for work. Use opaque, modest clothing and non-suggestive poses. Avoid nudity and sexualisation, including when depicting Lust. Humanoids are mostly reptilian nagas and fauns with recognisable animal traits. Keep other creatures where appropriate. The sin ghosts belong to the same visual family but differ in silhouette, expression, action and colour. Their bodies carry no icons or symbols.\n\nIDENTITY AND COLOUR\nUse the attached approved images as the main style and design references. Preserve each returning character’s colours, clothing, face, anatomy and equipment. Start with purple, violet, magenta, burgundy and small gold accents. Give each card its own composition and accent colour. Avoid a uniform purple wash.\n\nCOMPOSITION AND SETTING\nUse one large, recognisable character or object with breathing room around the head, weapons and accessories. Make the action or effect easy to read. Use varied Gothic or medieval settings, preferably at night, with simplified, slightly softened backgrounds. Vary the setting beyond train interiors.\n\nDELIVERY BY ASSET\n- Card art. Paint a complete scene with a narrative background.\n- Combat character. Show the whole figure on true transparency, including gaps between limbs. Omit the floor and any rectangular shadow.\n- Equipment or artifact. Make the object dominate the image.\n- Icon. Use very simple forms that read in miniature.\n- Frame or banner. Match the supplied template and margins exactly. Keep all variants aligned.\nGenerate only the requested asset. Keep illustrations free of text, interface elements, statistics and card frames.\n\nBRIEF FOR EACH REQUEST\nCard or asset: […]. Main action: […]. Character or object: […]. Setting: […]. Required details: […].",
+        "palette": ""
+      },
+      {
+        "id": "ww",
+        "group": "community",
+        "label": {
+          "en": "W&W Inc.",
+          "es": "W&W Inc."
+        },
+        "referenceExample": "ww-consumable-credits-intern",
+        "additionalExamples": [
+          "ww-WW_T01",
+          "ww-WW_T02"
+        ],
+        "style": "Create artwork for W&W Inc., a medieval magic academy clan for Monster Train 2.\n\nSTYLE\nUse polished, expressive and playful cartoon fantasy. Draw defined outlines of varying thickness, clear solid forms, broad painted shadows and moderate detail. Keep the card readable in miniature. Aim for charm and personality. Avoid childish proportions, anime, photorealism and an overly dark finish.\n\nCHARACTERS\nWizards have blue skin, a long rectangular head, a broad jaw, strong brows and a masculine appearance. Witches have green skin, a rounded face, expressive brows and distinctive front teeth. Both have two eyes with one iris each, no nose and exactly three digits per hand, including the thumb. They are invented humanoids without fins, gills, elven ears or animal traits. Use varied colours and wavy, curly or unruly hairstyles. Wizards may have natural beards. Avoid fake beards. Witches have no beards.\n\nIDENTITY AND COLOUR\nUse the approved pictures as anchors for identity, anatomy and rendering. Keep colours and distinguishing features consistent when clothing, pose or setting changes. Vary adult ages, body shapes, expressions and poses. Use stocky, tall, short or lanky figures with coherent anatomy. Avoid chibi proportions, oversized heads and excessively stylised bodies. Let gestures, professions and props carry the humour. Use distinctive medieval academic clothes with school archetypes for each role. Give wizards and witches equally detailed outfits. Keep everything safe for work with opaque clothing, covered necklines, no suggestive poses and no sexualised armour.\n\nCOMPOSITION AND SETTING\nMake the unit, spell or object the focal point. Use a clear silhouette, readable action and comfortable margins. Keep enemies secondary when needed. Vary poses and academy spaces: classrooms, libraries, courtyards, corridors, laboratories, staircases and the observatory. Give the background depth and moderate complexity without overwhelming the subject.\n\nDELIVERY BY ASSET\n- Card art. Use a vertical 210:250 composition, readable at 210 × 250 px.\n- Spell. Show the requested effect and exact projectile count. A lone projectile can sit within a full scene. Add characters only when requested. An effect like Frozen does not automatically call for ice magic.\n- Combat sprite. Show a complete character facing right with true transparency and both feet grounded consistently.\nKeep illustrations free of text, numbers, interface elements, frames and watermarks.\n\nBRIEF FOR EACH REQUEST\nCard or asset: […]. Main action: […]. Character or object: […]. Setting: […]. Required details: […].",
+        "palette": ""
+      },
+      {
+        "id": "freecompany",
+        "group": "community",
+        "label": {
+          "en": "The Free Company",
+          "es": "The Free Company"
+        },
+        "referenceExample": "freecompany-SpawnBattleChaplain",
+        "additionalExamples": [
+          "freecompany-SpawnCutpurse",
+          "freecompany-SpawnCampBrawler"
+        ],
+        "style": "Create artwork for The Free Company, a clan of goblinoid mercenaries in a dark fantasy card game.\n\nSTYLE\nUse hand-painted 2D illustration with clear silhouettes, defined dark outlines, strong shading, moderate texture and vivid but weathered colours. Aim for adventurous fantasy with wit and personality. Avoid photorealism, anime, childish proportions, plastic surfaces and excessive detail.\n\nCHARACTERS\nMake people expressive, capable and battle-worn. Their armour, leather, cloth, weapons and tools should feel used, patched and mismatched.\n\nIDENTITY AND COLOUR\nAttach two or three approved cards as visual references, such as Roderic, Cutpurse and Camp Brawler. Match the rendering and overall style while developing an original character design or composition for each new subject. When the same character returns, preserve their face, hair, eyes, clothing, equipment and colours exactly. Use dark red, cream, steel, leather brown and bronze, with other colours where they distinguish the character or magic.\n\nCOMPOSITION AND SETTING\nCommunicate one idea per image and keep it readable at card size. Show the specific spell effect through action, characters or objects. Use coins, gold and glitter only when they belong to that effect.\n\nDELIVERY BY ASSET\n- Card art. Use an approximately 21:25 vertical composition with an opaque scene that reaches the edges. Keep the subject large with enough margin to protect the head and weapons from the frame. Prepare the final PNG at 210 × 250 px.\n- Summoned unit. Keep the same design as the card. Show the full body, weapon and accessories on true transparency without a scene, floor or cast shadow. Keep both feet intact and on the same ground line. Preserve apparent size between poses.\n- Spell, room or equipment. Make one card illustration showing the effect, location or object clearly. Request a separate transparent sprite only if the asset specifically needs one.\n- Relic. Isolate one object on true transparency. Keep it readable at 256 × 256 and 96 × 96 px. Resize the same master for the smaller icon.\nKeep artwork free of text, lettering, numbers, frames, interface icons, statistics, logos, signatures and watermarks. Work on one requested asset at a time. If the brief requests a sheet of alternatives, each cell is a separate option for that same asset. Describe the specific effect and use approved references; a broad request for Monster Train 2 style alone is too vague.\n\nBRIEF FOR EACH REQUEST\nCard or asset: […]. Main action: […]. Character or object: […]. Setting: […]. Required details: […].",
+        "palette": ""
       }
     ]
   },
@@ -9604,6 +11015,11 @@
       "en": "These examples help describe a visual style. You can change the text and colours. Existing images are not repainted.",
       "es": "Estos ejemplos ayudan a describir un estilo visual. Puedes cambiar el texto y los colores. Las imágenes existentes no se repintan."
     },
+    "officialStyles": {"en": "Official clans", "es": "Clanes oficiales"},
+    "communityStyles": {"en": "Community clans", "es": "Clanes de la comunidad"},
+    "readStyleGuide": {"en": "Read the full style guide in English", "es": "Leer la guía de estilo completa en inglés"},
+    "approvedReferences": {"en": "Additional style references", "es": "Referencias de estilo adicionales"},
+    "communityPromptLanguage": {"en": "The community style guide and generated instructions are in English. Attach the reference images yourself.", "es": "La guía de estilo de la comunidad y las instrucciones generadas están en inglés. Adjunta tú las imágenes de referencia."},
     "customStyle": {
       "en": "Adjust the style",
       "es": "Personalizar el estilo"
@@ -9878,5 +11294,690 @@
         "es": "El arte de cartas, la selección de campeón y el estandarte se ven bien."
       }
     }
-  ]
+  ],
+  "firstPlayText": {
+    "suggestedExamples": {
+      "es": "Ideas para este paso",
+      "en": "Ideas for this step"
+    },
+    "allExamples": {
+      "es": "Ver todos los ejemplos ({count})",
+      "en": "See all examples ({count})"
+    },
+    "removeFilter": {
+      "es": "Quitar filtro «{filter}»",
+      "en": "Clear filter: {filter}"
+    },
+    "copyTitle": {
+      "es": "Qué se copiará",
+      "en": "What will be copied"
+    },
+    "copyBehavior": {
+      "es": "Se copian los efectos y habilidades. Tu carta conserva su nombre, arte y valores básicos.",
+      "en": "The copy takes the effects and abilities. Your card keeps its name, artwork and base stats."
+    },
+    "copyPath": {
+      "es": "Se copian los tres niveles de esta senda.",
+      "en": "All three levels of this path are copied."
+    },
+    "copyCard": {
+      "es": "Se copian los valores, habilidades y efectos del ejemplo, junto con su arte si está disponible.",
+      "en": "The copy takes the example’s stats, abilities and effects, plus artwork when available."
+    },
+    "editCopy": {
+      "es": "Puedes editar tu copia. Los efectos especiales conservan sus condiciones y se pueden quitar.",
+      "en": "You can edit your copy. Special effects keep their conditions and can be removed."
+    },
+    "statsOnly": {
+      "es": "Consulta los cambios de valores de este nivel.",
+      "en": "See the stat changes for this level."
+    },
+    "gameCharacter": {
+      "es": "El personaje en combate usa el recurso de tu juego. Si no está disponible en tu instalación, añade tu propia imagen al editar la carta.",
+      "en": "The combat character uses artwork from your game. If it is unavailable in your installation, add your own image when editing the card."
+    },
+    "missingCharacter": {
+      "es": "Este ejemplo no incluye una imagen para el personaje en combate. Puedes añadir la tuya.",
+      "en": "This example has no included combat character image. You can add your own."
+    },
+    "combatArt": {
+      "es": "Personaje en combate",
+      "en": "Combat character"
+    },
+    "combatArtHelp": {
+      "es": "Es la imagen de la unidad cuando la colocas en un piso del tren.",
+      "en": "This is the image of the unit when you place it on a train floor."
+    },
+    "illustrationHelp": {
+      "es": "Esta imagen aparece en la carta.",
+      "en": "This image appears on the card."
+    },
+    "addOwnImage": {
+      "es": "Añadir mi imagen",
+      "en": "Add my image"
+    },
+    "startEffect": {
+      "es": "Empezar con un efecto de ejemplo",
+      "en": "Start with an example effect"
+    },
+    "pickEffect": {
+      "es": "Elige una frase",
+      "en": "Choose a sentence"
+    },
+    "fixIssues": {
+      "es": "Corrige estas tareas antes de instalar",
+      "en": "Fix these items before installing"
+    },
+    "confirmSetup": {
+      "es": "Confirma en «Prepara el juego» que instalaste los requisitos en este perfil.",
+      "en": "Confirm under Prepare the game that you installed the requirements in this profile."
+    },
+    "chooseProfile": {
+      "es": "Elige el perfil donde vas a jugar.",
+      "en": "Choose the profile you will play with."
+    },
+    "profileLabel": {
+      "es": "Perfil de Thunderstore",
+      "en": "Thunderstore profile"
+    },
+    "manual": {
+      "es": "Usar otra carpeta",
+      "en": "Use another folder"
+    },
+    "manualHelp": {
+      "es": "En Thunderstore, abre el perfil que usas para jugar. Ve a Ajustes, abre la carpeta del perfil y pega aquí su ruta.",
+      "en": "In Thunderstore, open the profile you play with. Go to Settings, open the profile folder, and paste its path here."
+    },
+    "playProfile": {
+      "es": "Abre el perfil «{profile}» en Thunderstore y pulsa Modded.",
+      "en": "Open the {profile} profile in Thunderstore and select Modded."
+    },
+    "optionalReview": {
+      "es": "Consejos de equilibrio y expansiones",
+      "en": "Balance suggestions and expansions"
+    }
+  },
+  "examplePurposes": {
+    "official-LunaCovenChamp2-path-2-level-1": {
+      "es": "Gana Conducto al matar enemigos.",
+      "en": "Gain Conduit on kills."
+    },
+    "official-LazarusLeagueChamp2-path-1-level-1": {
+      "es": "Una senda basada en equipar al campeón.",
+      "en": "A path built around equipping the champion."
+    },
+    "official-TrainStewardShield": {
+      "es": "Coloca una unidad resistente delante.",
+      "en": "Put a sturdy unit in front."
+    },
+    "official-AnimusOfSpeed": {
+      "es": "Ataca antes que los enemigos sin Ataque rápido.",
+      "en": "Attack before enemies without Quick."
+    },
+    "official-WildwoodCustodian": {
+      "es": "Roba una carta adicional cada turno.",
+      "en": "Draw an extra card each turn."
+    },
+    "official-StarterHeal": {
+      "es": "Cura a una unidad y aplica Regeneración.",
+      "en": "Heal a unit and apply Regen."
+    },
+    "official-StarterTorch": {
+      "es": "Haz daño directo a una unidad.",
+      "en": "Deal direct damage to a unit."
+    },
+    "official-AwakeningThicket": {
+      "es": "Aumenta la salud de tus aliados en un piso.",
+      "en": "Increase your allies’ health on a floor."
+    },
+    "official-IncreaseRoomCapacity": {
+      "es": "Haz sitio para más unidades en un piso.",
+      "en": "Make room for more units on a floor."
+    },
+    "official-Equalizer": {
+      "es": "Iguala el ataque a la salud máxima de la unidad.",
+      "en": "Set a unit’s attack equal to its maximum health."
+    },
+    "official-relic-SingleToTeamMonsterSpellTargeting": {
+      "es": "Extiende un hechizo a los demás aliados del piso.",
+      "en": "Spread a spell to other allies on the floor."
+    }
+  },
+  "guidedEffectPresets": [
+    {
+      "unit": true,
+      "effect": {
+        "recipe": "armor",
+        "amount": 5,
+        "target": "all_friendly",
+        "when": "on_spawn",
+        "duration": "combat"
+      },
+      "label": {
+        "es": "Al invocar, da 5 de armadura a todos los aliados del piso.",
+        "en": "On summon, grant 5 Armor to all friendly units on the floor."
+      }
+    },
+    {
+      "unit": true,
+      "effect": {
+        "recipe": "rage",
+        "amount": 2,
+        "target": "friendly",
+        "when": "on_kill",
+        "duration": "combat"
+      },
+      "label": {
+        "es": "Al matar, gana 2 de Furia en este combate.",
+        "en": "On slay, gain 2 Rage this combat."
+      }
+    },
+    {
+      "unit": true,
+      "effect": {
+        "recipe": "draw",
+        "amount": 1,
+        "target": "friendly",
+        "when": "on_turn_begin"
+      },
+      "label": {
+        "es": "Al inicio de tu turno, roba una carta.",
+        "en": "At the start of your turn, draw a card."
+      }
+    },
+    {
+      "unit": true,
+      "effect": {
+        "recipe": "status_poison",
+        "amount": 3,
+        "target": "all_enemy",
+        "when": "on_spawn"
+      },
+      "label": {
+        "es": "Al invocar, aplica 3 de Escarcha a los enemigos del piso.",
+        "en": "On summon, apply 3 Frostbite to all enemies on this floor."
+      }
+    },
+    {
+      "unit": true,
+      "effect": {
+        "recipe": "armor",
+        "amount": 3,
+        "target": "friendly",
+        "when": "on_hit",
+        "duration": "combat"
+      },
+      "label": {
+        "es": "Venganza: gana 3 de armadura al recibir un golpe.",
+        "en": "Revenge: gain 3 Armor when hit."
+      }
+    },
+    {
+      "unit": true,
+      "effect": {
+        "recipe": "status_debuff",
+        "amount": 1,
+        "target": "enemy",
+        "when": "on_hit"
+      },
+      "label": {
+        "es": "Venganza: aplica 1 de Marchitar al primer enemigo del piso.",
+        "en": "Revenge: apply 1 Sap to the front enemy on this floor."
+      }
+    },
+    {
+      "unit": true,
+      "effect": {
+        "recipe": "attack",
+        "amount": 2,
+        "target": "friendly",
+        "when": "on_any_unit_death_on_floor",
+        "duration": "combat"
+      },
+      "label": {
+        "es": "Cosecha: gana 2 de ataque durante el combate.",
+        "en": "Harvest: gain 2 Attack for this battle."
+      }
+    },
+    {
+      "unit": true,
+      "effect": {
+        "recipe": "heal",
+        "amount": 5,
+        "target": "all_friendly",
+        "when": "on_death"
+      },
+      "label": {
+        "es": "Al morir, cura 5 de salud a los aliados del piso.",
+        "en": "Extinguish: restore 5 health to friendly units on this floor."
+      }
+    },
+    {
+      "unit": true,
+      "effect": {
+        "recipe": "damage",
+        "amount": 3,
+        "target": "all_enemy",
+        "when": "on_round_start"
+      },
+      "label": {
+        "es": "Al inicio de cada ronda, inflige 3 de daño a los enemigos del piso.",
+        "en": "At the start of each round, deal 3 damage to enemies on this floor."
+      }
+    },
+    {
+      "unit": true,
+      "effect": {
+        "recipe": "energy",
+        "amount": 1,
+        "target": "friendly",
+        "when": "on_turn_begin"
+      },
+      "label": {
+        "es": "Al inicio de tu turno, gana 1 de ember para ese turno.",
+        "en": "At the start of your turn, gain 1 Ember for that turn."
+      }
+    },
+    {
+      "unit": true,
+      "effect": {
+        "recipe": "max_health",
+        "amount": 2,
+        "target": "friendly",
+        "when": "on_kill",
+        "duration": "run"
+      },
+      "label": {
+        "es": "Al matar, gana 2 de salud máxima para el resto de la partida.",
+        "en": "Slay: gain 2 maximum health for the rest of the run."
+      }
+    },
+    {
+      "unit": true,
+      "effect": {
+        "recipe": "status_regen",
+        "amount": 2,
+        "target": "all_friendly",
+        "when": "on_round_start"
+      },
+      "label": {
+        "es": "Al inicio de cada ronda, aplica 2 de Regeneración a los aliados del piso.",
+        "en": "At the start of each round, apply 2 Regen to friendly units on this floor."
+      }
+    },
+    {
+      "unit": false,
+      "effect": {
+        "recipe": "heal",
+        "amount": 5,
+        "target": "spell_target",
+        "when": "on_spawn"
+      },
+      "label": {
+        "es": "Cura 5 de salud a la unidad elegida.",
+        "en": "Restore 5 health to the chosen unit."
+      }
+    },
+    {
+      "unit": false,
+      "effect": {
+        "recipe": "armor",
+        "amount": 5,
+        "target": "all_friendly",
+        "when": "on_spawn",
+        "duration": "combat"
+      },
+      "label": {
+        "es": "Da 5 de armadura a todos los aliados del piso.",
+        "en": "Grant 5 Armor to all friendly units on the floor."
+      }
+    },
+    {
+      "unit": false,
+      "effect": {
+        "recipe": "draw",
+        "amount": 1,
+        "target": "spell_target",
+        "when": "on_spawn"
+      },
+      "label": {
+        "es": "Roba una carta.",
+        "en": "Draw a card."
+      }
+    }
+  ],
+  "workshopGuide": {
+    "rewards": {
+      "es": "Recompensas del clan",
+      "en": "Clan rewards"
+    },
+    "where": {
+      "es": "¿Dónde aparece?",
+      "en": "Where does it appear?"
+    },
+    "normal": {
+      "es": "Recompensa normal",
+      "en": "Normal reward"
+    },
+    "banner": {
+      "es": "Estandarte",
+      "en": "Banner"
+    },
+    "outside": {
+      "es": "Fuera de las recompensas",
+      "en": "Outside reward pools"
+    },
+    "artifact": {
+      "es": "Recompensa de artefacto",
+      "en": "Artifact reward"
+    },
+    "fromLevel": {
+      "es": "Desde el nivel",
+      "en": "From level"
+    },
+    "playerView": {
+      "es": "Vista del jugador",
+      "en": "Player view"
+    },
+    "playerLevel": {
+      "es": "Nivel del clan",
+      "en": "Clan level"
+    },
+    "newAtLevel": {
+      "es": "Se desbloquean en este nivel",
+      "en": "Unlocked at this level"
+    },
+    "already": {
+      "es": "Disponibles desde antes",
+      "en": "Previously unlocked"
+    },
+    "enterClan": {
+      "es": "Ir al clan",
+      "en": "Open clan"
+    },
+    "search": {
+      "es": "Buscar en todo mi clan por nombre o efecto",
+      "en": "Search my whole clan by name or effect"
+    },
+    "backResults": {
+      "es": "Volver a los resultados",
+      "en": "Back to results"
+    },
+    "variant": {
+      "es": "Partiste de",
+      "en": "Based on"
+    },
+    "nameVariant": {
+      "es": "¿Cómo se llama la nueva carta?",
+      "en": "What is the new card called?"
+    },
+    "changed": {
+      "es": "Cambios",
+      "en": "Changes"
+    },
+    "highCost": {
+      "es": "Ver mis cartas de coste alto",
+      "en": "See my high-cost cards"
+    },
+    "previous": {
+      "es": "Ya usaba el creador",
+      "en": "I used the creator before"
+    },
+    "pickPrevious": {
+      "es": "Selecciona la carpeta de tu versión anterior",
+      "en": "Select your previous creator folder"
+    },
+    "restore": {
+      "es": "Recuperar los clanes seleccionados",
+      "en": "Recover selected clans"
+    },
+    "noDrafts": {
+      "es": "Esta carpeta no contiene borradores del creador.",
+      "en": "This folder contains no creator drafts."
+    },
+    "added": {
+      "es": "Añadida",
+      "en": "Added"
+    },
+    "removed": {
+      "es": "Eliminada",
+      "en": "Removed"
+    },
+    "settings": {
+      "es": "Configuración del clan",
+      "en": "Clan settings"
+    },
+    "appearance": {
+      "es": "Arte",
+      "en": "Artwork"
+    },
+    "paths": {
+      "es": "Sendas",
+      "en": "Paths"
+    },
+    "behavior": {
+      "es": "Efectos y otros ajustes",
+      "en": "Effects and other settings"
+    },
+    "oldInstall": {
+      "es": "La próxima instalación guardará el detalle para compararlo.",
+      "en": "The next installation will save the details for comparison."
+    }
+  },
+  "finishGuide": {
+    "applyType": {"en":"Change type","es":"Cambiar tipo"},
+    "testResult": {"en":"Result in game","es":"Resultado en partida"},
+    "compare": {
+      "en": "Compare with an official card",
+      "es": "Comparar con una carta oficial"
+    },
+    "myCard": {
+      "en": "Your card",
+      "es": "Tu carta"
+    },
+    "officialCard": {
+      "en": "Official card",
+      "es": "Carta oficial"
+    },
+    "removeTitle": {
+      "en": "Remove {name}?",
+      "es": "¿Borrar {name}?"
+    },
+    "rewardUse": {
+      "en": "This card appears as a reward at level {level}.",
+      "es": "Esta carta aparece como recompensa en el nivel {level}."
+    },
+    "bannerUse": {
+      "en": "This unit can appear on banners.",
+      "es": "Esta unidad puede aparecer en los estandartes."
+    },
+    "seeRewards": {
+      "en": "View rewards",
+      "es": "Ver recompensas"
+    },
+    "replaceReward": {
+      "en": "Keep this reward with another card",
+      "es": "Conservar esta recompensa con otra carta"
+    },
+    "noReplacement": {
+      "en": "Remove without a replacement",
+      "es": "Borrar sin sustituir"
+    },
+    "fixCard": {
+      "en": "Fix first issue",
+      "es": "Corregir el primer problema"
+    },
+    "chooseProfile": {
+      "en": "Choose profile",
+      "es": "Elegir perfil"
+    },
+    "confirmSetup": {
+      "en": "Go to game setup",
+      "es": "Ir a preparar el juego"
+    },
+    "preparing": {
+      "en": "Preparing your clan",
+      "es": "Preparando el clan"
+    },
+    "compiling": {
+      "en": "Compiling your clan",
+      "es": "Compilando el clan"
+    },
+    "copying": {
+      "en": "Copying to your profile",
+      "es": "Copiando al perfil"
+    },
+    "stepFailed": {
+      "en": "Stopped at: {step}",
+      "es": "Se detuvo en: {step}"
+    },
+    "copyAccess": {
+      "en": "Close the game and check that you can write to the selected folder, then try again.",
+      "es": "Cierra el juego y comprueba que puedes escribir en la carpeta elegida. Después, vuelve a intentarlo."
+    },
+    "notes": {
+      "en": "Notes on individual cards",
+      "es": "Notas de cartas en partida"
+    },
+    "card": {
+      "en": "Card",
+      "es": "Carta"
+    },
+    "untested": {
+      "en": "To try",
+      "es": "Por probar"
+    },
+    "works": {
+      "en": "Works",
+      "es": "Funciona"
+    },
+    "problem": {
+      "en": "Found a problem",
+      "es": "Hay un problema"
+    },
+    "note": {
+      "en": "What happened?",
+      "es": "¿Qué pasó?"
+    },
+    "saveNote": {
+      "en": "Save note",
+      "es": "Guardar nota"
+    },
+    "oldNote": {
+      "en": "From an earlier installed version",
+      "es": "De una versión instalada anterior"
+    },
+    "share": {
+      "en": "Share your clan",
+      "es": "Compartir tu clan"
+    },
+    "sharePlay": {
+      "en": "Share to play",
+      "es": "Compartir para jugar"
+    },
+    "sharePlayHelp": {
+      "en": "Downloads the playable clan. Send the file to someone who has set up the game for mods.",
+      "es": "Descarga el clan jugable. Envía el archivo a quien ya haya preparado el juego para mods."
+    },
+    "shareEdit": {
+      "en": "Share to keep editing",
+      "es": "Compartir para seguir editando"
+    },
+    "shareEditHelp": {
+      "en": "Downloads an editable copy with your artwork. The other person can open it from the creator’s start screen.",
+      "es": "Descarga una copia editable con tu arte. La otra persona puede abrirla desde el inicio del creador."
+    },
+    "shareBlocked": {
+      "en": "Complete the clan review and compilation requirements to share it for play.",
+      "es": "Completa la revisión y los requisitos de compilación para compartir el clan para jugar."
+    }
+  },
+  "cardGuidance": {
+    "result": {"en":"Your card after copying","es":"Así quedará tu carta"},
+    "floorHeading": {"en":"Floor","es":"Piso"},
+    "typeUnitLoss": {
+      "es": "Al cambiar de tipo conservas nombre, coste e ilustración. El nuevo tipo sustituye las estadísticas, habilidades y efectos de unidad.",
+      "en": "Changing type keeps the name, cost and illustration. The new type replaces the unit stats, abilities and effects."
+    },
+    "typeLoss": {
+      "es": "El nuevo tipo conserva nombre, coste e ilustración y comienza con su propio comportamiento.",
+      "en": "The new type keeps the name, cost and illustration and starts with its own behavior."
+    },
+    "undoType": {
+      "es": "Deshacer cambio de tipo",
+      "en": "Undo type change"
+    },
+    "needName": {
+      "es": "Escribe un nombre para continuar",
+      "en": "Enter a name to continue"
+    },
+    "unit": {
+      "es": "Se coloca en un piso y combate.",
+      "en": "Place it on a floor to fight."
+    },
+    "spell": {
+      "es": "Se juega para aplicar un efecto.",
+      "en": "Play it to apply an effect."
+    },
+    "room": {
+      "es": "Modifica el piso donde la juegas.",
+      "en": "Changes the floor where you play it."
+    },
+    "equipment": {
+      "es": "Se lo das a una unidad para modificarla. El siguiente paso es elegir un ejemplo.",
+      "en": "Give it to a unit to modify it. Next, choose an example."
+    },
+    "artifact": {
+      "es": "Aporta un efecto al clan durante la partida.",
+      "en": "Gives your clan an effect during the run."
+    },
+    "assign": {
+      "es": "Asignar recompensas",
+      "en": "Assign rewards"
+    },
+    "byLevel": {
+      "es": "Ver por nivel",
+      "en": "View by level"
+    },
+    "example": {
+      "es": "Ver un ejemplo de combate",
+      "en": "See a combat example"
+    },
+    "floor": {
+      "es": "Piso elegido",
+      "en": "Chosen floor"
+    },
+    "above": {
+      "es": "Piso superior",
+      "en": "Floor above"
+    },
+    "ally": {
+      "es": "Aliado",
+      "en": "Ally"
+    },
+    "enemy": {
+      "es": "Enemigo",
+      "en": "Enemy"
+    },
+    "armor": {
+      "es": "Armadura",
+      "en": "Armor"
+    },
+    "hp": {
+      "es": "Salud",
+      "en": "Health"
+    },
+    "scenario": {
+      "es": "Una activación con unidades de 10 de salud máxima y sin armadura inicial.",
+      "en": "One activation with units that have 10 maximum health and start with no Armor."
+    },
+    "chosen": {
+      "es": "Objetivo elegido",
+      "en": "Chosen target"
+    },
+    "caster": {
+      "es": "Esta unidad",
+      "en": "This unit"
+    }
+  }
 }

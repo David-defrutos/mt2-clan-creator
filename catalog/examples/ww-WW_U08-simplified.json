@@ -1,0 +1,258 @@
+{
+  "id": "ww-WW_U08-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_U08_Character/starting_status_effects",
+      "characters/WW_U08_Character/triggers"
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_U08"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Postdoc de Asuntos Pendientes",
+    "english": "Postdoc of Unfinished Business",
+    "french": "Postdoctorant des affaires inachevées",
+    "german": "Postdoktorand für unerledigte Angelegenheiten",
+    "portuguese": "Pós-doutor em Assuntos Inacabados",
+    "russian": "Постдок незавершённых дел",
+    "chinese": "未竟事务博士后",
+    "chinese_traditional": "未竟事務博士後",
+    "korean": "미완의 업무 박사후연구원",
+    "japanese": "未完業務の博士研究員"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": 10,
+  "attack": 0,
+  "size": 1,
+  "picture": "assets/818fde33469f6ecc72117fd9e478a44dff3edecbd97d90943bdf0cbbcef4db38.png",
+  "characterPicture": "assets/e5bbfb6313010d575a508d9da44a460f31725d29ceb30ad2f058a5ed7a1b707e.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/equipment/WW_G04Icon.png": "assets/5dec41d8809f1b6e15b1131c194f1bf2b608ea20423598b35d597bf5ef9e1e5a.png",
+    "textures/cards/WW_G04CardArt.png": "assets/8a8ee3a3ecfb5dc1f13040061c50393222a93959c1df67bd39697a1bac5c5113.png",
+    "textures/characters/WW_U08CharacterArt.png": "assets/e5bbfb6313010d575a508d9da44a460f31725d29ceb30ad2f058a5ed7a1b707e.png",
+    "textures/cards/WW_U08CardArt.png": "assets/818fde33469f6ecc72117fd9e478a44dff3edecbd97d90943bdf0cbbcef4db38.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_U08",
+        "names": {
+          "spanish": "Postdoc de Asuntos Pendientes",
+          "english": "Postdoc of Unfinished Business",
+          "french": "Postdoctorant des affaires inachevées",
+          "german": "Postdoktorand für unerledigte Angelegenheiten",
+          "portuguese": "Pós-doutor em Assuntos Inacabados",
+          "russian": "Постдок незавершённых дел",
+          "chinese": "未竟事务博士后",
+          "chinese_traditional": "未竟事務博士後",
+          "korean": "미완의 업무 박사후연구원",
+          "japanese": "未完業務の博士研究員"
+        },
+        "card_type": "monster",
+        "cost": 1,
+        "rarity": "common",
+        "targets_room": true,
+        "card_art": "@WW_U08CardArt",
+        "effects": [
+          "@WW_U08_Spawn"
+        ]
+      },
+      {
+        "id": "WW_G04",
+        "names": {
+          "english": "Amulet of Undying",
+          "spanish": "Amuleto de Reanimación",
+          "french": "Amulette de réanimation",
+          "german": "Amulett der Wiederbelebung",
+          "portuguese": "Amuleto da Reanimação",
+          "russian": "Амулет реанимации",
+          "chinese": "复苏护符",
+          "chinese_traditional": "復甦護符",
+          "korean": "소생의 부적",
+          "japanese": "蘇生のアミュレット"
+        },
+        "card_type": "equipment",
+        "cost": 0,
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "card_art": "@WW_G04CardArt",
+        "effects": [
+          "@WW_G04_Equip"
+        ],
+        "traits": [
+          "@WW_G04_Grafted"
+        ],
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_U08_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_U08_Character"
+      },
+      {
+        "id": "WW_G04_Equip",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@WW_G04_Upgrade"
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_U08_Character",
+        "names": {
+          "spanish": "Postdoc de Asuntos Pendientes",
+          "english": "Postdoc of Unfinished Business",
+          "french": "Postdoctorant des affaires inachevées",
+          "german": "Postdoktorand für unerledigte Angelegenheiten",
+          "portuguese": "Pós-doutor em Assuntos Inacabados",
+          "russian": "Постдок незавершённых дел",
+          "chinese": "未竟事务博士后",
+          "chinese_traditional": "未竟事務博士後",
+          "korean": "미완의 업무 박사후연구원",
+          "japanese": "未完業務の博士研究員"
+        },
+        "character_art": "@WW_U08CharacterArt",
+        "size": 1,
+        "health": 10,
+        "attack_damage": 0,
+        "subtypes": [
+          "@WW_Witch"
+        ],
+        "grafted_equipment": "@WW_G04"
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_G04_Grafted",
+        "name": "CardTraitGraftedEquipment",
+        "trait_is_removable": false
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WW_G04_Upgrade",
+        "titles": {
+          "english": "Amulet of Undying",
+          "spanish": "Amuleto de Reanimación",
+          "french": "Amulette de réanimation",
+          "german": "Amulett der Wiederbelebung",
+          "portuguese": "Amuleto da Reanimação",
+          "russian": "Амулет реанимации",
+          "chinese": "复苏护符",
+          "chinese_traditional": "復甦護符",
+          "korean": "소생의 부적",
+          "japanese": "蘇生のアミュレット"
+        },
+        "hide_icon_on_card": true,
+        "icon": "@WW_G04Icon",
+        "status_effect_upgrades": [
+          {
+            "status": "undying",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_G04Icon",
+        "path": "textures/equipment/WW_G04Icon.png"
+      },
+      {
+        "id": "WW_G04CardArt",
+        "path": "textures/cards/WW_G04CardArt.png"
+      },
+      {
+        "id": "WW_U08CharacterArt",
+        "path": "textures/characters/WW_U08CharacterArt.png"
+      },
+      {
+        "id": "WW_U08CardArt",
+        "path": "textures/cards/WW_U08CardArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_G04CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_G04CardArt"
+          }
+        }
+      },
+      {
+        "id": "WW_U08CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_U08CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.875,
+                "z": 0
+              },
+              "scale": {
+                "x": 1.75,
+                "y": 1.75,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WW_U08CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_U08CardArt"
+          }
+        }
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Witch",
+        "names": {
+          "english": "Witch",
+          "spanish": "Bruja",
+          "french": "Sorcière",
+          "german": "Hexe",
+          "portuguese": "Bruxa",
+          "russian": "Ведьма",
+          "chinese": "女巫",
+          "chinese_traditional": "女巫",
+          "korean": "마녀",
+          "japanese": "魔女"
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_U08.json": "66c705e48034c8431975dad85a92e486b9be2f10f551dbd704301d584ba26118",
+    "content/json/grafts/WW_G04.json": "024cde745139440824f6962055bbba0bc4dd5c02dbf05426f142dc0a518c95c9",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

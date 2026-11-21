@@ -29,3 +29,12 @@ __pycache__/
 # Workspace-only authoring and installation helpers.
 /scripts/write-task.py
 /scripts/verify-default-install.ts
+
+# Local environment files and private credentials.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12

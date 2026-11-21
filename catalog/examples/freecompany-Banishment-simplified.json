@@ -1,0 +1,91 @@
+{
+  "id": "freecompany-Banishment-simplified",
+  "simplified": {
+    "removed": [
+      "cards/Banishment/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Banishment"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Banishment",
+    "french": "Bannissement",
+    "german": "Verbannung",
+    "russian": "Изгнание",
+    "portuguese": "Banimento",
+    "chinese": "放逐术",
+    "spanish": "Destierro",
+    "chinese_traditional": "放逐術",
+    "korean": "추방술",
+    "japanese": "追放術"
+  },
+  "descriptions": {},
+  "cost": 3,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/c0bbe815f3852843f833e90421a342c9ded0764e43d2097f9f3471211e92c5df.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/BanishmentArt.png": "assets/c0bbe815f3852843f833e90421a342c9ded0764e43d2097f9f3471211e92c5df.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Banishment",
+        "names": {
+          "english": "Banishment",
+          "french": "Bannissement",
+          "german": "Verbannung",
+          "russian": "Изгнание",
+          "portuguese": "Banimento",
+          "chinese": "放逐术",
+          "spanish": "Destierro",
+          "chinese_traditional": "放逐術",
+          "korean": "추방술",
+          "japanese": "追放術"
+        },
+        "card_art": "@Banishment",
+        "cost": 3,
+        "card_type": "spell",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": false
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Banishment",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Banishment"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Banishment",
+        "path": "textures/BanishmentArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_banishment.json": "0ba8c0d10d492eca03702a563fbffb956b1871a7080c896ffbbbb1ebacdfb03c"
+  }
+}

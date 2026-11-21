@@ -22,16 +22,16 @@
     "japanese": "危険手当"
   },
   "descriptions": {
-    "english": "While you have <b>300</b> or more [coin], unit cards get <b>+3</b> [attack] and <b>+5</b> [health].",
-    "french": "Tant que vous avez au moins <b>300</b> [coin], les cartes d’unité ont <b>+3</b> [attack] et <b>+5</b> [health].",
-    "german": "Solange du mindestens <b>300</b> [coin] hast, erhalten Einheitenkarten <b>+3</b> [attack] und <b>+5</b> [health].",
-    "russian": "Пока у вас есть не менее <b>300</b> [coin], карты боевых единиц получают <b>+3</b> [attack] и <b>+5</b> [health].",
-    "portuguese": "Enquanto você tiver <b>300</b> ou mais [coin], cartas de unidade ganham <b>+3</b> [attack] e <b>+5</b> [health].",
-    "chinese": "拥有至少<b>300</b> [coin]时，单位牌获得<b>+3</b> [attack]和<b>+5</b> [health]。",
-    "spanish": "Mientras tengas <b>300</b> [coin] o más, las cartas de unidad ganan <b>+3</b> [attack] y <b>+5</b> [health].",
-    "chinese_traditional": "擁有至少<b>300</b> [coin]時，單位牌獲得<b>+3</b> [attack]和<b>+5</b> [health]。",
-    "korean": "[coin]을 <b>300</b> 이상 보유하면 유닛 카드에 <b>+3</b> [attack] 및 <b>+5</b> [health].",
-    "japanese": "<b>300</b> [coin]以上を持っている間、ユニットカードは<b>+3</b> [attack]と<b>+5</b> [health]を得る。"
+    "english": "While you have <b>200</b> or more [coin], unit cards get <b>+3</b> [attack] and <b>+5</b> [health].",
+    "french": "Tant que vous avez au moins <b>200</b> [coin], les cartes d’unité ont <b>+3</b> [attack] et <b>+5</b> [health].",
+    "german": "Solange du mindestens <b>200</b> [coin] hast, erhalten Einheitenkarten <b>+3</b> [attack] und <b>+5</b> [health].",
+    "russian": "Пока у вас есть не менее <b>200</b> [coin], карты боевых единиц получают <b>+3</b> [attack] и <b>+5</b> [health].",
+    "portuguese": "Enquanto você tiver <b>200</b> ou mais [coin], cartas de unidade ganham <b>+3</b> [attack] e <b>+5</b> [health].",
+    "chinese": "拥有至少<b>200</b> [coin]时，单位牌获得<b>+3</b> [attack]和<b>+5</b> [health]。",
+    "spanish": "Mientras tengas <b>200</b> [coin] o más, las cartas de unidad ganan <b>+3</b> [attack] y <b>+5</b> [health].",
+    "chinese_traditional": "擁有至少<b>200</b> [coin]時，單位牌獲得<b>+3</b> [attack]和<b>+5</b> [health]。",
+    "korean": "[coin]을 <b>200</b> 이상 보유하면 유닛 카드에 <b>+3</b> [attack] 및 <b>+5</b> [health].",
+    "japanese": "<b>200</b> [coin]以上を持っている間、ユニットカードは<b>+3</b> [attack]と<b>+5</b> [health]を得る。"
   },
   "cost": 0,
   "costType": "normal",
@@ -67,16 +67,16 @@
           "japanese": "危険手当"
         },
         "descriptions": {
-          "english": "While you have <b>300</b> or more [coin], unit cards get <b>+3</b> [attack] and <b>+5</b> [health].",
-          "french": "Tant que vous avez au moins <b>300</b> [coin], les cartes d’unité ont <b>+3</b> [attack] et <b>+5</b> [health].",
-          "german": "Solange du mindestens <b>300</b> [coin] hast, erhalten Einheitenkarten <b>+3</b> [attack] und <b>+5</b> [health].",
-          "russian": "Пока у вас есть не менее <b>300</b> [coin], карты боевых единиц получают <b>+3</b> [attack] и <b>+5</b> [health].",
-          "portuguese": "Enquanto você tiver <b>300</b> ou mais [coin], cartas de unidade ganham <b>+3</b> [attack] e <b>+5</b> [health].",
-          "chinese": "拥有至少<b>300</b> [coin]时，单位牌获得<b>+3</b> [attack]和<b>+5</b> [health]。",
-          "spanish": "Mientras tengas <b>300</b> [coin] o más, las cartas de unidad ganan <b>+3</b> [attack] y <b>+5</b> [health].",
-          "chinese_traditional": "擁有至少<b>300</b> [coin]時，單位牌獲得<b>+3</b> [attack]和<b>+5</b> [health]。",
-          "korean": "[coin]을 <b>300</b> 이상 보유하면 유닛 카드에 <b>+3</b> [attack] 및 <b>+5</b> [health].",
-          "japanese": "<b>300</b> [coin]以上を持っている間、ユニットカードは<b>+3</b> [attack]と<b>+5</b> [health]を得る。"
+          "english": "While you have <b>200</b> or more [coin], unit cards get <b>+3</b> [attack] and <b>+5</b> [health].",
+          "french": "Tant que vous avez au moins <b>200</b> [coin], les cartes d’unité ont <b>+3</b> [attack] et <b>+5</b> [health].",
+          "german": "Solange du mindestens <b>200</b> [coin] hast, erhalten Einheitenkarten <b>+3</b> [attack] und <b>+5</b> [health].",
+          "russian": "Пока у вас есть не менее <b>200</b> [coin], карты боевых единиц получают <b>+3</b> [attack] и <b>+5</b> [health].",
+          "portuguese": "Enquanto você tiver <b>200</b> ou mais [coin], cartas de unidade ganham <b>+3</b> [attack] e <b>+5</b> [health].",
+          "chinese": "拥有至少<b>200</b> [coin]时，单位牌获得<b>+3</b> [attack]和<b>+5</b> [health]。",
+          "spanish": "Mientras tengas <b>200</b> [coin] o más, las cartas de unidad ganan <b>+3</b> [attack] y <b>+5</b> [health].",
+          "chinese_traditional": "擁有至少<b>200</b> [coin]時，單位牌獲得<b>+3</b> [attack]和<b>+5</b> [health]。",
+          "korean": "[coin]을 <b>200</b> 이상 보유하면 유닛 카드에 <b>+3</b> [attack] 및 <b>+5</b> [health].",
+          "japanese": "<b>200</b> [coin]以上を持っている間、ユニットカードは<b>+3</b> [attack]と<b>+5</b> [health]を得る。"
         },
         "relic_activated_texts": {
           "english": "Rates have gone up.",
@@ -122,7 +122,7 @@
       {
         "id": "HazardPayEffect",
         "name": "RelicEffectAddTempUpgradeOnGoldThreshold",
-        "param_int": 300,
+        "param_int": 200,
         "param_card_type": "monster",
         "param_upgrade": "@HazardPayBonus"
       }
@@ -149,6 +149,6 @@
     ]
   },
   "files": {
-    "json/relics/relic_hazard_pay.json": "6ff13e6a432294b8332a0821e5b6e7ad36174a00023b82930f6fd3ddbc648aba"
+    "json/relics/relic_hazard_pay.json": "cfd5b74d102811e110a730696b5d8cf95226993782d34ac24721b23695ba24a1"
   }
 }

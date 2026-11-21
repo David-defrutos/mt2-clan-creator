@@ -1,0 +1,113 @@
+{
+  "id": "freecompany-DoubleShift-simplified",
+  "simplified": {
+    "removed": [
+      "cards/DoubleShift/effects"
+    ],
+    "needsEffect": false
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "DoubleShift"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Double Shift",
+    "french": "Double service",
+    "german": "Doppelschicht",
+    "russian": "Двойная смена",
+    "portuguese": "Turno Duplo",
+    "chinese": "双班轮值",
+    "spanish": "Turno doble",
+    "chinese_traditional": "雙班輪值",
+    "korean": "이중 근무",
+    "japanese": "二重勤務"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/2bf4201588d191c09b4b7722cd7e1a78f0058c0ac05d96180dca1920cd086721.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/DoubleShiftArt.png": "assets/2bf4201588d191c09b4b7722cd7e1a78f0058c0ac05d96180dca1920cd086721.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "DoubleShift",
+        "names": {
+          "english": "Double Shift",
+          "french": "Double service",
+          "german": "Doppelschicht",
+          "russian": "Двойная смена",
+          "portuguese": "Turno Duplo",
+          "chinese": "双班轮值",
+          "spanish": "Turno doble",
+          "chinese_traditional": "雙班輪值",
+          "korean": "이중 근무",
+          "japanese": "二重勤務"
+        },
+        "card_art": "@DoubleShift",
+        "cost": 1,
+        "card_type": "spell",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@DoubleShiftStrike"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "DoubleShiftStrike",
+        "applied_vfx": "@SpellDoubleShiftBuffVFX",
+        "name": "CardEffectAttackWithUnit",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SpellDoubleShiftBuffVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "DoubleShift",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@DoubleShift"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "DoubleShift",
+        "path": "textures/DoubleShiftArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_double_shift.json": "5ce95d2caee650fab9f362a4919ac1a67533b5ed67560ca522e26919bb32c1c5"
+  }
+}

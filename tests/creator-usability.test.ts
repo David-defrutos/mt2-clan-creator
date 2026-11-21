@@ -1,4 +1,4 @@
-import {matchesExample} from '../src/web/creator/catalog-search.ts';
+import {exampleMatcher,matchesExample} from '../src/web/creator/catalog-search.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -10,6 +10,7 @@ import {creatorRules,exampleList,readExample,cloneExampleCard,exampleParameters}
 import {validateDraftShape} from '../src/server/creator/projects.ts';
 import {generateClan,reviewDraft} from '../src/server/creator/export.ts';
 import {scanClan} from '../src/server/scan.ts';
+import {exampleSearchText} from '../src/server/creator/example-search-text.ts';
 import {wizardProgress} from '../src/web/creator/progress.ts';
 import {zipBuffers} from '../src/server/creator/zip.ts';
 test('avance guiado identifica el primer dato pendiente y no exige arte personalizado',async()=>{const d=blankDraft(randomUUID()),rules=await creatorRules();assert.equal(wizardProgress(d,rules.steps).pending,0);d.name='Mi clan';d.author='David';assert.equal(wizardProgress(d,rules.steps).pending,1);d.champions.forEach(c=>{c.card.name='Campeón';c.paths.forEach(p=>p.name='Senda');});d.starters.forEach(c=>c.name='Inicial');assert.equal(wizardProgress(d,rules.steps).pending,10);});
@@ -20,7 +21,45 @@ test('se guardan y generan cartas sin PNG, costes X, equipos y artefactos nativo
 // 2026-11-15-1234||codex-clan-editor||clan-creator/tests/creator-usability.test.ts||Verificar que no se permite editar una cantidad que el efecto nativo ignora
 
 test('buscar curar, robar y furia encuentra comportamientos conocidos sin acentos',async()=>{const rules=await creatorRules();assert.ok(matchesExample({names:{english:'Restore'},descriptions:{spanish:'Restaura 2 de salud.'}},'curar','es',rules));assert.ok(matchesExample({descriptions:{english:'Draw 2 cards.'}},'robar','es',rules));assert.ok(matchesExample({descriptions:{spanish:'La [rage] no se reduce.'}},'furia','es',rules));assert.ok(!matchesExample({descriptions:{spanish:'Inflige 3 de daño.'}},'curar','es',rules));});
+test('catalog search finds natural phrases and Spanish forms of known mechanics',async()=>{
+ const rules=await creatorRules();
+ const cards=[
+  {id:'strike',descriptions:{english:'Deal 5 damage.'}},
+  {id:'space',descriptions:{english:'Gain 2 capacity.'}},
+  {id:'daze',descriptions:{spanish:'Aplica Aturdimiento.'}},
+  {id:'poison',descriptions:{english:'Apply poison.'}},
+  {id:'shield',descriptions:{spanish:'Consigue Escudo de daño.'}},
+  {id:'decoy',descriptions:{english:'A workshop repairs armor.'}},
+ ];
+ const search=(query:string)=>cards.filter(exampleMatcher(query,rules)).map(card=>card.id);
+ assert.deepEqual(search('hacer daño'),['strike','shield']);
+ assert.deepEqual(search('más capacidad'),['space']);
+ assert.deepEqual(search('aturdir'),['daze']);
+ assert.deepEqual(search('aturdido'),['daze']);
+ assert.deepEqual(search('envenenar'),['poison']);
+ assert.deepEqual(search('proteger'),['shield']);
+ assert.deepEqual(search('proteger y daño'),['shield']);
+ assert.deepEqual(search('shop'),[]);
+});
+
+test('the catalogue indexes copied community mechanics and official units with no card description',async()=>{
+ const rules=await creatorRules(),{items}=await exampleList();
+ const desire=await readExample('succclan-DesireCrystal');
+ const text=exampleSearchText({...desire,descriptions:{}},rules);
+ assert.match(text,/first Ghost.*Draw 1 card/i);
+ assert.match(text,/Roba 1 carta/);
+ assert.ok(exampleMatcher('robar fantasma',rules)({searchText:text}));
+ assert.ok(items.filter(item=>!item.official).every(item=>item.searchText?.trim()));
+ const custodian=items.find(item=>item.id==='official-WildwoodCustodian');
+ if(custodian){
+  assert.equal(custodian.descriptions.english,undefined);
+  assert.match(custodian.searchText??'',/Draw \+1 each turn/);
+  assert.ok(exampleMatcher('robar cada turno',rules)(custodian));
+ }
+});
 // 2026-11-15-1240||codex-clan-editor||clan-creator/tests/creator-usability.test.ts||Comprobar búsquedas semánticas sencillas con ejemplos que no contienen el término exacto escrito
 // 2026-11-15-1425||codex-clan-editor||clan-creator/tests\creator-usability.test.ts||Contar cartas base oficiales sin confundir variantes de senda con cartas nuevas
 // 2026-11-15-1851||codex-clan-editor||clan-creator/tests\creator-usability.test.ts||Comprobar ampliación real del catálogo sin exigir recuentos de la extracción anterior
 // 2026-11-15-1852||codex-clan-editor||clan-creator/tests\creator-usability.test.ts||Aceptar nuevos recuentos únicos auditados en lugar de contar duplicados de archivos de extracción
+// 2026-11-21-2046||codex-clan-editor||clan-creator/tests/creator-usability.test.ts||Verificar consultas naturales, límites de coincidencia e índice lingüístico de los catálogos
+// 2026-11-21-2046||codex-clan-editor||clan-creator/tests/creator-usability.test.ts||Comprobar la combinación de dos efectos escritos con una conjunción

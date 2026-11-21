@@ -1,0 +1,100 @@
+{
+  "id": "freecompany-TameStoneTroll-simplified",
+  "simplified": {
+    "removed": [
+      "cards/TameStoneTroll/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "TameStoneTroll"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Tame the Stone Troll",
+    "french": "Apprivoiser : Troll de pierre",
+    "german": "Steintroll zähmen",
+    "russian": "Приручить: Каменный тролль",
+    "portuguese": "Domar: Troll de Pedra",
+    "chinese": "驯服岩石巨魔",
+    "spanish": "Domar al Trol de piedra",
+    "chinese_traditional": "馴服岩石巨魔",
+    "korean": "돌 트롤 길들이기",
+    "japanese": "岩のトロールを手なずける"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/eaf28448aedb1c32da31c139ddf31abe860e01d3e22dd6e844ca2ecb21a2e524.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/StoneTrollArt.png": "assets/eaf28448aedb1c32da31c139ddf31abe860e01d3e22dd6e844ca2ecb21a2e524.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "TameStoneTroll",
+        "names": {
+          "english": "Tame the Stone Troll",
+          "french": "Apprivoiser : Troll de pierre",
+          "german": "Steintroll zähmen",
+          "russian": "Приручить: Каменный тролль",
+          "portuguese": "Domar: Troll de Pedra",
+          "chinese": "驯服岩石巨魔",
+          "spanish": "Domar al Trol de piedra",
+          "chinese_traditional": "馴服岩石巨魔",
+          "korean": "돌 트롤 길들이기",
+          "japanese": "岩のトロールを手なずける"
+        },
+        "card_art": "@StoneTroll",
+        "cost": 0,
+        "card_type": "spell",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": true,
+        "traits": [
+          "@TameEphemeral"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "TameEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "StoneTroll",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@StoneTroll"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "StoneTroll",
+        "path": "textures/StoneTrollArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_troll.json": "f91102b775c131b0895bbc03577750fdf220670f0afba52e5d9dfe111f90f01f"
+  }
+}

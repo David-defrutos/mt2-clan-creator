@@ -22,16 +22,16 @@
     "japanese": "全額支払い"
   },
   "descriptions": {
-    "english": "A friendly unit gains <b>1</b> [attack] for every [effect0.power] gold you have spent this run.",
-    "french": "Une unité alliée gagne <b>1</b> [attack] par tranche de [effect0.power] pièces d’or dépensée durant cette partie.",
-    "german": "Eine verbündete Einheit erhält <b>1</b> [attack] pro [effect0.power] Gold, die du in diesem Lauf ausgegeben hast.",
-    "russian": "Союзная боевая единица получает <b>1</b> [attack] за каждые [effect0.power] золота, потраченные вами за этот забег.",
-    "portuguese": "Uma unidade aliada ganha <b>1</b> [attack] por cada [effect0.power] de ouro que você gastou nesta partida.",
-    "chinese": "本次旅程每花费[effect0.power]金币，一个友方单位就获得<b>1</b> [attack]。",
-    "spanish": "Una unidad aliada gana <b>1</b> [attack] por cada [effect0.power] de oro que has gastado en esta partida.",
-    "chinese_traditional": "本次旅程每花費[effect0.power]金幣，一個友方單位就獲得<b>1</b> [attack]。",
-    "korean": "이번 여정에서 사용한 [effect0.power]골드마다 아군 유닛 하나가 <b>1</b> [attack] 획득.",
-    "japanese": "このプレイ中に消費した[effect0.power]ゴールドにつき、味方ユニット1体が<b>1</b> [attack]を得る。"
+    "english": "A friendly unit gains <b>1</b> [attack] for every [effect0.power] [coin] you have spent this run.",
+    "french": "Une unité alliée gagne <b>1</b> [attack] par tranche de [effect0.power] [coin] dépensée durant cette partie.",
+    "german": "Eine verbündete Einheit erhält <b>1</b> [attack] pro [effect0.power] [coin], das du in diesem Lauf ausgegeben hast.",
+    "russian": "Союзная боевая единица получает <b>1</b> [attack] за каждые [effect0.power] [coin], потраченные вами за этот забег.",
+    "portuguese": "Uma unidade aliada ganha <b>1</b> [attack] por cada [effect0.power] [coin] que você gastou nesta partida.",
+    "chinese": "本次旅程每花费[effect0.power] [coin]，一个友方单位就获得<b>1</b> [attack]。",
+    "spanish": "Una unidad aliada gana <b>1</b> [attack] por cada [effect0.power] [coin] que has gastado en esta partida.",
+    "chinese_traditional": "本次旅程每花費[effect0.power] [coin]，一個友方單位就獲得<b>1</b> [attack]。",
+    "korean": "이번 여정에서 사용한 [effect0.power] [coin]마다 아군 유닛 하나가 <b>1</b> [attack] 획득.",
+    "japanese": "このプレイ中に消費した[effect0.power] [coin]につき、味方ユニット1体が<b>1</b> [attack]を得る。"
   },
   "cost": 2,
   "costType": "normal",
@@ -65,16 +65,16 @@
           "japanese": "全額支払い"
         },
         "descriptions": {
-          "english": "A friendly unit gains <b>1</b> [attack] for every [effect0.power] gold you have spent this run.",
-          "french": "Une unité alliée gagne <b>1</b> [attack] par tranche de [effect0.power] pièces d’or dépensée durant cette partie.",
-          "german": "Eine verbündete Einheit erhält <b>1</b> [attack] pro [effect0.power] Gold, die du in diesem Lauf ausgegeben hast.",
-          "russian": "Союзная боевая единица получает <b>1</b> [attack] за каждые [effect0.power] золота, потраченные вами за этот забег.",
-          "portuguese": "Uma unidade aliada ganha <b>1</b> [attack] por cada [effect0.power] de ouro que você gastou nesta partida.",
-          "chinese": "本次旅程每花费[effect0.power]金币，一个友方单位就获得<b>1</b> [attack]。",
-          "spanish": "Una unidad aliada gana <b>1</b> [attack] por cada [effect0.power] de oro que has gastado en esta partida.",
-          "chinese_traditional": "本次旅程每花費[effect0.power]金幣，一個友方單位就獲得<b>1</b> [attack]。",
-          "korean": "이번 여정에서 사용한 [effect0.power]골드마다 아군 유닛 하나가 <b>1</b> [attack] 획득.",
-          "japanese": "このプレイ中に消費した[effect0.power]ゴールドにつき、味方ユニット1体が<b>1</b> [attack]を得る。"
+          "english": "A friendly unit gains <b>1</b> [attack] for every [effect0.power] [coin] you have spent this run.",
+          "french": "Une unité alliée gagne <b>1</b> [attack] par tranche de [effect0.power] [coin] dépensée durant cette partie.",
+          "german": "Eine verbündete Einheit erhält <b>1</b> [attack] pro [effect0.power] [coin], das du in diesem Lauf ausgegeben hast.",
+          "russian": "Союзная боевая единица получает <b>1</b> [attack] за каждые [effect0.power] [coin], потраченные вами за этот забег.",
+          "portuguese": "Uma unidade aliada ganha <b>1</b> [attack] por cada [effect0.power] [coin] que você gastou nesta partida.",
+          "chinese": "本次旅程每花费[effect0.power] [coin]，一个友方单位就获得<b>1</b> [attack]。",
+          "spanish": "Una unidad aliada gana <b>1</b> [attack] por cada [effect0.power] [coin] que has gastado en esta partida.",
+          "chinese_traditional": "本次旅程每花費[effect0.power] [coin]，一個友方單位就獲得<b>1</b> [attack]。",
+          "korean": "이번 여정에서 사용한 [effect0.power] [coin]마다 아군 유닛 하나가 <b>1</b> [attack] 획득.",
+          "japanese": "このプレイ中に消費した[effect0.power] [coin]につき、味方ユニット1体が<b>1</b> [attack]を得る。"
         },
         "card_art": "@PaidInFull",
         "cost": 2,
@@ -147,6 +147,6 @@
     ]
   },
   "files": {
-    "json/spells/spell_paid_in_full.json": "419846d65a782602411f509acef563178140f28e4836fc63acf848b1343f5e4e"
+    "json/spells/spell_paid_in_full.json": "0a1290ad6b0b38bd7c8b0dc05f1d988fa72a4ee743c6e11dd16d470f6f882d9d"
   }
 }

@@ -1,0 +1,105 @@
+{
+  "id": "ww-WW_Token_ExtraCredit-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_Token_ExtraCredit/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_Token_ExtraCredit"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Extra Credit",
+    "spanish": "Crédito Extra",
+    "french": "Crédit supplémentaire",
+    "german": "Zusatzleistung",
+    "portuguese": "Crédito Extra",
+    "russian": "Дополнительный зачёт",
+    "chinese": "额外学分",
+    "chinese_traditional": "額外學分",
+    "korean": "추가 학점",
+    "japanese": "追加単位"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/c4aafeb7401299d9ad1a155d4cda9866313a2eb31126a73e27a2474c58eafa37.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_Token_ExtraCreditCardArt.png": "assets/c4aafeb7401299d9ad1a155d4cda9866313a2eb31126a73e27a2474c58eafa37.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_Token_ExtraCredit",
+        "names": {
+          "english": "Extra Credit",
+          "spanish": "Crédito Extra",
+          "french": "Crédit supplémentaire",
+          "german": "Zusatzleistung",
+          "portuguese": "Crédito Extra",
+          "russian": "Дополнительный зачёт",
+          "chinese": "额外学分",
+          "chinese_traditional": "額外學分",
+          "korean": "추가 학점",
+          "japanese": "追加単位"
+        },
+        "card_type": "spell",
+        "cost": 0,
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "card_art": "@WW_Token_ExtraCreditCardArt",
+        "traits": [
+          "@WW_ExtraCredit_Purge",
+          "@WW_ExtraCredit_Freeze"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_ExtraCredit_Freeze",
+        "name": "CardTraitFreeze"
+      },
+      {
+        "id": "WW_ExtraCredit_Purge",
+        "name": "CardTraitSelfPurge"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_Token_ExtraCreditCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_Token_ExtraCreditCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_Token_ExtraCreditCardArt",
+        "path": "textures/cards/WW_Token_ExtraCreditCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/01_tokens.json": "42ba7e579422a55f519ca7487220d86ec94641c8f509f7f350de6f691fb00dc1"
+  }
+}

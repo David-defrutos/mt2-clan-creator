@@ -1,0 +1,115 @@
+{
+  "id": "succclan-DreadShot-simplified",
+  "simplified": {
+    "removed": [
+      "cards/DreadShot/triggers"
+    ],
+    "needsEffect": false
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "DreadShot"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Dread Shot",
+    "chinese": "恐惧射击",
+    "spanish": "Disparo aterrador",
+    "french": "Tir effroyable",
+    "german": "Schreckensschuss",
+    "portuguese": "Disparo de Pavor",
+    "russian": "Ужасающий выстрел",
+    "chinese_traditional": "恐懼射擊",
+    "japanese": "恐怖の一撃",
+    "korean": "공포의 사격"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/a70dd2213c0afbeebcb1adce1e2b225deb45fc851e5dba02379171512698b08f.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/DreadShotArt.png": "assets/a70dd2213c0afbeebcb1adce1e2b225deb45fc851e5dba02379171512698b08f.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "DreadShot",
+        "names": {
+          "english": "Dread Shot",
+          "chinese": "恐惧射击",
+          "spanish": "Disparo aterrador",
+          "french": "Tir effroyable",
+          "german": "Schreckensschuss",
+          "portuguese": "Disparo de Pavor",
+          "russian": "Ужасающий выстрел",
+          "chinese_traditional": "恐懼射擊",
+          "japanese": "恐怖の一撃",
+          "korean": "공포의 사격"
+        },
+        "card_type": "spell",
+        "rarity": "common",
+        "card_art": "@DreadShotArt",
+        "cost": 2,
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@DreadShotDamage"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "DreadShotDamage",
+        "applied_vfx": "@SuccFXShadowImpact",
+        "name": "CardEffectDamage",
+        "target_mode": "drop_target_character",
+        "target_team": "both",
+        "param_int": 6
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "DreadShotArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@DreadShotArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "DreadShotArt",
+        "path": "textures/DreadShotArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_DreadShot.json": "4c67d1ca55129e51d81b5c2ddc5baec7d99848bb44fb5abd794d8bcfc7e67ff6",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

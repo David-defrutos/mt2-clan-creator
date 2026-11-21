@@ -1,0 +1,91 @@
+{
+  "id": "succclan-FlareRibbon-simplified",
+  "simplified": {
+    "removed": [
+      "relics/FlareRibbon/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "relics",
+    "id": "FlareRibbon"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Flare Ribbon",
+    "chinese": "薪火缎带",
+    "spanish": "Cinta llameante",
+    "french": "Ruban flamboyant",
+    "german": "Flammenband",
+    "portuguese": "Fita Flamejante",
+    "russian": "Пламенная лента",
+    "chinese_traditional": "烈焰緞帶",
+    "japanese": "炎のリボン",
+    "korean": "화염 리본"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/4d4ee6e0a158fde839e3803a50482f81bb530dfb36a3e282bb8be0a4d72dd311.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/RelicIcons/FlareRibbonIconSmall.png": "assets/879169ef3cf167ee4b8bcd962adaad2739b8be6e2954d6f13bb248922604ff56.png",
+    "textures/RelicIcons/FlareRibbonIcon.png": "assets/4d4ee6e0a158fde839e3803a50482f81bb530dfb36a3e282bb8be0a4d72dd311.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "FlareRibbon",
+        "type": "collectable",
+        "names": {
+          "english": "Flare Ribbon",
+          "chinese": "薪火缎带",
+          "spanish": "Cinta llameante",
+          "french": "Ruban flamboyant",
+          "german": "Flammenband",
+          "portuguese": "Fita Flamejante",
+          "russian": "Пламенная лента",
+          "chinese_traditional": "烈焰緞帶",
+          "japanese": "炎のリボン",
+          "korean": "화염 리본"
+        },
+        "disallow_in_deployment": false,
+        "icon": "@FlareRibbonIcon",
+        "icon_small": "@FlareRibbonIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "common",
+              "unlock_level": 0
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "FlareRibbonIconSmall",
+        "path": "textures/RelicIcons/FlareRibbonIconSmall.png"
+      },
+      {
+        "id": "FlareRibbonIcon",
+        "path": "textures/RelicIcons/FlareRibbonIcon.png"
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_FlareRibbon.json": "7171ed458cbe28f8c1edbcc97582a32338661b9e34baa104251e6fb72ab1efb5"
+  }
+}

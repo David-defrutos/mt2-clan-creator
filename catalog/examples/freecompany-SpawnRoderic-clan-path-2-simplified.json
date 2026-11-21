@@ -1,0 +1,402 @@
+{
+  "id": "freecompany-SpawnRoderic-clan-path-2-simplified",
+  "simplified": {
+    "removed": [
+      "game_objects/RodericCharacterArt/animation"
+    ],
+    "path": false
+  },
+  "championPath": {
+    "baseId": "freecompany-SpawnRoderic-simplified",
+    "path": 2,
+    "level": 1,
+    "names": {
+      "english": "Quartermaster",
+      "french": "Intendant",
+      "german": "Quartiermeister",
+      "russian": "Интендант",
+      "portuguese": "Intendente",
+      "chinese": "军需官",
+      "spanish": "Intendente",
+      "chinese_traditional": "軍需官",
+      "korean": "병참 장교",
+      "japanese": "補給官"
+    },
+    "upgradeId": "upg_Quarter1",
+    "localUpgradeId": "upg_Quarter1",
+    "upgrade": {
+      "id": "upg_Quarter1",
+      "titles": {
+        "english": "Quartermaster",
+        "french": "Intendant",
+        "german": "Quartiermeister",
+        "russian": "Интендант",
+        "portuguese": "Intendente",
+        "chinese": "军需官",
+        "spanish": "Intendente",
+        "chinese_traditional": "軍需官",
+        "korean": "병참 장교",
+        "japanese": "補給官"
+      },
+      "descriptions": {
+        "english": "Can equip <b>1</b> additional equipment.\n<b>Supply:</b> The first other ally summoned each turn adds its tier <b>I</b> role kit to your hand.\n<b>Salvage:</b> Return the equipment of the first equipped ally that dies each turn to your hand.",
+        "spanish": "Puede equipar <b>1</b> objeto adicional.\n<b>Suministro:</b> El primer otro aliado invocado cada turno añade a tu mano el kit de su rol de nivel <b>I</b>.\n<b>Recuperación:</b> Devuelve a tu mano los equipos del primer aliado equipado que muera cada turno.",
+        "french": "Peut porter <b>1</b> équipement supplémentaire.\n<b>Ravitaillement :</b> Le premier autre allié invoqué chaque tour ajoute à votre main le kit de son rôle de rang <b>I</b>.\n<b>Récupération :</b> Renvoyez en main les équipements du premier allié équipé qui meurt chaque tour.",
+        "german": "Kann <b>1</b> zusätzliche Ausrüstungsgegenstände tragen.\n<b>Nachschub:</b> Der erste andere verbündete Beschworene jedes Zuges fügt seiner Rolle entsprechende Ausrüstung der Stufe <b>I</b> deiner Hand hinzu.\n<b>Bergung:</b> Die Ausrüstung des ersten ausgerüsteten Verbündeten, der pro Zug stirbt, kehrt auf deine Hand zurück.",
+        "russian": "Может носить на <b>1</b> предмет снаряжения больше.\n<b>Снабжение:</b> Первый другой союзник, призванный за ход, добавляет в руку комплект своей роли уровня <b>I</b>.\n<b>Возврат:</b> Снаряжение первого экипированного союзника, погибшего за ход, возвращается в руку.",
+        "portuguese": "Pode equipar <b>1</b> equipamento adicional.\n<b>Suprimento:</b> O primeiro outro aliado invocado a cada turno adiciona à sua mão o kit de sua função de nível <b>I</b>.\n<b>Recuperação:</b> Devolve à sua mão os equipamentos do primeiro aliado equipado que morrer a cada turno.",
+        "chinese": "可额外装备<b>1</b>件装备。\n<b>补给：</b>每回合首次召唤另一名友军时，将其职业的<b>I</b>级装备加入手牌。\n<b>回收：</b>每回合首名阵亡的已装备友军的装备返回手牌。",
+        "chinese_traditional": "可額外裝備<b>1</b>件裝備。\n<b>補給：</b>每回合首次召喚另一名友軍時，將其職業的<b>I</b>級裝備加入手牌。\n<b>回收：</b>每回合首名陣亡的已裝備友軍的裝備返回手牌。",
+        "korean": "장비를 <b>1</b>개 추가로 장착할 수 있습니다.\n<b>보급:</b> 매 턴 처음으로 다른 아군을 소환하면 그 역할의 <b>I</b>단계 장비를 손에 추가합니다.\n<b>회수:</b> 매 턴 처음 사망한 장비를 장착한 아군의 장비를 손으로 돌려보냅니다.",
+        "japanese": "装備品を追加で<b>1</b>個装着できる。\n<b>補給：</b>各ターン最初に他の味方を召喚すると、その役割のランク<b>I</b>装備を手札に加える。\n<b>回収：</b>各ターン最初に死亡した装備中の味方の装備を手札に戻す。"
+      },
+      "bonus_hp": 9,
+      "bonus_damage": 0,
+      "bonus_equipment": 1,
+      "status_effect_upgrades": [],
+      "show_description_on_cards": true
+    },
+    "levels": [
+      {
+        "upgradeId": "upg_Quarter1",
+        "ref": "@upg_Quarter1"
+      },
+      {
+        "upgradeId": "upg_Quarter2",
+        "ref": "@upg_Quarter2"
+      },
+      {
+        "upgradeId": "upg_Quarter3",
+        "ref": "@upg_Quarter3"
+      }
+    ]
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnRoderic"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Roderic · Quartermaster · I",
+    "french": "Roderic · Intendant · I",
+    "german": "Roderic · Quartiermeister · I",
+    "russian": "Roderic · Интендант · I",
+    "portuguese": "Roderic · Intendente · I",
+    "chinese": "Roderic · 军需官 · I",
+    "spanish": "Roderic · Intendente · I",
+    "chinese_traditional": "Roderic · 軍需官 · I",
+    "korean": "Roderic · 병참 장교 · I",
+    "japanese": "Roderic · 補給官 · I"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 36,
+  "attack": 10,
+  "size": 2,
+  "picture": "assets/1989907266018a5120878e50580cd8376484fc2444956a4ee8163f023c1c1c4d.png",
+  "characterPicture": "assets/acc783546049a1129f26d9e0ce9bd462c75bd462eb2facf2679e03e681328d37.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/RodericCharacterArt.png": "assets/acc783546049a1129f26d9e0ce9bd462c75bd462eb2facf2679e03e681328d37.png",
+    "textures/RodericCardFrame1.png": "assets/1989907266018a5120878e50580cd8376484fc2444956a4ee8163f023c1c1c4d.png",
+    "textures/RodericCardBlend33.png": "assets/12de67de6f93a5a8e9679f32271810897f51f6e8a2a70133c154e89ff6f099ed.png",
+    "textures/RodericCardBlend67.png": "assets/19e252f3c6b8ffebb4b1fa17e3ab888cccb2b8aa5c5c35c88ea9afeb8c6cb42e.png",
+    "textures/RodericCardFrame2.png": "assets/b8acf6e1135fa5680896445dd39e2aacf359c10d15201ef2be95d7b338175754.png",
+    "textures/RodericCardArt.png": "assets/1989907266018a5120878e50580cd8376484fc2444956a4ee8163f023c1c1c4d.png"
+  },
+  "document": {
+    "upgrades": [
+      {
+        "id": "upg_Quarter3",
+        "titles": {
+          "english": "Quartermaster III",
+          "french": "Intendant III",
+          "german": "Quartiermeister III",
+          "russian": "Интендант III",
+          "portuguese": "Intendente III",
+          "chinese": "军需官 III",
+          "spanish": "Intendente III",
+          "chinese_traditional": "軍需官 III",
+          "korean": "병참 장교 III",
+          "japanese": "補給官 III"
+        },
+        "descriptions": {
+          "english": "Can equip <b>3</b> additional equipment.\n<b>Supply:</b> The first other ally summoned each turn adds its tier <b>III</b> role kit to your hand.\n<b>Salvage:</b> Return the equipment of the first equipped ally that dies each turn to your hand.",
+          "spanish": "Puede equipar <b>3</b> objetos adicionales.\n<b>Suministro:</b> El primer otro aliado invocado cada turno añade a tu mano el kit de su rol de nivel <b>III</b>.\n<b>Recuperación:</b> Devuelve a tu mano los equipos del primer aliado equipado que muera cada turno.",
+          "french": "Peut porter <b>3</b> équipements supplémentaires.\n<b>Ravitaillement :</b> Le premier autre allié invoqué chaque tour ajoute à votre main le kit de son rôle de rang <b>III</b>.\n<b>Récupération :</b> Renvoyez en main les équipements du premier allié équipé qui meurt chaque tour.",
+          "german": "Kann <b>3</b> zusätzliche Ausrüstungsgegenstände tragen.\n<b>Nachschub:</b> Der erste andere verbündete Beschworene jedes Zuges fügt seiner Rolle entsprechende Ausrüstung der Stufe <b>III</b> deiner Hand hinzu.\n<b>Bergung:</b> Die Ausrüstung des ersten ausgerüsteten Verbündeten, der pro Zug stirbt, kehrt auf deine Hand zurück.",
+          "russian": "Может носить на <b>3</b> предмета снаряжения больше.\n<b>Снабжение:</b> Первый другой союзник, призванный за ход, добавляет в руку комплект своей роли уровня <b>III</b>.\n<b>Возврат:</b> Снаряжение первого экипированного союзника, погибшего за ход, возвращается в руку.",
+          "portuguese": "Pode equipar <b>3</b> equipamentos adicionais.\n<b>Suprimento:</b> O primeiro outro aliado invocado a cada turno adiciona à sua mão o kit de sua função de nível <b>III</b>.\n<b>Recuperação:</b> Devolve à sua mão os equipamentos do primeiro aliado equipado que morrer a cada turno.",
+          "chinese": "可额外装备<b>3</b>件装备。\n<b>补给：</b>每回合首次召唤另一名友军时，将其职业的<b>III</b>级装备加入手牌。\n<b>回收：</b>每回合首名阵亡的已装备友军的装备返回手牌。",
+          "chinese_traditional": "可額外裝備<b>3</b>件裝備。\n<b>補給：</b>每回合首次召喚另一名友軍時，將其職業的<b>III</b>級裝備加入手牌。\n<b>回收：</b>每回合首名陣亡的已裝備友軍的裝備返回手牌。",
+          "korean": "장비를 <b>3</b>개 추가로 장착할 수 있습니다.\n<b>보급:</b> 매 턴 처음으로 다른 아군을 소환하면 그 역할의 <b>III</b>단계 장비를 손에 추가합니다.\n<b>회수:</b> 매 턴 처음 사망한 장비를 장착한 아군의 장비를 손으로 돌려보냅니다.",
+          "japanese": "装備品を追加で<b>3</b>個装着できる。\n<b>補給：</b>各ターン最初に他の味方を召喚すると、その役割のランク<b>III</b>装備を手札に加える。\n<b>回収：</b>各ターン最初に死亡した装備中の味方の装備を手札に戻す。"
+        },
+        "bonus_hp": 29,
+        "bonus_damage": 10,
+        "bonus_equipment": 3,
+        "remove_upgrades": [
+          "@upg_Quarter2"
+        ],
+        "status_effect_upgrades": [],
+        "show_description_on_cards": true
+      },
+      {
+        "id": "upg_Quarter2",
+        "titles": {
+          "english": "Quartermaster II",
+          "french": "Intendant II",
+          "german": "Quartiermeister II",
+          "russian": "Интендант II",
+          "portuguese": "Intendente II",
+          "chinese": "军需官 II",
+          "spanish": "Intendente II",
+          "chinese_traditional": "軍需官 II",
+          "korean": "병참 장교 II",
+          "japanese": "補給官 II"
+        },
+        "descriptions": {
+          "english": "Can equip <b>2</b> additional equipment.\n<b>Supply:</b> The first other ally summoned each turn adds its tier <b>II</b> role kit to your hand.\n<b>Salvage:</b> Return the equipment of the first equipped ally that dies each turn to your hand.",
+          "spanish": "Puede equipar <b>2</b> objetos adicionales.\n<b>Suministro:</b> El primer otro aliado invocado cada turno añade a tu mano el kit de su rol de nivel <b>II</b>.\n<b>Recuperación:</b> Devuelve a tu mano los equipos del primer aliado equipado que muera cada turno.",
+          "french": "Peut porter <b>2</b> équipements supplémentaires.\n<b>Ravitaillement :</b> Le premier autre allié invoqué chaque tour ajoute à votre main le kit de son rôle de rang <b>II</b>.\n<b>Récupération :</b> Renvoyez en main les équipements du premier allié équipé qui meurt chaque tour.",
+          "german": "Kann <b>2</b> zusätzliche Ausrüstungsgegenstände tragen.\n<b>Nachschub:</b> Der erste andere verbündete Beschworene jedes Zuges fügt seiner Rolle entsprechende Ausrüstung der Stufe <b>II</b> deiner Hand hinzu.\n<b>Bergung:</b> Die Ausrüstung des ersten ausgerüsteten Verbündeten, der pro Zug stirbt, kehrt auf deine Hand zurück.",
+          "russian": "Может носить на <b>2</b> предмета снаряжения больше.\n<b>Снабжение:</b> Первый другой союзник, призванный за ход, добавляет в руку комплект своей роли уровня <b>II</b>.\n<b>Возврат:</b> Снаряжение первого экипированного союзника, погибшего за ход, возвращается в руку.",
+          "portuguese": "Pode equipar <b>2</b> equipamentos adicionais.\n<b>Suprimento:</b> O primeiro outro aliado invocado a cada turno adiciona à sua mão o kit de sua função de nível <b>II</b>.\n<b>Recuperação:</b> Devolve à sua mão os equipamentos do primeiro aliado equipado que morrer a cada turno.",
+          "chinese": "可额外装备<b>2</b>件装备。\n<b>补给：</b>每回合首次召唤另一名友军时，将其职业的<b>II</b>级装备加入手牌。\n<b>回收：</b>每回合首名阵亡的已装备友军的装备返回手牌。",
+          "chinese_traditional": "可額外裝備<b>2</b>件裝備。\n<b>補給：</b>每回合首次召喚另一名友軍時，將其職業的<b>II</b>級裝備加入手牌。\n<b>回收：</b>每回合首名陣亡的已裝備友軍的裝備返回手牌。",
+          "korean": "장비를 <b>2</b>개 추가로 장착할 수 있습니다.\n<b>보급:</b> 매 턴 처음으로 다른 아군을 소환하면 그 역할의 <b>II</b>단계 장비를 손에 추가합니다.\n<b>회수:</b> 매 턴 처음 사망한 장비를 장착한 아군의 장비를 손으로 돌려보냅니다.",
+          "japanese": "装備品を追加で<b>2</b>個装着できる。\n<b>補給：</b>各ターン最初に他の味方を召喚すると、その役割のランク<b>II</b>装備を手札に加える。\n<b>回収：</b>各ターン最初に死亡した装備中の味方の装備を手札に戻す。"
+        },
+        "bonus_hp": 14,
+        "bonus_damage": 5,
+        "bonus_equipment": 2,
+        "remove_upgrades": [
+          "@upg_Quarter1"
+        ],
+        "status_effect_upgrades": [],
+        "show_description_on_cards": true
+      },
+      {
+        "id": "upg_Quarter1",
+        "titles": {
+          "english": "Quartermaster",
+          "french": "Intendant",
+          "german": "Quartiermeister",
+          "russian": "Интендант",
+          "portuguese": "Intendente",
+          "chinese": "军需官",
+          "spanish": "Intendente",
+          "chinese_traditional": "軍需官",
+          "korean": "병참 장교",
+          "japanese": "補給官"
+        },
+        "descriptions": {
+          "english": "Can equip <b>1</b> additional equipment.\n<b>Supply:</b> The first other ally summoned each turn adds its tier <b>I</b> role kit to your hand.\n<b>Salvage:</b> Return the equipment of the first equipped ally that dies each turn to your hand.",
+          "spanish": "Puede equipar <b>1</b> objeto adicional.\n<b>Suministro:</b> El primer otro aliado invocado cada turno añade a tu mano el kit de su rol de nivel <b>I</b>.\n<b>Recuperación:</b> Devuelve a tu mano los equipos del primer aliado equipado que muera cada turno.",
+          "french": "Peut porter <b>1</b> équipement supplémentaire.\n<b>Ravitaillement :</b> Le premier autre allié invoqué chaque tour ajoute à votre main le kit de son rôle de rang <b>I</b>.\n<b>Récupération :</b> Renvoyez en main les équipements du premier allié équipé qui meurt chaque tour.",
+          "german": "Kann <b>1</b> zusätzliche Ausrüstungsgegenstände tragen.\n<b>Nachschub:</b> Der erste andere verbündete Beschworene jedes Zuges fügt seiner Rolle entsprechende Ausrüstung der Stufe <b>I</b> deiner Hand hinzu.\n<b>Bergung:</b> Die Ausrüstung des ersten ausgerüsteten Verbündeten, der pro Zug stirbt, kehrt auf deine Hand zurück.",
+          "russian": "Может носить на <b>1</b> предмет снаряжения больше.\n<b>Снабжение:</b> Первый другой союзник, призванный за ход, добавляет в руку комплект своей роли уровня <b>I</b>.\n<b>Возврат:</b> Снаряжение первого экипированного союзника, погибшего за ход, возвращается в руку.",
+          "portuguese": "Pode equipar <b>1</b> equipamento adicional.\n<b>Suprimento:</b> O primeiro outro aliado invocado a cada turno adiciona à sua mão o kit de sua função de nível <b>I</b>.\n<b>Recuperação:</b> Devolve à sua mão os equipamentos do primeiro aliado equipado que morrer a cada turno.",
+          "chinese": "可额外装备<b>1</b>件装备。\n<b>补给：</b>每回合首次召唤另一名友军时，将其职业的<b>I</b>级装备加入手牌。\n<b>回收：</b>每回合首名阵亡的已装备友军的装备返回手牌。",
+          "chinese_traditional": "可額外裝備<b>1</b>件裝備。\n<b>補給：</b>每回合首次召喚另一名友軍時，將其職業的<b>I</b>級裝備加入手牌。\n<b>回收：</b>每回合首名陣亡的已裝備友軍的裝備返回手牌。",
+          "korean": "장비를 <b>1</b>개 추가로 장착할 수 있습니다.\n<b>보급:</b> 매 턴 처음으로 다른 아군을 소환하면 그 역할의 <b>I</b>단계 장비를 손에 추가합니다.\n<b>회수:</b> 매 턴 처음 사망한 장비를 장착한 아군의 장비를 손으로 돌려보냅니다.",
+          "japanese": "装備品を追加で<b>1</b>個装着できる。\n<b>補給：</b>各ターン最初に他の味方を召喚すると、その役割のランク<b>I</b>装備を手札に加える。\n<b>回収：</b>各ターン最初に死亡した装備中の味方の装備を手札に戻す。"
+        },
+        "bonus_hp": 9,
+        "bonus_damage": 0,
+        "bonus_equipment": 1,
+        "status_effect_upgrades": [],
+        "show_description_on_cards": true
+      }
+    ],
+    "cards": [
+      {
+        "id": "SpawnRoderic",
+        "names": {
+          "english": "Roderic",
+          "french": "Roderic",
+          "german": "Roderic",
+          "russian": "Roderic",
+          "portuguese": "Roderic",
+          "chinese": "Roderic",
+          "spanish": "Roderic",
+          "chinese_traditional": "Roderic",
+          "korean": "Roderic",
+          "japanese": "Roderic"
+        },
+        "card_art": "@Roderic",
+        "cost": 0,
+        "card_type": "monster",
+        "rarity": "champion",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnRodericEffect"
+        ],
+        "initial_upgrades": [
+          "@upg_Quarter1"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnRodericEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@Roderic"
+      }
+    ],
+    "characters": [
+      {
+        "id": "Roderic",
+        "names": {
+          "english": "Roderic",
+          "french": "Roderic",
+          "german": "Roderic",
+          "russian": "Roderic",
+          "portuguese": "Roderic",
+          "chinese": "Roderic",
+          "spanish": "Roderic",
+          "chinese_traditional": "Roderic",
+          "korean": "Roderic",
+          "japanese": "Roderic"
+        },
+        "character_art": "@RodericCharacterArt",
+        "size": 2,
+        "attack_damage": 10,
+        "health": 36,
+        "death_type": "large",
+        "subtypes": [
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34",
+          "@Sub_Warrior",
+          "@Sub_Goblin"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Warrior",
+        "names": {
+          "english": "Warrior",
+          "french": "Guerrier",
+          "german": "Krieger",
+          "russian": "Воин",
+          "portuguese": "Guerreiro",
+          "chinese": "战士",
+          "spanish": "Guerrero",
+          "chinese_traditional": "戰士",
+          "korean": "전사",
+          "japanese": "戦士"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "RodericCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@RodericCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0.0658,
+                "y": 0.5146,
+                "z": 0
+              },
+              "scale": {
+                "x": 3.5186,
+                "y": 3.5186,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "Roderic",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Roderic",
+            "animation_clip": {
+              "id": "RodericCardIdle",
+              "sample_rate": 8,
+              "loop_time": "loop",
+              "frames": [
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardFrame1",
+                "@RodericCardBlend33",
+                "@RodericCardBlend67",
+                "@RodericCardFrame2",
+                "@RodericCardBlend67",
+                "@RodericCardBlend33",
+                "@RodericCardFrame1"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "RodericCharacterArt",
+        "path": "textures/RodericCharacterArt.png"
+      },
+      {
+        "id": "RodericCardFrame1",
+        "path": "textures/RodericCardFrame1.png"
+      },
+      {
+        "id": "RodericCardBlend33",
+        "path": "textures/RodericCardBlend33.png"
+      },
+      {
+        "id": "RodericCardBlend67",
+        "path": "textures/RodericCardBlend67.png"
+      },
+      {
+        "id": "RodericCardFrame2",
+        "path": "textures/RodericCardFrame2.png"
+      },
+      {
+        "id": "Roderic",
+        "path": "textures/RodericCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/champions/champion_roderic_quartermaster.json": "5dcf0ebd368b2b7bce3e8a63d73641128ad1823f8613c6687f62b8a16cef87a1",
+    "json/champions/champion_roderic.json": "9407052c7cfc42068cd18b80061218708d85c39266ca42f99d9eeb1a9edd4647",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

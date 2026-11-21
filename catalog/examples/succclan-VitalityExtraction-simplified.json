@@ -1,0 +1,101 @@
+{
+  "id": "succclan-VitalityExtraction-simplified",
+  "simplified": {
+    "removed": [
+      "cards/VitalityExtraction/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "VitalityExtraction"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Vitality Extraction",
+    "chinese": "活力汲取",
+    "spanish": "Extracción de vitalidad",
+    "french": "Extraction de vitalité",
+    "german": "Vitalitätsentzug",
+    "portuguese": "Extração de Vitalidade",
+    "russian": "Извлечение жизненной силы",
+    "chinese_traditional": "生命汲取",
+    "japanese": "生命力の抽出",
+    "korean": "생명력 추출"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/e2790c38df5d0909b86b8447eaf9b012910bd268e0b25cfb522867e07f23aeec.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/VitalityExtractionArt.png": "assets/e2790c38df5d0909b86b8447eaf9b012910bd268e0b25cfb522867e07f23aeec.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "VitalityExtraction",
+        "names": {
+          "english": "Vitality Extraction",
+          "chinese": "活力汲取",
+          "spanish": "Extracción de vitalidad",
+          "french": "Extraction de vitalité",
+          "german": "Vitalitätsentzug",
+          "portuguese": "Extração de Vitalidade",
+          "russian": "Извлечение жизненной силы",
+          "chinese_traditional": "生命汲取",
+          "japanese": "生命力の抽出",
+          "korean": "생명력 추출"
+        },
+        "card_type": "spell",
+        "rarity": "common",
+        "card_art": "@VitalityExtractionArt",
+        "cost": 0,
+        "targets_room": true,
+        "targetless": true,
+        "traits": [
+          "@Consume"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "VitalityExtractionArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@VitalityExtractionArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "VitalityExtractionArt",
+        "path": "textures/VitalityExtractionArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_VitalityExtraction.json": "de6210c383080bd4291916f939f55503e488da3ad2fa16a19ddce2370d09e05c",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d"
+  }
+}

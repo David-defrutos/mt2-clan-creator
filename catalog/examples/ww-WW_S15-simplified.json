@@ -1,0 +1,91 @@
+{
+  "id": "ww-WW_S15-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S15/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S15"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Trabajo Negativo en Grupo",
+    "english": "Negative Group Assignment",
+    "french": "Travail de groupe négatif",
+    "german": "Negative Gruppenarbeit",
+    "portuguese": "Trabalho de Grupo Negativo",
+    "russian": "Негативное групповое задание",
+    "chinese": "负面小组作业",
+    "chinese_traditional": "負面小組作業",
+    "korean": "부정적 조별 과제",
+    "japanese": "負のグループ課題"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/95c97af9d54156833f496e5f0c68120598bc843204f4b7ff15ec3bb503d1e07f.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S15CardArt.png": "assets/95c97af9d54156833f496e5f0c68120598bc843204f4b7ff15ec3bb503d1e07f.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S15",
+        "names": {
+          "spanish": "Trabajo Negativo en Grupo",
+          "english": "Negative Group Assignment",
+          "french": "Travail de groupe négatif",
+          "german": "Negative Gruppenarbeit",
+          "portuguese": "Trabalho de Grupo Negativo",
+          "russian": "Негативное групповое задание",
+          "chinese": "负面小组作业",
+          "chinese_traditional": "負面小組作業",
+          "korean": "부정적 조별 과제",
+          "japanese": "負のグループ課題"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_S15CardArt",
+        "targetless": false
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S15CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S15CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S15CardArt",
+        "path": "textures/cards/WW_S15CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S15.json": "41401d696b94ced08c456da75dd984426745878ab431a63a41d82bf89a9f12c2"
+  }
+}

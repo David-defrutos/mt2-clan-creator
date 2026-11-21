@@ -1,0 +1,91 @@
+{
+  "id": "ww-WW_S12-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S12/effects",
+      "cards/WW_S12/traits"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S12"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Examen de Triple Impacto",
+    "english": "Triple Impact Exam",
+    "french": "Examen à triple impact",
+    "german": "Dreifachtrefferprüfung",
+    "portuguese": "Exame de Impacto Triplo",
+    "russian": "Экзамен тройного удара",
+    "chinese": "三重冲击考试",
+    "chinese_traditional": "三重衝擊考試",
+    "korean": "삼중 충격 시험",
+    "japanese": "三連撃試験"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/5777816ab1a5f0d5d6bb01b56ddff2f74f96021bf6514b931ca73e529cbf2805.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S12CardArt.png": "assets/5777816ab1a5f0d5d6bb01b56ddff2f74f96021bf6514b931ca73e529cbf2805.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S12",
+        "names": {
+          "spanish": "Examen de Triple Impacto",
+          "english": "Triple Impact Exam",
+          "french": "Examen à triple impact",
+          "german": "Dreifachtrefferprüfung",
+          "portuguese": "Exame de Impacto Triplo",
+          "russian": "Экзамен тройного удара",
+          "chinese": "三重冲击考试",
+          "chinese_traditional": "三重衝擊考試",
+          "korean": "삼중 충격 시험",
+          "japanese": "三連撃試験"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "common",
+        "targets_room": true,
+        "card_art": "@WW_S12CardArt"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S12CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S12CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S12CardArt",
+        "path": "textures/cards/WW_S12CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S12.json": "cf64afebcbda95ab7e1627c4fa6f9839682060f1cc86a6358c3b8db79d88d003"
+  }
+}

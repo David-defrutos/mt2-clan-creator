@@ -20,7 +20,14 @@
       "root": "salidas/build/ww-inc",
       "json": "content/json",
       "manifest": "thunderstore/manifest.json",
-      "name": "W&W Inc."
+      "name": "W&W Inc.",
+      "assetPath": "content/icon.png",
+      "bannerSprites": {
+        "enabled_sprite": "WW_BannerEnabled",
+        "disabled_sprite": "WW_BannerDisabled",
+        "frozen_sprite": "WW_BannerFrozen",
+        "visited_sprite_disabled": "WW_BannerVisited"
+      }
     }
   ],
   "cardTypes": [

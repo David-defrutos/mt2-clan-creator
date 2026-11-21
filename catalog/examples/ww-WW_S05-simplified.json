@@ -1,0 +1,93 @@
+{
+  "id": "ww-WW_S05-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S05/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S05"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Consume y Sigue Matriculado",
+    "english": "Consume and Re-enroll",
+    "french": "Consommer et se réinscrire",
+    "german": "Verbrauchen und neu einschreiben",
+    "portuguese": "Consumir e Rematricular",
+    "russian": "Расход и повторное зачисление",
+    "chinese": "消耗与重新入学",
+    "chinese_traditional": "消耗與重新入學",
+    "korean": "소모 후 재등록",
+    "japanese": "消費して再入学"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/f14faa8748c519443042f890d16c76d621908e3d4576c71dfc45accb55ee851a.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S05CardArt.png": "assets/f14faa8748c519443042f890d16c76d621908e3d4576c71dfc45accb55ee851a.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S05",
+        "names": {
+          "spanish": "Consume y Sigue Matriculado",
+          "english": "Consume and Re-enroll",
+          "french": "Consommer et se réinscrire",
+          "german": "Verbrauchen und neu einschreiben",
+          "portuguese": "Consumir e Rematricular",
+          "russian": "Расход и повторное зачисление",
+          "chinese": "消耗与重新入学",
+          "chinese_traditional": "消耗與重新入學",
+          "korean": "소모 후 재등록",
+          "japanese": "消費して再入学"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "rare",
+        "targets_room": true,
+        "card_art": "@WW_S05CardArt",
+        "targetless": true,
+        "hide_in_logbook": true,
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S05CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S05CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S05CardArt",
+        "path": "textures/cards/WW_S05CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S05.json": "752779bc62eec39963ff39cd30eea4fd3fb6691a64457d5e32ce3331ba8aae7e"
+  }
+}

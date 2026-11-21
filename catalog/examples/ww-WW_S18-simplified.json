@@ -1,0 +1,91 @@
+{
+  "id": "ww-WW_S18-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S18/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S18"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Cambio de Pupitres",
+    "english": "Desk Swap",
+    "french": "Échange de bureaux",
+    "german": "Pulttausch",
+    "portuguese": "Troca de Mesas",
+    "russian": "Обмен партами",
+    "chinese": "课桌交换",
+    "chinese_traditional": "課桌交換",
+    "korean": "책상 교환",
+    "japanese": "机の交換"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/42f689dc66ac7561fc908c781e979f63422405856e18f7343385e1220efafdc1.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S18CardArt.png": "assets/42f689dc66ac7561fc908c781e979f63422405856e18f7343385e1220efafdc1.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S18",
+        "names": {
+          "spanish": "Cambio de Pupitres",
+          "english": "Desk Swap",
+          "french": "Échange de bureaux",
+          "german": "Pulttausch",
+          "portuguese": "Troca de Mesas",
+          "russian": "Обмен партами",
+          "chinese": "课桌交换",
+          "chinese_traditional": "課桌交換",
+          "korean": "책상 교환",
+          "japanese": "机の交換"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "common",
+        "targets_room": true,
+        "card_art": "@WW_S18CardArt",
+        "targetless": true
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S18CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S18CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S18CardArt",
+        "path": "textures/cards/WW_S18CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S18.json": "9993874235c1d3637d9a92c7f6744c41f933f0a570454a5761b220bed744b178"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "id": "ww-WW_R02-simplified",
+  "simplified": {
+    "removed": [
+      "upgrades/WW_R02_Upgrade/room_modifier_upgrades"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_R02"
+  },
+  "kind": "room",
+  "names": {
+    "spanish": "Awkward Silence",
+    "english": "Awkward Silence",
+    "french": "Silence gênant",
+    "german": "Peinliche Stille",
+    "portuguese": "Silêncio Constrangedor",
+    "russian": "Неловкое молчание",
+    "chinese": "尴尬沉默",
+    "chinese_traditional": "尷尬沉默",
+    "korean": "어색한 침묵",
+    "japanese": "気まずい沈黙"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/65bc5aa8cb2d85ab2784810fb46dccfb497d3362220863704532d6ef6ebf550e.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ui/WW_R02Icon.png": "assets/4b48b10a50b0407cc50b84637505721a3148686e6ade62bc2ea103931f49b908.png",
+    "textures/cards/WW_R02CardArt.png": "assets/65bc5aa8cb2d85ab2784810fb46dccfb497d3362220863704532d6ef6ebf550e.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_R02",
+        "names": {
+          "spanish": "Awkward Silence",
+          "english": "Awkward Silence",
+          "french": "Silence gênant",
+          "german": "Peinliche Stille",
+          "portuguese": "Silêncio Constrangedor",
+          "russian": "Неловкое молчание",
+          "chinese": "尴尬沉默",
+          "chinese_traditional": "尷尬沉默",
+          "korean": "어색한 침묵",
+          "japanese": "気まずい沈黙"
+        },
+        "card_type": "room",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_R02CardArt",
+        "targetless": true,
+        "effects": [
+          "@WW_R02_Attach"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_R02_Attach",
+        "name": "CardEffectAttachTrainRoomAttachment",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_upgrade": "@WW_R02_Upgrade",
+        "additional_tooltips": [
+          "@WW_MagicPowerReference"
+        ]
+      }
+    ],
+    "additional_tooltips": [
+      {
+        "id": "WW_MagicPowerReference",
+        "titles": {
+          "key": "ModifyCard_MagicalPower_TooltipTitle"
+        },
+        "descriptions": {
+          "key": "ModifyCard_MagicalPower_TooltipBody"
+        }
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WW_R02_Upgrade",
+        "hide_icon_on_card": true,
+        "icon": "@WW_R02Icon"
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_R02Icon",
+        "path": "textures/ui/WW_R02Icon.png"
+      },
+      {
+        "id": "WW_R02CardArt",
+        "path": "textures/cards/WW_R02CardArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_R02CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_R02CardArt"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_R02.json": "1ea05eddd7f72fab30a8bafb7c07df287a3316487cab4d4e90418a7fb78281f5",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

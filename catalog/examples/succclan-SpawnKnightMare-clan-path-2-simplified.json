@@ -1,0 +1,295 @@
+{
+  "id": "succclan-SpawnKnightMare-clan-path-2-simplified",
+  "simplified": {
+    "removed": [
+      "characters/KnightMare/triggers",
+      "upgrades/upg_EndlessBasic/trigger_upgrades",
+      "upgrades/upg_EndlessPre/trigger_upgrades",
+      "upgrades/upg_EndlessPro/trigger_upgrades"
+    ],
+    "path": true
+  },
+  "championPath": {
+    "baseId": "succclan-SpawnKnightMare-simplified",
+    "path": 2,
+    "level": 1,
+    "names": {
+      "english": "Endless",
+      "chinese": "无尽",
+      "spanish": "Interminable",
+      "french": "Sans fin",
+      "german": "Endlos",
+      "portuguese": "Infindável",
+      "russian": "Бесконечность",
+      "chinese_traditional": "無盡",
+      "japanese": "無限",
+      "korean": "무한"
+    },
+    "upgradeId": "upg_EndlessBasic",
+    "localUpgradeId": "upg_EndlessBasic",
+    "upgrade": {
+      "id": "upg_EndlessBasic",
+      "titles": {
+        "english": "Endless",
+        "chinese": "无尽",
+        "spanish": "Interminable",
+        "french": "Sans fin",
+        "german": "Endlos",
+        "portuguese": "Infindável",
+        "russian": "Бесконечность",
+        "chinese_traditional": "無盡",
+        "japanese": "無限",
+        "korean": "무한"
+      },
+      "bonus_damage": 10,
+      "bonus_hp": 0,
+      "use_upgrade_highlight_tags": true
+    },
+    "levels": [
+      {
+        "upgradeId": "upg_EndlessBasic",
+        "ref": "@upg_EndlessBasic"
+      },
+      {
+        "upgradeId": "upg_EndlessPre",
+        "ref": "@upg_EndlessPre"
+      },
+      {
+        "upgradeId": "upg_EndlessPro",
+        "ref": "@upg_EndlessPro"
+      }
+    ]
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "SpawnKnightMare"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Knightmare · Endless · I",
+    "chinese": "梦魇之主 · 无尽 · I",
+    "spanish": "Knightmare · Interminable · I",
+    "french": "Knightmare · Sans fin · I",
+    "german": "Knightmare · Endlos · I",
+    "portuguese": "Knightmare · Infindável · I",
+    "russian": "Knightmare · Бесконечность · I",
+    "chinese_traditional": "Knightmare · 無盡 · I",
+    "japanese": "Knightmare · 無限 · I",
+    "korean": "Knightmare · 무한 · I"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 10,
+  "attack": 0,
+  "size": 2,
+  "picture": "assets/97018a955d35ae7c7fe8dc42544d5eb0388106aeb156714119fccf1b43a94239.png",
+  "characterPicture": "assets/762282329c925b8d2c4b12cfb9964ed946623a670ffdc6aa4b683228c5c0aa66.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/KnightMareCharacterArt.png": "assets/762282329c925b8d2c4b12cfb9964ed946623a670ffdc6aa4b683228c5c0aa66.png",
+    "textures/KnightMareCardArt.png": "assets/97018a955d35ae7c7fe8dc42544d5eb0388106aeb156714119fccf1b43a94239.png"
+  },
+  "document": {
+    "upgrades": [
+      {
+        "id": "upg_EndlessPro",
+        "titles": {
+          "english": "Endless III",
+          "chinese": "无尽 III",
+          "spanish": "Interminable III",
+          "french": "Sans fin III",
+          "german": "Endlos III",
+          "portuguese": "Infindável III",
+          "russian": "Бесконечность III",
+          "chinese_traditional": "無盡 III",
+          "japanese": "無限 III",
+          "korean": "무한 III"
+        },
+        "bonus_damage": 20,
+        "bonus_hp": 10,
+        "use_upgrade_highlight_tags": true
+      },
+      {
+        "id": "upg_EndlessPre",
+        "titles": {
+          "english": "Endless II",
+          "chinese": "无尽 II",
+          "spanish": "Interminable II",
+          "french": "Sans fin II",
+          "german": "Endlos II",
+          "portuguese": "Infindável II",
+          "russian": "Бесконечность II",
+          "chinese_traditional": "無盡 II",
+          "japanese": "無限 II",
+          "korean": "무한 II"
+        },
+        "bonus_damage": 15,
+        "bonus_hp": 5,
+        "use_upgrade_highlight_tags": true
+      },
+      {
+        "id": "upg_EndlessBasic",
+        "titles": {
+          "english": "Endless",
+          "chinese": "无尽",
+          "spanish": "Interminable",
+          "french": "Sans fin",
+          "german": "Endlos",
+          "portuguese": "Infindável",
+          "russian": "Бесконечность",
+          "chinese_traditional": "無盡",
+          "japanese": "無限",
+          "korean": "무한"
+        },
+        "bonus_damage": 10,
+        "bonus_hp": 0,
+        "use_upgrade_highlight_tags": true
+      }
+    ],
+    "cards": [
+      {
+        "id": "SpawnKnightMare",
+        "names": {
+          "english": "Knightmare",
+          "chinese": "梦魇之主",
+          "spanish": "Knightmare",
+          "french": "Knightmare",
+          "german": "Knightmare",
+          "portuguese": "Knightmare",
+          "russian": "Knightmare",
+          "chinese_traditional": "Knightmare",
+          "japanese": "Knightmare",
+          "korean": "Knightmare"
+        },
+        "card_art": "@KnightMareCardArt",
+        "cost": 0,
+        "card_type": "monster",
+        "rarity": "champion",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnKnightMare"
+        ],
+        "initial_upgrades": [
+          "@upg_EndlessBasic"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnKnightMare",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@KnightMare"
+      }
+    ],
+    "characters": [
+      {
+        "id": "KnightMare",
+        "attack_vfx": "@SuccFXPsionicAttack",
+        "impact_vfx": "@SuccFXArcaneImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "names": {
+          "english": "Knightmare",
+          "chinese": "梦魇之主",
+          "spanish": "Knightmare",
+          "french": "Knightmare",
+          "german": "Knightmare",
+          "portuguese": "Knightmare",
+          "russian": "Knightmare",
+          "chinese_traditional": "Knightmare",
+          "japanese": "Knightmare",
+          "korean": "Knightmare"
+        },
+        "character_art": "@KnightMareCharacterArt",
+        "size": 2,
+        "attack_damage": 0,
+        "health": 10,
+        "subtypes": [
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+        ]
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "KnightMareCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@KnightMareCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.092,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 0.85,
+                "y": 0.85,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "KnightMareCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@KnightMareCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "KnightMareCharacterArt",
+        "path": "textures/KnightMareCharacterArt.png"
+      },
+      {
+        "id": "KnightMareCardArt",
+        "path": "textures/KnightMareCardArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXArcaneImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXPsionicAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/Ekka/FX_EkkaAttack.prefab",
+          "asset_guid": "c7e542f2b751e704d93e28e27fa469b4"
+        },
+        "spawn_location": "character_center"
+      }
+    ]
+  },
+  "files": {
+    "json/champions/champion_KnightMare.json": "8018856c48678d50808eac0350ebcdfcf53d0209d3678ce919e689b9171c8ca4",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

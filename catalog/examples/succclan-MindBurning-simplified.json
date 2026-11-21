@@ -1,0 +1,109 @@
+{
+  "id": "succclan-MindBurning-simplified",
+  "simplified": {
+    "removed": [
+      "cards/MindBurning/effects"
+    ],
+    "needsEffect": false
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "MindBurning"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Mind Burning",
+    "chinese": "意识灼烧",
+    "spanish": "Mente en llamas",
+    "french": "Esprit en flammes",
+    "german": "Geistbrand",
+    "portuguese": "Mente em Chamas",
+    "russian": "Горящий разум",
+    "chinese_traditional": "心靈灼燒",
+    "japanese": "精神の炎",
+    "korean": "정신 연소"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/9937337df10c6d989f5dcef7f808b0cabdcb09bfc71cf5bff2484ada332de1be.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/MindBurningArt.png": "assets/9937337df10c6d989f5dcef7f808b0cabdcb09bfc71cf5bff2484ada332de1be.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "MindBurning",
+        "names": {
+          "english": "Mind Burning",
+          "chinese": "意识灼烧",
+          "spanish": "Mente en llamas",
+          "french": "Esprit en flammes",
+          "german": "Geistbrand",
+          "portuguese": "Mente em Chamas",
+          "russian": "Горящий разум",
+          "chinese_traditional": "心靈灼燒",
+          "japanese": "精神の炎",
+          "korean": "정신 연소"
+        },
+        "card_type": "spell",
+        "rarity": "uncommon",
+        "card_art": "@MindBurningArt",
+        "cost": 1,
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@MindBurningMulti"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "MindBurningMulti",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "drop_target_character",
+        "target_team": "heroes",
+        "param_status_effects": [
+          {
+            "status": "multistrike",
+            "count": 1
+          }
+        ],
+        "target_ignore_bosses": true
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "MindBurningArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@MindBurningArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "MindBurningArt",
+        "path": "textures/MindBurningArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_MindBurning.json": "ac44db52f5d6fc55640c27f2ad462a66ddb928b5ab49708ae91299ec9cfae922"
+  }
+}

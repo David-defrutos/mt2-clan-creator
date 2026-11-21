@@ -1,34 +1,112 @@
-import {removeTemplateEffects} from './template-effects.js';
-import {reviseEffectDescriptions} from './template-effect-text.js';
+import {applyCopiedEffectEdits} from './copied-effect-edits.js';
+import {communitySummary,communityTemplates} from './community-templates.js';
+import {isActivatedCard,removeTemplateEffects,templateEffects} from './template-effects.js';
+import {parameterKeywordOptions,applyExampleParameterValues,type ExampleParameter} from './example-parameter-values.js';
+import {reviseArtifactActivation,reviseEffectDescriptions,reviseMovementDescriptions} from './template-effect-text.js';
 import {removeUnitAuras} from './unit-auras.js';
 import {unitStatusKey} from './model.js';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {projectRoot} from '../paths.js';
+import {applicationRoot,projectRoot} from '../paths.js';
 import type {CardDraft} from './model.js';
 export type Definition=Record<string,any>;
-export interface Example {externalResources?:{provider:string;section:string;id:string;names:Record<string,string>;descriptions:Record<string,string>;file:string;sha256:string}[];legacy?:boolean;championPath?:{levels?:{upgradeId:string;ref:string}[];localUpgradeId?:string;baseId:string;path:number;level:number;upgradeId:string;guid:string;names:Record<string,string>;upgrade:Record<string,any>};costType?:string;previewIncomplete?:boolean;official?:boolean;requiredDlc?:string|null;clan?:string;id:string;source:string;sourceId:string;version:string;commit:string;root:{section:string;id:string};kind:CardDraft['kind'];names:Record<string,string>;descriptions:Record<string,string>;cost:number;rarity:string;health:number|null;attack:number|null;size:number;picture:string;characterPicture?:string;providers:string[];assets:Record<string,string>;document:Record<string,Definition[]>;files:Record<string,string>}
+export interface Example {simplified?:{removed:string[];path?:boolean;needsEffect?:boolean};externalResources?:{provider:string;section:string;id:string;names:Record<string,string>;descriptions:Record<string,string>;file:string;sha256:string}[];legacy?:boolean;championPath?:{levels?:{upgradeId:string;ref:string}[];localUpgradeId?:string;baseId:string;path:number;level:number;upgradeId:string;guid:string;names:Record<string,string>;upgrade:Record<string,any>};costType?:string;previewIncomplete?:boolean;official?:boolean;requiredDlc?:string|null;clan?:string;id:string;source:string;sourceId:string;version:string;commit:string;root:{section:string;id:string};kind:CardDraft['kind'];names:Record<string,string>;descriptions:Record<string,string>;cost:number;rarity:string;health:number|null;attack:number|null;size:number;picture:string;detailPicture?:string;characterPicture?:string;searchText?:string;providers:string[];assets:Record<string,string>;document:Record<string,Definition[]>;files:Record<string,string>}
 export const catalogRoot=process.env.CLAN_CREATOR_CATALOG_ROOT?path.resolve(process.env.CLAN_CREATOR_CATALOG_ROOT):path.join(projectRoot,'catalog');
-export async function creatorRules(){const rules=JSON.parse(await fs.readFile(path.join(projectRoot,'config/creator.json'),'utf8'));const art=await fs.readFile(path.join(catalogRoot,'official/art-manifest.json'),'utf8').then(JSON.parse).catch(()=>null);if(!art){rules.defaultUnit='ww-WW_T01';rules.defaultSpell='freecompany-Bless';rules.defaultRoom='freecompany-PaymastersTent';}const officialStatistics=JSON.parse(await fs.readFile(path.join(projectRoot,'config/official-statistics.json'),'utf8'));const templates=JSON.parse(await fs.readFile(path.join(projectRoot,'config/official-clans.json'),'utf8'));return {...rules,officialStatistics,officialClanTemplates:templates.clans.map((c:any)=>({id:c.id,name:c.name,cards:c.cards.length,requiredDlc:c.requiredDlc})),officialFrames:art?.frames??{}};}
+type OfficialIcons={relics:Record<string,{picture:string;detailPicture?:string}>;clans:Record<string,Record<string,string>>};
+export async function officialIcons():Promise<OfficialIcons>{
+ return fs.readFile(path.join(catalogRoot,'official/icon-manifest.json'),'utf8').then(JSON.parse).catch(error=>{
+  if(error.code!=='ENOENT')throw error;
+  return {relics:{},clans:{}};
+ });
+}
+export async function creatorRules(){const rules=JSON.parse(await fs.readFile(path.join(projectRoot,'config/creator.json'),'utf8'));const art=await fs.readFile(path.join(catalogRoot,'official/art-manifest.json'),'utf8').then(JSON.parse).catch(()=>null);if(!art){rules.defaultUnit='ww-WW_T01';rules.defaultSpell='freecompany-Bless';rules.defaultRoom='freecompany-PaymastersTent';}const officialStatistics=JSON.parse(await fs.readFile(path.join(projectRoot,'config/official-statistics.json'),'utf8'));const templates=JSON.parse(await fs.readFile(path.join(projectRoot,'config/official-clans.json'),'utf8'));return {...rules,officialStatistics,officialClanTemplates:templates.clans.map((c:any)=>({id:c.id,name:c.name,cards:c.cards.length,requiredDlc:c.requiredDlc})),communityClanTemplates:(await communityTemplates(catalogRoot)).map(communitySummary),officialClanIcons:(await officialIcons()).clans,officialFrames:art?.frames??{}};}
 let listCache:{token:string;value:{items:Omit<Example,'document'|'assets'|'files'>[]}}|undefined;
-export async function exampleList(){const paths=[...['index.json','official/index.json'].map(n=>path.join(catalogRoot,n)),path.join(projectRoot,'config/official-clan-overrides.json')];const stats=await Promise.all(paths.map(p=>fs.stat(p).catch((e:any)=>{if(e.code==='ENOENT')return null;throw e;})));const token=stats.map(s=>s?.mtimeMs+'|'+s?.size).join(';');if(listCache?.token===token)return listCache.value;const mods=JSON.parse(await fs.readFile(paths[0],'utf8'));const official=stats[1]?JSON.parse(await fs.readFile(paths[1],'utf8')):{items:[]};const overrides=stats[2]?JSON.parse(await fs.readFile(paths[2],'utf8')).clans:{};const value={items:[...official.items.map((e:any)=>overrides[e.id]?{...e,clan:overrides[e.id]}:e),...mods.items]};listCache={token,value};return value;}
-export async function readExample(id:string):Promise<Example>{if(!/^[A-Za-z0-9_-]{1,100}$/.test(id))throw Error('Este ejemplo no está incluido en el creador.');const entry=(await exampleList()).items.find(e=>e.id===id) as any;if(!entry)throw Error('Este ejemplo no está incluido en el creador.');const bytes=await fs.readFile(path.join(catalogRoot,entry.official?'official/examples':'examples',id+'.json'));if(createHash('sha256').update(bytes).digest('hex')!==entry.sha256)throw Error('El ejemplo cambió después de su auditoría. Restaura el catálogo del creador.');return {...JSON.parse(bytes.toString('utf8')),...(entry.official?{clan:entry.clan}:{}),...(entry.legacy?{legacy:true}:{})};}
+export async function exampleList(){const paths=[...['index.json','official/index.json'].map(n=>path.join(catalogRoot,n)),path.join(projectRoot,'config/official-clan-overrides.json'),path.join(catalogRoot,'official/icon-manifest.json'),path.join(applicationRoot,'dist-server/catalog-search.json')];const stats=await Promise.all(paths.map(p=>fs.stat(p).catch((e:any)=>{if(e.code==='ENOENT')return null;throw e;})));const token=stats.map(s=>s?.mtimeMs+'|'+s?.size).join(';');if(listCache?.token===token)return listCache.value;const mods=JSON.parse(await fs.readFile(paths[0],'utf8'));const official=stats[1]?JSON.parse(await fs.readFile(paths[1],'utf8')):{items:[]};const overrides=stats[2]?JSON.parse(await fs.readFile(paths[2],'utf8')).clans:{};const icons=(await officialIcons()).relics;const search:Record<string,[string,string]>=stats[4]?JSON.parse(await fs.readFile(paths[4],'utf8')):{};
+ const items=[...official.items.map((e:any)=>({...e,...icons[e.root?.id],...(overrides[e.id]?{clan:overrides[e.id]}:{})})),...mods.items].map(item=>{
+  const indexed=search[item.id];
+  return indexed?.[0]===item.sha256?{...item,searchText:indexed[1]}:item;
+ });
+ const value={items};listCache={token,value};return value;}
+export async function readExample(id:string):Promise<Example>{if(!/^[A-Za-z0-9_-]{1,100}$/.test(id))throw Error('Este ejemplo no está incluido en el creador.');const entry=(await exampleList()).items.find(e=>e.id===id) as any;if(!entry)throw Error('Este ejemplo no está incluido en el creador.');const bytes=await fs.readFile(path.join(catalogRoot,entry.official?'official/examples':'examples',id+'.json'));if(createHash('sha256').update(bytes).digest('hex')!==entry.sha256)throw Error('El ejemplo cambió después de su auditoría. Restaura el catálogo del creador.');return {...JSON.parse(bytes.toString('utf8')),...(entry.official?{clan:entry.clan,picture:entry.picture,detailPicture:entry.detailPicture}:{}),...(entry.legacy?{legacy:true}:{})};}
 const parameterConfig=JSON.parse(readFileSync(path.join(projectRoot,'config/creator.json'),'utf8'));
 const parameterRules=parameterConfig.exampleParameterRules,extraRules=parameterConfig.exampleExtraParameters;
-const editableSections=new Set(['characters','effects','upgrades','relic_effects','room_modifiers','character_triggers','card_triggers','traits']);
-export function exampleParameters(example:Example){const rows:{key:string;label:string;value:number;section:string;id:string;path:(string|number)[];status?:string}[]=[];
- for(const [section,definitions]of Object.entries(example.document)){if(!editableSections.has(section))continue;
- for(const d of definitions){function visit(v:any,keys:(string|number)[]){if(Array.isArray(v)){v.forEach((x,i)=>visit(x,[...keys,i]));return;}if(v&&typeof v==='object'){for(const [k,x]of Object.entries(v)){
+const paramIntRules:Record<string,{minimum?:number;maximum?:number;ignoreRange?:boolean;selectionPrefix?:string;excludeFields?:string[]}>=parameterConfig.exampleParamIntRules??{};
+function editableParamInt(effectClass:string,definition:Record<string,any>){
+ const constraints=paramIntRules[effectClass];
+ const choices=parameterKeywordOptions[effectClass];
+ const mode=definition.target_card_selection_mode;
+ return Object.hasOwn(parameterRules,effectClass)&&!(
+  constraints?.ignoreRange&&definition.use_int_range||
+  constraints?.selectionPrefix&&(typeof mode!=='string'||!mode.startsWith(constraints.selectionPrefix))||
+  constraints?.minimum!==undefined&&definition.param_int<constraints.minimum||
+  choices&&!Object.hasOwn(choices,definition.param_int)||
+  constraints?.excludeFields?.some(field=>!!definition[field])
+ );
+}
+const editableSections=new Set(['characters','effects','upgrades','relic_effects','room_modifiers','character_triggers','card_triggers','traits','relic_effect_conditions']);
+export function exampleParameters(example:Example){const rows:ExampleParameter[]=[];
+ for(const [section,definitions]of Object.entries(example.document)){
+ if(section==='cards'){
+  for(const d of definitions){
+   if(!isActivatedCard(example.document,d))continue;
+   for(const field of ['cooldown','initial_cooldown']){
+    const value=d[field]??0;
+    if(Number.isInteger(value)&&value>=0)rows.push({key:[section,d.id,field].join('|'),label:'ability',value,section,id:d.id,path:[field],minimum:0});
+   }
+   const teleports=(d.effects??[]).some((ref:string)=>(example.document.effects??[]).some(effect=>'@'+effect.id===ref&&effect.name==='CardEffectUnitAbilityTeleport'));
+   if(teleports){
+    const field='can_ability_target_other_floors';
+    rows.push({key:[section,d.id,field].join('|'),label:'ability',value:Number(Boolean(d[field])),section,id:d.id,path:[field],boolean:true,choices:[0,1]});
+   }
+  }
+  continue;
+ }
+ if(!editableSections.has(section))continue;
+ for(const d of definitions){
+ if(section==='relic_effect_conditions'){
+  if(d.param_tracked_value==='any_card_played'&&d.param_card_type==='spell'&&d.param_entry_duration==='this_turn'&&
+   d.allow_multiple_triggers_per_duration===false&&d.param_comparator?.includes('greater_than')&&d.param_comparator.includes('equal')&&
+   Number.isInteger(d.param_int)&&d.param_int>0&&d.param_int<=parameterConfig.limits.maxNumber){
+   rows.push({key:[section,d.id,'param_int'].join('|'),label:'RelicSpellCountThreshold',value:d.param_int,section,id:d.id,path:['param_int'],minimum:1});
+  }
+  continue;
+ }
+ if(section==='relic_effects'&&d.name==='RelicEffectModifyEnergyOnMoonPhase'&&[1,2].includes(d.param_int_2)){
+  rows.push({key:[section,d.id,'param_int_2'].join('|'),label:'RelicActiveMoonPhase',value:d.param_int_2,section,id:d.id,path:['param_int_2'],choices:[1,2],choiceKeywords:{1:'moonshade',2:'moonlit'}});
+ }
+ if(section==='effects'&&d.name==='CardEffectFloorRearrange'&&(d.param_int===undefined||d.param_int===0||d.param_int===1)){
+  rows.push({key:[section,d.id,'param_int'].join('|'),label:d.name,value:d.param_int??0,section,id:d.id,path:['param_int'],choices:[0,1]});
+ }
+ function visit(v:any,keys:(string|number)[]){if(Array.isArray(v)){v.forEach((x,i)=>visit(x,[...keys,i]));return;}if(v&&typeof v==='object'){for(const [k,x]of Object.entries(v)){
  const effectClass=typeof v.trigger_effect==='string'?v.trigger_effect:typeof d.name==='string'?d.name:'';
- if(typeof x==='number'&&Math.abs(x)<=parameterConfig.limits.maxNumber&&(['bonus_damage','bonus_hp','bonus_size'].includes(k)||k==='count'&&(typeof v.status==='string'||v.status?.mod_reference)&&!(parameterConfig.exampleReadOnlyStatusCountClasses??[]).includes(effectClass)||k==='param_int'&&parameterRules[effectClass]||extraRules?.[effectClass]?.[k]))rows.push({key:[section,d.id,...keys,k].join('|'),label:effectClass||section,value:x,section,id:d.id,path:[...keys,k],...(v.status?{status:unitStatusKey(v.status)}:{})});else if(x&&typeof x==='object')visit(x,[...keys,k]);}}}visit(d,[]);}}
- return rows;}
+ if(typeof x==='number'&&Math.abs(x)<=parameterConfig.limits.maxNumber&&(['bonus_damage','bonus_hp','bonus_size'].includes(k)||k==='count'&&(typeof v.status==='string'||v.status?.mod_reference)&&!(parameterConfig.exampleReadOnlyStatusCountClasses??[]).includes(effectClass)||k==='param_int'&&editableParamInt(effectClass,v)||extraRules?.[effectClass]?.[k]))rows.push({key:[section,d.id,...keys,k].join('|'),label:effectClass||section,value:x,section,id:d.id,path:[...keys,k],...(k==='param_int'?{
+  minimum:effectClass==='CardEffectMix'?1:paramIntRules[effectClass]?.minimum,
+  maximum:paramIntRules[effectClass]?.maximum,
+  ...(parameterKeywordOptions[effectClass]?{
+   choices:Object.keys(parameterKeywordOptions[effectClass]).map(Number),
+   choiceKeywords:parameterKeywordOptions[effectClass],
+  }:{}),
+ }:{} ),...(v.status?{status:unitStatusKey(v.status)}:{})});else if(x&&typeof x==='object')visit(x,[...keys,k]);}}}visit(d,[]);}}
+ const auxiliary=new Map<string,Record<string,string>>();
+ if(example.root.section==='cards')for(const card of example.document.cards??[]){
+  if(card.id===example.root.id||!card.names)continue;
+  for(const action of templateEffects(example.document,{section:'cards',id:card.id})){
+   if(action.section==='effects')auxiliary.set(action.id,card.names);
+  }
+ }
+ return rows.map(parameter=>auxiliary.has(parameter.id)?{
+  ...parameter,auxiliaryCard:auxiliary.get(parameter.id),
+  pyreDamage:parameter.label==='CardEffectDamage'&&example.document.effects?.find(effect=>effect.id===parameter.id)?.target_mode==='pyre',
+ }:parameter);}
 export function cloneExampleCard(e:Example,uid:string,language='es'):CardDraft{return {uid,kind:e.kind,name:e.names[language==='es'?'spanish':'english']??e.names.english??e.root.id,description:e.descriptions[language==='es'?'spanish':'english']??e.descriptions.english??'',templateId:e.id,cost:e.cost,attack:e.attack??5,health:e.health??10,size:e.size,rarity:['common','uncommon','rare'].includes(e.rarity)?e.rarity:'common',banner:false,reward:!['blight','junk'].includes(e.kind)&&e.costType!=='unplayable',unlockLevel:1,scale:1,positionY:0,effects:[],parameters:Object.fromEntries(exampleParameters(e).map(p=>[p.key,p.value]))};}
-export function applyExampleParameters(e:Example,card:CardDraft){const copy=structuredClone(e.document);removeUnitAuras(copy,e.root,card.removedAuras);for(const p of exampleParameters(e)){if(card.parameters[p.key]===undefined)continue;let object:any=copy[p.section].find(d=>d.id===p.id);for(const part of p.path.slice(0,-1))object=object[part];object[p.path.at(-1)!]=card.parameters[p.key];}
+export function applyExampleParameters(e:Example,card:CardDraft){const copy=structuredClone(e.document),parameters=exampleParameters(e);removeUnitAuras(copy,e.root,card.removedAuras);applyExampleParameterValues(copy,parameters,card.parameters);
  if(e.kind==='room'){const replacements=new Map<string,string>();for(const p of exampleParameters(e)){if(p.section==='upgrades'&&p.path.at(-1)==='count'&&card.parameters[p.key]!==undefined&&card.parameters[p.key]!==p.value)replacements.set(String(p.value),String(card.parameters[p.key]));}if(replacements.size)for(const section of ['cards','upgrades'])for(const d of copy[section]??[])if(d.descriptions)for(const [lang,text]of Object.entries(d.descriptions))if(typeof text==='string')d.descriptions[lang]=text.replace(/\b\d+\b/g,n=>replacements.get(n)??n);}
  for(const upgrade of copy.upgrades??[])if(upgrade.status_effect_upgrades)upgrade.status_effect_upgrades=upgrade.status_effect_upgrades.filter((s:any)=>s.count!==0);
- const changed=removeTemplateEffects(copy,e.root,card.removedTemplateEffects);if(changed.length)reviseEffectDescriptions(e.document,copy,changed,parameterConfig);return copy;}
+ reviseMovementDescriptions(e.document,copy,parameterConfig);
+ if(e.kind==='artifact')reviseArtifactActivation(e.document,copy);
+ const changed=removeTemplateEffects(copy,e.root,card.removedTemplateEffects);if(changed.length)reviseEffectDescriptions(e.document,copy,changed,parameterConfig);applyCopiedEffectEdits(copy,e.document,e.root,card,parameterConfig,parameters);return copy;}
 // 2026-11-15-0853||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Resolver catálogo autocontenido y exponer cantidades editables sin código ni JSON
 // 2026-11-15-0855||codex-clan-editor||clan-creator/src\server\creator\catalog.ts||Conservar las transformaciones del ejemplo al copiarlo
 // 2026-11-15-0913||codex-clan-editor||clan-creator/src\server\creator\catalog.ts||Actualizar descripciones literales de salas al modificar la cantidad de su estado
@@ -59,3 +137,19 @@ export function applyExampleParameters(e:Example,card:CardDraft){const copy=stru
 // 2026-11-17-1909||codex-clan-editor||clan-creator/src\server\creator\catalog.ts||Leer preferencia local de expansiones sin incluir datos personales en configuración pública
 // 2026-11-17-1918||codex-clan-editor||clan-creator/src\server\creator\catalog.ts||Retirar excepción privada del selector DLC al habilitarlo públicamente
 // 2026-11-17-2308||codex-clan-editor||clan-creator/src\server\creator\catalog.ts||Aplicar clasificación corregida al índice y detalle sin alterar archivos auditados ni sus hashes
+// 2026-11-19-2137||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Exponer y exportar los destinos válidos de Advance y Retreat
+// 2026-11-21-1017||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Exponer recarga y alcance de las habilidades activadas copiadas
+// 2026-11-21-1045||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Leer las plantillas de clanes de la comunidad desde el catálogo
+// 2026-11-21-1045||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Exponer al asistente el resumen de los clanes de la comunidad
+// 2026-11-21-1100||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Exponer metadatos de las versiones simplificadas
+// 2026-11-21-1255||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Aplicar los controles de efectos copiados al generar las cartas
+// 2026-11-21-1331||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Mostrar iconos oficiales del catálogo sin reescribir ni volver a auditar definiciones de cartas
+// 2026-11-21-1510||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Conservar el nombre de la carta auxiliar al etiquetar los parámetros del formulario
+// 2026-11-21-1554||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Actualizar el aviso de activación de una copia de artefacto después de editar su cantidad
+// 2026-11-21-1557||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Aplicar cantidades específicas del ejemplo desde el catálogo
+// 2026-11-21-1825||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Permitir editar las opciones de una infusión en los ejemplos
+// 2026-11-21-1904||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Exponer cantidades verificadas solo cuando ese campo controla la mecánica activa
+// 2026-11-21-1905||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Limitar la edición a valores escalares y opciones comprobadas sin rechazar valores especiales del juego
+// 2026-11-21-2013||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Exponer recargas de sala, umbrales de hechizos y parámetros nativos con semántica verificada
+// 2026-11-21-2016||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Aplicar textos de condiciones cambiadas en el JSON de clan
+// 2026-11-21-2043||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Cargar el índice derivado y usarlo solo para la versión auditada de cada ejemplo

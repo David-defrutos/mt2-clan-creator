@@ -1,0 +1,552 @@
+{
+  "id": "succclan-SpawnKnightMare-clan-path-3-simplified",
+  "simplified": {
+    "removed": [
+      "characters/KnightMare/triggers",
+      "character_triggers/IllusionBasicTrigger/effects",
+      "character_triggers/IllusionPreTrigger/effects",
+      "character_triggers/IllusionProTrigger/effects"
+    ],
+    "path": true
+  },
+  "championPath": {
+    "baseId": "succclan-SpawnKnightMare-simplified",
+    "path": 3,
+    "level": 1,
+    "names": {
+      "english": "Illusion",
+      "chinese": "幻影",
+      "spanish": "Ilusión",
+      "french": "Illusion",
+      "german": "Illusion",
+      "portuguese": "Ilusão",
+      "russian": "Иллюзия",
+      "chinese_traditional": "幻象",
+      "japanese": "幻影",
+      "korean": "환상"
+    },
+    "upgradeId": "upg_IllusionBasic",
+    "localUpgradeId": "upg_IllusionBasic",
+    "upgrade": {
+      "id": "upg_IllusionBasic",
+      "titles": {
+        "english": "Illusion",
+        "chinese": "幻影",
+        "spanish": "Ilusión",
+        "french": "Illusion",
+        "german": "Illusion",
+        "portuguese": "Ilusão",
+        "russian": "Иллюзия",
+        "chinese_traditional": "幻象",
+        "japanese": "幻影",
+        "korean": "환상"
+      },
+      "bonus_damage": 0,
+      "bonus_hp": 10,
+      "use_upgrade_highlight_tags": true,
+      "trigger_upgrades": [
+        "@IllusionBasicTrigger"
+      ]
+    },
+    "levels": [
+      {
+        "upgradeId": "upg_IllusionBasic",
+        "ref": "@upg_IllusionBasic"
+      },
+      {
+        "upgradeId": "upg_IllusionPre",
+        "ref": "@upg_IllusionPre"
+      },
+      {
+        "upgradeId": "upg_IllusionPro",
+        "ref": "@upg_IllusionPro"
+      }
+    ]
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "SpawnKnightMare"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Knightmare · Illusion · I",
+    "chinese": "梦魇之主 · 幻影 · I",
+    "spanish": "Knightmare · Ilusión · I",
+    "french": "Knightmare · Illusion · I",
+    "german": "Knightmare · Illusion · I",
+    "portuguese": "Knightmare · Ilusão · I",
+    "russian": "Knightmare · Иллюзия · I",
+    "chinese_traditional": "Knightmare · 幻象 · I",
+    "japanese": "Knightmare · 幻影 · I",
+    "korean": "Knightmare · 환상 · I"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 10,
+  "attack": 0,
+  "size": 2,
+  "picture": "assets/97018a955d35ae7c7fe8dc42544d5eb0388106aeb156714119fccf1b43a94239.png",
+  "characterPicture": "assets/762282329c925b8d2c4b12cfb9964ed946623a670ffdc6aa4b683228c5c0aa66.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/KnightMareCharacterArt.png": "assets/762282329c925b8d2c4b12cfb9964ed946623a670ffdc6aa4b683228c5c0aa66.png",
+    "textures/KnightMareCardArt.png": "assets/97018a955d35ae7c7fe8dc42544d5eb0388106aeb156714119fccf1b43a94239.png"
+  },
+  "document": {
+    "upgrades": [
+      {
+        "id": "upg_IllusionPro",
+        "titles": {
+          "english": "Illusion III",
+          "chinese": "幻影 III",
+          "spanish": "Ilusión III",
+          "french": "Illusion III",
+          "german": "Illusion III",
+          "portuguese": "Ilusão III",
+          "russian": "Иллюзия III",
+          "chinese_traditional": "幻象 III",
+          "japanese": "幻影 III",
+          "korean": "환상 III"
+        },
+        "bonus_damage": 0,
+        "bonus_hp": 50,
+        "use_upgrade_highlight_tags": true,
+        "trigger_upgrades": [
+          "@IllusionProTrigger"
+        ]
+      },
+      {
+        "id": "BattleGrowthIllusionProHealth",
+        "bonus_hp": 5
+      },
+      {
+        "id": "BattleGrowthIllusionProAttack",
+        "bonus_damage": 3
+      },
+      {
+        "id": "upg_IllusionPre",
+        "titles": {
+          "english": "Illusion II",
+          "chinese": "幻影 II",
+          "spanish": "Ilusión II",
+          "french": "Illusion II",
+          "german": "Illusion II",
+          "portuguese": "Ilusão II",
+          "russian": "Иллюзия II",
+          "chinese_traditional": "幻象 II",
+          "japanese": "幻影 II",
+          "korean": "환상 II"
+        },
+        "bonus_damage": 0,
+        "bonus_hp": 30,
+        "use_upgrade_highlight_tags": true,
+        "trigger_upgrades": [
+          "@IllusionPreTrigger"
+        ]
+      },
+      {
+        "id": "BattleGrowthIllusionPreHealth",
+        "bonus_hp": 4
+      },
+      {
+        "id": "BattleGrowthIllusionPreAttack",
+        "bonus_damage": 2
+      },
+      {
+        "id": "upg_IllusionBasic",
+        "titles": {
+          "english": "Illusion",
+          "chinese": "幻影",
+          "spanish": "Ilusión",
+          "french": "Illusion",
+          "german": "Illusion",
+          "portuguese": "Ilusão",
+          "russian": "Иллюзия",
+          "chinese_traditional": "幻象",
+          "japanese": "幻影",
+          "korean": "환상"
+        },
+        "bonus_damage": 0,
+        "bonus_hp": 10,
+        "use_upgrade_highlight_tags": true,
+        "trigger_upgrades": [
+          "@IllusionBasicTrigger"
+        ]
+      },
+      {
+        "id": "BattleGrowthIllusionBasicHealth",
+        "bonus_hp": 3
+      },
+      {
+        "id": "BattleGrowthIllusionBasicAttack",
+        "bonus_damage": 1
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "IllusionProTrigger",
+        "trigger": "on_hit",
+        "effects": [
+          "@IllusionProAttack",
+          "@IllusionProHealth",
+          "@IllusionProLifesteal",
+          "@IllusionProSpikes"
+        ]
+      },
+      {
+        "id": "IllusionPreTrigger",
+        "trigger": "on_hit",
+        "effects": [
+          "@IllusionPreAttack",
+          "@IllusionPreHealth",
+          "@IllusionPreLifesteal",
+          "@IllusionPreSpikes"
+        ]
+      },
+      {
+        "id": "IllusionBasicTrigger",
+        "trigger": "on_hit",
+        "effects": [
+          "@IllusionBasicAttack",
+          "@IllusionBasicHealth",
+          "@IllusionBasicLifesteal",
+          "@IllusionBasicSpikes"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "IllusionProSpikes",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "spikes",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "id": "IllusionProLifesteal",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "lifesteal",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "IllusionProHealth",
+        "applied_vfx": "@SuccFXHealthBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 5,
+        "param_upgrade": "@BattleGrowthIllusionProHealth",
+        "param_int_3": 0
+      },
+      {
+        "id": "IllusionProAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 3,
+        "additional_tooltips": [
+          "@PsionicBurstTooltip"
+        ],
+        "param_upgrade": "@BattleGrowthIllusionProAttack",
+        "param_int_3": 0
+      },
+      {
+        "id": "IllusionPreSpikes",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "spikes",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "id": "IllusionPreLifesteal",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "lifesteal",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "IllusionPreHealth",
+        "applied_vfx": "@SuccFXHealthBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 4,
+        "param_upgrade": "@BattleGrowthIllusionPreHealth",
+        "param_int_3": 0
+      },
+      {
+        "id": "IllusionPreAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 2,
+        "additional_tooltips": [
+          "@PsionicBurstTooltip"
+        ],
+        "param_upgrade": "@BattleGrowthIllusionPreAttack",
+        "param_int_3": 0
+      },
+      {
+        "id": "IllusionBasicSpikes",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "spikes",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "IllusionBasicLifesteal",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "lifesteal",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "IllusionBasicHealth",
+        "applied_vfx": "@SuccFXHealthBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 3,
+        "param_upgrade": "@BattleGrowthIllusionBasicHealth",
+        "param_int_3": 0
+      },
+      {
+        "id": "IllusionBasicAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 1,
+        "additional_tooltips": [
+          "@PsionicBurstTooltip"
+        ],
+        "param_upgrade": "@BattleGrowthIllusionBasicAttack",
+        "param_int_3": 0
+      },
+      {
+        "id": "SpawnKnightMare",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@KnightMare"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXHealthBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Health_PS.prefab",
+          "asset_guid": "163c171f05bdd644fbadfa6fc01064a0"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXAttackBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXArcaneImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXPsionicAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/Ekka/FX_EkkaAttack.prefab",
+          "asset_guid": "c7e542f2b751e704d93e28e27fa469b4"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "additional_tooltips": [
+      {
+        "id": "PsionicBurstTooltip",
+        "titles": {
+          "english": "Psionic Burst",
+          "chinese": "灵能爆破",
+          "spanish": "Estallido psiónico",
+          "french": "Explosion psionique",
+          "german": "Psionischer Ausbruch",
+          "portuguese": "Explosão Psiônica",
+          "russian": "Псионический всплеск",
+          "chinese_traditional": "靈能爆發",
+          "japanese": "サイオニックバースト",
+          "korean": "사이오닉 폭발"
+        },
+        "descriptions": {
+          "english": "Spend <b>Psionic</b> to trigger additional effects.",
+          "spanish": "Gasta <b>Psiónico</b> para activar efectos adicionales.",
+          "french": "Dépense <b>Psionique</b> pour déclencher des effets supplémentaires.",
+          "german": "Verbraucht <b>Psionik</b>, um zusätzliche Effekte auszulösen.",
+          "russian": "Расходует <b>Псионику</b> для активации дополнительных эффектов.",
+          "portuguese": "Gasta <b>Psiônico</b> para ativar efeitos adicionais.",
+          "chinese": "消耗<b>灵能</b>以触发额外效果。",
+          "chinese_traditional": "消耗<b>靈能</b>以觸發額外效果。",
+          "korean": "<b>사이오닉</b>을 소모하여 추가 효과를 발동합니다.",
+          "japanese": "<b>サイオニック</b>を消費して追加効果を発動する。"
+        },
+        "style": "keyword",
+        "allow_secondary_placement": true
+      }
+    ],
+    "cards": [
+      {
+        "id": "SpawnKnightMare",
+        "names": {
+          "english": "Knightmare",
+          "chinese": "梦魇之主",
+          "spanish": "Knightmare",
+          "french": "Knightmare",
+          "german": "Knightmare",
+          "portuguese": "Knightmare",
+          "russian": "Knightmare",
+          "chinese_traditional": "Knightmare",
+          "japanese": "Knightmare",
+          "korean": "Knightmare"
+        },
+        "card_art": "@KnightMareCardArt",
+        "cost": 0,
+        "card_type": "monster",
+        "rarity": "champion",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnKnightMare"
+        ],
+        "initial_upgrades": [
+          "@upg_IllusionBasic"
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "KnightMare",
+        "attack_vfx": "@SuccFXPsionicAttack",
+        "impact_vfx": "@SuccFXArcaneImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "names": {
+          "english": "Knightmare",
+          "chinese": "梦魇之主",
+          "spanish": "Knightmare",
+          "french": "Knightmare",
+          "german": "Knightmare",
+          "portuguese": "Knightmare",
+          "russian": "Knightmare",
+          "chinese_traditional": "Knightmare",
+          "japanese": "Knightmare",
+          "korean": "Knightmare"
+        },
+        "character_art": "@KnightMareCharacterArt",
+        "size": 2,
+        "attack_damage": 0,
+        "health": 10,
+        "subtypes": [
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+        ]
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "KnightMareCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@KnightMareCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.092,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 0.85,
+                "y": 0.85,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "KnightMareCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@KnightMareCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "KnightMareCharacterArt",
+        "path": "textures/KnightMareCharacterArt.png"
+      },
+      {
+        "id": "KnightMareCardArt",
+        "path": "textures/KnightMareCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/champions/champion_KnightMare.json": "8018856c48678d50808eac0350ebcdfcf53d0209d3678ce919e689b9171c8ca4",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d"
+  }
+}

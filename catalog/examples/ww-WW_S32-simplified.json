@@ -1,0 +1,102 @@
+{
+  "id": "ww-WW_S32-simplified",
+  "simplified": {
+    "removed": [],
+    "needsEffect": false
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S32"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Pair Assignment",
+    "spanish": "Trabajo en Pareja",
+    "french": "Travail en binôme",
+    "german": "Partnerarbeit",
+    "portuguese": "Trabalho em Dupla",
+    "russian": "Парная работа",
+    "chinese": "双人作业",
+    "chinese_traditional": "雙人作業",
+    "korean": "짝 과제",
+    "japanese": "ペア課題"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/dbf7f5ee09d010e9aae72689630d79ff8e14ce49db014985bab5451b96765c87.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S32CardArt.png": "assets/dbf7f5ee09d010e9aae72689630d79ff8e14ce49db014985bab5451b96765c87.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S32",
+        "names": {
+          "english": "Pair Assignment",
+          "spanish": "Trabajo en Pareja",
+          "french": "Travail en binôme",
+          "german": "Partnerarbeit",
+          "portuguese": "Trabalho em Dupla",
+          "russian": "Парная работа",
+          "chinese": "双人作业",
+          "chinese_traditional": "雙人作業",
+          "korean": "짝 과제",
+          "japanese": "ペア課題"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "common",
+        "targets_room": true,
+        "effects": [
+          "@WW_S32_Damage"
+        ],
+        "card_art": "@WW_S32CardArt",
+        "hide_in_logbook": true,
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S32CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S32CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S32CardArt",
+        "path": "textures/cards/WW_S32CardArt.png"
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_S32_Damage",
+        "name": "CardEffectDamage",
+        "target_mode": "drop_target_character",
+        "target_team": "heroes",
+        "param_int": 5
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S32.json": "b8663daa54aa4560450495fe065778cc91b2ee4dd3bbba024ea6b7a498be9e9f"
+  }
+}

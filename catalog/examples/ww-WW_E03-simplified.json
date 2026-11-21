@@ -1,0 +1,127 @@
+{
+  "id": "ww-WW_E03-simplified",
+  "simplified": {
+    "removed": [
+      "upgrades/WW_E03_Upgrade/trigger_upgrades"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_E03"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Tenured Wand",
+    "spanish": "Varita Titular",
+    "french": "Baguette titulaire",
+    "german": "Zauberstab auf Lebenszeit",
+    "portuguese": "Varinha Titular",
+    "russian": "Жезл штатного преподавателя",
+    "chinese": "终身教职魔杖",
+    "chinese_traditional": "終身教職魔杖",
+    "korean": "종신 교수 지팡이",
+    "japanese": "終身教授の杖"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/67d7406604d937cc4febaab98fbf92b96d557e3e5ee38dfff810853174644daf.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/equipment/WW_E03Icon.png": "assets/717657f5a9c1dcab028bb4bd3caba9ed1b2359e95ba3e45c5fe6bae681d7e6c2.png",
+    "textures/cards/WW_E03CardArt.png": "assets/67d7406604d937cc4febaab98fbf92b96d557e3e5ee38dfff810853174644daf.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_E03",
+        "names": {
+          "english": "Tenured Wand",
+          "spanish": "Varita Titular",
+          "french": "Baguette titulaire",
+          "german": "Zauberstab auf Lebenszeit",
+          "portuguese": "Varinha Titular",
+          "russian": "Жезл штатного преподавателя",
+          "chinese": "终身教职魔杖",
+          "chinese_traditional": "終身教職魔杖",
+          "korean": "종신 교수 지팡이",
+          "japanese": "終身教授の杖"
+        },
+        "card_type": "equipment",
+        "cost": 1,
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": false,
+        "card_art": "@WW_E03CardArt",
+        "effects": [
+          "@WW_E03_Equip"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_E03_Equip",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@WW_E03_Upgrade"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WW_E03_Upgrade",
+        "titles": {
+          "english": "Tenured Wand",
+          "spanish": "Varita Titular",
+          "french": "Baguette titulaire",
+          "german": "Zauberstab auf Lebenszeit",
+          "portuguese": "Varinha Titular",
+          "russian": "Жезл штатного преподавателя",
+          "chinese": "终身教职魔杖",
+          "chinese_traditional": "終身教職魔杖",
+          "korean": "종신 교수 지팡이",
+          "japanese": "終身教授の杖"
+        },
+        "hide_icon_on_card": true,
+        "icon": "@WW_E03Icon"
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_E03Icon",
+        "path": "textures/equipment/WW_E03Icon.png"
+      },
+      {
+        "id": "WW_E03CardArt",
+        "path": "textures/cards/WW_E03CardArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_E03CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_E03CardArt"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_E03.json": "60de17ac70e19759d13432e503c4ddd9dd0997d80d005957434f33e5da9f091a"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "id": "ww-WW_U06-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_U06_Character/ability",
+      "characters/WW_U06_Character/starting_status_effects"
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_U06"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Catedrática de Daños Compartidos",
+    "english": "Professor of Shared Damages",
+    "french": "Professeur de dégâts partagés",
+    "german": "Professor für geteilten Schaden",
+    "portuguese": "Professor de Danos Compartilhados",
+    "russian": "Профессор распределённого урона",
+    "chinese": "伤害分担教授",
+    "chinese_traditional": "傷害分擔教授",
+    "korean": "피해 분담 교수",
+    "japanese": "損害分担教授"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": 30,
+  "attack": 10,
+  "size": 2,
+  "picture": "assets/6d910338fbade8aaf5147d69b19cd353171560bb36f43323aaef7752cd3eecee.png",
+  "characterPicture": "assets/ce16bbf1839797dc039fb976ea431bda998f3c4b2dd304076ca4588ecd4fce49.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/characters/WW_U06CharacterArt.png": "assets/ce16bbf1839797dc039fb976ea431bda998f3c4b2dd304076ca4588ecd4fce49.png",
+    "textures/cards/WW_U06CardArt.png": "assets/6d910338fbade8aaf5147d69b19cd353171560bb36f43323aaef7752cd3eecee.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_U06",
+        "names": {
+          "spanish": "Catedrática de Daños Compartidos",
+          "english": "Professor of Shared Damages",
+          "french": "Professeur de dégâts partagés",
+          "german": "Professor für geteilten Schaden",
+          "portuguese": "Professor de Danos Compartilhados",
+          "russian": "Профессор распределённого урона",
+          "chinese": "伤害分担教授",
+          "chinese_traditional": "傷害分擔教授",
+          "korean": "피해 분담 교수",
+          "japanese": "損害分担教授"
+        },
+        "card_type": "monster",
+        "cost": 2,
+        "rarity": "rare",
+        "targets_room": true,
+        "card_art": "@WW_U06CardArt",
+        "effects": [
+          "@WW_U06_Spawn"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_U06_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_U06_Character"
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_U06_Character",
+        "names": {
+          "spanish": "Catedrática de Daños Compartidos",
+          "english": "Professor of Shared Damages",
+          "french": "Professeur de dégâts partagés",
+          "german": "Professor für geteilten Schaden",
+          "portuguese": "Professor de Danos Compartilhados",
+          "russian": "Профессор распределённого урона",
+          "chinese": "伤害分担教授",
+          "chinese_traditional": "傷害分擔教授",
+          "korean": "피해 분담 교수",
+          "japanese": "損害分担教授"
+        },
+        "character_art": "@WW_U06CharacterArt",
+        "size": 2,
+        "health": 30,
+        "attack_damage": 10,
+        "subtypes": [
+          "@WW_Witch"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Witch",
+        "names": {
+          "english": "Witch",
+          "spanish": "Bruja",
+          "french": "Sorcière",
+          "german": "Hexe",
+          "portuguese": "Bruxa",
+          "russian": "Ведьма",
+          "chinese": "女巫",
+          "chinese_traditional": "女巫",
+          "korean": "마녀",
+          "japanese": "魔女"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_U06CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_U06CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.98,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WW_U06CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_U06CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_U06CharacterArt",
+        "path": "textures/characters/WW_U06CharacterArt.png"
+      },
+      {
+        "id": "WW_U06CardArt",
+        "path": "textures/cards/WW_U06CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_U06.json": "3b2cc5ad8f0985bb1de043ef682723086f12a789cbba742754a39d7e5ae37a76",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

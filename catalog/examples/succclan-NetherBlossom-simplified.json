@@ -1,0 +1,91 @@
+{
+  "id": "succclan-NetherBlossom-simplified",
+  "simplified": {
+    "removed": [
+      "relics/NetherBlossom/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "relics",
+    "id": "NetherBlossom"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Nether Blossom",
+    "chinese": "下界之花",
+    "spanish": "Flor del inframundo",
+    "french": "Fleur du monde inférieur",
+    "german": "Unterweltblüte",
+    "portuguese": "Flor do Submundo",
+    "russian": "Цветок преисподней",
+    "chinese_traditional": "冥界之花",
+    "japanese": "冥界の花",
+    "korean": "명계의 꽃"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/cf1b06d8dc98f5430f18ece39787033d7edef8ff462e5163095e19d0a3b5acb7.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/RelicIcons/NetherBlossomIconSmall.png": "assets/132da15d65a3531a175919b379a465e3295e955dd20316e6fddf9c65434bf4eb.png",
+    "textures/RelicIcons/NetherBlossomIcon.png": "assets/cf1b06d8dc98f5430f18ece39787033d7edef8ff462e5163095e19d0a3b5acb7.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "NetherBlossom",
+        "type": "collectable",
+        "names": {
+          "english": "Nether Blossom",
+          "chinese": "下界之花",
+          "spanish": "Flor del inframundo",
+          "french": "Fleur du monde inférieur",
+          "german": "Unterweltblüte",
+          "portuguese": "Flor do Submundo",
+          "russian": "Цветок преисподней",
+          "chinese_traditional": "冥界之花",
+          "japanese": "冥界の花",
+          "korean": "명계의 꽃"
+        },
+        "disallow_in_deployment": false,
+        "icon": "@NetherBlossomIcon",
+        "icon_small": "@NetherBlossomIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "uncommon",
+              "unlock_level": 0
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "NetherBlossomIconSmall",
+        "path": "textures/RelicIcons/NetherBlossomIconSmall.png"
+      },
+      {
+        "id": "NetherBlossomIcon",
+        "path": "textures/RelicIcons/NetherBlossomIcon.png"
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_NetherBlossom.json": "c4187d7c57b9fd0a6a7c80f8d9a4b3cae9fd338265c2c34c8af7cdf832ebfdbc"
+  }
+}

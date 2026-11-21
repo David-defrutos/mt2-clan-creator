@@ -1,0 +1,693 @@
+{
+  "id": "succclan-SpawnKnightMare-clan-path-1-simplified",
+  "simplified": {
+    "removed": [
+      "characters/KnightMare/triggers",
+      "character_triggers/AbyssBasicTrigger/effects",
+      "character_triggers/AbyssPreTrigger/effects",
+      "character_triggers/AbyssProTrigger/effects"
+    ],
+    "path": true
+  },
+  "championPath": {
+    "baseId": "succclan-SpawnKnightMare-simplified",
+    "path": 1,
+    "level": 1,
+    "names": {
+      "english": "Abyss",
+      "chinese": "深渊",
+      "spanish": "Abismo",
+      "french": "Abîme",
+      "german": "Abgrund",
+      "portuguese": "Abismo",
+      "russian": "Бездна",
+      "chinese_traditional": "深淵",
+      "japanese": "深淵",
+      "korean": "심연"
+    },
+    "upgradeId": "upg_AbyssBasic",
+    "localUpgradeId": "upg_AbyssBasic",
+    "upgrade": {
+      "id": "upg_AbyssBasic",
+      "titles": {
+        "english": "Abyss",
+        "chinese": "深渊",
+        "spanish": "Abismo",
+        "french": "Abîme",
+        "german": "Abgrund",
+        "portuguese": "Abismo",
+        "russian": "Бездна",
+        "chinese_traditional": "深淵",
+        "japanese": "深淵",
+        "korean": "심연"
+      },
+      "bonus_damage": 5,
+      "bonus_hp": 0,
+      "use_upgrade_highlight_tags": true,
+      "trigger_upgrades": [
+        "@AbyssBasicTrigger"
+      ],
+      "ability_upgrade": "@KnightMareAbyssSpark"
+    },
+    "levels": [
+      {
+        "upgradeId": "upg_AbyssBasic",
+        "ref": "@upg_AbyssBasic"
+      },
+      {
+        "upgradeId": "upg_AbyssPre",
+        "ref": "@upg_AbyssPre"
+      },
+      {
+        "upgradeId": "upg_AbyssPro",
+        "ref": "@upg_AbyssPro"
+      }
+    ]
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "SpawnKnightMare"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Knightmare · Abyss · I",
+    "chinese": "梦魇之主 · 深渊 · I",
+    "spanish": "Knightmare · Abismo · I",
+    "french": "Knightmare · Abîme · I",
+    "german": "Knightmare · Abgrund · I",
+    "portuguese": "Knightmare · Abismo · I",
+    "russian": "Knightmare · Бездна · I",
+    "chinese_traditional": "Knightmare · 深淵 · I",
+    "japanese": "Knightmare · 深淵 · I",
+    "korean": "Knightmare · 심연 · I"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 10,
+  "attack": 0,
+  "size": 2,
+  "picture": "assets/97018a955d35ae7c7fe8dc42544d5eb0388106aeb156714119fccf1b43a94239.png",
+  "characterPicture": "assets/762282329c925b8d2c4b12cfb9964ed946623a670ffdc6aa4b683228c5c0aa66.png",
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "character_trigger_types",
+      "id": "Accursed",
+      "names": {
+        "english": "Accursed",
+        "chinese": "被咒"
+      },
+      "descriptions": {
+        "english": "Triggers when, during your turn, a <b>Blight</b> or [junk] is played or discarded on the floor.",
+        "chinese": "回合结束前在本层打出或舍弃[blight]牌或[junk]牌时触发。"
+      },
+      "file": "packages/Conductor-Conductor/json/triggers.json",
+      "sha256": "0a0e9419dfeeb57f0e0917c7d1eddf6483d0cb58e7b40188c57b4ab2ecae86b5"
+    }
+  ],
+  "assets": {
+    "textures/ObsessingShardArt.png": "assets/fc6bd964ecb26665a12e65a318a98fd020456df96f868ae0202ada3da2eadb51.png",
+    "textures/KnightMareCharacterArt.png": "assets/762282329c925b8d2c4b12cfb9964ed946623a670ffdc6aa4b683228c5c0aa66.png",
+    "textures/KnightMareCardArt.png": "assets/97018a955d35ae7c7fe8dc42544d5eb0388106aeb156714119fccf1b43a94239.png"
+  },
+  "document": {
+    "upgrades": [
+      {
+        "id": "upg_AbyssPro",
+        "titles": {
+          "english": "Abyss III",
+          "chinese": "深渊 III",
+          "spanish": "Abismo III",
+          "french": "Abîme III",
+          "german": "Abgrund III",
+          "portuguese": "Abismo III",
+          "russian": "Бездна III",
+          "chinese_traditional": "深淵 III",
+          "japanese": "深淵 III",
+          "korean": "심연 III"
+        },
+        "bonus_damage": 5,
+        "bonus_hp": 30,
+        "use_upgrade_highlight_tags": true,
+        "trigger_upgrades": [
+          "@AbyssProTrigger"
+        ],
+        "ability_upgrade": "@KnightMareAbyssSpark"
+      },
+      {
+        "id": "BattleGrowthAbyssProHealth",
+        "bonus_hp": 2
+      },
+      {
+        "id": "BattleGrowthAbyssProAttack",
+        "bonus_damage": 4
+      },
+      {
+        "id": "upg_AbyssPre",
+        "titles": {
+          "english": "Abyss II",
+          "chinese": "深渊 II",
+          "spanish": "Abismo II",
+          "french": "Abîme II",
+          "german": "Abgrund II",
+          "portuguese": "Abismo II",
+          "russian": "Бездна II",
+          "chinese_traditional": "深淵 II",
+          "japanese": "深淵 II",
+          "korean": "심연 II"
+        },
+        "bonus_damage": 5,
+        "bonus_hp": 10,
+        "use_upgrade_highlight_tags": true,
+        "trigger_upgrades": [
+          "@AbyssPreTrigger"
+        ],
+        "ability_upgrade": "@KnightMareAbyssSpark"
+      },
+      {
+        "id": "BattleGrowthAbyssPreHealth",
+        "bonus_hp": 2
+      },
+      {
+        "id": "BattleGrowthAbyssPreAttack",
+        "bonus_damage": 2
+      },
+      {
+        "id": "upg_AbyssBasic",
+        "titles": {
+          "english": "Abyss",
+          "chinese": "深渊",
+          "spanish": "Abismo",
+          "french": "Abîme",
+          "german": "Abgrund",
+          "portuguese": "Abismo",
+          "russian": "Бездна",
+          "chinese_traditional": "深淵",
+          "japanese": "深淵",
+          "korean": "심연"
+        },
+        "bonus_damage": 5,
+        "bonus_hp": 0,
+        "use_upgrade_highlight_tags": true,
+        "trigger_upgrades": [
+          "@AbyssBasicTrigger"
+        ],
+        "ability_upgrade": "@KnightMareAbyssSpark"
+      },
+      {
+        "id": "BattleGrowthAbyssBasicHealth",
+        "bonus_hp": 1
+      },
+      {
+        "id": "BattleGrowthAbyssBasicAttack",
+        "bonus_damage": 1
+      }
+    ],
+    "cards": [
+      {
+        "id": "KnightMareAbyssSpark",
+        "names": {
+          "english": "Obsession",
+          "spanish": "Obsesión",
+          "chinese": "执念",
+          "french": "Obsession",
+          "german": "Besessenheit",
+          "portuguese": "Obsessão",
+          "russian": "Одержимость",
+          "chinese_traditional": "執念",
+          "japanese": "執着",
+          "korean": "집착"
+        },
+        "descriptions": {
+          "english": "Add [effect0.secondarypower] <b>Obsessing Spark</b> to your hand.",
+          "spanish": "Añade [effect0.secondarypower] <b>Chispa obsesiva</b> a tu mano.",
+          "chinese": "将 [effect0.secondarypower] 张<b>欲望碎片</b>加入手牌。",
+          "french": "Ajoutez [effect0.secondarypower] <b>Étincelle obsédante</b> à votre main.",
+          "german": "Füge deiner Hand [effect0.secondarypower] <b>Besessenheitsfunke</b> hinzu.",
+          "portuguese": "Adicione [effect0.secondarypower] <b>Centelha Obsessiva</b> à sua mão.",
+          "russian": "Добавляет [effect0.secondarypower] <b>Искра одержимости</b> в руку.",
+          "chinese_traditional": "將 [effect0.secondarypower] 張<b>執念火花</b>加入手牌。",
+          "japanese": "手札に<b>執着の火花</b>を[effect0.secondarypower]枚加える。",
+          "korean": "손에 <b>집착의 불꽃</b> [effect0.secondarypower]장을 추가합니다."
+        },
+        "card_art": "@ObsessingShardArt",
+        "card_type": "spell",
+        "is_an_ability": true,
+        "cost": 0,
+        "cooldown": 3,
+        "initial_cooldown": 0,
+        "targetless": true,
+        "targets_room": false,
+        "effects": [
+          "@KnightMareAbyssAddSpark"
+        ]
+      },
+      {
+        "id": "ObsessingShard",
+        "names": {
+          "english": "Obsessing Spark",
+          "chinese": "欲望碎片",
+          "spanish": "Chispa obsesiva",
+          "french": "Étincelle obsédante",
+          "german": "Besessenheitsfunke",
+          "portuguese": "Centelha Obsessiva",
+          "russian": "Искра одержимости",
+          "chinese_traditional": "執念火花",
+          "japanese": "執着の火花",
+          "korean": "집착의 불꽃"
+        },
+        "card_type": "blight",
+        "rarity": "common",
+        "card_art": "@ObsessingShardArt",
+        "cost": 1,
+        "targets_room": false,
+        "targetless": true,
+        "traits": [
+          "@Consume"
+        ],
+        "triggers": [
+          "@ObsessingShardOnUnplayed"
+        ]
+      },
+      {
+        "id": "SpawnKnightMare",
+        "names": {
+          "english": "Knightmare",
+          "chinese": "梦魇之主",
+          "spanish": "Knightmare",
+          "french": "Knightmare",
+          "german": "Knightmare",
+          "portuguese": "Knightmare",
+          "russian": "Knightmare",
+          "chinese_traditional": "Knightmare",
+          "japanese": "Knightmare",
+          "korean": "Knightmare"
+        },
+        "card_art": "@KnightMareCardArt",
+        "cost": 0,
+        "card_type": "monster",
+        "rarity": "champion",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnKnightMare"
+        ],
+        "initial_upgrades": [
+          "@upg_AbyssBasic"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "KnightMareAbyssAddSpark",
+        "name": "CardEffectAddBattleCard",
+        "target_mode": "room",
+        "target_team": "none",
+        "param_int": 3,
+        "param_int_2": 1,
+        "param_card_pool": "@ObsessingShardPool"
+      },
+      {
+        "id": "ObsessingShardPyreDamage",
+        "applied_vfx": "@SuccFXShadowImpact",
+        "name": "CardEffectDamage",
+        "target_mode": "pyre",
+        "target_team": "both",
+        "param_int": 1,
+        "suppress_pyre_room_focus": true
+      },
+      {
+        "id": "AbyssProEmber",
+        "name": "CardEffectGainEnergy",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 1
+      },
+      {
+        "id": "AbyssProDraw",
+        "name": "CardEffectDraw",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 1
+      },
+      {
+        "id": "AbyssProHealth",
+        "applied_vfx": "@SuccFXHealthBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_int": 2,
+        "param_upgrade": "@BattleGrowthAbyssProHealth",
+        "param_int_3": 0
+      },
+      {
+        "id": "AbyssProAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_int": 4,
+        "additional_tooltips": [
+          "@PsionicBurstTooltip"
+        ],
+        "param_upgrade": "@BattleGrowthAbyssProAttack",
+        "param_int_3": 0
+      },
+      {
+        "id": "AbyssPreEmber",
+        "name": "CardEffectGainEnergy",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 1
+      },
+      {
+        "id": "AbyssPreDraw",
+        "name": "CardEffectDraw",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 1
+      },
+      {
+        "id": "AbyssPreHealth",
+        "applied_vfx": "@SuccFXHealthBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_int": 2,
+        "param_upgrade": "@BattleGrowthAbyssPreHealth",
+        "param_int_3": 0
+      },
+      {
+        "id": "AbyssPreAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_int": 2,
+        "additional_tooltips": [
+          "@PsionicBurstTooltip"
+        ],
+        "param_upgrade": "@BattleGrowthAbyssPreAttack",
+        "param_int_3": 0
+      },
+      {
+        "id": "AbyssBasicEmber",
+        "name": "CardEffectGainEnergy",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 1
+      },
+      {
+        "id": "AbyssBasicDraw",
+        "name": "CardEffectDraw",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_int": 1
+      },
+      {
+        "id": "AbyssBasicHealth",
+        "applied_vfx": "@SuccFXHealthBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_int": 1,
+        "param_upgrade": "@BattleGrowthAbyssBasicHealth",
+        "param_int_3": 0
+      },
+      {
+        "id": "AbyssBasicAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_int": 1,
+        "additional_tooltips": [
+          "@PsionicBurstTooltip"
+        ],
+        "param_upgrade": "@BattleGrowthAbyssBasicAttack",
+        "param_int_3": 0
+      },
+      {
+        "id": "SpawnKnightMare",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@KnightMare"
+      }
+    ],
+    "card_pools": [
+      {
+        "id": "ObsessingShardPool",
+        "cards": [
+          "@ObsessingShard"
+        ]
+      }
+    ],
+    "card_triggers": [
+      {
+        "id": "ObsessingShardOnUnplayed",
+        "trigger": "on_unplayed_negative",
+        "descriptions": {
+          "english": "Your Pyre takes [effect0.power] damage.",
+          "chinese": "对薪火造成 [effect0.power] 点伤害。",
+          "spanish": "Tu Pira recibe [effect0.power] de daño.",
+          "french": "Votre Brasier subit [effect0.power] dégâts.",
+          "german": "Deine Höllenglut erleidet [effect0.power] Schaden.",
+          "portuguese": "Sua Pira sofre [effect0.power] de dano.",
+          "russian": "Пекло получает [effect0.power] урона.",
+          "chinese_traditional": "你的薪火受到 [effect0.power] 點傷害。",
+          "japanese": "パイアが[effect0.power]ダメージを受ける。",
+          "korean": "화로가 [effect0.power]의 피해를 받습니다."
+        },
+        "effects": [
+          "@ObsessingShardPyreDamage"
+        ]
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXHealthBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Health_PS.prefab",
+          "asset_guid": "163c171f05bdd644fbadfa6fc01064a0"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXAttackBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXArcaneImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXPsionicAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/Ekka/FX_EkkaAttack.prefab",
+          "asset_guid": "c7e542f2b751e704d93e28e27fa469b4"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ObsessingShardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ObsessingShardArt"
+          }
+        }
+      },
+      {
+        "id": "KnightMareCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@KnightMareCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.092,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 0.85,
+                "y": 0.85,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "KnightMareCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@KnightMareCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ObsessingShardArt",
+        "path": "textures/ObsessingShardArt.png"
+      },
+      {
+        "id": "KnightMareCharacterArt",
+        "path": "textures/KnightMareCharacterArt.png"
+      },
+      {
+        "id": "KnightMareCardArt",
+        "path": "textures/KnightMareCardArt.png"
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "AbyssProTrigger",
+        "trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "effects": [
+          "@AbyssProAttack",
+          "@AbyssProHealth",
+          "@AbyssProDraw",
+          "@AbyssProEmber"
+        ]
+      },
+      {
+        "id": "AbyssPreTrigger",
+        "trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "effects": [
+          "@AbyssPreAttack",
+          "@AbyssPreHealth",
+          "@AbyssPreDraw",
+          "@AbyssPreEmber"
+        ]
+      },
+      {
+        "id": "AbyssBasicTrigger",
+        "trigger": {
+          "id": "@Accursed",
+          "mod_reference": "Conductor"
+        },
+        "effects": [
+          "@AbyssBasicAttack",
+          "@AbyssBasicHealth",
+          "@AbyssBasicDraw",
+          "@AbyssBasicEmber"
+        ]
+      }
+    ],
+    "additional_tooltips": [
+      {
+        "id": "PsionicBurstTooltip",
+        "titles": {
+          "english": "Psionic Burst",
+          "chinese": "灵能爆破",
+          "spanish": "Estallido psiónico",
+          "french": "Explosion psionique",
+          "german": "Psionischer Ausbruch",
+          "portuguese": "Explosão Psiônica",
+          "russian": "Псионический всплеск",
+          "chinese_traditional": "靈能爆發",
+          "japanese": "サイオニックバースト",
+          "korean": "사이오닉 폭발"
+        },
+        "descriptions": {
+          "english": "Spend <b>Psionic</b> to trigger additional effects.",
+          "spanish": "Gasta <b>Psiónico</b> para activar efectos adicionales.",
+          "french": "Dépense <b>Psionique</b> pour déclencher des effets supplémentaires.",
+          "german": "Verbraucht <b>Psionik</b>, um zusätzliche Effekte auszulösen.",
+          "russian": "Расходует <b>Псионику</b> для активации дополнительных эффектов.",
+          "portuguese": "Gasta <b>Psiônico</b> para ativar efeitos adicionais.",
+          "chinese": "消耗<b>灵能</b>以触发额外效果。",
+          "chinese_traditional": "消耗<b>靈能</b>以觸發額外效果。",
+          "korean": "<b>사이오닉</b>을 소모하여 추가 효과를 발동합니다.",
+          "japanese": "<b>サイオニック</b>を消費して追加効果を発動する。"
+        },
+        "style": "keyword",
+        "allow_secondary_placement": true
+      }
+    ],
+    "characters": [
+      {
+        "id": "KnightMare",
+        "attack_vfx": "@SuccFXPsionicAttack",
+        "impact_vfx": "@SuccFXArcaneImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "names": {
+          "english": "Knightmare",
+          "chinese": "梦魇之主",
+          "spanish": "Knightmare",
+          "french": "Knightmare",
+          "german": "Knightmare",
+          "portuguese": "Knightmare",
+          "russian": "Knightmare",
+          "chinese_traditional": "Knightmare",
+          "japanese": "Knightmare",
+          "korean": "Knightmare"
+        },
+        "character_art": "@KnightMareCharacterArt",
+        "size": 2,
+        "attack_damage": 0,
+        "health": 10,
+        "subtypes": [
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+        ]
+      }
+    ]
+  },
+  "files": {
+    "json/champions/champion_KnightMare.json": "8018856c48678d50808eac0350ebcdfcf53d0209d3678ce919e689b9171c8ca4",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d",
+    "json/spells/card_ObsessingShard.json": "aa2f8c8cb633cab56c128cd56a7092c7a79f7b33dbe670f259275d646211bd37",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

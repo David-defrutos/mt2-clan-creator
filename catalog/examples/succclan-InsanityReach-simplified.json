@@ -1,0 +1,135 @@
+{
+  "id": "succclan-InsanityReach-simplified",
+  "simplified": {
+    "removed": [
+      "cards/InsanityReach/effects"
+    ],
+    "needsEffect": false
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "InsanityReach"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Insanity Reach",
+    "chinese": "疯狂蔓延",
+    "spanish": "Alcance de la locura",
+    "french": "Emprise de la folie",
+    "german": "Griff des Wahnsinns",
+    "portuguese": "Alcance da Insanidade",
+    "russian": "Прикосновение безумия",
+    "chinese_traditional": "瘋狂之觸",
+    "japanese": "狂気の手",
+    "korean": "광기의 손길"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/589a73af20a3c2a5615f871d5517a43357746ac25b8c1c5fec1c97b98beaa3db.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/InsanityReachArt.png": "assets/589a73af20a3c2a5615f871d5517a43357746ac25b8c1c5fec1c97b98beaa3db.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "InsanityReach",
+        "names": {
+          "english": "Insanity Reach",
+          "chinese": "疯狂蔓延",
+          "spanish": "Alcance de la locura",
+          "french": "Emprise de la folie",
+          "german": "Griff des Wahnsinns",
+          "portuguese": "Alcance da Insanidade",
+          "russian": "Прикосновение безумия",
+          "chinese_traditional": "瘋狂之觸",
+          "japanese": "狂気の手",
+          "korean": "광기의 손길"
+        },
+        "card_type": "spell",
+        "rarity": "rare",
+        "card_art": "@InsanityReachArt",
+        "cost": 2,
+        "targets_room": true,
+        "targetless": true,
+        "traits": [
+          "@Pyrebound"
+        ],
+        "effects": [
+          "@InsanityReachAttack",
+          "@InsanityReachBump"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "InsanityReachBump",
+        "name": "CardEffectBump",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_int": 1,
+        "target_ignore_bosses": true
+      },
+      {
+        "id": "InsanityReachAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectBuffDamage",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_int": 10,
+        "target_ignore_bosses": true
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXAttackBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "Pyrebound",
+        "name": "CardTraitLimitedRange"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "InsanityReachArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@InsanityReachArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "InsanityReachArt",
+        "path": "textures/InsanityReachArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_InsanityReach.json": "a2fc18f6c6997779fe2250bfe0a02069daa1b3410d738d01f4866683f89c39fa",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d"
+  }
+}

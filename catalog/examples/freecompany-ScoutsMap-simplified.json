@@ -1,0 +1,89 @@
+{
+  "id": "freecompany-ScoutsMap-simplified",
+  "simplified": {
+    "removed": [
+      "relics/ScoutsMap/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "relics",
+    "id": "ScoutsMap"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Scout's Map",
+    "french": "Carte de l'éclaireur",
+    "german": "Späherkarte",
+    "russian": "Карта разведчика",
+    "portuguese": "Mapa do Batedor",
+    "chinese": "斥候地图",
+    "spanish": "Mapa del explorador",
+    "chinese_traditional": "斥候地圖",
+    "korean": "정찰병의 지도",
+    "japanese": "斥候の地図"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/9b198cfaa89689120e45304c4488c561ff038b10097b6f1b714140c0f9a547ba.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ScoutsMapIconSmall.png": "assets/22bd174ee1e79fbe572647198ab3fd7e4781390b4c07aa758e9f80d44bb2cd69.png",
+    "textures/ScoutsMapIcon.png": "assets/9b198cfaa89689120e45304c4488c561ff038b10097b6f1b714140c0f9a547ba.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "ScoutsMap",
+        "type": "collectable",
+        "names": {
+          "english": "Scout's Map",
+          "french": "Carte de l'éclaireur",
+          "german": "Späherkarte",
+          "russian": "Карта разведчика",
+          "portuguese": "Mapa do Batedor",
+          "chinese": "斥候地图",
+          "spanish": "Mapa del explorador",
+          "chinese_traditional": "斥候地圖",
+          "korean": "정찰병의 지도",
+          "japanese": "斥候の地図"
+        },
+        "icon": "@ScoutsMapIcon",
+        "icon_small": "@ScoutsMapIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "uncommon"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ScoutsMapIconSmall",
+        "path": "textures/ScoutsMapIconSmall.png"
+      },
+      {
+        "id": "ScoutsMapIcon",
+        "path": "textures/ScoutsMapIcon.png"
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_scouts_map.json": "a458206f7c0ec2d942eaf90a60d168b768084e923f0d48bfd3b855110d9c57e1"
+  }
+}

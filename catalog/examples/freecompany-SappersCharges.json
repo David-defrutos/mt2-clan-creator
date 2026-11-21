@@ -36,11 +36,11 @@
   "cost": 0,
   "costType": "normal",
   "rarity": "uncommon",
-  "health": 1,
-  "attack": 0,
+  "health": null,
+  "attack": null,
   "size": 1,
   "picture": "assets/a7f1df22cfe768bb816d2b523c2f237525833a428f86fb135680bdc00538c7de.png",
-  "characterPicture": "assets/506e2b80856c9d85de3c40377ae8b0e360f508287b2baa4695d71e91488f0863.png",
+  "characterPicture": null,
   "providers": [
     "game"
   ],
@@ -170,7 +170,8 @@
         ],
         "traits": [
           "@SappersBombPurge"
-        ]
+        ],
+        "ignore_when_counting_mastery": true
       }
     ],
     "traits": [
@@ -287,6 +288,6 @@
     ]
   },
   "files": {
-    "json/relics/relic_sappers_charges.json": "090f54b3e10e32baf5e5abafd304674ddfc1776479b68d5050151b3955cd3e12"
+    "json/relics/relic_sappers_charges.json": "92ba753da0874c24c2d0472f05dd13bbf56351058b0af260f2abe8bb47aaca7f"
   }
 }

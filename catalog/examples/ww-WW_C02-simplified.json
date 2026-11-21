@@ -1,0 +1,171 @@
+{
+  "id": "ww-WW_C02-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_C02_Character/triggers",
+      "characters/WW_C02_Character/starting_status_effects"
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_C02"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Catedrática de Brujería Avanzada",
+    "english": "Professor of Advanced Witchcraft",
+    "french": "Professeure de sorcellerie avancée",
+    "german": "Professorin für höhere Hexenkunst",
+    "portuguese": "Professora de Bruxaria Avançada",
+    "russian": "Профессор высшего колдовства",
+    "chinese": "高等巫术教授",
+    "chinese_traditional": "高等巫術教授",
+    "korean": "고급 마녀술 교수",
+    "japanese": "上級魔女術教授"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 20,
+  "attack": 10,
+  "size": 2,
+  "picture": "assets/ae3dac4246098e0e0437b2ffde86b3daebb48b6b12889ecb1749cc39a3100dfc.png",
+  "characterPicture": "assets/f3d99cbc22654112c12ef23ae96bc01327bb7be471dd64d0638ae3e039124e21.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/WW_C02CharacterArt.png": "assets/f3d99cbc22654112c12ef23ae96bc01327bb7be471dd64d0638ae3e039124e21.png",
+    "textures/cards/WW_C02CardArt.png": "assets/ae3dac4246098e0e0437b2ffde86b3daebb48b6b12889ecb1749cc39a3100dfc.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_C02",
+        "names": {
+          "spanish": "Catedrática de Brujería Avanzada",
+          "english": "Professor of Advanced Witchcraft",
+          "french": "Professeure de sorcellerie avancée",
+          "german": "Professorin für höhere Hexenkunst",
+          "portuguese": "Professora de Bruxaria Avançada",
+          "russian": "Профессор высшего колдовства",
+          "chinese": "高等巫术教授",
+          "chinese_traditional": "高等巫術教授",
+          "korean": "고급 마녀술 교수",
+          "japanese": "上級魔女術教授"
+        },
+        "card_type": "monster",
+        "cost": 0,
+        "rarity": "champion",
+        "targets_room": true,
+        "card_art": "@WW_C02CardArt",
+        "effects": [
+          "@WW_C02_Spawn"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_C02_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_C02_Character"
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_C02_Character",
+        "names": {
+          "spanish": "Catedrática de Brujería Avanzada",
+          "english": "Professor of Advanced Witchcraft",
+          "french": "Professeure de sorcellerie avancée",
+          "german": "Professorin für höhere Hexenkunst",
+          "portuguese": "Professora de Bruxaria Avançada",
+          "russian": "Профессор высшего колдовства",
+          "chinese": "高等巫术教授",
+          "chinese_traditional": "高等巫術教授",
+          "korean": "고급 마녀술 교수",
+          "japanese": "上級魔女術教授"
+        },
+        "character_art": "@WW_C02CharacterArt",
+        "size": 2,
+        "health": 20,
+        "attack_damage": 10,
+        "subtypes": [
+          "@WW_Witch",
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Witch",
+        "names": {
+          "english": "Witch",
+          "spanish": "Bruja",
+          "french": "Sorcière",
+          "german": "Hexe",
+          "portuguese": "Bruxa",
+          "russian": "Ведьма",
+          "chinese": "女巫",
+          "chinese_traditional": "女巫",
+          "korean": "마녀",
+          "japanese": "魔女"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_C02CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_C02CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.05,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WW_C02CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_C02CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_C02CharacterArt",
+        "path": "textures/WW_C02CharacterArt.png"
+      },
+      {
+        "id": "WW_C02CardArt",
+        "path": "textures/cards/WW_C02CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_C02.json": "f835fd60b5bc1de1c2efe41b2dd0656a9b5e7253fba484ea03e3adca30043470",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

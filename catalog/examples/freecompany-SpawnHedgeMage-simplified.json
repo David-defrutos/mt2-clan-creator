@@ -1,0 +1,187 @@
+{
+  "id": "freecompany-SpawnHedgeMage-simplified",
+  "simplified": {
+    "removed": [
+      "characters/HedgeMage/triggers",
+      "characters/HedgeMage/ability"
+    ]
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnHedgeMage"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Hedge-Mage",
+    "french": "Mage autodidacte",
+    "german": "Heckenmagier",
+    "russian": "Самоучка-маг",
+    "portuguese": "Mago Autodidata",
+    "chinese": "野法师",
+    "spanish": "Mago autodidacta",
+    "chinese_traditional": "野法師",
+    "korean": "독학 마법사",
+    "japanese": "在野の魔術師"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 14,
+  "attack": 4,
+  "size": 1,
+  "picture": "assets/9511d0acdf4f96cf7152cbc96c91551be25b722746559203b99c9ace29e489ac.png",
+  "characterPicture": "assets/dfd0336f51ba7e973001d2f9e7cdcc4fcb93d83b8f0f819e21c6533bff5ae1ac.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/HedgeMageCharacterArt.png": "assets/dfd0336f51ba7e973001d2f9e7cdcc4fcb93d83b8f0f819e21c6533bff5ae1ac.png",
+    "textures/HedgeMageCardArt.png": "assets/9511d0acdf4f96cf7152cbc96c91551be25b722746559203b99c9ace29e489ac.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnHedgeMage",
+        "names": {
+          "english": "Hedge-Mage",
+          "french": "Mage autodidacte",
+          "german": "Heckenmagier",
+          "russian": "Самоучка-маг",
+          "portuguese": "Mago Autodidata",
+          "chinese": "野法师",
+          "spanish": "Mago autodidacta",
+          "chinese_traditional": "野法師",
+          "korean": "독학 마법사",
+          "japanese": "在野の魔術師"
+        },
+        "card_art": "@HedgeMage",
+        "cost": 2,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnHedgeMageEffect"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnHedgeMageEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@HedgeMage"
+      }
+    ],
+    "characters": [
+      {
+        "id": "HedgeMage",
+        "names": {
+          "english": "Hedge-Mage",
+          "french": "Mage autodidacte",
+          "german": "Heckenmagier",
+          "russian": "Самоучка-маг",
+          "portuguese": "Mago Autodidata",
+          "chinese": "野法师",
+          "spanish": "Mago autodidacta",
+          "chinese_traditional": "野法師",
+          "korean": "독학 마법사",
+          "japanese": "在野の魔術師"
+        },
+        "character_art": "@HedgeMageCharacterArt",
+        "size": 1,
+        "attack_damage": 4,
+        "health": 14,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Wizard",
+          "@Sub_Goblin"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Wizard",
+        "names": {
+          "english": "Wizard",
+          "french": "Magicien",
+          "german": "Magier",
+          "russian": "Волшебник",
+          "portuguese": "Mago",
+          "chinese": "法师",
+          "spanish": "Mago",
+          "chinese_traditional": "法師",
+          "korean": "마법사",
+          "japanese": "魔術師"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "HedgeMageCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@HedgeMageCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.427,
+                "z": 0
+              },
+              "scale": {
+                "x": 0.687,
+                "y": 0.687,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "HedgeMage",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@HedgeMage"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "HedgeMageCharacterArt",
+        "path": "textures/HedgeMageCharacterArt.png"
+      },
+      {
+        "id": "HedgeMage",
+        "path": "textures/HedgeMageCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_hedgemage.json": "d69c07fe9affeb507c339fe96956c6f381ca9ba1d35373f3f5cb424c8a9ae7bd",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

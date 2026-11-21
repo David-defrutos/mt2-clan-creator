@@ -1,0 +1,91 @@
+{
+  "id": "ww-WW_S17-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S17/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S17"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Año Sabático de un Turno",
+    "english": "One Turn Sabbatical",
+    "french": "Congé sabbatique d'un tour",
+    "german": "Einrundiges Sabbatjahr",
+    "portuguese": "Licença de um Turno",
+    "russian": "Отпуск на один ход",
+    "chinese": "一回合学术休假",
+    "chinese_traditional": "一回合學術休假",
+    "korean": "한 턴 연구 휴가",
+    "japanese": "1ターンの研究休暇"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/a558be24051f3e957bbd7e0b96c4e638b58960ccb124dce9b8b7fdb07026acee.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S17CardArt.png": "assets/a558be24051f3e957bbd7e0b96c4e638b58960ccb124dce9b8b7fdb07026acee.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S17",
+        "names": {
+          "spanish": "Año Sabático de un Turno",
+          "english": "One Turn Sabbatical",
+          "french": "Congé sabbatique d'un tour",
+          "german": "Einrundiges Sabbatjahr",
+          "portuguese": "Licença de um Turno",
+          "russian": "Отпуск на один ход",
+          "chinese": "一回合学术休假",
+          "chinese_traditional": "一回合學術休假",
+          "korean": "한 턴 연구 휴가",
+          "japanese": "1ターンの研究休暇"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_S17CardArt",
+        "targetless": false
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S17CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S17CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S17CardArt",
+        "path": "textures/cards/WW_S17CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S17.json": "45d8cb577d02b8d9395fb42f4f13585e6e18a509bc1d49e9fa767ad5480b32f2"
+  }
+}

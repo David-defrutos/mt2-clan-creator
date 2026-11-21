@@ -1,0 +1,1388 @@
+{
+  "schemaVersion": 1,
+  "clans": [
+    {
+      "id": "freecompany",
+      "name": "The Free Company",
+      "version": "0.3.6",
+      "champions": [
+        {
+          "name": "Roderic",
+          "card": "freecompany-SpawnRoderic-simplified",
+          "paths": [
+            "freecompany-SpawnRoderic-clan-path-1-simplified",
+            "freecompany-SpawnRoderic-clan-path-2-simplified",
+            "freecompany-SpawnRoderic-clan-path-3-simplified"
+          ],
+          "starterName": "Severance Pay",
+          "starter": "freecompany-SeverancePay-simplified"
+        },
+        {
+          "name": "Vesper",
+          "card": "freecompany-SpawnVesper-simplified",
+          "paths": [
+            "freecompany-SpawnVesper-clan-path-1-simplified",
+            "freecompany-SpawnVesper-clan-path-2-simplified",
+            "freecompany-SpawnVesper-clan-path-3-simplified"
+          ],
+          "starterName": "Field Dressing",
+          "starter": "freecompany-FieldDressing-simplified"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "freecompany-MagicMissile",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-ShieldWall",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-WidowsPension-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-ButchersBill",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-ExpandedBillet",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-FieldForge-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-HazardPay",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-LetterOfMarque",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-MarchingOrders-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-QuartermastersSeal",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SappersCharges",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SappersBombCard",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-ScoutsMap-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-VeteransPapers-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-WarChest",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-QuartermastersStore",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-RopeAndGrapple",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-Watchtower-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-WatchtowerToggle-simplified",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-Banishment-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-Bless",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-Cloudkill",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-CureWounds",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-DelayedBlastFireball-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-DimensionDoor",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-DoubleShift-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-Fear",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-FingerOfDeath",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-Fireball",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-Grease",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-Haste",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-Invisibility",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-KitBash",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-LightningBolt",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-MassHoldPerson",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-MercenarysContract",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-PaidInFull",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-Resurrection",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-Shield",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-Silence",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpoilsOfWar",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-Web",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnBattleChaplain",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnBerserker",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnBountyHunter-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnCampBrawler",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnChapelAcolyte",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnCutpurse",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnFieldMedic-simplified",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnFreeLance",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnHedgeConjurer",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnHedgeMage-simplified",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnIronboundChampion",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnLongbowman",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnMasterOfCoin",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnSellswordScout",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnShieldbearer",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnTheNewGuy",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnBogTroll",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnStoneTroll",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnWarTroll",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnCautiousTroll",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-SpawnTwoHeadedTroll",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-TameBogTroll-simplified",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-TameStoneTroll-simplified",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-TameWarTroll-simplified",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-TameCautiousTroll-simplified",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "freecompany-TameTwoHeadedTroll-simplified",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        }
+      ],
+      "artwork": {
+        "clan-silhouette": {
+          "image": "assets/216f9d1050bb76e10bb3340152aeb2c760b07c55765636f08f58add972580d50.png"
+        },
+        "draft-icon": {
+          "image": "assets/b642f83bc0a148e10b74272e3398d3b8aa54335be1f51cd008c9d779a309965c.png"
+        },
+        "banner-enabled_sprite": {
+          "image": "assets/db37a2100c0131f6b8908c0d5f71d30f002c2ffac2a3076b8ccd3ec3474381ee.png"
+        },
+        "banner-disabled_sprite": {
+          "image": "assets/03b378fb65160a14fe96863687b516156145880870daeb96b249d68f840079c1.png"
+        },
+        "banner-frozen_sprite": {
+          "image": "assets/32f202a01686ec871bf131d545bfde37f91ad16f4abcc70ace65fc438b079647.png"
+        },
+        "banner-visited_sprite_disabled": {
+          "image": "assets/9f366a2692f3aaa36b2d09f201fd592658c50ffb86843689ff26e99176640dc8.png"
+        },
+        "map-icon": {
+          "image": "assets/bf11f5c377ee517d10753713936fd1789ff17f746989e66f0d142d667c0e7683.png"
+        },
+        "minimap-icon": {
+          "image": "assets/bf11f5c377ee517d10753713936fd1789ff17f746989e66f0d142d667c0e7683.png"
+        },
+        "frame-unit": {
+          "image": "assets/87e34eef6f9629b92525d2249738f88bac4a8f8a3db88640dbe53aae3c0c359e.png"
+        },
+        "frame-spell": {
+          "image": "assets/e8b13e6ffada74c6d51c54c7d68f2a32338111ca3be0859096101c616bf49b20.png"
+        },
+        "frame-room": {
+          "image": "assets/cd0d18af084532d8af8aff6be3183bf74bc4405192b57000631c6670778d07e2.png"
+        },
+        "frame-equipment": {
+          "image": "assets/cd0d18af084532d8af8aff6be3183bf74bc4405192b57000631c6670778d07e2.png"
+        },
+        "champion1-icon": {
+          "image": "assets/007c25016bbfccc7d53d5318329be31058ddc9275749cd033b2a636e1e2a04ec.png"
+        },
+        "champion1-locked_icon": {
+          "image": "assets/73aa3eb633d40ce0893bb7c40dcec066f7d869d2578b841512d8872dd5fe5fda.png"
+        },
+        "champion1-portrait": {
+          "image": "assets/8b110c26782728e24a6ed8247717301ebb7d6c789a2dac70d02b689eae84f5aa.png"
+        },
+        "champion1-display": {
+          "image": "assets/acc783546049a1129f26d9e0ce9bd462c75bd462eb2facf2679e03e681328d37.png",
+          "scale": 2.7,
+          "positionY": 0
+        },
+        "champion2-icon": {
+          "image": "assets/973c84eeeb3f0a7c41c21e73e13be79670502e540aa01b377790581e676a4aed.png"
+        },
+        "champion2-locked_icon": {
+          "image": "assets/ddf1f1d1705e6508b39d5ea045c3e01f44bb5788264035c7a585e85235d53e3c.png"
+        },
+        "champion2-portrait": {
+          "image": "assets/b71a632fb6eb80c48594607047348b0156f13385fc59ded966e53cc58f6ddfdd.png"
+        },
+        "champion2-display": {
+          "image": "assets/582d49dfd2c9f06bd401919fe504c9032511640a4867f99c86968cfb8c1adfb0.png",
+          "scale": 2.5,
+          "positionY": 0
+        },
+        "clan-small": {
+          "image": "assets/bf11f5c377ee517d10753713936fd1789ff17f746989e66f0d142d667c0e7683.png"
+        },
+        "clan-medium": {
+          "image": "assets/c558b94b8859cc639a7bb05feb2b2a1e2ead499315b49cb95a47d230184f59c6.png"
+        },
+        "clan-large": {
+          "image": "assets/562981b4b4fe91d0374151803fe0b97cc5241c4798f9dc7c2ff722b9d33adcda.png"
+        }
+      },
+      "logo": "assets/51257c54a8b99e26c4e7697c96bd9bd7728c2c9de6ec10d699ef32aa901c8f72.png",
+      "excluded": 1,
+      "simplified": 22
+    },
+    {
+      "id": "succclan",
+      "name": "SuccClan",
+      "version": "0.2.1",
+      "champions": [
+        {
+          "name": "Knightmare",
+          "card": "succclan-SpawnKnightMare-simplified",
+          "paths": [
+            "succclan-SpawnKnightMare-clan-path-1-simplified",
+            "succclan-SpawnKnightMare-clan-path-2-simplified",
+            "succclan-SpawnKnightMare-clan-path-3-simplified"
+          ],
+          "starterName": "Inception",
+          "starter": "succclan-Inception-simplified"
+        },
+        {
+          "name": "Shadow Lady",
+          "card": "succclan-SpawnShadowLady",
+          "paths": [
+            "succclan-SpawnShadowLady-clan-path-1",
+            "succclan-SpawnShadowLady-clan-path-2",
+            "succclan-SpawnShadowLady-clan-path-3-simplified"
+          ],
+          "starterName": "Flogging",
+          "starter": "succclan-Flogging"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "succclan-MourningVeil",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-WhisperingBlade",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-CurseguardStone",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-CurseguardSlab",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-AbyssCrown-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-DemonBlood",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-DesireCrystal",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-FlareRibbon-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-FleshRing",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-MutantElixirs-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-NetherBlossom-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-ObsessingAromatherapy-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-PoisonSerum",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-ProfaneCrossbow",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-ShadowCloak",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-ObsessionVault-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpectralRefuge-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-BloodCarnival",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-CubusSpike-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-DangerousGame-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-DarkFury",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-DarkPact",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-DepressionWhisper-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-DreadShot-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-ForTheQueen",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-IllusionTwins-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-InsanityReach-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-MindBurning-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-MindDomination-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-ObsessingShard",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-PainAndPleasure",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-ParadoxTome",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-PiercingShriek",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-PlagueBoost",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-PowerSiphon-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-ProfaneAscending-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-ShadowEmbrace",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-VitalityExtraction-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnAbyssPrincess-simplified",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnArroganceGhost",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnChaosCreation-simplified",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnDemonPioneer",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnEndlessShadow-simplified",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnEnvyGhost",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnGluttonyGhost",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnGreedGhost",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnIncubusButcher",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnLustGhost-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnOolioddroo",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnShadowWarrior",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnSlothGhost",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnSuccbusTorturer",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnVrolikai",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "succclan-SpawnWrathGhost",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        }
+      ],
+      "artwork": {
+        "clan-silhouette": {
+          "image": "assets/5c8e2e32b2e5363c8c81cca5abf2d6589d8f16854715e7d5ac29b030a492e20c.png"
+        },
+        "draft-icon": {
+          "image": "assets/f73b75ec6c8e1ef349e020dcbc80d62a716e106fe0c821b4e992def8cf16711b.png"
+        },
+        "banner-enabled_sprite": {
+          "image": "assets/69c69ce1fb51aca1a0fca4a4336f3b56e678e32565be6a1869cdb81eecfb871c.png"
+        },
+        "banner-disabled_sprite": {
+          "image": "assets/51f300e004ec8ada87bbc1ca12f35670b16fc9be68bddd41b3a2d35ab7ab2729.png"
+        },
+        "banner-frozen_sprite": {
+          "image": "assets/de0b24b450aee8d3d391aed56ed056dd22a8a3940b88ceced2ed630dfc84edb5.png"
+        },
+        "banner-visited_sprite_disabled": {
+          "image": "assets/7819c216e93216c52dbb4dafd9475081f4141cea104810be0ddc8ee44b472680.png"
+        },
+        "map-icon": {
+          "image": "assets/1052a624b02e50ddcf0486ff17c8391b5f9de9aab96ee3ad70f322b57d4d4740.png"
+        },
+        "minimap-icon": {
+          "image": "assets/1052a624b02e50ddcf0486ff17c8391b5f9de9aab96ee3ad70f322b57d4d4740.png"
+        },
+        "frame-unit": {
+          "image": "assets/f18c8d1e226406df447e4ec617247f8471dbece285712e345e6db279655ff9a8.png"
+        },
+        "frame-spell": {
+          "image": "assets/59ff91d598e6ca1bfa3ea442b2df53df82e3a969b894b5e5c9de0f0993b8acd9.png"
+        },
+        "frame-room": {
+          "image": "assets/59ff91d598e6ca1bfa3ea442b2df53df82e3a969b894b5e5c9de0f0993b8acd9.png"
+        },
+        "frame-equipment": {
+          "image": "assets/59ff91d598e6ca1bfa3ea442b2df53df82e3a969b894b5e5c9de0f0993b8acd9.png"
+        },
+        "champion1-icon": {
+          "image": "assets/866044c54f8a62a5fd9903a6b1cb9303797974a2f9a1a7c3d6458efe0cce27db.png"
+        },
+        "champion1-portrait": {
+          "image": "assets/712376e2dbe5d81be5592421c3261ba60337f0aebd1ecbb1ec34687036c8b5f7.png"
+        },
+        "champion1-display": {
+          "image": "assets/762282329c925b8d2c4b12cfb9964ed946623a670ffdc6aa4b683228c5c0aa66.png",
+          "scale": 2.5,
+          "positionY": 0
+        },
+        "champion2-icon": {
+          "image": "assets/fb28bbf11b7679345e1275719d7cab11b3c0f34398df808fb54f9433a4712770.png"
+        },
+        "champion2-portrait": {
+          "image": "assets/9e5a29496ceb81783854c0eb612ea77ae91e43b610373e7e759fca23098e59a0.png"
+        },
+        "champion2-display": {
+          "image": "assets/e1be8935f0112b5ad280f31c47cb34e628c9dd8aabfc20b79530315468ce00fa.png",
+          "scale": 2.3,
+          "positionY": 0
+        },
+        "clan-small": {
+          "image": "assets/1052a624b02e50ddcf0486ff17c8391b5f9de9aab96ee3ad70f322b57d4d4740.png"
+        },
+        "clan-medium": {
+          "image": "assets/f23a71cc1a70b0b4762e683549d7a3e486533db50ac66eb7a82ed803f44a3b97.png"
+        },
+        "clan-large": {
+          "image": "assets/ecfdbf1a39361ca601f0a42017b2c37dbfd14708215f0e968b221a52052290af.png"
+        }
+      },
+      "logo": "assets/35321a8fdb992c36b85176da4c80424adec75db3b04d4243055beb96530b616a.png",
+      "excluded": 0,
+      "simplified": 24
+    },
+    {
+      "id": "ww",
+      "name": "W&W Inc.",
+      "version": "0.1.171",
+      "champions": [
+        {
+          "name": "Dean of the Hat Department",
+          "card": "ww-WW_C01-simplified",
+          "paths": [
+            "ww-WW_C01-clan-path-1-simplified",
+            "ww-WW_C01-clan-path-2-simplified",
+            "ww-WW_C01-clan-path-3-simplified"
+          ],
+          "starterName": "Wizard Affairs Chaperon",
+          "starter": "ww-WW_T01"
+        },
+        {
+          "name": "Professor of Advanced Witchcraft",
+          "card": "ww-WW_C02-simplified",
+          "paths": [
+            "ww-WW_C02-clan-path-1-simplified",
+            "ww-WW_C02-clan-path-2-simplified",
+            "ww-WW_C02-clan-path-3-simplified"
+          ],
+          "starterName": "Witch Affairs Chaperone",
+          "starter": "ww-WW_T02"
+        }
+      ],
+      "cards": [
+        {
+          "templateId": "ww-WW_Token_ExtraCredit-simplified",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_E01-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_E03-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_R01-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_R02-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S01-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S02-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S07-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S09-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S12-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S13",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S14",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S15-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S16-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S17-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S18-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S19-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S20",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S21-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S22",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S23",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S25-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S26",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S28-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S29",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S30-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_S31",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_U01-simplified",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_U02-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_U03-simplified",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_U04-simplified",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_U05-simplified",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_U06-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_U08-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_U10-simplified",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_U11-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_U13-simplified",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_U16-simplified",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_U17-simplified",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_U18-simplified",
+          "banner": true,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_G01-simplified",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_G02",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_G03-simplified",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_G04",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_G05",
+          "banner": false,
+          "reward": false,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_A01-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_A02-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_A03-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_A04-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_A05-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_A06-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_A07-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_A08-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_A09-simplified",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        },
+        {
+          "templateId": "ww-WW_A10",
+          "banner": false,
+          "reward": true,
+          "unlockLevel": 1
+        }
+      ],
+      "artwork": {
+        "clan-silhouette": {
+          "image": "assets/00f6c285d3524f202335bf6a347e20e52405de93c5e2f2b6087e6240098ebfe8.png"
+        },
+        "draft-icon": {
+          "image": "assets/a4703aad1edb7498da2bc7fc4af259216f1ce2edda0d214c142e549b94eea68b.png"
+        },
+        "banner-enabled_sprite": {
+          "image": "assets/d4f0480737d9a4e57ae046e0d95556c670cd9977b60f201558f37f6dff9279a5.png"
+        },
+        "banner-disabled_sprite": {
+          "image": "assets/6c97efcdf3e2d74178f0511d21cdde83d27ef407271f1736b082959d4095c0d6.png"
+        },
+        "banner-frozen_sprite": {
+          "image": "assets/c244f34a9d28029920aec82f5498dc2d1c194a44b9ab965b43cba3796f74de2d.png"
+        },
+        "banner-visited_sprite_disabled": {
+          "image": "assets/2f04f5a966c69379946189a67197d04d3caf7197837cea216ddcb5fff2514a03.png"
+        },
+        "map-icon": {
+          "image": "assets/ec3776b8dc3f835a11ba3f9bb0b5a72904946c8aba5f4f4038fa4b90bf04f3d7.png"
+        },
+        "minimap-icon": {
+          "image": "assets/ec3776b8dc3f835a11ba3f9bb0b5a72904946c8aba5f4f4038fa4b90bf04f3d7.png"
+        },
+        "frame-unit": {
+          "image": "assets/8aab41923a7ff9aed2e89f31ef54d2cee02a869399e1dbf7c45d8fa9c9259f1f.png"
+        },
+        "frame-spell": {
+          "image": "assets/8b99089fda28c70a18dba0149d911c919e65c138f861bf39feef240c59348e08.png"
+        },
+        "frame-room": {
+          "image": "assets/2405a9c89b8a11ed30bc917c047931531adbc6959be7bdbd38e3d17e211017c1.png"
+        },
+        "frame-equipment": {
+          "image": "assets/80cd662f7184000c521500d54ac6ccf10b3590dee37145affd203e41b10a33bf.png"
+        },
+        "champion1-icon": {
+          "image": "assets/9b85e78014d0a9a1de50a218890672bfa4ea51e434f3f381dbfa1c15b3eb0d5c.png"
+        },
+        "champion1-locked_icon": {
+          "image": "assets/778a78dc87b4a7ef991f33a9d4b29f361b9ba50a81184aeb50758006d1a58308.png"
+        },
+        "champion1-portrait": {
+          "image": "assets/59489911c08c5919824cc203479adc140980761ebc2adb2f37b14f22fd53f45c.png"
+        },
+        "champion1-display": {
+          "image": "assets/b11c687f0fca5dcc86f64b3d2e918354a608d41597d0be50b75fe52f22f61e5b.png",
+          "scale": 1.6,
+          "positionY": 0
+        },
+        "champion2-icon": {
+          "image": "assets/4c2ad60fba42705af23911a9b96ac18bb8bd2de5d9db51da9aaca74528caa034.png"
+        },
+        "champion2-locked_icon": {
+          "image": "assets/6bc2fb9b4e5a620ce3444864000e66317f7b4cf06a9ba122bf6fbe598b904af3.png"
+        },
+        "champion2-portrait": {
+          "image": "assets/a4af930532f367661b303b2f386c845c6faedcac2d62e102a76d99f68c665156.png"
+        },
+        "champion2-display": {
+          "image": "assets/f3769dab5a54b8400d02f6e0674108e1ced060d028a59e9f3bfc596d5a0b3661.png",
+          "scale": 1.6,
+          "positionY": 0
+        },
+        "clan-small": {
+          "image": "assets/ec3776b8dc3f835a11ba3f9bb0b5a72904946c8aba5f4f4038fa4b90bf04f3d7.png"
+        },
+        "clan-medium": {
+          "image": "assets/413ec7408ae13d1eb1a143fa44491d9d38ae1dc1be7ffe639aff142b3dc92801.png"
+        },
+        "clan-large": {
+          "image": "assets/a99ce9a5591fc7d633ff32153501a8e853cb6ab8804fb41dfcf0c0e1a7cab251.png"
+        }
+      },
+      "logo": "assets/4e28dba6d18b457e3c872ddfcf6baeea864ba73fdcf5e5e165eca3b830295811.png",
+      "excluded": 2,
+      "simplified": 55
+    }
+  ]
+}

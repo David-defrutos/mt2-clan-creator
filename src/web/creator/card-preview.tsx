@@ -7,7 +7,7 @@ export function CardPreview({card,template,config,language,projectId,small=false
  const {attack,health,size:capacity}=effectiveUnitStats(card,template);
  const rules=config.rules,ui=rules.officialFrames??{},labels=rules.cardPresentation??{};
  const fallback=config.catalog.items.find((e:any)=>e.id===(card.kind==='unit'?rules.defaultUnit:card.kind==='room'?rules.defaultRoom:card.kind==='artifact'?rules.defaultArtifact:rules.defaultSpell));
- const costType=template?.example?.costType??'normal';const kind=card.kind,unit=kind==='unit',relic=kind==='artifact',art=card.image??(card.appearanceTemplateId?config.catalog.items.find((e:any)=>e.id===card.appearanceTemplateId)?.picture:card.templateId?template?.example?.picture:fallback?.picture);
+ const costType=template?.example?.costType??'normal';const kind=card.kind,unit=kind==='unit',relic=kind==='artifact',art=card.image??(card.appearanceTemplateId?config.catalog.items.find((e:any)=>e.id===card.appearanceTemplateId)?.picture:card.templateId?template?.example?.picture??config.catalog.items.find((e:any)=>e.id===card.templateId)?.picture:fallback?.picture);
  const sprite=(name:string)=>ui[name]?'/catalog/'+ui[name].asset:undefined;
  const sourceUnit=template?.example?.document?.characters?.find((x:any)=>x.character_art);
  const banner=unit&&(card.banner||original&&sourceUnit?.subtypes?.some((s:any)=>String(s).includes('BannerUnit')));
@@ -45,3 +45,4 @@ export function CardPreview({card,template,config,language,projectId,small=false
 // 2026-11-15-1431||codex-clan-editor||clan-creator/src\web\creator\card-preview.tsx||Mostrar distintivo y tipo de campeón en la vista original de las variantes
 // 2026-11-15-1819||codex-clan-editor||clan-creator/src\web\creator\card-preview.tsx||Actualizar la carta al editar las bonificaciones y capacidades propias de la senda copiada
 // 2026-11-15-2328||codex-clan-editor||clan-creator/src/web/creator/card-preview.tsx||Conservar imagen de vista previa al sustituir efectos por comportamiento oficial
+// 2026-11-21-1333||codex-clan-editor||clan-creator/src/web/creator/card-preview.tsx||Mostrar arte del catálogo en la vista previa mientras se carga el detalle de un artefacto

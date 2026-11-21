@@ -1,0 +1,93 @@
+{
+  "id": "ww-WW_S24-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S24/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S24"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Devolución de Material Prestado",
+    "english": "Loaned Equipment Return",
+    "french": "Retour d'équipement prêté",
+    "german": "Rückgabe geliehener Ausrüstung",
+    "portuguese": "Devolução de Equipamento Emprestado",
+    "russian": "Возврат выданного снаряжения",
+    "chinese": "借用装备归还",
+    "chinese_traditional": "借用裝備歸還",
+    "korean": "대여 장비 반납",
+    "japanese": "貸出装備返却"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/873684f8f5223000da7f0465ce1a19733a833784421267c2d0b9b45d39c34dac.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S24CardArt.png": "assets/873684f8f5223000da7f0465ce1a19733a833784421267c2d0b9b45d39c34dac.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S24",
+        "names": {
+          "spanish": "Devolución de Material Prestado",
+          "english": "Loaned Equipment Return",
+          "french": "Retour d'équipement prêté",
+          "german": "Rückgabe geliehener Ausrüstung",
+          "portuguese": "Devolução de Equipamento Emprestado",
+          "russian": "Возврат выданного снаряжения",
+          "chinese": "借用装备归还",
+          "chinese_traditional": "借用裝備歸還",
+          "korean": "대여 장비 반납",
+          "japanese": "貸出装備返却"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_S24CardArt",
+        "targetless": false,
+        "hide_in_logbook": true,
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S24CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S24CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S24CardArt",
+        "path": "textures/cards/WW_S24CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S24.json": "b694f6873acd85c6c91373b263dd6b22737a9eb549d0a43a49b0d4428a87a241"
+  }
+}

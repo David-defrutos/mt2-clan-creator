@@ -1,0 +1,91 @@
+{
+  "id": "succclan-ObsessingAromatherapy-simplified",
+  "simplified": {
+    "removed": [
+      "relics/ObsessingAromatherapy/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "relics",
+    "id": "ObsessingAromatherapy"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Obsessing Aromatherapy",
+    "chinese": "迷乱香薰",
+    "spanish": "Aromaterapia obsesiva",
+    "french": "Aromathérapie obsédante",
+    "german": "Besessenheitsaromatherapie",
+    "portuguese": "Aromaterapia Obsessiva",
+    "russian": "Навязчивая ароматерапия",
+    "chinese_traditional": "執念芳療",
+    "japanese": "執着の芳香療法",
+    "korean": "집착의 아로마 요법"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/e6e87a9f3d98ee7830691669eba179016cfdc9557212241a468c44f3b99ab538.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/RelicIcons/ObsessingAromatherapyIconSmall.png": "assets/547c174277d4a400f1d726af775fdef896e27bc10e6e5407477c8e36beb4d5b4.png",
+    "textures/RelicIcons/ObsessingAromatherapyIcon.png": "assets/e6e87a9f3d98ee7830691669eba179016cfdc9557212241a468c44f3b99ab538.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "ObsessingAromatherapy",
+        "type": "collectable",
+        "names": {
+          "english": "Obsessing Aromatherapy",
+          "chinese": "迷乱香薰",
+          "spanish": "Aromaterapia obsesiva",
+          "french": "Aromathérapie obsédante",
+          "german": "Besessenheitsaromatherapie",
+          "portuguese": "Aromaterapia Obsessiva",
+          "russian": "Навязчивая ароматерапия",
+          "chinese_traditional": "執念芳療",
+          "japanese": "執着の芳香療法",
+          "korean": "집착의 아로마 요법"
+        },
+        "disallow_in_deployment": false,
+        "icon": "@ObsessingAromatherapyIcon",
+        "icon_small": "@ObsessingAromatherapyIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "uncommon",
+              "unlock_level": 0
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ObsessingAromatherapyIconSmall",
+        "path": "textures/RelicIcons/ObsessingAromatherapyIconSmall.png"
+      },
+      {
+        "id": "ObsessingAromatherapyIcon",
+        "path": "textures/RelicIcons/ObsessingAromatherapyIcon.png"
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_ObsessingAromatherapy.json": "e4e1f24d5d24c9788e8c7e27ddc60fdbece6efe6e5bb9721be72801b976f8a67"
+  }
+}

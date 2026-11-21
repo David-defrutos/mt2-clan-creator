@@ -1,0 +1,208 @@
+{
+  "id": "ww-WW_U13-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_U13_Character/triggers",
+      "characters/WW_U13_Character/starting_status_effects"
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_U13"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Profesor Emérito de Medicina Defensiva",
+    "english": "Emeritus Professor of Defensive Medicine",
+    "french": "Professeur émérite de médecine défensive",
+    "german": "Emeritierter Professor für defensive Medizin",
+    "portuguese": "Professor Emérito de Medicina Defensiva",
+    "russian": "Почётный профессор защитной медицины",
+    "chinese": "防御医学荣誉教授",
+    "chinese_traditional": "防禦醫學榮譽教授",
+    "korean": "방어 의학 명예 교수",
+    "japanese": "防御医学名誉教授"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 30,
+  "attack": 20,
+  "size": 2,
+  "picture": "assets/ea12259b47cb316070d3c5b5db507f6c60e08189acac23d74ab210c694f6a8e1.png",
+  "characterPicture": "assets/32bb2641dfb423ec1cb8fd380b0bbb614a8e6291b5a2c0d15d89c144287c3193.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/characters/WW_U13CharacterArt.png": "assets/32bb2641dfb423ec1cb8fd380b0bbb614a8e6291b5a2c0d15d89c144287c3193.png",
+    "textures/cards/WW_U13CardArt.png": "assets/ea12259b47cb316070d3c5b5db507f6c60e08189acac23d74ab210c694f6a8e1.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_U13",
+        "names": {
+          "spanish": "Profesor Emérito de Medicina Defensiva",
+          "english": "Emeritus Professor of Defensive Medicine",
+          "french": "Professeur émérite de médecine défensive",
+          "german": "Emeritierter Professor für defensive Medizin",
+          "portuguese": "Professor Emérito de Medicina Defensiva",
+          "russian": "Почётный профессор защитной медицины",
+          "chinese": "防御医学荣誉教授",
+          "chinese_traditional": "防禦醫學榮譽教授",
+          "korean": "방어 의학 명예 교수",
+          "japanese": "防御医学名誉教授"
+        },
+        "card_type": "monster",
+        "cost": 2,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_U13CardArt",
+        "effects": [
+          "@WW_U13_Spawn"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_U13_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_U13_Character"
+      },
+      {
+        "id": "WW_U13_HarvestEffect",
+        "name": "CardEffectAddTempCardUpgradeToUnits",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_upgrade": "@WW_U13_HarvestUpgrade"
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_U13_Character",
+        "names": {
+          "spanish": "Profesor Emérito de Medicina Defensiva",
+          "english": "Emeritus Professor of Defensive Medicine",
+          "french": "Professeur émérite de médecine défensive",
+          "german": "Emeritierter Professor für defensive Medizin",
+          "portuguese": "Professor Emérito de Medicina Defensiva",
+          "russian": "Почётный профессор защитной медицины",
+          "chinese": "防御医学荣誉教授",
+          "chinese_traditional": "防禦醫學榮譽教授",
+          "korean": "방어 의학 명예 교수",
+          "japanese": "防御医学名誉教授"
+        },
+        "character_art": "@WW_U13CharacterArt",
+        "size": 2,
+        "health": 30,
+        "attack_damage": 20,
+        "subtypes": [
+          "@WW_Wizard",
+          "SubtypesData_BannerUnit"
+        ],
+        "triggers": [
+          "@WW_U13_Harvest"
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "WW_U13_Harvest",
+        "trigger": "on_any_unit_death_on_floor",
+        "descriptions": {
+          "english": "+[effect0.upgrade.bonushp][health].",
+          "spanish": "+[effect0.upgrade.bonushp][health].",
+          "french": "+[effect0.upgrade.bonushp][health].",
+          "german": "+[effect0.upgrade.bonushp][health].",
+          "portuguese": "+[effect0.upgrade.bonushp][health].",
+          "russian": "+[effect0.upgrade.bonushp][health].",
+          "chinese": "+[effect0.upgrade.bonushp][health].",
+          "chinese_traditional": "+[effect0.upgrade.bonushp][health].",
+          "korean": "+[effect0.upgrade.bonushp][health].",
+          "japanese": "+[effect0.upgrade.bonushp][health]."
+        },
+        "effects": [
+          "@WW_U13_HarvestEffect"
+        ]
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WW_U13_HarvestUpgrade",
+        "bonus_hp": 5
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Wizard",
+        "names": {
+          "english": "Wizard",
+          "spanish": "Mago",
+          "french": "Sorcier",
+          "german": "Magier",
+          "portuguese": "Mago",
+          "russian": "Маг",
+          "chinese": "男巫",
+          "chinese_traditional": "男巫",
+          "korean": "마법사",
+          "japanese": "魔法使い"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_U13CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_U13CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.05,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WW_U13CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_U13CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_U13CharacterArt",
+        "path": "textures/characters/WW_U13CharacterArt.png"
+      },
+      {
+        "id": "WW_U13CardArt",
+        "path": "textures/cards/WW_U13CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_U13.json": "03c2ff7db82759ca97847210a3ef3b02edd3b700b494e20e0e64f5511ef18015",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

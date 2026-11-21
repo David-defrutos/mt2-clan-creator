@@ -26,8 +26,8 @@
   "costType": "normal",
   "rarity": "rare",
   "health": 50,
-  "attack": 40,
-  "size": 4,
+  "attack": 30,
+  "size": 3,
   "picture": "assets/e6c5d07777e039b5541f1fdacbb6c248fc945be0e67b0feeaa81af4394f3d9d1.png",
   "characterPicture": "assets/2897cf2951d2c673fc7998be9895b26631c5a5c018634a51ffcdcd4bc8638543.png",
   "providers": [
@@ -89,8 +89,8 @@
           "japanese": "慎重なトロール"
         },
         "character_art": "@CautiousTrollCharacterArt",
-        "size": 4,
-        "attack_damage": 40,
+        "size": 3,
+        "attack_damage": 30,
         "health": 50,
         "subtypes": [
           "@Sub_Barbarian",
@@ -184,7 +184,7 @@
     ]
   },
   "files": {
-    "json/units/unit_troll.json": "0101a4aa26a122261bbaf962f12e215a785e10ae1f38def3dd9539cac8ec8d66",
+    "json/units/unit_troll.json": "f91102b775c131b0895bbc03577750fdf220670f0afba52e5d9dfe111f90f01f",
     "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
   }
 }

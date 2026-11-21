@@ -1,0 +1,101 @@
+{
+  "id": "succclan-IllusionTwins-simplified",
+  "simplified": {
+    "removed": [
+      "cards/IllusionTwins/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "IllusionTwins"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Illusion Twins",
+    "chinese": "幻影双生",
+    "spanish": "Gemelos ilusorios",
+    "french": "Jumeaux illusoires",
+    "german": "Illusionszwillinge",
+    "portuguese": "Gêmeos Ilusórios",
+    "russian": "Иллюзорные близнецы",
+    "chinese_traditional": "幻象雙生",
+    "japanese": "幻影の双子",
+    "korean": "환상의 쌍둥이"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/c277be0e82923b39b81a30dbe6a8c04ed9ad371fb21fe1834eb9ea6aab1a834f.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/IllusionTwinsArt.png": "assets/c277be0e82923b39b81a30dbe6a8c04ed9ad371fb21fe1834eb9ea6aab1a834f.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "IllusionTwins",
+        "names": {
+          "english": "Illusion Twins",
+          "chinese": "幻影双生",
+          "spanish": "Gemelos ilusorios",
+          "french": "Jumeaux illusoires",
+          "german": "Illusionszwillinge",
+          "portuguese": "Gêmeos Ilusórios",
+          "russian": "Иллюзорные близнецы",
+          "chinese_traditional": "幻象雙生",
+          "japanese": "幻影の双子",
+          "korean": "환상의 쌍둥이"
+        },
+        "card_type": "spell",
+        "rarity": "rare",
+        "card_art": "@IllusionTwinsArt",
+        "cost": 2,
+        "targets_room": true,
+        "targetless": false,
+        "traits": [
+          "@Consume"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "IllusionTwinsArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@IllusionTwinsArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "IllusionTwinsArt",
+        "path": "textures/IllusionTwinsArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_IllusionTwins.json": "34a64a8eafd1232e91dd60b8456ca55b65e04714268b169407543b84c4336201",
+    "json/plugin.json": "445ab02b53fa21bae0cc956dbfd297a34ede9875eaae569988de65c6d5e3b68d"
+  }
+}

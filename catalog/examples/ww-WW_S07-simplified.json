@@ -1,0 +1,91 @@
+{
+  "id": "ww-WW_S07-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S07/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S07"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Convalidación de Conduit",
+    "english": "Conduit Credit Transfer",
+    "french": "Transfert de crédits Conduit",
+    "german": "Conduit-Leistungspunkttransfer",
+    "portuguese": "Transferência de Créditos Conduit",
+    "russian": "Перевод зачётов Conduit",
+    "chinese": "Conduit 学分转移",
+    "chinese_traditional": "Conduit 學分轉移",
+    "korean": "Conduit 학점 이전",
+    "japanese": "Conduit 単位振替"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/7fd1e7589c9fbde6001791542af5f867edb91e42fb5940e9bcf747f394b18a19.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S07CardArt.png": "assets/7fd1e7589c9fbde6001791542af5f867edb91e42fb5940e9bcf747f394b18a19.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S07",
+        "names": {
+          "spanish": "Convalidación de Conduit",
+          "english": "Conduit Credit Transfer",
+          "french": "Transfert de crédits Conduit",
+          "german": "Conduit-Leistungspunkttransfer",
+          "portuguese": "Transferência de Créditos Conduit",
+          "russian": "Перевод зачётов Conduit",
+          "chinese": "Conduit 学分转移",
+          "chinese_traditional": "Conduit 學分轉移",
+          "korean": "Conduit 학점 이전",
+          "japanese": "Conduit 単位振替"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_S07CardArt",
+        "targetless": true
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S07CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S07CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S07CardArt",
+        "path": "textures/cards/WW_S07CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S07.json": "672103d807d159f32af7732c2d4f36b70d19e831220792cf03031cbcdd9c6a2e"
+  }
+}

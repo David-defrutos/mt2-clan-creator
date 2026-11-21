@@ -1,0 +1,157 @@
+{
+  "id": "freecompany-SeverancePay-simplified",
+  "simplified": {
+    "removed": [
+      "cards/SeverancePay/effects"
+    ],
+    "needsEffect": false
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SeverancePay"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Severance Pay",
+    "french": "Indemnité de départ",
+    "german": "Abfindung",
+    "russian": "Выходное пособие",
+    "portuguese": "Indenização de Rescisão",
+    "chinese": "遣散费",
+    "spanish": "Indemnización por despido",
+    "chinese_traditional": "遣散費",
+    "korean": "퇴직 수당",
+    "japanese": "退職手当"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/2b89a06e2b8ef9a81ff2a29fe1b1202a3b7abbca45935a0bf2dcb40228662e97.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/SeverancePayArt.png": "assets/2b89a06e2b8ef9a81ff2a29fe1b1202a3b7abbca45935a0bf2dcb40228662e97.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SeverancePay",
+        "names": {
+          "english": "Severance Pay",
+          "french": "Indemnité de départ",
+          "german": "Abfindung",
+          "russian": "Выходное пособие",
+          "portuguese": "Indenização de Rescisão",
+          "chinese": "遣散费",
+          "spanish": "Indemnización por despido",
+          "chinese_traditional": "遣散費",
+          "korean": "퇴직 수당",
+          "japanese": "退職手当"
+        },
+        "card_art": "@SeverancePay",
+        "cost": 0,
+        "card_type": "spell",
+        "rarity": "common",
+        "targets_room": false,
+        "targetless": true,
+        "traits": [
+          "@SeverancePayPurge"
+        ],
+        "effects": [
+          "@SeverancePayGold"
+        ],
+        "triggers": [
+          "@SeverancePayReserve"
+        ]
+      }
+    ],
+    "card_triggers": [
+      {
+        "id": "SeverancePayReserve",
+        "descriptions": {
+          "english": "Gain <b>2</b> [coin].",
+          "french": "Gagnez <b>2</b> [coin].",
+          "german": "Erhalte <b>2</b> [coin].",
+          "russian": "Получите <b>2</b> [coin].",
+          "portuguese": "Ganhe <b>2</b> [coin].",
+          "chinese": "获得<b>2</b> [coin]。",
+          "spanish": "Gana <b>2</b> [coin].",
+          "chinese_traditional": "獲得<b>2</b> [coin]。",
+          "korean": "<b>2</b> [coin]을 얻습니다.",
+          "japanese": "<b>2</b> [coin]を得る。"
+        },
+        "trigger": "on_unplayed_positive",
+        "effects": [
+          "@SeverancePayReserveGold"
+        ],
+        "trigger_keyword_card_text_suppressed": false
+      }
+    ],
+    "effects": [
+      {
+        "id": "SeverancePayReserveGold",
+        "name": "CardEffectRewardGold",
+        "target_mode": "pyre",
+        "target_team": "monsters",
+        "param_int": 2,
+        "suppress_pyre_room_focus": true
+      },
+      {
+        "id": "SeverancePayGold",
+        "applied_vfx": "@SeverancePayCoinVFX",
+        "name": "CardEffectRewardGold",
+        "target_mode": "pyre",
+        "target_team": "monsters",
+        "param_int": 97,
+        "suppress_pyre_room_focus": true
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SeverancePayCoinVFX",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_CoinGain_PS.prefab",
+          "asset_guid": "f5a595ac3f2ede94483684d774afd444"
+        },
+        "spawn_location": "room_center"
+      }
+    ],
+    "traits": [
+      {
+        "id": "SeverancePayPurge",
+        "name": "CardTraitSelfPurge"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "SeverancePay",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@SeverancePay"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "SeverancePay",
+        "path": "textures/SeverancePayArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_severance_pay.json": "57c8c4da4ff05081adf345b2eebf8dff9e9666e0afac0b8db2282388ab299e36"
+  }
+}

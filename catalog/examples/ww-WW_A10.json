@@ -1,0 +1,146 @@
+{
+  "id": "ww-WW_A10",
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "relics",
+    "id": "WW_A10"
+  },
+  "kind": "artifact",
+  "names": {
+    "spanish": "Prácticas de Medicina Ofensiva",
+    "english": "Offensive Medicine Practicum",
+    "french": "Stage de médecine offensive",
+    "german": "Praktikum in offensiver Medizin",
+    "portuguese": "Estágio de Medicina Ofensiva",
+    "russian": "Практикум наступательной медицины",
+    "chinese": "攻击医学实习",
+    "chinese_traditional": "攻擊醫學實習",
+    "korean": "공격 의학 실습",
+    "japanese": "攻撃医学実習"
+  },
+  "descriptions": {
+    "english": "At the start of each turn, restore 4 health to friendly units. Then apply [regen] 1 to friendly units at full health.",
+    "spanish": "Al comenzar cada turno, restaura 4 de salud a las unidades aliadas. Después, aplica [regen] 1 a las unidades aliadas con toda la salud.",
+    "french": "Au début de chaque tour, restaurez 4 PV aux unités alliées. Puis appliquez [regen] 1 aux unités alliées ayant tous leurs PV.",
+    "german": "Stelle zu Beginn jeder Runde bei verbündeten Einheiten 4 Leben wieder her. Wende anschließend [regen] 1 auf verbündete Einheiten mit vollem Leben an.",
+    "portuguese": "No início de cada turno, restaura 4 de saúde às unidades aliadas. Depois, aplica [regen] 1 às unidades aliadas com a saúde cheia.",
+    "russian": "В начале каждого хода восстанавливайте союзным бойцам 4 здоровья. Затем накладывайте [regen] 1 на союзных бойцов с полным здоровьем.",
+    "chinese": "每回合开始时，为友方单位恢复4点生命。然后对满生命的友方单位施加[regen] 1。",
+    "chinese_traditional": "每回合開始時，為友方單位恢復4點生命。然後對滿生命的友方單位施加[regen] 1。",
+    "korean": "매 턴 시작 시 아군 유닛의 체력을 4 회복합니다. 그다음 체력이 가득 찬 아군 유닛에게 [regen] 1 효과를 적용합니다.",
+    "japanese": "毎ターン開始時、味方ユニットの体力を4回復する。その後、体力が満タンの味方ユニットに[regen] 1を付与する。"
+  },
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/6e2d6292a788b841cd5740352e39ae53c02650c59968c20f6c058f8818ba69cb.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/relics/WW_A10IconSmall.png": "assets/238beca23c146f2d3dfc7a3b5173f8ad816ab6921abb505986634c988110caef.png",
+    "textures/relics/WW_A10Icon.png": "assets/6e2d6292a788b841cd5740352e39ae53c02650c59968c20f6c058f8818ba69cb.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "WW_A10",
+        "type": "collectable",
+        "names": {
+          "spanish": "Prácticas de Medicina Ofensiva",
+          "english": "Offensive Medicine Practicum",
+          "french": "Stage de médecine offensive",
+          "german": "Praktikum in offensiver Medizin",
+          "portuguese": "Estágio de Medicina Ofensiva",
+          "russian": "Практикум наступательной медицины",
+          "chinese": "攻击医学实习",
+          "chinese_traditional": "攻擊醫學實習",
+          "korean": "공격 의학 실습",
+          "japanese": "攻撃医学実習"
+        },
+        "descriptions": {
+          "english": "At the start of each turn, restore 4 health to friendly units. Then apply [regen] 1 to friendly units at full health.",
+          "spanish": "Al comenzar cada turno, restaura 4 de salud a las unidades aliadas. Después, aplica [regen] 1 a las unidades aliadas con toda la salud.",
+          "french": "Au début de chaque tour, restaurez 4 PV aux unités alliées. Puis appliquez [regen] 1 aux unités alliées ayant tous leurs PV.",
+          "german": "Stelle zu Beginn jeder Runde bei verbündeten Einheiten 4 Leben wieder her. Wende anschließend [regen] 1 auf verbündete Einheiten mit vollem Leben an.",
+          "portuguese": "No início de cada turno, restaura 4 de saúde às unidades aliadas. Depois, aplica [regen] 1 às unidades aliadas com a saúde cheia.",
+          "russian": "В начале каждого хода восстанавливайте союзным бойцам 4 здоровья. Затем накладывайте [regen] 1 на союзных бойцов с полным здоровьем.",
+          "chinese": "每回合开始时，为友方单位恢复4点生命。然后对满生命的友方单位施加[regen] 1。",
+          "chinese_traditional": "每回合開始時，為友方單位恢復4點生命。然後對滿生命的友方單位施加[regen] 1。",
+          "korean": "매 턴 시작 시 아군 유닛의 체력을 4 회복합니다. 그다음 체력이 가득 찬 아군 유닛에게 [regen] 1 효과를 적용합니다.",
+          "japanese": "毎ターン開始時、味方ユニットの体力を4回復する。その後、体力が満タンの味方ユニットに[regen] 1を付与する。"
+        },
+        "icon": "@WW_A10Icon",
+        "icon_small": "@WW_A10IconSmall",
+        "relic_effects": [
+          "@WW_A10_Effect"
+        ],
+        "extensions": [
+          {
+            "collectable": {
+              "class": "@WW_Class",
+              "pools": [
+                "MegaRelicPool"
+              ],
+              "rarity": "common"
+            }
+          }
+        ]
+      }
+    ],
+    "relic_effects": [
+      {
+        "id": "WW_A10_Effect",
+        "name": "RelicEffectAddEffectStartOfTurn",
+        "param_int": 1,
+        "param_effects": [
+          "@WW_A10_Heal",
+          "@WW_A10_Regen"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_A10_Regen",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "target_mode_health_filter": "undamaged",
+        "param_status_effects": [
+          {
+            "status": "regen",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "WW_A10_Heal",
+        "name": "CardEffectHeal",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_int": 4
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_A10IconSmall",
+        "path": "textures/relics/WW_A10IconSmall.png"
+      },
+      {
+        "id": "WW_A10Icon",
+        "path": "textures/relics/WW_A10Icon.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/relics/WW_A10.json": "97d38267b917363dbe8772ae9680d0863101224fd222e8c99f9bab6c08acc829"
+  }
+}

@@ -1,11 +1,13 @@
 # Documento generado el 2026-11-15-2008
 from pathlib import Path
-import json,hashlib,struct,runpy
+import json,hashlib,struct,runpy,os
 import UnityPy
 from UnityPy.helpers.TypeTreeGenerator import TypeTreeGenerator
 ROOT=Path(__file__).resolve().parents[1]
 w=runpy.run_path(str(ROOT/'scripts/write-task.py'))['write']
-game=Path('C:/Juegos/Steam/steamapps/common/Monster Train 2')
+game_folder=os.environ.get('MT2_GAME_DIR')
+if not game_folder: raise SystemExit('Set MT2_GAME_DIR to the local Monster Train 2 installation folder.')
+game=Path(game_folder)
 asset=game/'MonsterTrain2_Data/sharedassets0.assets'
 env=UnityPy.load(str(asset));generator=TypeTreeGenerator(next(iter(env.files.values())).unity_version);generator.load_local_game(str(game))
 objects={o.path_id:o for o in env.objects}
@@ -51,3 +53,5 @@ w('config/official-clans.json',json.dumps({'schemaVersion':1,'source':{'asset':a
 print([(c['id'],len(c['cards'])) for c in clans])
 # 2026-11-15-2007||codex-clan-editor||clan-creator/scripts/build-official-clans.py||Extraer relaciones exactas de campeones e iniciales desde ClassData original sin tocar assets
 # 2026-11-15-2019||codex-clan-editor||clan-creator/scripts/build-official-clans.py||Usar version Unity detectada al leer relaciones de clanes oficiales
+# 2026-11-21-1113||codex-clan-editor||clan-creator/scripts/build-official-clans.py||Leer el entorno para localizar el juego al extraer arte oficial
+# 2026-11-21-1113||codex-clan-editor||clan-creator/scripts/build-official-clans.py||Eliminar ruta local de la extracción oficial

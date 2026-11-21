@@ -1,0 +1,89 @@
+{
+  "id": "ww-WW_A07-simplified",
+  "simplified": {
+    "removed": [
+      "relics/WW_A07/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "relics",
+    "id": "WW_A07"
+  },
+  "kind": "artifact",
+  "names": {
+    "spanish": "Comité de Relaciones Impropias",
+    "english": "Committee for Improper Relations",
+    "french": "Comité des relations inconvenantes",
+    "german": "Ausschuss für ungebührliche Beziehungen",
+    "portuguese": "Comitê de Relações Impróprias",
+    "russian": "Комитет неподобающих отношений",
+    "chinese": "不当关系委员会",
+    "chinese_traditional": "不當關係委員會",
+    "korean": "부적절한 관계 위원회",
+    "japanese": "不適切な関係委員会"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/d690888b263844645048b942eb97b78998d8a2f4ceb6c0d304290f102a841578.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/relics/WW_A07IconSmall.png": "assets/ced4cf8ac94148283c5252bf60c9c916d08f2442583ff91e3fae7ea66eb2da98.png",
+    "textures/relics/WW_A07Icon.png": "assets/d690888b263844645048b942eb97b78998d8a2f4ceb6c0d304290f102a841578.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "WW_A07",
+        "type": "collectable",
+        "names": {
+          "spanish": "Comité de Relaciones Impropias",
+          "english": "Committee for Improper Relations",
+          "french": "Comité des relations inconvenantes",
+          "german": "Ausschuss für ungebührliche Beziehungen",
+          "portuguese": "Comitê de Relações Impróprias",
+          "russian": "Комитет неподобающих отношений",
+          "chinese": "不当关系委员会",
+          "chinese_traditional": "不當關係委員會",
+          "korean": "부적절한 관계 위원회",
+          "japanese": "不適切な関係委員会"
+        },
+        "icon": "@WW_A07Icon",
+        "icon_small": "@WW_A07IconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "common"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_A07IconSmall",
+        "path": "textures/relics/WW_A07IconSmall.png"
+      },
+      {
+        "id": "WW_A07Icon",
+        "path": "textures/relics/WW_A07Icon.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/relics/WW_A07.json": "d89a041e4b70577be41a5ce8042c20867cca24009897996291959e12d086c6cf"
+  }
+}

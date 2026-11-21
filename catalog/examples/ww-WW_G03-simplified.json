@@ -1,0 +1,144 @@
+{
+  "id": "ww-WW_G03-simplified",
+  "simplified": {
+    "removed": [
+      "upgrades/WW_G03_Upgrade/trigger_upgrades"
+    ],
+    "needsEffect": false
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_G03"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Protective Charm",
+    "spanish": "Talismán Protector",
+    "french": "Charme protecteur",
+    "german": "Schutztalisman",
+    "portuguese": "Talismã Protetor",
+    "russian": "Защитный талисман",
+    "chinese": "防护护符",
+    "chinese_traditional": "防護護符",
+    "korean": "보호 부적",
+    "japanese": "守護のお守り"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/5e8e72a6ca320a093cdf02f4820d990a2a9904ad48ad673b21029aa506c60caa.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/equipment/WW_G03Icon.png": "assets/0220a718ec94458171ef5b7599c5e92ec1e86803bb53aa3a82c0f8eafe27aadd.png",
+    "textures/cards/WW_G03CardArt.png": "assets/5e8e72a6ca320a093cdf02f4820d990a2a9904ad48ad673b21029aa506c60caa.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_G03",
+        "names": {
+          "english": "Protective Charm",
+          "spanish": "Talismán Protector",
+          "french": "Charme protecteur",
+          "german": "Schutztalisman",
+          "portuguese": "Talismã Protetor",
+          "russian": "Защитный талисман",
+          "chinese": "防护护符",
+          "chinese_traditional": "防護護符",
+          "korean": "보호 부적",
+          "japanese": "守護のお守り"
+        },
+        "card_type": "equipment",
+        "cost": 0,
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "card_art": "@WW_G03CardArt",
+        "effects": [
+          "@WW_G03_Equip"
+        ],
+        "traits": [
+          "@WW_G03_Grafted"
+        ],
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_G03_Grafted",
+        "name": "CardTraitGraftedEquipment",
+        "trait_is_removable": false
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_G03_Equip",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@WW_G03_Upgrade"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WW_G03_Upgrade",
+        "titles": {
+          "english": "Protective Charm",
+          "spanish": "Talismán Protector",
+          "french": "Charme protecteur",
+          "german": "Schutztalisman",
+          "portuguese": "Talismã Protetor",
+          "russian": "Защитный талисман",
+          "chinese": "防护护符",
+          "chinese_traditional": "防護護符",
+          "korean": "보호 부적",
+          "japanese": "守護のお守り"
+        },
+        "hide_icon_on_card": true,
+        "icon": "@WW_G03Icon",
+        "status_effect_upgrades": [
+          {
+            "status": "damage shield",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_G03Icon",
+        "path": "textures/equipment/WW_G03Icon.png"
+      },
+      {
+        "id": "WW_G03CardArt",
+        "path": "textures/cards/WW_G03CardArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_G03CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_G03CardArt"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/grafts/WW_G03.json": "1608c4430decc8a1fcf4f1c57595fd507641bdddf5be0e7e0c46734c1c38a99e"
+  }
+}

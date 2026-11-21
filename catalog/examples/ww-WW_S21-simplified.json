@@ -1,0 +1,101 @@
+{
+  "id": "ww-WW_S21-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S21/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S21"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Matrícula de Honor Blindada",
+    "english": "Armored Honors Enrollment",
+    "french": "Inscription blindée avec mention",
+    "german": "Gepanzerte Ehreneinschreibung",
+    "portuguese": "Matrícula Blindada com Honras",
+    "russian": "Бронированное почётное зачисление",
+    "chinese": "装甲荣誉入学",
+    "chinese_traditional": "裝甲榮譽入學",
+    "korean": "방어된 우등 등록",
+    "japanese": "装甲付き優等登録"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/5c923944c6c4041e14680281dc5beb25500abac5205dbf5d560b3668fed3cbfc.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S21CardArt.png": "assets/5c923944c6c4041e14680281dc5beb25500abac5205dbf5d560b3668fed3cbfc.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S21",
+        "names": {
+          "spanish": "Matrícula de Honor Blindada",
+          "english": "Armored Honors Enrollment",
+          "french": "Inscription blindée avec mention",
+          "german": "Gepanzerte Ehreneinschreibung",
+          "portuguese": "Matrícula Blindada com Honras",
+          "russian": "Бронированное почётное зачисление",
+          "chinese": "装甲荣誉入学",
+          "chinese_traditional": "裝甲榮譽入學",
+          "korean": "방어된 우등 등록",
+          "japanese": "装甲付き優等登録"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_S21CardArt",
+        "targetless": false,
+        "traits": [
+          "@WW_Consume"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S21CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S21CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S21CardArt",
+        "path": "textures/cards/WW_S21CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S21.json": "3673dede4d84a4f88c0b2c1fe7fbd32e26a3a53e1058df59244d0147a89fa77f",
+    "content/json/03_common.json": "93d922ea5ee845e8a0ac79dc6480520a849434978141fe1e9353366f1c156353"
+  }
+}

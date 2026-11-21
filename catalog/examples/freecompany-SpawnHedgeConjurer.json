@@ -79,16 +79,16 @@
           "japanese": "不安定な試薬"
         },
         "descriptions": {
-          "english": "Draw a damage spell. It becomes <b>Explosive</b>.",
-          "french": "Piochez un sort de dégâts. Il devient <b>Explosif</b>.",
-          "german": "Ziehe einen Schadenszauber. Er wird <b>Explosiv</b>.",
-          "russian": "Возьмите заклинание, наносящее урон. Оно становится <b>Взрывной</b>.",
-          "portuguese": "Compre um feitiço de dano. Ele se torna <b>Explosivo</b>.",
-          "chinese": "抽取一张伤害法术。它获得<b>爆炸</b>。",
-          "spanish": "Roba un hechizo de daño. Se vuelve <b>Explosivo</b>.",
-          "chinese_traditional": "抽取一張傷害法術。它獲得<b>爆炸</b>。",
-          "korean": "피해 주문을 뽑음. 해당 주문은 <b>폭발</b> 획득.",
-          "japanese": "ダメージ呪文を引く。その呪文は<b>爆発</b>になる。"
+          "english": "Draw a damage spell. It becomes [explosive].",
+          "french": "Piochez un sort de dégâts. Il devient [explosive].",
+          "german": "Ziehe einen Schadenszauber. Er wird [explosive].",
+          "russian": "Возьмите заклинание, наносящее урон. Оно становится [explosive].",
+          "portuguese": "Compre um feitiço de dano. Ele se torna [explosive].",
+          "chinese": "抽取一张伤害法术。它获得[explosive]。",
+          "spanish": "Roba un hechizo de daño. Se vuelve [explosive].",
+          "chinese_traditional": "抽取一張傷害法術。它獲得[explosive]。",
+          "korean": "피해 주문을 뽑음. 해당 주문은 [explosive] 획득.",
+          "japanese": "ダメージ呪文を引く。その呪文は[explosive]になる。"
         },
         "rarity": "common",
         "card_art": "@HedgeConjurer",
@@ -318,7 +318,7 @@
     ]
   },
   "files": {
-    "json/units/unit_hedge_conjurer.json": "2e4f248039daec4680fd9fa3a82533ad287df849f962f05e5f57ef48d9acd97a",
+    "json/units/unit_hedge_conjurer.json": "61453453f82ca52c4f349daaa60b56438cb23388a95b8731ba55193bccf679c2",
     "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
   }
 }

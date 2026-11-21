@@ -1,0 +1,199 @@
+{
+  "id": "succclan-SpawnEndlessShadow-simplified",
+  "simplified": {
+    "removed": [
+      "characters/EndlessShadow/triggers"
+    ]
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "SpawnEndlessShadow"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Endless Shadow",
+    "chinese": "无尽幽影",
+    "spanish": "Sombra interminable",
+    "french": "Ombre sans fin",
+    "german": "Endloser Schatten",
+    "portuguese": "Sombra Infindável",
+    "russian": "Бесконечная тень",
+    "chinese_traditional": "無盡暗影",
+    "japanese": "無限の影",
+    "korean": "끝없는 그림자"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": 20,
+  "attack": 10,
+  "size": 2,
+  "picture": "assets/5c9eb02036004f6dc4f0eeec98005807d01564d4daa6044c693539e9bcc8509a.png",
+  "characterPicture": "assets/8ee441faceafd306ceb96a7fedd787a0df32760299628dd4a48b765ead86c380.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/EndlessShadowCharacterArt.png": "assets/8ee441faceafd306ceb96a7fedd787a0df32760299628dd4a48b765ead86c380.png",
+    "textures/EndlessShadowCardArt.png": "assets/5c9eb02036004f6dc4f0eeec98005807d01564d4daa6044c693539e9bcc8509a.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnEndlessShadow",
+        "names": {
+          "english": "Endless Shadow",
+          "chinese": "无尽幽影",
+          "spanish": "Sombra interminable",
+          "french": "Ombre sans fin",
+          "german": "Endloser Schatten",
+          "portuguese": "Sombra Infindável",
+          "russian": "Бесконечная тень",
+          "chinese_traditional": "無盡暗影",
+          "japanese": "無限の影",
+          "korean": "끝없는 그림자"
+        },
+        "card_art": "@EndlessShadowCardArt",
+        "cost": 1,
+        "card_type": "monster",
+        "rarity": "rare",
+        "targets_room": true,
+        "effects": [
+          "@SpawnEndlessShadow"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnEndlessShadow",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@EndlessShadow"
+      }
+    ],
+    "characters": [
+      {
+        "id": "EndlessShadow",
+        "attack_vfx": "@SuccFXBladeAttack",
+        "impact_vfx": "@SuccFXShadowImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "names": {
+          "english": "Endless Shadow",
+          "chinese": "无尽幽影",
+          "spanish": "Sombra interminable",
+          "french": "Ombre sans fin",
+          "german": "Endloser Schatten",
+          "portuguese": "Sombra Infindável",
+          "russian": "Бесконечная тень",
+          "chinese_traditional": "無盡暗影",
+          "japanese": "無限の影",
+          "korean": "끝없는 그림자"
+        },
+        "character_art": "@EndlessShadowCharacterArt",
+        "size": 2,
+        "attack_damage": 10,
+        "health": 20,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Ghost"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Ghost",
+        "names": {
+          "english": "Ghost",
+          "chinese": "幽魂",
+          "spanish": "Fantasma",
+          "french": "Fantôme",
+          "german": "Geist",
+          "portuguese": "Fantasma",
+          "russian": "Призрак",
+          "chinese_traditional": "幽靈",
+          "japanese": "幽霊",
+          "korean": "유령"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "EndlessShadowCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@EndlessShadowCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 0.85,
+                "y": 0.85,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "EndlessShadowCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@EndlessShadowCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "EndlessShadowCharacterArt",
+        "path": "textures/EndlessShadowCharacterArt.png"
+      },
+      {
+        "id": "EndlessShadowCardArt",
+        "path": "textures/EndlessShadowCardArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXShadowImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_ShadowImpact_PS.prefab",
+          "asset_guid": "7fc4324c349cb2b4f81e9ed0e62eb115"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXBladeAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/DeathsDancer/FX_DeathsDancerAttack.prefab",
+          "asset_guid": "7b4040ba5c134c84eaeb246a77b0a401"
+        },
+        "spawn_location": "character_center"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_EndlessShadow.json": "b021cd10c14696b07bc805efd34079aa6449e514dfd1c3eaf1a169ff2affae37",
+    "json/class.json": "65c18f4c8b8c97b62edfa51f3d02d2cae856fe878c761586e950fc9993580bc3",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

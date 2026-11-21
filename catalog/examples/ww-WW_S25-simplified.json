@@ -1,0 +1,103 @@
+{
+  "id": "ww-WW_S25-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S25/effects"
+    ],
+    "needsEffect": false
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S25"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Seguro de Responsabilidad Arcana",
+    "english": "Arcane Liability Insurance",
+    "french": "Assurance responsabilité arcanique",
+    "german": "Arkane Haftpflichtversicherung",
+    "portuguese": "Seguro de Responsabilidade Arcana",
+    "russian": "Страхование магической ответственности",
+    "chinese": "奥术责任保险",
+    "chinese_traditional": "奧術責任保險",
+    "korean": "비전 배상 책임 보험",
+    "japanese": "秘術賠償責任保険"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/cb770aabdf43b8a018796095397350fa385df34c52d7c7c86cf772a85ce7d7eb.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S25CardArt.png": "assets/cb770aabdf43b8a018796095397350fa385df34c52d7c7c86cf772a85ce7d7eb.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S25",
+        "names": {
+          "spanish": "Seguro de Responsabilidad Arcana",
+          "english": "Arcane Liability Insurance",
+          "french": "Assurance responsabilité arcanique",
+          "german": "Arkane Haftpflichtversicherung",
+          "portuguese": "Seguro de Responsabilidade Arcana",
+          "russian": "Страхование магической ответственности",
+          "chinese": "奥术责任保险",
+          "chinese_traditional": "奧術責任保險",
+          "korean": "비전 배상 책임 보험",
+          "japanese": "秘術賠償責任保険"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_S25CardArt",
+        "targetless": false,
+        "effects": [
+          "@WW_S25_Heal"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_S25_Heal",
+        "name": "CardEffectHeal",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_int": 10
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S25CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S25CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S25CardArt",
+        "path": "textures/cards/WW_S25CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S25.json": "8f00f3125fc78bd05e451a8d08c78caa5b5d2099f7867a476128147d44609a27"
+  }
+}

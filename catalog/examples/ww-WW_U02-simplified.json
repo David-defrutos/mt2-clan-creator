@@ -1,0 +1,169 @@
+{
+  "id": "ww-WW_U02-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_U02_Character/starting_status_effects"
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_U02"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Doctorado en Primeros Auxilios Arcanos",
+    "english": "PhD in Arcane First Aid",
+    "french": "Docteur en premiers secours arcaniques",
+    "german": "Doktor der arkanen Ersten Hilfe",
+    "portuguese": "Doutor em Primeiros Socorros Arcanos",
+    "russian": "Доктор магической первой помощи",
+    "chinese": "奥术急救博士",
+    "chinese_traditional": "奧術急救博士",
+    "korean": "비전 응급 처치 박사",
+    "japanese": "秘術応急処置博士"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 30,
+  "attack": 6,
+  "size": 2,
+  "picture": "assets/3cf7d5660a86049e547f8022efc8d41e8007ea47d3766f6c8771b2b07a392d70.png",
+  "characterPicture": "assets/aef184af9a0984e0bc04367ebf8a1c26df92b2fbacd1a1a8872c05bbea556636.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/characters/WW_U02CharacterArt.png": "assets/aef184af9a0984e0bc04367ebf8a1c26df92b2fbacd1a1a8872c05bbea556636.png",
+    "textures/cards/WW_U02CardArt.png": "assets/3cf7d5660a86049e547f8022efc8d41e8007ea47d3766f6c8771b2b07a392d70.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_U02",
+        "names": {
+          "spanish": "Doctorado en Primeros Auxilios Arcanos",
+          "english": "PhD in Arcane First Aid",
+          "french": "Docteur en premiers secours arcaniques",
+          "german": "Doktor der arkanen Ersten Hilfe",
+          "portuguese": "Doutor em Primeiros Socorros Arcanos",
+          "russian": "Доктор магической первой помощи",
+          "chinese": "奥术急救博士",
+          "chinese_traditional": "奧術急救博士",
+          "korean": "비전 응급 처치 박사",
+          "japanese": "秘術応急処置博士"
+        },
+        "card_type": "monster",
+        "cost": 2,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_U02CardArt",
+        "effects": [
+          "@WW_U02_Spawn"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_U02_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_U02_Character"
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_U02_Character",
+        "names": {
+          "spanish": "Doctorado en Primeros Auxilios Arcanos",
+          "english": "PhD in Arcane First Aid",
+          "french": "Docteur en premiers secours arcaniques",
+          "german": "Doktor der arkanen Ersten Hilfe",
+          "portuguese": "Doutor em Primeiros Socorros Arcanos",
+          "russian": "Доктор магической первой помощи",
+          "chinese": "奥术急救博士",
+          "chinese_traditional": "奧術急救博士",
+          "korean": "비전 응급 처치 박사",
+          "japanese": "秘術応急処置博士"
+        },
+        "character_art": "@WW_U02CharacterArt",
+        "size": 2,
+        "health": 30,
+        "attack_damage": 6,
+        "subtypes": [
+          "@WW_Witch"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Witch",
+        "names": {
+          "english": "Witch",
+          "spanish": "Bruja",
+          "french": "Sorcière",
+          "german": "Hexe",
+          "portuguese": "Bruxa",
+          "russian": "Ведьма",
+          "chinese": "女巫",
+          "chinese_traditional": "女巫",
+          "korean": "마녀",
+          "japanese": "魔女"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_U02CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_U02CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.04,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WW_U02CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_U02CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_U02CharacterArt",
+        "path": "textures/characters/WW_U02CharacterArt.png"
+      },
+      {
+        "id": "WW_U02CardArt",
+        "path": "textures/cards/WW_U02CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_U02.json": "d80427514882f2e3e9e7a83f886def852824b7313d40da58358fbf3646354add",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

@@ -66,7 +66,8 @@
         ],
         "traits": [
           "@SappersBombPurge"
-        ]
+        ],
+        "ignore_when_counting_mastery": true
       }
     ],
     "traits": [
@@ -193,6 +194,6 @@
     ]
   },
   "files": {
-    "json/relics/relic_sappers_charges.json": "090f54b3e10e32baf5e5abafd304674ddfc1776479b68d5050151b3955cd3e12"
+    "json/relics/relic_sappers_charges.json": "92ba753da0874c24c2d0472f05dd13bbf56351058b0af260f2abe8bb47aaca7f"
   }
 }

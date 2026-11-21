@@ -3,7 +3,7 @@
   "source": "SuccClan",
   "sourceId": "succclan",
   "version": "0.2.1",
-  "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
   "root": {
     "section": "cards",
     "id": "SpawnOolioddroo"
@@ -26,7 +26,7 @@
   "costType": "normal",
   "rarity": "uncommon",
   "health": 30,
-  "attack": 0,
+  "attack": 5,
   "size": 2,
   "picture": "assets/4b677ee57e21da53c46111a7684ad6ef2026f065cb61f5a026695cf85ba11ad1.png",
   "characterPicture": "assets/eb733ce19ea80b6079a5a8c29786fd53817cf816dd8f68d16c17bfdbf6bb59b4.png",
@@ -101,7 +101,7 @@
         },
         "character_art": "@OolioddrooCharacterArt",
         "size": 2,
-        "attack_damage": 0,
+        "attack_damage": 5,
         "health": 30,
         "subtypes": [
           "SubtypesData_BannerUnit",
@@ -211,7 +211,7 @@
     ]
   },
   "files": {
-    "json/units/unit_Oolioddroo.json": "dfe9b00caf2d8ad01ecc7f8ab7c059ae977328c1bea1928b9f1ee5aa53090027",
+    "json/units/unit_Oolioddroo.json": "514704b24bab6405aaea2665b110db88b6433cc06ff0bf7efb3e68820f1b6258",
     "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
   }
 }

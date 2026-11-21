@@ -1,0 +1,89 @@
+{
+  "id": "freecompany-MarchingOrders-simplified",
+  "simplified": {
+    "removed": [
+      "relics/MarchingOrders/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "relics",
+    "id": "MarchingOrders"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Marching Orders",
+    "french": "Ordres de marche",
+    "german": "Marschbefehl",
+    "russian": "Походный приказ",
+    "portuguese": "Ordens de Marcha",
+    "chinese": "行军令",
+    "spanish": "Órdenes de marcha",
+    "chinese_traditional": "行軍令",
+    "korean": "행군 명령",
+    "japanese": "行軍命令"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/972b7761bb22b25adbd7717539894d201646b182384c2f919be9ecfbb9361367.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/MarchingOrdersIconSmall.png": "assets/46fca5cf96bf0f6bf2a391b2daf641d2f976e4ff01b56026dd8d1e3710a4f2a3.png",
+    "textures/MarchingOrdersIcon.png": "assets/972b7761bb22b25adbd7717539894d201646b182384c2f919be9ecfbb9361367.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "MarchingOrders",
+        "type": "collectable",
+        "names": {
+          "english": "Marching Orders",
+          "french": "Ordres de marche",
+          "german": "Marschbefehl",
+          "russian": "Походный приказ",
+          "portuguese": "Ordens de Marcha",
+          "chinese": "行军令",
+          "spanish": "Órdenes de marcha",
+          "chinese_traditional": "行軍令",
+          "korean": "행군 명령",
+          "japanese": "行軍命令"
+        },
+        "icon": "@MarchingOrdersIcon",
+        "icon_small": "@MarchingOrdersIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "rare"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "MarchingOrdersIconSmall",
+        "path": "textures/MarchingOrdersIconSmall.png"
+      },
+      {
+        "id": "MarchingOrdersIcon",
+        "path": "textures/MarchingOrdersIcon.png"
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_marching_orders.json": "78ef485414cd076a8b443571775efa6fd7d018f0b1530b92db05f573a31f9a02"
+  }
+}

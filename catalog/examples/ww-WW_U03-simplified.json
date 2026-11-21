@@ -1,0 +1,171 @@
+{
+  "id": "ww-WW_U03-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_U03_Character/triggers",
+      "characters/WW_U03_Character/starting_status_effects"
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_U03"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Catedrático de Medicina Hostil",
+    "english": "Professor of Hostile Medicine",
+    "french": "Professeur de médecine hostile",
+    "german": "Professor für feindselige Medizin",
+    "portuguese": "Professor de Medicina Hostil",
+    "russian": "Профессор враждебной медицины",
+    "chinese": "敌意医学教授",
+    "chinese_traditional": "敵意醫學教授",
+    "korean": "적대 의학 교수",
+    "japanese": "敵対医学教授"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 25,
+  "attack": 10,
+  "size": 2,
+  "picture": "assets/16eefe222af3da523af7e21ceae204f47907ec5c29c0a3891692ac1a89c453ac.png",
+  "characterPicture": "assets/88444ba75804e4ee7c10a04d7e792e290d7623fa8c7060c228c3acfa607cee75.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/characters/WW_U03CharacterArt.png": "assets/88444ba75804e4ee7c10a04d7e792e290d7623fa8c7060c228c3acfa607cee75.png",
+    "textures/cards/WW_U03CardArt.png": "assets/16eefe222af3da523af7e21ceae204f47907ec5c29c0a3891692ac1a89c453ac.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_U03",
+        "names": {
+          "spanish": "Catedrático de Medicina Hostil",
+          "english": "Professor of Hostile Medicine",
+          "french": "Professeur de médecine hostile",
+          "german": "Professor für feindselige Medizin",
+          "portuguese": "Professor de Medicina Hostil",
+          "russian": "Профессор враждебной медицины",
+          "chinese": "敌意医学教授",
+          "chinese_traditional": "敵意醫學教授",
+          "korean": "적대 의학 교수",
+          "japanese": "敵対医学教授"
+        },
+        "card_type": "monster",
+        "cost": 2,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_U03CardArt",
+        "effects": [
+          "@WW_U03_Spawn"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_U03_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_U03_Character"
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_U03_Character",
+        "names": {
+          "spanish": "Catedrático de Medicina Hostil",
+          "english": "Professor of Hostile Medicine",
+          "french": "Professeur de médecine hostile",
+          "german": "Professor für feindselige Medizin",
+          "portuguese": "Professor de Medicina Hostil",
+          "russian": "Профессор враждебной медицины",
+          "chinese": "敌意医学教授",
+          "chinese_traditional": "敵意醫學教授",
+          "korean": "적대 의학 교수",
+          "japanese": "敵対医学教授"
+        },
+        "character_art": "@WW_U03CharacterArt",
+        "size": 2,
+        "health": 25,
+        "attack_damage": 10,
+        "subtypes": [
+          "@WW_Wizard",
+          "SubtypesData_BannerUnit"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Wizard",
+        "names": {
+          "english": "Wizard",
+          "spanish": "Mago",
+          "french": "Sorcier",
+          "german": "Magier",
+          "portuguese": "Mago",
+          "russian": "Маг",
+          "chinese": "男巫",
+          "chinese_traditional": "男巫",
+          "korean": "마법사",
+          "japanese": "魔法使い"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_U03CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_U03CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.81,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WW_U03CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_U03CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_U03CharacterArt",
+        "path": "textures/characters/WW_U03CharacterArt.png"
+      },
+      {
+        "id": "WW_U03CardArt",
+        "path": "textures/cards/WW_U03CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_U03.json": "0befb61e860a64df2c58b20cd17e4bf7ef51c0d5d17f31ead05b12e63b4ca80f",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

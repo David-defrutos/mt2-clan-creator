@@ -1,0 +1,100 @@
+{
+  "id": "freecompany-TameTwoHeadedTroll-simplified",
+  "simplified": {
+    "removed": [
+      "cards/TameTwoHeadedTroll/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "TameTwoHeadedTroll"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Tame the Two-Headed Troll",
+    "french": "Apprivoiser : Troll à deux têtes",
+    "german": "Zweiköpfiger Troll zähmen",
+    "russian": "Приручить: Двухголовый тролль",
+    "portuguese": "Domar: Troll de Duas Cabeças",
+    "chinese": "驯服双头巨魔",
+    "spanish": "Domar al Trol de dos cabezas",
+    "chinese_traditional": "馴服雙頭巨魔",
+    "korean": "쌍두 트롤 길들이기",
+    "japanese": "双頭のトロールを手なずける"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/0331ce381682f9f5f0e03d2a1c6b2e334c8568f43e17c14267947f4df129a622.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/TwoHeadedTrollArt.png": "assets/0331ce381682f9f5f0e03d2a1c6b2e334c8568f43e17c14267947f4df129a622.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "TameTwoHeadedTroll",
+        "names": {
+          "english": "Tame the Two-Headed Troll",
+          "french": "Apprivoiser : Troll à deux têtes",
+          "german": "Zweiköpfiger Troll zähmen",
+          "russian": "Приручить: Двухголовый тролль",
+          "portuguese": "Domar: Troll de Duas Cabeças",
+          "chinese": "驯服双头巨魔",
+          "spanish": "Domar al Trol de dos cabezas",
+          "chinese_traditional": "馴服雙頭巨魔",
+          "korean": "쌍두 트롤 길들이기",
+          "japanese": "双頭のトロールを手なずける"
+        },
+        "card_art": "@TwoHeadedTroll",
+        "cost": 0,
+        "card_type": "spell",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": true,
+        "traits": [
+          "@TameEphemeral"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "TameEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "TwoHeadedTroll",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@TwoHeadedTroll"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "TwoHeadedTroll",
+        "path": "textures/TwoHeadedTrollArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_troll.json": "f91102b775c131b0895bbc03577750fdf220670f0afba52e5d9dfe111f90f01f"
+  }
+}

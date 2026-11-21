@@ -1,0 +1,185 @@
+{
+  "id": "ww-WW_U04-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_U04_Character/grafted_equipment",
+      "characters/WW_U04_Character/starting_status_effects"
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_U04"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Profesor de Educación Mágica",
+    "english": "Professor of Magical Education",
+    "french": "Professeur d'éducation magique",
+    "german": "Professor für magische Bildung",
+    "portuguese": "Professor de Educação Mágica",
+    "russian": "Профессор магического образования",
+    "chinese": "魔法教育教授",
+    "chinese_traditional": "魔法教育教授",
+    "korean": "마법 교육 교수",
+    "japanese": "魔法教育教授"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 15,
+  "attack": 16,
+  "size": 1,
+  "picture": "assets/bfc5c0680f46c4b26f7bbdf00d56b402204117067923ab95ce77e131b7f1404d.png",
+  "characterPicture": "assets/afc2c58c5d0232f9b786ce31110a7fa327f78d0b32e645b20c60bee6afdf700a.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/WW_U04CharacterArt.png": "assets/afc2c58c5d0232f9b786ce31110a7fa327f78d0b32e645b20c60bee6afdf700a.png",
+    "textures/cards/WW_U04CardArt.png": "assets/bfc5c0680f46c4b26f7bbdf00d56b402204117067923ab95ce77e131b7f1404d.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_U04",
+        "names": {
+          "spanish": "Profesor de Educación Mágica",
+          "english": "Professor of Magical Education",
+          "french": "Professeur d'éducation magique",
+          "german": "Professor für magische Bildung",
+          "portuguese": "Professor de Educação Mágica",
+          "russian": "Профессор магического образования",
+          "chinese": "魔法教育教授",
+          "chinese_traditional": "魔法教育教授",
+          "korean": "마법 교육 교수",
+          "japanese": "魔法教育教授"
+        },
+        "card_type": "monster",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_U04CardArt",
+        "effects": [
+          "@WW_U04_Spawn"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_U04_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_U04_Character",
+        "additional_tooltips": [
+          "@WW_MagicPowerReference"
+        ]
+      }
+    ],
+    "additional_tooltips": [
+      {
+        "id": "WW_MagicPowerReference",
+        "titles": {
+          "key": "ModifyCard_MagicalPower_TooltipTitle"
+        },
+        "descriptions": {
+          "key": "ModifyCard_MagicalPower_TooltipBody"
+        }
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_U04_Character",
+        "names": {
+          "spanish": "Profesor de Educación Mágica",
+          "english": "Professor of Magical Education",
+          "french": "Professeur d'éducation magique",
+          "german": "Professor für magische Bildung",
+          "portuguese": "Professor de Educação Mágica",
+          "russian": "Профессор магического образования",
+          "chinese": "魔法教育教授",
+          "chinese_traditional": "魔法教育教授",
+          "korean": "마법 교육 교수",
+          "japanese": "魔法教育教授"
+        },
+        "character_art": "@WW_U04CharacterArt",
+        "size": 1,
+        "health": 15,
+        "attack_damage": 16,
+        "subtypes": [
+          "@WW_Wizard",
+          "SubtypesData_BannerUnit"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Wizard",
+        "names": {
+          "english": "Wizard",
+          "spanish": "Mago",
+          "french": "Sorcier",
+          "german": "Magier",
+          "portuguese": "Mago",
+          "russian": "Маг",
+          "chinese": "男巫",
+          "chinese_traditional": "男巫",
+          "korean": "마법사",
+          "japanese": "魔法使い"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_U04CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_U04CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.95,
+                "z": 0
+              },
+              "scale": {
+                "x": 1.75,
+                "y": 1.75,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WW_U04CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_U04CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_U04CharacterArt",
+        "path": "textures/WW_U04CharacterArt.png"
+      },
+      {
+        "id": "WW_U04CardArt",
+        "path": "textures/cards/WW_U04CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_U04.json": "d763302463ff6ef3a97cc363726d2f0565be7f4f812abe9fc1d502f5d48901c7",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

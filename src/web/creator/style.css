@@ -69,7 +69,7 @@
 .inherited-abilities{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:20px}.inherited-abilities h4{font-size:14px;color:var(--muted)}.ability-row>small{color:var(--muted);font-size:11px;text-align:right}.ability-row input[type=checkbox]{width:20px;height:20px;accent-color:var(--teal);vertical-align:middle}
 /* 2026-11-15-1452||codex-clan-editor||clan-creator/src\web\creator\style.css||Distinguir visualmente capacidades del ejemplo y capacidades adicionales */
 
-.search-select{position:relative;min-width:0}.search-select.is-open{z-index:30}.search-select-control{position:relative}.search-select-control input{width:100%;border:1px solid var(--line);border-radius:8px;padding:11px 34px 11px 13px;min-height:43px;background:var(--paper);color:var(--ink);font:inherit;text-overflow:ellipsis}.search-select-control>span{position:absolute;right:13px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--muted)}.search-select-options{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#fffefa;border:1px solid #a6beb0;border-radius:8px;box-shadow:0 8px 24px #143f4026;max-height:min(18rem,40vh);overflow-y:auto;padding:5px;z-index:30;text-align:left;font-size:14px;font-weight:400}.search-select-options [role=option]{padding:10px 12px;cursor:pointer;border-radius:5px;line-height:1.4}.search-select-options [role=option].active{background:#e4efe6;color:var(--teal)}.search-select-options [aria-selected=true]{font-weight:700}.search-select-options .search-select-empty{cursor:default;color:var(--muted)}.ability-picker>.search-select{flex:1;margin-bottom:14px}.field .search-select-control input{margin:0}.effect-row .search-select{font-size:13px}
+.search-select{position:relative;min-width:0}.search-select.is-open{z-index:30}.search-select-control{position:relative}.search-select-control input{width:100%;border:1px solid var(--line);border-radius:8px;padding:11px 34px 11px 13px;min-height:43px;background:var(--paper);color:var(--ink);font:inherit;text-overflow:ellipsis}.search-select-control>span{position:absolute;right:13px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--muted)}.search-select-options{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#fffefa;border:1px solid #a6beb0;border-radius:8px;box-shadow:0 8px 24px #143f4026;max-height:min(18rem,40vh);overflow-y:auto;overscroll-behavior-y:contain;padding:5px;z-index:30;text-align:left;font-size:14px;font-weight:400}.search-select-options [role=option]{padding:10px 12px;cursor:pointer;border-radius:5px;line-height:1.4}.search-select-options [role=option].active,.search-select-options [role=option]:not([aria-disabled=true]):hover{background:#e4efe6;color:var(--teal)}.search-select-options [aria-selected=true]{font-weight:700}.search-select-options .search-select-empty{cursor:default;color:var(--muted)}.ability-picker>.search-select{flex:1;margin-bottom:14px}.field .search-select-control input{margin:0}.effect-row .search-select{font-size:13px}
 /* 2026-11-15-1812||codex-clan-editor||clan-creator/src\web\creator\style.css||Presentar el selector como un único control con lista desplegada y estados de teclado claros */
 
 .statistics-page{max-width:1400px;margin:2rem auto;padding:0 1.5rem}.statistics-page .surface{margin:1.5rem 0}.table-scroll{overflow-x:auto}.statistics-page table{width:100%;border-collapse:collapse;text-align:left}.statistics-page th,.statistics-page td{padding:.65rem;border-bottom:1px solid var(--line,#d6dfd6);vertical-align:top;white-space:nowrap}.statistics-page .draft-statistics{background:#fff0d6;font-weight:600}.step-statistics{margin-bottom:1.5rem}.step-statistics summary{cursor:pointer}.reference-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.6rem;margin:1rem 0}.path-preview{overflow-wrap:anywhere}.effect-row{flex-wrap:wrap}
@@ -106,7 +106,7 @@
 /* Complete previews and concise guided controls. */
 .fitted-card-block{text-align:center;min-width:0}.fitted-card{margin:8px auto 0;max-width:100%}.fitted-card>.game-card.authentic.mt2-card{width:100%;max-width:none;min-width:0;display:block}.enlarge-card{padding:6px 10px;font-size:12px}.card-enlarged{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--paper,#fffef9);max-height:96dvh;max-width:94vw;overflow:auto}.card-enlarged::backdrop{background:#173d3db3}.card-enlarged>button{display:block;margin:0 0 10px auto}.card-enlarged-content{width:min(360px,calc((100dvh - 130px)*255/450));max-width:80vw;margin:auto}.card-enlarged-content>.game-card.authentic.mt2-card{display:block;width:100%;max-width:none}
 .champion-preview-controls{display:flex;gap:8px;text-align:left;margin:10px 0 0;align-items:end}.champion-preview-controls .field{margin:0;min-width:0;flex:1}.champion-preview-controls .field span{font-size:11px}.champion-preview-controls select{padding:7px;font-size:12px}.champion-preview-controls .field:last-child:not(:first-child){max-width:75px}.preview-help{text-align:left;font-size:12px;margin:10px 0;color:var(--muted)}.preview-help summary{cursor:pointer;color:var(--teal);font-weight:600}.preview-help p{font-size:12px;line-height:1.6;margin:8px 0}.preview-side{align-self:start;position:sticky;top:12px}.preview-side>.eyebrow{display:block;margin-bottom:8px}
-.guided-picker{height:94dvh;max-height:94dvh}.guided-picker .picker-browser{flex:1;min-height:0;max-height:none}.guided-picker .picker-browser.has-selection{overflow:visible;grid-template-columns:minmax(180px,1fr) minmax(160px,280px);gap:20px}.guided-picker .picker-results{overflow:auto;min-height:0;padding-right:8px}.guided-picker .selected-card-panel{min-height:0;overflow:visible}.guided-picker .selected-card-panel .fitted-card>.game-card{display:block}.guided-picker .example-grid{align-content:start}.guided-picker .picker-footer{margin-top:10px;padding-top:10px}
+.guided-picker{height:94dvh;max-height:94dvh}.guided-picker .picker-browser{flex:1;min-height:0;max-height:none}.guided-picker .picker-browser.has-selection{overflow:visible;grid-template-columns:minmax(180px,1fr) minmax(160px,280px);gap:20px}.guided-picker .picker-results{overflow:auto;min-height:0;padding-right:8px}.guided-picker .selected-card-panel{min-height:0;overflow:auto}.guided-picker .selected-card-panel .fitted-card>.game-card{display:block}.guided-picker .example-grid{align-content:start}.guided-picker .picker-footer{margin-top:10px;padding-top:10px}
 .effect-row.guided-effect{display:block;padding:20px;border:1px solid #7c9b8d;background:#f1f5ec;border-radius:12px}.effect-basics{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}.effect-basics>.effect-trigger-field,.effect-basics>.effect-target-field,.effect-basics>.field:has(.search-select),.effect-basics>.spell-timing{grid-column:1/-1}.effect-basics .field{min-width:0}.effect-summary{display:flex;align-items:center;gap:8px;border-top:1px solid #c2d0c4;margin:8px 0;padding-top:10px}.effect-summary p{margin:0;flex:1;font-size:13px}.spell-timing{margin:0 0 12px;font-weight:600;font-size:13px}.native-effect-card[data-nested="true"]{margin-left:16px;border-left:4px solid #78978b}.backup-tools>summary,.all-wizard-steps>summary{font-weight:600;cursor:pointer}.backup-tools button{margin:8px 12px 8px 0}.backup-file{display:none}.quick-start{border-left:4px solid var(--teal)}.all-wizard-steps{margin-top:18px;font-size:12px}.all-wizard-steps nav{margin:10px 0}.all-wizard-steps>button{margin-top:10px}
 @media(max-width:700px){.guided-picker .picker-browser.has-selection{display:grid;grid-template-columns:minmax(110px,1fr) minmax(120px,42%);gap:10px}.guided-picker .has-selection .example-grid{max-height:none;overflow:visible;grid-template-columns:1fr}.guided-picker .selected-card-panel{margin:0;padding-left:8px;border-top:0;border-left:1px solid var(--line)}.effect-basics{grid-template-columns:1fr}.effect-basics>*{grid-column:1/-1}.all-wizard-steps nav{display:block;overflow:visible}.all-wizard-steps nav button{min-width:0;width:100%}.champion-preview-controls{flex-wrap:wrap}.preview-side{position:static}}
 /* 2026-11-16-2148||codex-clan-editor||clan-creator/src/web/creator/style.css||Ajustar cartas al espacio disponible ampliar sin recorte y dar jerarquía visual a efectos ayudas recorrido y copias */
@@ -121,7 +121,7 @@
 }
 /* 2026-11-16-2152||codex-clan-editor||clan-creator/src/web/creator/style.css||Situar vista previa junto al título para que la carta completa mantenga tamaño legible sin bajar en la página */
 
-.hero .start-empty{margin-left:12px}.restore-notice{padding:12px 5%;background:#e8f1e3;border-bottom:1px solid #86a591;display:flex;align-items:center;justify-content:space-between;gap:16px}.hero small{max-width:530px;line-height:1.6}
+.restore-notice{padding:12px 5%;background:#e8f1e3;border-bottom:1px solid #86a591;display:flex;align-items:center;justify-content:space-between;gap:16px}
 /* 2026-11-16-2157||codex-clan-editor||clan-creator/src/web/creator/style.css||Dar jerarquía a inicio guiado y confirmación de recuperación */
 
 .guided-picker .selected-card-panel{display:flex;flex-direction:column}.selected-card-panel>.eyebrow{order:0}.selected-card-panel>.preview-help,.selected-card-panel>.note{order:1}.selected-card-panel>.fitted-card-block{order:2}.fitted-card-block>.enlarge-card{margin-top:4px}
@@ -131,7 +131,7 @@
 /* 2026-11-16-2200||codex-clan-editor||clan-creator/src/web/creator/style.css||Reservar más altura para carta y resultados reduciendo cabecera decorativa del selector */
 
 /* Nontechnical workflow guidance. */
-.actionable-error{margin:14px 0;padding:18px;border:1px solid #b35e4c;border-left:5px solid #a44632;border-radius:10px;background:#fff3ed;color:#432d28}.actionable-error p{margin:8px 0;line-height:1.6}.actionable-error details{font-size:12px;margin-top:10px}.actionable-error pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:160px;overflow:auto;background:#fff;padding:10px}.review-highlight{outline:3px solid #bc6c1b;outline-offset:5px;border-radius:8px}.review-fix-hint{padding:12px;background:#fff1d7;border-left:4px solid #bc6c1b}.personal-review{display:flex;gap:8px;align-items:center;font-size:12px;margin:16px 0}.personal-review input{width:17px;height:17px}.review-indicator-help{font-size:11px;line-height:1.6;margin:8px 0 14px}.review-indicator-help summary{cursor:pointer}
+.actionable-error{margin:14px 0;padding:18px;border:1px solid #b35e4c;border-left:5px solid #a44632;border-radius:10px;background:#fff3ed;color:#432d28}.actionable-error p{margin:8px 0;line-height:1.6}.actionable-error details{font-size:12px;margin-top:10px}.actionable-error pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:160px;overflow:auto;background:#fff;padding:10px}.review-highlight{outline:3px solid #bc6c1b;outline-offset:5px;border-radius:8px}.review-fix-hint{padding:12px;background:#fff1d7;border-left:4px solid #bc6c1b}
 .card-delete-notice{position:fixed;bottom:90px;left:max(270px,calc((100vw - 900px)/2));right:30px;z-index:65;padding:14px 20px;background:#173f40;color:#fff;border-radius:12px;box-shadow:0 4px 16px #0003;display:flex;align-items:center;gap:18px}.card-delete-notice>span{flex:1}.card-delete-notice button{background:#fff;color:#173f40;border:1px solid #b7d0c1}.card-delete-notice .quiet{background:transparent;color:#fff}.install-badge{font-size:11px;border-radius:20px;border:1px solid #91a99d;background:#edf3e9;padding:6px 10px}.install-badge.pending{background:#fff1d7;border-color:#c99b53}.installation-status{padding:14px;margin:14px 0;border-left:4px solid #6c8f7f;background:#eef4e9;font-size:13px}.installation-status.pending{background:#fff1d7;border-color:#bf842b}.installation-status p{margin:7px 0}.installation-status details{font-size:11px}.restored-copy-label{color:#23594c!important;font-weight:650}.project-install-state{font-size:11px!important}.project-install-state.pending{color:#875400!important}.search-option-group{padding:9px 12px 5px;font-size:11px;font-weight:750;color:#48685d;text-transform:uppercase;border-top:1px solid #d7e1d7;background:#eff4eb}.search-select-options .show-more-effects{font-weight:700;border-top:1px solid #9eb6a7;color:#165e55}
 .artwork-import{width:min(850px,94vw);max-height:94dvh;overflow:auto;border:1px solid #8fa89a;border-radius:16px;padding:24px;background:#fffef9;color:#233b3d}.artwork-import::backdrop{background:#163e3db3}.artwork-import>header{display:flex;justify-content:space-between;gap:16px;align-items:start}.artwork-import h2{margin:0 0 12px}.artwork-import-layout{display:grid;grid-template-columns:minmax(220px,1fr) minmax(200px,280px);gap:28px;margin-top:20px;align-items:start}.artwork-crop{position:relative;overflow:hidden;width:min(100%,320px);aspect-ratio:1;background:repeating-conic-gradient(#d7ded8 0 25%,#f5f6f1 0 50%) 50% / 20px 20px}.artwork-crop>img{position:absolute;max-width:none;object-fit:fill}.character-art-preview{position:relative;height:320px;overflow:hidden;background:repeating-conic-gradient(#d7ded8 0 25%,#f5f6f1 0 50%) 50% / 20px 20px}.character-art-preview>img{position:absolute;max-width:none;bottom:48px;left:50%;object-fit:contain}.character-art-preview>span{position:absolute;bottom:48px;left:0;right:0;border-top:3px solid #ad7d30}.artwork-controls{border:0;padding:0;margin:0;min-width:0}.artwork-controls input[type=range]{padding:0;width:100%}.opaque-image-warning{background:#fff1d7;border:1px solid #d2b075;font-size:12px;padding:12px}.artwork-import .upload{display:inline-block;margin:10px 0}.artwork-import .muted{font-size:12px;color:#586b61}.artwork-import>.primary{margin-top:8px}
 @media(max-width:700px){.card-delete-notice{left:12px;right:12px;bottom:85px;flex-wrap:wrap;padding:12px}.card-delete-notice>span{flex-basis:100%}.artwork-import{padding:18px}.artwork-import-layout{grid-template-columns:1fr;gap:16px}.artwork-crop{width:min(100%,280px);margin:auto}.top-right{flex-wrap:wrap}.install-badge{font-size:10px;padding:4px 8px}}
@@ -167,5 +167,114 @@
 .art-studio{width:min(1000px,94vw);max-height:92vh;overflow:auto;padding:24px}.art-studio>header{display:flex;gap:20px;justify-content:space-between;align-items:center}.art-studio .surface{margin:18px 0}.art-studio textarea{width:100%;min-height:85px}.art-studio textarea[readonly]{min-height:240px;font-size:.95rem;line-height:1.45}.art-resource-preview,.art-reference-preview{max-width:240px;max-height:250px;object-fit:contain;display:block;background:repeating-conic-gradient(#d3d9d1 0 25%,#fff 0 50%) 0/16px 16px;margin:12px 0}.sheet-toggle{display:block;margin:15px 0}.sheet-grid{position:relative;max-width:540px;margin:auto}.sheet-grid>img{width:100%;display:block}.sheet-cells{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr)}.sheet-cells button{border:1px solid #546e6580;background:transparent;border-radius:0;color:#fff;text-shadow:0 1px 3px #000;font-size:1.5rem;display:flex;align-items:start;justify-content:start;padding:8px}.sheet-cells button.selected{background:#d2a35430;outline:3px solid #d2a354;outline-offset:-3px}.sheet-crop-outline{position:absolute;border:2px dashed #fff;box-shadow:0 0 0 1px #1b4b4b;pointer-events:none}.sheet-selection{margin:16px 0;padding:16px;border:1px solid #839d8d;border-radius:12px}.art-studio a.secondary{display:inline-block}.art-studio .upload{display:block}.artwork-import .artwork-crop{max-height:360px}
 /* 2026-11-17-1953||codex-clan-editor||clan-creator/src\web\creator\style.css||Dar separación visual a pasos del taller y selección de nueve propuestas con límites visibles */
 
-.art-studio{border:1px solid #819b8d;border-radius:18px;background:#fbfcf7;color:#173d40}.art-stage-nav,.art-category-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.art-stage-nav button{flex:1;min-width:125px}.art-library-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:12px;margin-top:18px}.art-library-card{display:flex;flex-direction:column;align-items:center;gap:8px;border:1px solid #8caa97;background:#fff;padding:12px;color:inherit;text-align:center}.art-library-card.selected{outline:3px solid #d2a354}.art-library-card img,.art-placeholder{height:120px;max-width:100%;object-fit:contain}.art-placeholder{display:grid;place-items:center;font-size:64px;color:#44746b}.art-library-card small{font-size:.8rem}.art-preset-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.art-preset{display:flex!important;flex-direction:column;align-items:center;gap:10px}.art-preset img{height:155px;width:100%;object-fit:contain}.art-style-controls{margin:18px 0}.art-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.art-compare-grid img{max-height:350px;max-width:100%;object-fit:contain;background:repeating-conic-gradient(#d3d9d1 0 25%,#fff 0 50%) 0/16px 16px}.art-history-grid,.art-derived-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin:18px 0}.art-history-grid>section,.art-derived-grid>label{padding:12px;border:1px solid #92a99a;border-radius:10px;display:flex;flex-direction:column;gap:8px}.art-history-grid img,.art-derived-grid img{height:140px;max-width:100%;object-fit:contain;background:repeating-conic-gradient(#d3d9d1 0 25%,#fff 0 50%) 0/16px 16px}.playtest-checklist>label{display:flex;gap:12px;align-items:start;margin:15px 0}.playtest-checklist input[type=checkbox]{margin-top:4px;flex-shrink:0}.pending-card-banner{margin-bottom:20px}.art-status{font-weight:700}.guided-art-studio>.dialog-actions{position:sticky;bottom:-24px;background:#fbfcf7;padding:16px 0;border-top:1px solid #bccdbc}.discard-card-confirm{border-color:#ac7057}@media(max-width:650px){.art-preset-grid,.art-compare-grid{grid-template-columns:1fr}.art-preset{flex-direction:row!important}.art-preset img{width:85px;height:100px}.art-category-tabs button{font-size:.8rem;padding:7px}.art-library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.art-studio{border:1px solid #819b8d;border-radius:18px;background:#fbfcf7;color:#173d40}.art-stage-nav,.art-category-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.art-stage-nav button{flex:1;min-width:125px}.art-library-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:12px;margin-top:18px}.art-library-card{display:flex;flex-direction:column;align-items:center;gap:8px;border:1px solid #8caa97;background:#fff;padding:12px;color:inherit;text-align:center}.art-library-card.selected{outline:3px solid #d2a354}.art-library-card img,.art-placeholder{height:120px;max-width:100%;object-fit:contain}.art-placeholder{display:grid;place-items:center;font-size:64px;color:#44746b}.art-library-card small{font-size:.8rem}.art-preset-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(138px,1fr));gap:12px}.art-preset{display:flex!important;flex-direction:column;align-items:center;gap:10px}.art-preset img{height:126px;width:100%;object-fit:contain}.art-preset[aria-pressed=true]{outline:2px solid #638778}.art-style-group h4{margin:18px 0 10px}.art-style-guide{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;padding:12px;background:#edf2e9}.art-style-controls{margin:18px 0}.art-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.art-compare-grid img{max-height:350px;max-width:100%;object-fit:contain;background:repeating-conic-gradient(#d3d9d1 0 25%,#fff 0 50%) 0/16px 16px}.art-history-grid,.art-derived-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin:18px 0}.art-history-grid>section,.art-derived-grid>label{padding:12px;border:1px solid #92a99a;border-radius:10px;display:flex;flex-direction:column;gap:8px}.art-history-grid img,.art-derived-grid img{height:140px;max-width:100%;object-fit:contain;background:repeating-conic-gradient(#d3d9d1 0 25%,#fff 0 50%) 0/16px 16px}.playtest-checklist>label{display:flex;gap:12px;align-items:start;margin:15px 0}.playtest-checklist input[type=checkbox]{margin-top:4px;flex-shrink:0}.pending-card-banner{margin-bottom:20px}.art-status{font-weight:700}.guided-art-studio>.dialog-actions{position:sticky;bottom:-24px;background:#fbfcf7;padding:16px 0;border-top:1px solid #bccdbc}.discard-card-confirm{border-color:#ac7057}@media(max-width:650px){.art-compare-grid{grid-template-columns:1fr}.art-preset-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.art-preset img{height:100px}.art-category-tabs button{font-size:.8rem;padding:7px}.art-library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* 2026-11-17-2239||codex-clan-editor||clan-creator/src\web\creator\style.css||Diseñar cuatro pasos biblioteca visual comparación derivados y estados de prueba con adaptación móvil */
+
+.example-copy-info {
+  margin-block: 1rem;
+  border-top: 1px solid currentColor;
+  padding-top: .75rem;
+}
+.example-copy-info h3 { margin-top: 0; }
+.example-copy-info ol { padding-inline-start: 1.3rem; }
+.example-copy-info li { margin-bottom: .65rem; }
+.example-copy-info li div { white-space: pre-line; }
+/* 2026-11-19-0752||codex-clan-editor||clan-creator/src/web/creator/style.css||Dar espacio a la información de copia y mantener los efectos por línea */
+
+.new-card-types button .type-hint { display:block; margin-top:.35rem; font-weight:normal; white-space:normal; }
+.combat-example { margin-block:.65rem; }
+.combat-example th,.combat-example td { text-align:start; padding:.25rem .6rem; }
+/* 2026-11-19-0847||codex-clan-editor||clan-creator/src/web/creator/style.css||Separar ayudas de tipo y valores del ejemplo de combate */
+/* 2026-11-19-2140||codex-clan-editor||clan-creator/src/web/creator/style.css||Mantener la rueda dentro de la lista y resaltar al pasar el ratón sin mover el scroll */
+
+.first-clan-dialog {width:min(540px,94vw)}
+.first-clan-dialog .official-clan-start {margin-top:1rem}
+/* 2026-11-21-1006||codex-clan-editor||clan-creator/src/web/creator/style.css||Dar espacio al selector de clan oficial en el dialogo inicial */
+/* 2026-11-21-1011||codex-clan-editor||clan-creator/src/web/creator/style.css||Retirar estilos asociados a los controles eliminados de la portada */
+/* 2026-11-21-1020||codex-clan-editor||clan-creator/src/web/creator/style.css||Retirar estilos de la revision personal eliminada */
+/* 2026-11-21-1029||codex-clan-editor||clan-creator/src/web/creator/style.css||Hacer la galeria adaptable y resaltar el estilo seleccionado sin ocupar toda la pantalla */
+
+.hero>div:first-child>button+button{margin-inline-start:.5rem}
+.open-clan-list{list-style:none;padding:0;margin:0;display:grid;gap:.7rem}
+.open-clan-list li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem;padding:.5rem 0;border-bottom:1px solid var(--line)}
+.open-clan-list li div{display:flex;flex-wrap:wrap;gap:.4rem}
+@media(max-width:700px){.hero>div:first-child>button+button{margin-inline-start:0;margin-block-start:.5rem}}
+/* 2026-11-21-1114||codex-clan-editor||clan-creator/src/web/creator/style.css||Dar espacio a las acciones de portada y a la lista de clanes guardados */
+
+.first-clan-dialog .official-clan-start{padding:.85rem 1rem}
+.official-clan-start summary{cursor:pointer;color:var(--teal)}
+.official-clan-start summary h2{display:inline;margin:0;font-size:1.15rem}
+.first-clan-dialog .dialog-actions{position:static}
+/* 2026-11-21-1118||codex-clan-editor||clan-creator/src/web/creator/style.css||Mantener visibles las opciones y evitar que Cancelar tape su contenido */
+
+.top{height:auto;min-height:88px;flex-wrap:wrap;padding-block:12px;row-gap:8px}
+.top-brand{display:flex;align-items:center;gap:16px}
+.top-brand .brand{white-space:nowrap}
+.app-update{position:relative;display:grid;justify-items:start;line-height:1.25}
+.app-version{color:var(--muted);font-size:.75rem;white-space:nowrap;padding-inline:6px}
+.app-update>button{font-size:.75rem;padding:5px 6px;white-space:nowrap}
+.app-update-result:not(:empty){position:absolute;z-index:8;top:100%;left:0;width:min(235px,44vw);padding:10px 12px;background:var(--paper);border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 10px #0002;font-size:.8rem}
+.app-update-result p{margin:0}
+.app-update-result a{display:inline-block;margin-top:6px}
+@media(max-width:700px){.top-brand{gap:8px}.top-right{max-width:100%}}
+/* 2026-11-21-1223||codex-clan-editor||clan-creator/src/web/creator/style.css||Alinear marca y versión y mantener espacio en pantallas estrechas */
+
+.clan-asset-sections{display:grid;gap:16px}
+.clan-asset-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:12px}
+.clan-asset{display:grid;justify-items:start;align-content:start;gap:8px;padding:12px;border:1px solid var(--line);border-radius:8px}
+.clan-asset img,.empty-clan-asset{width:100%;height:105px;object-fit:contain}
+.empty-clan-asset{display:grid;place-items:center;color:var(--muted);font-size:.85em}
+.clan-initials{display:grid;place-items:center;width:80px;height:80px;background:#174f52;color:#ffe4ad;border-radius:15px;font:bold 30px Georgia,serif}
+.stone-list{display:flex;gap:6px;flex-wrap:wrap;padding:0;list-style:none}
+.stone-list [aria-pressed="true"]{background:var(--paper);border-color:var(--teal)}
+.game-card.relic .card-image{object-fit:contain}
+/* 2026-11-21-1333||codex-clan-editor||clan-creator/src/web/creator/style.css||Dar una vista legible a iconos, marcos, estandartes y lista de piedras */
+/* 2026-11-21-1930||codex-clan-editor||clan-creator/src/web/creator/style.css||Diseñar la ayuda de página completa y mantener enlaces discretos junto a los campos */
+.field-with-guide{min-width:0;position:relative}
+.field-with-guide>.field{margin-bottom:0}
+.field-with-guide>.guide-field-link{margin:2px 0 12px;min-height:24px}
+.effect-basics>.field-with-guide:has(.search-select){grid-column:1/-1}
+.guide-field-link,.guide-global-link{color:var(--teal);font-weight:700;text-underline-offset:3px}
+.guide-field-link{display:inline-flex;align-items:center;font-size:.83rem}
+.guide-global-link{padding:.4rem;font-size:.85rem;white-space:nowrap}
+.guide-dialog{position:fixed;inset:0;margin:0;width:100%;height:100%;max-width:none;max-height:none;padding:0;border:0;color:var(--ink);background:#f7f7f1}
+.guide-dialog::backdrop{background:#173c3d70}
+.guide-page{min-height:100%;color:var(--ink);background:#f7f7f1}
+.guide-top{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--paper);border-bottom:1px solid #b5c7bd;padding:14px max(22px,calc((100% - 1180px)/2))}
+.guide-top strong{white-space:nowrap}
+.guide-top strong span{font-weight:500;color:var(--muted)}
+.guide-top a{color:var(--teal)}
+.guide-content{max-width:1180px;margin:auto;padding:26px 22px 48px}
+.guide-topics{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.guide-topics a{padding:7px 12px;border:1px solid #a6bbb0;border-radius:7px;background:var(--paper);color:var(--teal);text-decoration:none}
+.guide-topics a[aria-current=page]{background:var(--teal);color:white;border-color:var(--teal)}
+.guide-page h1{margin:0;font-size:clamp(1.75rem,4vw,2.65rem);line-height:1.16}
+.guide-intro{max-width:68ch;color:#3d5554;margin:8px 0 20px}
+.guide-filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:12px;border:1px solid #afc1b7;border-radius:12px;padding:16px;background:var(--paper)}
+.guide-filters .field{margin:0}
+.guide-filters .field select{width:100%;min-width:0}
+.guide-search{grid-column:1/-1}
+.guide-results-bar{display:flex;flex-wrap:wrap;align-items:center;gap:6px 17px;margin:15px 0}
+.guide-results-bar p{margin:0;color:#4d625e}
+.guide-results-bar label{display:flex;align-items:center;gap:6px}
+.guide-results{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:12px}
+.guide-entry{padding:15px 17px;border:1px solid #afc1b7;border-radius:10px;background:var(--paper)}
+.guide-entry.guide-current{border:2px solid var(--teal);padding:14px 16px}
+.guide-entry-title{display:flex;align-items:start;justify-content:space-between;gap:10px}
+.guide-entry-title h2{margin:0;font:700 1.04rem/1.35 Inter,"Segoe UI",system-ui,sans-serif}
+.guide-entry-title span,.guide-entry-tags li{background:var(--mint);color:var(--ink);border-radius:4px;padding:2px 7px;font-size:.76rem}
+.guide-entry p{margin:8px 0 0;line-height:1.45;color:#3a504d}
+.guide-entry-tags{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 0;padding:0;list-style:none}
+.guide-note,.guide-empty{background:#edf3e9;border-radius:8px;padding:12px 16px;color:#3d5554}
+.guide-empty p{margin-top:0}
+@media(max-width:650px){
+ .guide-top{gap:8px;padding:10px 12px}
+ .guide-top strong span{display:none}
+ .guide-top button{padding:7px 9px}
+ .guide-content{padding:16px 12px 30px}
+ .guide-topics{margin-bottom:18px}
+ .guide-topics a{padding:5px 8px;font-size:.88rem}
+ .guide-filters{padding:12px}
+}
+/* 2026-11-21-1931||codex-clan-editor||clan-creator/src/web/creator/style.css||Aplicar el diseño de página completa y adaptar la guía a pantallas estrechas */
+/* 2026-11-21-2127||codex-clan-editor||clan-creator/src/web/creator/style.css||Impedir que una vista previa alta cubra el botón de copiar del catálogo */

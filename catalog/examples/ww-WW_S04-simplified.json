@@ -1,0 +1,93 @@
+{
+  "id": "ww-WW_S04-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S04/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S04"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Prácticas de Medicina Ofensiva",
+    "english": "Offensive Medicine Practicum",
+    "french": "Stage de médecine offensive",
+    "german": "Praktikum in offensiver Medizin",
+    "portuguese": "Estágio de Medicina Ofensiva",
+    "russian": "Практикум наступательной медицины",
+    "chinese": "攻击医学实习",
+    "chinese_traditional": "攻擊醫學實習",
+    "korean": "공격 의학 실습",
+    "japanese": "攻撃医学実習"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/5f0684bd8b38836e3bc40aad80a31617ea33ddda9abb1a8eee4f02a490928729.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S04CardArt.png": "assets/5f0684bd8b38836e3bc40aad80a31617ea33ddda9abb1a8eee4f02a490928729.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S04",
+        "names": {
+          "spanish": "Prácticas de Medicina Ofensiva",
+          "english": "Offensive Medicine Practicum",
+          "french": "Stage de médecine offensive",
+          "german": "Praktikum in offensiver Medizin",
+          "portuguese": "Estágio de Medicina Ofensiva",
+          "russian": "Практикум наступательной медицины",
+          "chinese": "攻击医学实习",
+          "chinese_traditional": "攻擊醫學實習",
+          "korean": "공격 의학 실습",
+          "japanese": "攻撃医学実習"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_S04CardArt",
+        "targetless": true,
+        "hide_in_logbook": true,
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S04CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S04CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S04CardArt",
+        "path": "textures/cards/WW_S04CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S04.json": "e142c4264a4660862ff969a3e7419151c1446f9f16e4bc1bd70dc005bbe77ec8"
+  }
+}

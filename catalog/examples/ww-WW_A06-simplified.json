@@ -1,0 +1,89 @@
+{
+  "id": "ww-WW_A06-simplified",
+  "simplified": {
+    "removed": [
+      "relics/WW_A06/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "relics",
+    "id": "WW_A06"
+  },
+  "kind": "artifact",
+  "names": {
+    "spanish": "Extensión de Convocatoria",
+    "english": "Extended Exam Session",
+    "french": "Session d'examens prolongée",
+    "german": "Verlängerte Prüfungsrunde",
+    "portuguese": "Exame Prolongado",
+    "russian": "Продлённая экзаменационная сессия",
+    "chinese": "延长考试场次",
+    "chinese_traditional": "延長考試場次",
+    "korean": "연장 시험 기간",
+    "japanese": "延長試験期間"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/9245dc2c8c2af2b66b5016c6a4a6be4ce55519e780eb9f788c92b98a6d3fcfe6.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/relics/WW_A06IconSmall.png": "assets/f527f46c46b36b775b3dfb9d41d60b1d3a11e4ad2a80a3132635a1e26eeef36e.png",
+    "textures/relics/WW_A06Icon.png": "assets/9245dc2c8c2af2b66b5016c6a4a6be4ce55519e780eb9f788c92b98a6d3fcfe6.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "WW_A06",
+        "type": "collectable",
+        "names": {
+          "spanish": "Extensión de Convocatoria",
+          "english": "Extended Exam Session",
+          "french": "Session d'examens prolongée",
+          "german": "Verlängerte Prüfungsrunde",
+          "portuguese": "Exame Prolongado",
+          "russian": "Продлённая экзаменационная сессия",
+          "chinese": "延长考试场次",
+          "chinese_traditional": "延長考試場次",
+          "korean": "연장 시험 기간",
+          "japanese": "延長試験期間"
+        },
+        "icon": "@WW_A06Icon",
+        "icon_small": "@WW_A06IconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "uncommon"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_A06IconSmall",
+        "path": "textures/relics/WW_A06IconSmall.png"
+      },
+      {
+        "id": "WW_A06Icon",
+        "path": "textures/relics/WW_A06Icon.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/relics/WW_A06.json": "f12b890cd7a1e3af59bf1c4ce5c054e20a0ee7bf1588a745542b1a62da9575de"
+  }
+}

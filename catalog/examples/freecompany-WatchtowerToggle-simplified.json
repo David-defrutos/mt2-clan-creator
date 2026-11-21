@@ -1,0 +1,92 @@
+{
+  "id": "freecompany-WatchtowerToggle-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WatchtowerToggle/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "WatchtowerToggle"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Change Firing Orders",
+    "spanish": "Cambiar orden de tiro",
+    "french": "Changer les ordres de tir",
+    "german": "Feuerbefehl wechseln",
+    "russian": "Сменить приказ огня",
+    "portuguese": "Mudar ordem de tiro",
+    "chinese": "切换射击指令",
+    "chinese_traditional": "切換射擊指令",
+    "korean": "사격 명령 변경",
+    "japanese": "射撃命令変更"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/e0e6af19fd89ce351d51bc53a9fa761d41fc18cd187918a72bc331e7a3e9b5f0.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/WatchtowerArt.png": "assets/e0e6af19fd89ce351d51bc53a9fa761d41fc18cd187918a72bc331e7a3e9b5f0.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WatchtowerToggle",
+        "names": {
+          "english": "Change Firing Orders",
+          "spanish": "Cambiar orden de tiro",
+          "french": "Changer les ordres de tir",
+          "german": "Feuerbefehl wechseln",
+          "russian": "Сменить приказ огня",
+          "portuguese": "Mudar ordem de tiro",
+          "chinese": "切换射击指令",
+          "chinese_traditional": "切換射擊指令",
+          "korean": "사격 명령 변경",
+          "japanese": "射撃命令変更"
+        },
+        "card_art": "@Watchtower",
+        "card_type": "spell",
+        "is_room_ability": true,
+        "cooldown": 1,
+        "initial_cooldown": 0,
+        "targetless": true,
+        "targets_room": false
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Watchtower",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Watchtower"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Watchtower",
+        "path": "textures/WatchtowerArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/rooms/room_watchtower.json": "f41d2e05d9ce720febf3a00d9b35def29309a08eff5e7d6c37bfa9a773a658e8"
+  }
+}

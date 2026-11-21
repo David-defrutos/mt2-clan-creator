@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T18:19:50.525Z",
+  "generatedAt": "2026-11-21T11:47:31.206Z",
   "method": "Typed transitive reference closure + verified game/Trainworks/Conductor DLL types and Conductor JSON resources + hash-bound code review + functional patch exclusion + complete bundled art",
   "libraries": {
     "Conductor": {
@@ -593,7 +593,489 @@
         "Cierre por sección y proveedor real; no es una prueba en partida.",
         "Se excluyen clases propias y parches funcionales; sonidos y animaciones revisados no bloquean reglas nativas.",
         "Spare y otros eventos externos solo se admiten si su registro existe en la biblioteca incluida."
-      ]
+      ],
+      "hiddenExamples": [
+        "freecompany-GrimoireMagicMissile1",
+        "freecompany-GrimoireMagicMissile2",
+        "freecompany-GrimoireMagicMissile3",
+        "freecompany-NotchedAxe",
+        "freecompany-TwinAxes",
+        "freecompany-ReaversMaul",
+        "freecompany-Bandages",
+        "freecompany-HolySymbol",
+        "freecompany-Reliquary",
+        "freecompany-Shortbow",
+        "freecompany-Longbow",
+        "freecompany-GreatBow",
+        "freecompany-Lockpicks",
+        "freecompany-PoisonedDagger",
+        "freecompany-ThiefsMantle",
+        "freecompany-Buckler",
+        "freecompany-KiteShield",
+        "freecompany-BulwarkPlate",
+        "freecompany-ChalkCircle",
+        "freecompany-Grimoire",
+        "freecompany-ArchmagesStaff",
+        "freecompany-Caltrops",
+        "freecompany-PaymastersTent",
+        "freecompany-ThePit"
+      ],
+      "simplified": [
+        {
+          "id": "freecompany-FieldDressing-simplified",
+          "original": "FieldDressing",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectRemoveRandomDebuff"
+          ],
+          "removed": [
+            "cards/FieldDressing/effects"
+          ]
+        },
+        {
+          "id": "freecompany-SpawnRoderic-simplified",
+          "original": "SpawnRoderic",
+          "reasons": [
+            "Corrección visual propia necesaria: src/code/ChampionSpriteVisuals.cs -> RodericCharacterArt",
+            "Dependencia funcional o no resuelta en C#: src/code/RodericQuartermaster.cs -> cards/SpawnRoderic",
+            "Dependencia funcional o no resuelta en C#: src/code/ShieldwallInterception.cs -> cards/SpawnRoderic"
+          ],
+          "removed": [
+            "game_objects/RodericCharacterArt/animation"
+          ]
+        },
+        {
+          "id": "freecompany-SpawnVesper-simplified",
+          "original": "SpawnVesper",
+          "reasons": [
+            "Corrección visual propia necesaria: src/code/ChampionSpriteVisuals.cs -> VesperCharacterArt",
+            "Dependencia funcional o no resuelta en C#: src/code/BeastmasterTraining.cs -> cards/SpawnVesper"
+          ],
+          "removed": [
+            "game_objects/VesperCharacterArt/animation"
+          ]
+        },
+        {
+          "id": "freecompany-WidowsPension-simplified",
+          "original": "WidowsPension",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectWidowsPension",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWidowsPension.cs -> cards/WidowsPension",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWidowsPension.cs -> game_objects/WidowsPension",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWidowsPension.cs -> sprites/WidowsPension"
+          ],
+          "removed": [
+            "upgrades/UpgWidowsPension/trigger_upgrades"
+          ]
+        },
+        {
+          "id": "freecompany-FieldForge-simplified",
+          "original": "FieldForge",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectFieldForgeCost"
+          ],
+          "removed": [
+            "relics/FieldForge/relic_effects"
+          ]
+        },
+        {
+          "id": "freecompany-MarchingOrders-simplified",
+          "original": "MarchingOrders",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectFirstUnitDiscountEachTurn"
+          ],
+          "removed": [
+            "relics/MarchingOrders/relic_effects"
+          ]
+        },
+        {
+          "id": "freecompany-ScoutsMap-simplified",
+          "original": "ScoutsMap",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectWatchtowerToggle",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWatchtowerToggle.cs -> upgrades/WatchtowerRoomOffUpgrade",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWatchtowerToggle.cs -> upgrades/WatchtowerRoomUpgrade"
+          ],
+          "removed": [
+            "relics/ScoutsMap/relic_effects"
+          ]
+        },
+        {
+          "id": "freecompany-VeteransPapers-simplified",
+          "original": "VeteransPapers",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectUnitDiscountPerUpgrade"
+          ],
+          "removed": [
+            "relics/VeteransPapers/relic_effects"
+          ]
+        },
+        {
+          "id": "freecompany-Watchtower-simplified",
+          "original": "Watchtower",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectWatchtowerToggle",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWatchtowerToggle.cs -> upgrades/WatchtowerRoomOffUpgrade",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWatchtowerToggle.cs -> upgrades/WatchtowerRoomUpgrade"
+          ],
+          "removed": [
+            "upgrades/WatchtowerRoomUpgrade/room_ability_upgrade"
+          ]
+        },
+        {
+          "id": "freecompany-WatchtowerToggle-simplified",
+          "original": "WatchtowerToggle",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectWatchtowerToggle",
+            "Dependencia funcional o no resuelta en C#: src/code/CardEffectWatchtowerToggle.cs -> upgrades/WatchtowerRoomOffUpgrade"
+          ],
+          "removed": [
+            "cards/WatchtowerToggle/effects"
+          ]
+        },
+        {
+          "id": "freecompany-Banishment-simplified",
+          "original": "Banishment",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectCountdownTick",
+            "Clase propia o no verificada: CardEffectPlantCountdown",
+            "Clase propia o no verificada: StatusEffectFreeCompanyCountdownState"
+          ],
+          "removed": [
+            "cards/Banishment/effects"
+          ]
+        },
+        {
+          "id": "freecompany-DelayedBlastFireball-simplified",
+          "original": "DelayedBlastFireball",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectCountdownTick",
+            "Clase propia o no verificada: CardEffectPlantCountdown",
+            "Clase propia o no verificada: StatusEffectFreeCompanyCountdownState"
+          ],
+          "removed": [
+            "cards/DelayedBlastFireball/effects"
+          ]
+        },
+        {
+          "id": "freecompany-DoubleShift-simplified",
+          "original": "DoubleShift",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFreeCompanyDizzyState"
+          ],
+          "removed": [
+            "cards/DoubleShift/effects"
+          ]
+        },
+        {
+          "id": "freecompany-SeverancePay-simplified",
+          "original": "SeverancePay",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectRingPyreDamage"
+          ],
+          "removed": [
+            "cards/SeverancePay/effects"
+          ]
+        },
+        {
+          "id": "freecompany-SpawnBountyHunter-simplified",
+          "original": "SpawnBountyHunter",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectRefreshAbilityOnKill"
+          ],
+          "removed": [
+            "characters/BountyHunter/triggers"
+          ]
+        },
+        {
+          "id": "freecompany-SpawnFieldMedic-simplified",
+          "original": "SpawnFieldMedic",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectCleanseRandomDebuffed"
+          ],
+          "removed": [
+            "characters/FieldMedic/triggers"
+          ]
+        },
+        {
+          "id": "freecompany-SpawnHedgeMage-simplified",
+          "original": "SpawnHedgeMage",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFreeCompanyCountdownState"
+          ],
+          "removed": [
+            "characters/HedgeMage/triggers",
+            "characters/HedgeMage/ability"
+          ]
+        },
+        {
+          "id": "freecompany-TameBogTroll-simplified",
+          "original": "TameBogTroll",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectConsumeFromHand",
+            "Clase propia o no verificada: CardEffectGrantOnce"
+          ],
+          "removed": [
+            "cards/TameBogTroll/effects"
+          ]
+        },
+        {
+          "id": "freecompany-TameStoneTroll-simplified",
+          "original": "TameStoneTroll",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectConsumeFromHand",
+            "Clase propia o no verificada: CardEffectGrantOnce"
+          ],
+          "removed": [
+            "cards/TameStoneTroll/effects"
+          ]
+        },
+        {
+          "id": "freecompany-TameWarTroll-simplified",
+          "original": "TameWarTroll",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectConsumeFromHand",
+            "Clase propia o no verificada: CardEffectGrantOnce"
+          ],
+          "removed": [
+            "cards/TameWarTroll/effects"
+          ]
+        },
+        {
+          "id": "freecompany-TameCautiousTroll-simplified",
+          "original": "TameCautiousTroll",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectConsumeFromHand",
+            "Clase propia o no verificada: CardEffectGrantOnce"
+          ],
+          "removed": [
+            "cards/TameCautiousTroll/effects"
+          ]
+        },
+        {
+          "id": "freecompany-TameTwoHeadedTroll-simplified",
+          "original": "TameTwoHeadedTroll",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectConsumeFromHand",
+            "Clase propia o no verificada: CardEffectGrantOnce"
+          ],
+          "removed": [
+            "cards/TameTwoHeadedTroll/effects"
+          ]
+        }
+      ],
+      "champions": [
+        {
+          "name": "Roderic",
+          "card": "freecompany-SpawnRoderic-simplified",
+          "paths": [
+            "freecompany-SpawnRoderic-clan-path-1-simplified",
+            "freecompany-SpawnRoderic-clan-path-2-simplified",
+            "freecompany-SpawnRoderic-clan-path-3-simplified"
+          ],
+          "starterName": "Severance Pay",
+          "starter": "freecompany-SeverancePay-simplified"
+        },
+        {
+          "name": "Vesper",
+          "card": "freecompany-SpawnVesper-simplified",
+          "paths": [
+            "freecompany-SpawnVesper-clan-path-1-simplified",
+            "freecompany-SpawnVesper-clan-path-2-simplified",
+            "freecompany-SpawnVesper-clan-path-3-simplified"
+          ],
+          "starterName": "Field Dressing",
+          "starter": "freecompany-FieldDressing-simplified"
+        }
+      ],
+      "paths": [
+        {
+          "champion": "Roderic",
+          "path": "Shield Wall",
+          "reasons": [],
+          "templateId": "freecompany-SpawnRoderic-clan-path-1-simplified"
+        },
+        {
+          "champion": "Roderic",
+          "path": "Quartermaster",
+          "reasons": [],
+          "templateId": "freecompany-SpawnRoderic-clan-path-2-simplified"
+        },
+        {
+          "champion": "Roderic",
+          "path": "Plunder",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectRodericReinforcements"
+          ],
+          "templateId": "freecompany-SpawnRoderic-clan-path-3-simplified"
+        },
+        {
+          "champion": "Vesper",
+          "path": "Grimoire",
+          "reasons": [],
+          "templateId": "freecompany-SpawnVesper-clan-path-1-simplified"
+        },
+        {
+          "champion": "Vesper",
+          "path": "Chirurgeon",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectCleanseRandomDebuffed"
+          ],
+          "templateId": "freecompany-SpawnVesper-clan-path-2-simplified"
+        },
+        {
+          "champion": "Vesper",
+          "path": "Beastmaster",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectBeastmasterCommand",
+            "Clase propia o no verificada: CardEffectBeastmasterRecall",
+            "Clase propia o no verificada: CardEffectConsumeFromHand",
+            "Clase propia o no verificada: CardEffectGrantOnce",
+            "Clase propia o no verificada: CardEffectOfferRandomFromPool"
+          ],
+          "templateId": "freecompany-SpawnVesper-clan-path-3-simplified"
+        }
+      ],
+      "artwork": [
+        {
+          "id": "clan-logo",
+          "source": "icon.png",
+          "included": true
+        },
+        {
+          "id": "clan-silhouette",
+          "source": "textures/FreeCompanySilhouette.png",
+          "included": true
+        },
+        {
+          "id": "draft-icon",
+          "source": "textures/FreeCompanyCardDraftIcon.png",
+          "included": true
+        },
+        {
+          "id": "banner-enabled_sprite",
+          "source": "textures/FreeCompanyBanner.png",
+          "included": true
+        },
+        {
+          "id": "banner-disabled_sprite",
+          "source": "textures/FreeCompanyBannerDisabled.png",
+          "included": true
+        },
+        {
+          "id": "banner-frozen_sprite",
+          "source": "textures/FreeCompanyBannerFrozen.png",
+          "included": true
+        },
+        {
+          "id": "banner-visited_sprite_disabled",
+          "source": "textures/FreeCompanyBannerVisited.png",
+          "included": true
+        },
+        {
+          "id": "map-icon",
+          "source": "textures/FreeCompanyIconSmall.png",
+          "included": true
+        },
+        {
+          "id": "minimap-icon",
+          "source": "textures/FreeCompanyIconSmall.png",
+          "included": true
+        },
+        {
+          "id": "frame-unit",
+          "source": "textures/BorderUnit.png",
+          "included": true
+        },
+        {
+          "id": "frame-spell",
+          "source": "textures/BorderSpell.png",
+          "included": true
+        },
+        {
+          "id": "frame-room",
+          "source": "textures/BorderEquipmentRoom.png",
+          "included": true
+        },
+        {
+          "id": "frame-equipment",
+          "source": "textures/BorderEquipmentRoom.png",
+          "included": true
+        },
+        {
+          "id": "champion1-icon",
+          "source": "textures/RodericIcon.png",
+          "included": true
+        },
+        {
+          "id": "champion1-locked_icon",
+          "source": "textures/RodericLockedIcon.png",
+          "included": true
+        },
+        {
+          "id": "champion1-portrait",
+          "source": "textures/RodericPortrait.png",
+          "included": true
+        },
+        {
+          "id": "champion1-display",
+          "source": "textures/RodericCharacterArt.png",
+          "included": true
+        },
+        {
+          "id": "champion2-icon",
+          "source": "textures/VesperIcon.png",
+          "included": true
+        },
+        {
+          "id": "champion2-locked_icon",
+          "source": "textures/VesperLockedIcon.png",
+          "included": true
+        },
+        {
+          "id": "champion2-portrait",
+          "source": "textures/VesperPortrait.png",
+          "included": true
+        },
+        {
+          "id": "champion2-display",
+          "source": "textures/VesperCharacterArt.png",
+          "included": true
+        },
+        {
+          "id": "clan-small",
+          "source": "textures/FreeCompanyIconSmall.png",
+          "included": true
+        },
+        {
+          "id": "clan-medium",
+          "source": "textures/FreeCompanyIconRegular.png",
+          "included": true
+        },
+        {
+          "id": "clan-large",
+          "source": "textures/FreeCompanyIconLarge.png",
+          "included": true
+        }
+      ],
+      "bannerUnits": [
+        "freecompany-SpawnBattleChaplain",
+        "freecompany-SpawnBerserker",
+        "freecompany-SpawnCutpurse",
+        "freecompany-SpawnFieldMedic-simplified",
+        "freecompany-SpawnHedgeMage-simplified",
+        "freecompany-SpawnIronboundChampion",
+        "freecompany-SpawnLongbowman",
+        "freecompany-SpawnMasterOfCoin",
+        "freecompany-SpawnShieldbearer"
+      ],
+      "excludedBannerUnits": [],
+      "cardTypes": {
+        "spell": 31,
+        "equipment": 1,
+        "artifact": 11,
+        "unit": 22,
+        "room": 3
+      }
     },
     {
       "codeSources": [
@@ -643,7 +1125,7 @@
         },
         {
           "file": "src/code/NonBossTargeting.cs",
-          "sha256": "3537fd6abca2f7abc671ed645e8f9b6bb764aa12cd9b071c6d7136d3a798e245"
+          "sha256": "29c49ba25da663d7fb52bd99eea281543e366f06e7a16b286c6577df4d96b1e5"
         },
         {
           "file": "src/code/PowerSiphonEffects.cs",
@@ -691,7 +1173,7 @@
       ],
       "source": "succclan",
       "version": "0.2.1",
-      "commit": "ec5ddc4913641af0f0e0d554dc4b222ab512d0b3",
+      "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
       "totalCards": 48,
       "totalRelics": 13,
       "notCandidates": [
@@ -922,7 +1404,469 @@
         "Cierre por sección y proveedor real; no es una prueba en partida.",
         "Se excluyen clases propias y parches funcionales; sonidos y animaciones revisados no bloquean reglas nativas.",
         "Spare y otros eventos externos solo se admiten si su registro existe en la biblioteca incluida."
-      ]
+      ],
+      "hiddenExamples": [],
+      "simplified": [
+        {
+          "id": "succclan-SpawnKnightMare-simplified",
+          "original": "SpawnKnightMare",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectKnightmareHarvest",
+            "Clase propia o no verificada: StatusEffectMarkerState"
+          ],
+          "removed": [
+            "characters/KnightMare/triggers"
+          ]
+        },
+        {
+          "id": "succclan-AbyssCrown-simplified",
+          "original": "AbyssCrown",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectMarkerState"
+          ],
+          "removed": [
+            "relics/AbyssCrown/relic_effects"
+          ]
+        },
+        {
+          "id": "succclan-FlareRibbon-simplified",
+          "original": "FlareRibbon",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectArmorOnPyreAttacked"
+          ],
+          "removed": [
+            "relics/FlareRibbon/relic_effects"
+          ]
+        },
+        {
+          "id": "succclan-MutantElixirs-simplified",
+          "original": "MutantElixirs",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectMarkerState"
+          ],
+          "removed": [
+            "relics/MutantElixirs/relic_effects"
+          ]
+        },
+        {
+          "id": "succclan-NetherBlossom-simplified",
+          "original": "NetherBlossom",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectRageOnFrantic"
+          ],
+          "removed": [
+            "relics/NetherBlossom/relic_effects"
+          ]
+        },
+        {
+          "id": "succclan-ObsessingAromatherapy-simplified",
+          "original": "ObsessingAromatherapy",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ],
+          "removed": [
+            "relics/ObsessingAromatherapy/relic_effects"
+          ]
+        },
+        {
+          "id": "succclan-ObsessionVault-simplified",
+          "original": "ObsessionVault",
+          "reasons": [
+            "Clase propia o no verificada: RoomStateSuccClanTurnStartEffects"
+          ],
+          "removed": [
+            "upgrades/ObsessionVaultUpgrade/room_modifier_upgrades"
+          ]
+        },
+        {
+          "id": "succclan-SpectralRefuge-simplified",
+          "original": "SpectralRefuge",
+          "reasons": [
+            "Clase propia o no verificada: RoomStateSuccClanTurnStartEffects"
+          ],
+          "removed": [
+            "upgrades/SpectralRefugeUpgrade/room_modifier_upgrades"
+          ]
+        },
+        {
+          "id": "succclan-CubusSpike-simplified",
+          "original": "CubusSpike",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ],
+          "removed": [
+            "cards/CubusSpike/traits",
+            "cards/CubusSpike/effects"
+          ]
+        },
+        {
+          "id": "succclan-DangerousGame-simplified",
+          "original": "DangerousGame",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ],
+          "removed": [
+            "cards/DangerousGame/effects"
+          ]
+        },
+        {
+          "id": "succclan-DepressionWhisper-simplified",
+          "original": "DepressionWhisper",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectMultiplyNegativeStatusEffects"
+          ],
+          "removed": [
+            "cards/DepressionWhisper/effects"
+          ]
+        },
+        {
+          "id": "succclan-DreadShot-simplified",
+          "original": "DreadShot",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ],
+          "removed": [
+            "cards/DreadShot/triggers"
+          ]
+        },
+        {
+          "id": "succclan-IllusionTwins-simplified",
+          "original": "IllusionTwins",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectCopyWithStatuses"
+          ],
+          "removed": [
+            "cards/IllusionTwins/effects"
+          ]
+        },
+        {
+          "id": "succclan-Inception-simplified",
+          "original": "Inception",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectMarkerState"
+          ],
+          "removed": [
+            "cards/Inception/effects"
+          ]
+        },
+        {
+          "id": "succclan-InsanityReach-simplified",
+          "original": "InsanityReach",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ],
+          "removed": [
+            "cards/InsanityReach/effects"
+          ]
+        },
+        {
+          "id": "succclan-MindBurning-simplified",
+          "original": "MindBurning",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ],
+          "removed": [
+            "cards/MindBurning/effects"
+          ]
+        },
+        {
+          "id": "succclan-MindDomination-simplified",
+          "original": "MindDomination",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ],
+          "removed": [
+            "cards/MindDomination/effects"
+          ]
+        },
+        {
+          "id": "succclan-PowerSiphon-simplified",
+          "original": "PowerSiphon",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectDiscardAllBlights",
+            "Clase propia o no verificada: CardTraitBlightHandDamage"
+          ],
+          "removed": [
+            "cards/PowerSiphon/traits",
+            "cards/PowerSiphon/effects"
+          ]
+        },
+        {
+          "id": "succclan-ProfaneAscending-simplified",
+          "original": "ProfaneAscending",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ],
+          "removed": [
+            "cards/ProfaneAscending/effects"
+          ]
+        },
+        {
+          "id": "succclan-VitalityExtraction-simplified",
+          "original": "VitalityExtraction",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState",
+            "Clase propia o no verificada: StatusEffectMarkerState"
+          ],
+          "removed": [
+            "cards/VitalityExtraction/effects"
+          ]
+        },
+        {
+          "id": "succclan-SpawnAbyssPrincess-simplified",
+          "original": "SpawnAbyssPrincess",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ],
+          "removed": [
+            "character_triggers/AbyssPrincessOnAttack/effects"
+          ]
+        },
+        {
+          "id": "succclan-SpawnChaosCreation-simplified",
+          "original": "SpawnChaosCreation",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ],
+          "removed": [
+            "characters/ChaosCreation/triggers"
+          ]
+        },
+        {
+          "id": "succclan-SpawnEndlessShadow-simplified",
+          "original": "SpawnEndlessShadow",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectEndlessShadowRebirth"
+          ],
+          "removed": [
+            "characters/EndlessShadow/triggers"
+          ]
+        },
+        {
+          "id": "succclan-SpawnLustGhost-simplified",
+          "original": "SpawnLustGhost",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ],
+          "removed": [
+            "characters/LustGhost/triggers"
+          ]
+        }
+      ],
+      "champions": [
+        {
+          "name": "Knightmare",
+          "card": "succclan-SpawnKnightMare-simplified",
+          "paths": [
+            "succclan-SpawnKnightMare-clan-path-1-simplified",
+            "succclan-SpawnKnightMare-clan-path-2-simplified",
+            "succclan-SpawnKnightMare-clan-path-3-simplified"
+          ],
+          "starterName": "Inception",
+          "starter": "succclan-Inception-simplified"
+        },
+        {
+          "name": "Shadow Lady",
+          "card": "succclan-SpawnShadowLady",
+          "paths": [
+            "succclan-SpawnShadowLady-clan-path-1",
+            "succclan-SpawnShadowLady-clan-path-2",
+            "succclan-SpawnShadowLady-clan-path-3-simplified"
+          ],
+          "starterName": "Flogging",
+          "starter": "succclan-Flogging"
+        }
+      ],
+      "paths": [
+        {
+          "champion": "Knightmare",
+          "path": "Abyss",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectMarkerState"
+          ],
+          "templateId": "succclan-SpawnKnightMare-clan-path-1-simplified"
+        },
+        {
+          "champion": "Knightmare",
+          "path": "Endless",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectKnightmareRebirth"
+          ],
+          "templateId": "succclan-SpawnKnightMare-clan-path-2-simplified"
+        },
+        {
+          "champion": "Knightmare",
+          "path": "Illusion",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectMarkerState"
+          ],
+          "templateId": "succclan-SpawnKnightMare-clan-path-3-simplified"
+        },
+        {
+          "champion": "Shadow Lady",
+          "path": "Blood Thirsty",
+          "reasons": [],
+          "templateId": "succclan-SpawnShadowLady-clan-path-1"
+        },
+        {
+          "champion": "Shadow Lady",
+          "path": "Plague",
+          "reasons": [],
+          "templateId": "succclan-SpawnShadowLady-clan-path-2"
+        },
+        {
+          "champion": "Shadow Lady",
+          "path": "Profanity",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectFranticState"
+          ],
+          "templateId": "succclan-SpawnShadowLady-clan-path-3-simplified"
+        }
+      ],
+      "artwork": [
+        {
+          "id": "clan-logo",
+          "source": "icon.png",
+          "included": true
+        },
+        {
+          "id": "clan-silhouette",
+          "source": "textures/ClanAssets/ClanLogo_Silhouette.png",
+          "included": true
+        },
+        {
+          "id": "draft-icon",
+          "source": "textures/ClanAssets/ClanCardDraftIcon.png",
+          "included": true
+        },
+        {
+          "id": "banner-enabled_sprite",
+          "source": "textures/ClanAssets/Succubus_Enabled.png",
+          "included": true
+        },
+        {
+          "id": "banner-disabled_sprite",
+          "source": "textures/ClanAssets/Succubus_Disabled.png",
+          "included": true
+        },
+        {
+          "id": "banner-frozen_sprite",
+          "source": "textures/ClanAssets/Succubus_Frozen.png",
+          "included": true
+        },
+        {
+          "id": "banner-visited_sprite_disabled",
+          "source": "textures/ClanAssets/Succubus_VisitedDisabled.png",
+          "included": true
+        },
+        {
+          "id": "map-icon",
+          "source": "textures/ClanAssets/ClanLogo_48.png",
+          "included": true
+        },
+        {
+          "id": "minimap-icon",
+          "source": "textures/ClanAssets/ClanLogo_48.png",
+          "included": true
+        },
+        {
+          "id": "frame-unit",
+          "source": "textures/ClanAssets/ClanBorderUnit.png",
+          "included": true
+        },
+        {
+          "id": "frame-spell",
+          "source": "textures/ClanAssets/ClanBorderSpell.png",
+          "included": true
+        },
+        {
+          "id": "frame-room",
+          "source": "textures/ClanAssets/ClanBorderRoom.png",
+          "included": true
+        },
+        {
+          "id": "frame-equipment",
+          "source": "textures/ClanAssets/ClanBorderEquipment.png",
+          "included": true
+        },
+        {
+          "id": "champion1-icon",
+          "source": "textures/ClanAssets/icon_KnightMare.png",
+          "included": true
+        },
+        {
+          "id": "champion1-locked_icon",
+          "source": null,
+          "included": false,
+          "reason": "No se encontró un PNG enlazado y legible."
+        },
+        {
+          "id": "champion1-portrait",
+          "source": "textures/ClanAssets/portrait_KnightMare.png",
+          "included": true
+        },
+        {
+          "id": "champion1-display",
+          "source": "textures/KnightMareCharacterArt.png",
+          "included": true
+        },
+        {
+          "id": "champion2-icon",
+          "source": "textures/ClanAssets/icon_ShadowLady.png",
+          "included": true
+        },
+        {
+          "id": "champion2-locked_icon",
+          "source": null,
+          "included": false,
+          "reason": "No se encontró un PNG enlazado y legible."
+        },
+        {
+          "id": "champion2-portrait",
+          "source": "textures/ClanAssets/portrait_ShadowLady.png",
+          "included": true
+        },
+        {
+          "id": "champion2-display",
+          "source": "textures/ShadowLadyCharacterArt.png",
+          "included": true
+        },
+        {
+          "id": "clan-small",
+          "source": "textures/ClanAssets/ClanLogo_48.png",
+          "included": true
+        },
+        {
+          "id": "clan-medium",
+          "source": "textures/ClanAssets/ClanLogo_92_Outline.png",
+          "included": true
+        },
+        {
+          "id": "clan-large",
+          "source": "textures/ClanAssets/ClanLogo_128.png",
+          "included": true
+        }
+      ],
+      "bannerUnits": [
+        "succclan-SpawnAbyssPrincess-simplified",
+        "succclan-SpawnChaosCreation-simplified",
+        "succclan-SpawnDemonPioneer",
+        "succclan-SpawnEndlessShadow-simplified",
+        "succclan-SpawnIncubusButcher",
+        "succclan-SpawnOolioddroo",
+        "succclan-SpawnShadowWarrior",
+        "succclan-SpawnSuccbusTorturer",
+        "succclan-SpawnVrolikai"
+      ],
+      "excludedBannerUnits": [],
+      "cardTypes": {
+        "equipment": 2,
+        "artifact": 13,
+        "room": 2,
+        "spell": 20,
+        "blight": 1,
+        "unit": 16
+      }
     },
     {
       "codeSources": [
@@ -936,7 +1880,7 @@
         },
         {
           "file": "src/AcademicRelics.cs",
-          "sha256": "7f4845e0c270b45d0aa6e8068fece4118c79dc2bf82614de1a641f5b0da7faaf"
+          "sha256": "ccae51a4831fea65f9a8e2171fc65f85faddd7dc82d7ca003630358c8bca610d"
         },
         {
           "file": "src/AcademicRuntime.cs",
@@ -952,7 +1896,7 @@
         },
         {
           "file": "src/ArcaneSlayConductor.cs",
-          "sha256": "4d8e03536f0734be559dccf42b6ba5342b76ad2cd15deb5c377a24c84538cf6a"
+          "sha256": "939b3e9b4c046772fe7734b3d80564583e6a5bbe52941762c38ef713ca1fdaf0"
         },
         {
           "file": "src/ArcaneSlayEffects.cs",
@@ -1056,7 +2000,7 @@
         },
         {
           "file": "src/FrozenEnrollmentScholarship.cs",
-          "sha256": "8f504f77c24283eb3ecb656160bc79f1f8307d65fba375f728aeacb60a4af56f"
+          "sha256": "23f7cc28eeeb52b6bbbb22fbcbb3683e12a1b15c21b64d4e0286d7632dc30f05"
         },
         {
           "file": "src/FrozenTuition.cs",
@@ -1112,7 +2056,7 @@
         },
         {
           "file": "src/OverdamageEvent.cs",
-          "sha256": "930fb2055ee112adc3a6cb289750c31936fafc2943e3f612b47a441f3de7ee2d"
+          "sha256": "a0ff70a369477de46c33a5836cada1b5ffa89cd2bb46711246581c19fcf52e15"
         },
         {
           "file": "src/OverhealEffects.cs",
@@ -1132,7 +2076,7 @@
         },
         {
           "file": "src/Plugin.cs",
-          "sha256": "e8d63310d63a42ad5039b66bf7102acdf4ad0c78defd071c1295fec619c9e3e4"
+          "sha256": "e5d427c5d3cd379513bb6a12bf35374d239fddaba2c31b40103cbb1be2cee7f4"
         },
         {
           "file": "src/PreviewDependencies.cs",
@@ -1168,7 +2112,7 @@
         },
         {
           "file": "src/RelicEffectOffensiveMedicine.cs",
-          "sha256": "16bce17e531c5799e5b025e1c5f24665776270a35300b6886310857e330b8bc9"
+          "sha256": "6ddc475e2a63b590cb3b5c20f665d20750e0d739a923734fcca9656a29ef81ef"
         },
         {
           "file": "src/RelicEffectQuietStudy.cs",
@@ -1208,11 +2152,15 @@
         },
         {
           "file": "src/SocialRules.cs",
-          "sha256": "1fddeb78342c0615e47d037b5a523d3ef48d3b5760f00b2ffa579d2f7d7ce18a"
+          "sha256": "88e2abe209f1b19f86297ab8607e76d5188e305bb697bd0e6f1498b7f2158057"
         },
         {
           "file": "src/SpatialCreditNotification.cs",
           "sha256": "261e75b95ba1d4e2358215ac1a68a67567906a738a410e7ddfd47af2ad136c07"
+        },
+        {
+          "file": "src/SpellOverdamage.cs",
+          "sha256": "663b309eeff4daf86893b91d27bd47a161c47e6f7586df062aca4604e1cbf412"
         },
         {
           "file": "src/SpellReplay.cs",
@@ -1220,7 +2168,7 @@
         },
         {
           "file": "src/SpellRules.cs",
-          "sha256": "1afaf6cff76988bd26c5a96ee33ff27b8a829f66ec786ebd125336c70d8501a7"
+          "sha256": "17944a44fb8256f5aaf94477dba3d5a5c90cedbae161bdab0d0c8f9e494a44f7"
         },
         {
           "file": "src/SpellTrample.cs",
@@ -1337,7 +2285,6 @@
       "scanned": 72,
       "accepted": [
         "ww-WW_E02",
-        "ww-WW_S12",
         "ww-WW_S13",
         "ww-WW_S14",
         "ww-WW_S20",
@@ -1349,9 +2296,9 @@
         "ww-WW_T01",
         "ww-WW_T02",
         "ww-WW_G02",
-        "ww-WW_G03",
         "ww-WW_G04",
-        "ww-WW_G05"
+        "ww-WW_G05",
+        "ww-WW_A10"
       ],
       "excluded": [
         {
@@ -1503,6 +2450,17 @@
           "name": "Credit Recovery",
           "reasons": [
             "Clase propia o no verificada: CardEffectAcademicInteractiveRule"
+          ]
+        },
+        {
+          "id": "WW_S12",
+          "name": "Triple Impact Exam",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectOverdamageDamage",
+            "Clase propia o no verificada: CardEffectOverdamageHeal",
+            "Clase propia o no verificada: CardTraitOverdamage",
+            "Evento no verificado: @WW_Overdamage",
+            "Requiere bundle o evento propio: WW_Overdamage"
           ]
         },
         {
@@ -1698,7 +2656,9 @@
           "name": "Professor of Frozen Tuition",
           "reasons": [
             "Clase propia o no verificada: StatusEffectAcademicInsurance",
-            "Registro de estado propio en Plugin.cs: characters/WW_U18_Character"
+            "Evento no verificado: @WW_Overheal",
+            "Registro de estado propio en Plugin.cs: characters/WW_U18_Character",
+            "Requiere bundle o evento propio: WW_Overheal"
           ]
         },
         {
@@ -1706,6 +2666,14 @@
           "name": "Training Wand",
           "reasons": [
             "Clase propia o no verificada: CardEffectAcademicTrainingWand"
+          ]
+        },
+        {
+          "id": "WW_G03",
+          "name": "Protective Charm",
+          "reasons": [
+            "Evento no verificado: @WW_Overheal",
+            "Requiere bundle o evento propio: WW_Overheal"
           ]
         },
         {
@@ -1778,21 +2746,858 @@
             "Clase propia o no verificada: RelicEffectComplaintsOffice",
             "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A09"
           ]
-        },
-        {
-          "id": "WW_A10",
-          "name": "Offensive Medicine Practicum",
-          "reasons": [
-            "Clase propia o no verificada: RelicEffectOffensiveMedicine",
-            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A10"
-          ]
         }
       ],
       "notes": [
         "Cierre por sección y proveedor real; no es una prueba en partida.",
         "Se excluyen clases propias y parches funcionales; sonidos y animaciones revisados no bloquean reglas nativas.",
         "Spare y otros eventos externos solo se admiten si su registro existe en la biblioteca incluida."
-      ]
+      ],
+      "hiddenExamples": [
+        "ww-WW_E02",
+        "ww-WW_S03-simplified",
+        "ww-WW_S04-simplified",
+        "ww-WW_S05-simplified",
+        "ww-WW_S06-simplified",
+        "ww-WW_S08-simplified",
+        "ww-WW_S10-simplified",
+        "ww-WW_S11-simplified",
+        "ww-WW_S24-simplified",
+        "ww-WW_S27-simplified",
+        "ww-WW_S32-simplified"
+      ],
+      "simplified": [
+        {
+          "id": "ww-WW_Token_ExtraCredit-simplified",
+          "original": "WW_Token_ExtraCredit",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicAuthoredDamage",
+            "Dependencia funcional o no resuelta en C#: src/ExcessCredit.cs -> cards/WW_Token_ExtraCredit"
+          ],
+          "removed": [
+            "cards/WW_Token_ExtraCredit/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_C01-simplified",
+          "original": "WW_C01",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicWizardDraw",
+            "Clase propia o no verificada: CardTraitAcademicNextUseUpgrade",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Dependencia funcional o no resuelta en C#: src/SocialRules.cs -> cards/WW_C01"
+          ],
+          "removed": [
+            "characters/WW_C01_Character/ability",
+            "characters/WW_C01_Character/starting_status_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_C02-simplified",
+          "original": "WW_C02",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectMineMineMineClaim",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Dependencia funcional o no resuelta en C#: src/SocialRules.cs -> cards/WW_C02",
+            "Evento no verificado: @WW_MineMineMine",
+            "Requiere bundle o evento propio: WW_MineMineMine"
+          ],
+          "removed": [
+            "characters/WW_C02_Character/triggers",
+            "characters/WW_C02_Character/starting_status_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_E01-simplified",
+          "original": "WW_E01",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicPurgePermit",
+            "Dependencia funcional o no resuelta en C#: src/IntegrationEffects.cs -> cards/WW_E01"
+          ],
+          "removed": [
+            "upgrades/WW_E01_Upgrade/ability_upgrade"
+          ]
+        },
+        {
+          "id": "ww-WW_E03-simplified",
+          "original": "WW_E03",
+          "reasons": [
+            "Evento no verificado: @WW_ArcaneSlay",
+            "Requiere bundle o evento propio: WW_ArcaneSlay"
+          ],
+          "removed": [
+            "upgrades/WW_E03_Upgrade/trigger_upgrades"
+          ]
+        },
+        {
+          "id": "ww-WW_R01-simplified",
+          "original": "WW_R01",
+          "reasons": [
+            "Clase propia o no verificada: RoomStateAcademicPlatonic"
+          ],
+          "removed": [
+            "upgrades/WW_R01_Upgrade/room_modifier_upgrades"
+          ]
+        },
+        {
+          "id": "ww-WW_R02-simplified",
+          "original": "WW_R02",
+          "reasons": [
+            "Clase propia o no verificada: CardTraitAcademicPairPower",
+            "Clase propia o no verificada: RoomStateAcademicPower"
+          ],
+          "removed": [
+            "upgrades/WW_R02_Upgrade/room_modifier_upgrades"
+          ]
+        },
+        {
+          "id": "ww-WW_S01-simplified",
+          "original": "WW_S01",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicInterdepartmentalMemo"
+          ],
+          "removed": [
+            "cards/WW_S01/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S02-simplified",
+          "original": "WW_S02",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicDissertation"
+          ],
+          "removed": [
+            "cards/WW_S02/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S03-simplified",
+          "original": "WW_S03",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicTransfer"
+          ],
+          "removed": [
+            "cards/WW_S03/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S04-simplified",
+          "original": "WW_S04",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicSpellRule"
+          ],
+          "removed": [
+            "cards/WW_S04/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S05-simplified",
+          "original": "WW_S05",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicInteractiveRule"
+          ],
+          "removed": [
+            "cards/WW_S05/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S06-simplified",
+          "original": "WW_S06",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicInteractiveRule"
+          ],
+          "removed": [
+            "cards/WW_S06/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S07-simplified",
+          "original": "WW_S07",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicConduitTransfer"
+          ],
+          "removed": [
+            "cards/WW_S07/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S08-simplified",
+          "original": "WW_S08",
+          "reasons": [
+            "Clase propia o no verificada: CardTraitAcademicConsumedDamage"
+          ],
+          "removed": [
+            "cards/WW_S08/traits"
+          ]
+        },
+        {
+          "id": "ww-WW_S09-simplified",
+          "original": "WW_S09",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicScholarship"
+          ],
+          "removed": [
+            "cards/WW_S09/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S10-simplified",
+          "original": "WW_S10",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicSpellRule"
+          ],
+          "removed": [
+            "cards/WW_S10/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S11-simplified",
+          "original": "WW_S11",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicInteractiveRule"
+          ],
+          "removed": [
+            "cards/WW_S11/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S12-simplified",
+          "original": "WW_S12",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectOverdamageDamage",
+            "Clase propia o no verificada: CardEffectOverdamageHeal",
+            "Clase propia o no verificada: CardTraitOverdamage",
+            "Evento no verificado: @WW_Overdamage",
+            "Requiere bundle o evento propio: WW_Overdamage"
+          ],
+          "removed": [
+            "cards/WW_S12/effects",
+            "cards/WW_S12/traits"
+          ]
+        },
+        {
+          "id": "ww-WW_S15-simplified",
+          "original": "WW_S15",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicTransfer"
+          ],
+          "removed": [
+            "cards/WW_S15/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S16-simplified",
+          "original": "WW_S16",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicHealthExchange"
+          ],
+          "removed": [
+            "cards/WW_S16/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S17-simplified",
+          "original": "WW_S17",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicSabbatical"
+          ],
+          "removed": [
+            "cards/WW_S17/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S18-simplified",
+          "original": "WW_S18",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicDeskSwap"
+          ],
+          "removed": [
+            "cards/WW_S18/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S19-simplified",
+          "original": "WW_S19",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicDiscardForEmber"
+          ],
+          "removed": [
+            "cards/WW_S19/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S21-simplified",
+          "original": "WW_S21",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicArmorHonors"
+          ],
+          "removed": [
+            "cards/WW_S21/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S24-simplified",
+          "original": "WW_S24",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicEquipmentReturn"
+          ],
+          "removed": [
+            "cards/WW_S24/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S25-simplified",
+          "original": "WW_S25",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicOneTurnUpgrade",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance"
+          ],
+          "removed": [
+            "cards/WW_S25/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S27-simplified",
+          "original": "WW_S27",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicCatering",
+            "Dependencia funcional o no resuelta en C#: src/CateringRules.cs -> characters/WW_Token_IceCreamStand",
+            "Registro de estado propio en Plugin.cs: characters/WW_Token_IceCreamStand"
+          ],
+          "removed": [
+            "cards/WW_S27/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S28-simplified",
+          "original": "WW_S28",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicReturnFrozen"
+          ],
+          "removed": [
+            "cards/WW_S28/triggers"
+          ]
+        },
+        {
+          "id": "ww-WW_S30-simplified",
+          "original": "WW_S30",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicTome"
+          ],
+          "removed": [
+            "cards/WW_S30/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_S32-simplified",
+          "original": "WW_S32",
+          "reasons": [
+            "Dependencia funcional o no resuelta en C#: src/SpellRules.cs -> cards/WW_S32"
+          ],
+          "removed": []
+        },
+        {
+          "id": "ww-WW_U01-simplified",
+          "original": "WW_U01",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Dependencia funcional o no resuelta en C#: src/CombatHooks.cs -> cards/WW_U01",
+            "Dependencia funcional o no resuelta en C#: src/IntegrationEffects.cs -> cards/WW_U01"
+          ],
+          "removed": [
+            "characters/WW_U01_Character/starting_status_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_U02-simplified",
+          "original": "WW_U02",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Registro de estado propio en Plugin.cs: characters/WW_U02_Character"
+          ],
+          "removed": [
+            "characters/WW_U02_Character/starting_status_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_U03-simplified",
+          "original": "WW_U03",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectOverhealDamage",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Evento no verificado: @WW_Overheal",
+            "Requiere bundle o evento propio: WW_Overheal"
+          ],
+          "removed": [
+            "characters/WW_U03_Character/triggers",
+            "characters/WW_U03_Character/starting_status_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_U04-simplified",
+          "original": "WW_U04",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicTrainingWand",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Registro de estado propio en Plugin.cs: characters/WW_U04_Character"
+          ],
+          "removed": [
+            "characters/WW_U04_Character/grafted_equipment",
+            "characters/WW_U04_Character/starting_status_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_U05-simplified",
+          "original": "WW_U05",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Evento no verificado: @WW_ArcaneSlay",
+            "Requiere bundle o evento propio: WW_ArcaneSlay"
+          ],
+          "removed": [
+            "characters/WW_U05_Character/starting_status_effects",
+            "characters/WW_U05_Character/triggers"
+          ]
+        },
+        {
+          "id": "ww-WW_U06-simplified",
+          "original": "WW_U06",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicCollectiveAssessment",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance"
+          ],
+          "removed": [
+            "characters/WW_U06_Character/ability",
+            "characters/WW_U06_Character/starting_status_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_U08-simplified",
+          "original": "WW_U08",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicCopyLastCommon",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance"
+          ],
+          "removed": [
+            "characters/WW_U08_Character/starting_status_effects",
+            "characters/WW_U08_Character/triggers"
+          ]
+        },
+        {
+          "id": "ww-WW_U10-simplified",
+          "original": "WW_U10",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicConsumeCredits",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance"
+          ],
+          "removed": [
+            "characters/WW_U10_Character/ability",
+            "characters/WW_U10_Character/starting_status_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_U11-simplified",
+          "original": "WW_U11",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance"
+          ],
+          "removed": [
+            "characters/WW_U11_Character/starting_status_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_U13-simplified",
+          "original": "WW_U13",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectOverhealStatus",
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Evento no verificado: @WW_Overheal",
+            "Requiere bundle o evento propio: WW_Overheal"
+          ],
+          "removed": [
+            "characters/WW_U13_Character/triggers",
+            "characters/WW_U13_Character/starting_status_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_U16-simplified",
+          "original": "WW_U16",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance"
+          ],
+          "removed": [
+            "characters/WW_U16_Character/starting_status_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_U17-simplified",
+          "original": "WW_U17",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Registro de estado propio en Plugin.cs: characters/WW_U17_Character"
+          ],
+          "removed": [
+            "characters/WW_U17_Character/starting_status_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_U18-simplified",
+          "original": "WW_U18",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance",
+            "Evento no verificado: @WW_Overheal",
+            "Registro de estado propio en Plugin.cs: characters/WW_U18_Character",
+            "Requiere bundle o evento propio: WW_Overheal"
+          ],
+          "removed": [
+            "characters/WW_U18_Character/grafted_equipment",
+            "characters/WW_U18_Character/starting_status_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_G01-simplified",
+          "original": "WW_G01",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicTrainingWand"
+          ],
+          "removed": [
+            "cards/WW_G01/effects"
+          ]
+        },
+        {
+          "id": "ww-WW_G03-simplified",
+          "original": "WW_G03",
+          "reasons": [
+            "Evento no verificado: @WW_Overheal",
+            "Requiere bundle o evento propio: WW_Overheal"
+          ],
+          "removed": [
+            "upgrades/WW_G03_Upgrade/trigger_upgrades"
+          ]
+        },
+        {
+          "id": "ww-WW_A01-simplified",
+          "original": "WW_A01",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectStrengthChair",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A01"
+          ],
+          "removed": [
+            "relics/WW_A01/relic_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_A02-simplified",
+          "original": "WW_A02",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectConsumeCopy",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A02"
+          ],
+          "removed": [
+            "relics/WW_A02/relic_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_A03-simplified",
+          "original": "WW_A03",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectAcademicFrozenDraw"
+          ],
+          "removed": [
+            "relics/WW_A03/relic_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_A04-simplified",
+          "original": "WW_A04",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectQuietStudy",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A04"
+          ],
+          "removed": [
+            "relics/WW_A04/relic_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_A05-simplified",
+          "original": "WW_A05",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectLethalRefund",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A05"
+          ],
+          "removed": [
+            "relics/WW_A05/relic_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_A06-simplified",
+          "original": "WW_A06",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectExtendedExam",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A06"
+          ],
+          "removed": [
+            "relics/WW_A06/relic_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_A07-simplified",
+          "original": "WW_A07",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectRelationsCommittee",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A07"
+          ],
+          "removed": [
+            "relics/WW_A07/relic_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_A08-simplified",
+          "original": "WW_A08",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectAdministrativeSilence",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A08"
+          ],
+          "removed": [
+            "relics/WW_A08/relic_effects"
+          ]
+        },
+        {
+          "id": "ww-WW_A09-simplified",
+          "original": "WW_A09",
+          "reasons": [
+            "Clase propia o no verificada: RelicEffectComplaintsOffice",
+            "Dependencia funcional o no resuelta en C#: src/AcademicRelics.cs -> relics/WW_A09"
+          ],
+          "removed": [
+            "relics/WW_A09/relic_effects"
+          ]
+        }
+      ],
+      "champions": [
+        {
+          "name": "Dean of the Hat Department",
+          "card": "ww-WW_C01-simplified",
+          "paths": [
+            "ww-WW_C01-clan-path-1-simplified",
+            "ww-WW_C01-clan-path-2-simplified",
+            "ww-WW_C01-clan-path-3-simplified"
+          ],
+          "starterName": "Wizard Affairs Chaperon",
+          "starter": "ww-WW_T01"
+        },
+        {
+          "name": "Professor of Advanced Witchcraft",
+          "card": "ww-WW_C02-simplified",
+          "paths": [
+            "ww-WW_C02-clan-path-1-simplified",
+            "ww-WW_C02-clan-path-2-simplified",
+            "ww-WW_C02-clan-path-3-simplified"
+          ],
+          "starterName": "Witch Affairs Chaperone",
+          "starter": "ww-WW_T02"
+        }
+      ],
+      "paths": [
+        {
+          "champion": "Dean of the Hat Department",
+          "path": "Frat Bro I",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance"
+          ],
+          "templateId": "ww-WW_C01-clan-path-1-simplified"
+        },
+        {
+          "champion": "Dean of the Hat Department",
+          "path": "Department of Practical Magic I",
+          "reasons": [
+            "Evento no verificado: @WW_ArcaneSlay",
+            "Requiere bundle o evento propio: WW_ArcaneSlay"
+          ],
+          "templateId": "ww-WW_C01-clan-path-2-simplified"
+        },
+        {
+          "champion": "Dean of the Hat Department",
+          "path": "Department of Spell Tuning I",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicUpgradeSlayingSpell",
+            "Evento no verificado: @WW_ArcaneSlay",
+            "Requiere bundle o evento propio: WW_ArcaneSlay"
+          ],
+          "templateId": "ww-WW_C01-clan-path-3-simplified"
+        },
+        {
+          "champion": "Professor of Advanced Witchcraft",
+          "path": "Queen Bee I",
+          "reasons": [
+            "Clase propia o no verificada: StatusEffectAcademicInsurance"
+          ],
+          "templateId": "ww-WW_C02-clan-path-1-simplified"
+        },
+        {
+          "champion": "Professor of Advanced Witchcraft",
+          "path": "Advanced Spellwork I",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectAcademicAuthoredDamage",
+            "Clase propia o no verificada: CardEffectOverdamageExtraCredit",
+            "Dependencia funcional o no resuelta en C#: src/ExcessCredit.cs -> cards/WW_Token_ExtraCredit",
+            "Evento no verificado: @WW_Overdamage",
+            "Requiere bundle o evento propio: WW_Overdamage"
+          ],
+          "templateId": "ww-WW_C02-clan-path-2-simplified"
+        },
+        {
+          "champion": "Professor of Advanced Witchcraft",
+          "path": "Protective Tenure I",
+          "reasons": [
+            "Clase propia o no verificada: CardEffectOverhealDamage",
+            "Evento no verificado: @WW_Overheal",
+            "Requiere bundle o evento propio: WW_Overheal"
+          ],
+          "templateId": "ww-WW_C02-clan-path-3-simplified"
+        }
+      ],
+      "artwork": [
+        {
+          "id": "clan-logo",
+          "source": "content/icon.png",
+          "included": true
+        },
+        {
+          "id": "clan-silhouette",
+          "source": "textures/ui/WW_ClanSilhouette.png",
+          "included": true
+        },
+        {
+          "id": "draft-icon",
+          "source": "textures/ui/WW_CardDraftIcon.png",
+          "included": true
+        },
+        {
+          "id": "banner-enabled_sprite",
+          "source": "textures/ui/WW_BannerEnabled.png",
+          "included": true
+        },
+        {
+          "id": "banner-disabled_sprite",
+          "source": "textures/ui/WW_BannerDisabled.png",
+          "included": true
+        },
+        {
+          "id": "banner-frozen_sprite",
+          "source": "textures/ui/WW_BannerFrozen.png",
+          "included": true
+        },
+        {
+          "id": "banner-visited_sprite_disabled",
+          "source": "textures/ui/WW_BannerVisited.png",
+          "included": true
+        },
+        {
+          "id": "map-icon",
+          "source": "textures/ui/WW_ClanIconSmall.png",
+          "included": true
+        },
+        {
+          "id": "minimap-icon",
+          "source": "textures/ui/WW_ClanIconSmall.png",
+          "included": true
+        },
+        {
+          "id": "frame-unit",
+          "source": "textures/ui/WW_BorderUnit.png",
+          "included": true
+        },
+        {
+          "id": "frame-spell",
+          "source": "textures/ui/WW_BorderSpell.png",
+          "included": true
+        },
+        {
+          "id": "frame-room",
+          "source": "textures/ui/WW_BorderRoom.png",
+          "included": true
+        },
+        {
+          "id": "frame-equipment",
+          "source": "textures/ui/WW_BorderEquipment.png",
+          "included": true
+        },
+        {
+          "id": "champion1-icon",
+          "source": "textures/ui/WW_C01Bust.png",
+          "included": true
+        },
+        {
+          "id": "champion1-locked_icon",
+          "source": "textures/ui/WW_C01LockedIcon.png",
+          "included": true
+        },
+        {
+          "id": "champion1-portrait",
+          "source": "textures/ui/WW_C01Portrait.png",
+          "included": true
+        },
+        {
+          "id": "champion1-display",
+          "source": "textures/ui/WW_C01Display.png",
+          "included": true
+        },
+        {
+          "id": "champion2-icon",
+          "source": "textures/ui/WW_C02Bust.png",
+          "included": true
+        },
+        {
+          "id": "champion2-locked_icon",
+          "source": "textures/ui/WW_C02LockedIcon.png",
+          "included": true
+        },
+        {
+          "id": "champion2-portrait",
+          "source": "textures/ui/WW_C02Portrait.png",
+          "included": true
+        },
+        {
+          "id": "champion2-display",
+          "source": "textures/ui/WW_C02Display.png",
+          "included": true
+        },
+        {
+          "id": "clan-small",
+          "source": "textures/ui/WW_ClanIconSmall.png",
+          "included": true
+        },
+        {
+          "id": "clan-medium",
+          "source": "textures/ui/WW_ClanIconMedium.png",
+          "included": true
+        },
+        {
+          "id": "clan-large",
+          "source": "textures/ui/WW_ClanIconLarge.png",
+          "included": true
+        }
+      ],
+      "bannerUnits": [
+        "ww-WW_U01-simplified",
+        "ww-WW_U03-simplified",
+        "ww-WW_U04-simplified",
+        "ww-WW_U05-simplified",
+        "ww-WW_U10-simplified",
+        "ww-WW_U13-simplified",
+        "ww-WW_U16-simplified",
+        "ww-WW_U17-simplified",
+        "ww-WW_U18-simplified"
+      ],
+      "excludedBannerUnits": [],
+      "cardTypes": {
+        "spell": 23,
+        "equipment": 7,
+        "room": 2,
+        "unit": 13,
+        "artifact": 10
+      }
     }
   ]
 }

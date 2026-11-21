@@ -22,16 +22,16 @@
     "japanese": "補給倉庫"
   },
   "descriptions": {
-    "english": "Equipment cards cost <b>0</b> on this floor.",
-    "french": "Les cartes d’équipement coûtent <b>0</b> à cet étage.",
-    "german": "Ausrüstungskarten kosten auf diesem Stockwerk <b>0</b>.",
-    "russian": "Карты снаряжения стоят <b>0</b> на этом этаже.",
-    "portuguese": "Cartas de equipamento custam <b>0</b> neste andar.",
-    "chinese": "本层装备牌费用为<b>0</b>。",
-    "spanish": "Las cartas de equipo cuestan <b>0</b> en este piso.",
-    "chinese_traditional": "本層裝備牌費用為<b>0</b>。",
-    "korean": "이 층에서 장비 카드의 비용은 <b>0</b>.",
-    "japanese": "この階では装備カードのコストが<b>0</b>。"
+    "english": "Equipment cards cost <b>0</b> [ember].",
+    "french": "Les cartes d’équipement coûtent <b>0</b> [ember].",
+    "german": "Ausrüstungskarten kosten <b>0</b> [ember].",
+    "russian": "Карты снаряжения стоят <b>0</b> [ember].",
+    "portuguese": "Cartas de equipamento custam <b>0</b> [ember].",
+    "chinese": "装备牌费用为<b>0</b>[ember]。",
+    "spanish": "Las cartas de equipo cuestan <b>0</b> [ember].",
+    "chinese_traditional": "裝備牌費用為<b>0</b>[ember]。",
+    "korean": "장비 카드의 비용은 <b>0</b> [ember].",
+    "japanese": "装備カードのコストが<b>0</b>[ember]。"
   },
   "cost": 2,
   "costType": "normal",
@@ -65,16 +65,16 @@
           "japanese": "補給倉庫"
         },
         "descriptions": {
-          "english": "Equipment cards cost <b>0</b> on this floor.",
-          "french": "Les cartes d’équipement coûtent <b>0</b> à cet étage.",
-          "german": "Ausrüstungskarten kosten auf diesem Stockwerk <b>0</b>.",
-          "russian": "Карты снаряжения стоят <b>0</b> на этом этаже.",
-          "portuguese": "Cartas de equipamento custam <b>0</b> neste andar.",
-          "chinese": "本层装备牌费用为<b>0</b>。",
-          "spanish": "Las cartas de equipo cuestan <b>0</b> en este piso.",
-          "chinese_traditional": "本層裝備牌費用為<b>0</b>。",
-          "korean": "이 층에서 장비 카드의 비용은 <b>0</b>.",
-          "japanese": "この階では装備カードのコストが<b>0</b>。"
+          "english": "Equipment cards cost <b>0</b> [ember].",
+          "french": "Les cartes d’équipement coûtent <b>0</b> [ember].",
+          "german": "Ausrüstungskarten kosten <b>0</b> [ember].",
+          "russian": "Карты снаряжения стоят <b>0</b> [ember].",
+          "portuguese": "Cartas de equipamento custam <b>0</b> [ember].",
+          "chinese": "装备牌费用为<b>0</b>[ember]。",
+          "spanish": "Las cartas de equipo cuestan <b>0</b> [ember].",
+          "chinese_traditional": "裝備牌費用為<b>0</b>[ember]。",
+          "korean": "장비 카드의 비용은 <b>0</b> [ember].",
+          "japanese": "装備カードのコストが<b>0</b>[ember]。"
         },
         "card_art": "@QuartermastersStore",
         "cost": 2,
@@ -114,16 +114,16 @@
           "japanese": "補給倉庫"
         },
         "descriptions": {
-          "english": "Equipment cards cost <b>0</b> on this floor.",
-          "french": "Les cartes d’équipement coûtent <b>0</b> à cet étage.",
-          "german": "Ausrüstungskarten kosten auf diesem Stockwerk <b>0</b>.",
-          "russian": "Карты снаряжения стоят <b>0</b> на этом этаже.",
-          "portuguese": "Cartas de equipamento custam <b>0</b> neste andar.",
-          "chinese": "本层装备牌费用为<b>0</b>。",
-          "spanish": "Las cartas de equipo cuestan <b>0</b> en este piso.",
-          "chinese_traditional": "本層裝備牌費用為<b>0</b>。",
-          "korean": "이 층에서 장비 카드의 비용은 <b>0</b>.",
-          "japanese": "この階では装備カードのコストが<b>0</b>。"
+          "english": "Equipment cards cost <b>0</b> [ember].",
+          "french": "Les cartes d’équipement coûtent <b>0</b> [ember].",
+          "german": "Ausrüstungskarten kosten <b>0</b> [ember].",
+          "russian": "Карты снаряжения стоят <b>0</b> [ember].",
+          "portuguese": "Cartas de equipamento custam <b>0</b> [ember].",
+          "chinese": "装备牌费用为<b>0</b>[ember]。",
+          "spanish": "Las cartas de equipo cuestan <b>0</b> [ember].",
+          "chinese_traditional": "裝備牌費用為<b>0</b>[ember]。",
+          "korean": "장비 카드의 비용은 <b>0</b> [ember].",
+          "japanese": "装備カードのコストが<b>0</b>[ember]。"
         },
         "room_modifier_upgrades": [
           "@QuartermastersStoreModifier"
@@ -155,16 +155,16 @@
           "japanese": "補給倉庫"
         },
         "in_play_descriptions": {
-          "english": "Equipment cards cost <b>0</b> on this floor.",
-          "french": "Les cartes d’équipement coûtent <b>0</b> à cet étage.",
-          "german": "Ausrüstungskarten kosten auf diesem Stockwerk <b>0</b>.",
-          "russian": "Карты снаряжения стоят <b>0</b> на этом этаже.",
-          "portuguese": "Cartas de equipamento custam <b>0</b> neste andar.",
-          "chinese": "本层装备牌费用为<b>0</b>。",
-          "spanish": "Las cartas de equipo cuestan <b>0</b> en este piso.",
-          "chinese_traditional": "本層裝備牌費用為<b>0</b>。",
-          "korean": "이 층에서 장비 카드의 비용은 <b>0</b>.",
-          "japanese": "この階では装備カードのコストが<b>0</b>。"
+          "english": "Equipment cards cost <b>0</b> [ember].",
+          "french": "Les cartes d’équipement coûtent <b>0</b> [ember].",
+          "german": "Ausrüstungskarten kosten <b>0</b> [ember].",
+          "russian": "Карты снаряжения стоят <b>0</b> [ember].",
+          "portuguese": "Cartas de equipamento custam <b>0</b> [ember].",
+          "chinese": "装备牌费用为<b>0</b>[ember]。",
+          "spanish": "Las cartas de equipo cuestan <b>0</b> [ember].",
+          "chinese_traditional": "裝備牌費用為<b>0</b>[ember]。",
+          "korean": "장비 카드의 비용은 <b>0</b> [ember].",
+          "japanese": "装備カードのコストが<b>0</b>[ember]。"
         },
         "param_int": -10
       }
@@ -182,6 +182,6 @@
     ]
   },
   "files": {
-    "json/rooms/room_quartermasters_store.json": "f712acd51501d00ccbb0e9748c9a804168e43565781937e90384fe0b638c5df0"
+    "json/rooms/room_quartermasters_store.json": "9003c5b0ad64d42d599566c2e00f8e5cffa8f96f6903309dccb10522f7606508"
   }
 }

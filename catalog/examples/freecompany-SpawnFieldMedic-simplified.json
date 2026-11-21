@@ -1,0 +1,186 @@
+{
+  "id": "freecompany-SpawnFieldMedic-simplified",
+  "simplified": {
+    "removed": [
+      "characters/FieldMedic/triggers"
+    ]
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "SpawnFieldMedic"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Field Medic",
+    "french": "Médecin de campagne",
+    "german": "Feldsanitäter",
+    "russian": "Полевой медик",
+    "portuguese": "Médica de Campo",
+    "chinese": "战地医护兵",
+    "spanish": "Médica de campaña",
+    "chinese_traditional": "戰地醫護兵",
+    "korean": "야전 의무병",
+    "japanese": "野戦衛生兵"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 18,
+  "attack": 3,
+  "size": 1,
+  "picture": "assets/47a800de59729987ea6fc6de7a928cd99df4efeec0ba9bf2c7cfe7c4969219a2.png",
+  "characterPicture": "assets/77099c09953a13d9c9e159f05b545a68e2d7cc350c3ffeef17f6292320826824.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/FieldMedicCharacterArt.png": "assets/77099c09953a13d9c9e159f05b545a68e2d7cc350c3ffeef17f6292320826824.png",
+    "textures/FieldMedicCardArt.png": "assets/47a800de59729987ea6fc6de7a928cd99df4efeec0ba9bf2c7cfe7c4969219a2.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnFieldMedic",
+        "names": {
+          "english": "Field Medic",
+          "french": "Médecin de campagne",
+          "german": "Feldsanitäter",
+          "russian": "Полевой медик",
+          "portuguese": "Médica de Campo",
+          "chinese": "战地医护兵",
+          "spanish": "Médica de campaña",
+          "chinese_traditional": "戰地醫護兵",
+          "korean": "야전 의무병",
+          "japanese": "野戦衛生兵"
+        },
+        "card_art": "@FieldMedic",
+        "cost": 1,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@SpawnFieldMedicEffect"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnFieldMedicEffect",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "param_character": "@FieldMedic"
+      }
+    ],
+    "characters": [
+      {
+        "id": "FieldMedic",
+        "names": {
+          "english": "Field Medic",
+          "french": "Médecin de campagne",
+          "german": "Feldsanitäter",
+          "russian": "Полевой медик",
+          "portuguese": "Médica de Campo",
+          "chinese": "战地医护兵",
+          "spanish": "Médica de campaña",
+          "chinese_traditional": "戰地醫護兵",
+          "korean": "야전 의무병",
+          "japanese": "野戦衛生兵"
+        },
+        "character_art": "@FieldMedicCharacterArt",
+        "size": 1,
+        "attack_damage": 3,
+        "health": 18,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Cleric",
+          "@Sub_Goblin"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Goblin",
+        "names": {
+          "english": "Goblin",
+          "french": "Gobelin",
+          "german": "Goblin",
+          "russian": "Гоблин",
+          "portuguese": "Goblin",
+          "chinese": "地精",
+          "spanish": "Goblin",
+          "chinese_traditional": "哥布林",
+          "korean": "고블린",
+          "japanese": "ゴブリン"
+        }
+      },
+      {
+        "id": "Sub_Cleric",
+        "names": {
+          "english": "Cleric",
+          "french": "Clerc",
+          "german": "Kleriker",
+          "russian": "Жрец",
+          "portuguese": "Clérigo",
+          "chinese": "牧师",
+          "spanish": "Clérigo",
+          "chinese_traditional": "牧師",
+          "korean": "성직자",
+          "japanese": "クレリック"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "FieldMedicCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@FieldMedicCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.517,
+                "z": 0
+              },
+              "scale": {
+                "x": 0.733,
+                "y": 0.733,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "FieldMedic",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@FieldMedic"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "FieldMedicCharacterArt",
+        "path": "textures/FieldMedicCharacterArt.png"
+      },
+      {
+        "id": "FieldMedic",
+        "path": "textures/FieldMedicCardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_fieldmedic.json": "8cffdcd91c0f90fa964d11f05bd09c2b2a4bd99a13f2c2616363384537643945",
+    "json/plugin.json": "b21faf76c89f89bf306153c4cee9bf6e1351430bff7fdf1e718417507b7e0323"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "id": "ww-WW_U01-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_U01_Character/starting_status_effects"
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_U01"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Becario Pararrayos",
+    "english": "Lightning Rod Intern",
+    "french": "Stagiaire paratonnerre",
+    "german": "Blitzableiterpraktikant",
+    "portuguese": "Estagiário Para-raios",
+    "russian": "Стажёр-громоотвод",
+    "chinese": "避雷针实习生",
+    "chinese_traditional": "避雷針實習生",
+    "korean": "피뢰침 인턴",
+    "japanese": "避雷針インターン"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": 40,
+  "attack": 0,
+  "size": 2,
+  "picture": "assets/f05b10fd1023eeb50090a733e3ffbaca348f2c2506b94082fc8f352325cf4336.png",
+  "characterPicture": "assets/5fb30fdfeb3d23bb984b352f3ce772dfa9f25d01d64585a2ee00102c020b240d.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/WW_U01CharacterArt.png": "assets/5fb30fdfeb3d23bb984b352f3ce772dfa9f25d01d64585a2ee00102c020b240d.png",
+    "textures/cards/WW_U01CardArt.png": "assets/f05b10fd1023eeb50090a733e3ffbaca348f2c2506b94082fc8f352325cf4336.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_U01",
+        "names": {
+          "spanish": "Becario Pararrayos",
+          "english": "Lightning Rod Intern",
+          "french": "Stagiaire paratonnerre",
+          "german": "Blitzableiterpraktikant",
+          "portuguese": "Estagiário Para-raios",
+          "russian": "Стажёр-громоотвод",
+          "chinese": "避雷针实习生",
+          "chinese_traditional": "避雷針實習生",
+          "korean": "피뢰침 인턴",
+          "japanese": "避雷針インターン"
+        },
+        "card_type": "monster",
+        "cost": 1,
+        "rarity": "rare",
+        "targets_room": true,
+        "card_art": "@WW_U01CardArt",
+        "effects": [
+          "@WW_U01_Spawn"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_U01_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_U01_Character",
+        "additional_tooltips": [
+          "@WW_U01_DazedReference"
+        ]
+      }
+    ],
+    "additional_tooltips": [
+      {
+        "id": "WW_U01_DazedReference",
+        "titles": {
+          "key": "StatusEffect_Dazed_CardText"
+        },
+        "descriptions": {
+          "key": "StatusEffect_Dazed_CardTooltipText"
+        }
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_U01_Character",
+        "names": {
+          "spanish": "Becario Pararrayos",
+          "english": "Lightning Rod Intern",
+          "french": "Stagiaire paratonnerre",
+          "german": "Blitzableiterpraktikant",
+          "portuguese": "Estagiário Para-raios",
+          "russian": "Стажёр-громоотвод",
+          "chinese": "避雷针实习生",
+          "chinese_traditional": "避雷針實習生",
+          "korean": "피뢰침 인턴",
+          "japanese": "避雷針インターン"
+        },
+        "character_art": "@WW_U01CharacterArt",
+        "size": 2,
+        "health": 40,
+        "attack_damage": 0,
+        "subtypes": [
+          "@WW_Wizard",
+          "SubtypesData_BannerUnit"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Wizard",
+        "names": {
+          "english": "Wizard",
+          "spanish": "Mago",
+          "french": "Sorcier",
+          "german": "Magier",
+          "portuguese": "Mago",
+          "russian": "Маг",
+          "chinese": "男巫",
+          "chinese_traditional": "男巫",
+          "korean": "마법사",
+          "japanese": "魔法使い"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_U01CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_U01CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.95,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WW_U01CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_U01CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_U01CharacterArt",
+        "path": "textures/WW_U01CharacterArt.png"
+      },
+      {
+        "id": "WW_U01CardArt",
+        "path": "textures/cards/WW_U01CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_U01.json": "24d94c1bd7f8eb5b31af0563db5a077a587785ab546de152837501f337fe2a66",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

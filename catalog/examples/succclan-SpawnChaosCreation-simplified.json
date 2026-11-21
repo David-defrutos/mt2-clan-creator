@@ -1,0 +1,205 @@
+{
+  "id": "succclan-SpawnChaosCreation-simplified",
+  "simplified": {
+    "removed": [
+      "characters/ChaosCreation/triggers"
+    ]
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "SpawnChaosCreation"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Chaos Creation",
+    "chinese": "混沌造物",
+    "spanish": "Creación del caos",
+    "french": "Création du chaos",
+    "german": "Chaosgeburt",
+    "portuguese": "Criação do Caos",
+    "russian": "Порождение хаоса",
+    "chinese_traditional": "混沌造物",
+    "japanese": "混沌の創造物",
+    "korean": "혼돈의 창조물"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 25,
+  "attack": 0,
+  "size": 2,
+  "picture": "assets/1718ed5c5704c2683d3be04b104a84ef990288354e5c57389769f67caabae8bd.png",
+  "characterPicture": "assets/e078d09a69cf4ee4b3503e8ef4a657c465fc9010432b0bac0ddff4e322d20881.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/ChaosCreationCharacterArt.png": "assets/e078d09a69cf4ee4b3503e8ef4a657c465fc9010432b0bac0ddff4e322d20881.png",
+    "textures/ChaosCreationCardArt.png": "assets/1718ed5c5704c2683d3be04b104a84ef990288354e5c57389769f67caabae8bd.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnChaosCreation",
+        "names": {
+          "english": "Chaos Creation",
+          "chinese": "混沌造物",
+          "spanish": "Creación del caos",
+          "french": "Création du chaos",
+          "german": "Chaosgeburt",
+          "portuguese": "Criação do Caos",
+          "russian": "Порождение хаоса",
+          "chinese_traditional": "混沌造物",
+          "japanese": "混沌の創造物",
+          "korean": "혼돈의 창조물"
+        },
+        "card_art": "@ChaosCreationCardArt",
+        "cost": 1,
+        "card_type": "monster",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "effects": [
+          "@SpawnChaosCreation"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnChaosCreation",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@ChaosCreation"
+      }
+    ],
+    "characters": [
+      {
+        "id": "ChaosCreation",
+        "attack_vfx": "@SuccFXPsionicAttack",
+        "impact_vfx": "@SuccFXArcaneImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "names": {
+          "english": "Chaos Creation",
+          "chinese": "混沌造物",
+          "spanish": "Creación del caos",
+          "french": "Création du chaos",
+          "german": "Chaosgeburt",
+          "portuguese": "Criação do Caos",
+          "russian": "Порождение хаоса",
+          "chinese_traditional": "混沌造物",
+          "japanese": "混沌の創造物",
+          "korean": "혼돈의 창조물"
+        },
+        "character_art": "@ChaosCreationCharacterArt",
+        "size": 2,
+        "attack_damage": 0,
+        "health": 25,
+        "starting_status_effects": [
+          {
+            "status": "heal immunity",
+            "count": 1
+          }
+        ],
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Cubus"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Cubus",
+        "names": {
+          "english": "SuccUnits",
+          "chinese": "魅影单位",
+          "spanish": "Unidades de súcubo",
+          "french": "Unités succubes",
+          "german": "Sukkubus-Einheiten",
+          "portuguese": "Unidades de Súcubo",
+          "russian": "Отряды суккубов",
+          "chinese_traditional": "魅魔單位",
+          "japanese": "サキュバスユニット",
+          "korean": "서큐버스 유닛"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ChaosCreationCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@ChaosCreationCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.966,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 0.85,
+                "y": 0.85,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "ChaosCreationCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ChaosCreationCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ChaosCreationCharacterArt",
+        "path": "textures/ChaosCreationCharacterArt.png"
+      },
+      {
+        "id": "ChaosCreationCardArt",
+        "path": "textures/ChaosCreationCardArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXArcaneImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXPsionicAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/Ekka/FX_EkkaAttack.prefab",
+          "asset_guid": "c7e542f2b751e704d93e28e27fa469b4"
+        },
+        "spawn_location": "character_center"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_ChaosCreation.json": "14021f4f959fca934170bd172d8bfd003f68ad8b0f71265e6453147419cf80ef",
+    "json/class.json": "65c18f4c8b8c97b62edfa51f3d02d2cae856fe878c761586e950fc9993580bc3",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

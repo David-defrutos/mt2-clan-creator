@@ -1,0 +1,183 @@
+{
+  "id": "ww-WW_S28-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S28/triggers"
+    ],
+    "needsEffect": false
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S28"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Proyecto Aplazado",
+    "english": "Deferred Project",
+    "french": "Projet reporté",
+    "german": "Aufgeschobenes Projekt",
+    "portuguese": "Projeto Adiado",
+    "russian": "Отложенный проект",
+    "chinese": "延期项目",
+    "chinese_traditional": "延期專案",
+    "korean": "연기된 과제",
+    "japanese": "延期された課題"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/80477dfbe4fa9580396c52e3c1b207081b9e9816084092f9b25eb096f04aea39.png",
+  "characterPicture": null,
+  "providers": [
+    "game",
+    "Conductor"
+  ],
+  "externalResources": [
+    {
+      "provider": "Conductor",
+      "section": "target_modes",
+      "id": "played_card",
+      "names": {},
+      "descriptions": {},
+      "file": "packages/Conductor-Conductor/json/target_modes.json",
+      "sha256": "92bea2d809c54c59683a0bdf20ebd6052effac46779fb649a402b0f609a1c56a"
+    }
+  ],
+  "assets": {
+    "textures/cards/WW_S28CardArt.png": "assets/80477dfbe4fa9580396c52e3c1b207081b9e9816084092f9b25eb096f04aea39.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S28",
+        "names": {
+          "spanish": "Proyecto Aplazado",
+          "english": "Deferred Project",
+          "french": "Projet reporté",
+          "german": "Aufgeschobenes Projekt",
+          "portuguese": "Projeto Adiado",
+          "russian": "Отложенный проект",
+          "chinese": "延期项目",
+          "chinese_traditional": "延期專案",
+          "korean": "연기된 과제",
+          "japanese": "延期された課題"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@WW_S28_Effect"
+        ],
+        "card_art": "@WW_S28CardArt",
+        "traits": [
+          "@WW_S28_Freeze"
+        ],
+        "triggers": [
+          "@WW_S28_Reserve"
+        ]
+      }
+    ],
+    "card_triggers": [
+      {
+        "id": "WW_S28_Reserve",
+        "trigger": "on_unplayed_positive",
+        "effects": [
+          "@WW_S28_ReserveEffect"
+        ],
+        "descriptions": {
+          "english": "+5 [magicpower].",
+          "spanish": "+5 [magicpower].",
+          "french": "+5 [magicpower].",
+          "german": "+5 [magicpower].",
+          "portuguese": "+5 [magicpower].",
+          "russian": "+5 [magicpower].",
+          "chinese": "+5 [magicpower]。",
+          "chinese_traditional": "+5 [magicpower]。",
+          "korean": "[magicpower] +5.",
+          "japanese": "[magicpower] +5。"
+        }
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_S28_ReserveEffect",
+        "name": {
+          "id": "@CardEffectAddCardUpgradeToTargetCards",
+          "mod_reference": "Conductor"
+        },
+        "target_mode": {
+          "id": "@played_card",
+          "mod_reference": "Conductor"
+        },
+        "target_team": "none",
+        "param_upgrade": "@WW_S28_Charge",
+        "param_bool": false,
+        "additional_tooltips": [
+          "@WW_MagicPowerReference"
+        ]
+      },
+      {
+        "id": "WW_S28_Effect",
+        "name": "CardEffectDamage",
+        "target_mode": "drop_target_character",
+        "target_team": "both",
+        "param_int": 10
+      }
+    ],
+    "additional_tooltips": [
+      {
+        "id": "WW_MagicPowerReference",
+        "titles": {
+          "key": "ModifyCard_MagicalPower_TooltipTitle"
+        },
+        "descriptions": {
+          "key": "ModifyCard_MagicalPower_TooltipBody"
+        }
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WW_S28_Charge",
+        "bonus_damage": 5,
+        "bonus_heal": 5
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_S28_Freeze",
+        "name": "CardTraitFreeze"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S28CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S28CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S28CardArt",
+        "path": "textures/cards/WW_S28CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S28.json": "d756768ce75ee1f19a191d34f689ae3f6d397aa08773a5fcf165bb978091c7e3",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

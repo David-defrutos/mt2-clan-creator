@@ -1,0 +1,310 @@
+{
+  "id": "ww-WW_C01-clan-path-3-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_C01_Character/ability",
+      "characters/WW_C01_Character/starting_status_effects",
+      "upgrades/WW_Attuned1/trigger_upgrades",
+      "upgrades/WW_Attuned2/trigger_upgrades",
+      "upgrades/WW_Attuned3/trigger_upgrades"
+    ],
+    "path": true
+  },
+  "championPath": {
+    "baseId": "ww-WW_C01-simplified",
+    "path": 3,
+    "level": 1,
+    "names": {
+      "spanish": "Departamento de Ajuste de Hechizos I",
+      "english": "Department of Spell Tuning I",
+      "french": "Département d'ajustement des sorts I",
+      "german": "Abteilung für Zauberabstimmung I",
+      "portuguese": "Departamento de Ajuste de Feitiços I",
+      "russian": "Кафедра настройки заклинаний I",
+      "chinese": "法术调谐系 I",
+      "chinese_traditional": "法術調諧系 I",
+      "korean": "주문 조율 학과 I",
+      "japanese": "呪文調整学科 I"
+    },
+    "upgradeId": "WW_Attuned1",
+    "localUpgradeId": "WW_Attuned1",
+    "upgrade": {
+      "id": "WW_Attuned1",
+      "titles": {
+        "spanish": "Departamento de Ajuste de Hechizos I",
+        "english": "Department of Spell Tuning I",
+        "french": "Département d'ajustement des sorts I",
+        "german": "Abteilung für Zauberabstimmung I",
+        "portuguese": "Departamento de Ajuste de Feitiços I",
+        "russian": "Кафедра настройки заклинаний I",
+        "chinese": "法术调谐系 I",
+        "chinese_traditional": "法術調諧系 I",
+        "korean": "주문 조율 학과 I",
+        "japanese": "呪文調整学科 I"
+      },
+      "does_not_replace_ability": true,
+      "bonus_damage": 0,
+      "bonus_hp": 5,
+      "status_effect_upgrades": [
+        {
+          "status": "conduit",
+          "count": 5
+        }
+      ]
+    },
+    "levels": [
+      {
+        "upgradeId": "WW_Attuned1",
+        "ref": "@WW_Attuned1"
+      },
+      {
+        "upgradeId": "WW_Attuned2",
+        "ref": "@WW_Attuned2"
+      },
+      {
+        "upgradeId": "WW_Attuned3",
+        "ref": "@WW_Attuned3"
+      }
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_C01"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Decano del Departamento de Sombreros · Departamento de Ajuste de Hechizos I · I",
+    "english": "Dean of the Hat Department · Department of Spell Tuning I · I",
+    "french": "Doyen du département des chapeaux · Département d'ajustement des sorts I · I",
+    "german": "Dekan der Hutabteilung · Abteilung für Zauberabstimmung I · I",
+    "portuguese": "Decano do Departamento de Chapéus · Departamento de Ajuste de Feitiços I · I",
+    "russian": "Декан кафедры шляп · Кафедра настройки заклинаний I · I",
+    "chinese": "帽子系主任 · 法术调谐系 I · I",
+    "chinese_traditional": "帽子系主任 · 法術調諧系 I · I",
+    "korean": "모자 학과장 · 주문 조율 학과 I · I",
+    "japanese": "帽子学科長 · 呪文調整学科 I · I"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 20,
+  "attack": 6,
+  "size": 2,
+  "picture": "assets/11be9e293e151f50bea33c7b0eab7a22c53eaf0e081f59b24ebe964c8a12f661.png",
+  "characterPicture": "assets/9c701767796d9f6be7dae60e8440e082cc6adbb308847035f6b94e6e346fb869.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/WW_C01CharacterArt.png": "assets/9c701767796d9f6be7dae60e8440e082cc6adbb308847035f6b94e6e346fb869.png",
+    "textures/cards/WW_C01CardArt.png": "assets/11be9e293e151f50bea33c7b0eab7a22c53eaf0e081f59b24ebe964c8a12f661.png"
+  },
+  "document": {
+    "upgrades": [
+      {
+        "id": "WW_Attuned3",
+        "titles": {
+          "spanish": "Departamento de Ajuste de Hechizos III",
+          "english": "Department of Spell Tuning III",
+          "french": "Département d'ajustement des sorts III",
+          "german": "Abteilung für Zauberabstimmung III",
+          "portuguese": "Departamento de Ajuste de Feitiços III",
+          "russian": "Кафедра настройки заклинаний III",
+          "chinese": "法术调谐系 III",
+          "chinese_traditional": "法術調諧系 III",
+          "korean": "주문 조율 학과 III",
+          "japanese": "呪文調整学科 III"
+        },
+        "does_not_replace_ability": true,
+        "bonus_damage": 10,
+        "bonus_hp": 20,
+        "status_effect_upgrades": [
+          {
+            "status": "conduit",
+            "count": 15
+          }
+        ]
+      },
+      {
+        "id": "WW_Attuned2",
+        "titles": {
+          "spanish": "Departamento de Ajuste de Hechizos II",
+          "english": "Department of Spell Tuning II",
+          "french": "Département d'ajustement des sorts II",
+          "german": "Abteilung für Zauberabstimmung II",
+          "portuguese": "Departamento de Ajuste de Feitiços II",
+          "russian": "Кафедра настройки заклинаний II",
+          "chinese": "法术调谐系 II",
+          "chinese_traditional": "法術調諧系 II",
+          "korean": "주문 조율 학과 II",
+          "japanese": "呪文調整学科 II"
+        },
+        "does_not_replace_ability": true,
+        "bonus_damage": 4,
+        "bonus_hp": 10,
+        "status_effect_upgrades": [
+          {
+            "status": "conduit",
+            "count": 10
+          }
+        ]
+      },
+      {
+        "id": "WW_Attuned1",
+        "titles": {
+          "spanish": "Departamento de Ajuste de Hechizos I",
+          "english": "Department of Spell Tuning I",
+          "french": "Département d'ajustement des sorts I",
+          "german": "Abteilung für Zauberabstimmung I",
+          "portuguese": "Departamento de Ajuste de Feitiços I",
+          "russian": "Кафедра настройки заклинаний I",
+          "chinese": "法术调谐系 I",
+          "chinese_traditional": "法術調諧系 I",
+          "korean": "주문 조율 학과 I",
+          "japanese": "呪文調整学科 I"
+        },
+        "does_not_replace_ability": true,
+        "bonus_damage": 0,
+        "bonus_hp": 5,
+        "status_effect_upgrades": [
+          {
+            "status": "conduit",
+            "count": 5
+          }
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "id": "WW_C01",
+        "names": {
+          "spanish": "Decano del Departamento de Sombreros",
+          "english": "Dean of the Hat Department",
+          "french": "Doyen du département des chapeaux",
+          "german": "Dekan der Hutabteilung",
+          "portuguese": "Decano do Departamento de Chapéus",
+          "russian": "Декан кафедры шляп",
+          "chinese": "帽子系主任",
+          "chinese_traditional": "帽子系主任",
+          "korean": "모자 학과장",
+          "japanese": "帽子学科長"
+        },
+        "card_type": "monster",
+        "cost": 0,
+        "rarity": "champion",
+        "targets_room": true,
+        "card_art": "@WW_C01CardArt",
+        "effects": [
+          "@WW_C01_Spawn"
+        ],
+        "initial_upgrades": [
+          "@WW_Attuned1"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_C01_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_C01_Character"
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_C01_Character",
+        "names": {
+          "spanish": "Decano del Departamento de Sombreros",
+          "english": "Dean of the Hat Department",
+          "french": "Doyen du département des chapeaux",
+          "german": "Dekan der Hutabteilung",
+          "portuguese": "Decano do Departamento de Chapéus",
+          "russian": "Декан кафедры шляп",
+          "chinese": "帽子系主任",
+          "chinese_traditional": "帽子系主任",
+          "korean": "모자 학과장",
+          "japanese": "帽子学科長"
+        },
+        "character_art": "@WW_C01CharacterArt",
+        "size": 2,
+        "health": 20,
+        "attack_damage": 6,
+        "subtypes": [
+          "@WW_Wizard",
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Wizard",
+        "names": {
+          "english": "Wizard",
+          "spanish": "Mago",
+          "french": "Sorcier",
+          "german": "Magier",
+          "portuguese": "Mago",
+          "russian": "Маг",
+          "chinese": "男巫",
+          "chinese_traditional": "男巫",
+          "korean": "마법사",
+          "japanese": "魔法使い"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_C01CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_C01CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.94,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WW_C01CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_C01CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_C01CharacterArt",
+        "path": "textures/WW_C01CharacterArt.png"
+      },
+      {
+        "id": "WW_C01CardArt",
+        "path": "textures/cards/WW_C01CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/04_champion_paths.json": "a58dff128cbdf413f106091099c7f356f7382727db40ce019d7068b9e29f64c5",
+    "content/json/cards/WW_C01.json": "dab85c6f397092a4a40d17d343e7f620bd2e0237f4de3c2c0becbc2bbfa2fca3",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

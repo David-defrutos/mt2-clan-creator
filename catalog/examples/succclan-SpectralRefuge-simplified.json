@@ -1,0 +1,141 @@
+{
+  "id": "succclan-SpectralRefuge-simplified",
+  "simplified": {
+    "removed": [
+      "upgrades/SpectralRefugeUpgrade/room_modifier_upgrades"
+    ],
+    "needsEffect": true
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "SpectralRefuge"
+  },
+  "kind": "room",
+  "names": {
+    "english": "Spectral Refuge",
+    "spanish": "Refugio espectral",
+    "chinese": "幽灵庇护所",
+    "french": "Refuge spectral",
+    "german": "Geisterzuflucht",
+    "portuguese": "Refúgio Espectral",
+    "russian": "Призрачное убежище",
+    "chinese_traditional": "幽靈庇護所",
+    "japanese": "幽霊の避難所",
+    "korean": "유령의 안식처"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/370cb10ec064afcdf7a83eeed090e51ff4b6cc7d7d41ac0be0792de3c36c15f9.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/EquipmentRoomIcons/SpectralRefuge.png": "assets/ff7bdf4b4954fe56f6269f2762e2bd61cc3fd7e767a2434d2de6524af785c0c9.png",
+    "textures/SpectralRefugeArt.png": "assets/370cb10ec064afcdf7a83eeed090e51ff4b6cc7d7d41ac0be0792de3c36c15f9.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpectralRefuge",
+        "names": {
+          "english": "Spectral Refuge",
+          "spanish": "Refugio espectral",
+          "chinese": "幽灵庇护所",
+          "french": "Refuge spectral",
+          "german": "Geisterzuflucht",
+          "portuguese": "Refúgio Espectral",
+          "russian": "Призрачное убежище",
+          "chinese_traditional": "幽靈庇護所",
+          "japanese": "幽霊の避難所",
+          "korean": "유령의 안식처"
+        },
+        "card_art": "@SpectralRefugeArt",
+        "cost": 1,
+        "card_type": "room",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": true,
+        "effects": [
+          "@SpectralRefugeAttach"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpectralRefugeAttach",
+        "applied_vfx": "@SuccFXRefugePulse",
+        "name": "CardEffectAttachTrainRoomAttachment",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_upgrade": "@SpectralRefugeUpgrade",
+        "param_bool": false,
+        "param_bool_2": false
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "SpectralRefugeUpgrade",
+        "titles": {
+          "english": "Spectral Refuge",
+          "spanish": "Refugio espectral",
+          "chinese": "幽灵庇护所",
+          "french": "Refuge spectral",
+          "german": "Geisterzuflucht",
+          "portuguese": "Refúgio Espectral",
+          "russian": "Призрачное убежище",
+          "chinese_traditional": "幽靈庇護所",
+          "japanese": "幽霊の避難所",
+          "korean": "유령의 안식처"
+        },
+        "hide_icon_on_card": true,
+        "icon": "@SpectralRefugeIcon"
+      }
+    ],
+    "sprites": [
+      {
+        "id": "SpectralRefugeIcon",
+        "path": "textures/EquipmentRoomIcons/SpectralRefuge.png"
+      },
+      {
+        "id": "SpectralRefugeArt",
+        "path": "textures/SpectralRefugeArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXRefugePulse",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Banished/Sanctuary/FX_Sanctuary.prefab",
+          "asset_guid": "76644c90ff01eac449740aa5aaadf56e"
+        },
+        "spawn_location": "room_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "SpectralRefugeArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@SpectralRefugeArt"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/rooms/room_SpectralRefuge.json": "4c60eebeaa7c8982da1040e71a7c9db18ecaf9593b5cfe95c9c42060cd3cdc60",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

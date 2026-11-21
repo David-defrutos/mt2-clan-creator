@@ -1,13 +1,13 @@
 {
   "name": "mt2-clan-creator",
-  "version": "0.1.0",
+  "version": "0.1.0-beta.5",
   "private": true,
   "license": "MIT",
   "type": "module",
   "scripts": {
     "dev:server": "tsx watch src/server/creator-server.ts",
     "dev:web": "vite --host 127.0.0.1",
-    "build": "tsc -p tsconfig.server.json && tsc -p tsconfig.web.json && vite build",
+    "build": "tsc -p tsconfig.server.json && tsc -p tsconfig.web.json && node scripts/build-catalog-search.mjs && vite build",
     "start": "node dist-server/creator-server.js",
     "test": "node --import tsx --test tests/*.test.ts",
     "check": "tsc -p tsconfig.server.json --noEmit && tsc -p tsconfig.web.json --noEmit",

@@ -1,0 +1,146 @@
+{
+  "id": "succclan-Inception-simplified",
+  "simplified": {
+    "removed": [
+      "cards/Inception/effects"
+    ],
+    "needsEffect": false
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "Inception"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Inception",
+    "chinese": "思想窃取",
+    "spanish": "Implantación",
+    "french": "Implantation",
+    "german": "Einpflanzung",
+    "portuguese": "Implantação",
+    "russian": "Внедрение",
+    "chinese_traditional": "植入",
+    "japanese": "植え付け",
+    "korean": "주입"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/b940c80156273112e1bef2b316ccf990edd8fe006c796b812ac915e6068c2a19.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/InceptionArt.png": "assets/b940c80156273112e1bef2b316ccf990edd8fe006c796b812ac915e6068c2a19.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Inception",
+        "names": {
+          "english": "Inception",
+          "chinese": "思想窃取",
+          "spanish": "Implantación",
+          "french": "Implantation",
+          "german": "Einpflanzung",
+          "portuguese": "Implantação",
+          "russian": "Внедрение",
+          "chinese_traditional": "植入",
+          "japanese": "植え付け",
+          "korean": "주입"
+        },
+        "card_type": "spell",
+        "rarity": "common",
+        "card_art": "@InceptionArt",
+        "cost": 1,
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@InceptionAttack",
+          "@InceptionHealth"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "InceptionHealth",
+        "applied_vfx": "@SuccFXHealthBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "last_targeted_characters",
+        "target_team": "monsters",
+        "param_int": 2,
+        "param_upgrade": "@BattleGrowthInceptionHealth",
+        "param_int_3": 0
+      },
+      {
+        "id": "InceptionAttack",
+        "applied_vfx": "@SuccFXAttackBuff",
+        "name": "CardEffectAddCardUpgradeToUnits",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_int": 2,
+        "param_upgrade": "@BattleGrowthInceptionAttack",
+        "param_int_3": 0
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "BattleGrowthInceptionHealth",
+        "bonus_hp": 2
+      },
+      {
+        "id": "BattleGrowthInceptionAttack",
+        "bonus_damage": 2
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXHealthBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Health_PS.prefab",
+          "asset_guid": "163c171f05bdd644fbadfa6fc01064a0"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXAttackBuff",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Buff_Attack_PS.prefab",
+          "asset_guid": "75491630f33039343baa202d7f6f7a30"
+        },
+        "spawn_location": "character_center"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "InceptionArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@InceptionArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "InceptionArt",
+        "path": "textures/InceptionArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/card_Inception.json": "0c5fa112a520be4732c14a3eda38b50d3241840c26c959a37c4d01cd95d2a908",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

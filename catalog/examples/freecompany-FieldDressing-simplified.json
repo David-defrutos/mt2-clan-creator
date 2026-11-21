@@ -1,0 +1,103 @@
+{
+  "id": "freecompany-FieldDressing-simplified",
+  "simplified": {
+    "removed": [
+      "cards/FieldDressing/effects"
+    ],
+    "needsEffect": false
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "FieldDressing"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Field Dressing",
+    "spanish": "Cura de campaña",
+    "french": "Pansement de campagne",
+    "german": "Feldverband",
+    "russian": "Полевая перевязка",
+    "portuguese": "Curativo de campanha",
+    "chinese": "战地包扎",
+    "chinese_traditional": "戰地包紮",
+    "korean": "야전 붕대",
+    "japanese": "野戦包帯"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/77c82f0916a70d9f5d1877f5669421895111548d7ac40a32167668c08d18a0b8.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/FieldDressingArt.png": "assets/77c82f0916a70d9f5d1877f5669421895111548d7ac40a32167668c08d18a0b8.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "FieldDressing",
+        "names": {
+          "english": "Field Dressing",
+          "spanish": "Cura de campaña",
+          "french": "Pansement de campagne",
+          "german": "Feldverband",
+          "russian": "Полевая перевязка",
+          "portuguese": "Curativo de campanha",
+          "chinese": "战地包扎",
+          "chinese_traditional": "戰地包紮",
+          "korean": "야전 붕대",
+          "japanese": "野戦包帯"
+        },
+        "card_art": "@FieldDressing",
+        "cost": 1,
+        "card_type": "spell",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@FieldDressingHeal"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "FieldDressingHeal",
+        "name": "CardEffectHeal",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_int": 2
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "FieldDressing",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@FieldDressing"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "FieldDressing",
+        "path": "textures/FieldDressingArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/cards/card_field_dressing.json": "2dabc0da5047142e57a7f486b5d8fb01cab10adfd1b5f569494e5b5fe3094ae2"
+  }
+}

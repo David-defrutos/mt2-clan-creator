@@ -1,0 +1,101 @@
+{
+  "id": "freecompany-DelayedBlastFireball-simplified",
+  "simplified": {
+    "removed": [
+      "cards/DelayedBlastFireball/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "DelayedBlastFireball"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Delayed Blast Fireball",
+    "french": "Boule de feu à retardement",
+    "german": "Verzögerter Feuerball",
+    "russian": "Огненный шар замедленного действия",
+    "portuguese": "Bola de Fogo Retardada",
+    "chinese": "延迟爆裂火球",
+    "spanish": "Bola de fuego retardada",
+    "chinese_traditional": "延遲爆裂火球",
+    "korean": "지연 폭발 화염구",
+    "japanese": "遅延爆発ファイアボール"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/b61c3c6a0a2b133adc498033988f1ffdd1296f3401bf3efb2d7f047a6bf28e42.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/DelayedBlastFireballArt.png": "assets/b61c3c6a0a2b133adc498033988f1ffdd1296f3401bf3efb2d7f047a6bf28e42.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "DelayedBlastFireball",
+        "names": {
+          "english": "Delayed Blast Fireball",
+          "french": "Boule de feu à retardement",
+          "german": "Verzögerter Feuerball",
+          "russian": "Огненный шар замедленного действия",
+          "portuguese": "Bola de Fogo Retardada",
+          "chinese": "延迟爆裂火球",
+          "spanish": "Bola de fuego retardada",
+          "chinese_traditional": "延遲爆裂火球",
+          "korean": "지연 폭발 화염구",
+          "japanese": "遅延爆発ファイアボール"
+        },
+        "card_art": "@DelayedBlastFireball",
+        "cost": 2,
+        "card_type": "spell",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": false,
+        "traits": [
+          "@DelayedExplosive"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "DelayedExplosive",
+        "name": "CardTraitDamageOverflow",
+        "param_int": 2
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "DelayedBlastFireball",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@DelayedBlastFireball"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "DelayedBlastFireball",
+        "path": "textures/DelayedBlastFireballArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/spells/spell_delayed_blast_fireball.json": "ec3a9e0f87b4982a68d116dadc7c3f7402a4e3f4d83417e68e92906034742791"
+  }
+}

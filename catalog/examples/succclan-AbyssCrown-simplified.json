@@ -1,0 +1,91 @@
+{
+  "id": "succclan-AbyssCrown-simplified",
+  "simplified": {
+    "removed": [
+      "relics/AbyssCrown/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "relics",
+    "id": "AbyssCrown"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Abyss Crown",
+    "chinese": "深渊王冠",
+    "spanish": "Corona del abismo",
+    "french": "Couronne des abysses",
+    "german": "Krone des Abgrunds",
+    "portuguese": "Coroa do Abismo",
+    "russian": "Корона бездны",
+    "chinese_traditional": "深淵王冠",
+    "japanese": "深淵の冠",
+    "korean": "심연의 왕관"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/c966a16002546a293a7fca7e43299a003bfd6f5109277ffa14488ee8ff021e5d.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/RelicIcons/AbyssCrownIconSmall.png": "assets/03ad21fc5044298b58fc33807b80191c6a8bec996d7ee0d1c81035336d63bfeb.png",
+    "textures/RelicIcons/AbyssCrownIcon.png": "assets/c966a16002546a293a7fca7e43299a003bfd6f5109277ffa14488ee8ff021e5d.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "AbyssCrown",
+        "type": "collectable",
+        "names": {
+          "english": "Abyss Crown",
+          "chinese": "深渊王冠",
+          "spanish": "Corona del abismo",
+          "french": "Couronne des abysses",
+          "german": "Krone des Abgrunds",
+          "portuguese": "Coroa do Abismo",
+          "russian": "Корона бездны",
+          "chinese_traditional": "深淵王冠",
+          "japanese": "深淵の冠",
+          "korean": "심연의 왕관"
+        },
+        "disallow_in_deployment": false,
+        "icon": "@AbyssCrownIcon",
+        "icon_small": "@AbyssCrownIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "rare",
+              "unlock_level": 0
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "AbyssCrownIconSmall",
+        "path": "textures/RelicIcons/AbyssCrownIconSmall.png"
+      },
+      {
+        "id": "AbyssCrownIcon",
+        "path": "textures/RelicIcons/AbyssCrownIcon.png"
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_AbyssCrown.json": "6dbc5be1f8e22c1711bdc6b8140c7b70e70f7ca5893a2b2e98359a559707e952"
+  }
+}

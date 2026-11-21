@@ -1,0 +1,132 @@
+{
+  "id": "freecompany-WidowsPension-simplified",
+  "simplified": {
+    "removed": [
+      "upgrades/UpgWidowsPension/trigger_upgrades"
+    ],
+    "needsEffect": true
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "WidowsPension"
+  },
+  "kind": "equipment",
+  "names": {
+    "english": "Widow's Pension",
+    "french": "Pension de veuve",
+    "german": "Witwenrente",
+    "russian": "Пенсия вдовы",
+    "portuguese": "Pensão da Viúva",
+    "chinese": "遗孀抚恤金",
+    "spanish": "Pensión de viudedad",
+    "chinese_traditional": "遺孀撫卹金",
+    "korean": "미망인 연금",
+    "japanese": "未亡人の年金"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/dd6fd427c92cad72e2eefc43b38783212602152b7cf36b0d747865e49b3cabb0.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/WidowsPensionArt.png": "assets/dd6fd427c92cad72e2eefc43b38783212602152b7cf36b0d747865e49b3cabb0.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WidowsPension",
+        "names": {
+          "english": "Widow's Pension",
+          "french": "Pension de veuve",
+          "german": "Witwenrente",
+          "russian": "Пенсия вдовы",
+          "portuguese": "Pensão da Viúva",
+          "chinese": "遗孀抚恤金",
+          "spanish": "Pensión de viudedad",
+          "chinese_traditional": "遺孀撫卹金",
+          "korean": "미망인 연금",
+          "japanese": "未亡人の年金"
+        },
+        "card_art": "@WidowsPension",
+        "cost": 1,
+        "card_type": "equipment",
+        "rarity": "common",
+        "targets_room": true,
+        "targetless": false,
+        "effects": [
+          "@EquipWidowsPension"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "EquipWidowsPension",
+        "applied_vfx": "@EquipWidowsPensionGreedVFX",
+        "name": "CardEffectAttachEquipment",
+        "target_mode": "drop_target_character",
+        "target_team": "monsters",
+        "param_upgrade": "@UpgWidowsPension"
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "UpgWidowsPension",
+        "titles": {
+          "english": "Widow's Pension",
+          "french": "Pension de veuve",
+          "german": "Witwenrente",
+          "russian": "Пенсия вдовы",
+          "portuguese": "Pensão da Viúva",
+          "chinese": "遗孀抚恤金",
+          "spanish": "Pensión de viudedad",
+          "chinese_traditional": "遺孀撫卹金",
+          "korean": "미망인 연금",
+          "japanese": "未亡人の年金"
+        },
+        "icon": "@WidowsPension"
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WidowsPension",
+        "path": "textures/WidowsPensionArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "EquipWidowsPensionGreedVFX",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/Spells/Pyreborne/Greed/FX_Greed.prefab",
+          "asset_guid": "0ed94d97470cdda4ea1af178010b635f"
+        },
+        "spawn_location": "character_bottom"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WidowsPension",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WidowsPension"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/equipment/equip_widows_pension.json": "7aa7311f8bd1a2dc26c3b223159b7bf45fb6fc19e35c1f9c32f15b33f761c47f"
+  }
+}

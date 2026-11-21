@@ -1,0 +1,131 @@
+{
+  "id": "freecompany-Watchtower-simplified",
+  "simplified": {
+    "removed": [
+      "upgrades/WatchtowerRoomUpgrade/room_ability_upgrade"
+    ],
+    "needsEffect": false
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "Watchtower"
+  },
+  "kind": "room",
+  "names": {
+    "english": "Watchtower",
+    "french": "Tour de guet",
+    "german": "Wachturm",
+    "russian": "Сторожевая башня",
+    "portuguese": "Torre de Vigia",
+    "chinese": "瞭望塔",
+    "spanish": "Atalaya",
+    "chinese_traditional": "瞭望塔",
+    "korean": "망루",
+    "japanese": "見張り塔"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/e0e6af19fd89ce351d51bc53a9fa761d41fc18cd187918a72bc331e7a3e9b5f0.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/WatchtowerArt.png": "assets/e0e6af19fd89ce351d51bc53a9fa761d41fc18cd187918a72bc331e7a3e9b5f0.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "Watchtower",
+        "names": {
+          "english": "Watchtower",
+          "french": "Tour de guet",
+          "german": "Wachturm",
+          "russian": "Сторожевая башня",
+          "portuguese": "Torre de Vigia",
+          "chinese": "瞭望塔",
+          "spanish": "Atalaya",
+          "chinese_traditional": "瞭望塔",
+          "korean": "망루",
+          "japanese": "見張り塔"
+        },
+        "card_art": "@Watchtower",
+        "cost": 1,
+        "card_type": "room",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": true,
+        "effects": [
+          "@WatchtowerRoomEffect"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WatchtowerRoomEffect",
+        "name": "CardEffectAttachTrainRoomAttachment",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_upgrade": "@WatchtowerRoomUpgrade",
+        "param_bool": false,
+        "param_bool_2": false
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "WatchtowerRoomUpgrade",
+        "titles": {
+          "english": "Watchtower",
+          "french": "Tour de guet",
+          "german": "Wachturm",
+          "russian": "Сторожевая башня",
+          "portuguese": "Torre de Vigia",
+          "chinese": "瞭望塔",
+          "spanish": "Atalaya",
+          "chinese_traditional": "瞭望塔",
+          "korean": "망루",
+          "japanese": "見張り塔"
+        },
+        "status_effect_upgrades": [
+          {
+            "status": "sniper",
+            "count": 1
+          }
+        ],
+        "hide_icon_on_card": true,
+        "icon": "@Watchtower",
+        "bonus_damage": 10
+      }
+    ],
+    "sprites": [
+      {
+        "id": "Watchtower",
+        "path": "textures/WatchtowerArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "Watchtower",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@Watchtower"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/rooms/room_watchtower.json": "f41d2e05d9ce720febf3a00d9b35def29309a08eff5e7d6c37bfa9a773a658e8"
+  }
+}

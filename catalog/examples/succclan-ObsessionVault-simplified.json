@@ -1,0 +1,129 @@
+{
+  "id": "succclan-ObsessionVault-simplified",
+  "simplified": {
+    "removed": [
+      "upgrades/ObsessionVaultUpgrade/room_modifier_upgrades"
+    ],
+    "needsEffect": true
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "ObsessionVault"
+  },
+  "kind": "room",
+  "names": {
+    "english": "Obsession Vault",
+    "spanish": "Cámara de la obsesión",
+    "chinese": "执念宝库",
+    "french": "Chambre de l'obsession",
+    "german": "Kammer der Besessenheit",
+    "portuguese": "Câmara da Obsessão",
+    "russian": "Хранилище одержимости",
+    "chinese_traditional": "執念寶庫",
+    "japanese": "執着の宝物庫",
+    "korean": "집착의 금고"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/6e328a11d49561ea49ea1ccc385214fadfe10d4a7ca889ca93808c16a29ebab0.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/EquipmentRoomIcons/ObsessionVault.png": "assets/cd576cccb9987a7285e84620eedb46c58ef4be5f13917cf8315f026e9877ade4.png",
+    "textures/ObsessionVaultArt.png": "assets/6e328a11d49561ea49ea1ccc385214fadfe10d4a7ca889ca93808c16a29ebab0.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "ObsessionVault",
+        "names": {
+          "english": "Obsession Vault",
+          "spanish": "Cámara de la obsesión",
+          "chinese": "执念宝库",
+          "french": "Chambre de l'obsession",
+          "german": "Kammer der Besessenheit",
+          "portuguese": "Câmara da Obsessão",
+          "russian": "Хранилище одержимости",
+          "chinese_traditional": "執念寶庫",
+          "japanese": "執着の宝物庫",
+          "korean": "집착의 금고"
+        },
+        "card_art": "@ObsessionVaultArt",
+        "cost": 1,
+        "card_type": "room",
+        "rarity": "uncommon",
+        "targets_room": true,
+        "targetless": true,
+        "effects": [
+          "@ObsessionVaultAttach"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "ObsessionVaultAttach",
+        "name": "CardEffectAttachTrainRoomAttachment",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_upgrade": "@ObsessionVaultUpgrade",
+        "param_bool": false,
+        "param_bool_2": false
+      }
+    ],
+    "upgrades": [
+      {
+        "id": "ObsessionVaultUpgrade",
+        "titles": {
+          "english": "Obsession Vault",
+          "spanish": "Cámara de la obsesión",
+          "chinese": "执念宝库",
+          "french": "Chambre de l'obsession",
+          "german": "Kammer der Besessenheit",
+          "portuguese": "Câmara da Obsessão",
+          "russian": "Хранилище одержимости",
+          "chinese_traditional": "執念寶庫",
+          "japanese": "執着の宝物庫",
+          "korean": "집착의 금고"
+        },
+        "hide_icon_on_card": true,
+        "icon": "@ObsessionVaultIcon"
+      }
+    ],
+    "sprites": [
+      {
+        "id": "ObsessionVaultIcon",
+        "path": "textures/EquipmentRoomIcons/ObsessionVault.png"
+      },
+      {
+        "id": "ObsessionVaultArt",
+        "path": "textures/ObsessionVaultArt.png"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "ObsessionVaultArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@ObsessionVaultArt"
+          }
+        }
+      }
+    ]
+  },
+  "files": {
+    "json/rooms/room_ObsessionVault.json": "5784614992bae030f4be642b6306b11a4d9efa19302e8439468ef1ea9920ef2f"
+  }
+}

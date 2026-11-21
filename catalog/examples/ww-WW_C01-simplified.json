@@ -1,0 +1,171 @@
+{
+  "id": "ww-WW_C01-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_C01_Character/ability",
+      "characters/WW_C01_Character/starting_status_effects"
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_C01"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Decano del Departamento de Sombreros",
+    "english": "Dean of the Hat Department",
+    "french": "Doyen du département des chapeaux",
+    "german": "Dekan der Hutabteilung",
+    "portuguese": "Decano do Departamento de Chapéus",
+    "russian": "Декан кафедры шляп",
+    "chinese": "帽子系主任",
+    "chinese_traditional": "帽子系主任",
+    "korean": "모자 학과장",
+    "japanese": "帽子学科長"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "champion",
+  "health": 20,
+  "attack": 6,
+  "size": 2,
+  "picture": "assets/11be9e293e151f50bea33c7b0eab7a22c53eaf0e081f59b24ebe964c8a12f661.png",
+  "characterPicture": "assets/9c701767796d9f6be7dae60e8440e082cc6adbb308847035f6b94e6e346fb869.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/WW_C01CharacterArt.png": "assets/9c701767796d9f6be7dae60e8440e082cc6adbb308847035f6b94e6e346fb869.png",
+    "textures/cards/WW_C01CardArt.png": "assets/11be9e293e151f50bea33c7b0eab7a22c53eaf0e081f59b24ebe964c8a12f661.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_C01",
+        "names": {
+          "spanish": "Decano del Departamento de Sombreros",
+          "english": "Dean of the Hat Department",
+          "french": "Doyen du département des chapeaux",
+          "german": "Dekan der Hutabteilung",
+          "portuguese": "Decano do Departamento de Chapéus",
+          "russian": "Декан кафедры шляп",
+          "chinese": "帽子系主任",
+          "chinese_traditional": "帽子系主任",
+          "korean": "모자 학과장",
+          "japanese": "帽子学科長"
+        },
+        "card_type": "monster",
+        "cost": 0,
+        "rarity": "champion",
+        "targets_room": true,
+        "card_art": "@WW_C01CardArt",
+        "effects": [
+          "@WW_C01_Spawn"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_C01_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_C01_Character"
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_C01_Character",
+        "names": {
+          "spanish": "Decano del Departamento de Sombreros",
+          "english": "Dean of the Hat Department",
+          "french": "Doyen du département des chapeaux",
+          "german": "Dekan der Hutabteilung",
+          "portuguese": "Decano do Departamento de Chapéus",
+          "russian": "Декан кафедры шляп",
+          "chinese": "帽子系主任",
+          "chinese_traditional": "帽子系主任",
+          "korean": "모자 학과장",
+          "japanese": "帽子学科長"
+        },
+        "character_art": "@WW_C01CharacterArt",
+        "size": 2,
+        "health": 20,
+        "attack_damage": 6,
+        "subtypes": [
+          "@WW_Wizard",
+          "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Wizard",
+        "names": {
+          "english": "Wizard",
+          "spanish": "Mago",
+          "french": "Sorcier",
+          "german": "Magier",
+          "portuguese": "Mago",
+          "russian": "Маг",
+          "chinese": "男巫",
+          "chinese_traditional": "男巫",
+          "korean": "마법사",
+          "japanese": "魔法使い"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_C01CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_C01CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.94,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "WW_C01CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_C01CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_C01CharacterArt",
+        "path": "textures/WW_C01CharacterArt.png"
+      },
+      {
+        "id": "WW_C01CardArt",
+        "path": "textures/cards/WW_C01CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_C01.json": "dab85c6f397092a4a40d17d343e7f620bd2e0237f4de3c2c0becbc2bbfa2fca3",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

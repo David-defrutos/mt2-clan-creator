@@ -1,0 +1,91 @@
+{
+  "id": "succclan-MutantElixirs-simplified",
+  "simplified": {
+    "removed": [
+      "relics/MutantElixirs/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "relics",
+    "id": "MutantElixirs"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Mutant Elixirs",
+    "chinese": "突变药剂",
+    "spanish": "Elixires mutantes",
+    "french": "Élixirs mutants",
+    "german": "Mutationselixiere",
+    "portuguese": "Elixires Mutantes",
+    "russian": "Мутационные эликсиры",
+    "chinese_traditional": "變異靈藥",
+    "japanese": "変異の霊薬",
+    "korean": "변이 영약"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/7dcdd74354f98e55a2647d0e9e765c0fb11ed64cd15a52b4395efabae058a847.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/RelicIcons/MutantElixirsIconSmall.png": "assets/11bc3e3da93304d9a2f4e884f6e35876f6d325f8a4c8dff75c6d339058fbfcbe.png",
+    "textures/RelicIcons/MutantElixirsIcon.png": "assets/7dcdd74354f98e55a2647d0e9e765c0fb11ed64cd15a52b4395efabae058a847.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "MutantElixirs",
+        "type": "collectable",
+        "names": {
+          "english": "Mutant Elixirs",
+          "chinese": "突变药剂",
+          "spanish": "Elixires mutantes",
+          "french": "Élixirs mutants",
+          "german": "Mutationselixiere",
+          "portuguese": "Elixires Mutantes",
+          "russian": "Мутационные эликсиры",
+          "chinese_traditional": "變異靈藥",
+          "japanese": "変異の霊薬",
+          "korean": "변이 영약"
+        },
+        "disallow_in_deployment": false,
+        "icon": "@MutantElixirsIcon",
+        "icon_small": "@MutantElixirsIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "uncommon",
+              "unlock_level": 0
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "MutantElixirsIconSmall",
+        "path": "textures/RelicIcons/MutantElixirsIconSmall.png"
+      },
+      {
+        "id": "MutantElixirsIcon",
+        "path": "textures/RelicIcons/MutantElixirsIcon.png"
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_MutantElixirs.json": "50c3c85686a55bb79997fb6d259256e8eacb870143cdbc616665a7982997299e"
+  }
+}

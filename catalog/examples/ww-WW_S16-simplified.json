@@ -1,0 +1,111 @@
+{
+  "id": "ww-WW_S16-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S16/effects"
+    ],
+    "needsEffect": false
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S16"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Intercambio de Expedientes Vitales",
+    "english": "Vital Records Exchange",
+    "french": "Échange de dossiers vitaux",
+    "german": "Austausch der Lebensakten",
+    "portuguese": "Troca de Registros Vitais",
+    "russian": "Обмен записями здоровья",
+    "chinese": "生命档案交换",
+    "chinese_traditional": "生命檔案交換",
+    "korean": "생명 기록 교환",
+    "japanese": "生命記録交換"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/f317a478d7018ca902a0e2de962ba7c19b5a644e5ed22c833e7d28771a70b819.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S16CardArt.png": "assets/f317a478d7018ca902a0e2de962ba7c19b5a644e5ed22c833e7d28771a70b819.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S16",
+        "names": {
+          "spanish": "Intercambio de Expedientes Vitales",
+          "english": "Vital Records Exchange",
+          "french": "Échange de dossiers vitaux",
+          "german": "Austausch der Lebensakten",
+          "portuguese": "Troca de Registros Vitais",
+          "russian": "Обмен записями здоровья",
+          "chinese": "生命档案交换",
+          "chinese_traditional": "生命檔案交換",
+          "korean": "생명 기록 교환",
+          "japanese": "生命記録交換"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "common",
+        "targets_room": true,
+        "card_art": "@WW_S16CardArt",
+        "targetless": true,
+        "effects": [
+          "@WW_S16_HealFront",
+          "@WW_S16_HealBack"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_S16_HealBack",
+        "name": "CardEffectHeal",
+        "target_mode": "back_in_room",
+        "target_team": "monsters",
+        "param_int": 4
+      },
+      {
+        "id": "WW_S16_HealFront",
+        "name": "CardEffectHeal",
+        "target_mode": "front_in_room",
+        "target_team": "monsters",
+        "param_int": 4
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S16CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S16CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S16CardArt",
+        "path": "textures/cards/WW_S16CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S16.json": "b3a30153aaaffea150a8cc1dde2e74dad1850e0227301a82b3797d9448c35cdf"
+  }
+}

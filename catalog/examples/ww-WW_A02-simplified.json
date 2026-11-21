@@ -1,0 +1,89 @@
+{
+  "id": "ww-WW_A02-simplified",
+  "simplified": {
+    "removed": [
+      "relics/WW_A02/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "relics",
+    "id": "WW_A02"
+  },
+  "kind": "artifact",
+  "names": {
+    "spanish": "Fotocopiadora de Hechizos Consumibles",
+    "english": "Consumable Spell Photocopier",
+    "french": "Photocopieuse de sorts consommables",
+    "german": "Kopierer für verbrauchbare Zauber",
+    "portuguese": "Fotocopiadora de Feitiços Consumíveis",
+    "russian": "Копир расходуемых заклинаний",
+    "chinese": "消耗法术复印机",
+    "chinese_traditional": "消耗法術影印機",
+    "korean": "소모 주문 복사기",
+    "japanese": "消費呪文コピー機"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/56a6c3964c853be7b838a1ed490e6606aa5b38a0df4ce91200f6085c56853435.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/relics/WW_A02IconSmall.png": "assets/5b0b523be31a4fe47d5047ca31d7c3ba956461f807475202d81651a863e25e7b.png",
+    "textures/relics/WW_A02Icon.png": "assets/56a6c3964c853be7b838a1ed490e6606aa5b38a0df4ce91200f6085c56853435.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "WW_A02",
+        "type": "collectable",
+        "names": {
+          "spanish": "Fotocopiadora de Hechizos Consumibles",
+          "english": "Consumable Spell Photocopier",
+          "french": "Photocopieuse de sorts consommables",
+          "german": "Kopierer für verbrauchbare Zauber",
+          "portuguese": "Fotocopiadora de Feitiços Consumíveis",
+          "russian": "Копир расходуемых заклинаний",
+          "chinese": "消耗法术复印机",
+          "chinese_traditional": "消耗法術影印機",
+          "korean": "소모 주문 복사기",
+          "japanese": "消費呪文コピー機"
+        },
+        "icon": "@WW_A02Icon",
+        "icon_small": "@WW_A02IconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "common"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_A02IconSmall",
+        "path": "textures/relics/WW_A02IconSmall.png"
+      },
+      {
+        "id": "WW_A02Icon",
+        "path": "textures/relics/WW_A02Icon.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/relics/WW_A02.json": "ebc2f534dc73084f4aae569e22969066634791dbd83dc98c5e67331427ab78f0"
+  }
+}

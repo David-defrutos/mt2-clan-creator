@@ -1,0 +1,89 @@
+{
+  "id": "freecompany-FieldForge-simplified",
+  "simplified": {
+    "removed": [
+      "relics/FieldForge/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "relics",
+    "id": "FieldForge"
+  },
+  "kind": "artifact",
+  "names": {
+    "english": "Field Forge",
+    "french": "Forge de campagne",
+    "german": "Feldschmiede",
+    "russian": "Полевая кузница",
+    "portuguese": "Forja de Campo",
+    "chinese": "战地锻炉",
+    "spanish": "Forja de campaña",
+    "chinese_traditional": "戰地鍛爐",
+    "korean": "야전 대장간",
+    "japanese": "野戦鍛冶場"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/7ad7023a03050a95c0772861d16d3ff2b4e9eb37feeb75b3808203bc7d4416af.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/FieldForgeIconSmall.png": "assets/6c2033ad4ecfb5138ce3ef5d68d5a8ee6c44f1f87dd2ab895f6163aaf24924f0.png",
+    "textures/FieldForgeIcon.png": "assets/7ad7023a03050a95c0772861d16d3ff2b4e9eb37feeb75b3808203bc7d4416af.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "FieldForge",
+        "type": "collectable",
+        "names": {
+          "english": "Field Forge",
+          "french": "Forge de campagne",
+          "german": "Feldschmiede",
+          "russian": "Полевая кузница",
+          "portuguese": "Forja de Campo",
+          "chinese": "战地锻炉",
+          "spanish": "Forja de campaña",
+          "chinese_traditional": "戰地鍛爐",
+          "korean": "야전 대장간",
+          "japanese": "野戦鍛冶場"
+        },
+        "icon": "@FieldForgeIcon",
+        "icon_small": "@FieldForgeIconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "uncommon"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "FieldForgeIconSmall",
+        "path": "textures/FieldForgeIconSmall.png"
+      },
+      {
+        "id": "FieldForgeIcon",
+        "path": "textures/FieldForgeIcon.png"
+      }
+    ]
+  },
+  "files": {
+    "json/relics/relic_field_forge.json": "4ce7c6cc2d26fca731a3048517a1732cce2fac14f9ce5e97304cf4b7afa3319e"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id": "freecompany-TameWarTroll-simplified",
+  "simplified": {
+    "removed": [
+      "cards/TameWarTroll/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "The Free Company",
+  "sourceId": "freecompany",
+  "version": "0.3.6",
+  "commit": "3b2a1d494608e6a367ffc6914b64f2ef792f2bd0",
+  "root": {
+    "section": "cards",
+    "id": "TameWarTroll"
+  },
+  "kind": "spell",
+  "names": {
+    "english": "Tame the War Troll",
+    "french": "Apprivoiser : Troll de guerre",
+    "german": "Kriegstroll zähmen",
+    "russian": "Приручить: Боевой тролль",
+    "portuguese": "Domar: Troll de Guerra",
+    "chinese": "驯服战争巨魔",
+    "spanish": "Domar al Trol de guerra",
+    "chinese_traditional": "馴服戰爭巨魔",
+    "korean": "전쟁 트롤 길들이기",
+    "japanese": "戦のトロールを手なずける"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/a8995132bd069ca182dda4562af8a41acaff92400bb29f81d6e14c20fdf9b495.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/WarTrollArt.png": "assets/a8995132bd069ca182dda4562af8a41acaff92400bb29f81d6e14c20fdf9b495.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "TameWarTroll",
+        "names": {
+          "english": "Tame the War Troll",
+          "french": "Apprivoiser : Troll de guerre",
+          "german": "Kriegstroll zähmen",
+          "russian": "Приручить: Боевой тролль",
+          "portuguese": "Domar: Troll de Guerra",
+          "chinese": "驯服战争巨魔",
+          "spanish": "Domar al Trol de guerra",
+          "chinese_traditional": "馴服戰爭巨魔",
+          "korean": "전쟁 트롤 길들이기",
+          "japanese": "戦のトロールを手なずける"
+        },
+        "card_art": "@WarTroll",
+        "cost": 0,
+        "card_type": "spell",
+        "rarity": "rare",
+        "targets_room": true,
+        "targetless": true,
+        "traits": [
+          "@TameEphemeral"
+        ]
+      }
+    ],
+    "traits": [
+      {
+        "id": "TameEphemeral",
+        "name": "CardTraitEphemeral"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WarTroll",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WarTroll"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WarTroll",
+        "path": "textures/WarTrollArt.png"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_troll.json": "f91102b775c131b0895bbc03577750fdf220670f0afba52e5d9dfe111f90f01f"
+  }
+}

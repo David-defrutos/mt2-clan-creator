@@ -1,0 +1,89 @@
+{
+  "id": "ww-WW_A03-simplified",
+  "simplified": {
+    "removed": [
+      "relics/WW_A03/relic_effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "relics",
+    "id": "WW_A03"
+  },
+  "kind": "artifact",
+  "names": {
+    "spanish": "Beca de Matrícula Congelada",
+    "english": "Frozen Enrollment Scholarship",
+    "french": "Bourse d'inscription gelée",
+    "german": "Stipendium für eingefrorene Einschreibung",
+    "portuguese": "Bolsa de Matrícula Congelada",
+    "russian": "Стипендия замороженного зачисления",
+    "chinese": "冻结入学奖学金",
+    "chinese_traditional": "凍結入學獎學金",
+    "korean": "동결 등록 장학금",
+    "japanese": "凍結登録奨学金"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "common",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/58cbb8af111818c67e130956f83db9a3a38922e73caa2677491f57863dc7f246.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/relics/WW_A03IconSmall.png": "assets/35f7ae4f598157833f9acb6940b2d15e4cfeffa138b94c3483555e9a29d45dd8.png",
+    "textures/relics/WW_A03Icon.png": "assets/58cbb8af111818c67e130956f83db9a3a38922e73caa2677491f57863dc7f246.png"
+  },
+  "document": {
+    "relics": [
+      {
+        "id": "WW_A03",
+        "type": "collectable",
+        "names": {
+          "spanish": "Beca de Matrícula Congelada",
+          "english": "Frozen Enrollment Scholarship",
+          "french": "Bourse d'inscription gelée",
+          "german": "Stipendium für eingefrorene Einschreibung",
+          "portuguese": "Bolsa de Matrícula Congelada",
+          "russian": "Стипендия замороженного зачисления",
+          "chinese": "冻结入学奖学金",
+          "chinese_traditional": "凍結入學獎學金",
+          "korean": "동결 등록 장학금",
+          "japanese": "凍結登録奨学金"
+        },
+        "icon": "@WW_A03Icon",
+        "icon_small": "@WW_A03IconSmall",
+        "extensions": [
+          {
+            "collectable": {
+              "rarity": "common"
+            }
+          }
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_A03IconSmall",
+        "path": "textures/relics/WW_A03IconSmall.png"
+      },
+      {
+        "id": "WW_A03Icon",
+        "path": "textures/relics/WW_A03Icon.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/relics/WW_A03.json": "0431eb3de46e6dabc0d17613c7bb93b4587775de614f01e569f452420e75468e"
+  }
+}

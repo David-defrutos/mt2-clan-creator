@@ -1,0 +1,103 @@
+{
+  "id": "ww-WW_S10-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S10/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S10"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Publicación por Duplicado",
+    "english": "Double Publication",
+    "french": "Double publication",
+    "german": "Doppelveröffentlichung",
+    "portuguese": "Publicação Dupla",
+    "russian": "Двойная публикация",
+    "chinese": "双重发表",
+    "chinese_traditional": "雙重發表",
+    "korean": "이중 출판",
+    "japanese": "二重発表"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/55767bfbf4bea3d0bfdd258e501d4d575f45c484a2860cf482df7617cafecfd8.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S10CardArt.png": "assets/55767bfbf4bea3d0bfdd258e501d4d575f45c484a2860cf482df7617cafecfd8.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S10",
+        "names": {
+          "spanish": "Publicación por Duplicado",
+          "english": "Double Publication",
+          "french": "Double publication",
+          "german": "Doppelveröffentlichung",
+          "portuguese": "Publicação Dupla",
+          "russian": "Двойная публикация",
+          "chinese": "双重发表",
+          "chinese_traditional": "雙重發表",
+          "korean": "이중 출판",
+          "japanese": "二重発表"
+        },
+        "card_type": "spell",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_S10CardArt",
+        "targetless": true,
+        "traits": [
+          "@WW_Consume"
+        ],
+        "hide_in_logbook": true,
+        "ignore_when_counting_mastery": true
+      }
+    ],
+    "traits": [
+      {
+        "id": "WW_Consume",
+        "name": "CardTraitExhaustState"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S10CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S10CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S10CardArt",
+        "path": "textures/cards/WW_S10CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S10.json": "85b75b017df908ff10846db36f4882f48b5bd02d15cceb4e499656403a71d9bf",
+    "content/json/03_common.json": "93d922ea5ee845e8a0ac79dc6480520a849434978141fe1e9353366f1c156353"
+  }
+}

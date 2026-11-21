@@ -1,0 +1,222 @@
+{
+  "id": "ww-WW_U11-simplified",
+  "simplified": {
+    "removed": [
+      "characters/WW_U11_Character/starting_status_effects"
+    ]
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_U11"
+  },
+  "kind": "unit",
+  "names": {
+    "spanish": "Archivera de Hechizos Extraviados",
+    "english": "Lost Spells Archivist",
+    "french": "Archiviste des sorts perdus",
+    "german": "Archivar verlorener Zauber",
+    "portuguese": "Arquivista de Feitiços Perdidos",
+    "russian": "Архивариус потерянных заклинаний",
+    "chinese": "遗失法术档案员",
+    "chinese_traditional": "遺失法術檔案員",
+    "korean": "분실 주문 기록관",
+    "japanese": "紛失呪文の記録係"
+  },
+  "descriptions": {},
+  "cost": 1,
+  "costType": "normal",
+  "rarity": "uncommon",
+  "health": 25,
+  "attack": 0,
+  "size": 1,
+  "picture": "assets/b746a1314a09513ea2e337333746821ccb0d98956ee722a958dd3425d7103443.png",
+  "characterPicture": "assets/2718a8da0f0e82d836d2e6e8e50fb92a99a684427aacb8d73bb106b7313d4384.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_U11CardArt.png": "assets/b746a1314a09513ea2e337333746821ccb0d98956ee722a958dd3425d7103443.png",
+    "textures/WW_U11CharacterArt.png": "assets/2718a8da0f0e82d836d2e6e8e50fb92a99a684427aacb8d73bb106b7313d4384.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_U11",
+        "names": {
+          "spanish": "Archivera de Hechizos Extraviados",
+          "english": "Lost Spells Archivist",
+          "french": "Archiviste des sorts perdus",
+          "german": "Archivar verlorener Zauber",
+          "portuguese": "Arquivista de Feitiços Perdidos",
+          "russian": "Архивариус потерянных заклинаний",
+          "chinese": "遗失法术档案员",
+          "chinese_traditional": "遺失法術檔案員",
+          "korean": "분실 주문 기록관",
+          "japanese": "紛失呪文の記録係"
+        },
+        "card_type": "monster",
+        "cost": 1,
+        "rarity": "uncommon",
+        "targets_room": true,
+        "card_art": "@WW_U11CardArt",
+        "effects": [
+          "@WW_U11_Spawn"
+        ]
+      },
+      {
+        "id": "WW_U11_Ability",
+        "names": {
+          "english": "Spell Recovery",
+          "spanish": "Recuperación de Hechizos",
+          "french": "Récupération de sorts",
+          "german": "Zauberrückholung",
+          "portuguese": "Recuperação de Feitiços",
+          "russian": "Возвращение заклинаний",
+          "chinese": "法术回收",
+          "chinese_traditional": "法術回收",
+          "korean": "주문 회수",
+          "japanese": "呪文回収"
+        },
+        "descriptions": {
+          "english": "Return a consumed spell to your hand.",
+          "spanish": "Devuelve un hechizo consumido a tu mano.",
+          "french": "Reprend en main un sort consommé.",
+          "german": "Nimm einen verbrauchten Zauber auf die Hand.",
+          "portuguese": "Devolve um feitiço consumido à sua mão.",
+          "russian": "Возвращает израсходованное заклинание в руку.",
+          "chinese": "将一个已消耗法术返回手牌。",
+          "chinese_traditional": "將一個已消耗法術返回手牌。",
+          "korean": "소모된 주문 하나를 손으로 되돌립니다.",
+          "japanese": "消費済み呪文を手札に戻す。"
+        },
+        "card_type": "spell",
+        "cost": 0,
+        "rarity": "starter",
+        "is_an_ability": true,
+        "targetless": true,
+        "targets_room": false,
+        "cooldown": 3,
+        "hide_in_logbook": true,
+        "ignore_when_counting_mastery": true,
+        "card_art": "@WW_U11CardArt",
+        "effects": [
+          "@WW_U11_Ability_Effect"
+        ],
+        "initial_keyboard_target": "front_friendly"
+      }
+    ],
+    "effects": [
+      {
+        "id": "WW_U11_Spawn",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "room",
+        "target_team": "monsters",
+        "param_character": "@WW_U11_Character"
+      },
+      {
+        "id": "WW_U11_Ability_Effect",
+        "name": "CardEffectRecursion",
+        "target_mode": "exhaust",
+        "target_team": "none",
+        "target_card_type": "spell",
+        "target_card_selection_mode": "choose_to_hand",
+        "param_int": 1,
+        "hide_tooltip": true,
+        "param_str": "david.wwinc.ChooseSpell"
+      }
+    ],
+    "characters": [
+      {
+        "id": "WW_U11_Character",
+        "names": {
+          "spanish": "Archivera de Hechizos Extraviados",
+          "english": "Lost Spells Archivist",
+          "french": "Archiviste des sorts perdus",
+          "german": "Archivar verlorener Zauber",
+          "portuguese": "Arquivista de Feitiços Perdidos",
+          "russian": "Архивариус потерянных заклинаний",
+          "chinese": "遗失法术档案员",
+          "chinese_traditional": "遺失法術檔案員",
+          "korean": "분실 주문 기록관",
+          "japanese": "紛失呪文の記録係"
+        },
+        "character_art": "@WW_U11CharacterArt",
+        "size": 1,
+        "health": 25,
+        "attack_damage": 0,
+        "subtypes": [
+          "@WW_Witch"
+        ],
+        "ability": "@WW_U11_Ability"
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_U11CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_U11CardArt"
+          }
+        }
+      },
+      {
+        "id": "WW_U11CharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@WW_U11CharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 0.875,
+                "z": 0
+              },
+              "scale": {
+                "x": 1.75,
+                "y": 1.75,
+                "z": 1
+              }
+            }
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_U11CardArt",
+        "path": "textures/cards/WW_U11CardArt.png"
+      },
+      {
+        "id": "WW_U11CharacterArt",
+        "path": "textures/WW_U11CharacterArt.png"
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "WW_Witch",
+        "names": {
+          "english": "Witch",
+          "spanish": "Bruja",
+          "french": "Sorcière",
+          "german": "Hexe",
+          "portuguese": "Bruxa",
+          "russian": "Ведьма",
+          "chinese": "女巫",
+          "chinese_traditional": "女巫",
+          "korean": "마녀",
+          "japanese": "魔女"
+        }
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_U11.json": "354bb20941acad9a16b823273783609e6ccbab3e970b2fc776cf502967517600",
+    "content/json/00_foundation.json": "75ed24268e9476b3a4961987d6ffdf6b9e8706ca1e673179e3b3a7fbe8f07da8"
+  }
+}

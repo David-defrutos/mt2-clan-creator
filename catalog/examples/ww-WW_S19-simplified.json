@@ -1,0 +1,91 @@
+{
+  "id": "ww-WW_S19-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S19/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S19"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Baja de Asignatura",
+    "english": "Course Withdrawal",
+    "french": "Abandon de cours",
+    "german": "Kursabmeldung",
+    "portuguese": "Cancelamento de Disciplina",
+    "russian": "Отказ от курса",
+    "chinese": "退课",
+    "chinese_traditional": "退課",
+    "korean": "수강 철회",
+    "japanese": "履修取消"
+  },
+  "descriptions": {},
+  "cost": 0,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/d75fcd8973658568cadd6b5ea2c9cd7b312e36ef9905d93ca97e6218e2fdbcca.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S19CardArt.png": "assets/d75fcd8973658568cadd6b5ea2c9cd7b312e36ef9905d93ca97e6218e2fdbcca.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S19",
+        "names": {
+          "spanish": "Baja de Asignatura",
+          "english": "Course Withdrawal",
+          "french": "Abandon de cours",
+          "german": "Kursabmeldung",
+          "portuguese": "Cancelamento de Disciplina",
+          "russian": "Отказ от курса",
+          "chinese": "退课",
+          "chinese_traditional": "退課",
+          "korean": "수강 철회",
+          "japanese": "履修取消"
+        },
+        "card_type": "spell",
+        "cost": 0,
+        "rarity": "rare",
+        "targets_room": true,
+        "card_art": "@WW_S19CardArt",
+        "targetless": true
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S19CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S19CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S19CardArt",
+        "path": "textures/cards/WW_S19CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S19.json": "bd6f4d236cc6c0577e86371ae31a83ec4ed0ccc49ee7c6fba07e7f740acf83a4"
+  }
+}

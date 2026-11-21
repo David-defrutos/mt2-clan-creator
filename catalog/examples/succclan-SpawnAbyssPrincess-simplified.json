@@ -1,0 +1,243 @@
+{
+  "id": "succclan-SpawnAbyssPrincess-simplified",
+  "simplified": {
+    "removed": [
+      "character_triggers/AbyssPrincessOnAttack/effects"
+    ]
+  },
+  "source": "SuccClan",
+  "sourceId": "succclan",
+  "version": "0.2.1",
+  "commit": "f08fbc4fb660c8da66a7f47f1a43ea1df1d7ff73",
+  "root": {
+    "section": "cards",
+    "id": "SpawnAbyssPrincess"
+  },
+  "kind": "unit",
+  "names": {
+    "english": "Abyss Princess",
+    "chinese": "深渊公主",
+    "spanish": "Princesa del abismo",
+    "french": "Princesse des abysses",
+    "german": "Prinzessin des Abgrunds",
+    "portuguese": "Princesa do Abismo",
+    "russian": "Принцесса бездны",
+    "chinese_traditional": "深淵公主",
+    "japanese": "深淵の姫",
+    "korean": "심연의 공주"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": 8,
+  "attack": 25,
+  "size": 2,
+  "picture": "assets/4336f893a341a8b9f402ad4d2e55385cd5b5b6e16e40669e52e3e02e7bb7e11f.png",
+  "characterPicture": "assets/6b677b4551178901d407dbbc6cc05559c577e9579223ac7c6bcefe8aa190ca72.png",
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/AbyssPrincessCharacterArt.png": "assets/6b677b4551178901d407dbbc6cc05559c577e9579223ac7c6bcefe8aa190ca72.png",
+    "textures/AbyssPrincessCardArt.png": "assets/4336f893a341a8b9f402ad4d2e55385cd5b5b6e16e40669e52e3e02e7bb7e11f.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "SpawnAbyssPrincess",
+        "names": {
+          "english": "Abyss Princess",
+          "chinese": "深渊公主",
+          "spanish": "Princesa del abismo",
+          "french": "Princesse des abysses",
+          "german": "Prinzessin des Abgrunds",
+          "portuguese": "Princesa do Abismo",
+          "russian": "Принцесса бездны",
+          "chinese_traditional": "深淵公主",
+          "japanese": "深淵の姫",
+          "korean": "심연의 공주"
+        },
+        "card_art": "@AbyssPrincessCardArt",
+        "cost": 2,
+        "card_type": "monster",
+        "rarity": "rare",
+        "targets_room": true,
+        "effects": [
+          "@SpawnAbyssPrincess"
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "id": "SpawnAbyssPrincess",
+        "name": "CardEffectSpawnMonster",
+        "target_mode": "drop_target_character",
+        "param_character": "@AbyssPrincess"
+      },
+      {
+        "id": "AbyssPrincessRage",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "room",
+        "target_team": "heroes",
+        "param_status_effects": [
+          {
+            "status": "buff",
+            "count": 3
+          }
+        ],
+        "target_ignore_bosses": true
+      },
+      {
+        "id": "AbyssPrincessSap",
+        "name": "CardEffectAddStatusEffect",
+        "target_mode": "self",
+        "target_team": "monsters",
+        "param_status_effects": [
+          {
+            "status": "debuff",
+            "count": 3
+          }
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "AbyssPrincess",
+        "attack_vfx": "@SuccFXPsionicAttack",
+        "impact_vfx": "@SuccFXArcaneImpact",
+        "death_vfx": "@SuccFXDeathSmoke",
+        "names": {
+          "english": "Abyss Princess",
+          "chinese": "深渊公主",
+          "spanish": "Princesa del abismo",
+          "french": "Princesse des abysses",
+          "german": "Prinzessin des Abgrunds",
+          "portuguese": "Princesa do Abismo",
+          "russian": "Принцесса бездны",
+          "chinese_traditional": "深淵公主",
+          "japanese": "深淵の姫",
+          "korean": "심연의 공주"
+        },
+        "character_art": "@AbyssPrincessCharacterArt",
+        "size": 2,
+        "attack_damage": 25,
+        "health": 8,
+        "subtypes": [
+          "SubtypesData_BannerUnit",
+          "@Sub_Naga"
+        ],
+        "starting_status_effects": [
+          {
+            "status": "ambush",
+            "count": 1
+          }
+        ],
+        "triggers": [
+          "@AbyssPrincessOnAttack"
+        ]
+      }
+    ],
+    "character_triggers": [
+      {
+        "id": "AbyssPrincessOnAttack",
+        "trigger": "on_attacking",
+        "effects": [
+          "@AbyssPrincessSap",
+          "@AbyssPrincessRage"
+        ]
+      }
+    ],
+    "subtypes": [
+      {
+        "id": "Sub_Naga",
+        "names": {
+          "english": "Naga",
+          "chinese": "娜迦",
+          "spanish": "Naga",
+          "french": "Naga",
+          "german": "Naga",
+          "portuguese": "Naga",
+          "russian": "Нага",
+          "chinese_traditional": "娜迦",
+          "japanese": "ナーガ",
+          "korean": "나가"
+        }
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "AbyssPrincessCharacterArt",
+        "type": "character_art",
+        "extensions": {
+          "character_art": {
+            "sprite": "@AbyssPrincessCharacterArt",
+            "transform": {
+              "position": {
+                "x": 0,
+                "y": 1.1105,
+                "z": 0.1
+              },
+              "scale": {
+                "x": 0.85,
+                "y": 0.85,
+                "z": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "AbyssPrincessCardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@AbyssPrincessCardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "AbyssPrincessCharacterArt",
+        "path": "textures/AbyssPrincessCharacterArt.png"
+      },
+      {
+        "id": "AbyssPrincessCardArt",
+        "path": "textures/AbyssPrincessCardArt.png"
+      }
+    ],
+    "vfxs": [
+      {
+        "id": "SuccFXDeathSmoke",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_DeathSmoke_PS.prefab",
+          "asset_guid": "d78c3285156744647bfd58ecd73c989b"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXArcaneImpact",
+        "vfx_left": {
+          "asset_name": "Assets/FX/FX_Ancient Magic Impact_PS.prefab",
+          "asset_guid": "cb226d23beb7dfd4f8bd15c19efeebfc"
+        },
+        "spawn_location": "character_center"
+      },
+      {
+        "id": "SuccFXPsionicAttack",
+        "vfx_left": {
+          "asset_name": "Assets/VFX/CharacterFX/Attacks/Ekka/FX_EkkaAttack.prefab",
+          "asset_guid": "c7e542f2b751e704d93e28e27fa469b4"
+        },
+        "spawn_location": "character_center"
+      }
+    ]
+  },
+  "files": {
+    "json/units/unit_AbyssPrincess.json": "6add6a727fc73c68d4e84c56db37d668363395911c47d064431a3fea496581c5",
+    "json/class.json": "65c18f4c8b8c97b62edfa51f3d02d2cae856fe878c761586e950fc9993580bc3",
+    "json/audiovisual.json": "512bb220f0daa893ec9ec332f5b8491593280621733370fe454bcf73f86f68f2"
+  }
+}

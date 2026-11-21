@@ -1,0 +1,91 @@
+{
+  "id": "ww-WW_S01-simplified",
+  "simplified": {
+    "removed": [
+      "cards/WW_S01/effects"
+    ],
+    "needsEffect": true
+  },
+  "source": "W&W Inc.",
+  "sourceId": "ww",
+  "version": "0.1.171",
+  "commit": "43b9c410c87064c1a813c75058bb8630d05d5316",
+  "root": {
+    "section": "cards",
+    "id": "WW_S01"
+  },
+  "kind": "spell",
+  "names": {
+    "spanish": "Circular de Daños Interdepartamentales",
+    "english": "Interdepartmental Damage Memo",
+    "french": "Note de dégâts interdépartementale",
+    "german": "Abteilungsübergreifende Schadensmitteilung",
+    "portuguese": "Memorando de Danos Interdepartamentais",
+    "russian": "Межкафедральная записка об уроне",
+    "chinese": "跨系伤害备忘录",
+    "chinese_traditional": "跨系傷害備忘錄",
+    "korean": "학과 간 피해 공문",
+    "japanese": "学科間ダメージ通知"
+  },
+  "descriptions": {},
+  "cost": 2,
+  "costType": "normal",
+  "rarity": "rare",
+  "health": null,
+  "attack": null,
+  "size": 1,
+  "picture": "assets/664c388a76972e3be99c1e0ccf518558cf2bf4b1d62e98966bf1224d13128b4f.png",
+  "characterPicture": null,
+  "providers": [
+    "game"
+  ],
+  "externalResources": [],
+  "assets": {
+    "textures/cards/WW_S01CardArt.png": "assets/664c388a76972e3be99c1e0ccf518558cf2bf4b1d62e98966bf1224d13128b4f.png"
+  },
+  "document": {
+    "cards": [
+      {
+        "id": "WW_S01",
+        "names": {
+          "spanish": "Circular de Daños Interdepartamentales",
+          "english": "Interdepartmental Damage Memo",
+          "french": "Note de dégâts interdépartementale",
+          "german": "Abteilungsübergreifende Schadensmitteilung",
+          "portuguese": "Memorando de Danos Interdepartamentais",
+          "russian": "Межкафедральная записка об уроне",
+          "chinese": "跨系伤害备忘录",
+          "chinese_traditional": "跨系傷害備忘錄",
+          "korean": "학과 간 피해 공문",
+          "japanese": "学科間ダメージ通知"
+        },
+        "card_type": "spell",
+        "cost": 2,
+        "rarity": "rare",
+        "targets_room": true,
+        "card_art": "@WW_S01CardArt",
+        "targetless": true
+      }
+    ],
+    "game_objects": [
+      {
+        "id": "WW_S01CardArt",
+        "type": "card_art",
+        "extensions": {
+          "card_art": {
+            "sprite": "@WW_S01CardArt"
+          }
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "WW_S01CardArt",
+        "path": "textures/cards/WW_S01CardArt.png"
+      }
+    ]
+  },
+  "files": {
+    "content/json/cards/WW_S01.json": "de7b2819a735741b217f8421bc7fa91e5fe7e834192e723fcf99511c3c329dd5"
+  }
+}
