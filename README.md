@@ -88,6 +88,10 @@ Open **View card JSON** while editing a card to see its definition and related r
 
 The first build needs an internet connection. By default the creator downloads compiler references for Trainworks Reloaded 0.8.0 and Conductor 0.6.0 from GitHub, and BepInEx BaseLib from the BepInEx NuGet feed. It caches them for future builds. You can choose newer build references when available. Manage the mods used to play separately in your mod manager.
 
+**Unit with Conductor abilities**
+
+![Unit with Conductor abilities](docs/screenshots/conductor-smirk.png)
+
 Use the in-game checklist to record what you have tried. The checklist applies to the installed version, so reinstall after changing the clan’s playable content before checking it again.
 
 ## Back up, update, or remove a clan
@@ -174,3 +178,5 @@ The creator relies on community tools, including [Trainworks Reloaded](https://g
 <!-- 2026-11-21-2202||codex-clan-editor||clan-creator/README.md||Documentar el asistente con cinco capturas en inglés -->
 <!-- 2026-11-21-2205||codex-clan-editor||clan-creator/README.md||Cambiar el título de la sección de descarga al texto solicitado -->
 <!-- 2026-11-21-2208||codex-clan-editor||clan-creator/README.md||Verificar el README contra el asistente y el ZIP publicado, y actualizar las instrucciones de uso -->
+<!-- 2026-11-22-0928||codex-readme-conductor||clan-creator/README.md||Añadir captura de Smirk y texto sobre soporte de habilidades de Conductor -->
+<!-- 2026-11-22-0948||codex-readme-conductor||clan-creator/README.md||Mover captura tras el parrafo de referencias de compilacion y titular Unit with Conductor abilities -->
