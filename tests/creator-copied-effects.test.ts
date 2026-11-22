@@ -1,6 +1,7 @@
 import test from 'node:test';
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
+import {randomUUID} from 'node:crypto';
 import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {buildOfficialDraft} from '../src/server/creator/official-clans.ts';
@@ -10,7 +11,7 @@ import {applyExampleParameters,cloneExampleCard,creatorRules,exampleParameters,r
 import {templateEffects} from '../src/server/creator/template-effects.ts';
 import {validateDraftShape} from '../src/server/creator/projects.ts';
 import {generateClan} from '../src/server/creator/export.ts';
-import {blankCard} from '../src/server/creator/model.ts';
+import {blankCard,blankDraft} from '../src/server/creator/model.ts';
 import {combatExample} from '../src/web/creator/combat-example.tsx';
 import {EffectEditor} from '../src/web/creator/components.tsx';
 import {description} from '../src/web/creator/presentation.ts';
@@ -20,6 +21,47 @@ import {TemplateEffectsEditor} from '../src/web/creator/template-effects-editor.
 import {replaceCopiedEffect} from '../src/web/creator/copied-effect-replacement.tsx';
 import {effectOptions} from '../src/web/creator/effect-options.ts';
 import {visibleSearchOptions} from '../src/web/creator/search-select.tsx';
+
+test('verified card destinations expose named choices and preserve the native action on export',async()=>{
+ const example=await readExample('official-EmberCache'),rules=await creatorRules();
+ const parameters=exampleParameters(example),template={example,parameters};
+ const card=cloneExampleCard(example,'destination','en');
+ const parameter=parameters.find(p=>p.label==='CardEffectAddBattleCard'&&p.path.at(-1)==='param_int')!;
+ assert.deepEqual(parameter.choices,[0,1,3,5,7]);
+ const original=structuredClone(example.document);
+ assert.deepEqual(applyExampleParameters(example,card),original);
+ const pending=blankDraft(randomUUID());
+ pending.cards=[card];
+ const html=renderToStaticMarkup(React.createElement(TemplateEffectsEditor,{card,template,rules,language:'en',onChange:()=>{}}));
+ assert.match(html,/Destination of added cards/);
+ assert.match(html,/<option value="3">Hand<\/option>/);
+ card.parameters[parameter.key]=3;
+ await validateDraftShape(pending);
+ assert.match(description(card,template,'en',rules),/to your hand/);
+ assert.match(description(card,template,'es',rules),/a tu mano/);
+ const doc=JSON.parse((await generateClan(pending,card.uid)).cardJson!);
+ const action=doc.effects.find((effect:any)=>effect.name==='CardEffectAddBattleCard');
+ const source=original.effects.find(effect=>effect.id===parameter.id);
+ assert.equal(action.param_int,3);
+ assert.equal(action.param_int_2,source?.param_int_2);
+ assert.deepEqual(example.document,original);
+ card.parameters[parameter.key]=2;
+ await assert.rejects(validateDraftShape(pending),/cantidad/);
+});
+
+test('unknown or ambiguous destinations remain part of the original graph without acquiring a control',async()=>{
+ const example=await readExample('official-EmberCache');
+ for(const ambiguous of [false,true]){
+  const modified=structuredClone(example);
+  const effect=modified.document.effects.find(action=>action.name==='CardEffectAddBattleCard')!;
+  if(ambiguous){
+   modified.document.cards.find(card=>card.id===modified.root.id)!.effects.push('@'+effect.id);
+  }else effect.param_int=8;
+  const parameters=exampleParameters(modified);
+  assert.ok(!parameters.some(p=>p.id===effect.id&&p.path.at(-1)==='param_int'));
+  assert.deepEqual(applyExampleParameters(modified,cloneExampleCard(modified,'fallback','en')),modified.document);
+ }
+});
 
 test('Flogging lets the player change when, action and target and exports only the edited copy',async()=>{
  const rules=await creatorRules(),draft=await buildCommunityDraft('succclan');
@@ -315,6 +357,7 @@ test('copied clans can replace card generation and activated actions in their or
 test('a copied artifact can replace its final removed rule without losing its illustration',async()=>{
  const rules=await creatorRules(),draft=await buildOfficialDraft('hellhorned','en');
  const example=await readExample('official-relic-GoldOnDeath'),card=cloneExampleCard(example,'replaced-artifact','en');
+ if(!example.picture)card.image=(await readExample('freecompany-Bless')).picture;
  draft.cards.push(card);
  const original=templateEffects(example.document,example.root).find(row=>row.section==='relic_effects')!;
  const template={example,parameters:exampleParameters(example)};
@@ -447,8 +490,8 @@ test('copied scaling, next-turn draw and lunar upgrades expose and export their 
    assert.match(description(card,{example,parameters},'en',rules),expected);
    if(['official-Channelsong','official-Cleave','official-relic-ExtraSpawnTrigger'].includes(id)){
     const root=(doc.cards??doc.relics).find(entry=>entry.names.english===card.name);
-    assert.match(root.descriptions.english,expected);
-    assert.match(root.descriptions.spanish,/3/);
+    assert.match(root.descriptions.english,id==='official-Cleave'?/\[effect1\.power_unmodified\] ×/:expected);
+    assert.match(root.descriptions.spanish,id==='official-Cleave'?/\[effect1\.power_unmodified\] ×/:/3/);
    }
   }
   else assert.match(native.param_description.english,/\[moonshade\]/);
@@ -505,3 +548,6 @@ test('a copied trigger with child actions does not repeat its timing under What 
 // 2026-11-21-1909||codex-clan-editor||clan-creator/tests/creator-copied-effects.test.ts||Comprobar textos de cantidades fijas en el JSON y en ambas vistas previas
 // 2026-11-21-1947||codex-clan-editor||clan-creator/tests/creator-copied-effects.test.ts||Probar el JSON y el texto de las nuevas reglas de sala y artefacto con los mismos parámetros
 // 2026-11-21-1949||codex-clan-editor||clan-creator/tests/creator-copied-effects.test.ts||Verificar que un artefacto de un solo efecto muestra su descripción original en la fila de edición
+// 2026-11-22-0935||codex-clan-editor||clan-creator/tests/creator-copied-effects.test.ts||Comprobar el marcador del multiplicador de ataque exportado
+// 2026-11-22-0956||codex-clan-editor||clan-creator/tests/creator-copied-effects.test.ts||Verificar el selector y la preservación de destinos ambiguos o desconocidos
+// 2026-11-22-1040||codex-clan-creator-art||clan-creator/tests/creator-copied-effects.test.ts||Dar arte de fixture al test de conservacion de ilustraciones cuando el catalogo publico no incluye artefactos

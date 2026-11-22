@@ -1,10 +1,9 @@
-import {gameText} from './description-tokens.js';
 import {applyExampleParameterValues,type ExampleParameter} from './example-parameter-values.js';
 import {triggerLabel,triggerOption,triggerReference} from './trigger-reference.js';
-import {effectTargetMode,effectTargetTeam,recipeDescription} from './recipe-text.js';
+import {effectTargetMode,effectTargetTeam,fixedDamageToken,recipeDescription} from './recipe-text.js';
 import {unitStatusKey,type CardDraft,type CopiedEffectEdit} from './model.js';
 import {isActivatedCard,restoreSpellEffectTargets,runsRelicActions,templateEffects,type TemplateEffect} from './template-effects.js';
-import {nativeEffectText,reviseEffectDescriptions,reviseMovementDescriptions,splitDescription,generatedLocales} from './template-effect-text.js';
+import {nativeEffectText,reviseEffectDescriptions,reviseMovementDescriptions,reviseSharedAmountDescriptions,splitDescription,generatedLocales} from './template-effect-text.js';
 
 type Doc=Record<string,Record<string,any>[]>;
 type Root={section:string;id:string};
@@ -118,8 +117,8 @@ export function copiedEffectControls(kind:CardDraft['kind'],doc:Doc,root:Root,ro
   roomTiming?roomCombatModifiers.map(value=>({value,label:rules.nativeRoomTiming[value]})):[];
  const recipes=!editableAction?[]:rules.recipes.filter((recipe:any)=>{
   // Mix opens a game dialog, so it belongs in manually played actions.
-  if(recipe.castOnly)return directSpell&&(isPlayerAction(effect)||effect.name==='CardEffectMix'||
-   owner?.effects?.length===1&&!!target&&basicTarget(effect))||abilityAction&&effect.name==='CardEffectMix';
+  if(recipe.castOnly)return recipe.class==='CardEffectMix'&&(directSpell&&(isPlayerAction(effect)||effect.name==='CardEffectMix'||
+   owner?.effects?.length===1&&!!target&&basicTarget(effect))||abilityAction&&effect.name==='CardEffectMix');
   if(relicRecipient)return recipe.target!=='none'&&recipe.id!=='max_health'&&targetedClasses.has(recipe.class);
   if((mixWithSingleAction&&recipe.target!=='none')||target&&basicTarget(effect))return recipe.target!=='none'&&recipe.id!=='max_health'&&
    (directSpell||targetedClasses.has(recipe.class))&&(!recipe.singleTarget||!(edit?.target??target??'spell_target').startsWith('all_'));
@@ -164,10 +163,11 @@ export function validateCopiedEffectEdits(card:CardDraft,doc:Doc,root:Root,rules
  });
 }
 
-function editedEffectText(doc:Doc,effect:Record<string,any>,language:string,rules:any,unit=false){
+function editedEffectText(doc:Doc,effect:Record<string,any>,language:string,rules:any,unit=false,effectPath=''){
  const recipe=({CardEffectDamage:'damage',CardEffectHeal:'heal',CardEffectBuffDamage:'attack'} as Record<string,string>)[effect.name];
  const target=targetForDefinition(effect,unit);
- if(recipe&&target&&Number.isFinite(effect.param_int))return recipeDescription({recipe,amount:effect.param_int,target,when:direct},rules,language,unit);
+ if(recipe&&target&&Number.isFinite(effect.param_int)&&(recipe!=='damage'||fixedDamageToken(effect,'effect0')))
+  return recipeDescription({recipe,amount:effect.param_int,target,when:direct},rules,language,unit,fixedDamageToken(effect,effectPath));
  if(effect.name==='CardEffectMix')return '[mix].';
  const playerRecipe=effect.name==='CardEffectDraw'?'draw':effect.name==='CardEffectGainEnergy'?'energy':undefined;
  if(playerRecipe&&Number.isFinite(effect.param_int)){
@@ -184,7 +184,7 @@ function editedEffectText(doc:Doc,effect:Record<string,any>,language:string,rule
    return choices.map((choice:any)=>recipeDescription(choice,rules,language,unit)).join(' ');
   }
  }
- return nativeEffectText(doc,'effects',effect,language,rules);
+ return nativeEffectText(doc,'effects',effect,language,rules,0,effectPath);
 }
 
 function reviseTargetText(doc:Doc,owner:Record<string,any>,changed:Set<string>,rules:any,unit=false,changedClasses=new Set<string>()){
@@ -193,21 +193,21 @@ function reviseTargetText(doc:Doc,owner:Record<string,any>,changed:Set<string>,r
  if(!effects.some((effect:any)=>effect&&changed.has(effect.id)))return;
  const original=owner.descriptions??{};
  owner.descriptions=Object.fromEntries(Object.entries(generatedLocales).map(([locale,language])=>{
-  const summarize=(effect:any)=>editedEffectText(doc,effect,language,rules,unit);
+  const summarize=(effect:any,index:number)=>effect?editedEffectText(doc,effect,language,rules,unit,'effect'+index):'';
   const message=original[locale];
-  const fresh=()=>effects.filter(Boolean).map(summarize).filter(Boolean).join(' ');
+  const fresh=()=>effects.map(summarize).filter(Boolean).join(' ');
   if(typeof message!=='string'||effects.length===1||effects.some((effect:any)=>effect&&changedClasses.has(effect.id))){
    return [locale,fresh()];
   }
   const referenced=new Set([...message.matchAll(/\[(?:trigger)?effect(\d+)\./gi)].map(match=>Number(match[1])));
   if(effects.some((effect:any,index:number)=>effect&&!referenced.has(index)))return [locale,fresh()];
-  const summaries=effects.map((effect:any)=>effect&&changed.has(effect.id)?summarize(effect):'');
+  const summaries=effects.map((effect:any,index:number)=>effect&&changed.has(effect.id)?summarize(effect,index):'');
   let found=false;
   const revised=splitDescription(message).map(sentence=>{
    const indices=[...sentence.matchAll(/\[(?:trigger)?effect(\d+)\./gi)].map(match=>Number(match[1]));
    if(!indices.some(index=>summaries[index]))return sentence;
    found=true;
-   return [...new Set(indices)].map(index=>effects[index]&&summarize(effects[index])).filter(Boolean).join(' ');
+   return [...new Set(indices)].map(index=>summarize(effects[index],index)).filter(Boolean).join(' ');
   });
   return [locale,found?revised.join(' '):fresh()];
  }));
@@ -335,7 +335,7 @@ export function applyCopiedEffectEdits(doc:Doc,original:Doc,root:Root,card:CardD
    let id='CreatorTiming_'+row.id;
    while(triggers.some(trigger=>trigger.id===id))id+='_';
    const descriptions=Object.fromEntries([['english','en'],['spanish','es']].map(([locale,language])=>[
-    locale, editedEffectText(doc,definition!,language,rules),
+    locale, editedEffectText(doc,definition!,language,rules,false,'effect0'),
    ]));
    triggers.push({id,trigger:edits[row.key].when,effects:['@'+row.id],descriptions});
    (owner.triggers??=[]).push('@'+id);
@@ -353,40 +353,6 @@ export function applyCopiedEffectEdits(doc:Doc,original:Doc,root:Root,card:CardD
  if(card.kind==='artifact'&&owner&&changedBranches.size)refreshArtifactText(doc,root,owner,changedBranches,rules);
 }
 
-function reviseSharedAmountDescriptions(doc:Doc,original:Doc,owner:Record<string,any>,previous:readonly unknown[],field:string,rules:any){
- if(!owner.descriptions||previous.length!==owner[field]?.length)return;
- const definitions=previous.map(ref=>linked(original,'effects',ref));
- // A first hit may have its own definition for visuals or to establish the target for later hits.
- const comparable=definitions.map(effect=>{
-  if(effect?.name!=='CardEffectDamage')return;
-  const fields=Object.entries(effect).filter(([key])=>
-   !['id','applied_vfx','should_test'].includes(key)).sort(([a],[b])=>a.localeCompare(b));
-  return JSON.stringify(fields.map(([key,value])=>[key,key==='target_mode'&&value==='last_targeted_characters'?
-   'drop_target_character':value]));
- });
- const pattern=/\[((?:trigger)?effect)(\d+)\.([\w.]+)\]/gi;
- for(const [locale,message] of Object.entries(owner.descriptions)){
-  if(locale==='key'||typeof message!=='string')continue;
-  const tags=[...message.matchAll(pattern)];
-  const revised=message.replace(pattern,(tag,prefix,index,suffix)=>{
-   const source=definitions[Number(index)];
-   if(!source)return tag;
-   const signature=comparable[Number(index)];
-   const siblings=definitions.flatMap((effect,i)=>effect&&(effect.id===source.id||signature&&signature===comparable[i])?[i]:[]);
-   const repeats=new Set(siblings.map(i=>definitions[i]?.id)).size<siblings.length;
-   if(!repeats||tags.some(other=>Number(other[2])!==Number(index)&&siblings.includes(Number(other[2]))&&
-    other[3].toLowerCase()===suffix.toLowerCase()))return tag;
-   const context={section:field==='effects'?'cards':'character_triggers',definition:owner};
-   const replacements=siblings.map(i=>'['+prefix+i+'.'+suffix+']');
-   const values=replacements.map(value=>gameText(value,doc,context,'en',rules));
-   return values.every(value=>/^-?\d+$/.test(value))&&new Set(values).size>1?replacements.join(' / '):tag;
-  });
-  if(revised===message)continue;
-  owner.descriptions[locale]=revised;
-  delete owner.descriptions.key;
- }
-}
-
 function refreshArtifactText(doc:Doc,root:Root,owner:Record<string,any>,changed:Set<string>,rules:any){
  const rows=templateEffects(doc,root);
  const children=(row:TemplateEffect)=>rows.filter(candidate=>candidate.parent===row.key);
@@ -395,14 +361,16 @@ function refreshArtifactText(doc:Doc,root:Root,owner:Record<string,any>,changed:
  const changedIndexes=new Set(sources.filter(affected).map(source=>source.index));
  if(!changedIndexes.size)return;
  const describe=(source:TemplateEffect,language:string):string=>{
+  const path='effect'+source.index;
   const triggers=children(source).filter(row=>row.section==='character_triggers');
-  if(!triggers.length)return nativeEffectText(doc,'relic_effects',source.definition,language,rules);
+  if(!triggers.length)return nativeEffectText(doc,'relic_effects',source.definition,language,rules,0,path);
   return triggers.map(trigger=>{
+   const triggerPath=path+'.trigger'+trigger.index;
    if(trigger.definition.descriptions?.[language==='es'?'spanish':'english'])
-    return nativeEffectText(doc,'character_triggers',trigger.definition,language,rules);
+    return nativeEffectText(doc,'character_triggers',trigger.definition,language,rules,0,triggerPath);
    const timing=triggerLabel(trigger.definition.trigger,rules,language);
    const actions=children(trigger).filter(action=>action.section==='effects')
-    .map(action=>editedEffectText(doc,action.definition,language,rules,true)).filter(Boolean).join(' ');
+    .map(action=>editedEffectText(doc,action.definition,language,rules,true,triggerPath+'.effect'+action.index)).filter(Boolean).join(' ');
    return timing&&actions?timing+': '+actions:actions;
   }).filter(Boolean).join(' ');
  };
@@ -431,20 +399,35 @@ function refreshRoomText(doc:Doc,rows:TemplateEffect[],owner:Record<string,any>,
  const rootRows=rows.filter(row=>!row.parent&&row.ownerId===owner.id&&row.field==='effects');
  if(!rootRows.some(affected))return;
  const live=new Set(templateEffects(doc,{section:'cards',id:owner.id}).map(row=>row.section+'|'+row.id));
- const roomSummary=(row:TemplateEffect,language:string):string=>{
+ const pathFor=(row:TemplateEffect,parentPath:string)=>{
+  const refs=linked(doc,row.ownerSection,row.ownerId)?.[row.field];
+  if(!Array.isArray(refs))return '';
+  const holdsEffect=(ref:unknown)=>linked(doc,row.section,ref)?.id===row.id;
+  const index=holdsEffect(refs[row.index])?row.index:refs.findIndex(holdsEffect);
+  if(index<0)return '';
+  if(row.section==='effects'){
+   if(parentPath)return parentPath+'.effect'+index;
+   if(row.ownerSection==='cards')return 'effect'+index;
+  }
+  if(parentPath&&row.field==='room_modifier_upgrades')return parentPath+'.upgrade.roommodifier'+index;
+  if(parentPath&&row.field==='trigger_upgrades')return parentPath+'.upgrade.charactertrigger'+index;
+  return '';
+ };
+ const roomSummary=(row:TemplateEffect,language:string,parentPath=''):string=>{
   if(!live.has(row.section+'|'+row.id))return '';
   const effect=linked(doc,row.section,row.id);
   if(!effect)return '';
   const nested=children(row);
+  const path=pathFor(row,parentPath);
   if(effect.name==='CardEffectAttachTrainRoomAttachment'){
-   return nested.map(child=>roomSummary(child,language)).filter(Boolean).join(' ');
+   return nested.map(child=>roomSummary(child,language,path)).filter(Boolean).join(' ');
   }
   if(nested.length&&['character_triggers','room_modifiers'].includes(row.section)){
    const timing=triggerLabel(effect.trigger,rules,language)||rules.nativeRoomTiming[effect.name]?.[language];
-   const actions=nested.map(child=>roomSummary(child,language)).filter(Boolean).join(' ');
+   const actions=nested.map(child=>roomSummary(child,language,path)).filter(Boolean).join(' ');
    return timing&&actions?timing+': '+actions:actions;
   }
-  const action=row.section==='effects'?editedEffectText(doc,effect,language,rules,row.ownerSection==='character_triggers'):
+  const action=row.section==='effects'?editedEffectText(doc,effect,language,rules,row.ownerSection==='character_triggers',path):
    nativeEffectText(doc,row.section,effect,language,rules);
   return action&&!/[.!?]$/.test(action)?action+'.':action;
  };
@@ -489,3 +472,5 @@ function refreshRoomText(doc:Doc,rows:TemplateEffect[],owner:Record<string,any>,
 // 2026-11-21-2015||codex-clan-editor||clan-creator/src/server/creator/copied-effect-edits.ts||Reescribir la descripción de un artefacto de una regla a partir de sus acciones activas
 // 2026-11-21-2016||codex-clan-editor||clan-creator/src/server/creator/copied-effect-edits.ts||Limitar sustituciones de artefactos a contenedores que ejecutan las acciones y mantener la capacidad de sus destinatarios
 // 2026-11-21-2142||codex-clan-editor||clan-creator/src/server/creator/copied-effect-edits.ts||Eliminar un espacio sobrante antes del cálculo de la activación seleccionada
+// 2026-11-22-0935||codex-clan-editor||clan-creator/src/server/creator/copied-effect-edits.ts||Vincular el daño al índice del efecto dentro de cartas, activaciones, salas y artefactos
+// 2026-11-22-0944||codex-clan-editor||clan-creator/src/server/creator/copied-effect-edits.ts||Mantener la sustitución de acciones copiadas limitada a recetas que admite

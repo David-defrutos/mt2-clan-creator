@@ -810,6 +810,8 @@
     }
   ],
   "labels": {
+    "manualCardDescription": {"en":"Custom card description","es":"Descripción personalizada de la carta"},
+    "manualCardDescriptionHelp": {"en":"Leave a language blank to use its automatic description. Custom text stays as written when you edit effects.","es":"Deja un idioma en blanco para usar su descripción automática. El texto personalizado se conserva tal como lo escribas al cambiar los efectos."},
     "app": {
       "es": "Crea tu clan",
       "en": "Create your clan"
@@ -1696,6 +1698,15 @@
     }
   },
   "recipes": [
+    {
+      "id": "magic_power_in_hand",
+      "label": {"es": "Dar Poder mágico a los hechizos en mano", "en": "Give Magic Power to spells in hand"},
+      "help": {"es": "Aumenta el daño y la curación de los hechizos compatibles que tienes en la mano durante este combate.", "en": "Increases the damage and healing of eligible spells in your hand for this combat."},
+      "class": "CardEffectAddTempCardUpgradeToCardsInHand",
+      "amount": 10,
+      "target": "none",
+      "castOnly": true
+    },
     {
       "id": "damage",
       "label": {
@@ -3586,6 +3597,10 @@
     }
   ],
   "recipeDescriptions": {
+    "magic_power_in_hand": {
+      "es": "Añade +{amount} [magicpower] a los hechizos de la mano.",
+      "en": "Apply +{amount} [magicpower] to spells in hand."
+    },
     "mix": {"es": "Mezclar.", "en": "Mix."},
     "advance": {"es":"Adelanta a {target}.","en":"Advance {target}."},
     "retreat": {"es":"Mueve a {target} al fondo.","en":"Retreat {target}."},
@@ -5001,6 +5016,8 @@
     "CardEffectDrawAdditionalNextTurn": {"ignoreRange":true,"minimum":0},
     "CardEffectDrawType": {"ignoreRange":true,"minimum":0},
     "CardEffectDamagePerSourceAttack": {"ignoreRange":true,"minimum":0},
+    "CardEffectDamagePerStatusEffect": {"ignoreRange":true,"minimum":0},
+    "CardEffectHealAndDamageRelative": {"ignoreRange":true,"minimum":0},
     "CardEffectRecursion": {"selectionPrefix":"random_","minimum":1},
     "CardEffectAdjustCorruption": {"minimum":-1},
     "CardTraitCorruptRestricted": {"minimum":0},
@@ -5042,6 +5059,8 @@
     "CardEffectDrawType": {"es":"Cartas que se roban","en":"Cards drawn"},
     "RelicEffectModifyCardAttack": {"es":"Modificador de ataque","en":"Attack modifier"},
     "CardEffectDamagePerSourceAttack": {"es":"Multiplicador del ataque","en":"Attack multiplier"},
+    "CardEffectDamagePerStatusEffect": {"es":"Daño por acumulación","en":"Damage per stack"},
+    "CardEffectHealAndDamageRelative": {"es":"Salud restaurada","en":"Health restored"},
     "RelicEffectModifyTriggerCount": {"es":"Modificador de activaciones","en":"Trigger count modifier"},
     "RelicEffectModifyEnergyDuringDeployment": {"es":"Ember en el despliegue","en":"Ember during deployment"},
     "CardEffectAdjustRoomCapacity": {"es":"Cambio de capacidad","en":"Capacity change"},
@@ -5128,6 +5147,9 @@
     }
   },
   "exampleExtraParameters": {
+    "CardEffectHealAndDamageRelative": {
+      "param_int_2": {"es":"Multiplicador del daño por curación","en":"Damage multiplier per health restored"}
+    },
     "CardEffectAddBattleCard": {
       "param_int_2": {
         "es": "Cartas añadidas",
@@ -5546,6 +5568,7 @@
     "undoLimit": 30
   },
   "exampleReadOnlyStatusCountClasses": [
+    "CardEffectDamagePerStatusEffect",
     "RelicEffectPreventStatusEffectDecay"
   ],
   "welcome": {
@@ -6611,6 +6634,31 @@
     "5":{"en":"Put {amount} × {card} on top of your draw pile.","es":"Pon {amount} × {card} encima del mazo de robo."},
     "7":{"en":"Shuffle {amount} × {card} into your deck.","es":"Mezcla {amount} × {card} en tu mazo."}
   },
+  "verifiedParameters": {
+    "CardEffectAddBattleCard": {
+      "param_int": {
+        "label":{"en":"Destination of added cards","es":"Destino de las cartas añadidas"},
+        "help":{"en":"Choose where the new cards go during combat.","es":"Elige adónde van las cartas nuevas durante el combate."},
+        "choices": {
+          "0":{"en":"Draw pile","es":"Mazo de robo"},
+          "1":{"en":"Discard pile","es":"Pila de descarte"},
+          "3":{"en":"Hand","es":"Mano"},
+          "5":{"en":"Top of the draw pile","es":"Parte superior del mazo de robo"},
+          "7":{"en":"Random position in the draw pile","es":"Posición aleatoria del mazo de robo"}
+        }
+      },
+      "param_int_2":{"help":{"en":"Number of copies this effect attempts to add. The game may add fewer if its conditions are met only in part.","es":"Número de copias que intenta añadir el efecto. El juego puede añadir menos si sus condiciones solo se cumplen en parte."}}
+    },
+    "CardEffectDamage": {
+      "param_int":{"help":{"en":"Base damage. Effects such as Magic Power can change it during combat.","es":"Daño base. Efectos como el Poder mágico pueden cambiarlo durante el combate."}}
+    },
+    "CardEffectHealAndDamageRelative": {
+      "param_int_2":{"help":{"en":"Damage per point of health actually restored. Healing already-full units contributes no damage.","es":"Daño por cada punto de salud restaurado. Curar una unidad con la salud al máximo no aporta daño."}}
+    },
+    "CardEffectFloorRearrange": {
+      "param_int":{"help":{"en":"Choose the front or back of the same floor.","es":"Elige la primera o la última posición del mismo piso."}}
+    }
+  },
   "nativeRelicTiming": {
     "unit":{"en":"unit","es":"unidad"},
     "firstSpawn":{"en":"When the first {unit} is summoned each turn","es":"Al invocar el primer ejemplar de {unit} de cada turno"},
@@ -6901,6 +6949,10 @@
     "CardEffectAddCardUpgradeToUnits"
   ],
   "spellRecipeDescriptions": {
+    "magic_power_in_hand": {
+      "es": "Añade +{amount} [magicpower] a los hechizos de la mano.",
+      "en": "Apply +{amount} [magicpower] to spells in hand."
+    },
     "mix": {"es": "Mezclar.", "en": "Mix."},
     "advance": {"es":"Avanzar.","en":"Advance."},
     "retreat": {"es":"Retirar.","en":"Retreat."},

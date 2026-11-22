@@ -1,4 +1,5 @@
 import {applyCopiedEffectEdits} from './copied-effect-edits.js';
+import {canEditBattleCardDestination,reviseBattleCardDestinations} from './battle-card-destination.js';
 import {communitySummary,communityTemplates} from './community-templates.js';
 import {isActivatedCard,removeTemplateEffects,templateEffects} from './template-effects.js';
 import {parameterKeywordOptions,applyExampleParameterValues,type ExampleParameter} from './example-parameter-values.js';
@@ -46,7 +47,7 @@ function editableParamInt(effectClass:string,definition:Record<string,any>){
  );
 }
 const editableSections=new Set(['characters','effects','upgrades','relic_effects','room_modifiers','character_triggers','card_triggers','traits','relic_effect_conditions']);
-export function exampleParameters(example:Example){const rows:ExampleParameter[]=[];
+export function exampleParameters(example:Example,includeLegacy=false){const rows:ExampleParameter[]=[];
  for(const [section,definitions]of Object.entries(example.document)){
  if(section==='cards'){
   for(const d of definitions){
@@ -79,9 +80,15 @@ export function exampleParameters(example:Example){const rows:ExampleParameter[]
  if(section==='effects'&&d.name==='CardEffectFloorRearrange'&&(d.param_int===undefined||d.param_int===0||d.param_int===1)){
   rows.push({key:[section,d.id,'param_int'].join('|'),label:d.name,value:d.param_int??0,section,id:d.id,path:['param_int'],choices:[0,1]});
  }
+ if(section==='effects'&&canEditBattleCardDestination(example.document,d)){
+  const choiceLabels=parameterConfig.verifiedParameters.CardEffectAddBattleCard.param_int.choices;
+  rows.push({key:[section,d.id,'param_int'].join('|'),label:d.name,value:d.param_int,section,id:d.id,
+   path:['param_int'],choices:Object.keys(choiceLabels).map(Number),choiceLabels});
+ }
  function visit(v:any,keys:(string|number)[]){if(Array.isArray(v)){v.forEach((x,i)=>visit(x,[...keys,i]));return;}if(v&&typeof v==='object'){for(const [k,x]of Object.entries(v)){
  const effectClass=typeof v.trigger_effect==='string'?v.trigger_effect:typeof d.name==='string'?d.name:'';
- if(typeof x==='number'&&Math.abs(x)<=parameterConfig.limits.maxNumber&&(['bonus_damage','bonus_hp','bonus_size'].includes(k)||k==='count'&&(typeof v.status==='string'||v.status?.mod_reference)&&!(parameterConfig.exampleReadOnlyStatusCountClasses??[]).includes(effectClass)||k==='param_int'&&editableParamInt(effectClass,v)||extraRules?.[effectClass]?.[k]))rows.push({key:[section,d.id,...keys,k].join('|'),label:effectClass||section,value:x,section,id:d.id,path:[...keys,k],...(k==='param_int'?{
+ const legacyStatusCount=includeLegacy&&effectClass==='CardEffectDamagePerStatusEffect';
+ if(typeof x==='number'&&Math.abs(x)<=parameterConfig.limits.maxNumber&&(['bonus_damage','bonus_hp','bonus_size'].includes(k)||k==='count'&&(typeof v.status==='string'||v.status?.mod_reference)&&(legacyStatusCount||!(parameterConfig.exampleReadOnlyStatusCountClasses??[]).includes(effectClass))||k==='param_int'&&editableParamInt(effectClass,v)||extraRules?.[effectClass]?.[k]))rows.push({key:[section,d.id,...keys,k].join('|'),label:effectClass||section,value:x,section,id:d.id,path:[...keys,k],...(k==='param_int'?{
   minimum:effectClass==='CardEffectMix'?1:paramIntRules[effectClass]?.minimum,
   maximum:paramIntRules[effectClass]?.maximum,
   ...(parameterKeywordOptions[effectClass]?{
@@ -106,7 +113,10 @@ export function applyExampleParameters(e:Example,card:CardDraft){const copy=stru
  for(const upgrade of copy.upgrades??[])if(upgrade.status_effect_upgrades)upgrade.status_effect_upgrades=upgrade.status_effect_upgrades.filter((s:any)=>s.count!==0);
  reviseMovementDescriptions(e.document,copy,parameterConfig);
  if(e.kind==='artifact')reviseArtifactActivation(e.document,copy);
- const changed=removeTemplateEffects(copy,e.root,card.removedTemplateEffects);if(changed.length)reviseEffectDescriptions(e.document,copy,changed,parameterConfig);applyCopiedEffectEdits(copy,e.document,e.root,card,parameterConfig,parameters);return copy;}
+ const changed=removeTemplateEffects(copy,e.root,card.removedTemplateEffects);if(changed.length)reviseEffectDescriptions(e.document,copy,changed,parameterConfig);applyCopiedEffectEdits(copy,e.document,e.root,card,parameterConfig,parameters);
+ reviseBattleCardDestinations(e.document,copy);
+ return copy;
+}
 // 2026-11-15-0853||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Resolver catálogo autocontenido y exponer cantidades editables sin código ni JSON
 // 2026-11-15-0855||codex-clan-editor||clan-creator/src\server\creator\catalog.ts||Conservar las transformaciones del ejemplo al copiarlo
 // 2026-11-15-0913||codex-clan-editor||clan-creator/src\server\creator\catalog.ts||Actualizar descripciones literales de salas al modificar la cantidad de su estado
@@ -153,3 +163,5 @@ export function applyExampleParameters(e:Example,card:CardDraft){const copy=stru
 // 2026-11-21-2013||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Exponer recargas de sala, umbrales de hechizos y parámetros nativos con semántica verificada
 // 2026-11-21-2016||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Aplicar textos de condiciones cambiadas en el JSON de clan
 // 2026-11-21-2043||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Cargar el índice derivado y usarlo solo para la versión auditada de cada ejemplo
+// 2026-11-22-0935||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Mantener válidos los borradores con un antiguo campo de acumulaciones que el juego ignora
+// 2026-11-22-0956||codex-clan-editor||clan-creator/src/server/creator/catalog.ts||Exponer los destinos comprobados sin migrar los datos originales

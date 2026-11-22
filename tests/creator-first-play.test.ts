@@ -52,9 +52,11 @@ test('champion and path pickers show every matching champion without additional 
  const rules=await creatorRules(),catalog=await exampleList();
  const expected=catalog.items.filter(entry=>entry.official&&!entry.legacy&&entry.kind==='unit'&&entry.rarity==='champion'&&entry.championPath?.levels.length===3);
  assert.ok(expected.length>rules.catalogBrowser.pageSize);
+ const preview=(await readExample('freecompany-Bless')).picture;
+ const pickerCatalog={items:catalog.items.map(entry=>entry.id===expected[0].id?{...entry,picture:entry.picture||preview}:entry)};
  for(const pathsOnly of [false,true]){
   const html=renderToStaticMarkup(React.createElement(ExamplePicker,{
-   config:{rules,catalog},language:'en',kind:'unit',champion:true,pathsOnly,replacing:true,
+   config:{rules,catalog:pickerCatalog},language:'en',kind:'unit',champion:true,pathsOnly,replacing:true,
    t:key=>rules.labels[key]?.en??key,onClose:()=>{},onPick:()=>{},
   }));
   assert.ok((html.match(/class="example-card /g)??[]).length>=expected.length);
@@ -65,3 +67,4 @@ test('champion and path pickers show every matching champion without additional 
 // 2026-11-19-0752||codex-clan-editor||clan-creator/tests/creator-first-play.test.ts||Validar frases, ejemplos por tipo y vista de los tres niveles de una senda
 // 2026-11-21-1008||codex-clan-editor||clan-creator/tests/creator-first-play.test.ts||Verificar listado completo inmediato tanto para campeones como para sendas
 // 2026-11-21-1427||codex-clan-editor||clan-creator/tests/creator-first-play.test.ts||Comprobar el orden real de los ejemplos en unidades y hechizos en los dos idiomas
+// 2026-11-22-1040||codex-clan-creator-art||clan-creator/tests/creator-first-play.test.ts||Probar carga diferida con imagen de fixture sin depender de ilustraciones oficiales ausentes

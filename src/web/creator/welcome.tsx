@@ -2,7 +2,7 @@ import {CommunityClanNotice} from './community-clan-notice';
 import {OpenClanDialog} from './open-clan';
 import {BulkRemoval,registeredInstalls,type BulkRemovalMode,type RemovalItem} from './bulk-removal';
 import {resumeName} from '../../server/creator/navigation-state';
-import {ExpansionSettings,expansionCompatible} from './expansions';
+import {ExpansionSettings,type ExpansionChoices} from './expansions';
 import {ErrorNotice} from './error-notice';
 import {installStatusKey} from './install-status';
 import {BackupTools} from './backup-tools';
@@ -13,12 +13,12 @@ type OfficialClan = {
  id:string;
  name:{en:string;es:string};
  cards:number;
- requiredDlc?:string;
+ requiredDlc?:string|null;
 };
 interface OfficialClanPickerProps {
  rules:any;
  language:Language;
- expansions:Parameters<typeof expansionCompatible>[1] | undefined;
+ expansions:ExpansionChoices|undefined;
  busy:boolean;
  onOfficial:(id:string)=>void;
 }
@@ -26,7 +26,8 @@ interface OfficialClanPickerProps {
 function OfficialClanPicker({rules,language,expansions,busy,onOfficial}:OfficialClanPickerProps){
  const [selected,setSelected]=useState('');
  const t=(key:string)=>local(rules.labels[key],language);
- const clans=(rules.officialClanTemplates as OfficialClan[]).filter(clan=>!expansions||expansionCompatible(clan,expansions));
+ const clans=(rules.officialClanTemplates as OfficialClan[]).filter(clan=>
+  !clan.requiredDlc||expansions?.owned.includes(clan.requiredDlc));
  const official=clans.find(clan=>clan.id===selected);
  return <details name="clan-example-source" className="surface official-clan-start">
   <summary><h2>{t('officialClanTitle')}</h2></summary>
@@ -141,3 +142,4 @@ export function Welcome({expansions,onExpansions,rules,catalog,language,projects
 // 2026-11-21-1240||codex-clan-editor||clan-creator/src/web/creator/welcome.tsx||Retirar la guía duplicada de preparación del juego de la portada
 // 2026-11-21-1243||codex-clan-editor||clan-creator/src/web/creator/welcome.tsx||Mostrar el aviso antes de abrir una copia editable
 // 2026-11-21-1602||codex-clan-editor||clan-creator/src/web/creator/welcome.tsx||Mostrar la invitación con el contacto de Discord en el selector de clanes de la comunidad
+// 2026-11-22-0949||codex-clan-editor||clan-creator/src/web/creator/welcome.tsx||Mostrar clanes DLC solo cuando la expansión correspondiente está marcada, issue 1

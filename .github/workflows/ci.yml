@@ -22,8 +22,6 @@ jobs:
         with:
           dotnet-version: '10.0.x'
       - run: npm ci
-      - run: npm run build
-      - run: npm run check:i18n
       - name: Load audited resources from tested Windows release
         shell: pwsh
         env:
@@ -34,15 +32,16 @@ jobs:
           New-Item -ItemType Directory -Path $bundleDir -Force | Out-Null
           $found = $false
           for ($attempt = 0; $attempt -lt 24; $attempt++) {
-            gh release download v0.1.0-beta.4 --pattern 'ClanCreator-win32-x64-2026-11-17-1820.zip' --dir $bundleDir --clobber
+            gh release download v0.1.0-beta.5 --pattern 'ClanCreator-0.1.0-beta.5-win32-x64-2026-11-21-2354.zip' --dir $bundleDir --clobber
             if ($LASTEXITCODE -eq 0) { $found = $true; break }
             Start-Sleep -Seconds 10
           }
           if (-not $found) { throw 'Tested release resources are unavailable.' }
-          $zip = Join-Path $bundleDir 'ClanCreator-win32-x64-2026-11-17-1820.zip'
-          if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant() -ne 'ab16fb6542db6e3152a8e41e0cadb486709348373783d01cf737d5109fbc9266') { throw 'Release resource hash mismatch.' }
+          $zip = Join-Path $bundleDir 'ClanCreator-0.1.0-beta.5-win32-x64-2026-11-21-2354.zip'
+          if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant() -ne 'c4c5d0dd04def79e866a4a285612862305dc8018600b13732736530bff723671') { throw 'Release resource hash mismatch.' }
           Expand-Archive -LiteralPath $zip -DestinationPath $bundleDir
           Copy-Item -LiteralPath (Join-Path $bundleDir 'ClanCreator/catalog/official') -Destination 'catalog/official' -Recurse
-          New-Item -ItemType Directory -Path 'vendor' -Force | Out-Null
-          Copy-Item -LiteralPath (Join-Path $bundleDir 'ClanCreator/vendor/modding') -Destination 'vendor/modding' -Recurse
+      - run: npm run build
+      - run: npm run check:i18n
       - run: npm test
+# 2026-11-22-1037||codex-clan-creator-art||clan-creator/.github/workflows/ci.yml||Usar fixture beta.5 disponible con SHA256 fijo antes de compilar y retirar vendor/modding ausente

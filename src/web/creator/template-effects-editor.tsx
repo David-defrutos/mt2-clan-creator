@@ -10,7 +10,7 @@ import {isActivatedCard,templateEffects,activeTemplateEffects,removeTemplateEffe
 import {nativeEffectText,relicActivationText,reviseEffectDescriptions,reviseMovementDescriptions} from '../../server/creator/template-effect-text';
 import {removeUnitAuras} from '../../server/creator/unit-auras';
 import {referencedParameters} from './champion-copy';
-import {Field,numberField,parameterLabel} from './components';
+import {Field,numberField,parameterHelp,parameterLabel} from './components';
 import {local,type Language} from './presentation';
 export function templateEffectParameterKeys(template:any,root=template?.example?.root){return new Set(template?templateEffects(template.example.document,root).flatMap(e=>referencedParameters(template,e.section,e.id).map((p:any)=>p.key)):[]);}
 export function TemplateEffectsEditor({card,template,onChange,rules,language,root=template?.example?.root,abilityKeys}:{card:CardDraft;template:any;onChange:(card:CardDraft)=>void;rules:any;language:Language;root?:{section:string;id:string};abilityKeys?:ReadonlySet<string>}){if(!template)return null;const original=template.example.document,current=structuredClone(original);applyExampleParameterValues(current,template.parameters??[],card.parameters);removeUnitAuras(current,template.example.root,card.removedAuras);reviseMovementDescriptions(original,current,rules);const removed=removeTemplateEffects(current,root!,card.removedTemplateEffects);if(removed.length)reviseEffectDescriptions(original,current,removed,rules);const rows=activeTemplateEffects(original,current,root!,card.removedTemplateEffects),owners=new Map<string,string>();for(const e of rows)for(const p of referencedParameters(template,e.section,e.id))owners.set(p.key,e.key);
@@ -130,13 +130,15 @@ export function TemplateEffectsEditor({card,template,onChange,rules,language,roo
   const value=edited?.parameters?.[p.key]??card.parameters[p.key]??p.value;
   const set=(value:number)=>shared?change({parameters:{...edited?.parameters,[p.key]:value}}):
    onChange({...card,parameters:{...card.parameters,[p.key]:value}});
-  if(p.choices)return <Field key={p.key} label={p.boolean?g('abilityFloor'):p.choiceKeywords?parameterLabel(p,language,rules):t('movementDestination')}>
+  const help=parameterHelp(p,language,rules);
+  if(p.choices)return <Field key={p.key} help={help} label={p.boolean?g('abilityFloor'):p.choiceKeywords||p.choiceLabels?parameterLabel(p,language,rules):t('movementDestination')}>
    <select value={value} onChange={event=>set(Number(event.target.value))}>
-    {p.choices.map((value:number)=><option key={value} value={value}>{p.boolean?g(value===0?'abilityCurrentFloor':'abilityAnyFloor'):local(rules.statusLabels[p.choiceKeywords?.[value]??(value===0?'advance':'retreat')],language)||String(value)}</option>)}
+    {p.choices.map((value:number)=><option key={value} value={value}>{p.boolean?g(value===0?'abilityCurrentFloor':'abilityAnyFloor'):
+     (p.choiceLabels?local(p.choiceLabels[value],language):local(rules.statusLabels[p.choiceKeywords?.[value]??(value===0?'advance':'retreat')],language))||String(value)}</option>)}
    </select>
   </Field>;
   const label=p.label==='ability'?g(p.path[0]==='initial_cooldown'?'abilityInitialCooldown':'abilityCooldown'):parameterLabel(p,language,rules)+(i?' · '+(i+1):'');
-  return numberField(label,value,set,p.minimum??-rules.limits.maxNumber,p.maximum??rules.limits.maxNumber);
+  return numberField(label,value,set,p.minimum??-rules.limits.maxNumber,p.maximum??rules.limits.maxNumber,help);
  })}<details className="native-edit-help"><summary>{local(rules.usabilityText.learnMore,language)}</summary><p>{g('nativeFixed')}</p></details>{!isEquipmentAttachment&&<button className="quiet danger" onClick={()=>onChange({...card,removedTemplateEffects:[...(card.removedTemplateEffects??[]),removeKey]})}>{local(rules.labels.removeEffect,language)}</button>}</section>;})}</>;
 }
 // 2026-11-15-2048||codex-clan-editor||clan-creator/src/web/creator/template-effects-editor.tsx||Mostrar cada componente copiado con controles propios y eliminacion independiente en cartas y sendas
@@ -174,3 +176,4 @@ export function TemplateEffectsEditor({card,template,onChange,rules,language,roo
 // 2026-11-21-2014||codex-clan-editor||clan-creator/src/web/creator/template-effects-editor.tsx||Mostrar activación de habilidad, recargas y las acciones separadas de una regla de artefacto
 // 2026-11-21-2015||codex-clan-editor||clan-creator/src/web/creator/template-effects-editor.tsx||Mostrar el momento del artefacto en sus acciones hijas y evitar repetirlas en la fila del contenedor
 // 2026-11-21-2016||codex-clan-editor||clan-creator/src/web/creator/template-effects-editor.tsx||Mostrar los textos de condiciones cambiadas junto a los controles
+// 2026-11-22-0956||codex-clan-editor||clan-creator/src/web/creator/template-effects-editor.tsx||Mostrar el desplegable de destino y las ayudas por campo

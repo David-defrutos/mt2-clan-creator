@@ -38,3 +38,20 @@ test('first clan offers either a blank clan or an editable official copy in both
 // 2026-11-21-1007||codex-clan-editor||clan-creator/tests/creator-expansion-visibility.test.ts||Probar con las reglas hidratadas que recibe la pantalla de inicio
 // 2026-11-21-1011||codex-clan-editor||clan-creator/tests/creator-expansion-visibility.test.ts||Verificar que Crear mi primer clan ofrece empezar desde cero o con una copia oficial
 // 2026-11-21-1013||codex-clan-editor||clan-creator/tests/creator-expansion-visibility.test.ts||Verificar que la copia oficial solo aparece en el asistente tanto en ingles como en espanol
+
+test('the clan picker follows each expansion checkbox even when the card filter is off',async()=>{
+ const settings=await creatorRules();
+ const noOp=()=>{};
+ for(const language of ['en','es'] as const){
+  for(const owned of [[],['punished'],['railforged'],['punished','railforged']]){
+   const html=renderToStaticMarkup(React.createElement(FirstClanDialog,{
+    rules:settings,language,expansions:{owned,compatibleOnly:false},busy:false,onClose:noOp,onNew:noOp,onOfficial:noOp,
+   }));
+   const visible=[...html.matchAll(/<option value="([^"]+)"/g)].map(match=>match[1]);
+   const expected=settings.officialClanTemplates
+    .filter(clan=>!clan.requiredDlc||owned.includes(clan.requiredDlc)).map(clan=>clan.id);
+   assert.deepEqual(visible,expected);
+  }
+ }
+});
+// 2026-11-22-0949||codex-clan-editor||clan-creator/tests/creator-expansion-visibility.test.ts||Cubrir cada combinación de expansiones con el filtro de cartas desactivado

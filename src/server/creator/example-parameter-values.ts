@@ -13,6 +13,7 @@ export interface ExampleParameter {
  status?:string;
  choices?:readonly number[];
  choiceKeywords?:Record<string,string>;
+ choiceLabels?:Record<string,{en:string;es:string}>;
  boolean?:boolean;
  minimum?:number;
  maximum?:number;
@@ -60,3 +61,4 @@ export function applyExampleParameterValues(
 // 2026-11-21-1510||codex-clan-editor||clan-creator/src/server/creator/example-parameter-values.ts||Identificar los parámetros de una carta auxiliar
 // 2026-11-21-1905||codex-clan-editor||clan-creator/src/server/creator/example-parameter-values.ts||Representar el desplazamiento de un piso y las fases lunares con los valores nativos
 // 2026-11-21-2013||codex-clan-editor||clan-creator/src/server/creator/example-parameter-values.ts||Declarar límites máximos para cantidades nativas como las probabilidades
+// 2026-11-22-0956||codex-clan-editor||clan-creator/src/server/creator/example-parameter-values.ts||Permitir etiquetas traducidas para valores enumerados

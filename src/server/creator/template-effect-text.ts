@@ -3,6 +3,7 @@ import {triggerLabel} from './trigger-reference.js';
 import {statusAmount} from './status-text.js';
 import {gameText} from './description-tokens.js';
 import {unitStatusKey} from './model.js';
+import {fixedDamageToken} from './recipe-text.js';
 import {runsRelicActions,templateEffects,type TemplateEffect} from './template-effects.js';
 const text=(value:any,language:string):string=>typeof value==='string'?value:value?.[language==='es'?'spanish':'english']??value?.english??'';
 const label=(value:any,language:string):string=>typeof value==='string'?value:value?.[language]??value?.en??'';
@@ -96,8 +97,6 @@ function reviseLiteralAmounts(original:Record<string,any[]>,current:Record<strin
  }>={
   CardEffectDrawType:{section:'effects',patterns:{english:/\bDraw (?:a unit|an Equipment)\b/i,spanish:/\bRoba (?:una unidad|un equipo)\b/i},
    render:()=>''},
-  CardEffectDamagePerSourceAttack:{section:'effects',patterns:{english:/\bequal to \[attack\]/i,spanish:/\bcomo el \[attack\]/i},
-   render:(language,amount)=>(language==='english'?'equal to ':'como ')+amount+' × [attack]'},
   CardEffectCopyUnits:{section:'effects',patterns:{english:/\bCreate a copy of\b/i,spanish:/\bCrea una copia de\b/i},
    render:(language,amount)=>language==='english'?'Create '+amount+' copies of':'Crea '+amount+' copias de'},
   RoomStateDrawRandomConsumedCardsPreCombatModifier:{section:'room_modifiers',patterns:{english:/\ba random consumed spell\b/i,spanish:/\bun hechizo consumido aleatorio\b/i},
@@ -142,9 +141,97 @@ function reviseLiteralAmounts(original:Record<string,any[]>,current:Record<strin
  }
 }
 
+export function reviseSharedAmountDescriptions(doc:Record<string,any[]>,original:Record<string,any[]>,owner:Record<string,any>,previous:readonly unknown[],field:string,rules:any){
+ if(!owner.descriptions||previous.length!==owner[field]?.length)return;
+ const definitions=previous.map(ref=>original.effects?.find(effect=>effect.id===id(ref)));
+ // A first hit may have its own definition for visuals or to establish the target for later hits.
+ const comparable=definitions.map(effect=>{
+  if(!effect||!fixedDamageToken(effect,'effect0'))return;
+  const fields=Object.entries(effect).filter(([key])=>
+   !['id','applied_vfx','applied_to_self_vfx','should_test'].includes(key)).sort(([a],[b])=>a.localeCompare(b));
+  return JSON.stringify(fields.map(([key,value])=>[key,key==='target_mode'&&value==='last_targeted_characters'?
+   'drop_target_character':value]));
+ });
+ const pattern=/\[((?:trigger)?effect)(\d+)\.([\w.]+)\]/gi;
+ for(const [locale,message] of Object.entries(owner.descriptions)){
+  if(locale==='key'||typeof message!=='string')continue;
+  const tags=[...message.matchAll(pattern)];
+  const revised=message.replace(pattern,(tag,prefix,index,suffix)=>{
+   const source=definitions[Number(index)];
+   if(!source)return tag;
+   const signature=comparable[Number(index)];
+   if(!signature||!['power','power_unmodified'].includes(suffix.toLowerCase()))return tag;
+   const siblings=definitions.flatMap((effect,i)=>effect&&(effect.id===source.id||signature&&signature===comparable[i])?[i]:[]);
+   const repeats=new Set(siblings.map(i=>definitions[i]?.id)).size<siblings.length;
+   const groupsHits=typeof owner.descriptions.english==='string'&&/\b(?:twice|times|repeat)\b/i.test(owner.descriptions.english);
+   if((!repeats&&!groupsHits)||tags.some(other=>Number(other[2])!==Number(index)&&siblings.includes(Number(other[2]))&&
+    other[3].toLowerCase()===suffix.toLowerCase()))return tag;
+   const context={section:field==='effects'?'cards':'character_triggers',definition:owner};
+   const replacements=siblings.map(i=>'['+prefix+i+'.'+suffix+']');
+   const values=replacements.map(value=>gameText(value,doc,context,'en',rules));
+   return values.every(value=>/^-?\d+$/.test(value))&&new Set(values).size>1?replacements.join(' / '):tag;
+  });
+  if(revised===message)continue;
+  owner.descriptions[locale]=revised;
+  delete owner.descriptions.key;
+ }
+}
+
+function reviseDamageCoefficients(original:Record<string,any[]>,current:Record<string,any[]>){
+ const classes=['CardEffectDamagePerSourceAttack','CardEffectDamagePerStatusEffect'];
+ const originalEffects=new Map((original.effects??[]).map(effect=>[effect.id,effect]));
+ const effects=new Map((current.effects??[]).map(effect=>[effect.id,effect]));
+ for(const definitions of Object.values(current))for(const owner of definitions){
+  if(!owner.descriptions)continue;
+  const refs=owner.effects??owner.trigger_effects??owner.param_effects??[];
+  if(!Array.isArray(refs))continue;
+  for(const name of classes){
+   const slots=refs.map((ref:any,index:number)=>({effect:effects.get(id(ref)),before:originalEffects.get(id(ref)),index}))
+    .filter(({effect,before})=>effect?.name===name&&before?.name===name&&!effect.use_int_range&&Number.isFinite(effect.param_int));
+   if(!slots.length||!slots.some(({effect,before})=>effect.param_int!==before.param_int))continue;
+   let changed=false;
+   for(const [locale,language] of Object.entries(generatedLocales)){
+    const value=owner.descriptions[locale];
+    if(typeof value!=='string')continue;
+    const referenced=(index:number)=>new RegExp('\\[(?:trigger)?effect'+index+'\\.(?:power(?:_unmodified)?|paramint)\\]','i').test(value);
+    if(slots.some(({index})=>referenced(index)))continue;
+    const property=name==='CardEffectDamagePerSourceAttack'?'power_unmodified':'power';
+    const coefficients=slots.map(({index})=>'[effect'+index+'.'+property+']').join(' / ');
+    const replacement=(unit:string)=>(slots.length>1?'('+coefficients+')':coefficients)+' × '+unit;
+    let revised=value;
+    if(name==='CardEffectDamagePerSourceAttack'){
+     const pattern=language==='en'?/\bequal to ((?:this unit['’]s )?(?:\[attack\]|attack\b))/i:
+      /\b(?:como (el (?:\[attack\]|ataque))|igual (al (?:\[attack\]|ataque)|a su (?:\[attack\]|ataque)))/i;
+     revised=value.replace(pattern,(_match,as:string,equal:string)=>{
+      if(language==='en')return 'equal to '+replacement(as);
+      return as?'como '+replacement(as):'igual a '+replacement(equal.replace(/^al /i,'el '));
+     });
+    }else if(slots.length===1){
+     const status=unitStatusKey(slots[0].effect.param_status_effects?.[0]?.status);
+     const phrase=(language==='en'?'equal to ':'como el ')+'['+status+']';
+     if(status&&value.includes(phrase))revised=value.replace(phrase,()=>(language==='en'?'equal to ':'como ')+replacement('['+status+']'));
+    }
+    if(revised!==value){owner.descriptions[locale]=revised;changed=true;}
+   }
+   if(changed)for(const locale of Object.keys(owner.descriptions))if(!Object.hasOwn(generatedLocales,locale))delete owner.descriptions[locale];
+  }
+ }
+}
+
 export function reviseMovementDescriptions(original:Record<string,any[]>,current:Record<string,any[]>,rules?:any){
  reviseKeywordOptions(original,current);
  reviseLiteralAmounts(original,current);
+ reviseDamageCoefficients(original,current);
+ if(rules){
+  const changedDamage=new Set((current.effects??[]).filter(effect=>fixedDamageToken(effect,'effect0')&&
+   effect.param_int!==original.effects?.find(old=>old.id===effect.id)?.param_int).map(effect=>effect.id));
+  if(changedDamage.size)for(const definitions of Object.values(current))for(const owner of definitions){
+   const field=Array.isArray(owner.trigger_effects)?'trigger_effects':Array.isArray(owner.effects)?'effects':'param_effects';
+   const refs=owner[field];
+   if(owner.descriptions&&Array.isArray(refs)&&refs.some(ref=>changedDamage.has(id(ref))))
+    reviseSharedAmountDescriptions(current,original,owner,refs,field,rules);
+  }
+ }
  if(rules)reviseRelicConditionText(original,current,rules);
  const previous=new Map((original.effects??[]).filter(effect=>effect.name==='CardEffectFloorRearrange').map(effect=>[effect.id,effect.param_int??0]));
  const changed=new Map((current.effects??[]).filter(effect=>previous.has(effect.id)&&(effect.param_int??0)!==previous.get(effect.id)).map(effect=>[effect.id,effect.param_int??0]));
@@ -226,15 +313,21 @@ export function relicActivationText(doc:Record<string,any[]>,definition:Record<s
  return wording.replace('{unit}',name).replace('{chance}',String(definition.param_int??0));
 }
 
-export function nativeEffectText(doc:Record<string,any[]>,section:string,d:any,language:string,rules:any,depth=0):string{if(depth>8)return label(rules.labels.specialEffect,language);if(!d)return '';const get=(s:string,ref:any)=>(doc[s]??[]).find(d=>d.id===id(ref));const status=(v:any)=>label(rules.statusLabels?.[unitStatusKey(v)],language)||unitStatusKey(v);const cls=String(typeof d.name==='object'?d.name.id:d.name??'').replace(/^@/,'');const refs=d.trigger_effects??d.effects??d.relic_effects??[];
+export function nativeEffectText(doc:Record<string,any[]>,section:string,d:any,language:string,rules:any,depth=0,effectPath=''):string{if(depth>8)return label(rules.labels.specialEffect,language);if(!d)return '';const get=(s:string,ref:any)=>(doc[s]??[]).find(d=>d.id===id(ref));const status=(v:any)=>label(rules.statusLabels?.[unitStatusKey(v)],language)||unitStatusKey(v);const cls=String(typeof d.name==='object'?d.name.id:d.name??'').replace(/^@/,'');const refs=d.trigger_effects??d.effects??d.relic_effects??[];
  const format=(input:string)=>gameText(input,doc,{section,definition:d},language,rules);
  if(section==='cards')return text(d.names,language)||label(rules.labels.specialEffect,language);
  if(section==='traits')return label(rules.traitLabels?.[cls],language)||label(rules.nativeTraitLabels?.[cls],language)||label(rules.exampleParameterRules?.[cls],language)||label(rules.labels.cardProperty,language);
- if(section==='relic_effects'&&d.triggers?.length)return d.triggers.map((ref:any)=>nativeEffectText(doc,'character_triggers',get('character_triggers',ref),language,rules,depth+1)).filter(Boolean).join('. ');
- const description=text(d.descriptions,language);if(description){const body=format(description);const when=['character_triggers','card_triggers'].includes(section)?triggerLabel(d.trigger,rules,language):'';return (when?when+': ':'')+body;}
+ if(section==='relic_effects'&&d.triggers?.length)return d.triggers.map((ref:any,index:number)=>nativeEffectText(doc,'character_triggers',get('character_triggers',ref),language,rules,depth+1,effectPath?effectPath+'.trigger'+index:'')).filter(Boolean).join('. ');
+ const description=text(d.descriptions,language);
+ if(description){
+  const body=effectPath&&['character_triggers','card_triggers'].includes(section)?
+   description.replace(/\[(?:trigger)?effect(\d+)\./gi,(_,index)=>'['+effectPath+'.effect'+index+'.'):format(description);
+  const when=['character_triggers','card_triggers'].includes(section)?triggerLabel(d.trigger,rules,language):'';
+  return (when?when+': ':'')+body;
+ }
  if(['character_triggers','card_triggers'].includes(section)&&refs.length){
   const timing=triggerLabel(d.trigger,rules,language);
-  const action=refs.map((ref:any)=>nativeEffectText(doc,'effects',get('effects',ref),language,rules,depth+1)).filter(Boolean).join(' ');
+  const action=refs.map((ref:any,index:number)=>nativeEffectText(doc,'effects',get('effects',ref),language,rules,depth+1,effectPath?effectPath+'.effect'+index:'')).filter(Boolean).join(' ');
   if(action)return timing?timing+': '+action:action;
  }
  if(cls==='CardEffectFloorRearrange'){
@@ -243,7 +336,7 @@ export function nativeEffectText(doc:Record<string,any[]>,section:string,d:any,l
  }
  if(section==='relic_effects'&&d.param_effects?.length&&runsRelicActions(d)){
   const timing=relicActivationText(doc,d,language,rules)||label(rules.nativeEffectLabels?.[cls],language);
-  const actions=d.param_effects.map((ref:any)=>nativeEffectText(doc,'effects',get('effects',ref),language,rules,depth+1)).filter(Boolean);
+  const actions=d.param_effects.map((ref:any,index:number)=>nativeEffectText(doc,'effects',get('effects',ref),language,rules,depth+1,effectPath?effectPath+'.effect'+index:'')).filter(Boolean);
   if(actions.length)return (timing?timing+': ':'')+actions.join(' · ');
  }
  if(section==='room_modifiers'&&Array.isArray(d.param_effects)&&d.param_effects.length){
@@ -293,6 +386,11 @@ export function nativeEffectText(doc:Record<string,any[]>,section:string,d:any,l
  const passive=rules.passives?.find((recipe:any)=>section==='relic_effects'?recipe.class===cls:section==='room_modifiers'&&recipe.modifier===cls);
  if(passive&&Number.isInteger(d.param_int)&&d.param_int>=0)return label(passive.description,language).replace('{amount}',String(d.param_int));
  const name=label(rules.nativeEffectLabels?.[cls],language)||label(passive?.label,language)||label(rules.labels.specialEffect,language);if(d.param_status_effects?.length)return name+': '+d.param_status_effects.map((s:any)=>status(s.status)+statusAmount(s.status,s.count,rules)).join(' · ');
+ if(section==='effects'&&/^CardEffectDamage/.test(cls)){
+  const token=fixedDamageToken(d,effectPath);
+  if(token)return name+': '+token;
+  if(!fixedDamageToken(d,'effect0'))return name;
+ }
  const statUpgrade=cls==='CardEffectAddCardUpgradeToUnits'&&get('upgrades',d.param_upgrade);
  if(statUpgrade){
   const stats=[['bonus_damage','attack'],['bonus_hp','maximumHealth'],['bonus_size','size']]
@@ -309,12 +407,14 @@ export function nativeEffectText(doc:Record<string,any[]>,section:string,d:any,l
  const upgrade=get('upgrades',d.param_upgrade);if(upgrade){const values=[['bonus_damage','attack'],['bonus_hp','health'],['bonus_size','size']].filter(([key])=>upgrade[key]).map(([key,name])=>(upgrade[key]>0?'+':'')+upgrade[key]+' '+label(rules.labels[name],language));if(upgrade.status_effect_upgrades?.length)values.push(...upgrade.status_effect_upgrades.map((s:any)=>status(s.status)+statusAmount(s.status,s.count,rules)));for(const [field,section]of [['trigger_upgrades','character_triggers'],['card_trigger_upgrades','card_triggers'],['room_modifier_upgrades','room_modifiers']])for(const ref of upgrade[field]??[])values.push(nativeEffectText(doc,section,get(section,ref),language,rules,depth+1));return [name,...values].filter(Boolean).join(' · ');}
  return name;
 }
-export function simplifiedEffectText(document:Record<string,any[]>,root:any,language:string,rules:any){
+export function simplifiedEffectText(document:Record<string,any[]>,root:any,language:string,rules:any,dynamic=false){
  if(!root)return '';
  const section=root.relic_effects?'relic_effects':'effects';
- return (root[section]??[]).map((ref:any)=>(document[section]??[]).find(d=>d.id===id(ref)))
-  .filter((effect:any)=>effect&&!['CardEffectSpawnMonster','CardEffectAttachEquipment'].includes(effect.name))
-  .map((effect:any)=>nativeEffectText(document,section,effect,language,rules)).filter(Boolean).join('. ');
+ return (root[section]??[]).map((ref:any,index:number)=>{
+  const effect=(document[section]??[]).find(d=>d.id===id(ref));
+  if(effect&&!['CardEffectSpawnMonster','CardEffectAttachEquipment'].includes(effect.name))
+   return nativeEffectText(document,section,effect,language,rules,0,dynamic?'effect'+index:'');
+ }).filter(Boolean).join('. ');
 }
 
 export function reviseEffectDescriptions(original:Record<string,any[]>,doc:Record<string,any[]>,changed:TemplateEffect[],rules:any){const owners=new Map<string,TemplateEffect>();for(const e of changed)if(['effects','trigger_effects','relic_effects','traits'].includes(e.field))owners.set(e.ownerSection+'|'+e.ownerId,e);
@@ -347,7 +447,7 @@ export function reviseEffectDescriptions(original:Record<string,any[]>,doc:Recor
    });
    if(faithful){descriptions[locale]=kept.join(' ');continue;}
    const language=generatedLocales[locale as keyof typeof generatedLocales];
-   if(language)descriptions[locale]=refs.map((ref:any)=>nativeEffectText(doc,section,(doc[section]??[]).find(d=>d.id===id(ref)),language,rules)).filter(Boolean).join('. ');
+   if(language)descriptions[locale]=refs.map((ref:any,index:number)=>nativeEffectText(doc,section,(doc[section]??[]).find(d=>d.id===id(ref)),language,rules,0,'effect'+index)).filter(Boolean).join('. ');
   }
   after.descriptions=descriptions;
  }
@@ -379,3 +479,4 @@ export function reviseEffectDescriptions(original:Record<string,any[]>,doc:Recor
 // 2026-11-21-2015||codex-clan-editor||clan-creator/src/server/creator/template-effect-text.ts||Sincronizar números escritos, fases y acciones anidadas con las descripciones de vista previa y exportación
 // 2026-11-21-2016||codex-clan-editor||clan-creator/src/server/creator/template-effect-text.ts||Actualizar el resumen de una acción de artefacto cuando el texto del ejemplo tenía una cantidad literal
 // 2026-11-21-2020||codex-clan-editor||clan-creator/src/server/creator/template-effect-text.ts||Aclarar qué copia mueve una habilidad que apunta al último personaje invocado
+// 2026-11-22-0935||codex-clan-editor||clan-creator/src/server/creator/template-effect-text.ts||Mantener las fórmulas nativas y desglosar los impactos con cantidades diferentes

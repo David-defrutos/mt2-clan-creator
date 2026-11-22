@@ -5,9 +5,9 @@ import {championBaseDocument} from './champion-base.js';
 import {applyClanArtwork} from './clan-artwork.js';
 import {draftIssues,needsTemplateReview,copiedCardNeedsPassive} from './validation.js';
 import {nativeDocumentCopy} from './native-copy.js';
-import {effectTargetMode,effectTargetTeam,recipeDescription,spellRecipientTeam} from './recipe-text.js';
+import {effectTargetMode,effectTargetTeam,fixedDamageToken,recipeDescription,spellRecipientTeam} from './recipe-text.js';
 import {removeTemplateEffects} from './template-effects.js';
-import {reviseEffectDescriptions,simplifiedEffectText} from './template-effect-text.js';
+import {generatedLocales,reviseEffectDescriptions,simplifiedEffectText} from './template-effect-text.js';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {randomUUID,createHash} from 'node:crypto';
@@ -48,11 +48,31 @@ export async function generateClan(d:Draft,cardUid?:string){
  const statusRef=(status:string)=>structuredClone(rules.unitAbilities.find((a:any)=>a.status===status)?.reference??status);const abilityData=(a:any)=>({...a,status:statusRef(a.status)});
  const add=(section:string,o:Definition)=>{(document[section]??=[]).push(o);return o;};
  const roots=new Map<string,Definition>();const characterRoots=new Map<string,Definition>();const artworks=new Map<string,string>();
- async function saveImage(asset:string,name:string){const destination='textures/'+name+'.png';if(!inspected)await fs.writeFile(path.join(root,destination),await imageBytes(d,asset));return destination;}
+ let placeholder:Promise<Buffer>|undefined;
+ async function saveImage(asset:string,name:string){
+  const destination='textures/'+name+'.png';
+  if(!inspected){
+   const bytes=asset?imageBytes(d,asset):(placeholder??=sharp({create:{width:210,height:250,channels:3,background:'#193b40'}}).png().toBuffer());
+   await fs.writeFile(path.join(root,destination),await bytes);
+  }
+  return destination;
+ }
  async function newArt(prefix:string,asset:string,type:string){const sprite=prefix+'Sprite',id=prefix+'Art';const file=await saveImage(asset,prefix);add('sprites',{id:sprite,path:file});add('game_objects',{id,type,extensions:{[type]:{sprite:'@'+sprite}}});return '@'+id;}
- function recipeEffect(choice:EffectChoice,id:string,unit=false,recipientTeam='monsters'){const recipe=rules.recipes.find((r:any)=>r.id===choice.recipe);if(!recipe)throw Error('El efecto no está disponible.');const target=choice.target;const data:Definition={id,name:recipe.class,param_int:recipe.paramInt??choice.amount,target_team:target==='spell_target'?recipientTeam:effectTargetTeam(target),target_mode:effectTargetMode(target,unit)};if(recipe.cardPool)data.param_card_pool=recipe.cardPool;if(recipe.status){data.param_status_effects=[{status:statusRef(recipe.status),count:choice.amount}];delete data.param_int;}if(recipe.target==='none'){if(recipe.class==='CardEffectMix'){delete data.target_team;delete data.target_mode;}else{data.target_team='none';data.target_mode='room';}}if(choice.duration==='run'||choice.recipe==='max_health'){if(!recipe.durations?.includes(choice.duration??'combat'))throw Error('Duración no disponible para este efecto.');const upgrade:Definition={id:id+'Upgrade',...(choice.recipe==='attack'?{bonus_damage:choice.amount}:choice.recipe==='max_health'?{bonus_hp:choice.amount}:{status_effect_upgrades:[{status:statusRef(recipe.status),count:choice.amount}]})};add('upgrades',upgrade);data.name='CardEffectAddCardUpgradeToUnits';data.param_upgrade='@'+upgrade.id;data.param_int_3=choice.duration==='run'?2:0;delete data.param_int;delete data.param_status_effects;}return add('effects',data);}
- function trigger(choice:EffectChoice,id:string){const effect=recipeEffect(choice,id+'Effect',true);const text=recipeText(choice,true);return add('character_triggers',{id,trigger:triggerReference(choice.when,rules),effects:['@'+effect.id],descriptions:{spanish:text.es,english:text.en}});}
- function recipeText(choice:EffectChoice,unit=false){const recipe=rules.recipes.find((r:any)=>r.id===choice.recipe);return Object.fromEntries(['es','en'].map(language=>[language,recipe?.gameDescription??recipeDescription(choice,rules,language,unit)]));}
+ function recipeEffect(choice:EffectChoice,id:string,unit=false,recipientTeam='monsters'){const recipe=rules.recipes.find((r:any)=>r.id===choice.recipe);if(!recipe)throw Error('El efecto no está disponible.');
+  if(recipe.id==='magic_power_in_hand'){
+   // Use the same upgrade and filters as the native Harness the Titan effect.
+   const upgrade=add('upgrades',{id:id+'Upgrade',filters:['MagicPowerSpells','ExcludedSpellsFromMagicPower'],
+    bonus_damage:choice.amount,bonus_heal:choice.amount});
+   return add('effects',{id,name:recipe.class,target_mode:'room',target_team:'none',param_upgrade:'@'+upgrade.id});
+  }
+  const target=choice.target;const data:Definition={id,name:recipe.class,param_int:recipe.paramInt??choice.amount,target_team:target==='spell_target'?recipientTeam:effectTargetTeam(target),target_mode:effectTargetMode(target,unit)};if(recipe.cardPool)data.param_card_pool=recipe.cardPool;if(recipe.status){data.param_status_effects=[{status:statusRef(recipe.status),count:choice.amount}];delete data.param_int;}if(recipe.target==='none'){if(recipe.class==='CardEffectMix'){delete data.target_team;delete data.target_mode;}else{data.target_team='none';data.target_mode='room';}}if(choice.duration==='run'||choice.recipe==='max_health'){if(!recipe.durations?.includes(choice.duration??'combat'))throw Error('Duración no disponible para este efecto.');const upgrade:Definition={id:id+'Upgrade',...(choice.recipe==='attack'?{bonus_damage:choice.amount}:choice.recipe==='max_health'?{bonus_hp:choice.amount}:{status_effect_upgrades:[{status:statusRef(recipe.status),count:choice.amount}]})};add('upgrades',upgrade);data.name='CardEffectAddCardUpgradeToUnits';data.param_upgrade='@'+upgrade.id;data.param_int_3=choice.duration==='run'?2:0;delete data.param_int;delete data.param_status_effects;}return add('effects',data);}
+ function trigger(choice:EffectChoice,id:string){const effect=recipeEffect(choice,id+'Effect',true);const descriptions=recipeText(choice,effect,0,true);return add('character_triggers',{id,trigger:triggerReference(choice.when,rules),effects:['@'+effect.id],descriptions});}
+ function recipeText(choice:EffectChoice,effect:Definition,index:number,unit=false){
+  const recipe=rules.recipes.find((r:any)=>r.id===choice.recipe);
+  const amount=recipe?.id==='magic_power_in_hand'?'[effect'+index+'.upgrade.bonusdamage]':fixedDamageToken(effect,'effect'+index);
+  return Object.fromEntries(Object.entries(generatedLocales).map(([locale,language])=>
+   [locale,recipe?.gameDescription??recipeDescription(choice,rules,language,unit,amount)]));
+ }
  for(const [number,card]of cards.entries()){
   if(inspected&&card!==inspected)continue;
   const prefix='C'+number+'_',rootId=prefix+'Card';let object:Definition;let useOriginalDescription=false;let character:Definition|undefined;
@@ -62,14 +82,14 @@ export async function generateClan(d:Draft,cardUid?:string){
    if(card.kind==='unit'){const effect=(object.effects??[]).map((ref:any)=>(document.effects??[]).find(e=>e.id===String(ref).replace(/^@/,''))).find((e:any)=>e?.param_character);character=(document.characters??[]).find(c=>c.id===String(effect?.param_character).replace(/^@/,''));if(!character)throw Error('No se encuentra la unidad del ejemplo.');}
   }else{
    const fallback=await readExample(card.kind==='unit'?rules.defaultUnit:card.kind==='room'?rules.defaultRoom:card.kind==='artifact'?rules.defaultArtifact:rules.defaultSpell);
-   object=add(card.kind==='artifact'?'relics':'cards',{id:rootId,card_type:card.kind==='unit'?'monster':card.kind==='room'?'room':'spell',cost:card.cost,rarity:card.rarity,targets_room:true,targetless:false,effects:[],card_art:await newArt(prefix+'Card',card.image??template?.picture??fallback.picture,'card_art')});
+   object=add(card.kind==='artifact'?'relics':'cards',{id:rootId,card_type:card.kind==='unit'?'monster':card.kind==='room'?'room':'spell',cost:card.cost,rarity:card.rarity,targets_room:true,targetless:false,effects:[],card_art:await newArt(prefix+'Card',card.image||template?.picture||fallback.picture,'card_art')});
    if(card.kind==='room'||card.kind==='artifact'){const recipe=rules.passives.find((p:any)=>p.id===card.passive?.recipe&&p.kind===card.kind);if(!recipe)throw Error('Elige un efecto para tu sala o artefacto.');const amount=card.passive!.amount;
     if(card.kind==='room'){
      const rule=recipe.modifier
       ?{room_modifier_upgrades:['@'+add('room_modifiers',{id:prefix+'RoomModifier',name:recipe.modifier,param_int:amount}).id]}
       :{status_effect_upgrades:[{status:recipe.status,count:amount}]};
      const upgrade=add('upgrades',{id:prefix+'RoomUpgrade',titles:localized(card.name),descriptions:{spanish:recipe.description.es.replace('{amount}',String(amount)),english:recipe.description.en.replace('{amount}',String(amount))},...rule,hide_icon_on_card:true});const e=add('effects',{id:prefix+'RoomEffect',name:'CardEffectAttachTrainRoomAttachment',target_mode:'room',target_team:recipe.team,param_upgrade:'@'+upgrade.id,param_bool:false,param_bool_2:false});object.effects=['@'+e.id];object.targetless=true;}
-    else{const file=await saveImage(card.image??template?.picture??fallback.picture,prefix+'RelicIcon');const sprite=add('sprites',{id:prefix+'RelicIcon',path:file});const effect=add('relic_effects',{id:prefix+'RelicEffect',name:recipe.class,param_int:amount});delete object.card_type;delete object.card_art;delete object.effects;delete object.targets_room;delete object.targetless;object.type='collectable';object.icon='@'+sprite.id;object.icon_small='@'+sprite.id;object.relic_effects=['@'+effect.id];object.extensions=[{collectable:{class:'@'+classId,pools:['MegaRelicPool'],rarity:card.rarity}}];}
+    else{const file=await saveImage(card.image||template?.picture||fallback.picture,prefix+'RelicIcon');const sprite=add('sprites',{id:prefix+'RelicIcon',path:file});const effect=add('relic_effects',{id:prefix+'RelicEffect',name:recipe.class,param_int:amount});delete object.card_type;delete object.card_art;delete object.effects;delete object.targets_room;delete object.targetless;object.type='collectable';object.icon='@'+sprite.id;object.icon_small='@'+sprite.id;object.relic_effects=['@'+effect.id];object.extensions=[{collectable:{class:'@'+classId,pools:['MegaRelicPool'],rarity:card.rarity}}];}
    }
    if(card.kind==='unit'){const nativeCharacter=fallback.official&&!card.characterImage?fallback.document.characters?.find(c=>c.character_art)?.character_art:null;character=add('characters',{id:prefix+'Unit',character_art:nativeCharacter??await newArt(prefix+'Character',card.characterImage??fallback.characterPicture??fallback.picture,'character_art'),size:card.size,health:card.health,attack_damage:card.attack});const spawn=add('effects',{id:prefix+'Spawn',name:'CardEffectSpawnMonster',target_mode:'room',target_team:'monsters',param_character:'@'+character.id});object.effects=['@'+spawn.id];}
   }
@@ -81,19 +101,11 @@ export async function generateClan(d:Draft,cardUid?:string){
     (object.traits??=[]).push('@'+trait.id);
    }
   }
-  roots.set(card.uid,object);object.names=localized(card.name);if(!useOriginalDescription)object.descriptions=localized(card.description);if(card.kind==='spell'){
-   const appended=card.effects.filter(effect=>!reserve(effect));
-   if(appended.length){
-    const existing=object.descriptions??{};
-    object.descriptions=Object.fromEntries(([['spanish','es'],['english','en']] as const).map(([locale,language])=>
-     [locale,[existing[locale],...appended.map(effect=>recipeText(effect)[language])].filter(Boolean).join(' ')]));
-   }
-  }object.cost=card.cost;object.rarity=card.rarity;object.hide_in_logbook=false;
+  roots.set(card.uid,object);object.names=localized(card.name);if(!useOriginalDescription)object.descriptions=localized(card.description);
+  object.cost=card.cost;object.rarity=card.rarity;object.hide_in_logbook=false;
   if(template?.simplified&&!useNewPassive&&!card.description){
-   const text={english:simplifiedEffectText(document,object,'en',rules),spanish:simplifiedEffectText(document,object,'es',rules)};
-   if(card.kind==='spell'&&card.effects.length)for(const [locale,language] of [['english','en'],['spanish','es']] as const)
-    text[locale]=[text[locale],...card.effects.filter(effect=>!reserve(effect)).map(effect=>recipeText(effect)[language])].filter(Boolean).join(' ');
-   object.descriptions=text;
+   object.descriptions=Object.fromEntries(Object.entries(generatedLocales).map(([locale,language])=>
+    [locale,simplifiedEffectText(document,object,language,rules,true)]));
   }
   if((!card.description||useNewPassive&&Object.values(template?.descriptions??{}).includes(card.description))&&(!card.templateId||useNewPassive)&&card.passive){const p=rules.passives.find((p:any)=>p.id===card.passive!.recipe);object.descriptions={spanish:p.description.es.replace('{amount}',String(card.passive.amount)),english:p.description.en.replace('{amount}',String(card.passive.amount))};}
   if(card.kind==='artifact'&&template&&card.passive){
@@ -140,18 +152,31 @@ export async function generateClan(d:Draft,cardUid?:string){
    }
   }else if(card.kind==='spell'){
    const recipientTeam=spellRecipientTeam(document,object,card.effects,rules);
+   const addedDescriptions:Record<string,string>[]=[];
    for(const [i,choice]of card.effects.entries()){
     const effect=recipeEffect(choice,prefix+'Effect'+i,false,recipientTeam);
     if(reserve(choice)){
-     const text=recipeText(choice);
-     const activation=add('card_triggers',{id:prefix+'CardTrigger'+i,trigger:choice.when,effects:['@'+effect.id],descriptions:{english:text.en,spanish:text.es}});
+     const activation=add('card_triggers',{id:prefix+'CardTrigger'+i,trigger:choice.when,effects:['@'+effect.id],descriptions:recipeText(choice,effect,0)});
      (object.triggers??=[]).push('@'+activation.id);
-    }else (object.effects??=[]).push('@'+effect.id);
+    }else{
+     const effects=object.effects??=[];
+     addedDescriptions.push(recipeText(choice,effect,effects.length));
+     effects.push('@'+effect.id);
+    }
+   }
+   if(addedDescriptions.length){
+    const existing=object.descriptions??{};
+    object.descriptions=Object.fromEntries(Object.keys(generatedLocales).map(locale=>
+     [locale,[existing[locale],...addedDescriptions.map(text=>text[locale])].filter(Boolean).join(' ')]));
    }
    const guidedDropTarget=card.effects.some(c=>!reserve(c)&&effectTargetMode(c.target,false)==='drop_target_character'&&
     rules.recipes.find((r:any)=>r.id===c.recipe)?.target!=='none');
    if(guidedDropTarget)object.targetless=false;
    else if(!card.templateId)object.targetless=true;
+  }
+  for(const [locale,language] of Object.entries(generatedLocales)){
+   const manual=card.manualDescriptions?.[language]?.trim();
+   if(manual)(object.descriptions??={})[locale]=manual;
   }
  }
  for(const c of document.cards??[]){c.class='@'+classId;if(!c.pools)c.pools=[];}
@@ -176,14 +201,14 @@ export async function generateClan(d:Draft,cardUid?:string){
 
   }}
   champ.upgrade_tree=spec.paths.map((p,pi)=>p.levels.map((l,li)=>{const id=`Champion${i}Path${pi}Level${li}`;const triggers=l.effects.map((e,n)=>'@'+trigger(e,id+'Trigger'+n).id);const native=l.native?nativeRoots.get(id):undefined;const upgrade=native??{id};Object.assign(upgrade,{titles:localized(p.name+(li?' '+['I','II','III'][li]:'')),bonus_damage:l.attack,bonus_hp:l.health,bonus_size:l.size});if(l.abilities?.length)upgrade.status_effect_upgrades=[...(upgrade.status_effect_upgrades??[]),...l.abilities.map(abilityData)];if(triggers.length)upgrade.trigger_upgrades=[...(upgrade.trigger_upgrades??[]),...triggers];if(!native)base.upgrades.push(upgrade);return '@'+id;}));
-  const characterArt=(document.game_objects??[]).find(a=>a.id===String(char.character_art).replace(/^@/,''));const charSprite=(document.sprites??[]).find(s=>s.id===String(characterArt?.extensions.character_art.sprite).replace(/^@/,''));if(charSprite||typeof char.character_art==='object'){const example=await readExample(spec.card.templateId??rules.defaultUnit);const source=charSprite?await fs.readFile(path.join(root,charSprite.path)):example.picture?await imageBytes(d,example.picture):await sharp(Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><rect width="256" height="256" fill="#193b40"/><text x="128" y="170" text-anchor="middle" font-size="140" fill="white">?</text></svg>')).png().toBuffer();for(const [ref,width,height]of [[champ.icon,320,256],[champ.locked_icon,320,256],[champ.portrait,240,270]] as [string,number,number][]){const icon=document.sprites.find(s=>s.id===ref.slice(1));if(icon)await sharp(source).resize(width,height,{fit:'contain',background:'#152b32'}).png().toFile(path.join(root,icon.path));}const display=base.classes[0].class_select_character_displays[i];if(!charSprite){if(example.picture)base.classes[0].class_select_character_displays[i]=await newArt('Champion'+i+'Selection',example.picture,'character_art');else{const id='Champion'+i+'Selection';const file='textures/'+id+'.png';await fs.writeFile(path.join(root,file),source);add('sprites',{id:id+'Sprite',path:file});add('game_objects',{id,type:'character_art',extensions:{character_art:{sprite:'@'+id+'Sprite'}}});base.classes[0].class_select_character_displays[i]='@'+id;}}const obj=document.game_objects.find(a=>a.id===display.slice(1));if(obj&&charSprite)obj.extensions.character_art={sprite:'@'+charSprite.id,transform:{scale:{x:.7,y:.7,z:1},offset:{x:0,y:1,z:0}}};}
+  const characterArt=(document.game_objects??[]).find(a=>a.id===String(char.character_art).replace(/^@/,''));const charSprite=(document.sprites??[]).find(s=>s.id===String(characterArt?.extensions.character_art.sprite).replace(/^@/,''));if(charSprite||typeof char.character_art==='object'){const example=await readExample(spec.card.templateId??rules.defaultUnit);const source=charSprite?await fs.readFile(path.join(root,charSprite.path)):example.picture?await imageBytes(d,example.picture):await sharp(Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><rect width="256" height="256" fill="#193b40"/><text x="128" y="170" text-anchor="middle" font-size="140" fill="white">?</text></svg>')).png().toBuffer();for(const [ref,width,height]of [[champ.icon,320,256],[champ.locked_icon,320,256],[champ.portrait,240,270]] as [string,number,number][]){const icon=document.sprites.find(s=>s.id===ref.slice(1));if(icon)await fs.writeFile(path.join(root,icon.path),await sharp(source).resize(width,height,{fit:'contain',background:'#152b32'}).png().toBuffer());}const display=base.classes[0].class_select_character_displays[i];if(!charSprite){if(example.picture)base.classes[0].class_select_character_displays[i]=await newArt('Champion'+i+'Selection',example.picture,'character_art');else{const id='Champion'+i+'Selection';const file='textures/'+id+'.png';await fs.writeFile(path.join(root,file),source);add('sprites',{id:id+'Sprite',path:file});add('game_objects',{id,type:'character_art',extensions:{character_art:{sprite:'@'+id+'Sprite'}}});base.classes[0].class_select_character_displays[i]='@'+id;}}const obj=document.game_objects.find(a=>a.id===display.slice(1));if(obj&&charSprite)obj.extensions.character_art={sprite:'@'+charSprite.id,transform:{scale:{x:.7,y:.7,z:1},offset:{x:0,y:1,z:0}}};}
  }
  base.classes[0].descriptions=localized(d.description||d.name);base.classes[0].subclass_descriptions=localized(d.description||d.name);
  // Authentic game frames are used when the local extraction is present.
  for(const [key,ref]of Object.entries(base.class_card_styles[0])){if(key==='id'||typeof ref!=='string')continue;const sprite=document.sprites.find(s=>s.id===ref.slice(1));if(sprite){const type=key.includes('unit')?'unit':key.includes('spell')?'spell':'equipment';const frame=rules.officialFrames[type+'-cardframe-'+rules.defaultFrameTheme];const source=frame?path.join(catalogRoot,frame.asset):path.join(catalogRoot,'ui',type==='unit'?'unit.png':type==='spell'?'spell.png':'room.png');await fs.copyFile(source,path.join(root,sprite.path));}}
  const escaped=(d.name.trim().slice(0,2).toUpperCase()).replace(/[<>&"']/g,'');const fallbackIcons=d.icon?undefined:originalClanIcons(d,(await exampleList()).items,rules.officialClanIcons);
  const iconAsset=d.icon??fallbackIcons?.large;const icon=iconAsset?await imageBytes(d,iconAsset):await sharp(Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><rect width="256" height="256" rx="50" fill="#174f52"/><text x="128" y="165" text-anchor="middle" font-size="110" font-family="sans-serif" fill="#ffe4ad">${escaped}</text></svg>`)).png().toBuffer();
- for(const ref of [...Object.values(base.classes[0].icons),base.classes[0].card_draft_icon]){const s=document.sprites.find(s=>s.id===String(ref).slice(1));if(s){const m=await sharp(path.join(root,s.path)).metadata();await sharp(icon).resize(m.width!,m.height!,{fit:'contain',background:'#00000000'}).png().toFile(path.join(root,s.path));}}
+ for(const ref of [...Object.values(base.classes[0].icons),base.classes[0].card_draft_icon]){const s=document.sprites.find(s=>s.id===String(ref).slice(1));if(s){const file=path.join(root,s.path),m=await sharp(await fs.readFile(file)).metadata();await fs.writeFile(file,await sharp(icon).resize(m.width!,m.height!,{fit:'contain',background:'#00000000'}).png().toBuffer());}}
  await fs.writeFile(path.join(root,'icon.png'),await sharp(icon).resize(256,256).png().toBuffer());
  for(const stone of d.stones??[]){
   const id='Stone_'+stone.uid,settings=rules.stones;
@@ -195,7 +220,7 @@ export async function generateClan(d:Draft,cardUid?:string){
   const source=stone.image?await imageBytes(d,stone.image):icon;
   for(const [suffix,size]of [['Icon',settings.iconPixels],['Small',settings.hudPixels]] as [string,number][]){
    const spriteId=id+suffix,file='textures/'+spriteId+'.png';
-   await sharp(source).resize(size,size,{fit:'contain',background:'#00000000'}).png().toFile(path.join(root,file));
+   await fs.writeFile(path.join(root,file),await sharp(source).resize(size,size,{fit:'contain',background:'#00000000'}).png().toBuffer());
    add('sprites',{id:spriteId,path:file});
   }
   const upgrade=add('upgrades',{id:id+'Upgrade',titles:names,descriptions,icon:'@'+id+'Small',
@@ -308,3 +333,7 @@ function sanitizeLocalizedText(value:unknown):boolean{
 // 2026-11-21-1902||codex-clan-editor||clan-creator/src/server/creator/export.ts||Incluir las propiedades añadidas en el mismo bloque de carta y evitar duplicar las nativas
 // 2026-11-21-1909||codex-clan-editor||clan-creator/src/server/creator/export.ts||Retirar el aviso de activación original cuando se sustituye la última regla de un artefacto
 // 2026-11-21-1945||codex-clan-editor||clan-creator/src/server/creator/export.ts||Generar modificadores nativos de capacidad y ember al crear o completar una sala
+// 2026-11-21-2353||codex-clan-editor||clan-creator/src/server/creator/export.ts||Generar un marcador neutro cuando una carta nueva no tiene ilustracion incluida
+// 2026-11-21-2354||codex-clan-editor||clan-creator/src/server/creator/export.ts||Escribir PNG de la exportacion con Node para admitir rutas largas de Windows
+// 2026-11-22-0935||codex-clan-editor||clan-creator/src/server/creator/export.ts||Generar descripciones dinámicas al añadir daño y respetar el texto manual de cada idioma
+// 2026-11-22-0944||codex-clan-editor||clan-creator/src/server/creator/export.ts||Exportar la mejora nativa de los hechizos en mano y su descripción dinámica

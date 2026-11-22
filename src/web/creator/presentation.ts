@@ -1,4 +1,5 @@
 import {copiedCardNeedsPassive} from '../../server/creator/validation';
+import {reviseBattleCardDestinations} from '../../server/creator/battle-card-destination';
 import {triggerLabel} from '../../server/creator/trigger-reference';
 import {applyCopiedEffectEdits} from '../../server/creator/copied-effect-edits';
 import {statusAmount} from '../../server/creator/status-text';
@@ -16,14 +17,22 @@ export const local=(text:any,language:Language)=>typeof text==='string'?text:tex
 export function imageUrl(projectId:string,asset?:string){return !asset?'':(asset.startsWith('assets/')||asset.startsWith('official/assets/'))?'/catalog/'+asset:'/api/images/'+projectId+'/'+asset.slice(7);}
 export function description(card:CardDraft,template:any,language:Language,rules:any={}){
  const doc=structuredClone(template?.example?.document??{});if(template?.example)removeUnitAuras(doc,template.example.root,card.removedAuras);applyExampleParameterValues(doc,template?.parameters??[],card.parameters);
- if(template?.example){reviseMovementDescriptions(template.example.document,doc,rules);const changed=removeTemplateEffects(doc,template.example.root,card.removedTemplateEffects);if(changed.length)reviseEffectDescriptions(template.example.document,doc,changed,rules);applyCopiedEffectEdits(doc,template.example.document,template.example.root,card,rules,template.parameters);}
+ if(template?.example){
+  const original=template.example.document,root=template.example.root;
+  reviseMovementDescriptions(original,doc,rules);
+  const changed=removeTemplateEffects(doc,root,card.removedTemplateEffects);
+  if(changed.length)reviseEffectDescriptions(original,doc,changed,rules);
+  applyCopiedEffectEdits(doc,original,root,card,rules,template.parameters);
+  reviseBattleCardDestinations(original,doc);
+ }
  const get=(section:string,ref:any)=>typeof ref==='object'&&ref&&!ref.id?ref:(doc[section]??[]).find((e:any)=>e.id===String(typeof ref==='object'?ref.id:ref).replace(/^@/,''));
  const root=get(template?.example?.root?.section,template?.example?.root?.id);
  const text=(s:any)=>typeof s==='string'?s:s?.[language==='es'?'spanish':'english']??s?.english??'';
  const format=(s:string,refs:any[]=[],section='effects')=>{let owner:any,ownerSection='cards';if(section==='room_modifiers'){owner=get(section,refs[0]);ownerSection=section;}else for(const [sec,definitions]of Object.entries(doc))for(const d of definitions as any[])if([d.effects,d.trigger_effects,d.relic_effects].some(arr=>arr&&JSON.stringify(arr)===JSON.stringify(refs))){if(!owner||d===root){owner=d;ownerSection=sec;}}return gameText(s,doc,{definition:owner??root,section:owner?ownerSection:template?.example?.root.section??'cards'},language,rules);};
  const refs=root?.effects??root?.relic_effects??[];const section=root?.relic_effects?'relic_effects':'effects';
  if(card.kind==='room'&&template){const replacements=new Map<string,string>();for(const p of template.parameters??[])if(p.section==='upgrades'&&p.path.at(-1)==='count'&&card.parameters[p.key]!==undefined&&card.parameters[p.key]!==p.value)replacements.set(String(p.value),String(card.parameters[p.key]));for(const section of ['cards','upgrades'])for(const d of doc[section]??[])if(d.descriptions)for(const [lang,s]of Object.entries(d.descriptions))if(typeof s==='string')d.descriptions[lang]=s.replace(/\b\d+\b/g,n=>replacements.get(n)??n);}
- const parts:string[]=[];const original=Object.values(template?.example?.descriptions??{}).includes(card.description);const initial=original?text(root?.descriptions):card.description||text(root?.descriptions);if(initial)parts.push(format(initial,refs,section));else if(template?.example?.simplified&&!card.passive)parts.push(simplifiedEffectText(doc,root,language,rules));
+ const manual=card.manualDescriptions?.[language]?.trim();
+ const parts:string[]=[];const original=Object.values(template?.example?.descriptions??{}).includes(card.description);const initial=original?text(root?.descriptions):card.description||text(root?.descriptions);if(manual)parts.push(manual);else if(initial)parts.push(format(initial,refs,section));else if(template?.example?.simplified&&!card.passive)parts.push(simplifiedEffectText(doc,root,language,rules));
  const externalName=(value:any,section:string)=>{const id=String(typeof value==='object'?value?.id:value).replace(/^@/,'');return text(template?.example?.externalResources?.find((r:any)=>r.section===section&&r.id===id)?.names)||id;};
  const triggers=(object:any,sec:string)=>{for(const ref of object?.triggers??[]){const tr=get(sec,ref);if(!tr)continue;const label=triggerLabel(tr.trigger,rules,language)||(typeof tr.trigger==='object'?externalName(tr.trigger,sec==='card_triggers'?'card_trigger_types':'character_trigger_types'):'');const effects=tr.trigger_effects??tr.effects;
  const body=format(text(tr.descriptions),effects)|| (template?.example?.simplified?simplifiedEffectText(doc,{effects},language,rules):'');
@@ -37,9 +46,9 @@ export function description(card:CardDraft,template:any,language:Language,rules:
   if(added.length)parts.unshift(added.join(' · '));
  }
  if(['unit','equipment'].includes(card.kind)&&card.abilities?.length)parts.unshift(card.abilities.map(a=>(local(rules.statusLabels?.[a.status],language)||local(rules.unitAbilities?.find((s:any)=>s.status===a.status)?.label,language)||a.status)+statusAmount(a.status,a.count,rules)).join(' · '));
- for(const choice of card.effects){const unitTiming=card.kind==='unit'||card.kind==='equipment';const content=recipeDescription(choice,rules,language,unitTiming);const when=unitTiming?triggerLabel(choice.when,rules,language):local(rules.officialCardTriggers?.find((value:any)=>value.value===choice.when)?.label,language);parts.push((when?when+': ':'')+content);}
+ for(const choice of card.effects){const unitTiming=card.kind==='unit'||card.kind==='equipment';if(manual&&!unitTiming&&!['on_unplayed_positive','on_unplayed_negative'].includes(choice.when))continue;const content=recipeDescription(choice,rules,language,unitTiming);const when=unitTiming?triggerLabel(choice.when,rules,language):local(rules.officialCardTriggers?.find((value:any)=>value.value===choice.when)?.label,language);parts.push((when?when+': ':'')+content);}
  const replacementPassive=copiedCardNeedsPassive(card,template?.example);
- if((card.kind==='artifact'||(!card.description||original&&replacementPassive)&&(!card.templateId||template?.example?.simplified?.needsEffect||replacementPassive))&&card.passive){const p=rules.passives?.find((p:any)=>p.id===card.passive!.recipe);if(p)parts.push(local(p.description,language).replace('{amount}',String(card.passive.amount)));}
+ if(!manual&&(card.kind==='artifact'||(!card.description||original&&replacementPassive)&&(!card.templateId||template?.example?.simplified?.needsEffect||replacementPassive))&&card.passive){const p=rules.passives?.find((p:any)=>p.id===card.passive!.recipe);if(p)parts.push(local(p.description,language).replace('{amount}',String(card.passive.amount)));}
  for(const upgrade of activeInitialUpgrades(doc,root)){const statuses=(upgrade.status_effect_upgrades??[]).filter((s:any)=>s.count!==0).map((s:any)=>(local(rules.statusLabels?.[unitStatusKey(s.status)],language)||unitStatusKey(s.status))+statusAmount(s.status??s.statusId,s.count,rules));if(statuses.length)parts.push(statuses.join(' · '));triggers({triggers:upgrade.trigger_upgrades},'character_triggers');triggers({triggers:upgrade.card_trigger_upgrades},'card_triggers');for(const ref of upgrade.room_modifier_upgrades??[]){const mod=get('room_modifiers',ref);if(mod)parts.push(format(text(mod.descriptions),[ref],'room_modifiers'));}for(const ref of upgrade.trait_upgrades??[]){const trait=get('traits',ref);const name=local(rules.traitLabels?.[trait?.name],language);if(name)parts.push(name);}const ability=get('cards',upgrade.ability_upgrade);if(ability)parts.push((language==='es'?'Habilidad: ':'Ability: ')+text(ability.names)+(rules.includeAbilityDetails?'. '+format(text(ability.descriptions),ability.effects):''));}
  if(template?.example?.championPath&&!template.example.championPath.localUpgradeId)parts.push(nativeUpgradeDescription(template.example.championPath.upgrade,language,rules));
  const result=parts.filter(Boolean).join('\n').replace(/\{(-?\d+(?:\.\d+)?)\}/g,'$1');if(!result&&card.removedTemplateEffects?.length)return '';return result||template?.example?.previewIncomplete?(result||(language==='es'?'El juego calcula el texto de esta carta.':'The game calculates this card text.')):result;
@@ -100,3 +109,5 @@ export function nativeUpgradeDescription(upgrade:any,language:Language,rules:any
 // 2026-11-21-1901||codex-clan-editor||clan-creator/src/web/creator/presentation.ts||Previsualizar la regla adicional junto con las reglas que se mantienen del artefacto
 // 2026-11-21-1902||codex-clan-editor||clan-creator/src/web/creator/presentation.ts||Mostrar en la vista previa las propiedades de carta añadidas
 // 2026-11-21-2016||codex-clan-editor||clan-creator/src/web/creator/presentation.ts||Aplicar textos de condiciones cambiadas en la vista previa
+// 2026-11-22-0935||codex-clan-editor||clan-creator/src/web/creator/presentation.ts||Previsualizar el texto manual por idioma y el valor actual del daño automático
+// 2026-11-22-0956||codex-clan-editor||clan-creator/src/web/creator/presentation.ts||Sincronizar el destino en la vista previa y en la exportación

@@ -15,12 +15,17 @@ import type {CardDraft,EffectChoice} from '../../server/creator/model';
 import {description,imageUrl,local,request,type Language} from './presentation';
 export function Field({label,help,children,className='',reviewField,problem,guide}:{label:string;help?:string;children:React.ReactNode;className?:string;reviewField?:string;problem?:string;guide?:GuideRequest}){const field=<label className={'field '+className} data-review-field={reviewField}><span>{label}{help&&<span className="help" tabIndex={0} title={help} aria-label={help}>?</span>}</span>{children}{problem&&<small className="field-problem" role="status">{problem}</small>}</label>;return guide?<div className={'field-with-guide '+className}>{field}<GuideLink request={guide}/></div>:field;}
 export function numberField(label:string,value:number,change:(v:number)=>void,min=0,max=999,help?:string,step=1,reviewField?:string,problem?:string){return <Field key={label} label={label} help={help} reviewField={reviewField} problem={problem}><NumberInput value={value} onChange={change} min={min} max={max} step={step}/></Field>;}
+export function parameterHelp(p:any,language:Language,rules:any){
+ return local(rules.verifiedParameters?.[p.label]?.[p.path.join('.')]?.help,language);
+}
 export function parameterLabel(p:any,language:Language,rules:any):string{
  const auxiliary=p.auxiliaryCard?.[language==='es'?'spanish':'english']??p.auxiliaryCard?.english;
  if(auxiliary){
   const title=p.pyreDamage?local(rules.guidedText.auxiliaryPyreDamage,language):parameterLabel({...p,auxiliaryCard:undefined},language,rules);
   return auxiliary+' · '+title;
  }
+ const verified=local(rules.verifiedParameters?.[p.label]?.[p.path.join('.')]?.label,language);
+ if(verified)return verified;
  const key=p.path.at(-1);const map:Record<string,string>={CardEffectHeal:language==='es'?'Salud restaurada':'Health restored',CardEffectDamage:language==='es'?'Daño':'Damage',CardEffectDraw:language==='es'?'Cartas que se roban':'Cards drawn',CardEffectGainEnergy:language==='es'?'Ember ganado':'Ember gained',CardEffectAddStatusEffect:language==='es'?'Cantidad del estado':'Status amount',RelicEffectChangeFloorCapacity:language==='es'?'Espacio adicional por piso':'Extra capacity per floor',RelicEffectModifyEnergy:language==='es'?'Ember adicional':'Extra ember'};return (p.status?local(rules.statusLabels?.[p.status],language)||p.status:local(rules.exampleExtraParameters?.[p.label]?.[key]??rules.exampleParameterRules?.[p.label],language))||(map[p.label]??(key==='bonus_damage'?(language==='es'?'Ataque adicional':'Extra attack'):key==='bonus_hp'?(language==='es'?'Salud adicional':'Extra health'):language==='es'?'Cantidad del efecto':'Effect amount'));}
 export function EffectEditor({effects,onChange,rules,language,t,unit=true,equipment=false}:{effects:EffectChoice[];onChange:(effects:EffectChoice[])=>void;rules:any;language:Language;t:(key:string)=>string;unit?:boolean;equipment?:boolean}){
  const u=(key:string)=>local(rules.usabilityText[key],language);
@@ -92,3 +97,4 @@ export {ExamplePicker} from './example-picker';
 // 2026-11-21-1825||codex-clan-editor||clan-creator/src/web/creator/components.tsx||Fijar Mix al momento de jugar el hechizo y etiquetar las opciones de infusión
 // 2026-11-21-1825||codex-clan-editor||clan-creator/src/web/creator/components.tsx||Mantener las etiquetas existentes y nombrar la cantidad de Mix como opciones de infusión
 // 2026-11-21-1930||codex-clan-editor||clan-creator/src/web/creator/components.tsx||Enlazar efectos, activaciones, destinatarios y duración con las opciones reales del campo
+// 2026-11-22-0956||codex-clan-editor||clan-creator/src/web/creator/components.tsx||Mostrar etiquetas y ayudas de parámetros verificados
