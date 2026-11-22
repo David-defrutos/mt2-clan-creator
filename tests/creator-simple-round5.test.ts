@@ -7,8 +7,8 @@ import {fileURLToPath} from 'node:url';
 import sharp from 'sharp';
 import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
-const root=fileURLToPath(new URL('../',import.meta.url)),home=await fs.mkdtemp(path.join(os.tmpdir(),'creator-simple5-'));await fs.cp(path.join(root,'config'),path.join(home,'config'),{recursive:true});process.env.CLAN_CREATOR_HOME=home;process.env.CLAN_CREATOR_CATALOG_ROOT=path.join(root,'catalog');after(()=>fs.rm(home,{recursive:true,force:true}));
-const {creatorRules,exampleList}=await import('../src/server/creator/catalog.ts');
+const root=fileURLToPath(new URL('../',import.meta.url)),home=await fs.mkdtemp(path.join(os.tmpdir(),'creator-simple5-'));await fs.cp(path.join(root,'config'),path.join(home,'config'),{recursive:true});process.env.CLAN_CREATOR_HOME=home;process.env.CLAN_CREATOR_CATALOG_ROOT??=path.join(root,'catalog');after(()=>fs.rm(home,{recursive:true,force:true}));
+const {creatorRules,exampleList,catalogRoot}=await import('../src/server/creator/catalog.ts');
 const {createQuickDraft}=await import('../src/server/creator/quick-start.ts');
 const {blankCard}=await import('../src/server/creator/model.ts');
 const {loadDraft,saveDraft,uploadImage,projectFolder,validateDraftShape}=await import('../src/server/creator/projects.ts');
@@ -25,7 +25,7 @@ const {createCreatorServer}=await import('../src/server/creator-server.ts');
 async function png(transparent=true){return sharp({create:{width:32,height:32,channels:4,background:{r:0,g:0,b:0,alpha:transparent?0:1}}}).composite([{input:await sharp({create:{width:16,height:16,channels:4,background:'#385c94'}}).png().toBuffer(),left:8,top:8}]).png().toBuffer();}
 test('art workshop shows one stage at a time instead of four long forms',async()=>{const d=await createQuickDraft('en'),rules=await creatorRules(),html=renderToStaticMarkup(React.createElement(ArtStudio,{draft:d,rules,items:(await exampleList()).items,language:'en',onChange:()=>{},onClose:()=>{}}));assert.ok(html.includes('Choose a starting style'));assert.ok(!html.includes('art-result-step'));assert.ok(!html.includes('art-request-step'));assert.ok(html.includes('Step 1 of 4'));});
 test('visual library filters categories and names while distinguishing placeholders from game references',async()=>{const d=await createQuickDraft('en'),rules=await creatorRules(),items=(await exampleList()).items,targets=artTargets(d,rules,'en'),target=targets.find(t=>t.id==='character:'+d.champions[0].card.uid)!;assert.equal(artworkStatus(target,items,rules).key,'statusGame');assert.equal(artworkStatus(target,items,rules).preview,undefined);assert.equal(artworkStatus(targets.find(t=>t.id==='banner-enabled_sprite')!,items,rules).key,'statusPlaceholder');assert.equal(artworkGroup(target),'characters');const html=renderToStaticMarkup(React.createElement(ArtLibrary,{targets,selected:target.id,onSelect:()=>{},query:'unit card',onQuery:()=>{},group:'frames',onGroup:()=>{},items,rules,language:'en',projectId:d.id}));assert.ok(html.includes('Unit card frame'));assert.ok(!html.includes('Spell card frame'));});
-test('style picker has illustrated presets for all official clans and three complete English community guides',async()=>{
+test('style picker keeps available preset references and three complete English community guides',async()=>{
  const rules=await creatorRules(),items=(await exampleList()).items,draft=await createQuickDraft('en');
  const referenceItems=[...items,...rules.aiArt.referenceArtwork];
  const presets=rules.aiArt.presets,official=presets.filter((preset:any)=>preset.group==='official');
@@ -34,11 +34,15 @@ test('style picker has illustrated presets for all official clans and three comp
  assert.deepEqual(community.map((preset:any)=>preset.id),['succclan','ww','freecompany']);
  for(const preset of presets){
   const examples=artStyleReferences(preset,referenceItems);
-  assert.equal(examples.length,1+(preset.additionalExamples?.length??0));
-  for(const example of examples)assert.ok((await fs.stat(path.join(root,'catalog',example.picture!))).isFile());
+  const ids=[preset.referenceExample,...(preset.additionalExamples??[])];
+  for(const id of ids)assert.ok(referenceItems.some(item=>item.id===id));
+  assert.deepEqual(examples.map(example=>example.id),ids.filter(id=>referenceItems.find(item=>item.id===id)?.picture));
+  if(preset.group==='community')assert.equal(examples.length,ids.length);
+  for(const example of examples)assert.ok((await fs.stat(path.join(catalogRoot,example.picture!))).isFile());
   if(preset.group==='official')assert.equal(items.find(e=>e.id===preset.referenceExample)!.clan,preset.id);
   for(const language of ['en','es'] as const){
    const design=designFromStyle(preset,referenceItems,rules,language);
+   assert.equal(design.reference,referenceItems.find(item=>item.id===preset.referenceExample)?.picture||undefined);
    await validateDraftShape({...draft,artDesign:design});
    const prompt=artPrompt(artTargets(draft,rules,language)[0],design,'A guardian',rules,language,true);
    assert.ok(prompt.includes(design.style));
@@ -54,7 +58,7 @@ test('style picker has illustrated presets for all official clans and three comp
  const home=renderToStaticMarkup(React.createElement(ArtStudio,{...props,draft}));
  assert.match(home,/Clanes oficiales/);
  assert.match(home,/Clanes de la comunidad/);
- assert.equal((home.match(/class="secondary art-preset"/g)??[]).length,16);
+ assert.equal((home.match(/class="secondary art-preset"/g)??[]).length,presets.filter(preset=>referenceItems.find(item=>item.id===preset.referenceExample)?.picture).length);
  const englishHome=renderToStaticMarkup(React.createElement(ArtStudio,{...props,draft,language:'en'}));
  assert.match(englishHome,/Shadow Embrace/);
  assert.match(englishHome,/Consumable Credits Intern/);
@@ -77,3 +81,5 @@ test('playtest checks belong only to the current installed version and cannot cl
 // 2026-11-21-1030||codex-clan-editor||clan-creator/tests/creator-simple-round5.test.ts||Probar referencias existentes guias completas y generacion en ingles desde la interfaz espanola
 // 2026-11-21-1036||codex-clan-editor||clan-creator/tests/creator-simple-round5.test.ts||Comprobar que se muestran las dos referencias solicitadas y que se pueden usar en peticiones
 // 2026-11-21-1338||codex-clan-editor||clan-creator/tests/creator-simple-round5.test.ts||Mantener los iconos oficiales del clan al comprobar que un icono provisional no altera el hash
+// 2026-11-22-1044||codex-clan-creator-art||clan-creator/tests/creator-simple-round5.test.ts||Respetar catalogo de fixture y comprobar referencias disponibles sin exigir recursos oficiales omitidos
+// 2026-11-22-1044||codex-clan-creator-art||clan-creator/tests/creator-simple-round5.test.ts||Comprobar numero de presets visibles segun disponibilidad del recurso de referencia
